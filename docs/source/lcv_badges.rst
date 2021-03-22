@@ -138,6 +138,11 @@ Example:  User has: 210 points on Jan 28, 305 points on Feb 28, 500 points on Ap
 
 Defining Milestones
 =====================
+Milestones are added under Structure/Gamification/Milestone.
+
+.. image:: ../assets/cms-lcv-add-milestone-form.png
+
+
 Milestones should have:
 
 * A name.  This is what displays in the Milestones this quarter panel
@@ -166,10 +171,11 @@ Milestones should have:
     * Number.   
 
   
-* Legal category for countable points.  
+* Legal category for countable points.  Leave as none to apply to all categories.
 * Point types to include when counting points.
-* Number of items required to earn milestone.  
-  
-  
+* Number of items required to earn milestone.   For example, a milestone for first edit that can only be won once would have a revision count of 1 to award.  A milestone of 10,000 words edited awarded once a year would have a words basis with an item count of 10,000.
+
+A revision message may be added to document what was added or changed.  
+
   
 

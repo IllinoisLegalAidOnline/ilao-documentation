@@ -16,3 +16,8 @@ While all legal aid and pro bono members can contribute edits to content, a lega
    lcv_dashboard
    lcv_leaderboards
    lcv_reporting
+
+
+Gamification components are managed under Structure/Gamification 
+
+.. image::  ../assets/gamefication-menu.png

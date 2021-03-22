@@ -25,11 +25,11 @@ Creating a point type
 -----------------------
 Point types are created as content, although they do not have their own defined visible interface.
 
-.. image:: ../assets/lcv-point-add-form.png
+.. image:: ../assets/cms-lcv-add-points-form.png
 
 Each point type:
 
-* has a title, or name.  Examples might be "User tested a feature" or "Edited legal information for the public"
+* has a name.  Examples might be "User tested a feature" or "Edited legal information for the public"
 * has an optional description.  This may be helpful to keep track of why a points type exists.
 * has a required Awarded field.  This is used to help track when the points would be awarded by the system.  Points can be awarded:
 
