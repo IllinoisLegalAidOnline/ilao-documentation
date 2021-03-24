@@ -21,7 +21,7 @@ Websites can use standard CSS to customize these items.  See `Feed2JS's Style in
 
 There is also a set of predefined styles that you can experiment with and copy and paste the CSS into your website.
 
-Family content
+Family 
 ===================
 
 Raw RSS feed:  `Family RSS <https://www.illinoislegalaid.org/legal-information/housing.rss>`_
@@ -35,7 +35,7 @@ Raw RSS feed:  `Family RSS <https://www.illinoislegalaid.org/legal-information/h
    </noscript>
 
 
-Housing content
+Housing 
 ===================
 
 Raw RSS feed:  `Housing RSS <https://www.illinoislegalaid.org/legal-information/housing.rss>`_
