@@ -24,7 +24,8 @@ Welcome to Illinois Legal Aid Online Product Documentation
    site_search
    site_faqs
    other_cms_features
-   taxonomies 
+   taxonomies
+   rss_feeds 
    
 See also:
    

@@ -31,10 +31,16 @@ It ignores any parameters that are not part of the ILAO OTIS Rest API.
 Within the OTIS Master, triage user records are updated:
 
 * When the user is exited for being over-income on the initial income question
+  * Household size is stored
+  * Over-income status is stored
+
 * When the user accepts or rejects a match
-* After the user provides household size details
+
+* After the user provides household size details 
 * After the user provides a valid DOB
-* After each demographic question
+* After demographic questions
+
+  * need to update to match validation
 * After all benefits income collected
 * After all other payments income collected
 * After other income collected
