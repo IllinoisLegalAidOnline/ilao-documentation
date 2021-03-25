@@ -181,5 +181,19 @@ Milestones should have:
 
 A revision message may be added to document what was added or changed.  
 
+Listings
+============
+Badges and milestones are custom entities (not content types) so they do not appear in the Find content report.  
+
+The `list of badges <https://www.illinoislegalaid.org/admin/content/gamification/badges-listing>`_ contains all badges defined in the system and can be exported to CSV.
+
+.. image:: ../assets/cms-badges-report.png
+
+The `list of milestones <https://www.illinoislegalaid.org/admin/content/gamification/milestone-listing>`_ shows all of the milestones in the system.  
+
+.. image:: ../assets/cms-milestone-report.png
+
+
+
   
 
