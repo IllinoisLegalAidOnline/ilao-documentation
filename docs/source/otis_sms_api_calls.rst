@@ -39,16 +39,14 @@ Within the OTIS Master, triage user records are updated:
 * After the user provides household size details 
 * After the user provides a valid DOB
 * After demographic questions
-
-  * need to update to match validation
-* After all benefits income collected
-* After all other payments income collected
-* After other income collected
 * After total income is calculated and overincome flags set
 * After contact information is set
 * After callback selections
 * At end for any remaining data
 
+Notes:
+
+* Need a better overincome exit after route-income-resources
 
 
 
@@ -57,7 +55,7 @@ Within the OTIS Master, triage user records are updated:
 Post to legal server
 =======================
 
-TBD
+Relies on the otis-send-to-legal-server and otis-legal-server-failure functions
 
 
 Get intake settings

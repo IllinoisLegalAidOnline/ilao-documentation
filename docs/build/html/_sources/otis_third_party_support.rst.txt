@@ -7,13 +7,12 @@ URL Pre-fill method
 This method allows for passing in query parameters in the URL to pre-fill the main Get Legal Help form.  It is designed to allow for easier integration from chatbots and external services into OTIS without the user having to re-enter information.
 
 
-This method supports up to 4 parameters:
+This method supports up to 5 parameters:
 
 * issue, which is the legal issues taxonomy term ID.  ILAO will provide a list of taxonomy term IDs for interested partners of the lowest-level terms so that users bypass additional screening.
 * zipcode, the user's zipcode
 * household, the size of the household as a number
-* source 
-* referral_source_type
+* source (which then requires the referral_source_type parameter
 * helptype[]
 
   * up to 3 instances of helptype[] are allowed

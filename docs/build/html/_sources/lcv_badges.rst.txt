@@ -86,7 +86,11 @@ At the end of the calendar year, annual champion badges are also awarded.
 
 Defining Badges 
 ===============================
-The badges can be configured in the CMS. Badges should have:
+The badges can be configured in the CMS.
+
+.. image:: ../assets/cms-add-badge-form.png
+
+Badges should have:
 
 * A name.  This is the administrative name for the badge (for admin reports).
 * A display label.  This is what appears to users beneath the badge, minus the date range.

@@ -125,6 +125,7 @@
 <li class="toctree-l1"><a class="reference internal" href="site_faqs.html">Site FAQs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="other_cms_features.html">Other Website Features</a></li>
 <li class="toctree-l1"><a class="reference internal" href="taxonomies.html">Taxonomies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rss_feeds.html">RSS Feeds</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Workarounds:</span></p>
 <ul>
@@ -203,13 +204,12 @@
 <div class="section" id="url-pre-fill-method">
 <h2>URL Pre-fill method<a class="headerlink" href="#url-pre-fill-method" title="Permalink to this headline">¶</a></h2>
 <p>This method allows for passing in query parameters in the URL to pre-fill the main Get Legal Help form.  It is designed to allow for easier integration from chatbots and external services into OTIS without the user having to re-enter information.</p>
-<p>This method supports up to 4 parameters:</p>
+<p>This method supports up to 5 parameters:</p>
 <ul class="simple">
 <li><p>issue, which is the legal issues taxonomy term ID.  ILAO will provide a list of taxonomy term IDs for interested partners of the lowest-level terms so that users bypass additional screening.</p></li>
 <li><p>zipcode, the user’s zipcode</p></li>
 <li><p>household, the size of the household as a number</p></li>
-<li><p>source</p></li>
-<li><p>referral_source_type</p></li>
+<li><p>source (which then requires the referral_source_type parameter</p></li>
 <li><p>helptype[]</p>
 <ul>
 <li><p>up to 3 instances of helptype[] are allowed</p></li>
