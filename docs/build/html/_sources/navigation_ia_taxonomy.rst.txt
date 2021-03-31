@@ -22,3 +22,7 @@ Use Cases
 
 This will be used for the front-end navigational drilldown.
 
+curl -X PUT -H "Content-Type:application/json" -u "api_user:Ij&@D86P^Ux5qzKD" -d '{"firstName":"test","lastName":"test","eTransferOrganization
+":"Chicago Legal Clinic"}' https://iloi-demo.legalserver.org/matter/api/online_intake_import 
+
+curl -X PUT -H "Content-Type:application/json" -u api_user:Ij&@D86P^Ux5qzKD@ https://iloi-demo.legalserver.org/matter/api/online_intake_import 

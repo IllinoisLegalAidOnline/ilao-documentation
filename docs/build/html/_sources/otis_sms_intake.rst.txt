@@ -36,6 +36,7 @@ Phase 3 will add support for legal issues beyond those in Phase 1
    otis_sms_functions
    otis_sms_twilio_studio_workflow
    otis_sms_api_calls
+   sms_eviction
 
 
 Functions
