@@ -80,15 +80,42 @@ OTIS Validate Total Income
 
 **Function name:**  otis-get-callback-times
 
-**Parameters:**  event.intakeSettingsId, income types, depending on user selection.
+**Parameters:**  
 
-**Requires:**  ILAO API call to get the callback type for a specific intake settings
++------------------------+---------------------------------------------------+
+|   Key                  | Description                                       |
++========================+===================================================+
+|  adults                | Required.  Integer.                               |
++------------------------+---------------------------------------------------+
+|  children              | Required.  Integer.                               |
++------------------------+---------------------------------------------------+
+|  Income types          | Key should be named income_[income type].  Value  |
+|                        | should be integer                                 |
++------------------------+---------------------------------------------------+
+|  standard              | Basic, ami, or fpl.  Defaults to fpl if not       |
+|                        | provided.                                         |
++------------------------+---------------------------------------------------+
+|  max                   | Percentage max income to calculate.  Number.      |
+|                        | Defaults to 300 if not provided                   |
++------------------------+---------------------------------------------------+
 
-**Status:**  This is a placeholder function right now. It counts all the income and if the income is greater than 5000, it returns true or false if the user is overincome or not.
+**Requires:**  Income Limits asset
 
-It should return the total income so that can be stored in a variable along with whether or not the user is overincome.
+**Returns** An object with values for
 
-todo:: Fix the return of the function
++------------------------+---------------------------------------------------+
+|   Key                  | Description                                       |
++========================+===================================================+
+|  income                | Integer; total income                             |
++------------------------+---------------------------------------------------+
+|  incomeFlag            | 0 if not over-income; 1 if over-income.           |
++------------------------+---------------------------------------------------+
+|  maxIncome             | Calculated maximum income                         |
++------------------------+---------------------------------------------------+
+
+.. note:: Unemployment benefits are computed at the passed value times 4.3 to convert weekly to monthly for calculating income.
+
+**Status:**  Complete
 
 
 OTIS Validate Payments
