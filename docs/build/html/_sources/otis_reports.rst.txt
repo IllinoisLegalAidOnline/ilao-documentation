@@ -10,3 +10,4 @@ Get Legal Help Reporting
    otis_reports_etransfer
    otis_reports_referral_counts
    otis_reports_referrals
+   reporting_otis_a2j
