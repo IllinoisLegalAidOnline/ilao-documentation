@@ -4,9 +4,9 @@ Specialized reporting: State Grants
 
 Intake by population/legal issue
 
-* `Incarceration intakes based on population <https://www.illinoislegalaid.org/admin/reporting/a2j/otis-incarceration-populations>`_
+* `Incarceration intakes by special population <https://www.illinoislegalaid.org/admin/reporting/a2j/otis-incarceration-populations>`_
 * `Incarceration intakes based on legal issue <https://www.illinoislegalaid.org/admin/reporting/a2j/otis-incarceration-issues>`_
-* `Immigration intakes based on population <https://www.illinoislegalaid.org/admin/reporting/a2j/otis-immigration-populations>`_
+* `Immigration intakes by special population <https://www.illinoislegalaid.org/admin/reporting/a2j/otis-immigration-populations>`_
 * `Immigration intakes based on legal issue <https://www.illinoislegalaid.org/admin/reporting/a2j/otis-immigration-issues>`_
 
 Referrals by population/legal issue
