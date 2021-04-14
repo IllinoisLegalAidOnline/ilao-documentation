@@ -4,7 +4,7 @@ LCV Permissions
 
 Who can earn points
 =====================
-Anyone with a qualifying activity can earn points.  
+Anyone with a qualifying activity can earn points. 
 
 
 Who can see an editorial dashboard
@@ -34,7 +34,7 @@ Users with the staff role can:
 
 Roles
 ========
-Legal content volunteers should be given the "subject matter expert" role when they are an active volunteer editor.  This will allow for certain organizational milestones to work.
+Legal content volunteers should be given the "subject matter expert" role when they are an active volunteer editor. This will allow for certain organizational milestones to work.
 
 
 .. note:: This may be something we want to automate between Salesforce and the website in the future.

@@ -2,9 +2,9 @@
 Portal layout summary
 ======================
 
-The portal layout summary is used as a single column body in the main content column.  It is often used in portal sub-pages.
+The portal layout summary is used as a single column body in the main content column. It is often used in portal sub-pages.
 
-A portal layout summary contains one or more portal messages.  A portal message contains:
+A portal layout summary contains one or more portal messages. A portal message contains:
 
 * A title
 * An image

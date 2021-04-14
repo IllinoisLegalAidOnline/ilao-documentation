@@ -2,7 +2,7 @@
 Content API:  Legal Form
 =================================
 
-Returns information for a specific Legal Form.  The form UUID must be provided.
+Returns information for a specific Legal Form. The form UUID must be provided.
 
 Function call
 ==============

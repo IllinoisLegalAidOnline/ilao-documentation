@@ -2,14 +2,14 @@
 Natural language processing of legal problem
 ==============================================
 
-The current website uses an autocomplete to our legal issues taxonomy to direct a user to the appropriate triage rules or referrals.  The accuracy of this is dependent on how the user interacts with the field:
+The current website uses an autocomplete to our legal issues taxonomy to direct a user to the appropriate triage rules or referrals. The accuracy of this is dependent on how the user interacts with the field:
 
-* Users can pick a term from the autocomplete.  If they do:
+* Users can pick a term from the autocomplete. If they do:
 
   * and it is the lowest level term in the taxonomy, they are matched to the triage rules
   * and it is not the lowest level term in the taxonomy, they are taken to a screen to filter through the taxonomy to the lowest level, starting with the term they entered.
   
-* Users can type text into the autocomplete.  If they do:
+* Users can type text into the autocomplete. If they do:
 
   * and it is an exact match to a term in the taxonomy, then it is treated as if the user selected the term from the autocomplete
   * and it is not an exact match to a term in the taxonomy, the user is taken to the top of our legal issues taxonomy to filter down to the lowest level problem.

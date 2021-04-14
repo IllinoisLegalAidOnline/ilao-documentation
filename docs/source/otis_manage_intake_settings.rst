@@ -5,7 +5,7 @@ Intake settings
 
 .. image:: ../assets/otis-intake-settings-admin.png
 
-Organizations can manage their intake settings from a `report </admin/organizations/intake/settings>`_. that lists all of the intake settings that have been assigned to their organization.  This report is filtered based on the current logged in user's groups (so ILAO staff won't see it the same way as our OTIS partners).
+Organizations can manage their intake settings from a `report </admin/organizations/intake/settings>`_. that lists all of the intake settings that have been assigned to their organization. This report is filtered based on the current logged in user's groups (so ILAO staff won't see it the same way as our OTIS partners).
 
 .. note::  All intake settings for an  organization will be listed here BUT unless they have been associated with the organization's group profile, the edit button will be missing on this report
 

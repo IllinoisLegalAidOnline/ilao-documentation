@@ -31,7 +31,7 @@ Triage user API supports GET commands to return one or more existing triage user
 Create Triage User
 ---------------------
 
-..  code-block:: json
+.. code-block:: json
 
     curl -X POST -H "Content-Type:application/vnd.api+json" -d '{
   "data": {

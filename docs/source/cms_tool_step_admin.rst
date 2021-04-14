@@ -9,15 +9,15 @@ To create a tool step:
 
 * Add a title
 * Pick the tool the step goes into
-* Indicate whether the step is always required.  
-* Indicate if this is the last step in the process.  A tool should have exactly 1 last step.
-* Add a step type.  This adds the content to the page.  
+* Indicate whether the step is always required. 
+* Indicate if this is the last step in the process. A tool should have exactly 1 last step.
+* Add a step type. This adds the content to the page. 
 * Optionally add toolbox step components of type callout
 
 
 **After adding a step, you must go back to the associated tool and add the tool step to the tool step list and order the steps correctly**
 
-.. note::  The last step in the tool must be marked as the last step.  There should only ever be one and it should be at the end of the toolbox.  The last step will then give the user the option to mark the toolbox complete.  This is usually going to be a "Mark toolbox complete" step.
+.. note::  The last step in the tool must be marked as the last step. There should only ever be one and it should be at the end of the toolbox. The last step will then give the user the option to mark the toolbox complete. This is usually going to be a "Mark toolbox complete" step.
 
 Step types
 ------------
@@ -30,7 +30,7 @@ There are 4 supported step types in tool steps:
 
 Process step
 ^^^^^^^^^^^^^
-Similar to the process step in How-to's, this is the primary way to include text in the tool step.  A process step includes:
+Similar to the process step in How-to's, this is the primary way to include text in the tool step. A process step includes:
 
 * A title
 * A body
@@ -44,11 +44,11 @@ The webform step type includes:
 
 * an optional heading
 * an optional body
-* a webform.  The webform must already exist.  
+* a webform. The webform must already exist. 
 
 Fill out forms (single)
 ^^^^^^^^^^^^^^^^^^^^^^^^
-This should be used when adding one internal form (either an Easy Form or blank form linked to or downloadable from our website).  If you need to provide multiple forms on the page, use the Fill out forms (multiple) option OR a process step.  
+This should be used when adding one internal form (either an Easy Form or blank form linked to or downloadable from our website). If you need to provide multiple forms on the page, use the Fill out forms (multiple) option OR a process step. 
 
 For this component you need to:
 
@@ -62,7 +62,7 @@ The appropriate template (easy form, link form, or form download) will render au
 
 Fill out forms (multiple)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
-DO NOT USE.  This is currently buggy and needs to be fixed as it doesn't display more than one form in each section.
+DO NOT USE. This is currently buggy and needs to be fixed as it doesn't display more than one form in each section.
 
 For multiple forms, it is best to use the process step for now.
 
@@ -70,7 +70,7 @@ Tool Step Components
 -----------------------
 Callout is the only tool step component supported.
 
-A callout is an optional component that can be used below the main text of the page to highlight important information.  Tool steps should have no more than 1 callout and can be positioned above or below the text on process steps.
+A callout is an optional component that can be used below the main text of the page to highlight important information. Tool steps should have no more than 1 callout and can be positioned above or below the text on process steps.
 
 Callouts display with a slightly shaded background.
 
@@ -138,7 +138,7 @@ When the tool is marked complete
 When the user completes the tool and marks the toolbox complete:
 
 * they are given a well done message
-* they have the option to view their toolboxes.  This returns them to the toolbox selector results page with the completed tools marked done and incomplete tools ready to be started.
+* they have the option to view their toolboxes. This returns them to the toolbox selector results page with the completed tools marked done and incomplete tools ready to be started.
 * they have the option to provide feedback via SurveyMonkey
 
 Desktop:
@@ -154,7 +154,7 @@ The well done image and text are managed in the `Final toolbox page image block.
 
 My Progress block
 ======================
-The "My Progress" block tracks a user's progress across the tool.  
+The "My Progress" block tracks a user's progress across the tool. 
 
 * For logged in users, it will remember their progress over the course of 1 year.
 * For anonymous users, it will remember their progress only for the current session.

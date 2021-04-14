@@ -17,7 +17,7 @@ Sample response
 
    [{
 		"body": [
-			"When a judge signs an Order of Protection, it makes it illegal for the Respondent to do or not do certain things.  A judge may require the Respondent to:"
+			"When a judge signs an Order of Protection, it makes it illegal for the Respondent to do or not do certain things. A judge may require the Respondent to:"
 		],
 		"list": [{
 			"itemListOrder": "Unordered",

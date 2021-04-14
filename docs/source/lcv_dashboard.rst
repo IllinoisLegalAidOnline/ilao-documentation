@@ -23,7 +23,7 @@ To generate content for the dashboard, the following scheduled tasks must be exe
 
 * a daily task to award badges
 * a daily task to award milestones
-* a daily task to update totals.  We don't want to have to manually update the data every time the page is viewed (technically similar to the voting API module)
+* a daily task to update totals. We don't want to have to manually update the data every time the page is viewed (technically similar to the voting API module)
 * monthly task to update streak
 
 

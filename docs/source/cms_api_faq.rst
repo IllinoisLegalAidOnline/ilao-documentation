@@ -2,7 +2,7 @@
 Content API:  Legal Problem FAQ
 =================================
 
-Returns set of questions with answers from a specific problem.  The UUID for the problem must be provided.
+Returns set of questions with answers from a specific problem. The UUID for the problem must be provided.
 
 Function call
 ================
@@ -54,4 +54,4 @@ Sample response
 Parameters
 =============
 
-* problem = the UUID identifier for the specific problem.  Required and limited to 1.
+* problem = the UUID identifier for the specific problem. Required and limited to 1.

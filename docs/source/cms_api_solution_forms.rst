@@ -3,7 +3,7 @@ Content API:  Legal Solution Forms Needed
 ==========================================
 
 
-Returns the list of legal forms needed from a specific solution.  The solution's UUID must be provided.
+Returns the list of legal forms needed from a specific solution. The solution's UUID must be provided.
 
 Function call
 ===============

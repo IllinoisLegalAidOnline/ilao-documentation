@@ -2,7 +2,7 @@
 Sectional Blocks
 ===========================
 
-There are several blocks that are used to provide heading text and images on various sections of the website.  These include the blocks that provide the page description for thes following:
+There are several blocks that are used to provide heading text and images on various sections of the website. These include the blocks that provide the page description for thes following:
 
 * `Practice resources header block <https://www.illinoislegalaid.org/block/141>`_
 * `Forms library header block <https://www.illinoislegalaid.org/block/136>`_

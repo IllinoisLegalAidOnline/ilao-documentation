@@ -118,7 +118,8 @@
 <li class="toctree-l1"><a class="reference internal" href="site_search.html">Site Search</a></li>
 <li class="toctree-l1"><a class="reference internal" href="site_faqs.html">Site FAQs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="other_cms_features.html">Other Website Features</a></li>
-<li class="toctree-l1"><a class="reference internal" href="taxonomies.html">Taxonomies Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="taxonomies.html">Taxonomies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rss_feeds.html">RSS Feeds</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Workarounds:</span></p>
 <ul>
@@ -194,14 +195,14 @@
             
   <div class="section" id="smart-blocks">
 <h1>Smart blocks<a class="headerlink" href="#smart-blocks" title="Permalink to this headline">¶</a></h1>
-<p>Smart blocks provide some tools to allow us to display existing blocks based on defined conditions.  To use:</p>
+<p>Smart blocks provide some tools to allow us to display existing blocks based on defined conditions. To use:</p>
 <ul class="simple">
 <li><p>create the blocks you need to use</p></li>
 <li><p>create a Decision block</p></li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>In its initial implementation this is very limited. It only allows us to create segments based on whether the user is on mobile, browser language, operating system.  It supports cookies and localStorage but will require additional build out for ILAO to use these methods.</p>
+<p>In its initial implementation this is very limited. It only allows us to create segments based on whether the user is on mobile, browser language, operating system. It supports cookies and localStorage but will require additional build out for ILAO to use these methods.</p>
 </div>
 <div class="section" id="creating-segments">
 <h2>Creating segments<a class="headerlink" href="#creating-segments" title="Permalink to this headline">¶</a></h2>
@@ -211,14 +212,14 @@
 <li><p>Mobile</p></li>
 <li><p>Operating systems</p></li>
 <li><p>Language (browser); this may be different than their viewing language on the website.</p></li>
-<li><p>Cookies.  These require ILAO to define and store user cookies in the user’s browser</p></li>
-<li><p>LocalStorage.  These require ILAO to define and store data in the user’s local storage on their browser.</p></li>
+<li><p>Cookies. These require ILAO to define and store user cookies in the user’s browser</p></li>
+<li><p>LocalStorage. These require ILAO to define and store data in the user’s local storage on their browser.</p></li>
 </ul>
-<p>Conditions can be complex.  In the example below, there is a condition of if the user is on mobile and either they have a donor cookie or a return user localStorage value, then the user meets this segment.</p>
+<p>Conditions can be complex. In the example below, there is a condition of if the user is on mobile and either they have a donor cookie or a return user localStorage value, then the user meets this segment.</p>
 <img alt="_images/smart-block-segments.png" src="_images/smart-block-segments.png" />
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Segment sets should ideally have multiple segments so that when used in a decision block, each segment can be assigned a specific block.  For example, a mobile segment set might have a segment of mobile and a segment for not mobile.  Then in the decision block, mobile might see block A and not-mobile would see block B.</p>
+<p>Segment sets should ideally have multiple segments so that when used in a decision block, each segment can be assigned a specific block. For example, a mobile segment set might have a segment of mobile and a segment for not mobile. Then in the decision block, mobile might see block A and not-mobile would see block B.</p>
 </div>
 </div>
 <div class="section" id="decision-block">

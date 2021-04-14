@@ -3,7 +3,7 @@ Content API:  Legal Questions List
 ====================================
 
 
-Returns list of questions from the legal question content type.  The list will be limited if optional parameters are included.
+Returns list of questions from the legal question content type. The list will be limited if optional parameters are included.
 
 
 Function call
@@ -41,7 +41,7 @@ Sample response
 Parameters
 ============
 
-* language.  The 2 digit ISO code for supported languages
+* language. The 2 digit ISO code for supported languages
 * coverage area:
 
    * administrativeArea (one of County, City, Postal code)

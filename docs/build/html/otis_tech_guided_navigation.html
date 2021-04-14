@@ -128,7 +128,8 @@
 <li class="toctree-l1"><a class="reference internal" href="site_search.html">Site Search</a></li>
 <li class="toctree-l1"><a class="reference internal" href="site_faqs.html">Site FAQs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="other_cms_features.html">Other Website Features</a></li>
-<li class="toctree-l1"><a class="reference internal" href="taxonomies.html">Taxonomies Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="taxonomies.html">Taxonomies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rss_feeds.html">RSS Feeds</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Workarounds:</span></p>
 <ul>
@@ -206,9 +207,9 @@
             
   <div class="section" id="guided-navigation-overview">
 <h1>Guided Navigation Overview<a class="headerlink" href="#guided-navigation-overview" title="Permalink to this headline">¶</a></h1>
-<p>Guided navigation is a system in LegalServer that allows for the creation of “expert system”-like forms.  ILAO is piloting it as an alternative to webform triage rules in some cases.</p>
+<p>Guided navigation is a system in LegalServer that allows for the creation of “expert system”-like forms. ILAO is piloting it as an alternative to webform triage rules in some cases.</p>
 <img alt="_images/otis-gn-edit-form.png" src="_images/otis-gn-edit-form.png" />
-<p>Each dialogue is a process that contains segments.  Each segment can be rendered as a form and exit to other segments or to other dialogues or just end.</p>
+<p>Each dialogue is a process that contains segments. Each segment can be rendered as a form and exit to other segments or to other dialogues or just end.</p>
 <p>Question 1 asks for the reason a user is unemployed</p>
 <img alt="_images/otis-gn-screen1.png" src="_images/otis-gn-screen1.png" />
 <p>Selecting I quit takes the user to this screen:</p>
@@ -220,22 +221,22 @@
 <li><p>Dialogues to be used as starting points in OTIS are set against the top level LSC problem code.</p></li>
 <li><p>Dialogues to be used within Guided Navigation to surface sub-issues are not tagged to OTIS.</p></li>
 <li><p>Limit segments to 1 question per segment, unless that segment is setting a single field.</p></li>
-<li><p>Users may be moved from one dialogue to another based on answers.  For example, a user may enter on Bankruptcy and get moved to Foreclosure when they are seeking a bankruptcy to save their home.</p></li>
+<li><p>Users may be moved from one dialogue to another based on answers. For example, a user may enter on Bankruptcy and get moved to Foreclosure when they are seeking a bankruptcy to save their home.</p></li>
 </ul>
 <div class="section" id="examples">
 <h3>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h3>
 <p>ILAO may create a Guided Navigation for Divorce that is called from OTIS when a user may have a divorce issue.</p>
 <p>The divorce dialogue may call a “has domestic violence” dialogue that sets whether there is DV in the divorce before returning to ask the user additional divorce triage questions.</p>
-<p>The has domestic violence dialogue has 1 segment containing 4 questions.  The result sets a single field “hasDV” to true.</p>
+<p>The has domestic violence dialogue has 1 segment containing 4 questions. The result sets a single field “hasDV” to true.</p>
 </div>
 </div>
 <div class="section" id="integration-into-website">
 <h2>Integration into Website<a class="headerlink" href="#integration-into-website" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This is to document how we envision this will work.  It has not been built yet.</p>
+<p>This is to document how we envision this will work. It has not been built yet.</p>
 </div>
-<p>GN processes will be tagged to Legal Issues.  When the Legal issue is selected in the OTIS triage, the Guided Navigation process will takeover (existing triage rules will continue to be used where Guided Navigation is empty).</p>
+<p>GN processes will be tagged to Legal Issues. When the Legal issue is selected in the OTIS triage, the Guided Navigation process will takeover (existing triage rules will continue to be used where Guided Navigation is empty).</p>
 <p>When Guided navigation is used, the system will:</p>
 <ul class="simple">
 <li><p>create a Guided navigation session</p></li>

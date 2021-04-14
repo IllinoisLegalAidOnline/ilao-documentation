@@ -2,18 +2,18 @@
 SMS Integration
 ========================
 
-.. note:: This is not built but documentation to guide the build.  This will be built out using Twilio Studio and ILAO API calls.
+.. note:: This is not built but documentation to guide the build. This will be built out using Twilio Studio and ILAO API calls.
 
 The English Twilio Studio flow is the OTIS master.
 
 See `conceptual prototype <https://kywpl3.axshare.com/#g=1&p=home>`_.
 
-The interface, including text segments, are stored in Twilio.  API calls to required data sets are on the website and processed using functions in Twilio Studio.
+The interface, including text segments, are stored in Twilio. API calls to required data sets are on the website and processed using functions in Twilio Studio.
 
 Phase 1
 ==========
 
-Phase 1 is a basic model that requires the user to choose from a limited set of legal problems.  All other issues will be routed to the website.
+Phase 1 is a basic model that requires the user to choose from a limited set of legal problems. All other issues will be routed to the website.
 
 Only legal issues offered over Guided Navigation can be triaged over SMS in our pilot and the initial rollout will be limited to:
 
@@ -41,7 +41,7 @@ Phase 3 will add support for legal issues beyond those in Phase 1
 
 Functions
 -------------
-Available functions are in the ilao service.  Twilio studio can pass parameters to functions.  These are stored in the event object.
+Available functions are in the ilao service. Twilio studio can pass parameters to functions. These are stored in the event object.
 
 
 

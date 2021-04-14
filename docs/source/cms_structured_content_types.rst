@@ -7,7 +7,7 @@ Content Types
 
 Legal Problem
 ----------------
-The primary content type for structured content is the Legal Problem.  
+The primary content type for structured content is the Legal Problem. 
 
 +-----------------+-------------------+----------------+-----------------------------+
 | Field           | Type              | Cardinality    | Description                 |
@@ -167,7 +167,7 @@ Legal Solution
 Legal Question
 ----------------
 
-Single question; packaged within an FAQ in a legal problem.  
+Single question; packaged within an FAQ in a legal problem. 
 
 +-----------------+-------------------+----------------+-----------------------------+
 | Field           | Type              | Cardinality    | Description                 |
@@ -357,13 +357,13 @@ Legal Step
 +-----------------+-------------------+----------------+-----------------------------+
 
 
-.. note:: There is also a position property in the legal steps in the schema.  This is computed in the step sections paragraph bundle in the How-to and not stored directly in the steps.  This will allow for step re-use.
+.. note:: There is also a position property in the legal steps in the schema. This is computed in the step sections paragraph bundle in the How-to and not stored directly in the steps. This will allow for step re-use.
 
 
 Helpful Organization
 ---------------------
 .. note::
-   ILAO already has organization profile data that should be used for any organization in our system.  New entities should only be added to reference organizations that are not legal services providers within our Organization platform.
+   ILAO already has organization profile data that should be used for any organization in our system. New entities should only be added to reference organizations that are not legal services providers within our Organization platform.
    
    Fields will be hidden when an Organization is included.
 
@@ -447,7 +447,7 @@ Legal Step Sections
 | Steps           | Entity reference  | unlimited      | Reference to legal steps    |
 +-----------------+-------------------+----------------+-----------------------------+
 
-.. note:: There is also a position property in the steps section in the schema.  This is computed in the How To and not stored directly in the steps. 
+.. note:: There is also a position property in the steps section in the schema. This is computed in the How To and not stored directly in the steps. 
 
 How To Directions & Tips
 --------------------------
@@ -462,7 +462,7 @@ How To Directions & Tips
 | referencedUrls  | Links             | unlimited      | Links included in markup    |
 +-----------------+-------------------+----------------+-----------------------------+
 
-.. note:: There is also a position property in the schema.  This is computed in the How-to and not stored in the database.
+.. note:: There is also a position property in the schema. This is computed in the How-to and not stored in the database.
 
 
 

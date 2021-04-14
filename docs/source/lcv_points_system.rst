@@ -29,19 +29,19 @@ Point types are created as content, although they do not have their own defined 
 
 Each point type:
 
-* has a name.  Examples might be "User tested a feature" or "Edited legal information for the public"
-* has an optional description.  This may be helpful to keep track of why a points type exists.
-* has a required Awarded field.  This is used to help track when the points would be awarded by the system.  Points can be awarded:
+* has a name. Examples might be "User tested a feature" or "Edited legal information for the public"
+* has an optional description. This may be helpful to keep track of why a points type exists.
+* has a required Awarded field. This is used to help track when the points would be awarded by the system. Points can be awarded:
 
-  * Manually; when this is selected, the system won't ever award the points to a user automatically.  This is useful for awards for activities outside of the legal content CMS.
+  * Manually; when this is selected, the system won't ever award the points to a user automatically. This is useful for awards for activities outside of the legal content CMS.
   * Automatically; based on a transition in the workflow states (for example, when an article is approved by staff and moved from "ready to review" to "published")
   
-* has a required Point basis.  Points may be awarded at a flat rate (such as 50 points for taking a user survey) or per word (such as 2 points per word edited in an article)
-* has a Points to award field.  This is where the number of points goes.  
+* has a required Point basis. Points may be awarded at a flat rate (such as 50 points for taking a user survey) or per word (such as 2 points per word edited in an article)
+* has a Points to award field. This is where the number of points goes. 
 
 .. todo:: Block point types from being indexed by robots.txt.
 
-.. note:: A warning will appear when saving a point type to remind staff to check to see if any existing badges or milestones need to be updated.  For example, when a new point type is added, badges that aren't set to include all point types may need to be updated.  
+.. note:: A warning will appear when saving a point type to remind staff to check to see if any existing badges or milestones need to be updated. For example, when a new point type is added, badges that aren't set to include all point types may need to be updated. 
 
 Point Type Report
 -------------------
@@ -62,7 +62,7 @@ Automated point awards will be awarded:
 Rules for Manual points 
 =================================
 
-Manual points may be awarded via a separate form and may optionally be tied to a legal content node.  This may be most helpful for content editorial contributions that are outside of workflow management such as:
+Manual points may be awarded via a separate form and may optionally be tied to a legal content node. This may be most helpful for content editorial contributions that are outside of workflow management such as:
 
 * Easy form reviews
 * Toolboxes, tools, and tool steps

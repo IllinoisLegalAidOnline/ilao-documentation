@@ -19,7 +19,7 @@ A legal solution is tied to one or more legal problems (see :ref:`cms-legal-prob
 * One or more HowTos
 * A result
 
-.. todo:: Determine if we should have information needed when we have tools/supplies in the how-to; This is especially important if the information needed might vary at a local level.  How Tos should be required.
+.. todo:: Determine if we should have information needed when we have tools/supplies in the how-to; This is especially important if the information needed might vary at a local level. How Tos should be required.
 
 Solution type
 =================
@@ -29,7 +29,7 @@ A solution type are defined by our `solution types taxonomy <https://www.illinoi
 
 Eligibility rules
 ===================
-Eligibility rules use the :ref:`cms-structured-text` block.  Each eligibility rule should have its own structured text block.
+Eligibility rules use the :ref:`cms-structured-text` block. Each eligibility rule should have its own structured text block.
 
 Examples
 ----------
@@ -57,33 +57,33 @@ might be created:
 
 Jurisdiction
 ================
-Structured content supports jurisdiction across different pieces of data. See :ref:`cms-coverage-area` documentation.  A solution may have a jurisdiction that is broader than an attached How-to, attached legal forms, or attached organization.  A solution, even if it has How-tos that vary by location or forms that apply only to some jurisdictions, can still be marked at a broader jurisdiction so long as:
+Structured content supports jurisdiction across different pieces of data. See :ref:`cms-coverage-area` documentation. A solution may have a jurisdiction that is broader than an attached How-to, attached legal forms, or attached organization. A solution, even if it has How-tos that vary by location or forms that apply only to some jurisdictions, can still be marked at a broader jurisdiction so long as:
 
 * the eligibility rules apply to the solution jurisdiction
 * the legal difficulty varies by location
 * the result varies by location  
 
-.. note:: Example:  The steps for getting an order of protection are different in Cook county than in the rest of the states.  McHenry county requires a specific form that no one else does.  But the eligibility rules, difficulty, and result is the same across Illinois.  The solution should be set to Illinois while there should be 2 How-tos (one for Cook county, one for the other 101 counties), and the McHenry form should be specificially tagged to McHenry county.
+.. note:: Example:  The steps for getting an order of protection are different in Cook county than in the rest of the states. McHenry county requires a specific form that no one else does. But the eligibility rules, difficulty, and result is the same across Illinois. The solution should be set to Illinois while there should be 2 How-tos (one for Cook county, one for the other 101 counties), and the McHenry form should be specificially tagged to McHenry county.
 
 Legal organization vs Helpful organization
 ===========================================
 
 Solutions support both :ref:`cms-legal-helpful-org` and legal organizations.
 
-A helpful organization is one that exists as a structured helpful organization.  
+A helpful organization is one that exists as a structured helpful organization. 
 
-Structured helpful organizations have much less information in our system.  These are organizations that do not belong in our organization system but that may still be helpful to users  This might include:
+Structured helpful organizations have much less information in our system. These are organizations that do not belong in our organization system but that may still be helpful to users  This might include:
 
 * DV shelters and/or hotlines
 * Social services
 * Government offices
 
-A legal organization is one that exists in `ILAO's organization system <https://www.illinoislegalaid.org/admin/group>`_.  Rather than replicate the data as a structured helpful organization, these can be referenced directly as needed in the legal organization field.
+A legal organization is one that exists in `ILAO's organization system <https://www.illinoislegalaid.org/admin/group>`_. Rather than replicate the data as a structured helpful organization, these can be referenced directly as needed in the legal organization field.
 
 Result
 ==========
 
-The result also uses the structured text block.  A result should describe the outcome when a solution is completed.  It should be broken down to best support delivery across channels.  
+The result also uses the structured text block. A result should describe the outcome when a solution is completed. It should be broken down to best support delivery across channels. 
 
 Example
 -------------
@@ -119,7 +119,7 @@ This segment above may be structured as:
 * Structured text block 2 with body markup of "A judge can prevent an abuser from viewing the phone records of the victim and any minor child in the victim's custody. The <em>Order of Protection </em>can require phone service providers to transfer service so that the victim can keep the same phone number. The victim will have to pay the bill."
 * Structured text block 3 with body markup of "A judge can also change a person's parental duties (custody/visitation) in an Order of Protection."  
 
-.. note::  Like in the example for eligibility rules, we have stripped off punctuation and and/or.  Basic html markup like italics can be used in body markup but will be stripped in the plain text version.  
+.. note::  Like in the example for eligibility rules, we have stripped off punctuation and and/or. Basic html markup like italics can be used in body markup but will be stripped in the plain text version. 
     
 
 

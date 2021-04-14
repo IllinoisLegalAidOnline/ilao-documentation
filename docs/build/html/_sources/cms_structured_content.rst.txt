@@ -3,7 +3,7 @@ Structured Content Schema
 ==========================
 
 
-A legal problem is the primary entity and has within it faqs and solutions.  A solution may have processes (how-to) included.
+A legal problem is the primary entity and has within it faqs and solutions. A solution may have processes (how-to) included.
 
 Legal Problem
 ===============

@@ -15,14 +15,14 @@ These settings can be changed per block and can be combined (for example, I can 
 Language
 ----------
 
-To limit to a specific language, click on the language tab and check the languages of pages that the block should appear on.  For example, if you click on Spanish, then the block will only appear on pages that start with illinoislegalaid.org/es.  
+To limit to a specific language, click on the language tab and check the languages of pages that the block should appear on. For example, if you click on Spanish, then the block will only appear on pages that start with illinoislegalaid.org/es. 
 
-.. note:: This has no bearing on whether a translation exists.  If a block is not translated but tagged to all languages, the English block will appear.
+.. note:: This has no bearing on whether a translation exists. If a block is not translated but tagged to all languages, the English block will appear.
 
 Pages & Content types
 ------------------------
 
-Blocks can be set to be visible or hidden per content type (legal content, basic page, job posting, etc) or per page or page paths.  Examples:
+Blocks can be set to be visible or hidden per content type (legal content, basic page, job posting, etc) or per page or page paths. Examples:
 
 * /node/29671 will cause a block to appear only on that page or on every page but that page depending on the show/hide settings
 * /about/* will cause a block to appear on every page that starts with /about/
@@ -31,9 +31,9 @@ Blocks can be set to be visible or hidden per content type (legal content, basic
 Roles
 --------
 
-Blocks can be set to be visible for specific roles.  Keep in mind:
+Blocks can be set to be visible for specific roles. Keep in mind:
 
-* the block will be visible if the user has any of the selected roles.  For example, staff users also have the legal aid member role so a block set to be visible for legal aid members will be visible to staff users even if the staff role is not set
+* the block will be visible if the user has any of the selected roles. For example, staff users also have the legal aid member role so a block set to be visible for legal aid members will be visible to staff users even if the staff role is not set
 * authenticated users means any logged in user
 * anonymous users means any not logged in user
 

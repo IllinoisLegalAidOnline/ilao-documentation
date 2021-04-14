@@ -42,9 +42,9 @@ For each node viewed:
 * a status of completed, started, or saved
 
   * Tool steps will have a status of started when the tool step is viewed and completed when the user marks it complete
-  * Tools will have a status of started when the user first views the page and a status of completed when the user has marked.  If they accessed it from the toolbox form and did not start it, it will have a status of saved until they start.  
+  * Tools will have a status of started when the user first views the page and a status of completed when the user has marked. If they accessed it from the toolbox form and did not start it, it will have a status of saved until they start. 
   
-See the `toolbox tools reports <https://ilao-documentation.readthedocs.io/en/latest/cms_content_reporting.html#toolbox-tool-report>`_ under CMS content reporting.  
+See the `toolbox tools reports <https://ilao-documentation.readthedocs.io/en/latest/cms_content_reporting.html#toolbox-tool-report>`_ under CMS content reporting. 
   
 Website members
 -----------------
@@ -55,14 +55,14 @@ For logged in members, their user ID is captured; this allows the user to return
 Anonymous users
 -----------------
 
-For anonymous users, the data is captured but the user can not return and continue where they left off.  If they return to a tool, they will not see any completed progress from earlier sessions.
+For anonymous users, the data is captured but the user can not return and continue where they left off. If they return to a tool, they will not see any completed progress from earlier sessions.
 
 
 Offline Communications
 ==========================
 
-Ticklers exist on the back-end to allow us to follow up with users who are in-progress on a tool via SMS and email.  But they need a lot of work before we reactivate them.
+Ticklers exist on the back-end to allow us to follow up with users who are in-progress on a tool via SMS and email. But they need a lot of work before we reactivate them.
 
 .. todo:: rebuild the tickler functionality
 
-Users who complete a tool are provided the link to a `toolbox feedback survey <https://www.surveymonkey.com/r/R6CHB8R>`_.  
+Users who complete a tool are provided the link to a `toolbox feedback survey <https://www.surveymonkey.com/r/R6CHB8R>`_. 

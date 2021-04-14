@@ -129,7 +129,8 @@
 <li class="toctree-l1"><a class="reference internal" href="site_search.html">Site Search</a></li>
 <li class="toctree-l1"><a class="reference internal" href="site_faqs.html">Site FAQs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="other_cms_features.html">Other Website Features</a></li>
-<li class="toctree-l1"><a class="reference internal" href="taxonomies.html">Taxonomies Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="taxonomies.html">Taxonomies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rss_feeds.html">RSS Feeds</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Workarounds:</span></p>
 <ul>
@@ -214,22 +215,22 @@
 <p>The add/edit location form is the same for both ILAO staff and organization/OTIS managers.</p>
 <div class="section" id="title">
 <h2>Title<a class="headerlink" href="#title" title="Permalink to this headline">¶</a></h2>
-<p>Every location requires a title, or name.  The name should be descriptive enough that when displayed to users it makes sense.  For example:  Bond County Courthouse, Main Office, Waukegan Office.</p>
+<p>Every location requires a title, or name. The name should be descriptive enough that when displayed to users it makes sense. For example:  Bond County Courthouse, Main Office, Waukegan Office.</p>
 </div>
 <div class="section" id="address">
 <h2>Address<a class="headerlink" href="#address" title="Permalink to this headline">¶</a></h2>
-<p>Every location requires an address.  By checking “Yes” to the “Same address as the organization” will copy the physical address of the organization to the location.</p>
+<p>Every location requires an address. By checking “Yes” to the “Same address as the organization” will copy the physical address of the organization to the location.</p>
 </div>
 <div class="section" id="phone-numbers">
 <h2>Phone numbers<a class="headerlink" href="#phone-numbers" title="Permalink to this headline">¶</a></h2>
-<p>Every location requires a phone number.  By checking “Yes” to “Same phone number as organization,” the phone number from the organization will be copied.</p>
+<p>Every location requires a phone number. By checking “Yes” to “Same phone number as organization,” the phone number from the organization will be copied.</p>
 <p>In addition, additional phone numbers for TTY and Toll-free numbers are optional.</p>
 <p>Phone numbers should be formatted as (xxx) xxx-xxxx.</p>
 <img alt="_images/otis-location-header.png" src="_images/otis-location-header.png" />
 </div>
 <div class="section" id="hours-of-operations">
 <h2>Hours of Operations<a class="headerlink" href="#hours-of-operations" title="Permalink to this headline">¶</a></h2>
-<p>There are two options to set a location’s hours of operations: regular weekly hours and less frequent hours.  These may be overwritten at the service level.</p>
+<p>There are two options to set a location’s hours of operations: regular weekly hours and less frequent hours. These may be overwritten at the service level.</p>
 <p>When a location is open at least 1 day every week, the “Is this location open at least weekly?” should be set to Yes.</p>
 <p>The weekly hours form allows one to:</p>
 <ul class="simple">
@@ -237,11 +238,11 @@
 <li><p>Set up to 4 time slots per day; for example:  Monday 8 am - 12pm, 1pm - 5pm</p></li>
 </ul>
 <img alt="_images/otis-locations-hours-regular.png" src="_images/otis-locations-hours-regular.png" />
-<p>When a location is not open at least once a week, then we have to use the irregular hours form.  This form requires:</p>
+<p>When a location is not open at least once a week, then we have to use the irregular hours form. This form requires:</p>
 <ul class="simple">
 <li><p>setting a start date for the rule</p></li>
 <li><p>setting an end date for the rule</p></li>
-<li><p>setting a rule.  The rule can be generated <a class="reference external" href="https://icalendar.org/rrule-tool.html">using this online tool</a> and then copied and pasted in.</p></li>
+<li><p>setting a rule. The rule can be generated <a class="reference external" href="https://icalendar.org/rrule-tool.html">using this online tool</a> and then copied and pasted in.</p></li>
 </ul>
 <img alt="_images/otis-locations-hours-irregular.png" src="_images/otis-locations-hours-irregular.png" />
 </div>
@@ -249,7 +250,7 @@
 <h2>Holidays<a class="headerlink" href="#holidays" title="Permalink to this headline">¶</a></h2>
 <p>Holidays should be set for the location and may be overwritten at the service level.</p>
 <img alt="_images/otis-locations-holidays.png" src="_images/otis-locations-holidays.png" />
-<p>Holidays are managed in the <a class="reference external" href="https://www.illinoislegalaid.org/admin/structure/taxonomy/manage/holidays/overview">holidays taxonomy</a>.  Common Illinois and Federal holidays are included in the taxonomy.</p>
+<p>Holidays are managed in the <a class="reference external" href="https://www.illinoislegalaid.org/admin/structure/taxonomy/manage/holidays/overview">holidays taxonomy</a>. Common Illinois and Federal holidays are included in the taxonomy.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Custom holidays can be added to the holiday taxonomy to accommodate unusual events where one or more organizations needs to be closed (such as a staff retreat) or for unusual occurrences (such as the every 4-5 years when the day after Thanksgiving is not the 4th Friday).</p>
@@ -259,18 +260,18 @@
 <h2>Service area<a class="headerlink" href="#service-area" title="Permalink to this headline">¶</a></h2>
 <p>The service area consists of at least one question: does the location serve all of Illinois? If the location is less than statewide, then the user is required to set the service area at the county, city, or zip code level.</p>
 <img alt="_images/otis-locations-service-area.png" src="_images/otis-locations-service-area.png" />
-<p>For example, a location that serves Kane, Kendall, and DeKalb counties would have the limit to specific area set to Counties and then would list the 3 counties.  If a location serves only part of a county (for example, just the city of Chicago in Cook county, the limit to specific area should be set to Cities and Chicago should be listed).</p>
+<p>For example, a location that serves Kane, Kendall, and DeKalb counties would have the limit to specific area set to Counties and then would list the 3 counties. If a location serves only part of a county (for example, just the city of Chicago in Cook county, the limit to specific area should be set to Cities and Chicago should be listed).</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The service area can be overridden at the service level.  For example, a location may serve 3 counties but have a specialty service that only serves 1 county.</p>
+<p>The service area can be overridden at the service level. For example, a location may serve 3 counties but have a specialty service that only serves 1 county.</p>
 </div>
 </div>
 <div class="section" id="income-eligibility-fees">
 <h2>Income eligibility &amp; fees<a class="headerlink" href="#income-eligibility-fees" title="Permalink to this headline">¶</a></h2>
-<p>Every location should indicate what it typically charges users/clients.  There are 4 options:</p>
+<p>Every location should indicate what it typically charges users/clients. There are 4 options:</p>
 <ul class="simple">
-<li><p>Free to everyone.  This should be used when there is generally no charge and everyone is eligible.</p></li>
-<li><p>Free to eligible persons/entities.  This should be used when the location generally has income limits.  For example, the location only serves clients with income less than 125% of the federal poverty level.</p></li>
+<li><p>Free to everyone. This should be used when there is generally no charge and everyone is eligible.</p></li>
+<li><p>Free to eligible persons/entities. This should be used when the location generally has income limits. For example, the location only serves clients with income less than 125% of the federal poverty level.</p></li>
 <li><p>Sliding scale based on income.</p></li>
 <li><p>Flat fee regardless of income</p></li>
 </ul>
@@ -298,7 +299,7 @@
 </div>
 <div class="section" id="parent-organization">
 <h2>Parent Organization<a class="headerlink" href="#parent-organization" title="Permalink to this headline">¶</a></h2>
-<p>This needs to be set to the organization the location belongs to.  “Same as” fields will not copy correctly without this being set.</p>
+<p>This needs to be set to the organization the location belongs to. “Same as” fields will not copy correctly without this being set.</p>
 </div>
 </div>
 

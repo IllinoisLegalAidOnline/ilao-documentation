@@ -2,7 +2,7 @@
 Houston AI Classifier API Docs
 ===============================
 
-The `Houston.AI classifier <https://houston.ai/api/classify-docs>`_ is an API service that takes text and returns one or more legal problem codes based on the LSC problem code/Legal Server problem code taxonomy.  
+The `Houston.AI classifier <https://houston.ai/api/classify-docs>`_ is an API service that takes text and returns one or more legal problem codes based on the LSC problem code/Legal Server problem code taxonomy. 
 
 Configuration in Drupal
 =========================
@@ -102,4 +102,4 @@ A user enters the text "I need a divorce from an abusive spouse"
   "sessionId": "ff65f15a-623c-434f-ba3b-02980316453d"}
 
 
-A call to Houston.ai's classifier returns a JSON structure of the most likely probability and then any other likely probabilities.  The code include the numeric LSC problem code and the label for that code.
+A call to Houston.ai's classifier returns a JSON structure of the most likely probability and then any other likely probabilities. The code include the numeric LSC problem code and the label for that code.

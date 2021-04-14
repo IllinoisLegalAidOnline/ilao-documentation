@@ -203,10 +203,10 @@
 <h1>Supported Integrations<a class="headerlink" href="#supported-integrations" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="url-pre-fill-method">
 <h2>URL Pre-fill method<a class="headerlink" href="#url-pre-fill-method" title="Permalink to this headline">¶</a></h2>
-<p>This method allows for passing in query parameters in the URL to pre-fill the main Get Legal Help form.  It is designed to allow for easier integration from chatbots and external services into OTIS without the user having to re-enter information.</p>
+<p>This method allows for passing in query parameters in the URL to pre-fill the main Get Legal Help form. It is designed to allow for easier integration from chatbots and external services into OTIS without the user having to re-enter information.</p>
 <p>This method supports up to 5 parameters:</p>
 <ul class="simple">
-<li><p>issue, which is the legal issues taxonomy term ID.  ILAO will provide a list of taxonomy term IDs for interested partners of the lowest-level terms so that users bypass additional screening.</p></li>
+<li><p>issue, which is the legal issues taxonomy term ID. ILAO will provide a list of taxonomy term IDs for interested partners of the lowest-level terms so that users bypass additional screening.</p></li>
 <li><p>zipcode, the user’s zipcode</p></li>
 <li><p>household, the size of the household as a number</p></li>
 <li><p>source (which then requires the referral_source_type parameter</p></li>
@@ -225,8 +225,8 @@
 <li><p>source should be either an organization id or intake_settings id</p></li>
 <li><p>referral_source_type should be either organization or intake_settings</p></li>
 </ul>
-<p>When a source is included with a referral_source_type of organization, the specific organization will receive priority over any other organization.  This is usually the <strong>preferred</strong> approach to use unless an organization needs to prioritize a specific intake setting.</p>
-<p>When a source is included with a referral_source_type of intake_settings, the specific intake settings or organization will receive priority over any other intake settings.  This is expected to be used by organization partners on their own websites or via social media to prioritize traffic from those partners into OTIS.  For example, if the url is /get-legal-help?source=1226&amp;referral_source_type=intake_settings then Legal Aid Chicago’s housing rules would take priority over other organizations.</p>
+<p>When a source is included with a referral_source_type of organization, the specific organization will receive priority over any other organization. This is usually the <strong>preferred</strong> approach to use unless an organization needs to prioritize a specific intake setting.</p>
+<p>When a source is included with a referral_source_type of intake_settings, the specific intake settings or organization will receive priority over any other intake settings. This is expected to be used by organization partners on their own websites or via social media to prioritize traffic from those partners into OTIS. For example, if the url is /get-legal-help?source=1226&amp;referral_source_type=intake_settings then Legal Aid Chicago’s housing rules would take priority over other organizations.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Because the source parameter is tied to the intake settings, it is best practice to include a relevant taxonomy term as the parameter will be ignored if the user selects a topic that is unrelated to the intake settings</p>
@@ -254,7 +254,7 @@
 </div>
 <div class="section" id="combining-the-two">
 <h3>Combining the two<a class="headerlink" href="#combining-the-two" title="Permalink to this headline">¶</a></h3>
-<p>We can combine the two to pre-fill the form and prioritize an organization.  This may be helpful for social media or website campaigns where an OTIS partner may want to help the user get to the right triage rules, for example, prefilling the legal issue as foreclosure to ensure that users don’t search for bankruptcy when they are considering bankruptcy to prevent a foreclosure.</p>
+<p>We can combine the two to pre-fill the form and prioritize an organization. This may be helpful for social media or website campaigns where an OTIS partner may want to help the user get to the right triage rules, for example, prefilling the legal issue as foreclosure to ensure that users don’t search for bankruptcy when they are considering bankruptcy to prevent a foreclosure.</p>
 <p>Looking for a lawyer for foreclosure in 60603, household size of 3 and prioritizing Legal Aid Chicago:</p>
 <p><a class="reference external" href="https://www.illinoislegalaid.org/get-legal-help?issue=515281&amp;zipcode=60603&amp;household=3&amp;helptype[]=lawyer&amp;source=25231&amp;referral_source_type=organization">https://www.illinoislegalaid.org/get-legal-help?issue=515281&amp;zipcode=60603&amp;household=3&amp;helptype[]=lawyer&amp;source=25231&amp;referral_source_type=organization</a></p>
 <div class="admonition note">

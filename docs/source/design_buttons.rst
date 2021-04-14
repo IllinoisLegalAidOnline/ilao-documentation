@@ -10,12 +10,12 @@ Button classes
 ===============
 
 
-.. note::  Hyperlinks in legal content even when styled with the button class are showing the wrong link color; they should be white for primary and secondary links.  
+.. note::  Hyperlinks in legal content even when styled with the button class are showing the wrong link color; they should be white for primary and secondary links. 
 
 Primary
 ---------
 
-The primary CTA button is the bright blue button with white text.  It can be added in the WYSIWYG using the class name "cta-primary"
+The primary CTA button is the bright blue button with white text. It can be added in the WYSIWYG using the class name "cta-primary"
 
 .. code-block:: HTML
 
@@ -29,7 +29,7 @@ Use for:
 
 Do not use:
 
- * On about pages, except when it is the primary call to action.  For example, on the why donate page, the donate button is the primary call to action and Learn more about connector's circle or other ways to give should be secondary buttons.  **In most cases, the secondary or tertiary buttons should be used.**
+ * On about pages, except when it is the primary call to action. For example, on the why donate page, the donate button is the primary call to action and Learn more about connector's circle or other ways to give should be secondary buttons. **In most cases, the secondary or tertiary buttons should be used.**
  * Within legal content 
 
 Secondary
@@ -44,10 +44,10 @@ The secondary CTA button is the dark blue button with white text. It can be adde
 Use for:
 
  *  On about pages, for important buttons where the button is not the primary CTA on the page
- * On legal content (other than toolbox, tool, tool step content), for a **primary next action** in an article that the user must take (for example, filing an answer or appearance in an article on responding to a lawsuit).  
+ * On legal content (other than toolbox, tool, tool step content), for a **primary next action** in an article that the user must take (for example, filing an answer or appearance in an article on responding to a lawsuit). 
  
    * A primary next action is usually filling out or downloading a form or other document. 
-   * Legal content should never have more than one secondary button within the text.  
+   * Legal content should never have more than one secondary button within the text. 
    * If there are more than one critical action to highlight (for example, linking to an answer and an appearance separately, use two tertiary buttons).
 
 Do not use:

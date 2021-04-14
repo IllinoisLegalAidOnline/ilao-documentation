@@ -2,12 +2,12 @@
 Local content tool
 ========================
 
-The local content tool appears as a wand on the WYSIWYG tool next to the spell check button.  The tool is used to insert region specific content and supports limiting the markup to the county, city, or zip code level.  Front-end code then causes the text to display only to users whose location matches the inserted code; it is hidden for all other users.
+The local content tool appears as a wand on the WYSIWYG tool next to the spell check button. The tool is used to insert region specific content and supports limiting the markup to the county, city, or zip code level. Front-end code then causes the text to display only to users whose location matches the inserted code; it is hidden for all other users.
 
 .. image:: ../assets/cms-local-content-button.png
 
 
-.. note:: The tool does not support editing of existing markup.  To edit, a content editor must edit within the inserted span tags.
+.. note:: The tool does not support editing of existing markup. To edit, a content editor must edit within the inserted span tags.
 
 .. image:: ../assets/cms-local-content-wizard.png
 
@@ -69,7 +69,7 @@ On legal content pages, the zip code is automatically prepopulated:
 * for logged in users, the zip code is pulled from their profile
 
 
-On legal content pages, users see text Displaying information for zipcode [change].  
+On legal content pages, users see text Displaying information for zipcode [change]. 
 
 .. image:: ../assets/cms-legal-content-zipcode.png
    :scale: 50%

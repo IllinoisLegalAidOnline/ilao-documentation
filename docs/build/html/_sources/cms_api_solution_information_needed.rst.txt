@@ -3,7 +3,7 @@ Content API:  Solution Information Needed
 ==========================================
 
 
-Returns the eligibility rules for a specific legal solution.  
+Returns the eligibility rules for a specific legal solution. 
 
 Function call
 ================

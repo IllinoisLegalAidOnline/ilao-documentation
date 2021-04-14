@@ -3,14 +3,14 @@ Creating and editing structured content
 ========================================
 
 
-Structured legal content needs to be created in a specific way as certain content types depend on other content types.    
+Structured legal content needs to be created in a specific way as certain content types depend on other content types.   
 
 * Legal problems:
 
-  * require a solution, which must be created first.  A legal problem **cannot be saved** without a valid solution.
+  * require a solution, which must be created first. A legal problem **cannot be saved** without a valid solution.
   * allow for frequently asked questions, which must be created first and attached.
   
-* Solutions have optional components that must exist to be attached to a legal solution.  These are:
+* Solutions have optional components that must exist to be attached to a legal solution. These are:
 
   * Legal form
   * Legal how-to

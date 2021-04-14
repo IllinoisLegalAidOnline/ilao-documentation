@@ -211,7 +211,7 @@
 <p>All of our Twilio functions are stored in the ilao service in Twilio’s functions.</p>
 <div class="section" id="function-standards">
 <h2>Function standards<a class="headerlink" href="#function-standards" title="Permalink to this headline">¶</a></h2>
-<p>All of our OTIS functions are prefixed with the name otis.  All function names are written in the word-word-word format.</p>
+<p>All of our OTIS functions are prefixed with the name otis. All function names are written in the word-word-word format.</p>
 <p>All passed in parameters are contained in the event object.</p>
 </div>
 <div class="section" id="otis-get-confirmation">
@@ -219,21 +219,21 @@
 <p><strong>Function name:</strong>  otis-get-confirmation</p>
 <p><strong>Parameters:</strong>  event.intakeSettingsId and event.callbackType</p>
 <p><strong>Requires:</strong>  ILAO API call to get the return message based on the intake settings id and callback type.</p>
-<p><strong>Status:</strong>  This is a placeholder function right now.  It returns either the “we call” or “you call” message” as a JSON object.</p>
+<p><strong>Status:</strong>  This is a placeholder function right now. It returns either the “we call” or “you call” message” as a JSON object.</p>
 </div>
 <div class="section" id="otis-get-callback-days">
 <h2>OTIS Get Callback Days<a class="headerlink" href="#otis-get-callback-days" title="Permalink to this headline">¶</a></h2>
 <p><strong>Function name:</strong>  otis-get-callback-days</p>
 <p><strong>Parameters:</strong>  event.intakeSettingsId</p>
 <p><strong>Requires:</strong>  ILAO API call to get the next [x] days of available intake appointments.</p>
-<p><strong>Status:</strong>  This is a placeholder function right now. It returns a JSON object of days for the user to pick from.  Currently, it is using an array of days and a string of days to output.  This needs to be revised to return a key value pair that can be rendered while still having useful info for the system.</p>
+<p><strong>Status:</strong>  This is a placeholder function right now. It returns a JSON object of days for the user to pick from. Currently, it is using an array of days and a string of days to output. This needs to be revised to return a key value pair that can be rendered while still having useful info for the system.</p>
 </div>
 <div class="section" id="otis-get-first-callback-time">
 <h2>OTIS Get First Callback Time<a class="headerlink" href="#otis-get-first-callback-time" title="Permalink to this headline">¶</a></h2>
 <p><strong>Function name:</strong>  otis-get-first-callback-time</p>
 <p><strong>Parameters:</strong>  event.intakeSettingsId</p>
 <p><strong>Requires:</strong>  ILAO API call to get the range of available hours and the first available date.</p>
-<p><strong>Status:</strong>  This is a placeholder function right now. It returns a JSON object of days for the user to pick from.  It currently returns hard-coded text of:</p>
+<p><strong>Status:</strong>  This is a placeholder function right now. It returns a JSON object of days for the user to pick from. It currently returns hard-coded text of:</p>
 <ul class="simple">
 <li><p>intro (‘Callback times are between x and y’);</p></li>
 <li><p>first (‘The first available is [x]);</p></li>
@@ -245,7 +245,7 @@
 <p><strong>Function name:</strong>  otis-get-callback-times</p>
 <p><strong>Parameters:</strong>  event.intakeSettingsId, event.callbackDate</p>
 <p><strong>Requires:</strong>  ILAO API call to get the range of callback slots for a specific date and intake settings pairing.</p>
-<p><strong>Status:</strong>  This is a placeholder function right now. It returns a JSON object of times for the user to pick from.  It currently returns hard-coded text of:</p>
+<p><strong>Status:</strong>  This is a placeholder function right now. It returns a JSON object of times for the user to pick from. It currently returns hard-coded text of:</p>
 <ul class="simple">
 <li><p>timeArray of available times</p></li>
 <li><p>times - string of times to display to user</p></li>
@@ -274,21 +274,21 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>adults</p></td>
-<td><p>Required.  Integer.</p></td>
+<td><p>Required. Integer.</p></td>
 </tr>
 <tr class="row-odd"><td><p>children</p></td>
-<td><p>Required.  Integer.</p></td>
+<td><p>Required. Integer.</p></td>
 </tr>
 <tr class="row-even"><td><p>Income types</p></td>
-<td><p>Key should be named income_[income type].  Value
+<td><p>Key should be named income_[income type]. Value
 should be integer</p></td>
 </tr>
 <tr class="row-odd"><td><p>standard</p></td>
-<td><p>Basic, ami, or fpl.  Defaults to fpl if not
+<td><p>Basic, ami, or fpl. Defaults to fpl if not
 provided.</p></td>
 </tr>
 <tr class="row-even"><td><p>max</p></td>
-<td><p>Percentage max income to calculate.  Number.
+<td><p>Percentage max income to calculate. Number.
 Defaults to 300 if not provided</p></td>
 </tr>
 </tbody>
@@ -353,7 +353,7 @@ Defaults to 300 if not provided</p></td>
 <div class="section" id="otis-validate-money-input">
 <h2>OTIS Validate Money Input<a class="headerlink" href="#otis-validate-money-input" title="Permalink to this headline">¶</a></h2>
 <p><strong>Function name:</strong>  otis-validate-money-input</p>
-<p><strong>Purpose</strong>: Takes a string of input from the user and returns the string if it is a number or 0 if it is not.  This can then be used to route users to retry their input or move on to the next step.</p>
+<p><strong>Purpose</strong>: Takes a string of input from the user and returns the string if it is a number or 0 if it is not. This can then be used to route users to retry their input or move on to the next step.</p>
 <p><strong>Parameters:</strong>  event.amount (the user’s input in response to a money question)</p>
 <p><strong>Requires:</strong>  Nothing</p>
 <p><strong>Returns:</strong> A number.</p>
@@ -362,7 +362,7 @@ Defaults to 300 if not provided</p></td>
 <div class="section" id="otis-validate-race">
 <h2>OTIS Validate Race<a class="headerlink" href="#otis-validate-race" title="Permalink to this headline">¶</a></h2>
 <p><strong>Function name:</strong>  otis-validate-race</p>
-<p><strong>Purpose</strong>: Takes a string of input from the user and returns whether it is a valid selection or not.  This can then be used to route users to retry their input or move on to the next step.</p>
+<p><strong>Purpose</strong>: Takes a string of input from the user and returns whether it is a valid selection or not. This can then be used to route users to retry their input or move on to the next step.</p>
 <p><strong>Parameters:</strong>  event.race (the user’s input)</p>
 <p><strong>Requires:</strong>  TBD (should validate against supported race selections)</p>
 <p><strong>Returns:</strong> A number.</p>
@@ -371,7 +371,7 @@ Defaults to 300 if not provided</p></td>
 <div class="section" id="otis-validate-ethnicity">
 <h2>OTIS Validate Ethnicity<a class="headerlink" href="#otis-validate-ethnicity" title="Permalink to this headline">¶</a></h2>
 <p><strong>Function name:</strong>  otis-validate-ethnicity</p>
-<p><strong>Purpose</strong>: Takes a string of input from the user and returns whether it is a valid selection or not.  This can then be used to route users to retry their input or move on to the next step.</p>
+<p><strong>Purpose</strong>: Takes a string of input from the user and returns whether it is a valid selection or not. This can then be used to route users to retry their input or move on to the next step.</p>
 <p><strong>Parameters:</strong>  event.ethnicity (the user’s input)</p>
 <p><strong>Requires:</strong>  TBD (should validate against supported ethnicity selections)</p>
 <p><strong>Returns:</strong> A number.</p>
@@ -380,7 +380,7 @@ Defaults to 300 if not provided</p></td>
 <div class="section" id="otis-validate-year">
 <h2>OTIS Validate Year<a class="headerlink" href="#otis-validate-year" title="Permalink to this headline">¶</a></h2>
 <p><strong>Function name:</strong>  otis-validate-year</p>
-<p><strong>Purpose</strong>: Takes a string of input from the user and returns whether it is a valid year.  This can then be used to route users to retry their input or move on to the next step.</p>
+<p><strong>Purpose</strong>: Takes a string of input from the user and returns whether it is a valid year. This can then be used to route users to retry their input or move on to the next step.</p>
 <p>If the user enters a 2 digit year, it is assumed to be 19xx if the string is greater than 10.</p>
 <p><strong>Parameters:</strong>  event.year (the user’s input)</p>
 <p><strong>Requires:</strong> none</p>
@@ -390,7 +390,7 @@ Defaults to 300 if not provided</p></td>
 <div class="section" id="otis-validate-day-of-month">
 <h2>OTIS Validate Day of Month<a class="headerlink" href="#otis-validate-day-of-month" title="Permalink to this headline">¶</a></h2>
 <p><strong>Function name:</strong>  otis-validate-day-of-month</p>
-<p><strong>Purpose</strong>: Takes a string of input from the user and returns whether it is a valid number between 1 and 31.  This can then be used to route users to retry their input or move on to the next step.</p>
+<p><strong>Purpose</strong>: Takes a string of input from the user and returns whether it is a valid number between 1 and 31. This can then be used to route users to retry their input or move on to the next step.</p>
 <p><strong>Parameters:</strong>  event.day (the user’s input)</p>
 <p><strong>Requires:</strong>  none</p>
 <p><strong>Returns:</strong> A number (either the day or a 0 representing invalid data)</p>
@@ -399,7 +399,7 @@ Defaults to 300 if not provided</p></td>
 <div class="section" id="otis-validate-month">
 <h2>OTIS Validate Month<a class="headerlink" href="#otis-validate-month" title="Permalink to this headline">¶</a></h2>
 <p><strong>Function name:</strong>  otis-validate-day-of-month</p>
-<p><strong>Purpose</strong>: Takes a string of input from the user and returns whether it is a valid month.  This validates both numbers (1 - 12) and text input such as November, november, nov, or Nov.  This can then be used to route users to retry their input or move on to the next step.</p>
+<p><strong>Purpose</strong>: Takes a string of input from the user and returns whether it is a valid month. This validates both numbers (1 - 12) and text input such as November, november, nov, or Nov. This can then be used to route users to retry their input or move on to the next step.</p>
 <p><strong>Parameters:</strong>  event.day (the user’s input)</p>
 <p><strong>Requires:</strong>  none</p>
 <p><strong>Returns:</strong> A number (either the day or a 0 representing invalid data)</p>
@@ -412,7 +412,7 @@ Defaults to 300 if not provided</p></td>
 <h2>OTIS Poverty Estimate<a class="headerlink" href="#otis-poverty-estimate" title="Permalink to this headline">¶</a></h2>
 <p><strong>Function name:</strong>  otis-poverty-estimate</p>
 <p><strong>Purpose</strong>: Gets the estimated over-income threshold for users based on household size.</p>
-<p><strong>Parameters:</strong>  event.children and event.adult.  Both should be numbers.</p>
+<p><strong>Parameters:</strong>  event.children and event.adult. Both should be numbers.</p>
 <p><strong>Requires:</strong>  API call to get poverty income.</p>
 <p><strong>Returns:</strong> A number representing the maximum income to continue.</p>
 <p><strong>Status:</strong>  Support for per-month validation would be nice.</p>

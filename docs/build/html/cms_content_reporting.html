@@ -140,7 +140,8 @@
 <li class="toctree-l1"><a class="reference internal" href="site_search.html">Site Search</a></li>
 <li class="toctree-l1"><a class="reference internal" href="site_faqs.html">Site FAQs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="other_cms_features.html">Other Website Features</a></li>
-<li class="toctree-l1"><a class="reference internal" href="taxonomies.html">Taxonomies Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="taxonomies.html">Taxonomies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rss_feeds.html">RSS Feeds</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Workarounds:</span></p>
 <ul class="current">
@@ -267,7 +268,7 @@
 </ul>
 <div class="section" id="main-content-report">
 <h2>Main content report<a class="headerlink" href="#main-content-report" title="Permalink to this headline">¶</a></h2>
-<p>This is the basic Drupal report for content.  It includes all available content types.</p>
+<p>This is the basic Drupal report for content. It includes all available content types.</p>
 <div class="section" id="report-data">
 <h3>Report data<a class="headerlink" href="#report-data" title="Permalink to this headline">¶</a></h3>
 <p>The report includes:</p>
@@ -278,29 +279,29 @@
 <li><p>the format (this applies only to legal content)</p></li>
 <li><p>the author</p></li>
 <li><p>the date published (this is the created date unless manually changed)</p></li>
-<li><p>the last updated date.  This is the system date.  For legal content specific dates, use the find legal content report.</p></li>
+<li><p>the last updated date. This is the system date. For legal content specific dates, use the find legal content report.</p></li>
 </ul>
 </div>
 <div class="section" id="filters">
 <h3>Filters<a class="headerlink" href="#filters" title="Permalink to this headline">¶</a></h3>
 <p>This report can be filtered on:</p>
 <ul class="simple">
-<li><p>node ID.  This will return a specific node.</p></li>
+<li><p>node ID. This will return a specific node.</p></li>
 <li><p>Title (contains)</p></li>
 <li><p>Content type (this is the system content type like legal content, event, basic page)</p></li>
 <li><p>Published status (yes or no)</p></li>
-<li><p>Translation language.  Using this will filter out translations for the same node.</p></li>
+<li><p>Translation language. Using this will filter out translations for the same node.</p></li>
 </ul>
 </div>
 <div class="section" id="bulk-actions">
 <h3>Bulk actions<a class="headerlink" href="#bulk-actions" title="Permalink to this headline">¶</a></h3>
-<p>This is the system set of actions that can be applied to content.  Some of these are not relevant.</p>
+<p>This is the system set of actions that can be applied to content. Some of these are not relevant.</p>
 <ul class="simple">
 <li><p>Delete content  <strong>Be careful</strong> this will in fact delete selected content.</p></li>
-<li><p>Save content.  This will re-save content and update the last updated/changed date.</p></li>
-<li><p>Publish content.  This will publish unpublished content AND update the last updated/changed date.  It will not move legal content revisions that is under moderation from an unpublished state like draft/revise to published.</p></li>
-<li><p>Unpublish content.  This will unpublish published content and update the last updated/changed date.</p></li>
-<li><p>Update URL alias.  <strong>Use only if Gwen tells you to</strong>  This will reset path aliases.  This is helpful for some content types <strong>other than legal content.</strong></p></li>
+<li><p>Save content. This will re-save content and update the last updated/changed date.</p></li>
+<li><p>Publish content. This will publish unpublished content AND update the last updated/changed date. It will not move legal content revisions that is under moderation from an unpublished state like draft/revise to published.</p></li>
+<li><p>Unpublish content. This will unpublish published content and update the last updated/changed date.</p></li>
+<li><p>Update URL alias. <strong>Use only if Gwen tells you to</strong>  This will reset path aliases. This is helpful for some content types <strong>other than legal content.</strong></p></li>
 </ul>
 <div class="admonition-todo admonition" id="id1">
 <p class="admonition-title">Todo</p>
@@ -324,26 +325,26 @@
 <ul class="simple">
 <li><p>Node ID (ID) of the content</p></li>
 <li><p>Title of the content</p></li>
-<li><p>Format of the content.  Applies only to legal content.</p></li>
+<li><p>Format of the content. Applies only to legal content.</p></li>
 <li><p>Primary legal category of the content.</p></li>
-<li><p>Created date.  This is the date the system creates when the node is first created in any state.  It does not necessarily represent published date.</p></li>
+<li><p>Created date. This is the date the system creates when the node is first created in any state. It does not necessarily represent published date.</p></li>
 <li><p>Original author</p></li>
-<li><p>Last changed.  This is the date the system last recorded a change.  This is triggered whenever:</p>
+<li><p>Last changed. This is the date the system last recorded a change. This is triggered whenever:</p>
 <ul>
 <li><p>A user saves the node</p></li>
-<li><p>A system update saves the node.  This may happen if there is a scheduled change, Google analytics data added, or any other system action that causes a call to the node save function.</p></li>
+<li><p>A system update saves the node. This may happen if there is a scheduled change, Google analytics data added, or any other system action that causes a call to the node save function.</p></li>
 </ul>
 </li>
-<li><p>Last revised.  This is the “last internal revision” field. This date is manually sent when a staff user makes a substantive change to the content. Does not include typos, grammatical fixes, or style changes. Does include anything that adds or removes information, especially law changes.</p></li>
+<li><p>Last revised. This is the “last internal revision” field. This date is manually sent when a staff user makes a substantive change to the content. Does not include typos, grammatical fixes, or style changes. Does include anything that adds or removes information, especially law changes.</p></li>
 <li><p>Last expert review.</p></li>
 <li><p>Published status (Yes or No)</p></li>
 <li><p>Language of the node (content in more than one language will have multiple rows in the report)</p></li>
-<li><p>Page views from Google analytics.  These are pulled in from the English content and associated with the node (so it will show the same page views on Spanish and Polish versions).  These are pulled in as a scheduled task in batches and are based on the last 60 days +/- 14 days depending on when it was last imported.  <strong>This was added to aid in prioritization not as a 100% accurate measure</strong></p></li>
-<li><p>Word count.  The number of words in the node (see <a class="reference internal" href="cms_word_counts.html#word-count-label"><span class="std std-ref">Word counts</span></a>)</p></li>
+<li><p>Page views from Google analytics. These are pulled in from the English content and associated with the node (so it will show the same page views on Spanish and Polish versions). These are pulled in as a scheduled task in batches and are based on the last 60 days +/- 14 days depending on when it was last imported. <strong>This was added to aid in prioritization not as a 100% accurate measure</strong></p></li>
+<li><p>Word count. The number of words in the node (see <a class="reference internal" href="cms_word_counts.html#word-count-label"><span class="std std-ref">Word counts</span></a>)</p></li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The last revised and last expert review fields are not translatable in legal content but are translatable in toolbox, tool, and tool step content.    The last changed date is per language.</p>
+<p>The last revised and last expert review fields are not translatable in legal content but are translatable in toolbox, tool, and tool step content.   The last changed date is per language.</p>
 </div>
 <div class="admonition-todo admonition" id="id3">
 <p class="admonition-title">Todo</p>
@@ -352,30 +353,30 @@
 </div>
 <div class="section" id="id4">
 <h3>Filters<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
-<p>The find legal content report has many filters.  Filters are based on an AND condition.</p>
+<p>The find legal content report has many filters. Filters are based on an AND condition.</p>
 <ul class="simple">
 <li><p>ID is the node ID</p></li>
 <li><p>Title is the partial match of the title</p></li>
-<li><p>Category is the primary legal category for the content.  This is the single select dropdown for category versus the legal issues multiple-select field.</p></li>
-<li><p>Published status (yes or no).  Note that publish status is per node.  An unpublished translation in Spanish with a published English version would show as published.</p></li>
-<li><p>Content format.  This applies to legal content only and is set based on the paragraphs bundles included in the node.</p></li>
+<li><p>Category is the primary legal category for the content. This is the single select dropdown for category versus the legal issues multiple-select field.</p></li>
+<li><p>Published status (yes or no). Note that publish status is per node. An unpublished translation in Spanish with a published English version would show as published.</p></li>
+<li><p>Content format. This applies to legal content only and is set based on the paragraphs bundles included in the node.</p></li>
 <li><p>Created filters on the created date and can be set with a start date and/or end date</p></li>
 <li><p>Last revised filters on the last internal revision date and can be set with a start date and/or end date</p></li>
 <li><p>Last expert review filters on the last expert review date and can be set with a start date and/or end date</p></li>
 <li><p>Level (basic or advanced)</p></li>
 <li><p>Legal position</p></li>
 <li><p>Restrict (whether content is marked as restricted to legal aid or pro bono members)</p></li>
-<li><p>Jurisdiction (whether content is marked as national, statewide or relevant only to specific counties or cities) and to what counties, cities, or zip codes the content is tagged.  Applies only to legal content type content.</p></li>
+<li><p>Jurisdiction (whether content is marked as national, statewide or relevant only to specific counties or cities) and to what counties, cities, or zip codes the content is tagged. Applies only to legal content type content.</p></li>
 <li><p>Annual updates tagged to the content  Applies only to legal content type content and ADRM content.</p></li>
 <li><p>Whether the translation is currently marked as outdated</p></li>
-<li><p>Whether there is an open request to create a translation.  This field applies only to legal content.</p></li>
-<li><p>Translation language.  This should be used to limit the list to English, Spanish or Polish.</p></li>
-<li><p>Content management tags.  This should be used to limit the results to those that have a term from the content management tags taxonomy.  Separate terms by commas.</p></li>
-<li><p>Legal issue.  This is a single autocomplete of the legal issues taxonomy.  Filtering on this will include any content tagged to that term or any child term, if a child term exists.</p></li>
+<li><p>Whether there is an open request to create a translation. This field applies only to legal content.</p></li>
+<li><p>Translation language. This should be used to limit the list to English, Spanish or Polish.</p></li>
+<li><p>Content management tags. This should be used to limit the results to those that have a term from the content management tags taxonomy. Separate terms by commas.</p></li>
+<li><p>Legal issue. This is a single autocomplete of the legal issues taxonomy. Filtering on this will include any content tagged to that term or any child term, if a child term exists.</p></li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>because of the way jurisdictions were handled on the D7 site, the counties, cities and zipcodes show what jurisdictions the content is tagged to but the report <strong>does not show</strong> whether the relationship between the jurisdiction (some part of Illinois) includes or excludes the jurisdictions.  The jurisdiction data is not used in any way on the website’s front-end.</p>
+<p>because of the way jurisdictions were handled on the D7 site, the counties, cities and zipcodes show what jurisdictions the content is tagged to but the report <strong>does not show</strong> whether the relationship between the jurisdiction (some part of Illinois) includes or excludes the jurisdictions. The jurisdiction data is not used in any way on the website’s front-end.</p>
 </div>
 <div class="admonition-todo admonition" id="id5">
 <p class="admonition-title">Todo</p>
@@ -385,7 +386,7 @@
 </div>
 <div class="section" id="learn-more-in-guide-report">
 <h2>Learn more in Guide report<a class="headerlink" href="#learn-more-in-guide-report" title="Permalink to this headline">¶</a></h2>
-<p>This report shows all of the articles that are included in a Guide and listed under Learn More.  This report shows English language only.  If a translation does not exist for a Learn More article, the English article will be listed in Spanish and Polish.</p>
+<p>This report shows all of the articles that are included in a Guide and listed under Learn More. This report shows English language only. If a translation does not exist for a Learn More article, the English article will be listed in Spanish and Polish.</p>
 <p>The report is exportable to CSV and includes:
 * the ID of the guide
 * the title of the guide
@@ -395,7 +396,7 @@
 </div>
 <div class="section" id="take-action-in-guide-report">
 <h2>Take action in Guide report<a class="headerlink" href="#take-action-in-guide-report" title="Permalink to this headline">¶</a></h2>
-<p>This report shows all of the articles that are included in a Guide and listed under Take action.  This report shows English language only.  If a translation does not exist for a Take action article, the English article will be listed in Spanish and Polish.</p>
+<p>This report shows all of the articles that are included in a Guide and listed under Take action. This report shows English language only. If a translation does not exist for a Take action article, the English article will be listed in Spanish and Polish.</p>
 <p>The report is exportable to CSV and includes:
 * the ID of the guide
 * the title of the guide
@@ -405,42 +406,42 @@
 </div>
 <div class="section" id="toolbox-tool-report">
 <h2>Toolbox Tool report<a class="headerlink" href="#toolbox-tool-report" title="Permalink to this headline">¶</a></h2>
-<p>The toolbox tool displays data captured as users interact with a toolbox tool.  The fields included are:</p>
+<p>The toolbox tool displays data captured as users interact with a toolbox tool. The fields included are:</p>
 <ul class="simple">
-<li><p>Toolbox ID - this is the unique ID associated with a toolbox user’s interaction.  If they are logged in and return to a tool, this ID is re-used, allowing us to track a user over time.  Anonymous users do not have activity tracked over time.</p></li>
+<li><p>Toolbox ID - this is the unique ID associated with a toolbox user’s interaction. If they are logged in and return to a tool, this ID is re-used, allowing us to track a user over time. Anonymous users do not have activity tracked over time.</p></li>
 <li><p>User ID - this is the user’s id from our website. User ID 0 is an anonymous user.</p></li>
 <li><p>Toolbox title - title of the toolbox the tool is a part of</p></li>
 <li><p>Toolbox tool title - title of the toolbox tool the user is working on</p></li>
 <li><p>Started - timestamp of when the record was created</p></li>
 <li><p>Last activity - timestamp of the last recorded interaction</p></li>
-<li><p>Status - started, saved, or completed.  Started means the user started the tool but has not yet saved any steps; completed means they marked the tool complete and saved means they’ve marked at least one step complete.</p></li>
+<li><p>Status - started, saved, or completed. Started means the user started the tool but has not yet saved any steps; completed means they marked the tool complete and saved means they’ve marked at least one step complete.</p></li>
 </ul>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Data from before June 24, 2020 is not reliable.  The last activity date was updated for the time of migration and changes to the toolbox platform changed the way the toolbox activity works.</p>
+<p>Data from before June 24, 2020 is not reliable. The last activity date was updated for the time of migration and changes to the toolbox platform changed the way the toolbox activity works.</p>
 </div>
 </div>
 <div class="section" id="id6">
 <h2>Toolbox Tool Usage report<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
-<p>The toolbox tool displays data captured as users interact with the steps in a toolbox tool.  The fields included are:</p>
+<p>The toolbox tool displays data captured as users interact with the steps in a toolbox tool. The fields included are:</p>
 <ul class="simple">
-<li><p>Toolbox ID - this is the unique ID associated with a toolbox user’s interaction.  If they are logged in and return to a tool, this ID is re-used, allowing us to track a user over time.  Anonymous users do not have activity tracked over time.</p></li>
+<li><p>Toolbox ID - this is the unique ID associated with a toolbox user’s interaction. If they are logged in and return to a tool, this ID is re-used, allowing us to track a user over time. Anonymous users do not have activity tracked over time.</p></li>
 <li><p>Toolbox usage id - this is the unique ID for the specific interaction</p></li>
 <li><p>User ID - this is the user’s id from our website. User ID 0 is an anonymous user.</p></li>
 <li><p>Toolbox tool title - title of the toolbox tool the user is working on</p></li>
 <li><p>Tool step title - title of the step</p></li>
 <li><p>Started - timestamp of when the record was created</p></li>
 <li><p>Changed - timestamp of the last recorded interaction</p></li>
-<li><p>Status - started, saved, or completed.  Started means the user viewed the tool step;saved means they’ve marked the step complete and complete means they’ve completed all the applicable steps in a tool.</p></li>
+<li><p>Status - started, saved, or completed. Started means the user viewed the tool step;saved means they’ve marked the step complete and complete means they’ve completed all the applicable steps in a tool.</p></li>
 </ul>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Data from before June 24, 2020 is not reliable.  The last activity date was updated for the time of migration and changes to the toolbox platform changed the way the toolbox activity works.</p>
+<p>Data from before June 24, 2020 is not reliable. The last activity date was updated for the time of migration and changes to the toolbox platform changed the way the toolbox activity works.</p>
 </div>
 </div>
 <div class="section" id="content-page-views-report">
 <h2>Content page views report<a class="headerlink" href="#content-page-views-report" title="Permalink to this headline">¶</a></h2>
-<p>This is a basic report to support A/B testing based on the page views stored from Google Analytics that are used to sort category pages.  The report includes:</p>
+<p>This is a basic report to support A/B testing based on the page views stored from Google Analytics that are used to sort category pages. The report includes:</p>
 <ul class="simple">
 <li><p>a row number; when exported to excel, a formula of =mod(a2,2) will return a 1 or 0 based on whether the row number is even or odd, allowing it to be split.</p></li>
 <li><p>the content title</p></li>
@@ -450,7 +451,7 @@
 </div>
 <div class="section" id="id7">
 <h2>Localized content report<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
-<p>This report shows what legal content contains markup for localized content.  At this point, it can only show that it contains the span| markup used in localized content.</p>
+<p>This report shows what legal content contains markup for localized content. At this point, it can only show that it contains the span| markup used in localized content.</p>
 <p>The list can be exported to CSV.</p>
 <div class="admonition-todo admonition" id="id8">
 <p class="admonition-title">Todo</p>
@@ -459,7 +460,7 @@
 </div>
 <div class="section" id="comments-and-ratings-report">
 <h2>Comments and Ratings report<a class="headerlink" href="#comments-and-ratings-report" title="Permalink to this headline">¶</a></h2>
-<p>This report lists  all of the comments and associated ratings for legal content.  The report includes:</p>
+<p>This report lists  all of the comments and associated ratings for legal content. The report includes:</p>
 <ul class="simple">
 <li><p>Node ID</p></li>
 <li><p>Content title</p></li>
@@ -476,12 +477,12 @@
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The “hide staff users” requires that the user have the staff role. If former staff have been left active but had the staff role removed, they will not be filtered out.  The better practice for former staff is to block their account but leave their permission in place.</p>
+<p>The “hide staff users” requires that the user have the staff role. If former staff have been left active but had the staff role removed, they will not be filtered out. The better practice for former staff is to block their account but leave their permission in place.</p>
 </div>
 </div>
 <div class="section" id="historical-revision-report">
 <h2>Historical Revision report<a class="headerlink" href="#historical-revision-report" title="Permalink to this headline">¶</a></h2>
-<p>This report should be used only to track date fields over time.  It’s primary purpose is to pull data for reports where we need to report on internal revisions and expert reviews from a given time period and that data is not reflected in the current revision because the content was later revised/reviewed.</p>
+<p>This report should be used only to track date fields over time. It’s primary purpose is to pull data for reports where we need to report on internal revisions and expert reviews from a given time period and that data is not reflected in the current revision because the content was later revised/reviewed.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>For data before May 24, 2020:</p>
@@ -496,12 +497,12 @@
 <p>For data after May 24, 2020:
 * ADRM (lawyer manual) content did not have the internal revision/expert review fields until recently.
 * Older toolbox tools do not have an internal revision or expert review dates because they did not exist on the old website.
-* Language filtering does not work because the date fields are not translatable on legal content.  That means that an edit to the Spanish or Polish version will still have an English field revision causing every revision to be displayed.  That is why this report should be limited to date field tracking.</p>
+* Language filtering does not work because the date fields are not translatable on legal content. That means that an edit to the Spanish or Polish version will still have an English field revision causing every revision to be displayed. That is why this report should be limited to date field tracking.</p>
 </div>
 </div>
 <div class="section" id="moderated-content-report">
 <h2>Moderated content report<a class="headerlink" href="#moderated-content-report" title="Permalink to this headline">¶</a></h2>
-<p>This is a system report accessible from the main content report.  It needs review.</p>
+<p>This is a system report accessible from the main content report. It needs review.</p>
 </div>
 </div>
 

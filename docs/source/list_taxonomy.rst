@@ -1,7 +1,7 @@
 ==================
 LIST Taxonomy
 ==================
-The LIST taxonomy pulls from the `taxonomy.legal <https://taxonomy.legal>`_ taxonomy that is being developed to create a standardized taxonomy.  ILAO has pulled in the first and second level terms only.  
+The LIST taxonomy pulls from the `taxonomy.legal <https://taxonomy.legal>`_ taxonomy that is being developed to create a standardized taxonomy. ILAO has pulled in the first and second level terms only. 
 
 Taxonomy Structure
 ====================

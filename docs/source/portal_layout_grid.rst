@@ -2,7 +2,7 @@
 Portal layout grid
 ======================
 
-The portal layout grid is used to showcase snippets of information that lead to underlying portal pages.  Example uses:
+The portal layout grid is used to showcase snippets of information that lead to underlying portal pages. Example uses:
 
 * Survivor stories or user personas (see the Victims of Crime portal)
 * Toolboxes, tools, or other content (see the Ready to Work portal)

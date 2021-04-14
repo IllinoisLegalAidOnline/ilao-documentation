@@ -9,7 +9,7 @@ As of January 2021, the legal issues taxonomy:
 * is used to tag legal content at a granular legal issue 
 * the top 2 levels are used as navigation within the website
 
-We envision that we will use the `navigational IA taxonomy <https://www.illinoislegalaid.org/admin/structure/taxonomy_manager/voc/navigational_ia>`_ for navigating the website by the end of 2021.  
+We envision that we will use the `navigational IA taxonomy <https://www.illinoislegalaid.org/admin/structure/taxonomy_manager/voc/navigational_ia>`_ for navigating the website by the end of 2021. 
 
 In order to do this, we must:
 

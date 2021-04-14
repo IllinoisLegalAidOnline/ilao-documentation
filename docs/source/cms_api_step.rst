@@ -2,7 +2,7 @@
 Content API:  Legal Step
 ==========================
 
-Returns a specific Legal Step.  The UUID of the specific Legal Step must be provided.
+Returns a specific Legal Step. The UUID of the specific Legal Step must be provided.
 
 Function call
 =================
@@ -33,4 +33,4 @@ Sample response
 
 Parameters
 =============
-* step_identifier:  uuid of the step.  Required 
+* step_identifier:  uuid of the step. Required 

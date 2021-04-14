@@ -13,14 +13,14 @@ When creating a tool, add:
 
 * A title
 * A relationship to an existing toolbox
-* A content description.  This is used throughout the website.
+* A content description. This is used throughout the website.
 * A primary legal category
 * A selector form label; this will appear on the toolbox page
-* An effort level.  Use easy for anything that can be completed in 1 week or less, medium for anything that takes 1-6 months and hard for anything that typically takes 6 months or more.
-* Purpose description.  This appears on the page after a user selects toolboxes.
-* Overview.  This is a summary of the tool and appears above the list of steps
+* An effort level. Use easy for anything that can be completed in 1 week or less, medium for anything that takes 1-6 months and hard for anything that typically takes 6 months or more.
+* Purpose description. This appears on the page after a user selects toolboxes.
+* Overview. This is a summary of the tool and appears above the list of steps
 * Optionally add a before you get started block to add any critical warnings or other information the user should have before starting
-* Optionally add a Learn more section.  This can use an existing guide or be hand-curated.
+* Optionally add a Learn more section. This can use an existing guide or be hand-curated.
 * Add each tool step in the tools list (these can not be added until the tool steps exist)
 
 

@@ -2,11 +2,11 @@
 User Dashboard Pages
 ========================
 
-Each user has a profile, or dashboard, page.  The contents of that page vary depending on the role(s) the user has.
+Each user has a profile, or dashboard, page. The contents of that page vary depending on the role(s) the user has.
 
 Community Members
 ====================
-Our most limited role is the community member.  This role is given to any user who does not have any other role.
+Our most limited role is the community member. This role is given to any user who does not have any other role.
 
 This dashboard shows:
 
@@ -57,7 +57,7 @@ The dashboard for pro bono members:
 * A "You Can" block; the content of this block varies depending on whether the user has any elevated organization permissions
 * A "My legal edits" block
 
-.. note:: The My jobs and events block does not show currently for pro bono members even if they have posted an active job or event.  Also the You Can block has an empty Manage Organizations link that goes to the page not found.
+.. note:: The My jobs and events block does not show currently for pro bono members even if they have posted an active job or event. Also the You Can block has an empty Manage Organizations link that goes to the page not found.
 
 .. image:: ../assets/dashboard-probono.png
 

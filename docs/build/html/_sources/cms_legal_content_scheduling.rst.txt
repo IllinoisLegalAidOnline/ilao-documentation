@@ -28,7 +28,7 @@ Use Cases
 
 To publish later:
 
-* Change the current status to Ready to Review.  This will leave the original published revision as is
+* Change the current status to Ready to Review. This will leave the original published revision as is
 * Schedule a change to Published for the date/time you want the revision to take.
 
 .. image .../assets/cms-scheduler-publish.png

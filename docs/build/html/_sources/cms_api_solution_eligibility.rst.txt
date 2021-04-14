@@ -2,7 +2,7 @@
 Content API:  Solution Eligibility Rules
 ==========================================
 
-Returns the eligibility rules for a specific legal solution.  The UUID of the solution must be provided.
+Returns the eligibility rules for a specific legal solution. The UUID of the solution must be provided.
 
 Function call
 =================

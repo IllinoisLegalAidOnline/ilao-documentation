@@ -115,6 +115,7 @@
 <li class="toctree-l4"><a class="reference internal" href="otis_sms_functions.html">OTIS SMS Functions</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">OTIS Master Twilio Workflow</a></li>
 <li class="toctree-l4"><a class="reference internal" href="otis_sms_api_calls.html">OTIS SMS API</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sms_eviction.html">Eviction SMS Flow</a></li>
 <li class="toctree-l4"><a class="reference internal" href="otis_sms_intake.html#functions">Functions</a></li>
 </ul>
 </li>
@@ -127,7 +128,8 @@
 <li class="toctree-l1"><a class="reference internal" href="site_search.html">Site Search</a></li>
 <li class="toctree-l1"><a class="reference internal" href="site_faqs.html">Site FAQs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="other_cms_features.html">Other Website Features</a></li>
-<li class="toctree-l1"><a class="reference internal" href="taxonomies.html">Taxonomies Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="taxonomies.html">Taxonomies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rss_feeds.html">RSS Feeds</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Workarounds:</span></p>
 <ul>
@@ -209,23 +211,23 @@
 <p>The general flow of the OTIS SMS tool is:</p>
 <ul class="simple">
 <li><p>Get the user’s first name</p></li>
-<li><p>Get the user’s zip code; this validates that the user is in Illinois.  If the user:</p>
+<li><p>Get the user’s zip code; this validates that the user is in Illinois. If the user:</p>
 <ul>
 <li><p>If the user is not in Illinois, they are directed to LawHelp.org</p></li>
-<li><p>If the user is in Illinois, they are offered a menu of options for help (currently limited to unemployment, food stamps/TANF, or other).  <strong>Picking other, exits the user to the website application.</strong></p>
+<li><p>If the user is in Illinois, they are offered a menu of options for help (currently limited to unemployment, food stamps/TANF, or other). <strong>Picking other, exits the user to the website application.</strong></p>
 <ul>
 <li><p>If the user picks unemployment or food stamps/tanf (Guided navigation needs to be dropped in here)</p>
 <ul>
 <li><p>Number of adults is collected</p></li>
 <li><p>Number of children is collected</p></li>
-<li><p>The basic income calculation is computed and the user is asked a Y/N question if their household income exceeds our base threshold.  If the user indicates Yes, they are exited to the website application.</p></li>
+<li><p>The basic income calculation is computed and the user is asked a Y/N question if their household income exceeds our base threshold. If the user indicates Yes, they are exited to the website application.</p></li>
 </ul>
 </li>
-<li><p>If the user indicates they are not over-income and are matched to an organization, they are told who they matched to and given the option to continue to a full application.  ** If they say no, they are exited to Get Legal Help on the website**  If they say yes:</p>
+<li><p>If the user indicates they are not over-income and are matched to an organization, they are told who they matched to and given the option to continue to a full application. ** If they say no, they are exited to Get Legal Help on the website**  If they say yes:</p>
 <ul>
 <li><p>They are prompted to enter their last name</p></li>
-<li><p>They are asked if they have any maiden names.  If they enter Yes, they are asked to provide them.  If they enter no, they are taken to the next question.  If they enter other text, that is treated as their maiden name.</p></li>
-<li><p>They are asked if they have any nicknames.  If they enter Yes, they are asked to provide them.  If they enter no, they are taken to the next question.  If they enter other text, that is treated as their nickname.</p></li>
+<li><p>They are asked if they have any maiden names. If they enter Yes, they are asked to provide them. If they enter no, they are taken to the next question. If they enter other text, that is treated as their maiden name.</p></li>
+<li><p>They are asked if they have any nicknames. If they enter Yes, they are asked to provide them. If they enter no, they are taken to the next question. If they enter other text, that is treated as their nickname.</p></li>
 <li><p>The user is then prompted to enter their birthday:</p>
 <ul>
 <li><p>The month is collected; full month names, abbreviations, and numbers are all supported</p></li>
@@ -242,12 +244,12 @@
 <li><p>Language preference</p></li>
 </ul>
 </li>
-<li><p>The user is then taken to a series of income questions.  For each money input, the system validates that the user entered a number and redirects back to the question if they do not.</p>
+<li><p>The user is then taken to a series of income questions. For each money input, the system validates that the user entered a number and redirects back to the question if they do not.</p>
 <ul>
 <li><p>Do they have wages/salary - if they indicate yes or wages or salary, they are asked to provide the amount.</p></li>
 <li><p>Do they have farming or self-employment income - if they indicate yes or wages or salary, they are asked to provide the amount.</p></li>
-<li><p>Do they have one or more government benefits; entering any number or partial text will result in a match.  The user is then cycled through all the benefits they have to provide an amount. Government benefits include: TANF, Veterans benefits (including disability), unemployment, SSI, Social security.</p></li>
-<li><p>Do they have one or more other payments; entering any number or partial text will result in a match.  The user is then cycled through all the payments they have to provide an amount. Payment types include:  private disability payments, alimony, child support, workers compensation, pension/retirement income, and investment income.</p></li>
+<li><p>Do they have one or more government benefits; entering any number or partial text will result in a match. The user is then cycled through all the benefits they have to provide an amount. Government benefits include: TANF, Veterans benefits (including disability), unemployment, SSI, Social security.</p></li>
+<li><p>Do they have one or more other payments; entering any number or partial text will result in a match. The user is then cycled through all the payments they have to provide an amount. Payment types include:  private disability payments, alimony, child support, workers compensation, pension/retirement income, and investment income.</p></li>
 <li><p>Do they have any other income? If they respond yes, they are asked for the amount.</p></li>
 <li><p>Once income is collected, we collect contact information:</p>
 <ul>

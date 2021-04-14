@@ -7,7 +7,7 @@ The automated eUpdate compiles information from the website into a Mailchimp tem
 Who Gets the eUpdate
 =======================
 
-Any registered user of IllinoisLegalAid.org can get the eUpdate.  When creating an account:
+Any registered user of IllinoisLegalAid.org can get the eUpdate. When creating an account:
 
 * Legal aid members default newsletter settings to select the eUpdate every Tuesday morning
 * All others membership types default newsletter settings to select the eUpdate every month.
@@ -43,12 +43,12 @@ Links within the eUpdate are tracked using:
 * source = eUpdate
 * medium = email
 
-These can be tracked in Google Analytics.  Mailchimp also tracks data.
+These can be tracked in Google Analytics. Mailchimp also tracks data.
 
 
 Testing
 ===========
-There is a check group in the master segment that is made up of Gwen and various members of the QED42 team.  This is the default send-to on all non-production instances to prevent accidentally sending from these machines to all users.
+There is a check group in the master segment that is made up of Gwen and various members of the QED42 team. This is the default send-to on all non-production instances to prevent accidentally sending from these machines to all users.
 
 .. note:: Mailchimp campaigns sent to the check group may be safely deleted from Mailchimp.
 

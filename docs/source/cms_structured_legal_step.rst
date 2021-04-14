@@ -8,7 +8,7 @@ Legal steps are part of a :ref:`cms-legal-howto` which are part of a :ref:`cms-l
 
 A step is composed of 1 or more directions and 0 or more tips.
 
-.. note:: Legal steps can be re-used in multiple how-tos.  
+.. note:: Legal steps can be re-used in multiple how-tos. 
 
 Direction vs Tip
 ==================
@@ -39,13 +39,13 @@ This could be structured as:
 
 This might render on the web as:
 
-1. Return all of the keys to the landlord right after you move. If you do not, the landlord may charge you.  
+1. Return all of the keys to the landlord right after you move. If you do not, the landlord may charge you. 
 2. Get proof that you returned the keys. If you return the keys to a leasing office, have the landlord write up a receipt acknowledging that the keys have been returned. If you are returning keys by mail, send the keys with a tracking number and keep that tracking number for your records.
 
 and over SMS may be:
 
 * Segment 1:  Return all of the keys to the landlord right after you move. 
-* Segment 2:  Tip:  If you do not, the landlord may charge you.  Reply N for the next direction
+* Segment 2:  Tip:  If you do not, the landlord may charge you. Reply N for the next direction
 * Segment 3:  Get proof that you returned the keys.
 * Segment 4:  Tip:  If you return the keys to a leasing office, have the landlord write up a receipt acknowledging that the keys have been returned.
 * If you are returning keys by mail, send the keys with a tracking number and keep that tracking number for your records.
@@ -73,7 +73,7 @@ Step block
 A  step block consists of:
 
 * a type (direction or tip)
-* one or more body elements, using :ref:`cms-paired-markup`.  Using multiple body elements allows us to better segment content over non-web channels.  
+* one or more body elements, using :ref:`cms-paired-markup`. Using multiple body elements allows us to better segment content over non-web channels. 
 * reference URLS (links within the content)
 
 .. todo:: Determine whether the metadata fields should be required, whether last revised/reviewed dates should be added (or is at the how-to level sufficient) and whether we need the referenceUrls field (those were added before we had paired markup).

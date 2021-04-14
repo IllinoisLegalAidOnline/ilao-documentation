@@ -2,7 +2,7 @@
 Portal layout sidebar
 ============================
 
-A portal layout sidebar is designed to provide call-to-action components outside of the main content.  It can contain two types of components:
+A portal layout sidebar is designed to provide call-to-action components outside of the main content. It can contain two types of components:
 
 * Portal CTA
 * Portal CTA image

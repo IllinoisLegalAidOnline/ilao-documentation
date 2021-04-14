@@ -2,24 +2,24 @@
 Triage
 ========================
 
-The first piece of Get Legal Help is a triage system designed to route the user to resources.  To do this, we ask users to:
+The first piece of Get Legal Help is a triage system designed to route the user to resources. To do this, we ask users to:
 
-* Provide their legal problem.  This can be accomplished by picking from our legal issues taxonomy OR typing in a keyword.
+* Provide their legal problem. This can be accomplished by picking from our legal issues taxonomy OR typing in a keyword.
 * Provide their zip code.
 * Indicate whether they are looking for a lawyer, forms, or legal information.
 * If the user indicates they are looking for a lawyer:
 
   * They are required to provide a household size.
-  * Once the household size is provided, an income level question will be required.  The amount used is an approximation of 300% of the federal poverty level, rounded to the nearest thousand.  This is used to determine the initial set of referral resources.
-  * The user may indicate if they self-identify as a member of any specific population. The list of populations is maintained in our `intake populations taxonomy <https://www.illinoislegalaid.org/admin/structure/taxonomy/manage/intake_populations/overview>`_.  
+  * Once the household size is provided, an income level question will be required. The amount used is an approximation of 300% of the federal poverty level, rounded to the nearest thousand. This is used to determine the initial set of referral resources.
+  * The user may indicate if they self-identify as a member of any specific population. The list of populations is maintained in our `intake populations taxonomy <https://www.illinoislegalaid.org/admin/structure/taxonomy/manage/intake_populations/overview>`_. 
   
-* The user is required to accept terms & conditions.  
+* The user is required to accept terms & conditions. 
 
 .. image::  ../assets/otis-glh-form.png
 
 When the user submits the form, the system:
 
-Step 1: Evaluates the term entered by the user.  If the term:
+Step 1: Evaluates the term entered by the user. If the term:
   
   * Is an exact match to lowest level legal issues taxonomy term, the system moves to step 2.
   * Is an exact match to a higher level legal issues taxonomy term, the user is provided a form based on the legal issues; once that has been completed, the system moves to step 2. 
@@ -28,7 +28,7 @@ Step 1: Evaluates the term entered by the user.  If the term:
 Step 2:  Evaluates the type of help; if the user is seeking a lawyer, the system evaluates available resources as follows:
 
  * Users who have indicated "Yes" to the income questions are directed to referrals unless there is an OTIS organization that is free to everyone service or a service where income limits are waived for specific populations.
- * The system checks for available OTIS partners first (ahead of referrals).  This requires looking for:
+ * The system checks for available OTIS partners first (ahead of referrals). This requires looking for:
    * an intake setting with a service area that matches the user's location
    * an intake setting that matches the user's legal issue
    * an intake setting that is published
@@ -41,10 +41,10 @@ Step 2:  Evaluates the type of help; if the user is seeking a lawyer, the system
 Step 3a:  When there is 1 or more OTIS matches, the system prioritizes based on:
   * Free to everyone and free to eligible persons services are prioritized ahead of low cost services.
   * Services that match the user's population selections, if the user has selected those.
-  * When the last intake was completed.  Matches will be ordered by reverse last intake completed date so that organizations that have gone longer will get preferred.
+  * When the last intake was completed. Matches will be ordered by reverse last intake completed date so that organizations that have gone longer will get preferred.
 
 .. note::  There will be some additional criteria when the user comes from a direct program referral.
 
 Step 3b:  When there are no matches, the user is provided referrals.
 
-When a user is diverted from Step 3a and there are multiple organizations, the user will be routed back to the next organization until there are no organizations they could apply to.   
+When a user is diverted from Step 3a and there are multiple organizations, the user will be routed back to the next organization until there are no organizations they could apply to.  

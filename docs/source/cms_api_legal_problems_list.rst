@@ -2,7 +2,7 @@
 Content API: Legal Problems List
 ====================================
 
-Returns a list of legal problem content from the website.  This is a simple list of:
+Returns a list of legal problem content from the website. This is a simple list of:
 
 * name
 * description

@@ -4,7 +4,7 @@ Gamefication Reports
 
 Point Type Report
 ===================
-The point type report shows all point types in the system.  This report includes:
+The point type report shows all point types in the system. This report includes:
 
 * Name of the point type
 * Type of point type (manually awarded or automatically awarded on a transition)
@@ -24,7 +24,7 @@ Report can be exported to CSV.
 
 Point History Report
 =====================
-The point history report shows all individual point awards made.  The report includes:
+The point history report shows all individual point awards made. The report includes:
 
 * Date earned
 * Date awarded
@@ -47,7 +47,7 @@ Report can be exported to CSV.
 
 Badge Listing Report
 ====================
-The badge listing report shows all the badges available in the system.  The report includes:
+The badge listing report shows all the badges available in the system. The report includes:
 
 * Name of the badge
 * Thumbnail of the badge
@@ -68,7 +68,7 @@ Report can be exported to CSV.
 
 Milestone Listing Report
 =========================
-The milestone listing report shows all the milestones available in the system.  The report includes:
+The milestone listing report shows all the milestones available in the system. The report includes:
 
 * Name of the milestone
 * Maximum times a milestone can be earned

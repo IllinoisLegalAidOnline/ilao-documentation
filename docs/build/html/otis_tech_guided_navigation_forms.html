@@ -127,7 +127,8 @@
 <li class="toctree-l1"><a class="reference internal" href="site_search.html">Site Search</a></li>
 <li class="toctree-l1"><a class="reference internal" href="site_faqs.html">Site FAQs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="other_cms_features.html">Other Website Features</a></li>
-<li class="toctree-l1"><a class="reference internal" href="taxonomies.html">Taxonomies Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="taxonomies.html">Taxonomies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rss_feeds.html">RSS Feeds</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Workarounds:</span></p>
 <ul>
@@ -212,8 +213,8 @@
 <li><p>a unique ID associated with it that appears to change with each invocation.</p></li>
 <li><p>a set of elements that define the form</p></li>
 <li><p>an array of validation errors</p></li>
-<li><p>a boolean of is_complete.  When is_complete is TRUE, we’ve reached the end of the dialogue.</p></li>
-<li><p>a boolean of should_show_previous.  When TRUE, we can allow the user to go back a form page.</p></li>
+<li><p>a boolean of is_complete. When is_complete is TRUE, we’ve reached the end of the dialogue.</p></li>
+<li><p>a boolean of should_show_previous. When TRUE, we can allow the user to go back a form page.</p></li>
 </ul>
 </div>
 <div class="section" id="elements">
@@ -225,7 +226,7 @@
 <li><p>a unique id</p></li>
 <li><p>a boolean to indicate whether there display logic.</p></li>
 <li><p>display_logic, which has data when has_display_logic is TRUE.</p></li>
-<li><p>a type.  Known supported types are field, headline</p></li>
+<li><p>a type. Known supported types are field, headline</p></li>
 </ul>
 <div class="section" id="fields">
 <h3>Fields<a class="headerlink" href="#fields" title="Permalink to this headline">¶</a></h3>
@@ -234,15 +235,15 @@
 * a field_type which indicates the type of field
 * a value field
 * validation_rules as an array, when the field has validation rules.
-* a value.  This may be pre-filled with a default value from Guided Navigation.</p>
+* a value. This may be pre-filled with a default value from Guided Navigation.</p>
 <div class="section" id="select">
 <h4>Select<a class="headerlink" href="#select" title="Permalink to this headline">¶</a></h4>
 <p>A select field will have:</p>
 <ul class="simple">
 <li><p>a field_type of select</p></li>
-<li><p>an array of options.  Each option is an object with a value and a label.  The label is shown to the user while the value is stored and shared back to Guided Navigation.</p></li>
-<li><p>a boolean of is_multiple.  When this is true, the field is a multiselect and/or checkboxes.  When the value is false, the field is a single select or radio buttons.</p></li>
-<li><p>a value.  This may be pre-filled with a default value from Guided Navigation.</p></li>
+<li><p>an array of options. Each option is an object with a value and a label. The label is shown to the user while the value is stored and shared back to Guided Navigation.</p></li>
+<li><p>a boolean of is_multiple. When this is true, the field is a multiselect and/or checkboxes. When the value is false, the field is a single select or radio buttons.</p></li>
+<li><p>a value. This may be pre-filled with a default value from Guided Navigation.</p></li>
 </ul>
 </div>
 <div class="section" id="text">
@@ -289,27 +290,27 @@
 </div>
 <div class="section" id="display-logic">
 <h3>Display logic<a class="headerlink" href="#display-logic" title="Permalink to this headline">¶</a></h3>
-<p>When the element’s has_display_logic is true, the display_logic property will have data.  There are two use cases we have to be concerned with:</p>
+<p>When the element’s has_display_logic is true, the display_logic property will have data. There are two use cases we have to be concerned with:</p>
 <ul class="simple">
 <li><p>Display logic dependent on a previous form submission</p></li>
 <li><p>Display logic dependent on a previous field submission in the current form.</p></li>
 </ul>
 <p>The display_logic property will be an object with:
 * a condition property. Expected values are AND, OR. When there are multiple rules, this condition sits between them
-* a rules property.  This is an array of rules to test for
-* a not boolean.  When this is true, the rules should be tested as NOT.
-* a valid boolean.  It is unclear what the purpose of this is.</p>
+* a rules property. This is an array of rules to test for
+* a not boolean. When this is true, the rules should be tested as NOT.
+* a valid boolean. It is unclear what the purpose of this is.</p>
 <div class="section" id="rules">
 <h4>Rules<a class="headerlink" href="#rules" title="Permalink to this headline">¶</a></h4>
-<p>Rules is an array that contains the conditions to test against.  Each element in the array contains an object with:</p>
+<p>Rules is an array that contains the conditions to test against. Each element in the array contains an object with:</p>
 <ul class="simple">
 <li><p>an id</p></li>
-<li><p>field, which represents the field to test against.  This can be found in the profile from Guided Navigation for a particular session</p></li>
+<li><p>field, which represents the field to test against. This can be found in the profile from Guided Navigation for a particular session</p></li>
 <li><p>type (known types: string)</p></li>
 <li><p>input</p></li>
-<li><p>operator.  Known types are contains, not_contains, equal, not_equal, begins_with, in, is_empty, is_not_empty,</p></li>
-<li><p>value.  This is either a string (for contains, not contains) or an array of values (for in operators)</p></li>
-<li><p>data.  For in operators, this is the data to test against.</p></li>
+<li><p>operator. Known types are contains, not_contains, equal, not_equal, begins_with, in, is_empty, is_not_empty,</p></li>
+<li><p>value. This is either a string (for contains, not contains) or an array of values (for in operators)</p></li>
+<li><p>data. For in operators, this is the data to test against.</p></li>
 </ul>
 <img alt="_images/otis-gn-and-example.png" src="_images/otis-gn-and-example.png" />
 <p>In the above, the element would display if the field mr_service_area_49 had a value IN (1)</p>
@@ -320,7 +321,7 @@
 <div class="section" id="validation-rules">
 <h3>Validation Rules<a class="headerlink" href="#validation-rules" title="Permalink to this headline">¶</a></h3>
 <p>Validation rules for an element, if not empty, is an array of rules.</p>
-<p>Each element is an object with a proprety of type.  A type of required is the most common and indicates that a form element should be required.</p>
+<p>Each element is an object with a proprety of type. A type of required is the most common and indicates that a form element should be required.</p>
 </div>
 </div>
 </div>

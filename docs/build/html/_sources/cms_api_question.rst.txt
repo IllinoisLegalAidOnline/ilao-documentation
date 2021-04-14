@@ -2,7 +2,7 @@
 Content API:  Legal Question
 ============================
 
-Returns a specific question and answer.  The UUID of the question must be provided.
+Returns a specific question and answer. The UUID of the question must be provided.
 
 Function call
 ================
@@ -35,7 +35,7 @@ Sample response
 Parameters
 =============
 
-* question_identifier:  uuid of the question to return.    
+* question_identifier:  uuid of the question to return.   
 
 
 

@@ -222,7 +222,7 @@
 <p>Each report can be exported to CSV for advanced manipulation and can be filtered by date.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Reports expect dates to be formatted as yyyy-mm-dd hh:mm:ss.  When a date like 3/1/2021 or 2021-03-01 is provided, it assumes a time of 00:00:00.  When used as an end date, that means that no results for that day will be included (a date of 3/31/2021 will be interpreted as 3/31/2021 00:00:00; you’d want to use 4/01/2021 to include all of 3/31/2021)</p>
+<p>Reports expect dates to be formatted as yyyy-mm-dd hh:mm:ss. When a date like 3/1/2021 or 2021-03-01 is provided, it assumes a time of 00:00:00. When used as an end date, that means that no results for that day will be included (a date of 3/31/2021 will be interpreted as 3/31/2021 00:00:00; you’d want to use 4/01/2021 to include all of 3/31/2021)</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -233,11 +233,11 @@
 <p>There are two referral reports per area: one based on special populations and one based on defined legal issues.</p>
 <p>The referral report returns:</p>
 <ul class="simple">
-<li><p>Triage ID, this is the unique ID associated with the user’s single interaction with Get Legal Help.  We make multiple referrals per triage ID so there are multiple rows.</p></li>
-<li><p>Referral ID.  This is the unique ID associated with the specific referral made.</p></li>
+<li><p>Triage ID, this is the unique ID associated with the user’s single interaction with Get Legal Help. We make multiple referrals per triage ID so there are multiple rows.</p></li>
+<li><p>Referral ID. This is the unique ID associated with the specific referral made.</p></li>
 <li><p>Created, date the referral was made</p></li>
-<li><p>Triage status.  This is almost always Referrals or Program Triage Completed.</p></li>
-<li><p>Intake status.  This is either empty (Triage status of Referrals) or Diverted (Intake status of Program triage completed)</p></li>
+<li><p>Triage status. This is almost always Referrals or Program Triage Completed.</p></li>
+<li><p>Intake status. This is either empty (Triage status of Referrals) or Diverted (Intake status of Program triage completed)</p></li>
 <li><p>Service</p></li>
 <li><p>Organization</p></li>
 <li><p>County</p></li>
@@ -272,7 +272,7 @@
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Because a user can match both on special population and on legal issue, the two reports should be combined in Excel and de-duplicated.  Each user has a unique triage ID and each referral has a unique ID.  To get unique users, de-duplicate on triage ID.  To get unique referrals, de-duplicate on referral ID</p>
+<p>Because a user can match both on special population and on legal issue, the two reports should be combined in Excel and de-duplicated. Each user has a unique triage ID and each referral has a unique ID. To get unique users, de-duplicate on triage ID. To get unique referrals, de-duplicate on referral ID</p>
 </div>
 </div>
 </div>
@@ -322,13 +322,13 @@
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Because a user can match both on special population and on legal issue, the two reports should be combined in Excel and de-duplicated.  Each user has a unique triage ID  To get unique users, de-duplicate on triage ID.</p>
+<p>Because a user can match both on special population and on legal issue, the two reports should be combined in Excel and de-duplicated. Each user has a unique triage ID  To get unique users, de-duplicate on triage ID.</p>
 </div>
 </div>
 </div>
 <div class="section" id="legal-issues">
 <h2>Legal Issues<a class="headerlink" href="#legal-issues" title="Permalink to this headline">¶</a></h2>
-<p>We use a taxonomy index with depth filter to filter the intake or referral by legal issue reports.  This filter searches across all legal issues fields in the triage user record, which covers the various ways we store search terms in Get Legal Help.</p>
+<p>We use a taxonomy index with depth filter to filter the intake or referral by legal issue reports. This filter searches across all legal issues fields in the triage user record, which covers the various ways we store search terms in Get Legal Help.</p>
 <div class="section" id="immigration">
 <h3>Immigration<a class="headerlink" href="#immigration" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">

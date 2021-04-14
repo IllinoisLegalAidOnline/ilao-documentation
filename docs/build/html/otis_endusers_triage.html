@@ -120,7 +120,8 @@
 <li class="toctree-l1"><a class="reference internal" href="site_search.html">Site Search</a></li>
 <li class="toctree-l1"><a class="reference internal" href="site_faqs.html">Site FAQs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="other_cms_features.html">Other Website Features</a></li>
-<li class="toctree-l1"><a class="reference internal" href="taxonomies.html">Taxonomies Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="taxonomies.html">Taxonomies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rss_feeds.html">RSS Feeds</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Workarounds:</span></p>
 <ul>
@@ -198,15 +199,15 @@
             
   <div class="section" id="triage">
 <h1>Triage<a class="headerlink" href="#triage" title="Permalink to this headline">¶</a></h1>
-<p>The first piece of Get Legal Help is a triage system designed to route the user to resources.  To do this, we ask users to:</p>
+<p>The first piece of Get Legal Help is a triage system designed to route the user to resources. To do this, we ask users to:</p>
 <ul class="simple">
-<li><p>Provide their legal problem.  This can be accomplished by picking from our legal issues taxonomy OR typing in a keyword.</p></li>
+<li><p>Provide their legal problem. This can be accomplished by picking from our legal issues taxonomy OR typing in a keyword.</p></li>
 <li><p>Provide their zip code.</p></li>
 <li><p>Indicate whether they are looking for a lawyer, forms, or legal information.</p></li>
 <li><p>If the user indicates they are looking for a lawyer:</p>
 <ul>
 <li><p>They are required to provide a household size.</p></li>
-<li><p>Once the household size is provided, an income level question will be required.  The amount used is an approximation of 300% of the federal poverty level, rounded to the nearest thousand.  This is used to determine the initial set of referral resources.</p></li>
+<li><p>Once the household size is provided, an income level question will be required. The amount used is an approximation of 300% of the federal poverty level, rounded to the nearest thousand. This is used to determine the initial set of referral resources.</p></li>
 <li><p>The user may indicate if they self-identify as a member of any specific population. The list of populations is maintained in our <a class="reference external" href="https://www.illinoislegalaid.org/admin/structure/taxonomy/manage/intake_populations/overview">intake populations taxonomy</a>.</p></li>
 </ul>
 </li>
@@ -214,7 +215,7 @@
 </ul>
 <img alt="_images/otis-glh-form.png" src="_images/otis-glh-form.png" />
 <p>When the user submits the form, the system:</p>
-<p>Step 1: Evaluates the term entered by the user.  If the term:</p>
+<p>Step 1: Evaluates the term entered by the user. If the term:</p>
 <blockquote>
 <div><ul class="simple">
 <li><p>Is an exact match to lowest level legal issues taxonomy term, the system moves to step 2.</p></li>
@@ -226,7 +227,7 @@
 <blockquote>
 <div><ul class="simple">
 <li><p>Users who have indicated “Yes” to the income questions are directed to referrals unless there is an OTIS organization that is free to everyone service or a service where income limits are waived for specific populations.</p></li>
-<li><p>The system checks for available OTIS partners first (ahead of referrals).  This requires looking for:
+<li><p>The system checks for available OTIS partners first (ahead of referrals). This requires looking for:
 * an intake setting with a service area that matches the user’s location
 * an intake setting that matches the user’s legal issue
 * an intake setting that is published
@@ -241,7 +242,7 @@
 <dt>Step 3a:  When there is 1 or more OTIS matches, the system prioritizes based on:</dt><dd><ul class="simple">
 <li><p>Free to everyone and free to eligible persons services are prioritized ahead of low cost services.</p></li>
 <li><p>Services that match the user’s population selections, if the user has selected those.</p></li>
-<li><p>When the last intake was completed.  Matches will be ordered by reverse last intake completed date so that organizations that have gone longer will get preferred.</p></li>
+<li><p>When the last intake was completed. Matches will be ordered by reverse last intake completed date so that organizations that have gone longer will get preferred.</p></li>
 </ul>
 </dd>
 </dl>

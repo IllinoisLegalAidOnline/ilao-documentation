@@ -19,7 +19,7 @@ Referrals by population/legal issue
 
 Each report can be exported to CSV for advanced manipulation and can be filtered by date.
 
-.. warning::  Reports expect dates to be formatted as yyyy-mm-dd hh:mm:ss.  When a date like 3/1/2021 or 2021-03-01 is provided, it assumes a time of 00:00:00.  When used as an end date, that means that no results for that day will be included (a date of 3/31/2021 will be interpreted as 3/31/2021 00:00:00; you'd want to use 4/01/2021 to include all of 3/31/2021)
+.. warning::  Reports expect dates to be formatted as yyyy-mm-dd hh:mm:ss. When a date like 3/1/2021 or 2021-03-01 is provided, it assumes a time of 00:00:00. When used as an end date, that means that no results for that day will be included (a date of 3/31/2021 will be interpreted as 3/31/2021 00:00:00; you'd want to use 4/01/2021 to include all of 3/31/2021)
 
 .. note::  These reports do be further refined using the CSV export to filter on county, zip code, and/or organizations.
 
@@ -29,11 +29,11 @@ There are two referral reports per area: one based on special populations and on
 
 The referral report returns:
 
-* Triage ID, this is the unique ID associated with the user's single interaction with Get Legal Help.  We make multiple referrals per triage ID so there are multiple rows.
-* Referral ID.  This is the unique ID associated with the specific referral made.
+* Triage ID, this is the unique ID associated with the user's single interaction with Get Legal Help. We make multiple referrals per triage ID so there are multiple rows.
+* Referral ID. This is the unique ID associated with the specific referral made.
 * Created, date the referral was made
-* Triage status.  This is almost always Referrals or Program Triage Completed. 
-* Intake status.  This is either empty (Triage status of Referrals) or Diverted (Intake status of Program triage completed)
+* Triage status. This is almost always Referrals or Program Triage Completed. 
+* Intake status. This is either empty (Triage status of Referrals) or Diverted (Intake status of Program triage completed)
 * Service
 * Organization
 * County
@@ -66,7 +66,7 @@ A referral is included in the population report when:
 * Service language is English (this is required to prevent duplicate records when the organization has been translated)
 
 
-.. note:: Because a user can match both on special population and on legal issue, the two reports should be combined in Excel and de-duplicated.  Each user has a unique triage ID and each referral has a unique ID.  To get unique users, de-duplicate on triage ID.  To get unique referrals, de-duplicate on referral ID  
+.. note:: Because a user can match both on special population and on legal issue, the two reports should be combined in Excel and de-duplicated. Each user has a unique triage ID and each referral has a unique ID. To get unique users, de-duplicate on triage ID. To get unique referrals, de-duplicate on referral ID  
 
 
 Intake Reports
@@ -74,7 +74,7 @@ Intake Reports
 
 The report returns:
 
-* Triage ID, this is the unique ID associated with the user's single interaction with Get Legal Help.  
+* Triage ID, this is the unique ID associated with the user's single interaction with Get Legal Help. 
 * Created, date the intake was made
 * Service
 * Organization
@@ -114,12 +114,12 @@ A intake is included in the population report when:
 * Service language is English (this is required to prevent duplicate records when the organization has been translated)
 
 
-.. note:: Because a user can match both on special population and on legal issue, the two reports should be combined in Excel and de-duplicated.  Each user has a unique triage ID  To get unique users, de-duplicate on triage ID. 
+.. note:: Because a user can match both on special population and on legal issue, the two reports should be combined in Excel and de-duplicated. Each user has a unique triage ID  To get unique users, de-duplicate on triage ID. 
 
 Legal Issues
 =====================
 
-We use a taxonomy index with depth filter to filter the intake or referral by legal issue reports.  This filter searches across all legal issues fields in the triage user record, which covers the various ways we store search terms in Get Legal Help.
+We use a taxonomy index with depth filter to filter the intake or referral by legal issue reports. This filter searches across all legal issues fields in the triage user record, which covers the various ways we store search terms in Get Legal Help.
 
 
 Immigration

@@ -1,21 +1,21 @@
 =============
 RSS Feeds
 =============
-To use these feeds as is, copy the full code block and paste into your website.  Or, you can access the raw RSS file and create your own version.
+To use these feeds as is, copy the full code block and paste into your website. Or, you can access the raw RSS file and create your own version.
 
 
 Sample output
 =================
 
-Each feed shows 10 hand-curated pieces of legal information in the selected categories.  The feeds were generated using `feed2js.org <http://feed2js.org>`_.
+Each feed shows 10 hand-curated pieces of legal information in the selected categories. The feeds were generated using `feed2js.org <http://feed2js.org>`_.
 
 Customizing the look and feel
 -------------------------------
-The output is contained in a div with a class of rss-box.  
+The output is contained in a div with a class of rss-box. 
 The feed title has a class of rss-title.
-Each item is a list element with a class of rss-item.  
+Each item is a list element with a class of rss-item. 
 
-Websites can use standard CSS to customize these items.  See `Feed2JS's Style information <https://feed2js.org/style.php>`_.
+Websites can use standard CSS to customize these items. See `Feed2JS's Style information <https://feed2js.org/style.php>`_.
 
 .. image:: ../assets/sample-rss.png
 

@@ -8,7 +8,7 @@ All of our Twilio functions are stored in the ilao service in Twilio's functions
 
 Function standards
 ======================
-All of our OTIS functions are prefixed with the name otis.  All function names are written in the word-word-word format.
+All of our OTIS functions are prefixed with the name otis. All function names are written in the word-word-word format.
 
 All passed in parameters are contained in the event object.
 
@@ -21,7 +21,7 @@ OTIS Get Confirmation
 
 **Requires:**  ILAO API call to get the return message based on the intake settings id and callback type.
 
-**Status:**  This is a placeholder function right now.  It returns either the "we call" or "you call" message" as a JSON object.
+**Status:**  This is a placeholder function right now. It returns either the "we call" or "you call" message" as a JSON object.
 
 OTIS Get Callback Days
 ========================
@@ -32,7 +32,7 @@ OTIS Get Callback Days
 
 **Requires:**  ILAO API call to get the next [x] days of available intake appointments.
 
-**Status:**  This is a placeholder function right now. It returns a JSON object of days for the user to pick from.  Currently, it is using an array of days and a string of days to output.  This needs to be revised to return a key value pair that can be rendered while still having useful info for the system.
+**Status:**  This is a placeholder function right now. It returns a JSON object of days for the user to pick from. Currently, it is using an array of days and a string of days to output. This needs to be revised to return a key value pair that can be rendered while still having useful info for the system.
 
 OTIS Get First Callback Time
 ===============================
@@ -43,7 +43,7 @@ OTIS Get First Callback Time
 
 **Requires:**  ILAO API call to get the range of available hours and the first available date.
 
-**Status:**  This is a placeholder function right now. It returns a JSON object of days for the user to pick from.  It currently returns hard-coded text of:
+**Status:**  This is a placeholder function right now. It returns a JSON object of days for the user to pick from. It currently returns hard-coded text of:
 
 * intro ('Callback times are between x and y');
 * first ('The first available is [x]);
@@ -58,7 +58,7 @@ OTIS Get Callback Times
 
 **Requires:**  ILAO API call to get the range of callback slots for a specific date and intake settings pairing.
 
-**Status:**  This is a placeholder function right now. It returns a JSON object of times for the user to pick from.  It currently returns hard-coded text of:
+**Status:**  This is a placeholder function right now. It returns a JSON object of times for the user to pick from. It currently returns hard-coded text of:
 
 * timeArray of available times
 * times - string of times to display to user
@@ -85,17 +85,17 @@ OTIS Validate Total Income
 +------------------------+---------------------------------------------------+
 |   Key                  | Description                                       |
 +========================+===================================================+
-|  adults                | Required.  Integer.                               |
+|  adults                | Required. Integer.                                |
 +------------------------+---------------------------------------------------+
-|  children              | Required.  Integer.                               |
+|  children              | Required. Integer.                                |
 +------------------------+---------------------------------------------------+
-|  Income types          | Key should be named income_[income type].  Value  |
+|  Income types          | Key should be named income_[income type]. Value   |
 |                        | should be integer                                 |
 +------------------------+---------------------------------------------------+
-|  standard              | Basic, ami, or fpl.  Defaults to fpl if not       |
+|  standard              | Basic, ami, or fpl. Defaults to fpl if not        |
 |                        | provided.                                         |
 +------------------------+---------------------------------------------------+
-|  max                   | Percentage max income to calculate.  Number.      |
+|  max                   | Percentage max income to calculate. Number.       |
 |                        | Defaults to 300 if not provided                   |
 +------------------------+---------------------------------------------------+
 
@@ -131,7 +131,7 @@ OTIS Validate Payments
 
 **Returns:** An array of payment types to ask for income information from the user.
 
-**Status:**  Complete.  
+**Status:**  Complete. 
 
 OTIS Validate Benefit Types
 ===============================
@@ -167,7 +167,7 @@ OTIS Validate Money Input
 ============================
 **Function name:**  otis-validate-money-input
 
-**Purpose**: Takes a string of input from the user and returns the string if it is a number or 0 if it is not.  This can then be used to route users to retry their input or move on to the next step.
+**Purpose**: Takes a string of input from the user and returns the string if it is a number or 0 if it is not. This can then be used to route users to retry their input or move on to the next step.
 
 **Parameters:**  event.amount (the user's input in response to a money question)
 
@@ -181,7 +181,7 @@ OTIS Validate Race
 ============================
 **Function name:**  otis-validate-race
 
-**Purpose**: Takes a string of input from the user and returns whether it is a valid selection or not.  This can then be used to route users to retry their input or move on to the next step.
+**Purpose**: Takes a string of input from the user and returns whether it is a valid selection or not. This can then be used to route users to retry their input or move on to the next step.
 
 **Parameters:**  event.race (the user's input)
 
@@ -195,7 +195,7 @@ OTIS Validate Ethnicity
 ============================
 **Function name:**  otis-validate-ethnicity
 
-**Purpose**: Takes a string of input from the user and returns whether it is a valid selection or not.  This can then be used to route users to retry their input or move on to the next step.
+**Purpose**: Takes a string of input from the user and returns whether it is a valid selection or not. This can then be used to route users to retry their input or move on to the next step.
 
 **Parameters:**  event.ethnicity (the user's input)
 
@@ -209,7 +209,7 @@ OTIS Validate Year
 ======================
 **Function name:**  otis-validate-year
 
-**Purpose**: Takes a string of input from the user and returns whether it is a valid year.  This can then be used to route users to retry their input or move on to the next step.
+**Purpose**: Takes a string of input from the user and returns whether it is a valid year. This can then be used to route users to retry their input or move on to the next step.
 
 If the user enters a 2 digit year, it is assumed to be 19xx if the string is greater than 10.
 
@@ -225,7 +225,7 @@ OTIS Validate Day of Month
 ===============================
 **Function name:**  otis-validate-day-of-month
 
-**Purpose**: Takes a string of input from the user and returns whether it is a valid number between 1 and 31.  This can then be used to route users to retry their input or move on to the next step.
+**Purpose**: Takes a string of input from the user and returns whether it is a valid number between 1 and 31. This can then be used to route users to retry their input or move on to the next step.
 
 **Parameters:**  event.day (the user's input)
 
@@ -239,7 +239,7 @@ OTIS Validate Month
 ===============================
 **Function name:**  otis-validate-day-of-month
 
-**Purpose**: Takes a string of input from the user and returns whether it is a valid month.  This validates both numbers (1 - 12) and text input such as November, november, nov, or Nov.  This can then be used to route users to retry their input or move on to the next step.
+**Purpose**: Takes a string of input from the user and returns whether it is a valid month. This validates both numbers (1 - 12) and text input such as November, november, nov, or Nov. This can then be used to route users to retry their input or move on to the next step.
 
 **Parameters:**  event.day (the user's input)
 
@@ -259,7 +259,7 @@ OTIS Poverty Estimate
 
 **Purpose**: Gets the estimated over-income threshold for users based on household size.
 
-**Parameters:**  event.children and event.adult.  Both should be numbers.
+**Parameters:**  event.children and event.adult. Both should be numbers.
 
 **Requires:**  API call to get poverty income.
 
@@ -289,7 +289,7 @@ Create Triage User
 
 **Purpose**: Builds a data packet and leverages ILAO's Rest API to create a triage user record on ILAO's website
 
-**Parameters:**  Event object that contains base data; empty or missing values are set to null.  
+**Parameters:**  Event object that contains base data; empty or missing values are set to null. 
 
 **Requires:**  Authentication with ILAO's REST OTIS API
 

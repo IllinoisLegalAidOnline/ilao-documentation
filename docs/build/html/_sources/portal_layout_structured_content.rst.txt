@@ -2,7 +2,7 @@
 Portal layout structured content
 =================================
 
-This is the simplest layout.  It has a column heading, a subheading, a body and an optional button.  
+This is the simplest layout. It has a column heading, a subheading, a body and an optional button. 
 
 .. image:: ../assets/portal-structured-edit.png
 

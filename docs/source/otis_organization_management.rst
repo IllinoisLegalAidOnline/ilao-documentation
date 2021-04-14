@@ -2,7 +2,7 @@
 Organization management
 =============================
 
-Organizations serve as the core owners of locations, services, and triage rules.  Legal aid members are associated with an organization.
+Organizations serve as the core owners of locations, services, and triage rules. Legal aid members are associated with an organization.
 
 
 .. toctree::

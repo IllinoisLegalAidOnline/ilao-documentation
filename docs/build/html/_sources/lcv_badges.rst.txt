@@ -42,7 +42,7 @@ Examples:
 * Family & Safety Workhorse
 * Pro Bono Month Champion
 
-The author and partner badges are reserved for specialty awards rather than general editorial work.  The author badge might be awarded:
+The author and partner badges are reserved for specialty awards rather than general editorial work. The author badge might be awarded:
 
 * with a label of "Contributor" the first time a user drafts an article from scratch and can only be earned once.
 * with a label of "Scribe" the first time a user drafts 5 articles from scratch and can only be earned once.
@@ -92,16 +92,16 @@ The badges can be configured in the CMS.
 
 Badges should have:
 
-* A name.  This is the administrative name for the badge (for admin reports).
-* A display label.  This is what appears to users beneath the badge, minus the date range.
-* A description.  This will appear on the "Learn more about badges" page.
-* Badge image.  This is the image to use.  
+* A name. This is the administrative name for the badge (for admin reports).
+* A display label. This is what appears to users beneath the badge, minus the date range.
+* A description. This will appear on the "Learn more about badges" page.
+* Badge image. This is the image to use. 
 * The maximum number of times a badge can be earned:
 
-  * Once.  A user can earn a badge one time. 
-  * Once per quarter.  The user can earn the badge once a quarter maximum.  Quarter badges are postfixed with "Q2, 2021".  
-  * Once per year.  The user can earn the badge once a year maximum. Annual badges are postfixed with the 4 digit year.  
-    * No limit. As soon as the user hits the number of points required, they earn the badge.  
+  * Once. A user can earn a badge one time. 
+  * Once per quarter. The user can earn the badge once a quarter maximum. Quarter badges are postfixed with "Q2, 2021". 
+  * Once per year. The user can earn the badge once a year maximum. Annual badges are postfixed with the 4 digit year. 
+    * No limit. As soon as the user hits the number of points required, they earn the badge. 
     
     
 Example:  User has: 210 points on Jan 28, 305 points on Feb 28, 500 points on April 30
@@ -124,20 +124,20 @@ Example:  User has: 210 points on Jan 28, 305 points on Feb 28, 500 points on Ap
 | 150 points         |                                                              |
 +--------------------+--------------------------------------------------------------+
 
-* Which content categories count towards the badge.  A badge could be limited points earned from tasks associated with family & safety content or not limited for example.  The category used is either:
+* Which content categories count towards the badge. A badge could be limited points earned from tasks associated with family & safety content or not limited for example. The category used is either:
  
   * the primary legal category associated with a node
   * the primary legal category indicated when awarding manual credit.
   
-* the point types that should be counted for a badge award.  Leave blank for all point types.
+* the point types that should be counted for a badge award. Leave blank for all point types.
 
-.. note:: If left empty, new point types will be included automatically.  When populated, any new point types will need to be manually added.
+.. note:: If left empty, new point types will be included automatically. When populated, any new point types will need to be manually added.
   
 * a number of point required to earn a badge.
   
-* the dates when points can be earned for a specific badge.  If left empty, all dates can be used.
+* the dates when points can be earned for a specific badge. If left empty, all dates can be used.
 
-.. note:: For example, if a badge is limited to October 1, 2021 through October 31, 2021, points earned outside of that range will not be counted regardless of the badge award frequency.  However, if the frequency is no limit, the user can earn the badge multiple times in October.    
+.. note:: For example, if a badge is limited to October 1, 2021 through October 31, 2021, points earned outside of that range will not be counted regardless of the badge award frequency. However, if the frequency is no limit, the user can earn the badge multiple times in October.   
 
 
 Defining Milestones
@@ -149,15 +149,15 @@ Milestones are added under Structure/Gamification/Milestone.
 
 Milestones should have:
 
-* A name.  This is what displays in the Milestones this quarter panel
-* A description.  This will be displayed on the Learn more about our badges/milestones page
-* Maximum number of times a milestone can be earned.  This has options of:
+* A name. This is what displays in the Milestones this quarter panel
+* A description. This will be displayed on the Learn more about our badges/milestones page
+* Maximum number of times a milestone can be earned. This has options of:
 
   * Lifetime (once)
   * Quarterly
   * Annually
   
-* Who the milestone applies to.   Options are:
+* Who the milestone applies to.  Options are:
 
   * Organizations
   * Individuals
@@ -166,30 +166,30 @@ Milestones should have:
 * Base award on:
 
   * Points
-  * Words.  When words is selected, the milestone will be calculated using the number of words in the content associated with the point type(s).
-  * Revisions.  When revisions is selected, the milestone will be calculated using the number of point types associated with the user/organization.  For example, if a user has earned points under "Published content" 5 times, 5 revisions will be counted.
-  * Editors.  When editors is selected, the milestone will be calculated by the number of unique users associated with point types. Editor totals can be tracked against:
+  * Words. When words is selected, the milestone will be calculated using the number of words in the content associated with the point type(s).
+  * Revisions. When revisions is selected, the milestone will be calculated using the number of point types associated with the user/organization. For example, if a user has earned points under "Published content" 5 times, 5 revisions will be counted.
+  * Editors. When editors is selected, the milestone will be calculated by the number of unique users associated with point types. Editor totals can be tracked against:
   
-    * Percentage of legal content volunteers in an organization.  For example, if Organization A has 5 editors and the milestone is for 75% contribution, 4 editors must make an edit for the organization to earn the milestone.
-    * Percentage of staff in an organization.  For example, if Organization A has 20 staff  and the milestone is for 75% contribution, 15 users must make an edit for the organization to earn the milestone.
-    * Number.   
+    * Percentage of legal content volunteers in an organization. For example, if Organization A has 5 editors and the milestone is for 75% contribution, 4 editors must make an edit for the organization to earn the milestone.
+    * Percentage of staff in an organization. For example, if Organization A has 20 staff  and the milestone is for 75% contribution, 15 users must make an edit for the organization to earn the milestone.
+    * Number.  
 
   
-* Legal category for countable points.  Leave as none to apply to all categories.
+* Legal category for countable points. Leave as none to apply to all categories.
 * Point types to include when counting points.
-* Number of items required to earn milestone.   For example, a milestone for first edit that can only be won once would have a revision count of 1 to award.  A milestone of 10,000 words edited awarded once a year would have a words basis with an item count of 10,000.
+* Number of items required to earn milestone.  For example, a milestone for first edit that can only be won once would have a revision count of 1 to award. A milestone of 10,000 words edited awarded once a year would have a words basis with an item count of 10,000.
 
-A revision message may be added to document what was added or changed.  
+A revision message may be added to document what was added or changed. 
 
 Listings
 ============
-Badges and milestones are custom entities (not content types) so they do not appear in the Find content report.  
+Badges and milestones are custom entities (not content types) so they do not appear in the Find content report. 
 
 The `list of badges <https://www.illinoislegalaid.org/admin/content/gamification/badges-listing>`_ contains all badges defined in the system and can be exported to CSV.
 
 .. image:: ../assets/cms-badges-report.png
 
-The `list of milestones <https://www.illinoislegalaid.org/admin/content/gamification/milestone-listing>`_ shows all of the milestones in the system.  
+The `list of milestones <https://www.illinoislegalaid.org/admin/content/gamification/milestone-listing>`_ shows all of the milestones in the system. 
 
 .. image:: ../assets/cms-milestone-report.png
 

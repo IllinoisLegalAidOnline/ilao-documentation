@@ -2,7 +2,7 @@
 Configuration
 ====================
 
-.. note::  Staff users do not have access to search configuration.  Please let Gwen know if you see issues.
+.. note::  Staff users do not have access to search configuration. Please let Gwen know if you see issues.
 
 Known bugs
 ==============
@@ -45,7 +45,7 @@ Processors Used When Indexing
 =================================
 
 
-* Index hierarchy - this indexes the hierarchy of taxonomy terms included in content.  
+* Index hierarchy - this indexes the hierarchy of taxonomy terms included in content. 
 * HTML filter - this strips HTML tags and decodes HTML entities
 * Stopwords - this strips out common words from the text of the content to be indexed. ILAO can manage the terms in the list.
 * Type specific boosting - this adds a boost factor to some content.
@@ -62,5 +62,5 @@ We lower the boost for events and job postings to make them less relevant compar
 
  
 
-..  todo:: Should we make use of any of the other available processors?
+.. todo:: Should we make use of any of the other available processors?
 

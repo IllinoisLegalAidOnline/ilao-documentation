@@ -16,17 +16,17 @@ Donation C is assigned to all pages other than those assigned to Donation A & B.
 
 The 3 blocks are limited to English pages as they are not translated.
 
-.. note:: To support different languages, we would first need to make copies of our donation forms on QGiv and translate those.  
+.. note:: To support different languages, we would first need to make copies of our donation forms on QGiv and translate those. 
 
 To create a new block
 =======================
-Only one header block should appear on any given page.  To create a heading banner:
+Only one header block should appear on any given page. To create a heading banner:
 
 * Go to Structure => Block layout => Custom block library
 * Add custom block
 * Select basic
 * Enter a block description; this is what appears in the block library as the name of the block.
-* Enter the body.   Use the header banner code below to provide the correct style.
+* Enter the body. Use the header banner code below to provide the correct style.
 * **DO NOT** add an image.
 
 When placing the block:
@@ -58,7 +58,7 @@ It is possible to embed an image in the header such as:
    <div style="background-color:#F8FAFA;width:100%; padding:20px;font-weight:bold;box-shadow: 0 0.125rem 0.5rem rgba(106,107,113,0.2);min-height:135px">
    <img src="[img source]" style="vertical-align:middle;float:left" width="125px" />Text here</div>
    
-.. note::  We added a minimum height to the div that is just slightly larger than the height of the image.  
+.. note::  We added a minimum height to the div that is just slightly larger than the height of the image. 
   
 
 

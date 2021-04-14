@@ -6,9 +6,9 @@ This documents our integration between the website and SMS to provide the needed
 
 Create triage user
 =====================
-Within Twilio, we have the ILAO service for functions.  The `/otis-create-triage-user <https://ilao-8092.twil.io/otis-create-triage-user>`_ function creates a data packet based on ILAO's OTIS Rest API to create a triage user record in our database.  The API returns the UUID of the newly created triage user entity.
+Within Twilio, we have the ILAO service for functions. The `/otis-create-triage-user <https://ilao-8092.twil.io/otis-create-triage-user>`_ function creates a data packet based on ILAO's OTIS Rest API to create a triage user record in our database. The API returns the UUID of the newly created triage user entity.
 
-The triage user is initially created after the user identifies their legal issue (OTIS-master).  At this point we have:
+The triage user is initially created after the user identifies their legal issue (OTIS-master). At this point we have:
 
 * Zip code, county, state
 * Legal problem
@@ -24,7 +24,7 @@ The triage user is initially created after the user identifies their legal issue
 
 Update triage user
 =====================
-The `/otis-update-triage-user <https://ilao-8092.twil.io/otis-update-triage-user>`_ function creates a data packet based on ILAO's OTIS Rest API to update an existing triage user based on the UUID.  
+The `/otis-update-triage-user <https://ilao-8092.twil.io/otis-update-triage-user>`_ function creates a data packet based on ILAO's OTIS Rest API to update an existing triage user based on the UUID. 
 
 It ignores any parameters that are not part of the ILAO OTIS Rest API.
 

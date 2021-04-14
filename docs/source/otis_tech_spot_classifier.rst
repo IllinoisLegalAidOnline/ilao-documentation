@@ -3,7 +3,7 @@ Spot Classsifer API Docs
 =============================
 
 
-The `LIT Spot classifier <https://app.swaggerhub.com/apis-docs/suffolklitlab/spot/>`_ is an API service that takes text and returns one or more legal problem codes based on the `LIST taxonomy <https://taxonomy.legal/>`_.  
+The `LIT Spot classifier <https://app.swaggerhub.com/apis-docs/suffolklitlab/spot/>`_ is an API service that takes text and returns one or more legal problem codes based on the `LIST taxonomy <https://taxonomy.legal/>`_. 
 
 Configuration in Drupal
 ========================
@@ -31,13 +31,13 @@ We currently support:
   
 Entities-nested
 ----------------
-Entities nested returns the entire LIST tree for a provided text.  For example, it might return Housing->Evictions from a home
+Entities nested returns the entire LIST tree for a provided text. For example, it might return Housing->Evictions from a home
 
 Entities-terminal
 ------------------
-Entities terminal returns only the lowest LIST terms that match a text.  For example, it might return Evictions from a Home but not the parent Housing term.
+Entities terminal returns only the lowest LIST terms that match a text. For example, it might return Evictions from a Home but not the parent Housing term.
 
-..note :: Not all levels of the LIST taxonomy are currently supported in the classifier.  
+..note :: Not all levels of the LIST taxonomy are currently supported in the classifier. 
 
 
 Example

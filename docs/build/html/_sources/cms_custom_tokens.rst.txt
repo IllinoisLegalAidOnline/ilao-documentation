@@ -10,7 +10,7 @@ Custom tokens are managed under the `Structure <https://www.illinoislegalaid.org
 
 Custom token types
 =====================
-Staff can create different types of custom tokens to better manage custom tokens.  Currently we have types of:
+Staff can create different types of custom tokens to better manage custom tokens. Currently we have types of:
 
 * Custom
 * Process
@@ -19,24 +19,24 @@ Staff can create different types of custom tokens to better manage custom tokens
 * Process-ES
 * Process-PL
 
-.. note::  The machine name for each type is lowercase.  Uppercase is not supported.  
+.. note::  The machine name for each type is lowercase. Uppercase is not supported. 
 
 Adding and editing custom tokens
 ====================================
 
-.. note::  Custom tokens are not translatable.  They can technically be translated but the translations can't be detected on the front-end. The approach then is to create separate tokens per language and then insert the correct language token in the legal content.  
+.. note::  Custom tokens are not translatable. They can technically be translated but the translations can't be detected on the front-end. The approach then is to create separate tokens per language and then insert the correct language token in the legal content. 
 
 .. image:: ../assets/cms-custom-tokens.png
 
 To create a token
 -------------------
 
-* Select the token type.  This will be the type part in [type:name].
-* Enter a name.  This is the name for display.  It is not the name used in the token.  
-* Enter the machine name ID.  Only lowercase letters, numbers, hyphens, or underscores may be used and each machine name ID must be unique.  **This is the name part of the token**
+* Select the token type. This will be the type part in [type:name].
+* Enter a name. This is the name for display. It is not the name used in the token. 
+* Enter the machine name ID. Only lowercase letters, numbers, hyphens, or underscores may be used and each machine name ID must be unique. **This is the name part of the token**
 * Optionally, enter a description
-* Enter the content.  
-* Select the language code.  
+* Enter the content. 
+* Select the language code. 
 
 .. note::
    You may need to view the source of the content to strip out paragraph tags for tokens that should be used in-line with other content, for example, tokens that are used mid-sentence or mid-paragraph.
@@ -56,7 +56,7 @@ This approach will make it easier to update the tokens in content when translati
 Using custom tokens
 ========================
 
-There is no tool in the WYSIWYG to automatically insert a custom token.  To add a token, just type it in the format of [type:name] where type is the custom token type and name is the token name. 
+There is no tool in the WYSIWYG to automatically insert a custom token. To add a token, just type it in the format of [type:name] where type is the custom token type and name is the token name. 
 
 Examples
 --------------

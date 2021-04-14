@@ -18,16 +18,16 @@ You will need to do this for the path alias of every language you are redirectin
 
 **Step 4**:  Fill out the add URL redirect form
 
-* Enter the path you are redirecting from.  This is the legal-information/old-article for example
+* Enter the path you are redirecting from. This is the legal-information/old-article for example
 * The To is likely already pre-populated but you likely have to edit it to trigger the autocomplete or you will get a path error on saving.
-* Set the redirect status.  This should always be 301 Moved Permanently unless the redirect is temporary (for example, redirecting users temporarily from our donate page to a special event donate page for a time-limited appeal)
+* Set the redirect status. This should always be 301 Moved Permanently unless the redirect is temporary (for example, redirecting users temporarily from our donate page to a special event donate page for a time-limited appeal)
 * Save
 
-.. warning:: If you get an error that the redirect will create a loop or is circular STOP and reach out to Gwen for help.  There's likely an existing redirect that needs to be fixed first.
+.. warning:: If you get an error that the redirect will create a loop or is circular STOP and reach out to Gwen for help. There's likely an existing redirect that needs to be fixed first.
 
 **Step 5**:  Clean up the old path alias
 
-There is a conflict between path aliases and redirect where the path alias will override the redirect.  You need to:
+There is a conflict between path aliases and redirect where the path alias will override the redirect. You need to:
 
 * Go to the old article
 * Navigate to the URL alias pane
@@ -37,7 +37,7 @@ There is a conflict between path aliases and redirect where the path alias will 
 
 .. image:: ../assets/cms-url-alias-empty.png
 
-**Step 6**:  Redirect the actual node.  
+**Step 6**:  Redirect the actual node. 
 
 * Repeat the same steps as Step 3 and 4 only this time, the path should be node/[node-id]
 
@@ -45,5 +45,5 @@ There is a conflict between path aliases and redirect where the path alias will 
 
 .. image:: ../assets/cms-redirect-node-id.png
 
-**Step 7**:  Verify that the redirect works.  If it doesn't, wait 15 minutes for cache to clear and check again.  If it still isn't working, reach out to Gwen.
+**Step 7**:  Verify that the redirect works. If it doesn't, wait 15 minutes for cache to clear and check again. If it still isn't working, reach out to Gwen.
 

@@ -6,12 +6,12 @@ The portal layout split column is used to show two side-by-side (desktop) or sta
 
 .. image:: ../assets/portal-split-column-edit.png
 
-The portal split column layout should contain 2 blocks fo portal text.  A portal text component consists of:
+The portal split column layout should contain 2 blocks fo portal text. A portal text component consists of:
 
 * a portal icon (not required; not displayed to users).
 * a title (required)
 * a summary (required)
-* optionally a button/link.  
+* optionally a button/link. 
 
 .. note::  The portal icon field will be removed in a future release
 

@@ -34,11 +34,11 @@ This code snippet returns the list of processes available to Guided navigation
     $processes = json_decode($result);
     return $processes;
     
-The resulting json contains an array of objects.  The objects contain:
+The resulting json contains an array of objects. The objects contain:
 
-* id.  This id is used throughout the system to identify which guided navigation process is involved in a transaction.
+* id. This id is used throughout the system to identify which guided navigation process is involved in a transaction.
 * name. The name in LegalServer of the process
-* type.  The type of process
+* type. The type of process
 
 When decoded, in Drupal this results in an array of objects as follows:
 
@@ -70,7 +70,7 @@ curl --request POST -u "username:password" https://iloi-demo.legalserver.org/api
     $start = json_decode($result);
     return $start;
 
-.. note:: in the above example, $process_id represents the process ID from the list of processes.   
+.. note:: in the above example, $process_id represents the process ID from the list of processes.  
 
 This will result in a JSON object that includes the first form from the Guided Navigation dialogue
 
@@ -112,10 +112,10 @@ This will result in a JSON object that includes the first form from the Guided N
 
 The resulting JSON when decoded into a Drupal format results in
 
-* a process_session_id (string).  This is used for the entire user's session
-* a profile (object).  This is updated over time as new data is gathered
+* a process_session_id (string). This is used for the entire user's session
+* a profile (object). This is updated over time as new data is gathered
 * a profile_by_element_id (object). 
-* a form object.  This contains all the information about the form to display.
+* a form object. This contains all the information about the form to display.
 
 .. image:: ../assets/otis-gn-session.png
 

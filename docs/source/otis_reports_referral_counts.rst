@@ -13,7 +13,7 @@ The report shows:
 * Service the referrals were made to
 * Organization associated with the referrals
 
-..todo:: Where an organization is translated, duplicate rows are showing.  
+..todo:: Where an organization is translated, duplicate rows are showing. 
 
 
 
@@ -23,4 +23,4 @@ The report can be filtered on:
 
 * Date the referrals were made
 * The county associated with the request
-* The legal issue, with depth.  This means that filtering on Divorce will include all child terms selected for example.  
+* The legal issue, with depth. This means that filtering on Divorce will include all child terms selected for example. 

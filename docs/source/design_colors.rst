@@ -37,14 +37,14 @@ Used in:
 Support Colors
 ================
 
-These are colors that are used in various messages on the website.  
+These are colors that are used in various messages on the website. 
 
 Warning yellow
 ----------------
 
 .. image:: ../assets/design-warning-yellow.png
 
-Used in Drupal warning messages.  Also used in some placeholder images.
+Used in Drupal warning messages. Also used in some placeholder images.
 
 Hex value:  #FFCD6E
 

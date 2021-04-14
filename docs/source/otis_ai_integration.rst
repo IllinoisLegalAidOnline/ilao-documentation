@@ -2,7 +2,7 @@
 OTIS AI Integration
 ====================
 
-We have access to 2 legal issue classifiers that return one or more likely legal issues.  
+We have access to 2 legal issue classifiers that return one or more likely legal issues. 
 
 Both produce similar results although they don't always perform evenly.
 
@@ -26,9 +26,9 @@ The `first prototype <https://dnlmkx.axshare.com/home.html>`_ demonstrates how t
 Walking through the prototype:  Managing the legal problem
 ------------------------------------------------------------
 
-* Enter **cut in my food stamps** in the text area and click Continue to see what would happen if the user entered an exact match to ILAO's taxonomy.  In this case, the user is just asked to confirm their legal issue.
-* Enter **food stamps** to see one option when the classifiers do not return anything meeting our threshold.  In this case, it shows all the lowest level taxonomy terms that contain the search term or whose parent contains the search term.
-* Enter **snap** to see the other option when the classifiers do not return anything meeting our threshold.  In this case it shows the highest level taxonomy terms that contain the search term.
+* Enter **cut in my food stamps** in the text area and click Continue to see what would happen if the user entered an exact match to ILAO's taxonomy. In this case, the user is just asked to confirm their legal issue.
+* Enter **food stamps** to see one option when the classifiers do not return anything meeting our threshold. In this case, it shows all the lowest level taxonomy terms that contain the search term or whose parent contains the search term.
+* Enter **snap** to see the other option when the classifiers do not return anything meeting our threshold. In this case it shows the highest level taxonomy terms that contain the search term.
 * Enter **I lost my job and now am being evicted from my apartment** to see results where one or both classifiers return items. This example shows multiple relevant issues.
 
 

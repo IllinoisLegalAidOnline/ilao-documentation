@@ -42,7 +42,7 @@ To create a flowchart, use the `flowchart syntax <https://mermaid-js.github.io/m
 
 Customizing the look
 =====================
-The flowchart type supports two themes:  default and base.  The default theme can not be customized.
+The flowchart type supports two themes:  default and base. The default theme can not be customized.
 
 .. image:: ../assets/cms-flowchart-default-theme.png
 
@@ -50,7 +50,7 @@ The base theme:
 
 .. image:: ../assets/cms-flowchart-base-theme.png
 
-The base theme can accept additional variables, entered in the "theme variables" section to customize the theme.  
+The base theme can accept additional variables, entered in the "theme variables" section to customize the theme. 
 
 For example, adding a theme variable of primaryColor to 0079d00 (ILAO's blue) would result in this:
 
@@ -71,13 +71,13 @@ See `theming documentation <https://mermaid-js.github.io/mermaid/#/theming>`_.
 Icon support
 =============
 
-Mermaid supports the use of basic `font-awesome <https://fontawesome.com/icons?d=gallery&m=free>`_ icons.  While ILAO has a pro account, only the basic class is currently supported. 
+Mermaid supports the use of basic `font-awesome <https://fontawesome.com/icons?d=gallery&m=free>`_ icons. While ILAO has a pro account, only the basic class is currently supported. 
 
 .. todo:: determine if ILAO can add support for fal/fas clases in font awesome to support the additional icon sets.
 
 Content format
 ================
-Pages with a flowchart block will be saved with a content format of Flowchart.  This will cause the flowchart label and icon to display on those pages.  
+Pages with a flowchart block will be saved with a content format of Flowchart. This will cause the flowchart label and icon to display on those pages. 
 
 .. image:: ../assets/flowchart-header.png
 

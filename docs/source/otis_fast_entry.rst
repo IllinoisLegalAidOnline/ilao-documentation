@@ -61,7 +61,7 @@ Uncheck Fast entry user and save
 
 Related Intake Settings
 ==========================
-Because fast entry bypasses triage rules and intake settings generally, ILAO staff will associate a single intake settings ID per organization in the Legal Server configuration.  This intake setting should be an intake that is generally left open. The legal issue taxonomy selected in the intake setting will not impact the law type options on the fast entry form. This id will then be used for data tracking. Fast entry intakes will not impact counts on any intake settings.
+Because fast entry bypasses triage rules and intake settings generally, ILAO staff will associate a single intake settings ID per organization in the Legal Server configuration. This intake setting should be an intake that is generally left open. The legal issue taxonomy selected in the intake setting will not impact the law type options on the fast entry form. This id will then be used for data tracking. Fast entry intakes will not impact counts on any intake settings.
 
 
 Related Triage Rule

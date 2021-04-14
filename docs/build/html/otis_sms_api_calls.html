@@ -42,7 +42,7 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Site Search" href="site_search.html" />
+    <link rel="next" title="Eviction SMS Flow" href="sms_eviction.html" />
     <link rel="prev" title="OTIS Master Twilio Workflow" href="otis_sms_twilio_studio_workflow.html" /> 
 </head>
 
@@ -115,6 +115,7 @@
 <li class="toctree-l4"><a class="reference internal" href="otis_sms_functions.html">OTIS SMS Functions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="otis_sms_twilio_studio_workflow.html">OTIS Master Twilio Workflow</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">OTIS SMS API</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sms_eviction.html">Eviction SMS Flow</a></li>
 <li class="toctree-l4"><a class="reference internal" href="otis_sms_intake.html#functions">Functions</a></li>
 </ul>
 </li>
@@ -209,8 +210,8 @@
 <p>This documents our integration between the website and SMS to provide the needed functionality between ILAO’s database, LegalServer, and Twilio for online intake.</p>
 <div class="section" id="create-triage-user">
 <h2>Create triage user<a class="headerlink" href="#create-triage-user" title="Permalink to this headline">¶</a></h2>
-<p>Within Twilio, we have the ILAO service for functions.  The <a class="reference external" href="https://ilao-8092.twil.io/otis-create-triage-user">/otis-create-triage-user</a> function creates a data packet based on ILAO’s OTIS Rest API to create a triage user record in our database.  The API returns the UUID of the newly created triage user entity.</p>
-<p>The triage user is initially created after the user identifies their legal issue (OTIS-master).  At this point we have:</p>
+<p>Within Twilio, we have the ILAO service for functions. The <a class="reference external" href="https://ilao-8092.twil.io/otis-create-triage-user">/otis-create-triage-user</a> function creates a data packet based on ILAO’s OTIS Rest API to create a triage user record in our database. The API returns the UUID of the newly created triage user entity.</p>
+<p>The triage user is initially created after the user identifies their legal issue (OTIS-master). At this point we have:</p>
 <ul class="simple">
 <li><p>Zip code, county, state</p></li>
 <li><p>Legal problem</p></li>
@@ -262,7 +263,7 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="site_search.html" class="btn btn-neutral float-right" title="Site Search" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="sms_eviction.html" class="btn btn-neutral float-right" title="Eviction SMS Flow" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
         <a href="otis_sms_twilio_studio_workflow.html" class="btn btn-neutral float-left" title="OTIS Master Twilio Workflow" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 

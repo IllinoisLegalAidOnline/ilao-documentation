@@ -103,7 +103,7 @@ Lawyer Manual
 
 Hex color: #E2acf4
 
-.. note::  Lawyer manuals are limited to ADRM content. Text articles that are "lawyer manuals" are not considered lawyer manuals for iconography purposes.  Those are text articles.
+.. note::  Lawyer manuals are limited to ADRM content. Text articles that are "lawyer manuals" are not considered lawyer manuals for iconography purposes. Those are text articles.
 
 Decision Tree & Flowcharts
 ============================

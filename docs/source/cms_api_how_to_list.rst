@@ -3,7 +3,7 @@ Content API:  How To List
 ===========================
 
 
-Returns a list of how-to structured content.  A solution identifier UUID may be included which will limit the results to those how-to's embedded in that solution.
+Returns a list of how-to structured content. A solution identifier UUID may be included which will limit the results to those how-to's embedded in that solution.
 
 Function call
 ===============
