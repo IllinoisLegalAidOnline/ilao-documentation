@@ -2,7 +2,8 @@
 Eviction SMS Flow
 ======================
 
-ERP Workflow Tree
+Workflow Tree
+=================
 
 Initial message
   Language prompt
@@ -15,29 +16,50 @@ First name
 Zip code
 
   In Illinois, 
-    In Cook County, hand to Get Legal Help [needs build]
+    In Cook County, hand to Get Legal Help 
     Outside Cook County, CONTINUE
     
   Not in Illinois, offer to retry
     Link to LawHelp
     
-Get Legal Issue
+Get Legal Issue (7 options)
 
   User replies More
     Show definitions
     Return to legal issue
     
-  User replies with a legal issue, CONTINUE
-  User replies with a non legal housing issue
+  User replies 1
+    User is asked if they have a summons
+      If Yes, CONTINUE to matches
+      If No, User is asked if they've received written notice
+    
+         If yes, CONTINUE to matches
+         If no, user is asked if the landlord has threatened to evict
+     
+           If yes, CONTINUE to matches
+           If no, EXIT to legal content
   
+  User replies 2
+     CONTINUE to matches
+  
+  User replies 3
+     CONTINUE to matches
+  
+  User replies 4
+   
+     User is asked if the utilities were shut off because the tenant didn't pay the bills
+   
+        If yes, EXIT to legal content
+        If no, continue to matches
+          
+  User replies 5 or 6,   
+    
     Show nearest housing counselor
     Option to show all
     
       Loops through
       
-    Returns to household questions [is this the correct behavior]
-
-NOTE:  Moved Household Questions
+  User replies 7, user gets exit message to Get Legal Help
 
 Get Matches [Need API function built]
 
@@ -45,7 +67,7 @@ Ask user if they want to continue
 
   User says no
     Exits to Legal content
-    Offer counseling options
+
     
   Users says yes CONTINUE
 
@@ -90,8 +112,12 @@ Income prompt
 
 Ask wages/salary
   Yes
-    Get amount
-      Validate and throw error if needed, else CONTINUE
+    Ask frequency
+      User replies 1,2,3,4 
+        Get amount
+        Validate and throw error if needed, else CONTINUE
+      User replies anything else
+        Throw error and allow them to correct  
       
   No
     CONTINUE
@@ -165,6 +191,16 @@ Ask if user has other income
     
   Invalid input
 
+Run income test (compare total income entered against standard)
+ 
+  If user is over-income (80% of median income for household size)
+ 
+    Inform user we can't complete intake
+    Exit to legal information
+ 
+  If user is not over-income CONTINUE  
+  
+
 Ask if current number is best to reach at
 
   YES
@@ -172,11 +208,12 @@ Ask if current number is best to reach at
     
   NO
     Ask for valid number
-    Need to validate number
+    Validate number
     
       Valid => CONTINUE
       Invalid => Repeat
 
+Get email address
 Get street address
 Get city
 
@@ -203,8 +240,11 @@ System call: Get contact type
 
   Client calls
   Give confirmation message
+  If user replies
   
+    Give you are done message
   
+
 
 
 

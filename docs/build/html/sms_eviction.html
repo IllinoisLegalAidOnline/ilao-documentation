@@ -207,7 +207,8 @@
             
   <div class="section" id="eviction-sms-flow">
 <h1>Eviction SMS Flow<a class="headerlink" href="#eviction-sms-flow" title="Permalink to this headline">¶</a></h1>
-<p>ERP Workflow Tree</p>
+<div class="section" id="workflow-tree">
+<h2>Workflow Tree<a class="headerlink" href="#workflow-tree" title="Permalink to this headline">¶</a></h2>
 <dl class="simple">
 <dt>Initial message</dt><dd><dl class="simple">
 <dt>Language prompt</dt><dd><p>If Spanish, launch Spanish version (separate)</p>
@@ -220,38 +221,61 @@
 <p>Zip code</p>
 <blockquote>
 <div><dl class="simple">
-<dt>In Illinois,</dt><dd><p>In Cook County, hand to Get Legal Help [needs build]
+<dt>In Illinois,</dt><dd><p>In Cook County, hand to Get Legal Help
 Outside Cook County, CONTINUE</p>
 </dd>
 <dt>Not in Illinois, offer to retry</dt><dd><p>Link to LawHelp</p>
 </dd>
 </dl>
 </div></blockquote>
-<p>Get Legal Issue</p>
+<p>Get Legal Issue (7 options)</p>
 <blockquote>
-<div><dl class="simple">
+<div><dl>
 <dt>User replies More</dt><dd><p>Show definitions
 Return to legal issue</p>
 </dd>
+<dt>User replies 1</dt><dd><dl>
+<dt>User is asked if they have a summons</dt><dd><p>If Yes, CONTINUE to matches
+If No, User is asked if they’ve received written notice</p>
+<blockquote>
+<div><p>If yes, CONTINUE to matches
+If no, user is asked if the landlord has threatened to evict</p>
+<blockquote>
+<div><p>If yes, CONTINUE to matches
+If no, EXIT to legal content</p>
+</div></blockquote>
+</div></blockquote>
+</dd>
 </dl>
-<p>User replies with a legal issue, CONTINUE
-User replies with a non legal housing issue</p>
+</dd>
+<dt>User replies 2</dt><dd><p>CONTINUE to matches</p>
+</dd>
+<dt>User replies 3</dt><dd><p>CONTINUE to matches</p>
+</dd>
+</dl>
+<p>User replies 4</p>
+<blockquote>
+<div><p>User is asked if the utilities were shut off because the tenant didn’t pay the bills</p>
+<blockquote>
+<div><p>If yes, EXIT to legal content
+If no, continue to matches</p>
+</div></blockquote>
+</div></blockquote>
+<p>User replies 5 or 6,</p>
 <blockquote>
 <div><p>Show nearest housing counselor
 Option to show all</p>
 <blockquote>
 <div><p>Loops through</p>
 </div></blockquote>
-<p>Returns to household questions [is this the correct behavior]</p>
 </div></blockquote>
+<p>User replies 7, user gets exit message to Get Legal Help</p>
 </div></blockquote>
-<p>NOTE:  Moved Household Questions</p>
 <p>Get Matches [Need API function built]</p>
 <p>Ask user if they want to continue</p>
 <blockquote>
 <div><dl class="simple">
-<dt>User says no</dt><dd><p>Exits to Legal content
-Offer counseling options</p>
+<dt>User says no</dt><dd><p>Exits to Legal content</p>
 </dd>
 </dl>
 <p>Users says yes CONTINUE</p>
@@ -289,7 +313,13 @@ Otherwise, Get ethnicity</p>
 <dl class="simple">
 <dt>Ask wages/salary</dt><dd><dl class="simple">
 <dt>Yes</dt><dd><dl class="simple">
-<dt>Get amount</dt><dd><p>Validate and throw error if needed, else CONTINUE</p>
+<dt>Ask frequency</dt><dd><dl class="simple">
+<dt>User replies 1,2,3,4</dt><dd><p>Get amount
+Validate and throw error if needed, else CONTINUE</p>
+</dd>
+<dt>User replies anything else</dt><dd><p>Throw error and allow them to correct</p>
+</dd>
+</dl>
 </dd>
 </dl>
 </dd>
@@ -377,13 +407,22 @@ CONTINUE</p>
 <p>Invalid input</p>
 </dd>
 </dl>
+<p>Run income test (compare total income entered against standard)</p>
+<blockquote>
+<div><p>If user is over-income (80% of median income for household size)</p>
+<blockquote>
+<div><p>Inform user we can’t complete intake
+Exit to legal information</p>
+</div></blockquote>
+<p>If user is not over-income CONTINUE</p>
+</div></blockquote>
 <p>Ask if current number is best to reach at</p>
 <blockquote>
 <div><dl>
 <dt>YES</dt><dd><p>CONTINUE</p>
 </dd>
 <dt>NO</dt><dd><p>Ask for valid number
-Need to validate number</p>
+Validate number</p>
 <blockquote>
 <div><p>Valid =&gt; CONTINUE
 Invalid =&gt; Repeat</p>
@@ -391,7 +430,8 @@ Invalid =&gt; Repeat</p>
 </dd>
 </dl>
 </div></blockquote>
-<p>Get street address
+<p>Get email address
+Get street address
 Get city</p>
 <p>System call: Get contact type</p>
 <blockquote>
@@ -418,8 +458,13 @@ User says this work</p>
 </div></blockquote>
 </div></blockquote>
 <p>Client calls
-Give confirmation message</p>
+Give confirmation message
+If user replies</p>
+<blockquote>
+<div><p>Give you are done message</p>
 </div></blockquote>
+</div></blockquote>
+</div>
 </div>
 
 
