@@ -30,14 +30,18 @@ Get Legal Issue (7 options)
     
   User replies 1
     User is asked if they have a summons
-      If Yes, CONTINUE to matches
+      If Yes, CONTINUE to landlord name
       If No, User is asked if they've received written notice
     
-         If yes, CONTINUE to matches
+         If yes, CONTINUE to landlord name
          If no, user is asked if the landlord has threatened to evict
      
-           If yes, CONTINUE to matches
+           If yes, CONTINUE to landlord name
            If no, EXIT to legal content
+           
+     Get landlord name
+     
+     CONTINUE to matches      
   
   User replies 2
      CONTINUE to matches
