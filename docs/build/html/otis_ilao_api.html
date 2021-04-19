@@ -108,7 +108,6 @@
 <li class="toctree-l2"><a class="reference internal" href="otis_ai_integration.html">OTIS AI Integration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="otis_third_party_support.html">Supported Integrations</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">ILAO OTIS API</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#status">Status</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#permissions">Permissions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#triage-user">Triage User</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#get-triage-user-s">Get Triage User(s)</a></li>
@@ -203,15 +202,18 @@
             
   <div class="section" id="ilao-otis-api">
 <h1>ILAO OTIS API<a class="headerlink" href="#ilao-otis-api" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="status">
-<h2>Status<a class="headerlink" href="#status" title="Permalink to this headline">¶</a></h2>
-</div>
 <div class="section" id="permissions">
 <h2>Permissions<a class="headerlink" href="#permissions" title="Permalink to this headline">¶</a></h2>
-<div class="admonition-todo admonition" id="id1">
-<p class="admonition-title">Todo</p>
-<p>Understand how the authentication that was created works.</p>
-</div>
+<p>Access to the API requires the user to authenticate using a token generated over OAuth.  Credentials will be provided as required.</p>
+<p>To generate a bearer token, one needs:</p>
+<ul class="simple">
+<li><p>grant type (“password”)</p></li>
+<li><p>a consumer key (from configuration/consumer)</p></li>
+<li><p>the consumer secret</p></li>
+<li><p>a username</p></li>
+<li><p>a password</p></li>
+</ul>
+<p>This will return an access_token and a refresh_token.</p>
 </div>
 <div class="section" id="triage-user">
 <h2>Triage User<a class="headerlink" href="#triage-user" title="Permalink to this headline">¶</a></h2>
@@ -227,7 +229,7 @@
 </div>
 <div class="section" id="create-triage-user">
 <h3>Create Triage User<a class="headerlink" href="#create-triage-user" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span>  curl -X POST -H &quot;Content-Type:application/vnd.api+json&quot; -d &#39;{
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span>  curl -X POST -H &quot;Content-Type:application/vnd.api+json&quot; -H &quot;authorization: Bearer [token]&quot; -d &#39;{
 &quot;data&quot;: {
       &quot;type&quot;: &quot;oas_triage_user--oas_triage_user&quot;,
       &quot;attributes&quot;: {
@@ -305,46 +307,121 @@
           }
       }
   }
- }&#39; http://ilaodrupal8.prod.dd:8083/jsonapi/oas_triage_user/oas_triage_user
-
-
-  curl -X POST -H &quot;Content-Type:application/vnd.api+json&quot; -d &#39;{
-&quot;data&quot;: {
-      &quot;type&quot;: &quot;oas_triage_user--oas_triage_user&quot;,
-      &quot;attributes&quot;: {
-          &quot;status&quot;: true,
-          &quot;intake_created&quot;: &quot;1970-01-01T00:00:00+00:00&quot;,
-          &quot;intake_changed&quot;: &quot;1970-01-01T00:00:00+00:00&quot;}}}&#39; http://ilaodrupal8.prod.dd:8083/jsonapi/oas_triage_user/oas_triage_user
+ }&#39; [base url]/jsonapi/oas_triage_user/oas_triage_user
 </pre></div>
+</div>
+<div class="section" id="response">
+<h4>Response<a class="headerlink" href="#response" title="Permalink to this headline">¶</a></h4>
+<p>Returns data object containing:</p>
+<ul class="simple">
+<li><p>Type</p></li>
+<li><p>ID (the uuid of the triage user created)</p></li>
+<li><p>Links</p></li>
+<li><p>Attributes (the data of the triage user)</p></li>
+</ul>
 </div>
 </div>
 <div class="section" id="update-triage-user">
 <h3>Update triage user<a class="headerlink" href="#update-triage-user" title="Permalink to this headline">¶</a></h3>
-<blockquote>
-<div><dl>
-<dt>curl -X PATCH -H “Content-Type:application/vnd.api+json” -d ‘{</dt><dd><dl>
-<dt>“data”: {</dt><dd><blockquote>
-<div><p>“type”: “oas_triage_user–oas_triage_user”,
-“id”: “e08ff647-362f-4428-bcaf-8b45191a8df7”,
-“attributes”: {</p>
-<blockquote>
-<div><p>“household_size”: 6,
-“household_children”: 4</p>
-</div></blockquote>
-<p>}</p>
-</div></blockquote>
-<p>}</p>
-</dd>
-</dl>
-</dd>
-</dl>
-</div></blockquote>
-<p>}’ <a class="reference external" href="http://ilaodrupal8.prod.dd:8083/jsonapi/oas_triage_user/oas_triage_user/e08ff647-362f-4428-bcaf-8b45191a8df7">http://ilaodrupal8.prod.dd:8083/jsonapi/oas_triage_user/oas_triage_user/e08ff647-362f-4428-bcaf-8b45191a8df7</a></p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>curl -X PATCH -H &quot;Content-Type:application/vnd.api+json&quot; -H &quot;Authorization: Bearer [token]&quot;-d &#39;{
+&quot;data&quot;: {
+     &quot;type&quot;: &quot;oas_triage_user--oas_triage_user&quot;,
+     &quot;id&quot;: &quot;e08ff647-362f-4428-bcaf-8b45191a8df7&quot;,
+     &quot;attributes&quot;: {
+         &quot;household_size&quot;: 6,
+         &quot;household_children&quot;: 4
+     }
+ }
+ }&#39; [baseurl]/jsonapi/oas_triage_user/oas_triage_user/[uuid]
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The id is required in the url and in the data object.</p>
+</div>
+<div class="section" id="id1">
+<h4>Response<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<p>Returns data object containing:</p>
+<ul class="simple">
+<li><p>Type</p></li>
+<li><p>ID (the uuid of the triage user created)</p></li>
+<li><p>Links</p></li>
+<li><p>Attributes (the data of the triage user)</p></li>
+</ul>
+</div>
+<div class="section" id="sample-response">
+<h4>Sample Response<a class="headerlink" href="#sample-response" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span>  <span class="p">{</span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="s2">&quot;oas_triage_user--oas_triage_user&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;049d25f6-1d81-4c05-9455-002c47387007&quot;</span><span class="p">,</span>
+
+ <span class="nt">&quot;links&quot;</span><span class="p">:</span>
+ <span class="p">{</span><span class="nt">&quot;self&quot;</span><span class="p">:</span>
+    <span class="p">{</span><span class="nt">&quot;href&quot;</span><span class="p">:</span><span class="s2">&quot;https://d8dev.illinoislegalaid.org/jsonapi/oas_triage_user/oas_triage_user/049d25f6-1d81-4c05-9455-002c47387007&quot;</span><span class="p">}},</span>
+ <span class="nt">&quot;attributes&quot;</span><span class="p">:</span>
+ <span class="p">{</span><span class="nt">&quot;drupal_internal__id&quot;</span><span class="p">:</span><span class="mi">3486826</span><span class="p">,</span>
+ <span class="nt">&quot;langcode&quot;</span><span class="p">:</span><span class="s2">&quot;en&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span>
+ <span class="nt">&quot;created&quot;</span><span class="p">:</span><span class="s2">&quot;2021-04-19T20:06:34+00:00&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;changed&quot;</span><span class="p">:</span><span class="s2">&quot;2021-04-19T20:06:34+00:00&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;intake_created&quot;</span><span class="p">:</span><span class="s2">&quot;2021-03-18T00:00:00+00:00&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;intake_changed&quot;</span><span class="p">:</span><span class="s2">&quot;2021-03-18T00:00:00+00:00&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;zip_code&quot;</span><span class="p">:</span><span class="s2">&quot;60603&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;household_size&quot;</span><span class="p">:</span><span class="s2">&quot;7&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;overincome&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+<span class="nt">&quot;ip_address&quot;</span><span class="p">:</span><span class="s2">&quot;10.159.81.163&quot;</span><span class="p">,</span>
+<span class="nt">&quot;last_screen_viewed&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+<span class="nt">&quot;county&quot;</span><span class="p">:</span><span class="s2">&quot;Cook&quot;</span><span class="p">,</span><span class="nt">&quot;state&quot;</span><span class="p">:</span><span class="s2">&quot;Illinois&quot;</span><span class="p">,</span>
+<span class="nt">&quot;household_adults&quot;</span><span class="p">:</span><span class="mi">4</span><span class="p">,</span><span class="nt">&quot;household_children&quot;</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span>
+<span class="nt">&quot;total_income&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="nt">&quot;total_expenses&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="nt">&quot;total_assets&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span>
+<span class="nt">&quot;triage_status&quot;</span><span class="p">:</span><span class="s2">&quot;Started&quot;</span><span class="p">,</span><span class="nt">&quot;intake_status&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span><span class="nt">&quot;lsc_code&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span><span class="nt">&quot;lsc_subcode&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+<span class="nt">&quot;referral_source&quot;</span><span class="p">:</span><span class="s2">&quot;Twilio-Master&quot;</span><span class="p">,</span><span class="nt">&quot;intake_notes&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+ <span class="nt">&quot;gender&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span><span class="nt">&quot;race&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span><span class="nt">&quot;ethnicity&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span><span class="nt">&quot;marital_status&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+ <span class="nt">&quot;citizenship&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span><span class="nt">&quot;immigrant_status&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span><span class="nt">&quot;age&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+ <span class="nt">&quot;primary_language&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span><span class="nt">&quot;country_of_origin&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span><span class="nt">&quot;etransfer_attempts&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="nt">&quot;</span>
+<span class="nt"> etransfer_failure_reason&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span><span class="nt">&quot;etransfer_status&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span><span class="nt">&quot;etransfer_data&quot;</span><span class="p">:{</span><span class="nt">&quot;&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">},</span><span class="nt">&quot;</span>
+<span class="nt"> hourly_reminder_sent&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span><span class="nt">&quot;daily_reminder_sent&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span><span class="nt">&quot;referral_source_id&quot;</span><span class="p">:{</span><span class="nt">&quot;&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">},</span>
+ <span class="nt">&quot;default_langcode&quot;</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="nt">&quot;oas_mobile_phone&quot;</span><span class="p">:</span><span class="s2">&quot;6308811337&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;oas_opt_in_sms&quot;</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="nt">&quot;oas_triage_callback_times&quot;</span><span class="p">:[],</span>
+ <span class="nt">&quot;oas_triage_help_type&quot;</span><span class="p">:[</span><span class="s2">&quot;forms&quot;</span><span class="p">],</span>
+ <span class="nt">&quot;oas_triage_search&quot;</span><span class="p">:</span><span class="s2">&quot;Child custody&quot;</span><span class="p">},</span>
+ <span class="nt">&quot;relationships&quot;</span><span class="p">:{</span><span class="nt">&quot;oas_triage_user_type&quot;</span><span class="p">:</span>   <span class="p">{</span><span class="nt">&quot;data&quot;</span><span class="p">:</span>
+ <span class="p">{</span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="s2">&quot;oas_triage_user_type--oas_triage_user_type&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;ba7bab21-7cdf-4e07-990d-94fda9655f64&quot;</span><span class="p">},</span>
+ <span class="nt">&quot;links&quot;</span><span class="p">:{</span><span class="nt">&quot;related&quot;</span><span class="p">:</span>
+ <span class="p">{</span><span class="nt">&quot;href&quot;</span><span class="p">:</span><span class="s2">&quot;https://d8dev.illinoislegalaid.org/jsonapi/oas_triage_user/oas_triage_user/049d25f6-1d81-4c05-9455-002c47387007/oas_triage_user_type&quot;</span><span class="p">},</span>
+ <span class="nt">&quot;self&quot;</span><span class="p">:</span>
+ <span class="p">{</span><span class="nt">&quot;href&quot;</span><span class="p">:</span><span class="s2">&quot;https://d8dev.illinoislegalaid.org/jsonapi/oas_triage_user/oas_triage_user/049d25f6-1d81-4c05-9455-002c47387007/relationships/oas_triage_user_type&quot;</span><span class="p">}}},</span><span class="nt">&quot;</span>
+<span class="nt"> user_id&quot;</span><span class="p">:{</span><span class="nt">&quot;data&quot;</span><span class="p">:{</span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="s2">&quot;user--user&quot;</span><span class="p">,</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;fc541bd0-bc81-46ef-9f2a-cf443556659e&quot;</span><span class="p">},</span>
+ <span class="nt">&quot;links&quot;</span><span class="p">:{</span><span class="nt">&quot;related&quot;</span><span class="p">:</span>
+ <span class="p">{</span><span class="nt">&quot;href&quot;</span><span class="p">:</span><span class="s2">&quot;https://d8dev.illinoislegalaid.org/jsonapi/oas_triage_user/oas_triage_user/049d25f6-1d81-4c05-9455-002c47387007/user_id&quot;</span><span class="p">},</span>
+ <span class="nt">&quot;self&quot;</span><span class="p">:{</span><span class="nt">&quot;href&quot;</span><span class="p">:</span><span class="s2">&quot;https://d8dev.illinoislegalaid.org/jsonapi/oas_triage_user/oas_triage_user/049d25f6-1d81-4c05-9455-002c47387007/relationships/user_id&quot;</span><span class="p">}}},</span><span class="nt">&quot;intake_organization&quot;</span><span class="p">:{</span><span class="nt">&quot;data&quot;</span><span class="p">:{</span><span class="nt">&quot;type&quot;</span><span class="p">:</span>
+ <span class="s2">&quot;oas_intake_settings--oas_intake_settings&quot;</span><span class="p">,</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;19f38f98-93f2-4209-adaf-608fd97bb530&quot;</span><span class="p">},</span><span class="nt">&quot;</span>
+<span class="nt"> links&quot;</span><span class="p">:{</span><span class="nt">&quot;related&quot;</span><span class="p">:{</span><span class="nt">&quot;href&quot;</span><span class="p">:</span><span class="s2">&quot;https://d8dev.illinoislegalaid.org/jsonapi/oas_triage_user/oas_triage_user/049d25f6-1d81-4c05-9455-002c47387007/intake_organization&quot;</span><span class="p">},</span><span class="nt">&quot;self&quot;</span><span class="p">:{</span><span class="nt">&quot;href&quot;</span><span class="p">:</span><span class="s2">&quot;https://d8dev.illinoislegalaid.org/jsonapi/oas_triage_user/oas_triage_user/049d25f6-1d81-4c05-9455-002c47387007/relationships/intake_organization&quot;</span><span class="p">}}},</span>
+ <span class="nt">&quot;oas_limited_populations&quot;</span><span class="p">:{</span><span class="nt">&quot;data&quot;</span><span class="p">:[],</span>
+ <span class="nt">&quot;links&quot;</span><span class="p">:{</span><span class="nt">&quot;related&quot;</span><span class="p">:</span>
+ <span class="p">{</span><span class="nt">&quot;href&quot;</span><span class="p">:</span><span class="s2">&quot;https://d8dev.illinoislegalaid.org/jsonapi/oas_triage_user/oas_triage_user/049d25f6-1d81-4c05-9455-002c47387007/oas_limited_populations&quot;</span><span class="p">},</span>
+ <span class="nt">&quot;self&quot;</span><span class="p">:{</span><span class="nt">&quot;href&quot;</span><span class="p">:</span><span class="s2">&quot;https://d8dev.illinoislegalaid.org/jsonapi/oas_triage_user/oas_triage_user/049d25f6-1d81-4c05-9455-002c47387007/relationships/oas_limited_populations&quot;</span><span class="p">}}},</span>
+ <span class="nt">&quot;oas_triage_problem&quot;</span><span class="p">:</span>
+ <span class="p">{</span><span class="nt">&quot;data&quot;</span><span class="p">:</span>
+ <span class="p">{</span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;7e7404dd-49c1-4261-9c5a-acc1fab27dde&quot;</span><span class="p">},</span>
+ <span class="nt">&quot;links&quot;</span><span class="p">:</span>
+ <span class="p">{</span><span class="nt">&quot;related&quot;</span><span class="p">:</span>
+ <span class="p">{</span><span class="nt">&quot;href&quot;</span><span class="p">:</span><span class="s2">&quot;https://d8dev.illinoislegalaid.org/jsonapi/oas_triage_user/oas_triage_user/049d25f6-1d81-4c05-9455-002c47387007/oas_triage_problem&quot;</span><span class="p">},</span>
+ <span class="nt">&quot;self&quot;</span><span class="p">:{</span><span class="nt">&quot;href&quot;</span><span class="p">:</span><span class="s2">&quot;https://d8dev.illinoislegalaid.org/jsonapi/oas_triage_user/oas_triage_user/049d25f6-1d81-4c05-9455-002c47387007/relationships/oas_triage_problem&quot;</span><span class="p">}}},</span>
+ <span class="nt">&quot;oas_triage_problem_history&quot;</span><span class="p">:</span>
+ <span class="p">{</span><span class="nt">&quot;data&quot;</span><span class="p">:[],</span>
+ <span class="nt">&quot;links&quot;</span><span class="p">:</span>
+ <span class="p">{</span><span class="nt">&quot;related&quot;</span><span class="p">:</span>
+ <span class="p">{</span><span class="nt">&quot;href&quot;</span><span class="p">:</span><span class="s2">&quot;https://d8dev.illinoislegalaid.org/jsonapi/oas_triage_user/oas_triage_user/049d25f6-1d81-4c05-9455-002c47387007/oas_triage_problem_history&quot;</span><span class="p">},</span>
+ <span class="nt">&quot;self&quot;</span><span class="p">:{</span><span class="nt">&quot;href&quot;</span><span class="p">:</span><span class="s2">&quot;https://d8dev.illinoislegalaid.org/jsonapi/oas_triage_user/oas_triage_user/049d25f6-1d81-4c05-9455-002c47387007/relationships/oas_triage_problem_history&quot;</span><span class="p">}}}}}</span>
+</pre></div>
+</div>
+</div>
 </div>
 <div class="section" id="delete-triage-user">
 <h3>Delete triage user<a class="headerlink" href="#delete-triage-user" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>curl -X DELETE <a class="reference external" href="http://ilaodrupal8.prod.dd:8083/jsonapi/oas_triage_user/oas_triage_user/e08ff647-362f-4428-bcaf-8b45191a8df7">http://ilaodrupal8.prod.dd:8083/jsonapi/oas_triage_user/oas_triage_user/e08ff647-362f-4428-bcaf-8b45191a8df7</a></p>
+<div><p>curl -X DELETE [baseurl]/jsonapi/oas_triage_user/oas_triage_user/[uuid]</p>
 </div></blockquote>
 </div>
 </div>

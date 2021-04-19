@@ -32,12 +32,15 @@ Get Legal Issue (7 options)
     User is asked if they have a summons
       If Yes, CONTINUE to landlord name
       If No, User is asked if they've received written notice
+      If neither of these, user is re-asked question
     
          If yes, CONTINUE to landlord name
          If no, user is asked if the landlord has threatened to evict
+         If neither of these, user is re-asked question
      
            If yes, CONTINUE to landlord name
            If no, EXIT to legal content
+           If neither of these, user is re-asked question
            
      Get landlord name
      
@@ -64,6 +67,9 @@ Get Legal Issue (7 options)
       Loops through
       
   User replies 7, user gets exit message to Get Legal Help
+  
+  User replies More, user sees help text
+  
 
 Get Matches [Need API function built]
 
