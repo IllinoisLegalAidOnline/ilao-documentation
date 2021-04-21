@@ -473,6 +473,21 @@ If user replies</p>
 </div></blockquote>
 </div></blockquote>
 </div>
+<div class="section" id="otis-data-integration">
+<h2>OTIS Data Integration<a class="headerlink" href="#otis-data-integration" title="Permalink to this headline">¶</a></h2>
+<p>Creating triage user</p>
+<p>The triage user is created by passing the following parameters:</p>
+<ul class="simple">
+<li><p>zip_code</p></li>
+<li><p>source (coded as sms-eviction-english)</p></li>
+<li><p>last_screen_viewed (hard coded to sms-legal-issue)</p></li>
+<li><p>user_phone (user phone number)</p></li>
+<li><p>county (user county)</p></li>
+<li><p>issue (legal issue selected)</p></li>
+<li><p>search (triggering text)</p></li>
+</ul>
+<p>The function returns the UUID for the intake.  This is then carried across the entire application process.</p>
+</div>
 </div>
 
 

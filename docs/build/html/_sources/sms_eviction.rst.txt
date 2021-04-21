@@ -255,7 +255,22 @@ System call: Get contact type
     Give you are done message
   
 
+OTIS Data Integration
+=======================
 
+Creating triage user
+
+The triage user is created by passing the following parameters:
+
+* zip_code
+* source (coded as sms-eviction-english)
+* last_screen_viewed (hard coded to sms-legal-issue)
+* user_phone (user phone number)
+* county (user county)
+* issue (legal issue selected)
+* search (triggering text)
+
+The function returns the UUID for the intake.  This is then carried across the entire application process.
 
 
 

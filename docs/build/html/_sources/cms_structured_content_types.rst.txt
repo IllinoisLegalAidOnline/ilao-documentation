@@ -132,6 +132,9 @@ Legal Solution
 | legalDifficulty | Text area         | 1              | Explanation of the legal    |
 |                 |                   |                | difficulty involved         |
 +-----------------+-------------------+----------------+-----------------------------+
+| faqs            | Entity reference  | Unlimited      | Entity reference            |
+|                 |                   |                | Legal Question content      |
++-----------------+-------------------+----------------+-----------------------------+
 | estimated time  | Duration          | 1              |                             |
 | required        |                   |                |                             |
 +-----------------+-------------------+----------------+-----------------------------+
@@ -167,7 +170,10 @@ Legal Solution
 Legal Question
 ----------------
 
-Single question; packaged within an FAQ in a legal problem. 
+Single question; packaged within an FAQ in a legal problem or legal solution.
+
+.. note::  General questions related to solutions should be added to the Legal Solution but questions specifically related to how the solution affects a problem should go in the Legal Problem. For example:  When am I eligible for a second bankruptcy? would go in the bankruptcy solution but Can I save my house if I file for bankruptcy would go in a foreclosure-related problem. 
+
 
 +-----------------+-------------------+----------------+-----------------------------+
 | Field           | Type              | Cardinality    | Description                 |
