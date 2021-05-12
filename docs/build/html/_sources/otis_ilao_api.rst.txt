@@ -7,7 +7,7 @@ ILAO OTIS API
 Permissions
 =============
 
-Access to the API requires the user to authenticate using a token generated over OAuth.  Credentials will be provided as required.
+Access to the API requires the user to authenticate using a token generated over OAuth.  Credentials will be provided as required. 
 
 To generate a bearer token, one needs:
 
@@ -17,7 +17,9 @@ To generate a bearer token, one needs:
 * a username
 * a password
 
-This will return an access_token and a refresh_token.
+This will return an access_token and a refresh_token. 
+
+The returned grant will be limited to the permissions of the specified user in the token request.  
 
 
 
@@ -26,8 +28,7 @@ Triage User
 
 Get Triage User(s)
 --------------------
-Triage user API supports GET commands to return one or more existing triage users.
-
+Triage user API supports GET commands to return one or more existing triage users.  The JSON API allows for filtering on field parameters.  See the general documentation on `Drupal.org <https://www.drupal.org/docs/core-modules-and-themes/core-modules/jsonapi-module/filtering>`_ for general information on filtering.  
 
 .. code-block:: php
    
@@ -39,6 +40,9 @@ Triage user API supports GET commands to return one or more existing triage user
   
 Create Triage User
 ---------------------
+Creating a triage user requires minimally:
+
+
 
 .. code-block:: json
 

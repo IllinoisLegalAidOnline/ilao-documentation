@@ -15,6 +15,7 @@ We have the following roles:
  * **Intern**. An intern at ILAO
  * **Staff**. A staff member at ILAO. This user has elevated permissions and can do most anything on the website. 
  * **Content manager**. A member of the legal content team. This role is used exclusively to determine who gets content-related emails.
+ * **API consumer**.  This is a special role for connecting to ILAO's APIs.
  
 .. note:: Community members are not given any of the above roles. They are just "authenticated users" (that is, they can log in and access the basic permissions that all logged-in roles have). There will not be a role listed for these users in people reports.
  
