@@ -67,6 +67,11 @@ See `theming documentation <https://mermaid-js.github.io/mermaid/#/theming>`_.
 
 .. note::  ILAO will design a standard visual design for flowcharts. Staff can use other themes as appropriate, or switch to the base theme and set custom theme variables.
 
+Variables Supported
+----------------------
+primaryColor = box fill color
+
+
 
 Icon support
 =============

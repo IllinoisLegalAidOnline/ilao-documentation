@@ -103,7 +103,10 @@
 <li class="toctree-l1"><a class="reference internal" href="otis_cms.html">Get Legal Help</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="site_search.html">Site Search</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="search_solr_config.html">Configuration</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Indexing and Updates</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Indexing and Updates</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#manually-indexing">Manually indexing</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="search_content.html">Manipulating Search</a></li>
 <li class="toctree-l2"><a class="reference internal" href="search_frontend.html">Using Site Search</a></li>
 </ul>
@@ -187,23 +190,20 @@
             
   <div class="section" id="indexing-and-updates">
 <h1>Indexing and Updates<a class="headerlink" href="#indexing-and-updates" title="Permalink to this headline">¶</a></h1>
-<p>The search index can be:</p>
-<ul class="simple">
-<li><p>Manually indexed completely (Administrator only)</p></li>
-<li><p>Automatically when content is saved. This can be done by:</p>
-<ul>
-<li><p>Editing and saving a single piece of content</p></li>
-<li><p>Using the <a class="reference external" href="https://www.illinoislegalaid.org/admin/content">admin/content page</a>, selecting items to save and using the “Save content” feature when bulk editing. This is useful when something seems funny and you need to reindex an entire content type.</p></li>
-</ul>
-</li>
-</ul>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>The default action is delete content. Be careful that you change the setting to save content first.</p>
+<div class="section" id="manually-indexing">
+<h2>Manually indexing<a class="headerlink" href="#manually-indexing" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Product team staff run this task manually as needed.  Other users with the content manager role may run this if needed but the preferred approach is to open a support ticket.</p>
 </div>
-<div class="admonition-todo admonition" id="id1">
-<p class="admonition-title">Todo</p>
-<p>Update the bulk options on admin/content to remove delete content and other unused options.</p>
+<p>Go to the indexing page under <a class="reference external" href="https://www.illinoislegalaid.org/admin/config/search/search-api/index/acquia_search_index">Configuration-&gt;Search</a>.</p>
+<img alt="_images/search-index-admin.png" src="_images/search-index-admin.png" />
+<p>When the queue can’t keep up with content changes, we may need to run the indexing manually.  See the above image:</p>
+<ul class="simple">
+<li><p>The index status will show a percentage indexed.</p></li>
+<li><p>When this is less than 100%, pressing the Index now will cause the backlog to clear</p></li>
+<li><p>Do not close your browser window until the queue is cleared.</p></li>
+</ul>
 </div>
 </div>
 

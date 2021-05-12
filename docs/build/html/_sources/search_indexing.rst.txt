@@ -2,15 +2,22 @@
 Indexing and Updates
 ======================
 
-The search index can be:
+Manually indexing
+==================
 
-* Manually indexed completely (Administrator only)
-* Automatically when content is saved. This can be done by:
+.. note:: Product team staff run this task manually as needed.  Other users with the content manager role may run this if needed but the preferred approach is to open a support ticket.
 
-  * Editing and saving a single piece of content
-  * Using the `admin/content page <https://www.illinoislegalaid.org/admin/content>`_, selecting items to save and using the "Save content" feature when bulk editing. This is useful when something seems funny and you need to reindex an entire content type.
-  
-.. warning::  The default action is delete content. Be careful that you change the setting to save content first. 
+Go to the indexing page under `Configuration->Search <https://www.illinoislegalaid.org/admin/config/search/search-api/index/acquia_search_index>`_.
 
-.. todo:: Update the bulk options on admin/content to remove delete content and other unused options.
+.. image:: ../assets/search-index-admin.png
+
+
+When the queue can't keep up with content changes, we may need to run the indexing manually.  See the above image:
+
+* The index status will show a percentage indexed.
+* When this is less than 100%, pressing the Index now will cause the backlog to clear
+* Do not close your browser window until the queue is cleared.
+
+
+
 
