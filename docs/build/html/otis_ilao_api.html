@@ -214,12 +214,13 @@
 <li><p>a password</p></li>
 </ul>
 <p>This will return an access_token and a refresh_token.</p>
+<p>The returned grant will be limited to the permissions of the specified user in the token request.</p>
 </div>
 <div class="section" id="triage-user">
 <h2>Triage User<a class="headerlink" href="#triage-user" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="get-triage-user-s">
 <h3>Get Triage User(s)<a class="headerlink" href="#get-triage-user-s" title="Permalink to this headline">¶</a></h3>
-<p>Triage user API supports GET commands to return one or more existing triage users.</p>
+<p>Triage user API supports GET commands to return one or more existing triage users.  The JSON API allows for filtering on field parameters.  See the general documentation on <a class="reference external" href="https://www.drupal.org/docs/core-modules-and-themes/core-modules/jsonapi-module/filtering">Drupal.org</a> for general information on filtering.</p>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="x">GET /jsonapi/oas_triage_user/oas_triage_user?page[limit]=</span>
 <span class="x">GET /jsonapi/oas_triage_user/oas_triage_user/{{uuid}} returns a specific triage user</span>
 <span class="x">GET /jsonapi/oas_triage_user/oas_triage_user?sort=-changed returns the newest</span>
@@ -229,6 +230,7 @@
 </div>
 <div class="section" id="create-triage-user">
 <h3>Create Triage User<a class="headerlink" href="#create-triage-user" title="Permalink to this headline">¶</a></h3>
+<p>Creating a triage user requires minimally:</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span>  curl -X POST -H &quot;Content-Type:application/vnd.api+json&quot; -H &quot;authorization: Bearer [token]&quot; -d &#39;{
 &quot;data&quot;: {
       &quot;type&quot;: &quot;oas_triage_user--oas_triage_user&quot;,
