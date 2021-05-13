@@ -59,7 +59,42 @@ Eviction legal issues
 
 **Requires:**  This is hand-coded but future iterations may use the taxonomy piece of the :ref:`ilao-api`.  
 
+Eviction content
+==================
+**Function name:**  eviction-content
 
+**Parameters:**  event.legal_issue, which is an integer representing the user's selected legal issue.
+
+**Returns:** A string which includes the titles and links of relevant content to return.
+
+**Requires:**  This is hand-coded but future iterations may use the :ref:`ilao-api`.  
+
+.. note:: This function will be updated to accommodate language codes.
+
+HUD housing counselors
+========================
+
+**Function name:**  hud-housing-counselors
+
+**Parameters:**  event.zip, which is the zip code of the user.
+
+**Returns:** An object containing:
+
+* An array of options.  Each option contains:
+
+  * name
+  * address
+  * city
+  * phone
+  * weburl
+  * methods (counseling methods)
+  * services (services offered)
+  
+* A total, which is a number reflecting the total number of options.
+
+**Requires:**  Access to the JSON files containing housing data: https://files.consumerfinance.gov/a/assets/hud/jsons/[zipcode].json
+
+.. note:: This function should be updated to return Spanish results when appropriate.
 
 OTIS get confirmation
 ======================
