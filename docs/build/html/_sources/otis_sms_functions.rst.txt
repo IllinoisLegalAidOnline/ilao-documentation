@@ -1,5 +1,5 @@
 =====================
-OTIS SMS Functions
+Twilio Functions
 =====================
 
 This documents the functions stored in our Twilio function service "ilao."
@@ -8,11 +8,60 @@ All of our Twilio functions are stored in the ilao service in Twilio's functions
 
 Function standards
 ======================
-All of our OTIS functions are prefixed with the name otis. All function names are written in the word-word-word format.
+All function names are written in the word-word-word format.
+
 
 All passed in parameters are contained in the event object.
 
-OTIS Get Confirmation
+OAuth get token
+==================
+**Function name:**  oauth-get-token
+
+**Parameters:**  none
+
+**Returns:** an access token
+
+**Requires:**  A consumer for our API account and a user account to call.
+
+Eviction intake settings
+==========================
+**Function name:**  eviction-intake-settings
+
+**Parameters:**  event.flow_id which is the phone number associated with an executed flow.  This is used to direct requests to production or staging based on a phone number.
+
+**Returns:** An object containing:
+
+* id, the uuid for the intake settings
+* callback_number
+* node_id, the intake settings ID for the custom entity
+* callback_type
+* bypass, the bypass message
+* disclaimer
+* please_call, the please call message
+* we_call, the we call the client message
+* legalservername, the name specifically required by Legal Server for etransfer
+* organization, the organization name from our website to display to the user
+
+
+**Requires:**  Access to the :ref:`ilao-api` for intake settings.
+
+Eviction legal issues
+======================
+**Function name:**  eviction-legal-issues
+
+**Parameters:**  event.choice which is the number of the legal issue identified in the eviction studio flow.
+
+**Returns:** An object containing:
+
+* issue (which is the name of the issue)
+* issue_id, which is the UUID of the associated legal issues taxonomy term.
+* notes, which is a sentence to include in the notes on an etransfer.
+
+**Requires:**  This is hand-coded but future iterations may use the taxonomy piece of the :ref:`ilao-api`.  
+
+
+
+OTIS get confirmation
 ======================
 
 **Function name:**  otis-get-confirmation

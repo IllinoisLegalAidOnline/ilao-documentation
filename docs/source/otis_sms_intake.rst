@@ -14,6 +14,11 @@ Twilio Studio
 
 The logical flow for the SMS is managed in Twilio Studio.  Each live version requires two phone numbers and two flows, one for development and one for production.  The production version should not be edited in Twilio studio but should be "deployed" by copying the development version and associating the production phone number with the newly deployed branch.
 
+Deployed versions use a naming convention of [Name]-[language code][Month][Day][FullYear].  A letter may follow if there have been multiple deployments in the same day.  For example Eviction-enMay132021 or Eviction-enMay132021a.
+
+Development versions should be named using a conviction of [Name]-Dev-[language code]; for example Eviction-Dev-en.
+
+
 Twilio Functions
 ------------------
 Twilio functions are used to:
@@ -30,32 +35,17 @@ ILAO APIs
 Online intake over SMS relies on ILAO's JSONAPI and other APIs for data synchronization.
 
 
-Other Integrations
--------------------
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+   :maxdepth: 1
+   :caption: See also:
    
    otis_sms_functions
-   otis_sms_twilio_studio_workflow
    otis_sms_api_calls
+   otis_sms_twilio_studio_workflow
    sms_eviction
+   
+   
 
+   
 
-
-Required APIs for Intake
-===========================
-
-* Zip code validation
-* Race list
-* Ethnicity list
-* Income levels per household size
-* Income type entities
-* Callback types
-
-Required APIs for Triage
-===========================
-
-* Guided navigation integration in phase 1
-* Classifier integration in phase 2

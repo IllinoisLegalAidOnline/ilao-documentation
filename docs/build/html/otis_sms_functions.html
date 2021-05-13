@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>OTIS SMS Functions &mdash; ILAO 2.22 documentation</title>
+  <title>Twilio Functions &mdash; ILAO 2.22 documentation</title>
   
 
   
@@ -42,8 +42,8 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="OTIS Master Twilio Workflow" href="otis_sms_twilio_studio_workflow.html" />
-    <link rel="prev" title="SMS Integration" href="otis_sms_intake.html" /> 
+    <link rel="next" title="OTIS SMS API" href="otis_sms_api_calls.html" />
+    <link rel="prev" title="Online Intake Over SMS" href="otis_sms_intake.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -108,19 +108,13 @@
 <li class="toctree-l2"><a class="reference internal" href="otis_ai_integration.html">OTIS AI Integration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="otis_third_party_support.html">Supported Integrations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="otis_ilao_api.html">ILAO OTIS API</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="otis_sms_intake.html">SMS Integration</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="otis_sms_intake.html#phase-1">Phase 1</a></li>
-<li class="toctree-l3"><a class="reference internal" href="otis_sms_intake.html#phase-2">Phase 2</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="otis_sms_intake.html#phase-3">Phase 3</a><ul class="current">
-<li class="toctree-l4 current"><a class="current reference internal" href="#">OTIS SMS Functions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="otis_sms_twilio_studio_workflow.html">OTIS Master Twilio Workflow</a></li>
-<li class="toctree-l4"><a class="reference internal" href="otis_sms_api_calls.html">OTIS SMS API</a></li>
-<li class="toctree-l4"><a class="reference internal" href="sms_eviction.html">Eviction SMS Flow</a></li>
-<li class="toctree-l4"><a class="reference internal" href="otis_sms_intake.html#functions">Functions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="otis_sms_intake.html">Online Intake Over SMS</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="otis_sms_intake.html#general-architecture">General Architecture</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="otis_sms_intake.html#twilio-studio">Twilio Studio</a></li>
+<li class="toctree-l4"><a class="reference internal" href="otis_sms_intake.html#twilio-functions">Twilio Functions</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="otis_sms_intake.html#ilao-apis">ILAO APIs</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="otis_sms_intake.html#required-apis-for-intake">Required APIs for Intake</a></li>
-<li class="toctree-l3"><a class="reference internal" href="otis_sms_intake.html#required-apis-for-triage">Required APIs for Triage</a></li>
 </ul>
 </li>
 </ul>
@@ -130,6 +124,7 @@
 <li class="toctree-l1"><a class="reference internal" href="other_cms_features.html">Other Website Features</a></li>
 <li class="toctree-l1"><a class="reference internal" href="taxonomies.html">Taxonomies</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rss_feeds.html">RSS Feeds</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ilao_api.html">ILAO’s API</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Workarounds:</span></p>
 <ul>
@@ -184,9 +179,9 @@
         
           <li><a href="otis_cms.html">Get Legal Help</a> &raquo;</li>
         
-          <li><a href="otis_sms_intake.html">SMS Integration</a> &raquo;</li>
+          <li><a href="otis_sms_intake.html">Online Intake Over SMS</a> &raquo;</li>
         
-      <li>OTIS SMS Functions</li>
+      <li>Twilio Functions</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -205,17 +200,55 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="otis-sms-functions">
-<h1>OTIS SMS Functions<a class="headerlink" href="#otis-sms-functions" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="twilio-functions">
+<h1>Twilio Functions<a class="headerlink" href="#twilio-functions" title="Permalink to this headline">¶</a></h1>
 <p>This documents the functions stored in our Twilio function service “ilao.”</p>
 <p>All of our Twilio functions are stored in the ilao service in Twilio’s functions.</p>
 <div class="section" id="function-standards">
 <h2>Function standards<a class="headerlink" href="#function-standards" title="Permalink to this headline">¶</a></h2>
-<p>All of our OTIS functions are prefixed with the name otis. All function names are written in the word-word-word format.</p>
+<p>All function names are written in the word-word-word format.</p>
 <p>All passed in parameters are contained in the event object.</p>
 </div>
+<div class="section" id="oauth-get-token">
+<h2>OAuth get token<a class="headerlink" href="#oauth-get-token" title="Permalink to this headline">¶</a></h2>
+<p><strong>Function name:</strong>  oauth-get-token</p>
+<p><strong>Parameters:</strong>  none</p>
+<p><strong>Returns:</strong> an access token</p>
+<p><strong>Requires:</strong>  A consumer for our API account and a user account to call.</p>
+</div>
+<div class="section" id="eviction-intake-settings">
+<h2>Eviction intake settings<a class="headerlink" href="#eviction-intake-settings" title="Permalink to this headline">¶</a></h2>
+<p><strong>Function name:</strong>  eviction-intake-settings</p>
+<p><strong>Parameters:</strong>  event.flow_id which is the phone number associated with an executed flow.  This is used to direct requests to production or staging based on a phone number.</p>
+<p><strong>Returns:</strong> An object containing:</p>
+<ul class="simple">
+<li><p>id, the uuid for the intake settings</p></li>
+<li><p>callback_number</p></li>
+<li><p>node_id, the intake settings ID for the custom entity</p></li>
+<li><p>callback_type</p></li>
+<li><p>bypass, the bypass message</p></li>
+<li><p>disclaimer</p></li>
+<li><p>please_call, the please call message</p></li>
+<li><p>we_call, the we call the client message</p></li>
+<li><p>legalservername, the name specifically required by Legal Server for etransfer</p></li>
+<li><p>organization, the organization name from our website to display to the user</p></li>
+</ul>
+<p><strong>Requires:</strong>  Access to the <a class="reference internal" href="ilao_api.html#ilao-api"><span class="std std-ref">ILAO’s API</span></a> for intake settings.</p>
+</div>
+<div class="section" id="eviction-legal-issues">
+<h2>Eviction legal issues<a class="headerlink" href="#eviction-legal-issues" title="Permalink to this headline">¶</a></h2>
+<p><strong>Function name:</strong>  eviction-legal-issues</p>
+<p><strong>Parameters:</strong>  event.choice which is the number of the legal issue identified in the eviction studio flow.</p>
+<p><strong>Returns:</strong> An object containing:</p>
+<ul class="simple">
+<li><p>issue (which is the name of the issue)</p></li>
+<li><p>issue_id, which is the UUID of the associated legal issues taxonomy term.</p></li>
+<li><p>notes, which is a sentence to include in the notes on an etransfer.</p></li>
+</ul>
+<p><strong>Requires:</strong>  This is hand-coded but future iterations may use the taxonomy piece of the <a class="reference internal" href="ilao_api.html#ilao-api"><span class="std std-ref">ILAO’s API</span></a>.</p>
+</div>
 <div class="section" id="otis-get-confirmation">
-<h2>OTIS Get Confirmation<a class="headerlink" href="#otis-get-confirmation" title="Permalink to this headline">¶</a></h2>
+<h2>OTIS get confirmation<a class="headerlink" href="#otis-get-confirmation" title="Permalink to this headline">¶</a></h2>
 <p><strong>Function name:</strong>  otis-get-confirmation</p>
 <p><strong>Parameters:</strong>  event.intakeSettingsId and event.callbackType</p>
 <p><strong>Requires:</strong>  ILAO API call to get the return message based on the intake settings id and callback type.</p>
@@ -506,8 +539,8 @@ Defaults to 300 if not provided</p></td>
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="otis_sms_twilio_studio_workflow.html" class="btn btn-neutral float-right" title="OTIS Master Twilio Workflow" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="otis_sms_intake.html" class="btn btn-neutral float-left" title="SMS Integration" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="otis_sms_api_calls.html" class="btn btn-neutral float-right" title="OTIS SMS API" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="otis_sms_intake.html" class="btn btn-neutral float-left" title="Online Intake Over SMS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>
