@@ -1,47 +1,46 @@
 ========================
-SMS Integration
+Online Intake Over SMS
 ========================
 
-.. note:: This is not built but documentation to guide the build. This will be built out using Twilio Studio and ILAO API calls.
+.. note:: The initial version of this was launched in May 2021 for eviction-related issues outside of Cook county. A Spanish version is coming soon.   A version for food stamps and unemployment, part of Smart Triage, is coming by June 30, 2021.
 
-The English Twilio Studio flow is the OTIS master.
+General Architecture
+======================
 
-See `conceptual prototype <https://kywpl3.axshare.com/#g=1&p=home>`_.
+This architecture applies to all of our SMS integrations.
 
-The interface, including text segments, are stored in Twilio. API calls to required data sets are on the website and processed using functions in Twilio Studio.
+Twilio Studio
+--------------
 
-Phase 1
-==========
+The logical flow for the SMS is managed in Twilio Studio.  Each live version requires two phone numbers and two flows, one for development and one for production.  The production version should not be edited in Twilio studio but should be "deployed" by copying the development version and associating the production phone number with the newly deployed branch.
 
-Phase 1 is a basic model that requires the user to choose from a limited set of legal problems. All other issues will be routed to the website.
+Twilio Functions
+------------------
+Twilio functions are used to:
 
-Only legal issues offered over Guided Navigation can be triaged over SMS in our pilot and the initial rollout will be limited to:
+* perform validation that is more complex than the split based on variables widget in Twilio studio
 
-* unemployment benefits
-* food stamps and TANF
+* interact with ILAO's API and other services
+* any complex functionality
 
-Phase 2
-========
-Phase 2 will add support for classifiers to support plain language triage
+Twilio functions are stored in the ilao_service and are called using run function widgets in Twilio studio.
 
-Phase 3
-=========
-Phase 3 will add support for legal issues beyond those in Phase 1
+ILAO APIs
+-----------
+Online intake over SMS relies on ILAO's JSONAPI and other APIs for data synchronization.
 
+
+Other Integrations
+-------------------
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
-
+   
    otis_sms_functions
    otis_sms_twilio_studio_workflow
    otis_sms_api_calls
    sms_eviction
-
-
-Functions
--------------
-Available functions are in the ilao service. Twilio studio can pass parameters to functions. These are stored in the event object.
 
 
 

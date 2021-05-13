@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>SMS Integration &mdash; ILAO 2.22 documentation</title>
+  <title>Online Intake Over SMS &mdash; ILAO 2.22 documentation</title>
   
 
   
@@ -108,15 +108,12 @@
 <li class="toctree-l2"><a class="reference internal" href="otis_ai_integration.html">OTIS AI Integration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="otis_third_party_support.html">Supported Integrations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="otis_ilao_api.html">ILAO OTIS API</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">SMS Integration</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#phase-1">Phase 1</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#phase-2">Phase 2</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#phase-3">Phase 3</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="otis_sms_functions.html">OTIS SMS Functions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="otis_sms_twilio_studio_workflow.html">OTIS Master Twilio Workflow</a></li>
-<li class="toctree-l4"><a class="reference internal" href="otis_sms_api_calls.html">OTIS SMS API</a></li>
-<li class="toctree-l4"><a class="reference internal" href="sms_eviction.html">Eviction SMS Flow</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#functions">Functions</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Online Intake Over SMS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#general-architecture">General Architecture</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#twilio-studio">Twilio Studio</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#twilio-functions">Twilio Functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ilao-apis">ILAO APIs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#other-integrations">Other Integrations</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#required-apis-for-intake">Required APIs for Intake</a></li>
@@ -184,7 +181,7 @@
         
           <li><a href="otis_cms.html">Get Legal Help</a> &raquo;</li>
         
-      <li>SMS Integration</li>
+      <li>Online Intake Over SMS</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -203,31 +200,35 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="sms-integration">
-<h1>SMS Integration<a class="headerlink" href="#sms-integration" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="online-intake-over-sms">
+<h1>Online Intake Over SMS<a class="headerlink" href="#online-intake-over-sms" title="Permalink to this headline">¶</a></h1>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This is not built but documentation to guide the build. This will be built out using Twilio Studio and ILAO API calls.</p>
+<p>The initial version of this was launched in May 2021 for eviction-related issues outside of Cook county. A Spanish version is coming soon.   A version for food stamps and unemployment, part of Smart Triage, is coming by June 30, 2021.</p>
 </div>
-<p>The English Twilio Studio flow is the OTIS master.</p>
-<p>See <a class="reference external" href="https://kywpl3.axshare.com/#g=1&amp;p=home">conceptual prototype</a>.</p>
-<p>The interface, including text segments, are stored in Twilio. API calls to required data sets are on the website and processed using functions in Twilio Studio.</p>
-<div class="section" id="phase-1">
-<h2>Phase 1<a class="headerlink" href="#phase-1" title="Permalink to this headline">¶</a></h2>
-<p>Phase 1 is a basic model that requires the user to choose from a limited set of legal problems. All other issues will be routed to the website.</p>
-<p>Only legal issues offered over Guided Navigation can be triaged over SMS in our pilot and the initial rollout will be limited to:</p>
+<div class="section" id="general-architecture">
+<h2>General Architecture<a class="headerlink" href="#general-architecture" title="Permalink to this headline">¶</a></h2>
+<p>This architecture applies to all of our SMS integrations.</p>
+<div class="section" id="twilio-studio">
+<h3>Twilio Studio<a class="headerlink" href="#twilio-studio" title="Permalink to this headline">¶</a></h3>
+<p>The logical flow for the SMS is managed in Twilio Studio.  Each live version requires two phone numbers and two flows, one for development and one for production.  The production version should not be edited in Twilio studio but should be “deployed” by copying the development version and associating the production phone number with the newly deployed branch.</p>
+</div>
+<div class="section" id="twilio-functions">
+<h3>Twilio Functions<a class="headerlink" href="#twilio-functions" title="Permalink to this headline">¶</a></h3>
+<p>Twilio functions are used to:</p>
 <ul class="simple">
-<li><p>unemployment benefits</p></li>
-<li><p>food stamps and TANF</p></li>
+<li><p>perform validation that is more complex than the split based on variables widget in Twilio studio</p></li>
+<li><p>interact with ILAO’s API and other services</p></li>
+<li><p>any complex functionality</p></li>
 </ul>
+<p>Twilio functions are stored in the ilao_service and are called using run function widgets in Twilio studio.</p>
 </div>
-<div class="section" id="phase-2">
-<h2>Phase 2<a class="headerlink" href="#phase-2" title="Permalink to this headline">¶</a></h2>
-<p>Phase 2 will add support for classifiers to support plain language triage</p>
+<div class="section" id="ilao-apis">
+<h3>ILAO APIs<a class="headerlink" href="#ilao-apis" title="Permalink to this headline">¶</a></h3>
+<p>Online intake over SMS relies on ILAO’s JSONAPI and other APIs for data synchronization.</p>
 </div>
-<div class="section" id="phase-3">
-<h2>Phase 3<a class="headerlink" href="#phase-3" title="Permalink to this headline">¶</a></h2>
-<p>Phase 3 will add support for legal issues beyond those in Phase 1</p>
+<div class="section" id="other-integrations">
+<h3>Other Integrations<a class="headerlink" href="#other-integrations" title="Permalink to this headline">¶</a></h3>
 <div class="toctree-wrapper compound">
 <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul>
@@ -276,9 +277,6 @@
 </li>
 </ul>
 </div>
-<div class="section" id="functions">
-<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h3>
-<p>Available functions are in the ilao service. Twilio studio can pass parameters to functions. These are stored in the event object.</p>
 </div>
 </div>
 <div class="section" id="required-apis-for-intake">
