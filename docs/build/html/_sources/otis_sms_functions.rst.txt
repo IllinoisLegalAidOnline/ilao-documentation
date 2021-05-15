@@ -23,6 +23,14 @@ OAuth get token
 
 **Requires:**  A consumer for our API account and a user account to call.
 
+.. note:: The following functions rely on the OAuth token:
+
+* otis-create-triage-user
+* otis-triage-user
+* eviction-intake-settings
+* otis-get-matches
+* eviction-matches
+
 Eviction intake settings
 ==========================
 **Function name:**  eviction-intake-settings
@@ -228,9 +236,8 @@ OTIS Validate Benefit Types
 
 **Requires:**  Nothing
 
-**Returns:** An array of benefit types to ask for income information from the user.
+**Returns:** An array of benefit types to ask for income information from the user. These are numerical values of 1-5 that are used to route the user through income questions.
 
-**Status:**  Complete. 
 
 OTIS Validate Benefit Types
 ===============================
@@ -257,7 +264,7 @@ OTIS Validate Money Input
 
 **Requires:**  Nothing
 
-**Returns:** A number.
+**Returns:** A number. -1 is returned if it is not a valid amount.
 
 **Status:**  Should be updated to accommodate for dollar formatting ($,. within the data).
 
@@ -269,11 +276,10 @@ OTIS Validate Race
 
 **Parameters:**  event.race (the user's input)
 
-**Requires:**  TBD (should validate against supported race selections)
+**Requires:**  Nothing; values are stored in the function as an array
 
-**Returns:** A number.
+**Returns:** A string, either the name of the race the user selected OR 0 if it is invalid.
 
-**Status:**  Currently does not support text processing, only numeric entries.
 
 OTIS Validate Ethnicity
 ============================
@@ -283,11 +289,9 @@ OTIS Validate Ethnicity
 
 **Parameters:**  event.ethnicity (the user's input)
 
-**Requires:**  TBD (should validate against supported ethnicity selections)
+**Requires:**  Nothing; values are stored in the function as an array
 
-**Returns:** A number.
-
-**Status:**  Currently does not support text processing, only numeric entries.
+**Returns:** A string, either the name of the race the user selected OR -1 if it is invalid.
 
 OTIS Validate Year
 ======================
@@ -303,21 +307,20 @@ If the user enters a 2 digit year, it is assumed to be 19xx if the string is gre
 
 **Returns:** A number (either the 4 digit year or a 0 representing invalid data)
 
-**Status:**  Complete
+.. note:: Would be nice to not allow future years to be included.
 
 OTIS Validate Day of Month
 ===============================
 **Function name:**  otis-validate-day-of-month
 
-**Purpose**: Takes a string of input from the user and returns whether it is a valid number between 1 and 31. This can then be used to route users to retry their input or move on to the next step.
+**Purpose**: Takes a string of input from the user and returns whether it is a valid number between 1 and 31 for  months with 31 days 1 and 30 for days with 30 days, and between 1 - 29 days for February. This can then be used to route users to retry their input or move on to the next step.
 
-**Parameters:**  event.day (the user's input)
+**Parameters:**  event.day (the user's input), event.month (the user's previous input for the month)
 
 **Requires:**  none
 
 **Returns:** A number (either the day or a 0 representing invalid data)
 
-**Status:**  Support for per-month validation would be nice.
 
 OTIS Validate Month
 ===============================
@@ -333,8 +336,6 @@ OTIS Validate Month
 
 **Status:**  Support for per-month validation would be nice.
 
-OTIS Name Processor
-======================
 
 OTIS Poverty Estimate
 =======================
@@ -347,23 +348,53 @@ OTIS Poverty Estimate
 
 **Requires:**  API call to get poverty income.
 
-**Returns:** A number representing the maximum income to continue.
+**Returns:** An object containing:
 
-**Status:**  Support for per-month validation would be nice.
+* income, which represents the total income
+* household_size, which represents the number of adults and children in the household
 
+.. note:: This is the function to determine whether a user passes the initial basic income screening similar to what appears on IllinoisLegalAid.org/get-legal-help.
+
+OTIS validate total income
+============================
+
+**Function name:**  otis-validate-total-income
+
+**Purpose**: Gets the estimated over-income threshold for users based on household size.
+
+**Parameters:**  
+
+* event.children and event.adult. Both should be numbers.
+* event.standard which is the income standard to use.  This defaults to the federal poverty level.
+* event.max which is the maximum income percentage to use.  This defaults to 300.  
+* Wage frequency, which is the wage frequency 
+
+**Requires:**  API call to get poverty income.
+
+**Returns:** An object containing:
+
+* 
+
+.. note:: This is the function to determine whether a user passes the income screening for a specific organization.
 
 OTIS Zipcode Validate
 =======================
 
-**Function name:**  otis-poverty-estimate
+**Function name:**  otis-zipcode-validate
 
-**Purpose**: Determines whether a provided zip code is in Illinois or not
+**Purpose**: Determines whether a provided zip code is in Illinois or not based on the Illinois regions asset, which is a JSON file from ILAO's region taxonomy and includes the zipcode, city, county, state, fips ID, and county UUID.  
 
 **Parameters:**  event.zip
 
 **Requires:**  API call to get region information based on zip code.
 
-**Returns:** A string representing the state.
+**Returns:** An object (location) that contains:
+
+* zip_code (the zip provided by the user)
+* county 
+* state
+* fips id for the county (required by Legal Server)
+
 
 **Status:** Relies on a JSON object in our static assets (/illinois-regions) that contains the IL regional taxonomy data.
 

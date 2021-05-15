@@ -33,6 +33,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
@@ -215,6 +216,17 @@
 <p><strong>Parameters:</strong>  none</p>
 <p><strong>Returns:</strong> an access token</p>
 <p><strong>Requires:</strong>  A consumer for our API account and a user account to call.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The following functions rely on the OAuth token:</p>
+</div>
+<ul class="simple">
+<li><p>otis-create-triage-user</p></li>
+<li><p>otis-triage-user</p></li>
+<li><p>eviction-intake-settings</p></li>
+<li><p>otis-get-matches</p></li>
+<li><p>eviction-matches</p></li>
+</ul>
 </div>
 <div class="section" id="eviction-intake-settings">
 <h2>Eviction intake settings<a class="headerlink" href="#eviction-intake-settings" title="Permalink to this headline">¶</a></h2>
@@ -407,8 +419,7 @@ Defaults to 300 if not provided</p></td>
 <p><strong>Purpose</strong>: Takes a string of input from the user and returns an array of numbers that represent which types of benefits we need to collect income information for.</p>
 <p><strong>Parameters:</strong>  event.payments (the user’s input to the do you have any of these benefits question)</p>
 <p><strong>Requires:</strong>  Nothing</p>
-<p><strong>Returns:</strong> An array of benefit types to ask for income information from the user.</p>
-<p><strong>Status:</strong>  Complete.</p>
+<p><strong>Returns:</strong> An array of benefit types to ask for income information from the user. These are numerical values of 1-5 that are used to route the user through income questions.</p>
 </div>
 <div class="section" id="id1">
 <h2>OTIS Validate Benefit Types<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
@@ -425,7 +436,7 @@ Defaults to 300 if not provided</p></td>
 <p><strong>Purpose</strong>: Takes a string of input from the user and returns the string if it is a number or 0 if it is not. This can then be used to route users to retry their input or move on to the next step.</p>
 <p><strong>Parameters:</strong>  event.amount (the user’s input in response to a money question)</p>
 <p><strong>Requires:</strong>  Nothing</p>
-<p><strong>Returns:</strong> A number.</p>
+<p><strong>Returns:</strong> A number. -1 is returned if it is not a valid amount.</p>
 <p><strong>Status:</strong>  Should be updated to accommodate for dollar formatting ($,. within the data).</p>
 </div>
 <div class="section" id="otis-validate-race">
@@ -433,18 +444,16 @@ Defaults to 300 if not provided</p></td>
 <p><strong>Function name:</strong>  otis-validate-race</p>
 <p><strong>Purpose</strong>: Takes a string of input from the user and returns whether it is a valid selection or not. This can then be used to route users to retry their input or move on to the next step.</p>
 <p><strong>Parameters:</strong>  event.race (the user’s input)</p>
-<p><strong>Requires:</strong>  TBD (should validate against supported race selections)</p>
-<p><strong>Returns:</strong> A number.</p>
-<p><strong>Status:</strong>  Currently does not support text processing, only numeric entries.</p>
+<p><strong>Requires:</strong>  Nothing; values are stored in the function as an array</p>
+<p><strong>Returns:</strong> A string, either the name of the race the user selected OR 0 if it is invalid.</p>
 </div>
 <div class="section" id="otis-validate-ethnicity">
 <h2>OTIS Validate Ethnicity<a class="headerlink" href="#otis-validate-ethnicity" title="Permalink to this headline">¶</a></h2>
 <p><strong>Function name:</strong>  otis-validate-ethnicity</p>
 <p><strong>Purpose</strong>: Takes a string of input from the user and returns whether it is a valid selection or not. This can then be used to route users to retry their input or move on to the next step.</p>
 <p><strong>Parameters:</strong>  event.ethnicity (the user’s input)</p>
-<p><strong>Requires:</strong>  TBD (should validate against supported ethnicity selections)</p>
-<p><strong>Returns:</strong> A number.</p>
-<p><strong>Status:</strong>  Currently does not support text processing, only numeric entries.</p>
+<p><strong>Requires:</strong>  Nothing; values are stored in the function as an array</p>
+<p><strong>Returns:</strong> A string, either the name of the race the user selected OR -1 if it is invalid.</p>
 </div>
 <div class="section" id="otis-validate-year">
 <h2>OTIS Validate Year<a class="headerlink" href="#otis-validate-year" title="Permalink to this headline">¶</a></h2>
@@ -454,16 +463,18 @@ Defaults to 300 if not provided</p></td>
 <p><strong>Parameters:</strong>  event.year (the user’s input)</p>
 <p><strong>Requires:</strong> none</p>
 <p><strong>Returns:</strong> A number (either the 4 digit year or a 0 representing invalid data)</p>
-<p><strong>Status:</strong>  Complete</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Would be nice to not allow future years to be included.</p>
+</div>
 </div>
 <div class="section" id="otis-validate-day-of-month">
 <h2>OTIS Validate Day of Month<a class="headerlink" href="#otis-validate-day-of-month" title="Permalink to this headline">¶</a></h2>
 <p><strong>Function name:</strong>  otis-validate-day-of-month</p>
-<p><strong>Purpose</strong>: Takes a string of input from the user and returns whether it is a valid number between 1 and 31. This can then be used to route users to retry their input or move on to the next step.</p>
-<p><strong>Parameters:</strong>  event.day (the user’s input)</p>
+<p><strong>Purpose</strong>: Takes a string of input from the user and returns whether it is a valid number between 1 and 31 for  months with 31 days 1 and 30 for days with 30 days, and between 1 - 29 days for February. This can then be used to route users to retry their input or move on to the next step.</p>
+<p><strong>Parameters:</strong>  event.day (the user’s input), event.month (the user’s previous input for the month)</p>
 <p><strong>Requires:</strong>  none</p>
 <p><strong>Returns:</strong> A number (either the day or a 0 representing invalid data)</p>
-<p><strong>Status:</strong>  Support for per-month validation would be nice.</p>
 </div>
 <div class="section" id="otis-validate-month">
 <h2>OTIS Validate Month<a class="headerlink" href="#otis-validate-month" title="Permalink to this headline">¶</a></h2>
@@ -474,25 +485,56 @@ Defaults to 300 if not provided</p></td>
 <p><strong>Returns:</strong> A number (either the day or a 0 representing invalid data)</p>
 <p><strong>Status:</strong>  Support for per-month validation would be nice.</p>
 </div>
-<div class="section" id="otis-name-processor">
-<h2>OTIS Name Processor<a class="headerlink" href="#otis-name-processor" title="Permalink to this headline">¶</a></h2>
-</div>
 <div class="section" id="otis-poverty-estimate">
 <h2>OTIS Poverty Estimate<a class="headerlink" href="#otis-poverty-estimate" title="Permalink to this headline">¶</a></h2>
 <p><strong>Function name:</strong>  otis-poverty-estimate</p>
 <p><strong>Purpose</strong>: Gets the estimated over-income threshold for users based on household size.</p>
 <p><strong>Parameters:</strong>  event.children and event.adult. Both should be numbers.</p>
 <p><strong>Requires:</strong>  API call to get poverty income.</p>
-<p><strong>Returns:</strong> A number representing the maximum income to continue.</p>
-<p><strong>Status:</strong>  Support for per-month validation would be nice.</p>
+<p><strong>Returns:</strong> An object containing:</p>
+<ul class="simple">
+<li><p>income, which represents the total income</p></li>
+<li><p>household_size, which represents the number of adults and children in the household</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is the function to determine whether a user passes the initial basic income screening similar to what appears on IllinoisLegalAid.org/get-legal-help.</p>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>OTIS validate total income<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p><strong>Function name:</strong>  otis-validate-total-income</p>
+<p><strong>Purpose</strong>: Gets the estimated over-income threshold for users based on household size.</p>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>event.children and event.adult. Both should be numbers.</p></li>
+<li><p>event.standard which is the income standard to use.  This defaults to the federal poverty level.</p></li>
+<li><p>event.max which is the maximum income percentage to use.  This defaults to 300.</p></li>
+<li><p>Wage frequency, which is the wage frequency</p></li>
+</ul>
+<p><strong>Requires:</strong>  API call to get poverty income.</p>
+<p><strong>Returns:</strong> An object containing:</p>
+<ul class="simple">
+<li></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is the function to determine whether a user passes the income screening for a specific organization.</p>
+</div>
 </div>
 <div class="section" id="otis-zipcode-validate">
 <h2>OTIS Zipcode Validate<a class="headerlink" href="#otis-zipcode-validate" title="Permalink to this headline">¶</a></h2>
-<p><strong>Function name:</strong>  otis-poverty-estimate</p>
-<p><strong>Purpose</strong>: Determines whether a provided zip code is in Illinois or not</p>
+<p><strong>Function name:</strong>  otis-zipcode-validate</p>
+<p><strong>Purpose</strong>: Determines whether a provided zip code is in Illinois or not based on the Illinois regions asset, which is a JSON file from ILAO’s region taxonomy and includes the zipcode, city, county, state, fips ID, and county UUID.</p>
 <p><strong>Parameters:</strong>  event.zip</p>
 <p><strong>Requires:</strong>  API call to get region information based on zip code.</p>
-<p><strong>Returns:</strong> A string representing the state.</p>
+<p><strong>Returns:</strong> An object (location) that contains:</p>
+<ul class="simple">
+<li><p>zip_code (the zip provided by the user)</p></li>
+<li><p>county</p></li>
+<li><p>state</p></li>
+<li><p>fips id for the county (required by Legal Server)</p></li>
+</ul>
 <p><strong>Status:</strong> Relies on a JSON object in our static assets (/illinois-regions) that contains the IL regional taxonomy data.</p>
 </div>
 <div class="section" id="create-triage-user">
