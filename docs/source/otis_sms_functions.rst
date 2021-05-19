@@ -65,7 +65,7 @@ Eviction legal issues
 * issue_id, which is the UUID of the associated legal issues taxonomy term.
 * notes, which is a sentence to include in the notes on an etransfer.
 
-**Requires:**  This is hand-coded but future iterations may use the taxonomy piece of the :ref:`ilao-api`.  
+**Requires:**  This is hand-coded but future iterations may use the taxonomy piece of the :ref:`ilao-api`.
 
 Eviction content
 ==================
@@ -75,7 +75,7 @@ Eviction content
 
 **Returns:** A string which includes the titles and links of relevant content to return.
 
-**Requires:**  This is hand-coded but future iterations may use the :ref:`ilao-api`.  
+**Requires:**  This is hand-coded but future iterations may use the :ref:`ilao-api`.
 
 .. note:: This function will be updated to accommodate language codes.
 
@@ -97,7 +97,7 @@ HUD housing counselors
   * weburl
   * methods (counseling methods)
   * services (services offered)
-  
+
 * A total, which is a number reflecting the total number of options.
 
 **Requires:**  Access to the JSON files containing housing data: https://files.consumerfinance.gov/a/assets/hud/jsons/[zipcode].json
@@ -120,7 +120,7 @@ OTIS Get Callback Days
 
 **Function name:**  otis-get-callback-days
 
-**Parameters:**  event.intakeSettingsId 
+**Parameters:**  event.intakeSettingsId
 
 **Requires:**  ILAO API call to get the next [x] days of available intake appointments.
 
@@ -131,7 +131,7 @@ OTIS Get First Callback Time
 
 **Function name:**  otis-get-first-callback-time
 
-**Parameters:**  event.intakeSettingsId 
+**Parameters:**  event.intakeSettingsId
 
 **Requires:**  ILAO API call to get the range of available hours and the first available date.
 
@@ -172,7 +172,7 @@ OTIS Validate Total Income
 
 **Function name:**  otis-get-callback-times
 
-**Parameters:**  
+**Parameters:**
 
 +------------------------+---------------------------------------------------+
 |   Key                  | Description                                       |
@@ -223,7 +223,7 @@ OTIS Validate Payments
 
 **Returns:** An array of payment types to ask for income information from the user.
 
-**Status:**  Complete. 
+**Status:**  Complete.
 
 OTIS Validate Benefit Types
 ===============================
@@ -252,9 +252,9 @@ OTIS Validate Benefit Types
 
 **Returns:** An array of benefit types to ask for income information from the user.
 
-**Status:**  Complete. 
+**Status:**  Complete.
 
-OTIS Validate Money Input 
+OTIS Validate Money Input
 ============================
 **Function name:**  otis-validate-money-input
 
@@ -362,18 +362,18 @@ OTIS validate total income
 
 **Purpose**: Gets the estimated over-income threshold for users based on household size.
 
-**Parameters:**  
+**Parameters:**
 
 * event.children and event.adult. Both should be numbers.
 * event.standard which is the income standard to use.  This defaults to the federal poverty level.
-* event.max which is the maximum income percentage to use.  This defaults to 300.  
-* Wage frequency, which is the wage frequency 
+* event.max which is the maximum income percentage to use.  This defaults to 300.
+* Wage frequency, which is the wage frequency
 
 **Requires:**  API call to get poverty income.
 
 **Returns:** An object containing:
 
-* 
+*
 
 .. note:: This is the function to determine whether a user passes the income screening for a specific organization.
 
@@ -382,7 +382,7 @@ OTIS Zipcode Validate
 
 **Function name:**  otis-zipcode-validate
 
-**Purpose**: Determines whether a provided zip code is in Illinois or not based on the Illinois regions asset, which is a JSON file from ILAO's region taxonomy and includes the zipcode, city, county, state, fips ID, and county UUID.  
+**Purpose**: Determines whether a provided zip code is in Illinois or not based on the Illinois regions asset, which is a JSON file from ILAO's region taxonomy and includes the zipcode, city, county, state, fips ID, and county UUID.
 
 **Parameters:**  event.zip
 
@@ -391,7 +391,7 @@ OTIS Zipcode Validate
 **Returns:** An object (location) that contains:
 
 * zip_code (the zip provided by the user)
-* county 
+* county
 * state
 * fips id for the county (required by Legal Server)
 
@@ -404,7 +404,7 @@ Create Triage User
 
 **Purpose**: Builds a data packet and leverages ILAO's Rest API to create a triage user record on ILAO's website
 
-**Parameters:**  Event object that contains base data; empty or missing values are set to null. 
+**Parameters:**  Event object that contains base data; empty or missing values are set to null.
 
 **Requires:**  Authentication with ILAO's REST OTIS API
 
@@ -431,82 +431,192 @@ Get Matches
 
 **Function name:**  otis-get-matches
 
-**Purpose**: 
+**Purpose**:
 
-**Parameters:**  
+**Parameters:**
 
-**Requires:**  
+**Requires:**
 
-**Returns:** 
+**Returns:**
 
-**Status:** 
+**Status:**
 
 Load marital statuses
 ==========================
 **Function name:**  otis-load-marital-statuses
 
-**Purpose**: Returns list of marital statuses for user to select from. 
+**Purpose**: Returns list of marital statuses for user to select from.
 
 **Parameters:** event.langcode (may be null)
 
 **Requires:**  None
 
-**Returns:** A string of marital statuses for display
+**Returns:** A string of marital statuses for display based on the language code provided.
 
-**Status:** Built for English. Separate array for Spanish exists for translation and will be returned when the langcode = es.
 
 Load languages
 ==========================
 **Function name:**  otis-load-languages
 
-**Purpose**: Returns list of languages for user to select from. 
+**Purpose**: Returns list of languages for user to select from.
 
 **Parameters:** event.langcode (may be null)
 
 **Requires:**  None
 
-**Returns:** A string of languages for display
-
-**Status:** Built for English. Separate array for Spanish exists for translation and will be returned when the langcode = es.
+**Returns:** A string of languages for display based on the language code provided.
 
 Load genders
 ==========================
 **Function name:**  otis-load-genders
 
-**Purpose**: Returns list of genders for user to select from. 
+**Purpose**: Returns list of genders for user to select from.
 
 **Parameters:** event.langcode (may be null)
 
 **Requires:**  None
 
-**Returns:** A string of genders for display
+**Returns:** A string of genders for display based on the language code provided.
 
-**Status:** Built for English. Separate array for Spanish exists for translation and will be returned when the langcode = es.
 
 Load ethnicities
 ==========================
 **Function name:**  otis-load-ethnicity
 
-**Purpose**: Returns list of ethnicity options for user to select from. 
+**Purpose**: Returns list of ethnicity options for user to select from.
 
 **Parameters:** event.langcode (may be null)
 
 **Requires:**  None
 
-**Returns:** A string of ethnicities for display
+**Returns:** A string of ethnicities for display based on the language code provided.
 
-**Status:** Built for English. Separate array for Spanish exists for translation and will be returned when the langcode = es.
 
 Load races
 ==========================
 **Function name:**  otis-load-races
 
-**Purpose**: Returns list of races for user to select from. 
+**Purpose**: Returns list of races for user to select from.
 
 **Parameters:** event.langcode (may be null)
 
 **Requires:**  None
 
-**Returns:** A string of races for display
+**Returns:** A string of races for display based on the language code provided.
 
-**Status:** Built for English. Separate array for Spanish exists for translation and will be returned when the langcode = es.
+
+Send to Legal Server
+======================
+
+**Function name:**  otis-load-races
+
+**Purpose**: Builds the data package to etransfer to LegalServer
+
+**Parameters:** event object which contains the data for the eTransfer.
+
++-----------------------+---------------------+------------------------------------------+
+| Event property        | LS property         | Description                              |
++=======================+=====================+==========================================+
+| flow_id               |                     | Phone number the user texted to.  Used to|
+|                       |                     | route between production/test environs   |
++-----------------------+---------------------+------------------------------------------+
+| flowPrefix            | externalId          | Combined in the format of flow prefix-   |
++-----------------------+                     +                                          +
+| triage_id             |                     | triage_id to crete a unique id           |
++-----------------------+---------------------+------------------------------------------+
+| firstName             | firstName           | User's first name                        |
++-----------------------+---------------------+------------------------------------------+
+| middleName            | middleName          | Not captured in SMS                      |
++-----------------------+---------------------+------------------------------------------+
+| lastName              | lastName            | User's last name                         |
++-----------------------+---------------------+------------------------------------------+
+| eTransferOrganization |eTransferOrganization| LegalServer-specific string for org.     |
+|                       |                     | Is stored in website LS configuration    |
++-----------------------+---------------------+------------------------------------------+
+| nickname              | aliasFirst          | Any entered nickname                     |
++-----------------------+---------------------+------------------------------------------+
+| maiden                | aliasLast           | Any entered maiden name                  |
++-----------------------+---------------------+------------------------------------------+
+| street                | addressHome.address1| addressHome is an Object containing the  |
++-----------------------+---------------------+                                          +
+| city                  | addressHome.city    | street address, city, state, zip and     |
++-----------------------+---------------------+                                          +
+| state                 | addressHome.state   | countyFIPS code provided by the user.    |
++-----------------------+---------------------+------------------------------------------+
+| user_phone            | phoneHome           | Either the number the user texted from or|
++-----------------------+---------------------+                                          +
+|                       |                     | a provided number, removed of any +1     |
++-----------------------+---------------------+------------------------------------------+
+| month                 | dateOfBirth         | Date of birth provided by user.  A 0 is  |
++-----------------------+---------------------+                                          +
+| day                   |                     | added for any month or day of less than  |
++-----------------------+---------------------+                                          +
+| year                  |                     | 10                                       |
++-----------------------+---------------------+------------------------------------------+
+| email                 | email               | User provided email addresss             |
++-----------------------+---------------------+------------------------------------------+
+| maritalStatus         | maritalStatus       | User selected marital status             |
++-----------------------+---------------------+------------------------------------------+
+| ethnicity             | ethicity            | User selected ethnicity; is set to blank |
+|                       |                     | if user selects prefer not to respond.   |
++-----------------------+---------------------+------------------------------------------+
+| gender                | gender              | User selected gender.                    |
++-----------------------+---------------------+------------------------------------------+
+| language              | language            | User selected preferred language         |
++-----------------------+---------------------+------------------------------------------+
+| notes                 | notes               | System-generated notes through triage.   |
++-----------------------+---------------------+------------------------------------------+
+| household_adults      | numberOfAdults      | User provided number of adults           |
++-----------------------+---------------------+------------------------------------------+
+| household_children    | numberOfChildren    | User provided number of children         |
++-----------------------+---------------------+------------------------------------------+
+| callbackType          | callbackType        | Client calls or Callback                 |
++-----------------------+---------------------+------------------------------------------+
+| callbackDayTime       | callbackDayTime     | Morning or afternoon for callbacks; empty|
+|                       |                     | for client calls                         |
++-----------------------+---------------------+------------------------------------------+
+| income_[type]         | income              | income is an object that has multiple    |
+|                       |                     | objects for each provided income.  Each  |
+|                       |                     |                                          |
+|                       |                     | item contains a type, amount, & frequency|
++-----------------------+---------------------+------------------------------------------+
+| legalProblemCode      | legalProblemCode    | Legal Server problem code                |
++-----------------------+---------------------+------------------------------------------+
+
+
+Flow prefixes
+---------------
+
+  * For eviction, this is ILAOEvict.
+
+.. note:: Some translation is done on fields such as gender, race, to accommodate differences between ILAO's taxonomy terms and Legal Server's supported terms.
+
+Incomes
+---------
+The following income types are collected and supported:
+
+* Private disability (Disability)
+* Investment income (Trust, Interest, or Dividends)
+* TANF
+* Veterans' benefits
+* Unemployment (Unemployment Compensation)
+* SSI
+* Social Security
+* Alimony
+* Child Support
+* Workers' Compensation
+* Pension/401K income [Pension/Retirement (Not Soc. Sec.)]
+* Other income (Other)
+* Wages/salaries (Employment)
+* Self employment (Employment)
+
+
+Except for unemployment and wages/salary, all income types have a frequency of 12 (monthly). Unemployment has a frequency of 52 (weekly).  Wages have a frequency of 12, 24, 26, or 52 depending on what the user selected.
+
+
+
+**Requires:**  API Key for LegalServer instance
+
+**Returns:** Object from Legal Server.  This object contains either an error or the global unique ID.
+
+

@@ -570,8 +570,7 @@ Defaults to 300 if not provided</p></td>
 <p><strong>Purpose</strong>: Returns list of marital statuses for user to select from.</p>
 <p><strong>Parameters:</strong> event.langcode (may be null)</p>
 <p><strong>Requires:</strong>  None</p>
-<p><strong>Returns:</strong> A string of marital statuses for display</p>
-<p><strong>Status:</strong> Built for English. Separate array for Spanish exists for translation and will be returned when the langcode = es.</p>
+<p><strong>Returns:</strong> A string of marital statuses for display based on the language code provided.</p>
 </div>
 <div class="section" id="load-languages">
 <h2>Load languages<a class="headerlink" href="#load-languages" title="Permalink to this headline">¶</a></h2>
@@ -579,8 +578,7 @@ Defaults to 300 if not provided</p></td>
 <p><strong>Purpose</strong>: Returns list of languages for user to select from.</p>
 <p><strong>Parameters:</strong> event.langcode (may be null)</p>
 <p><strong>Requires:</strong>  None</p>
-<p><strong>Returns:</strong> A string of languages for display</p>
-<p><strong>Status:</strong> Built for English. Separate array for Spanish exists for translation and will be returned when the langcode = es.</p>
+<p><strong>Returns:</strong> A string of languages for display based on the language code provided.</p>
 </div>
 <div class="section" id="load-genders">
 <h2>Load genders<a class="headerlink" href="#load-genders" title="Permalink to this headline">¶</a></h2>
@@ -588,8 +586,7 @@ Defaults to 300 if not provided</p></td>
 <p><strong>Purpose</strong>: Returns list of genders for user to select from.</p>
 <p><strong>Parameters:</strong> event.langcode (may be null)</p>
 <p><strong>Requires:</strong>  None</p>
-<p><strong>Returns:</strong> A string of genders for display</p>
-<p><strong>Status:</strong> Built for English. Separate array for Spanish exists for translation and will be returned when the langcode = es.</p>
+<p><strong>Returns:</strong> A string of genders for display based on the language code provided.</p>
 </div>
 <div class="section" id="load-ethnicities">
 <h2>Load ethnicities<a class="headerlink" href="#load-ethnicities" title="Permalink to this headline">¶</a></h2>
@@ -597,8 +594,7 @@ Defaults to 300 if not provided</p></td>
 <p><strong>Purpose</strong>: Returns list of ethnicity options for user to select from.</p>
 <p><strong>Parameters:</strong> event.langcode (may be null)</p>
 <p><strong>Requires:</strong>  None</p>
-<p><strong>Returns:</strong> A string of ethnicities for display</p>
-<p><strong>Status:</strong> Built for English. Separate array for Spanish exists for translation and will be returned when the langcode = es.</p>
+<p><strong>Returns:</strong> A string of ethnicities for display based on the language code provided.</p>
 </div>
 <div class="section" id="load-races">
 <h2>Load races<a class="headerlink" href="#load-races" title="Permalink to this headline">¶</a></h2>
@@ -606,8 +602,189 @@ Defaults to 300 if not provided</p></td>
 <p><strong>Purpose</strong>: Returns list of races for user to select from.</p>
 <p><strong>Parameters:</strong> event.langcode (may be null)</p>
 <p><strong>Requires:</strong>  None</p>
-<p><strong>Returns:</strong> A string of races for display</p>
-<p><strong>Status:</strong> Built for English. Separate array for Spanish exists for translation and will be returned when the langcode = es.</p>
+<p><strong>Returns:</strong> A string of races for display based on the language code provided.</p>
+</div>
+<div class="section" id="send-to-legal-server">
+<h2>Send to Legal Server<a class="headerlink" href="#send-to-legal-server" title="Permalink to this headline">¶</a></h2>
+<p><strong>Function name:</strong>  otis-load-races</p>
+<p><strong>Purpose</strong>: Builds the data package to etransfer to LegalServer</p>
+<p><strong>Parameters:</strong> event object which contains the data for the eTransfer.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 27%" />
+<col style="width: 24%" />
+<col style="width: 49%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Event property</p></th>
+<th class="head"><p>LS property</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>flow_id</p></td>
+<td></td>
+<td><p>Phone number the user texted to.  Used to
+route between production/test environs</p></td>
+</tr>
+<tr class="row-odd"><td><p>flowPrefix</p></td>
+<td rowspan="2"><p>externalId</p></td>
+<td rowspan="2"><p>Combined in the format of flow prefix-</p>
+<p>triage_id to crete a unique id</p>
+</td>
+</tr>
+<tr class="row-even"><td><p>triage_id</p></td>
+</tr>
+<tr class="row-odd"><td><p>firstName</p></td>
+<td><p>firstName</p></td>
+<td><p>User’s first name</p></td>
+</tr>
+<tr class="row-even"><td><p>middleName</p></td>
+<td><p>middleName</p></td>
+<td><p>Not captured in SMS</p></td>
+</tr>
+<tr class="row-odd"><td><p>lastName</p></td>
+<td><p>lastName</p></td>
+<td><p>User’s last name</p></td>
+</tr>
+<tr class="row-even"><td><p>eTransferOrganization</p></td>
+<td><p>eTransferOrganization</p></td>
+<td><p>LegalServer-specific string for org.
+Is stored in website LS configuration</p></td>
+</tr>
+<tr class="row-odd"><td><p>nickname</p></td>
+<td><p>aliasFirst</p></td>
+<td><p>Any entered nickname</p></td>
+</tr>
+<tr class="row-even"><td><p>maiden</p></td>
+<td><p>aliasLast</p></td>
+<td><p>Any entered maiden name</p></td>
+</tr>
+<tr class="row-odd"><td><p>street</p></td>
+<td><p>addressHome.address1</p></td>
+<td rowspan="3"><p>addressHome is an Object containing the</p>
+<p>street address, city, state, zip and</p>
+<p>countyFIPS code provided by the user.</p>
+</td>
+</tr>
+<tr class="row-even"><td><p>city</p></td>
+<td><p>addressHome.city</p></td>
+</tr>
+<tr class="row-odd"><td><p>state</p></td>
+<td><p>addressHome.state</p></td>
+</tr>
+<tr class="row-even"><td><p>user_phone</p></td>
+<td><p>phoneHome</p></td>
+<td rowspan="2"><p>Either the number the user texted from or</p>
+<p>a provided number, removed of any +1</p>
+</td>
+</tr>
+<tr class="row-odd"><td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>month</p></td>
+<td><p>dateOfBirth</p></td>
+<td rowspan="3"><p>Date of birth provided by user.  A 0 is</p>
+<p>added for any month or day of less than</p>
+<p>10</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>day</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>year</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>email</p></td>
+<td><p>email</p></td>
+<td><p>User provided email addresss</p></td>
+</tr>
+<tr class="row-even"><td><p>maritalStatus</p></td>
+<td><p>maritalStatus</p></td>
+<td><p>User selected marital status</p></td>
+</tr>
+<tr class="row-odd"><td><p>ethnicity</p></td>
+<td><p>ethicity</p></td>
+<td><p>User selected ethnicity; is set to blank
+if user selects prefer not to respond.</p></td>
+</tr>
+<tr class="row-even"><td><p>gender</p></td>
+<td><p>gender</p></td>
+<td><p>User selected gender.</p></td>
+</tr>
+<tr class="row-odd"><td><p>language</p></td>
+<td><p>language</p></td>
+<td><p>User selected preferred language</p></td>
+</tr>
+<tr class="row-even"><td><p>notes</p></td>
+<td><p>notes</p></td>
+<td><p>System-generated notes through triage.</p></td>
+</tr>
+<tr class="row-odd"><td><p>household_adults</p></td>
+<td><p>numberOfAdults</p></td>
+<td><p>User provided number of adults</p></td>
+</tr>
+<tr class="row-even"><td><p>household_children</p></td>
+<td><p>numberOfChildren</p></td>
+<td><p>User provided number of children</p></td>
+</tr>
+<tr class="row-odd"><td><p>callbackType</p></td>
+<td><p>callbackType</p></td>
+<td><p>Client calls or Callback</p></td>
+</tr>
+<tr class="row-even"><td><p>callbackDayTime</p></td>
+<td><p>callbackDayTime</p></td>
+<td><p>Morning or afternoon for callbacks; empty
+for client calls</p></td>
+</tr>
+<tr class="row-odd"><td><p>income_[type]</p></td>
+<td><p>income</p></td>
+<td><p>income is an object that has multiple
+objects for each provided income.  Each</p>
+<p>item contains a type, amount, &amp; frequency</p>
+</td>
+</tr>
+<tr class="row-even"><td><p>legalProblemCode</p></td>
+<td><p>legalProblemCode</p></td>
+<td><p>Legal Server problem code</p></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="flow-prefixes">
+<h3>Flow prefixes<a class="headerlink" href="#flow-prefixes" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>For eviction, this is ILAOEvict.</p></li>
+</ul>
+</div></blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Some translation is done on fields such as gender, race, to accommodate differences between ILAO’s taxonomy terms and Legal Server’s supported terms.</p>
+</div>
+</div>
+<div class="section" id="incomes">
+<h3>Incomes<a class="headerlink" href="#incomes" title="Permalink to this headline">¶</a></h3>
+<p>The following income types are collected and supported:</p>
+<ul class="simple">
+<li><p>Private disability (Disability)</p></li>
+<li><p>Investment income (Trust, Interest, or Dividends)</p></li>
+<li><p>TANF</p></li>
+<li><p>Veterans’ benefits</p></li>
+<li><p>Unemployment (Unemployment Compensation)</p></li>
+<li><p>SSI</p></li>
+<li><p>Social Security</p></li>
+<li><p>Alimony</p></li>
+<li><p>Child Support</p></li>
+<li><p>Workers’ Compensation</p></li>
+<li><p>Pension/401K income [Pension/Retirement (Not Soc. Sec.)]</p></li>
+<li><p>Other income (Other)</p></li>
+<li><p>Wages/salaries (Employment)</p></li>
+<li><p>Self employment (Employment)</p></li>
+</ul>
+<p>Except for unemployment and wages/salary, all income types have a frequency of 12 (monthly). Unemployment has a frequency of 52 (weekly).  Wages have a frequency of 12, 24, 26, or 52 depending on what the user selected.</p>
+<p><strong>Requires:</strong>  API Key for LegalServer instance</p>
+<p><strong>Returns:</strong> Object from Legal Server.  This object contains either an error or the global unique ID.</p>
+</div>
 </div>
 </div>
 
