@@ -293,6 +293,45 @@ OTIS Validate Ethnicity
 
 **Returns:** A string, either the name of the race the user selected OR -1 if it is invalid.
 
+OTIS Validate Gender
+======================
+
+**Function name:**  otis-validate-gender
+
+**Purpose**: Takes a string of input from the user and returns whether it is a valid selection or not. This can then be used to route users to retry their input or move on to the next step.  The returned strings align with Legal Server's supported genders.
+
+**Parameters:**  event.gender (the user's input)
+
+**Requires:**  Nothing; values are stored in the function as an array
+
+**Returns:** A string, either the name of the gender the user selected OR -1 if it is invalid.
+
+OTIS Validate Marital Status
+===============================
+
+**Function name:**  otis-validate-marital-status
+
+**Purpose**: Takes a string of input from the user and returns whether it is a valid selection or not. This can then be used to route users to retry their input or move on to the next step.  The returned strings align with Legal Server's supported marital statuses.
+
+**Parameters:**  event.maritalStatus (the user's input)
+
+**Requires:**  Nothing; values are stored in the function as an array
+
+**Returns:** A string, either the name of the marital status the user selected OR -1 if it is invalid.
+
+OTIS Validate Preferred Language
+==================================
+
+**Function name:**  otis-validate-preferred-language
+
+**Purpose**: Takes a string of input from the user and returns whether it is a valid selection or not. This can then be used to route users to retry their input or move on to the next step.  The returned strings align with Legal Server's supported languages.
+
+**Parameters:**  event.language (the user's input)
+
+**Requires:**  Nothing; values are stored in the function as an array
+
+**Returns:** A string, either the name of the language the user selected OR -1 if it is invalid.
+
 OTIS Validate Year
 ======================
 **Function name:**  otis-validate-year
@@ -324,17 +363,29 @@ OTIS Validate Day of Month
 
 OTIS Validate Month
 ===============================
-**Function name:**  otis-validate-day-of-month
+**Function name:**  otis-validate-month
 
 **Purpose**: Takes a string of input from the user and returns whether it is a valid month. This validates both numbers (1 - 12) and text input such as November, november, nov, or Nov. This can then be used to route users to retry their input or move on to the next step.
 
-**Parameters:**  event.day (the user's input)
+**Parameters:**  event.month (the user's input)
 
 **Requires:**  none
 
 **Returns:** A number (either the day or a 0 representing invalid data)
 
-**Status:**  Support for per-month validation would be nice.
+
+OTIS Calculate Age
+===================
+
+**Function name:**  otis-calculate-age
+
+**Purpose**: Calculates an age based on a date of birth.
+
+**Parameters:**  event.day, event.month, and event.year (provided by the user)
+
+**Requires:**  none
+
+**Returns:** A number
 
 
 OTIS Poverty Estimate
@@ -373,7 +424,9 @@ OTIS validate total income
 
 **Returns:** An object containing:
 
-*
+* income, which is the total monthly income
+* incomeFlag, which is 0 or 1.  1 represents overincome
+* maxIncome, which is the calculated maximum income based on the selected standard and allowable percentage.
 
 .. note:: This is the function to determine whether a user passes the income screening for a specific organization.
 
@@ -402,15 +455,35 @@ Create Triage User
 ==========================
 **Function name:**  otis-create-triage-user
 
-**Purpose**: Builds a data packet and leverages ILAO's Rest API to create a triage user record on ILAO's website
+**Purpose**: Builds a data packet and leverages ILAO's Rest API to create a triage user record on ILAO's website.  This executes after we have validated the user's zip code.
 
-**Parameters:**  Event object that contains base data; empty or missing values are set to null.
+**Parameters:**  Event object that contains base data; empty or missing values are set to null. Base data includes:
 
-**Requires:**  Authentication with ILAO's REST OTIS API
 
-**Returns:** UUID representing the triage user.
+* referral_source, varies by application
+* zip_code, user's provided zip code
+* user_phone, phone number the user texted from
+* county, the county associated with the zip code
+* search, the incoming message texted by the user
+* flow_id, the phone number the user texted to
+* last_screen_viewed, set to sms-zip-code
+* oas_triage_problem
 
-**Status:** Data packet generates; API integration not built.
+These are hard-coded within the function:
+
+* household_size, set to 1
+* triage_status, set to Started
+* oas_triage_problem uuid
+
+.. note:: For eviction, the source is either eviction-spanish or eviction-english
+
+**Requires:**  Authentication with ILAO's API
+
+**Returns:** An object containing:
+
+* id, which is the uuid associated with the newly created user.
+* triage_id, which is the internal Drupal ID associated with the entity.
+
 
 OTIS Update Triage User
 ==========================
@@ -426,6 +499,55 @@ OTIS Update Triage User
 
 **Status:** Data packet based on event object generates; API integration not built.
 
+Within Eviction SMS applications
+---------------------------------
+
+This function is called when:
+
+* the user declines to proceed to intake
+
+  * last screen viewed = sms-match-offered
+  * intake_status = Offered
+  * triage status = Program triage completed
+
+* when the user chooses to proceed to intake
+
+  * last screen viewed = sms-match-offered
+  * intake_status = Started
+  * triage status = Program triage completed
+  * intake_organization = UUID of the intake settings associated with the intake
+  * triage_problem = UUID of the determined legal issue from ILAO's legal issue taxonomy (in eviction, this is the eviction term).
+
+* when the user has provided household size information
+
+  * last screen viewed =  sms_household_size
+  * event object contains household total, number of adults, and number of children
+
+* after we have collected the date of birth and calculated the user's age
+
+  * last_screen_viewed = sms_date_of_birth
+  * event object contains age
+
+* after preferred language is set and all demographics data has been collected
+
+  * last_screen_viwed = sms_demographics
+  * event object contains demographic data
+
+* after all income has been collected and we've calculated total income and whether the user is over-income
+
+* when the user reaches an endpoint (etransferred, bypassed, exited to content)
+
+  * if the user is diverted,  intake status is set to Diverted and last screen viewed is set to sms_legal_issue_selector
+  * if the user is etransferred, intake status is set to etransferred and last_screen_viewed is set to sms-confirmation
+  * if the user in Cook County, last screen viewed is set to cook-county-exit
+  * if the user is given counseling resources instead of intake, last screen viewed is set to sms-counselors-list
+  * if the user has an unsupported legal issue, triage_status is set to Legal Issue and last screen viewed is set to sms-legal-issues
+
+
+
+
+
+
 Get Matches
 ==========================
 
@@ -439,7 +561,7 @@ Get Matches
 
 **Returns:**
 
-**Status:**
+**Status:** Not built
 
 Load marital statuses
 ==========================

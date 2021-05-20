@@ -455,6 +455,30 @@ Defaults to 300 if not provided</p></td>
 <p><strong>Requires:</strong>  Nothing; values are stored in the function as an array</p>
 <p><strong>Returns:</strong> A string, either the name of the race the user selected OR -1 if it is invalid.</p>
 </div>
+<div class="section" id="otis-validate-gender">
+<h2>OTIS Validate Gender<a class="headerlink" href="#otis-validate-gender" title="Permalink to this headline">¶</a></h2>
+<p><strong>Function name:</strong>  otis-validate-gender</p>
+<p><strong>Purpose</strong>: Takes a string of input from the user and returns whether it is a valid selection or not. This can then be used to route users to retry their input or move on to the next step.  The returned strings align with Legal Server’s supported genders.</p>
+<p><strong>Parameters:</strong>  event.gender (the user’s input)</p>
+<p><strong>Requires:</strong>  Nothing; values are stored in the function as an array</p>
+<p><strong>Returns:</strong> A string, either the name of the gender the user selected OR -1 if it is invalid.</p>
+</div>
+<div class="section" id="otis-validate-marital-status">
+<h2>OTIS Validate Marital Status<a class="headerlink" href="#otis-validate-marital-status" title="Permalink to this headline">¶</a></h2>
+<p><strong>Function name:</strong>  otis-validate-marital-status</p>
+<p><strong>Purpose</strong>: Takes a string of input from the user and returns whether it is a valid selection or not. This can then be used to route users to retry their input or move on to the next step.  The returned strings align with Legal Server’s supported marital statuses.</p>
+<p><strong>Parameters:</strong>  event.maritalStatus (the user’s input)</p>
+<p><strong>Requires:</strong>  Nothing; values are stored in the function as an array</p>
+<p><strong>Returns:</strong> A string, either the name of the marital status the user selected OR -1 if it is invalid.</p>
+</div>
+<div class="section" id="otis-validate-preferred-language">
+<h2>OTIS Validate Preferred Language<a class="headerlink" href="#otis-validate-preferred-language" title="Permalink to this headline">¶</a></h2>
+<p><strong>Function name:</strong>  otis-validate-preferred-language</p>
+<p><strong>Purpose</strong>: Takes a string of input from the user and returns whether it is a valid selection or not. This can then be used to route users to retry their input or move on to the next step.  The returned strings align with Legal Server’s supported languages.</p>
+<p><strong>Parameters:</strong>  event.language (the user’s input)</p>
+<p><strong>Requires:</strong>  Nothing; values are stored in the function as an array</p>
+<p><strong>Returns:</strong> A string, either the name of the language the user selected OR -1 if it is invalid.</p>
+</div>
 <div class="section" id="otis-validate-year">
 <h2>OTIS Validate Year<a class="headerlink" href="#otis-validate-year" title="Permalink to this headline">¶</a></h2>
 <p><strong>Function name:</strong>  otis-validate-year</p>
@@ -478,12 +502,19 @@ Defaults to 300 if not provided</p></td>
 </div>
 <div class="section" id="otis-validate-month">
 <h2>OTIS Validate Month<a class="headerlink" href="#otis-validate-month" title="Permalink to this headline">¶</a></h2>
-<p><strong>Function name:</strong>  otis-validate-day-of-month</p>
+<p><strong>Function name:</strong>  otis-validate-month</p>
 <p><strong>Purpose</strong>: Takes a string of input from the user and returns whether it is a valid month. This validates both numbers (1 - 12) and text input such as November, november, nov, or Nov. This can then be used to route users to retry their input or move on to the next step.</p>
-<p><strong>Parameters:</strong>  event.day (the user’s input)</p>
+<p><strong>Parameters:</strong>  event.month (the user’s input)</p>
 <p><strong>Requires:</strong>  none</p>
 <p><strong>Returns:</strong> A number (either the day or a 0 representing invalid data)</p>
-<p><strong>Status:</strong>  Support for per-month validation would be nice.</p>
+</div>
+<div class="section" id="otis-calculate-age">
+<h2>OTIS Calculate Age<a class="headerlink" href="#otis-calculate-age" title="Permalink to this headline">¶</a></h2>
+<p><strong>Function name:</strong>  otis-calculate-age</p>
+<p><strong>Purpose</strong>: Calculates an age based on a date of birth.</p>
+<p><strong>Parameters:</strong>  event.day, event.month, and event.year (provided by the user)</p>
+<p><strong>Requires:</strong>  none</p>
+<p><strong>Returns:</strong> A number</p>
 </div>
 <div class="section" id="otis-poverty-estimate">
 <h2>OTIS Poverty Estimate<a class="headerlink" href="#otis-poverty-estimate" title="Permalink to this headline">¶</a></h2>
@@ -515,7 +546,9 @@ Defaults to 300 if not provided</p></td>
 <p><strong>Requires:</strong>  API call to get poverty income.</p>
 <p><strong>Returns:</strong> An object containing:</p>
 <ul class="simple">
-<li></li>
+<li><p>income, which is the total monthly income</p></li>
+<li><p>incomeFlag, which is 0 or 1.  1 represents overincome</p></li>
+<li><p>maxIncome, which is the calculated maximum income based on the selected standard and allowable percentage.</p></li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -540,11 +573,34 @@ Defaults to 300 if not provided</p></td>
 <div class="section" id="create-triage-user">
 <h2>Create Triage User<a class="headerlink" href="#create-triage-user" title="Permalink to this headline">¶</a></h2>
 <p><strong>Function name:</strong>  otis-create-triage-user</p>
-<p><strong>Purpose</strong>: Builds a data packet and leverages ILAO’s Rest API to create a triage user record on ILAO’s website</p>
-<p><strong>Parameters:</strong>  Event object that contains base data; empty or missing values are set to null.</p>
-<p><strong>Requires:</strong>  Authentication with ILAO’s REST OTIS API</p>
-<p><strong>Returns:</strong> UUID representing the triage user.</p>
-<p><strong>Status:</strong> Data packet generates; API integration not built.</p>
+<p><strong>Purpose</strong>: Builds a data packet and leverages ILAO’s Rest API to create a triage user record on ILAO’s website.  This executes after we have validated the user’s zip code.</p>
+<p><strong>Parameters:</strong>  Event object that contains base data; empty or missing values are set to null. Base data includes:</p>
+<ul class="simple">
+<li><p>referral_source, varies by application</p></li>
+<li><p>zip_code, user’s provided zip code</p></li>
+<li><p>user_phone, phone number the user texted from</p></li>
+<li><p>county, the county associated with the zip code</p></li>
+<li><p>search, the incoming message texted by the user</p></li>
+<li><p>flow_id, the phone number the user texted to</p></li>
+<li><p>last_screen_viewed, set to sms-zip-code</p></li>
+<li><p>oas_triage_problem</p></li>
+</ul>
+<p>These are hard-coded within the function:</p>
+<ul class="simple">
+<li><p>household_size, set to 1</p></li>
+<li><p>triage_status, set to Started</p></li>
+<li><p>oas_triage_problem uuid</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For eviction, the source is either eviction-spanish or eviction-english</p>
+</div>
+<p><strong>Requires:</strong>  Authentication with ILAO’s API</p>
+<p><strong>Returns:</strong> An object containing:</p>
+<ul class="simple">
+<li><p>id, which is the uuid associated with the newly created user.</p></li>
+<li><p>triage_id, which is the internal Drupal ID associated with the entity.</p></li>
+</ul>
 </div>
 <div class="section" id="otis-update-triage-user">
 <h2>OTIS Update Triage User<a class="headerlink" href="#otis-update-triage-user" title="Permalink to this headline">¶</a></h2>
@@ -554,6 +610,56 @@ Defaults to 300 if not provided</p></td>
 <p><strong>Requires:</strong>  Authentication with ILAO’s REST OTIS API</p>
 <p><strong>Returns:</strong> Updated data packet</p>
 <p><strong>Status:</strong> Data packet based on event object generates; API integration not built.</p>
+<div class="section" id="within-eviction-sms-applications">
+<h3>Within Eviction SMS applications<a class="headerlink" href="#within-eviction-sms-applications" title="Permalink to this headline">¶</a></h3>
+<p>This function is called when:</p>
+<ul class="simple">
+<li><p>the user declines to proceed to intake</p>
+<ul>
+<li><p>last screen viewed = sms-match-offered</p></li>
+<li><p>intake_status = Offered</p></li>
+<li><p>triage status = Program triage completed</p></li>
+</ul>
+</li>
+<li><p>when the user chooses to proceed to intake</p>
+<ul>
+<li><p>last screen viewed = sms-match-offered</p></li>
+<li><p>intake_status = Started</p></li>
+<li><p>triage status = Program triage completed</p></li>
+<li><p>intake_organization = UUID of the intake settings associated with the intake</p></li>
+<li><p>triage_problem = UUID of the determined legal issue from ILAO’s legal issue taxonomy (in eviction, this is the eviction term).</p></li>
+</ul>
+</li>
+<li><p>when the user has provided household size information</p>
+<ul>
+<li><p>last screen viewed =  sms_household_size</p></li>
+<li><p>event object contains household total, number of adults, and number of children</p></li>
+</ul>
+</li>
+<li><p>after we have collected the date of birth and calculated the user’s age</p>
+<ul>
+<li><p>last_screen_viewed = sms_date_of_birth</p></li>
+<li><p>event object contains age</p></li>
+</ul>
+</li>
+<li><p>after preferred language is set and all demographics data has been collected</p>
+<ul>
+<li><p>last_screen_viwed = sms_demographics</p></li>
+<li><p>event object contains demographic data</p></li>
+</ul>
+</li>
+<li><p>after all income has been collected and we’ve calculated total income and whether the user is over-income</p></li>
+<li><p>when the user reaches an endpoint (etransferred, bypassed, exited to content)</p>
+<ul>
+<li><p>if the user is diverted,  intake status is set to Diverted and last screen viewed is set to sms_legal_issue_selector</p></li>
+<li><p>if the user is etransferred, intake status is set to etransferred and last_screen_viewed is set to sms-confirmation</p></li>
+<li><p>if the user in Cook County, last screen viewed is set to cook-county-exit</p></li>
+<li><p>if the user is given counseling resources instead of intake, last screen viewed is set to sms-counselors-list</p></li>
+<li><p>if the user has an unsupported legal issue, triage_status is set to Legal Issue and last screen viewed is set to sms-legal-issues</p></li>
+</ul>
+</li>
+</ul>
+</div>
 </div>
 <div class="section" id="get-matches">
 <h2>Get Matches<a class="headerlink" href="#get-matches" title="Permalink to this headline">¶</a></h2>
@@ -562,7 +668,7 @@ Defaults to 300 if not provided</p></td>
 <p><strong>Parameters:</strong></p>
 <p><strong>Requires:</strong></p>
 <p><strong>Returns:</strong></p>
-<p><strong>Status:</strong></p>
+<p><strong>Status:</strong> Not built</p>
 </div>
 <div class="section" id="load-marital-statuses">
 <h2>Load marital statuses<a class="headerlink" href="#load-marital-statuses" title="Permalink to this headline">¶</a></h2>
