@@ -205,26 +205,27 @@
 <h1>Eviction SMS Flow<a class="headerlink" href="#eviction-sms-flow" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="workflow-tree">
 <h2>Workflow Tree<a class="headerlink" href="#workflow-tree" title="Permalink to this headline">¶</a></h2>
+<p>Initial message</p>
 <dl class="simple">
-<dt>Initial message</dt><dd><dl class="simple">
-<dt>Language prompt</dt><dd><p>If Spanish, launch Spanish version (separate)</p>
+<dt>Overview message</dt><dd><p>Option to end =&gt; Exits
+Any other response =&gt; CONTINUE</p>
 </dd>
 </dl>
-</dd>
-</dl>
-<p>Overview message</p>
 <p>First name</p>
-<p>Zip code</p>
+<p>Zip code
+System:  Get region data for zip code (state, county, county FIPS)</p>
 <blockquote>
 <div><dl class="simple">
-<dt>In Illinois,</dt><dd><p>In Cook County, hand to Get Legal Help
+<dt>In Illinois,</dt><dd><p>System:  Create initial OTIS user record in OTIS database
+In Cook County, hand to Eviction Help Illinois
 Outside Cook County, CONTINUE</p>
 </dd>
-<dt>Not in Illinois, offer to retry</dt><dd><p>Link to LawHelp</p>
+<dt>Not in Illinois, offer to retry Zip</dt><dd><p>Link to LawHelp</p>
 </dd>
 </dl>
 </div></blockquote>
-<p>Get Legal Issue (7 options)</p>
+<p>System:  Get intake settings for organization based on zip code
+Get Legal Issue (7 options)</p>
 <blockquote>
 <div><dl>
 <dt>User replies More</dt><dd><p>Show definitions
@@ -232,28 +233,56 @@ Return to legal issue</p>
 </dd>
 <dt>User replies 1</dt><dd><dl>
 <dt>User is asked if they have a summons</dt><dd><blockquote>
-<div><p>If Yes, CONTINUE to landlord name
-If No, User is asked if they’ve received written notice
+<div><p>If Yes,</p>
+<blockquote>
+<div><p>System: update case notes for etransfer
+CONTINUE to landlord name</p>
+</div></blockquote>
+<p>If No, User is asked if they’ve received written notice
 If neither of these, user is re-asked question</p>
 <blockquote>
-<div><p>If yes, CONTINUE to landlord name
-If no, user is asked if the landlord has threatened to evict
+<div><p>If yes,</p>
+<blockquote>
+<div><p>System: update case notes for etransfer
+CONTINUE to landlord name</p>
+</div></blockquote>
+<p>If no, user is asked if the landlord has threatened to evict
 If neither of these, user is re-asked question</p>
 <blockquote>
-<div><p>If yes, CONTINUE to landlord name
-If no, EXIT to legal content
+<div><dl class="simple">
+<dt>If yes,</dt><dd><p>System: update case notes for etransfer
+CONTINUE to landlord name</p>
+</dd>
+</dl>
+<p>If no, EXIT to legal content
 If neither of these, user is re-asked question</p>
 </div></blockquote>
 </div></blockquote>
 </div></blockquote>
-<p>Get landlord name</p>
+<dl class="simple">
+<dt>Get landlord name</dt><dd><p>System: update case notes for etransfer</p>
+</dd>
+</dl>
 <p>CONTINUE to matches</p>
 </dd>
 </dl>
 </dd>
-<dt>User replies 2</dt><dd><p>CONTINUE to matches</p>
+</dl>
+<p>User replies 2</p>
+<blockquote>
+<div><dl class="simple">
+<dt>CONTINUE to matches if in LOLLA service area</dt><dd><p>System: update case notes for etransfer</p>
 </dd>
-<dt>User replies 3</dt><dd><p>CONTINUE to matches</p>
+</dl>
+<p>CONTINUE to bypass if in PSLS services area</p>
+<blockquote>
+<div><p>System : Save user’s data as bypass
+Exit application</p>
+</div></blockquote>
+</div></blockquote>
+<dl class="simple">
+<dt>User replies 3</dt><dd><p>System: update case notes for etransfer
+CONTINUE to matches</p>
 </dd>
 </dl>
 <p>User replies 4</p>
@@ -261,33 +290,40 @@ If neither of these, user is re-asked question</p>
 <div><p>User is asked if the utilities were shut off because the tenant didn’t pay the bills</p>
 <blockquote>
 <div><p>If yes, EXIT to legal content
-If no, continue to matches</p>
+If no,</p>
+<blockquote>
+<div><p>System: Update case notes for transfer
+CONTINUE to matches</p>
+</div></blockquote>
 </div></blockquote>
 </div></blockquote>
 <p>User replies 5 or 6,</p>
 <blockquote>
-<div><p>Show nearest housing counselor
+<div><p>System: Save user’s data
+Show nearest housing counselor
 Option to show all</p>
 <blockquote>
-<div><p>Loops through</p>
+<div><p>Loops through results</p>
 </div></blockquote>
+<p>Exits to Legal content</p>
 </div></blockquote>
 <p>User replies 7, user gets exit message to Get Legal Help</p>
 <p>User replies More, user sees help text</p>
 </div></blockquote>
-<p>Get Matches [Need API function built]</p>
-<p>Ask user if they want to continue</p>
+<p>Matches: Ask user if they want to continue to apply to the organizations</p>
 <blockquote>
-<div><dl class="simple">
-<dt>User says no</dt><dd><p>Exits to Legal content</p>
-</dd>
-</dl>
+<div><p>User says no</p>
+<blockquote>
+<div><p>System: Save user data to OTIS database
+Exits to Legal content</p>
+</div></blockquote>
 <p>Users says yes CONTINUE</p>
 </div></blockquote>
 <p>Household prompt</p>
 <blockquote>
 <div><p>Household adult
-Household children</p>
+Household children
+System: Saves household data to user’s profile in OTIS database</p>
 <blockquote>
 <div><p>Throw error if either is not numeric</p>
 </div></blockquote>
@@ -296,23 +332,48 @@ Household children</p>
 <p>Get maiden names, if any</p>
 <p>Get nicknames, if any</p>
 <p>Get birth month</p>
+<blockquote>
+<div><p>System: Validate birth month based on name/abbreviation or numeric input
+Ask user to retry if invalid</p>
+</div></blockquote>
 <p>Get birth day</p>
+<blockquote>
+<div><p>System: Vaidate birth day as numeric and within the month’s allowable range
+Ask user to retry if invalid</p>
+</div></blockquote>
 <p>Get birth year</p>
-<p>Validate birthdate</p>
-<dl class="simple">
-<dt>Ask user to confirm birthdate</dt><dd><p>If confirmed, CONTINIUE
-If not confirmed, go back to birth month</p>
+<blockquote>
+<div><p>System: Validate birthd year as numeric.  If user provided a 2 digit, assume 19xx if greater than 10.</p>
+</div></blockquote>
+<p>Ask user to confirm birthdate</p>
+<blockquote>
+<div><dl class="simple">
+<dt>If confirmed,</dt><dd><p>System:  Calculate age and save to user’s profile in OTIS database
+CONTINIUE</p>
 </dd>
 </dl>
+<p>If not confirmed, go back to birth month</p>
+</div></blockquote>
 <p>Start demographics</p>
-<dl class="simple">
-<dt>Get race</dt><dd><p>If race = hispanic/latino, set ethnicity
+<p>Get race</p>
+<blockquote>
+<div><p>System:  Validate selection; if invalid, ask to retry
+If race = hispanic/latino, set ethnicity to Hispanic
 Otherwise, Get ethnicity</p>
+<dl class="simple">
+<dt>Get ethnicity</dt><dd><p>System: Validate selection; if invalid, ask to retry</p>
 </dd>
 </dl>
-<p>Get gender</p>
-<p>Get marital status</p>
-<p>Get language</p>
+</div></blockquote>
+<dl class="simple">
+<dt>Get gender</dt><dd><p>System:  Validate selection; if invalid, ask to retry</p>
+</dd>
+<dt>Get marital status</dt><dd><p>System:  Validate selection; if invalid, ask to retry</p>
+</dd>
+<dt>Get preferred language</dt><dd><p>System:  Validate selection; if invalid, ask to retry</p>
+</dd>
+</dl>
+<p>System:  Save demographic data to user’s profile in OTIS database</p>
 <p>Income prompt</p>
 <dl class="simple">
 <dt>Ask wages/salary</dt><dd><dl class="simple">
@@ -331,7 +392,7 @@ Validate and throw error if needed, else CONTINUE</p>
 </dd>
 <dt>Not sure</dt><dd><p>Show help</p>
 </dd>
-<dt>Numeric</dt><dd><p>Validate and throw error if needed, else CONTINUE</p>
+<dt>Anything else</dt><dd><p>Re-ask wages/salary question</p>
 </dd>
 </dl>
 </dd>
@@ -343,27 +404,34 @@ Validate and throw error if needed, else CONTINUE</p>
 </dd>
 <dt>No</dt><dd><p>CONTINUE</p>
 </dd>
-<dt>Not sure</dt><dd><p>Show help</p>
-</dd>
-<dt>Numeric</dt><dd><p>Validate and throw error if needed, else CONTINUE</p>
-</dd>
-</dl>
-</dd>
-<dt>Ask benefits question (Yes, no, choices)</dt><dd><dl class="simple">
-<dt>Yes</dt><dd><dl class="simple">
-<dt>Ask for choice</dt><dd><p>CONTINUE</p>
-</dd>
-</dl>
-</dd>
-<dt>No</dt><dd><p>CONTINUE to other payments</p>
-</dd>
-<dt>Numeric choices</dt><dd><p>CONTINUE</p>
-</dd>
-<dt>Invalid data</dt><dd><p>NEEDS WORK</p>
+<dt>Anything else</dt><dd><p>Show help
+Re-ask farming/self-employment</p>
 </dd>
 </dl>
 </dd>
 </dl>
+<p>Ask benefits question (Yes, no, choices)</p>
+<blockquote>
+<div><p>Yes</p>
+<blockquote>
+<div><p>Ask for choice; then System: Create list of choices to loop through
+CONTINUE</p>
+</div></blockquote>
+<p>No</p>
+<blockquote>
+<div><p>CONTINUE to other payments</p>
+</div></blockquote>
+<p>Numeric choices</p>
+<blockquote>
+<div><p>System:  Create list of choices to loop through.
+CONTINUE to For each benefit type selected</p>
+</div></blockquote>
+<p>Invalid data</p>
+<blockquote>
+<div><p>Show error message
+Re-as question</p>
+</div></blockquote>
+</div></blockquote>
 <p>For each benefit type selected:</p>
 <blockquote>
 <div><p>Ask amount
@@ -371,21 +439,29 @@ Validate amount</p>
 <blockquote>
 <div><p>Ask user to retry if not numeric</p>
 </div></blockquote>
-<p>CONTINUE</p>
+<p>CONTINUE to next benefit type or when complete, to ask other payment question</p>
 </div></blockquote>
 <p>Ask other payments question (Yes, no, choices)</p>
 <blockquote>
-<div><dl class="simple">
-<dt>Yes</dt><dd><dl class="simple">
-<dt>Ask for choice</dt><dd><p>CONTINUE</p>
-</dd>
-</dl>
-</dd>
+<div><p>Yes</p>
+<blockquote>
+<div><p>Ask for choice; then System: Create list of choices to loop through
+CONTINUE</p>
+</div></blockquote>
+<dl class="simple">
 <dt>No</dt><dd><p>CONTINUE to other income</p>
 </dd>
-<dt>Numeric choices</dt><dd><p>CONTINUE</p>
-</dd>
 </dl>
+<p>Numeric choices</p>
+<blockquote>
+<div><p>System:  Create list of choices to loop through.
+CONTINUE to For each other payment type selected</p>
+</div></blockquote>
+<p>Invalid data</p>
+<blockquote>
+<div><p>Show error message
+Re-as question</p>
+</div></blockquote>
 </div></blockquote>
 <p>For each other payment type selected:</p>
 <blockquote>
@@ -397,7 +473,7 @@ Validate amount</p>
 <p>CONTINUE</p>
 </div></blockquote>
 <dl>
-<dt>Ask if user has other income</dt><dd><p>Yes</p>
+<dt>Ask if user has other income</dt><dd><p>Any response other than no</p>
 <blockquote>
 <div><p>Get amount
 Validate amount
@@ -408,17 +484,23 @@ CONTINUE</p>
 <blockquote>
 <div><p>CONTINUE</p>
 </div></blockquote>
-<p>Invalid input</p>
 </dd>
 </dl>
-<p>Run income test (compare total income entered against standard)</p>
+<p>System: Calculate total income and compare to allowable income based on 80% of AMI.</p>
 <blockquote>
-<div><p>If user is over-income (80% of median income for household size)</p>
+<div><p>If user is over-income</p>
 <blockquote>
-<div><p>Inform user we can’t complete intake
+<div><p>System: Save total income
+System: Update user profile as overincome to OTIS database
+Inform user we can’t complete intake
 Exit to legal information</p>
 </div></blockquote>
-<p>If user is not over-income CONTINUE</p>
+<dl class="simple">
+<dt>If user is not over-income</dt><dd><p>System: Save total income
+System: Update user profile with income information
+CONTINUE</p>
+</dd>
+</dl>
 </div></blockquote>
 <p>Ask if current number is best to reach at</p>
 <blockquote>
@@ -436,53 +518,41 @@ Invalid =&gt; Repeat</p>
 </div></blockquote>
 <p>Get email address
 Get street address
-Get city</p>
-<p>System call: Get contact type</p>
+Get city
+Ask user to confirm their contact information</p>
 <blockquote>
-<div><p>If we call client</p>
+<div><dl class="simple">
+<dt>YES</dt><dd><p>CONTINUE</p>
+</dd>
+<dt>NO</dt><dd><p>Re-ask contact questions starting with phone number</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>System:  Check program contact type.</p>
 <blockquote>
-<div><p>Get next date
-User says this work</p>
+<div><p>If client calls</p>
 <blockquote>
-<div><p>User picks from time slots</p>
+<div><p>System: eTransfer case file to Legal Server
+System: user profile data sent to OTIS database
+Show program’s client call message
+Show program’s disclaimer
+Show confirmation message</p>
 </div></blockquote>
-<p>User says this doesn’t work</p>
+<p>If callback</p>
 <blockquote>
-<div><p>Get next days</p>
+<div><p>Ask user whether they prefer morning or afternoon callback</p>
 <blockquote>
-<div><p>User picks a day</p>
-<blockquote>
-<div><p>User picks from time slots</p>
+<div><p>If morning or afternoon, CONTINUE
+If neither, throw error and re-ask</p>
+</div></blockquote>
+<p>System: eTransfer case file to Legal Server
+System: user profile data sent to OTIS database
+Show program’s we call client message
+Show program’s disclaimer
+Show confirmation message</p>
 </div></blockquote>
 </div></blockquote>
-<p>No dates work</p>
-<blockquote>
-<div><p>Convert to you call us; CONTINUE to client calls</p>
-</div></blockquote>
-</div></blockquote>
-</div></blockquote>
-<p>Client calls
-Give confirmation message
-If user replies</p>
-<blockquote>
-<div><p>Give you are done message</p>
-</div></blockquote>
-</div></blockquote>
-</div>
-<div class="section" id="otis-data-integration">
-<h2>OTIS Data Integration<a class="headerlink" href="#otis-data-integration" title="Permalink to this headline">¶</a></h2>
-<p>Creating triage user</p>
-<p>The triage user is created by passing the following parameters:</p>
-<ul class="simple">
-<li><p>zip_code</p></li>
-<li><p>source (coded as sms-eviction-english)</p></li>
-<li><p>last_screen_viewed (hard coded to sms-legal-issue)</p></li>
-<li><p>user_phone (user phone number)</p></li>
-<li><p>county (user county)</p></li>
-<li><p>issue (legal issue selected)</p></li>
-<li><p>search (triggering text)</p></li>
-</ul>
-<p>The function returns the UUID for the intake.  This is then carried across the entire application process.</p>
+<p>END</p>
 </div>
 </div>
 

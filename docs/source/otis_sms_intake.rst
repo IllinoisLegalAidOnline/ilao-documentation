@@ -41,7 +41,6 @@ Online intake over SMS relies on ILAO's JSONAPI and other APIs for data synchron
    :caption: See also:
    
    otis_sms_functions
-   otis_sms_api_calls
    otis_sms_twilio_studio_workflow
    sms_eviction
    
