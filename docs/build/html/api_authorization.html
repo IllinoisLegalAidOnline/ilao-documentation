@@ -188,6 +188,53 @@
             
   <div class="section" id="api-authorization">
 <h1>API Authorization<a class="headerlink" href="#api-authorization" title="Permalink to this headline">¶</a></h1>
+<p>API authorization requires a user-based OAuth token in order to access ILAO’s APIs.</p>
+<p>This requires within the website:</p>
+<ul class="simple">
+<li><p>Setting up an account for the specific user.  The user should have the most limited role possible to access the services they need to access.</p></li>
+<li><p>Create an API consumer.  Consumers should not be shared.  Consumers should:</p>
+<ul>
+<li><p>Have a descriptive label (for example twilio-sms, legal-aid-chicago-cms)</p></li>
+<li><p>Have a scope of API consumer</p></li>
+<li><p>Have a strong secret</p></li>
+</ul>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>we may need to define additional roles to accommodate API grants.</p>
+</div>
+<p>The API user will need to be provided with:</p>
+<ul class="simple">
+<li><p>the UUID for the consumer</p></li>
+<li><p>the secret used in the consumer</p></li>
+<li><p>the username of the account created to access the API</p></li>
+<li><p>the password of the account created to access the API</p></li>
+</ul>
+<p>To generate a bearer token, the API user will need to:</p>
+<ul class="simple">
+<li><p>Post a request to <a class="reference external" href="https://www.illinoislegalaid.org/oauth/token">https://www.illinoislegalaid.org/oauth/token</a></p></li>
+<li><p>The body of the request should include form data of:</p>
+<ul>
+<li><p>client_id, which is the UUID of the consumer</p></li>
+<li><p>grant_type, which should be password</p></li>
+<li><p>client_secret, which is the secret associated with the consumer</p></li>
+<li><p>username</p></li>
+<li><p>password</p></li>
+</ul>
+</li>
+</ul>
+<p>The resulting request is a JSON packet containing:</p>
+<ul class="simple">
+<li><p>token_type</p></li>
+<li><p>expires_in, which is the number of seconds the token is good for.</p></li>
+<li><p>access_token, which is the access token to use</p></li>
+<li><p>refresh_token, which can be used to renew an expired access_token with no additional interaction.</p></li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>To set someone up with API access,  see Gwen.</p>
+</div>
 </div>
 
 

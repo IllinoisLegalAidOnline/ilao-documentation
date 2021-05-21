@@ -2,7 +2,7 @@
 Online Intake Over SMS
 ========================
 
-.. note:: The initial version of this was launched in May 2021 for eviction-related issues outside of Cook county. A Spanish version is coming soon.   A version for food stamps and unemployment, part of Smart Triage, is coming by June 30, 2021.
+.. note:: The initial version of this was launched in May 2021 for eviction-related issues outside of Cook county. A Spanish version was launched May 20, 2021.   A version for food stamps and unemployment, part of Smart Triage, is coming by June 30, 2021.
 
 .. toctree::
    :maxdepth: 1
