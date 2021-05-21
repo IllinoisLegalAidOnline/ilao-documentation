@@ -2,6 +2,13 @@
 Eviction SMS Flow
 ======================
 
+.. note::
+
+  * Eviction SMS is available in both English and Spanish.  The flow is the same for both.
+  * In Legal Server, Eviction SMS cases can be identified with ILAOEvict-[triageid]
+  * In our OTIS database, Eviction SMS cases can be identified by the last-screen-viewed having an sms prefix or by the referral source (Eviction-English or Eviction-Spanish)
+
+
 Workflow Tree
 =================
 
