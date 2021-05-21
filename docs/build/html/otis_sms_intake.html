@@ -43,7 +43,7 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Twilio Functions" href="otis_sms_functions.html" />
+    <link rel="next" title="General architecture" href="otis_sms_intake_architecture.html" />
     <link rel="prev" title="ILAO OTIS API" href="otis_ilao_api.html" /> 
 </head>
 
@@ -110,12 +110,10 @@
 <li class="toctree-l2"><a class="reference internal" href="otis_third_party_support.html">Supported Integrations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="otis_ilao_api.html">ILAO OTIS API</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Online Intake Over SMS</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#general-architecture">General Architecture</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#twilio-studio">Twilio Studio</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#twilio-functions">Twilio Functions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#ilao-apis">ILAO APIs</a></li>
-</ul>
-</li>
+<li class="toctree-l3"><a class="reference internal" href="otis_sms_intake_architecture.html">General architecture</a></li>
+<li class="toctree-l3"><a class="reference internal" href="otis_sms_functions.html">Twilio Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="otis_sms_twilio_studio_workflow.html">OTIS Master Twilio Workflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sms_eviction.html">Eviction SMS Flow</a></li>
 </ul>
 </li>
 </ul>
@@ -205,37 +203,14 @@
 <p class="admonition-title">Note</p>
 <p>The initial version of this was launched in May 2021 for eviction-related issues outside of Cook county. A Spanish version is coming soon.   A version for food stamps and unemployment, part of Smart Triage, is coming by June 30, 2021.</p>
 </div>
-<div class="section" id="general-architecture">
-<h2>General Architecture<a class="headerlink" href="#general-architecture" title="Permalink to this headline">¶</a></h2>
-<p>This architecture applies to all of our SMS integrations.</p>
-<div class="section" id="twilio-studio">
-<h3>Twilio Studio<a class="headerlink" href="#twilio-studio" title="Permalink to this headline">¶</a></h3>
-<p>The logical flow for the SMS is managed in Twilio Studio.  Each live version requires two phone numbers and two flows, one for development and one for production.  The production version should not be edited in Twilio studio but should be “deployed” by copying the development version and associating the production phone number with the newly deployed branch.</p>
-<p>Deployed versions use a naming convention of [Name]-[language code][Month][Day][FullYear].  A letter may follow if there have been multiple deployments in the same day.  For example Eviction-enMay132021 or Eviction-enMay132021a.</p>
-<p>Development versions should be named using a conviction of [Name]-Dev-[language code]; for example Eviction-Dev-en.</p>
-</div>
-<div class="section" id="twilio-functions">
-<h3>Twilio Functions<a class="headerlink" href="#twilio-functions" title="Permalink to this headline">¶</a></h3>
-<p>Twilio functions are used to:</p>
-<ul class="simple">
-<li><p>perform validation that is more complex than the split based on variables widget in Twilio studio</p></li>
-<li><p>interact with ILAO’s API and other services</p></li>
-<li><p>any complex functionality</p></li>
-</ul>
-<p>Twilio functions are stored in the ilao_service and are called using run function widgets in Twilio studio.</p>
-</div>
-<div class="section" id="ilao-apis">
-<h3>ILAO APIs<a class="headerlink" href="#ilao-apis" title="Permalink to this headline">¶</a></h3>
-<p>Online intake over SMS relies on ILAO’s JSONAPI and other APIs for data synchronization.</p>
 <div class="toctree-wrapper compound">
 <p class="caption"><span class="caption-text">See also:</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="otis_sms_intake_architecture.html">General architecture</a></li>
 <li class="toctree-l1"><a class="reference internal" href="otis_sms_functions.html">Twilio Functions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="otis_sms_twilio_studio_workflow.html">OTIS Master Twilio Workflow</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sms_eviction.html">Eviction SMS Flow</a></li>
 </ul>
-</div>
-</div>
 </div>
 </div>
 
@@ -245,7 +220,7 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="otis_sms_functions.html" class="btn btn-neutral float-right" title="Twilio Functions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="otis_sms_intake_architecture.html" class="btn btn-neutral float-right" title="General architecture" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
         <a href="otis_ilao_api.html" class="btn btn-neutral float-left" title="ILAO OTIS API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
