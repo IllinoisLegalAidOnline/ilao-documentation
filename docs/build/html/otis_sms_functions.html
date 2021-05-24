@@ -43,8 +43,8 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="OTIS SMS API" href="otis_sms_api_calls.html" />
-    <link rel="prev" title="Online Intake Over SMS" href="otis_sms_intake.html" /> 
+    <link rel="next" title="Get Legal Help text line Workflow" href="otis_sms_twilio_studio_workflow.html" />
+    <link rel="prev" title="General architecture" href="otis_sms_intake_architecture.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -110,12 +110,50 @@
 <li class="toctree-l2"><a class="reference internal" href="otis_third_party_support.html">Supported Integrations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="otis_ilao_api.html">ILAO OTIS API</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="otis_sms_intake.html">Online Intake Over SMS</a><ul class="current">
-<li class="toctree-l3 current"><a class="reference internal" href="otis_sms_intake.html#general-architecture">General Architecture</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="otis_sms_intake.html#twilio-studio">Twilio Studio</a></li>
-<li class="toctree-l4"><a class="reference internal" href="otis_sms_intake.html#twilio-functions">Twilio Functions</a></li>
-<li class="toctree-l4 current"><a class="reference internal" href="otis_sms_intake.html#ilao-apis">ILAO APIs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="otis_sms_intake_architecture.html">General architecture</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Twilio Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#function-standards">Function standards</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#oauth-get-token">OAuth get token</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#eviction-intake-settings">Eviction intake settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#eviction-legal-issues">Eviction legal issues</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#eviction-content">Eviction content</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hud-housing-counselors">HUD housing counselors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#otis-get-confirmation">OTIS get confirmation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#otis-get-callback-days">OTIS Get Callback Days</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#otis-get-first-callback-time">OTIS Get First Callback Time</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#otis-get-callback-times">OTIS Get Callback Times</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#otis-get-callback-type">OTIS Get Callback Type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#otis-validate-total-income">OTIS Validate Total Income</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#otis-validate-payments">OTIS Validate Payments</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#otis-validate-benefit-types">OTIS Validate Benefit Types</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id1">OTIS Validate Benefit Types</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#otis-validate-money-input">OTIS Validate Money Input</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#otis-validate-race">OTIS Validate Race</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#otis-validate-ethnicity">OTIS Validate Ethnicity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#otis-validate-gender">OTIS Validate Gender</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#otis-validate-marital-status">OTIS Validate Marital Status</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#otis-validate-preferred-language">OTIS Validate Preferred Language</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#otis-validate-year">OTIS Validate Year</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#otis-validate-day-of-month">OTIS Validate Day of Month</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#otis-validate-month">OTIS Validate Month</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#otis-calculate-age">OTIS Calculate Age</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#otis-poverty-estimate">OTIS Poverty Estimate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">OTIS validate total income</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#otis-zipcode-validate">OTIS Zipcode Validate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#create-triage-user">Create Triage User</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#otis-update-triage-user">OTIS Update Triage User</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#get-matches">Get Matches</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#load-marital-statuses">Load marital statuses</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#load-languages">Load languages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#load-genders">Load genders</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#load-ethnicities">Load ethnicities</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#load-races">Load races</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#conflict-check">Conflict check</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#send-to-legal-server">Send to Legal Server</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="otis_sms_twilio_studio_workflow.html">Get Legal Help text line  Workflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sms_eviction.html">Eviction SMS Flow</a></li>
 </ul>
 </li>
 </ul>
@@ -710,6 +748,14 @@ Defaults to 300 if not provided</p></td>
 <p><strong>Requires:</strong>  None</p>
 <p><strong>Returns:</strong> A string of races for display based on the language code provided.</p>
 </div>
+<div class="section" id="conflict-check">
+<h2>Conflict check<a class="headerlink" href="#conflict-check" title="Permalink to this headline">¶</a></h2>
+<p><strong>Function name:</strong>  otis-conflict-check</p>
+<p><strong>Purpose</strong>: Queries the Legal Server conflict check API for a specific organization to evaluate whether a user has a potential conflict.</p>
+<p><strong>Parameters:</strong> event.firstName, event.lastName</p>
+<p><strong>Requires:</strong>  A username, password, and url for each organization we need to run a conflict check on</p>
+<p><strong>Returns:</strong> An object of score (lowest, low, high, highest)</p>
+</div>
 <div class="section" id="send-to-legal-server">
 <h2>Send to Legal Server<a class="headerlink" href="#send-to-legal-server" title="Permalink to this headline">¶</a></h2>
 <p><strong>Function name:</strong>  otis-load-races</p>
@@ -900,8 +946,8 @@ objects for each provided income.  Each</p>
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="otis_sms_api_calls.html" class="btn btn-neutral float-right" title="OTIS SMS API" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="otis_sms_intake.html" class="btn btn-neutral float-left" title="Online Intake Over SMS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="otis_sms_twilio_studio_workflow.html" class="btn btn-neutral float-right" title="Get Legal Help text line Workflow" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="otis_sms_intake_architecture.html" class="btn btn-neutral float-left" title="General architecture" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

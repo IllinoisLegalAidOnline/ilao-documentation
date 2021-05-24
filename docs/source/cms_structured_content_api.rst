@@ -2,10 +2,12 @@
 Structured content API
 ===========================
 
+The structured content API relies on Drupal's JSONAPI.  For information on interacting with that generally, see the `Drupal Documentation <https://www.drupal.org/docs/core-modules-and-themes/core-modules/jsonapi-module/api-overview>`_.
+
 .. toctree::
    :maxdepth: 1
    :caption: Contents:
-   
+
    cms_api_taxonomy_terms
    cms_api_legal_problems_list
    cms_api_legal_problem

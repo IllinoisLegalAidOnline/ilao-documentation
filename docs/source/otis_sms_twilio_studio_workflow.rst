@@ -1,69 +1,358 @@
-==============================
-OTIS Master Twilio Workflow
-==============================
+=====================================
+Get Legal Help text line  Workflow
+=====================================
 
 This documents the flow of the OTIS Master flow in Twilio Studio.
 
-The general flow of the OTIS SMS tool is:
 
-* Get the user's first name
-* Get the user's zip code; this validates that the user is in Illinois. If the user:
+.. note::
 
-  * If the user is not in Illinois, they are directed to LawHelp.org
-  * If the user is in Illinois, they are offered a menu of options for help (currently limited to unemployment, food stamps/TANF, or other). **Picking other, exits the user to the website application.**
-  
-    * If the user picks unemployment or food stamps/tanf (Guided navigation needs to be dropped in here)
-     
-      * Number of adults is collected
-      * Number of children is collected 
-      * The basic income calculation is computed and the user is asked a Y/N question if their household income exceeds our base threshold. If the user indicates Yes, they are exited to the website application.
-      
-    * If the user indicates they are not over-income and are matched to an organization, they are told who they matched to and given the option to continue to a full application. ** If they say no, they are exited to Get Legal Help on the website**  If they say yes:
-    
-      * They are prompted to enter their last name
-      * They are asked if they have any maiden names. If they enter Yes, they are asked to provide them. If they enter no, they are taken to the next question. If they enter other text, that is treated as their maiden name.
-      * They are asked if they have any nicknames. If they enter Yes, they are asked to provide them. If they enter no, they are taken to the next question. If they enter other text, that is treated as their nickname.
-      * The user is then prompted to enter their birthday:
-      
-        * The month is collected; full month names, abbreviations, and numbers are all supported
-        * The day is collected; only values between 1 - 31 are collected
-        * The year is collected; 2 and 4 digit years are supported.
-      
-      * The user is then taken through demographics questions:
-      
-        * Race
-        * Ethnicity
-        * Gender
-        * Marital status
-        * Language preference
-        
-      * The user is then taken to a series of income questions. For each money input, the system validates that the user entered a number and redirects back to the question if they do not.
-      
-        * Do they have wages/salary - if they indicate yes or wages or salary, they are asked to provide the amount.    
-        * Do they have farming or self-employment income - if they indicate yes or wages or salary, they are asked to provide the amount.  
-        * Do they have one or more government benefits; entering any number or partial text will result in a match. The user is then cycled through all the benefits they have to provide an amount. Government benefits include: TANF, Veterans benefits (including disability), unemployment, SSI, Social security.
-        * Do they have one or more other payments; entering any number or partial text will result in a match. The user is then cycled through all the payments they have to provide an amount. Payment types include:  private disability payments, alimony, child support, workers compensation, pension/retirement income, and investment income.
-        * Do they have any other income? If they respond yes, they are asked for the amount.
-        * Once income is collected, we collect contact information:
-        
-          * Is this there best contact number (if they say no, they are prompted to add a number)
-          * What is their email address?
-          * What is their street address
-          * What city?
-          
-        * Next it processes the confirmation:
-        
-          * If the user needs to call the program, it exits with the "please call" message.
-          * If the user needs to schedule a callback:
-          
-            * The system provides the range of available times and the first available day.
-            * If the user is okay with that day, they are provided a list of time slots
-            * If the user is not okay with that day, they are provided a list of alternate days.
-            
-              * If none of the dates work, the user is prompted to text 0 which will convert it to a "please call"
-              * If one of the dates work, they are provided with a list of time slots to pick one.
-            
-            * Once the user picks a time slot, the data is transferred and they are given their confirmation text message. 
-          
-  
-  
+  * Future enhancement will include scheduling a callback slot
+  * Initial pilot is limited to unemployment, food stamps, and TANF
+  * Future build out should include referral
+
+Workflow Tree
+=================
+
+Initial message
+
+Overview message
+
+  Option to end => Exits
+  Any other response => CONTINUE
+
+First name
+
+Last name
+
+Zip code
+
+  System:  Get region data for zip code (state, county, county FIPS)
+
+  In Illinois,
+
+    System:  Create initial OTIS user record in OTIS database
+
+  Not in Illinois,
+
+   Offer to retry Zip
+
+     If user replies zip, re-ask zip code
+
+     Otherwise, Link to LawHelp
+
+
+Get Legal Issue (7 options)
+
+  User replies More
+
+    Show definitions
+
+    Return to legal issue
+
+  User replies 1 (Unemployment)
+
+     Runs Guided Navigation
+
+     CONTINUE to matches
+
+  User replies 2 (Food stamps)
+
+     Runs Guided Navigation
+
+     CONTINUE to matches
+
+  User replies 3 (TANF)
+
+     Runs Guided Navigation
+
+     CONTINUE to matches
+
+  User replies 4 (Eviction)
+
+     Exit to Eviction Help Illinois text line
+
+  User replies 5
+
+     User gets exit message to Get Legal Help
+
+System runs matches code based on:
+
+  * legal issue/guided navigation results
+  * first name and last name
+  * zip code
+
+.. note::  If there are no matches, provide legal information and referrals.
+
+Matches: Ask user if they want to continue to apply to the organizations
+
+  User says no
+
+    System: Save user data to OTIS database
+
+    Exits to Legal content
+
+  Users says yes CONTINUE
+
+Household prompt
+
+  Household adult
+
+  Household children
+
+  System: Saves household data to user's profile in OTIS database
+
+    Throw error if either is not numeric
+
+Get maiden names, if any
+
+Get nicknames, if any
+
+Get birth month
+
+  System: Validate birth month based on name/abbreviation or numeric input
+
+  Ask user to retry if invalid
+
+Get birth day
+
+  System: Vaidate birth day as numeric and within the month's allowable range
+
+  Ask user to retry if invalid
+
+Get birth year
+
+  System: Validate birthd year as numeric.  If user provided a 2 digit, assume 19xx if greater than 10.
+
+Ask user to confirm birthdate
+
+  If confirmed,
+
+    System:  Calculate age and save to user's profile in OTIS database
+
+    CONTINIUE
+
+  If not confirmed, go back to birth month
+
+Start demographics
+
+Get race
+
+  System:  Validate selection; if invalid, ask to retry
+
+  If race = hispanic/latino, set ethnicity to Hispanic
+
+  Otherwise, Get ethnicity
+
+  Get ethnicity
+    System: Validate selection; if invalid, ask to retry
+
+Get gender
+  System:  Validate selection; if invalid, ask to retry
+
+Get marital status
+   System:  Validate selection; if invalid, ask to retry
+
+Get preferred language
+  System:  Validate selection; if invalid, ask to retry
+
+System:  Save demographic data to user's profile in OTIS database
+
+Income prompt
+
+Ask wages/salary
+  Yes
+
+    Ask frequency
+
+      User replies 1,2,3,4
+        Get amount
+
+        Validate and throw error if needed, else CONTINUE
+
+      User replies anything else
+        Throw error and allow them to correct
+
+  No
+    CONTINUE
+
+  Not sure
+    Show help
+
+  Anything else
+    Re-ask wages/salary question
+
+Ask farming/self employment
+  Yes
+    Get amount
+      Validate and throw error if needed, else CONTINUE
+
+  No
+    CONTINUE
+
+  Anything else
+    Show help
+    Re-ask farming/self-employment
+
+Ask benefits question (Yes, no, choices)
+
+  Yes
+
+    Ask for choice; then System: Create list of choices to loop through
+    CONTINUE
+
+  No
+
+    CONTINUE to other payments
+
+  Numeric choices
+
+    System:  Create list of choices to loop through.
+    CONTINUE to For each benefit type selected
+
+  Invalid data
+
+    Show error message
+    Re-as question
+
+For each benefit type selected:
+
+  Ask amount
+  Validate amount
+
+    Ask user to retry if not numeric
+
+  CONTINUE to next benefit type or when complete, to ask other payment question
+
+Ask other payments question (Yes, no, choices)
+
+  Yes
+
+    Ask for choice; then System: Create list of choices to loop through
+    CONTINUE
+
+  No
+    CONTINUE to other income
+
+  Numeric choices
+
+    System:  Create list of choices to loop through.
+    CONTINUE to For each other payment type selected
+
+  Invalid data
+
+    Show error message
+    Re-as question
+
+
+For each other payment type selected:
+
+  Ask amount
+  Validate amount
+
+    Ask user to retry if not numeric
+
+  CONTINUE
+
+Ask if user has other income
+
+  Any response other than no
+
+    Get amount
+    Validate amount
+    Re ask if invalid
+    CONTINUE
+
+  No
+
+    CONTINUE
+
+System: Calculate total income and compare to allowable income based on 80% of AMI.
+
+  If user is over-income
+
+    System: Save total income
+
+    System: Update user profile as overincome to OTIS database
+
+    Inform user we can't complete intake
+
+    Exit to legal information
+
+  If user is not over-income
+
+    System: Save total income
+
+    System: Update user profile with income information
+
+    CONTINUE
+
+
+Ask if current number is best to reach at
+
+  YES
+    CONTINUE
+
+  NO
+    Ask for valid number
+
+    Validate number
+
+      Valid => CONTINUE
+
+      Invalid => Repeat
+
+Get email address
+
+Get street address
+
+Get city
+
+Ask user to confirm their contact information
+
+  YES
+    CONTINUE
+
+  NO
+    Re-ask contact questions starting with phone number
+
+System:  Check program contact type.
+
+  If client calls
+
+    System: eTransfer case file to Legal Server
+
+    System: user profile data sent to OTIS database
+
+    System: update intake settings current count
+
+    Show program's client call message
+
+    Show program's disclaimer
+
+    Show confirmation message
+
+  If callback
+
+    Ask user whether they prefer morning or afternoon callback
+
+      If morning or afternoon, CONTINUE
+
+      If neither, throw error and re-ask
+
+    System: eTransfer case file to Legal Server
+
+    System: user profile data sent to OTIS database
+
+    System: update intake settings current count
+
+    Show program's we call client message
+
+    Show program's disclaimer
+
+    Show confirmation message
+
+END
+
+
+

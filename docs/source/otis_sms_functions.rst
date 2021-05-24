@@ -626,6 +626,18 @@ Load races
 
 **Returns:** A string of races for display based on the language code provided.
 
+Conflict check
+================
+**Function name:**  otis-conflict-check
+
+**Purpose**: Queries the Legal Server conflict check API for a specific organization to evaluate whether a user has a potential conflict.
+
+**Parameters:** event.firstName, event.lastName
+
+**Requires:**  A username, password, and url for each organization we need to run a conflict check on
+
+**Returns:** An object of score (lowest, low, high, highest)
+
 
 Send to Legal Server
 ======================

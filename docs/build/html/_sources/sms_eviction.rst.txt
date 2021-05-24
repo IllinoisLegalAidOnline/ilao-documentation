@@ -136,9 +136,6 @@ Get Legal Issue (7 options)
 
   User replies 7, user gets exit message to Get Legal Help
 
-  User replies More, user sees help text
-
-
 Matches: Ask user if they want to continue to apply to the organizations
 
   User says no
