@@ -2,6 +2,8 @@
 Scheduling Revisions
 ============================
 
+.. warning::  Scheduling revisions are per-language.  Scheduling a publishing revision for English will have no impact on Spanish or Polish and vice versa. You can create a Spanish revision for example and schedule it for a later date and still continue to make live revisions to Polish and Spanish with no impact.
+
 These instructions apply only to content types subject to moderation:
 
 * legal content
@@ -21,7 +23,9 @@ Set your schedule change
 
 Save your revision
 
-.. warning::  Currently, the actual revision state does not get updated correctly.
+
+
+.. note:: Revision scheduling rely on a scheduled task on the back-end that runs approximately once an hour. Revisions may not go live or be taken down at the exact time you entered.
 
 Use Cases
 =============
@@ -33,12 +37,3 @@ To publish later:
 
 .. image .../assets/cms-scheduler-publish.png
 
-English-only revisions
------------------------
-
-
-Spanish or Polish only revisions
-----------------------------------
-
-Multilingual revisions
------------------------
