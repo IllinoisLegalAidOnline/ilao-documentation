@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Content API: Solution How-To &mdash; ILAO 2.22 documentation</title>
+  <title>Customizing API results &mdash; ILAO 2.22 documentation</title>
   
 
   
@@ -43,8 +43,8 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Content API: Legal Step" href="cms_api_step.html" />
-    <link rel="prev" title="Content API: How To List" href="cms_api_how_to_list.html" /> 
+    <link rel="next" title="Online triage/intake API" href="otis_api.html" />
+    <link rel="prev" title="API Authorization" href="api_authorization.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -109,34 +109,9 @@
 <li class="toctree-l1"><a class="reference internal" href="rss_feeds.html">RSS Feeds</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="ilao_api.html">ILAO’s API</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="api_authorization.html">API Authorization</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api_filtering.html">Customizing API results</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Customizing API results</a></li>
 <li class="toctree-l2"><a class="reference internal" href="otis_api.html">Online triage/intake API</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="cms_structured_content_api.html">Structured content API</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="cms_api_taxonomy_terms.html">Content taxonomy terms</a></li>
-<li class="toctree-l3"><a class="reference internal" href="cms_api_legal_problems_list.html">Content API: Legal Problems List</a></li>
-<li class="toctree-l3"><a class="reference internal" href="cms_api_legal_problem.html">Content API: Legal Problem</a></li>
-<li class="toctree-l3"><a class="reference internal" href="cms_api_solutions_list.html">Content API:  Solutions List</a></li>
-<li class="toctree-l3"><a class="reference internal" href="cms_api_solution.html">Content API: Legal Solution</a></li>
-<li class="toctree-l3"><a class="reference internal" href="cms_api_questions_list.html">Content API:  Legal Questions List</a></li>
-<li class="toctree-l3"><a class="reference internal" href="cms_api_faq.html">Content API:  Legal Problem FAQ</a></li>
-<li class="toctree-l3"><a class="reference internal" href="cms_api_question.html">Content API:  Legal Question</a></li>
-<li class="toctree-l3"><a class="reference internal" href="cms_api_solution_eligibility.html">Content API:  Solution Eligibility Rules</a></li>
-<li class="toctree-l3"><a class="reference internal" href="cms_api_solution_information_needed.html">Content API:  Solution Information Needed</a></li>
-<li class="toctree-l3"><a class="reference internal" href="cms_api_how_to_list.html">Content API:  How To List</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Content API: Solution How-To</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#function-call">Function call</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#sample-response">Sample response</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#parameters">Parameters</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="cms_api_step.html">Content API:  Legal Step</a></li>
-<li class="toctree-l3"><a class="reference internal" href="cms_api_solution_forms.html">Content API:  Legal Solution Forms Needed</a></li>
-<li class="toctree-l3"><a class="reference internal" href="cms_api_solution_form.html">Content API:  Legal Form</a></li>
-<li class="toctree-l3"><a class="reference internal" href="cms_api_solution_result.html">Content API:  Solution Result</a></li>
-<li class="toctree-l3"><a class="reference internal" href="cms_api_solution_helpful_organization.html">Content API: Legal Solution Helpful Organization</a></li>
-<li class="toctree-l3"><a class="reference internal" href="cms_structured_content_api.html#authentication">Authentication</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="cms_structured_content_api.html">Structured content API</a></li>
 </ul>
 </li>
 </ul>
@@ -191,19 +166,15 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-          <li><a href="legal_content_cms.html">Legal Content CMS</a> &raquo;</li>
+          <li><a href="ilao_api.html">ILAO’s API</a> &raquo;</li>
         
-          <li><a href="cms_structured_legal_content.html">Structured Legal Content</a> &raquo;</li>
-        
-          <li><a href="cms_structured_content_api.html">Structured content API</a> &raquo;</li>
-        
-      <li>Content API: Solution How-To</li>
+      <li>Customizing API results</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="_sources/cms_api_solution_how_to.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/api_filtering.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -216,30 +187,9 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="content-api-solution-how-to">
-<h1>Content API: Solution How-To<a class="headerlink" href="#content-api-solution-how-to" title="Permalink to this headline">¶</a></h1>
-<p>Returns a specific how-to for a legal solution.</p>
-<div class="section" id="function-call">
-<h2>Function call<a class="headerlink" href="#function-call" title="Permalink to this headline">¶</a></h2>
-<p>Method:  GET</p>
-<p>URLS:</p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://www.illinoislegalaid.org/jsonapi/node/legal_how_to/[uuid">https://www.illinoislegalaid.org/jsonapi/node/legal_how_to/[uuid</a>] (English)</p></li>
-<li><p><a class="reference external" href="https://www.illinoislegalaid.org/es/jsonapi/node/legal_how_to[uuid">https://www.illinoislegalaid.org/es/jsonapi/node/legal_how_to[uuid</a>] (Spanish)</p></li>
-<li><p><a class="reference external" href="https://www.illinoislegalaid.org/pl/jsonapi/node/legal_how_to[uuid">https://www.illinoislegalaid.org/pl/jsonapi/node/legal_how_to[uuid</a>] (Polish)</p></li>
-</ul>
-</div>
-<div class="section" id="sample-response">
-<h2>Sample response<a class="headerlink" href="#sample-response" title="Permalink to this headline">¶</a></h2>
-<p>See the <a class="reference internal" href="cms_api_how_to_list.html#legal-howto-list-api"><span class="std std-ref">Content API:  How To List</span></a> for  an example response</p>
-</div>
-<div class="section" id="parameters">
-<h2>Parameters<a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>howto_identifier:  uuid of the howto. Required</p></li>
-</ul>
-<p>Additional parameters supported by the JSONAPI are allowed See the <a class="reference internal" href="api_filtering.html#ilao-api-filters"><span class="std std-ref">Customizing API results</span></a> for filter examples.</p>
-</div>
+  <div class="section" id="customizing-api-results">
+<span id="ilao-api-filters"></span><h1>Customizing API results<a class="headerlink" href="#customizing-api-results" title="Permalink to this headline">¶</a></h1>
+<p>Placeholder doc for filtering</p>
 </div>
 
 
@@ -248,8 +198,8 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="cms_api_step.html" class="btn btn-neutral float-right" title="Content API: Legal Step" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="cms_api_how_to_list.html" class="btn btn-neutral float-left" title="Content API: How To List" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="otis_api.html" class="btn btn-neutral float-right" title="Online triage/intake API" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="api_authorization.html" class="btn btn-neutral float-left" title="API Authorization" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

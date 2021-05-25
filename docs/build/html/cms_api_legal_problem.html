@@ -109,6 +109,7 @@
 <li class="toctree-l1"><a class="reference internal" href="rss_feeds.html">RSS Feeds</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="ilao_api.html">ILAO’s API</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="api_authorization.html">API Authorization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_filtering.html">Customizing API results</a></li>
 <li class="toctree-l2"><a class="reference internal" href="otis_api.html">Online triage/intake API</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="cms_structured_content_api.html">Structured content API</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="cms_api_taxonomy_terms.html">Content taxonomy terms</a></li>
@@ -221,16 +222,27 @@
 <div class="section" id="function-call">
 <h2>Function call<a class="headerlink" href="#function-call" title="Permalink to this headline">¶</a></h2>
 <p>Method: GET</p>
+<p>URLS:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.illinoislegalaid.org/jsonapi/node/legal_problem/[uuid">https://www.illinoislegalaid.org/jsonapi/node/legal_problem/[uuid</a>] (English)</p></li>
+<li><p><a class="reference external" href="https://www.illinoislegalaid.org/es/jsonapi/node/legal_problem/[uuid">https://www.illinoislegalaid.org/es/jsonapi/node/legal_problem/[uuid</a>] (Spanish)</p></li>
+<li><p><a class="reference external" href="https://www.illinoislegalaid.org/pl/jsonapi/node/legal_problem/[uuid](Polish">https://www.illinoislegalaid.org/pl/jsonapi/node/legal_problem/[uuid](Polish</a>)</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For example <a class="reference external" href="https://www.illinoislegalaid.org/jsonapi/node/legal_problem/9cff9122-2e2e-404a-b909-bf58955c40a6">https://www.illinoislegalaid.org/jsonapi/node/legal_problem/9cff9122-2e2e-404a-b909-bf58955c40a6</a> returns the Legal Problem of “I am unemployed”</p>
+</div>
 </div>
 <div class="section" id="sample-output">
 <h2>Sample Output<a class="headerlink" href="#sample-output" title="Permalink to this headline">¶</a></h2>
-<p>See the order of protection JSON file.</p>
+<p>See the <a class="reference internal" href="cms_api_legal_problems_list.html#legal-problems-list-api"><span class="std std-ref">Content API: Legal Problems List</span></a> for an example.</p>
 </div>
 <div class="section" id="parameters">
 <h2>Parameters<a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>identifier:  the uuid of the problem (required)</p></li>
 </ul>
+<p>Additional parameters supported by the JSONAPI are allowed See the <a class="reference internal" href="api_filtering.html#ilao-api-filters"><span class="std std-ref">Customizing API results</span></a> for filter examples.</p>
 </div>
 </div>
 

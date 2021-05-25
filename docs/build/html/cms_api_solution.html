@@ -109,6 +109,7 @@
 <li class="toctree-l1"><a class="reference internal" href="rss_feeds.html">RSS Feeds</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="ilao_api.html">ILAO’s API</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="api_authorization.html">API Authorization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_filtering.html">Customizing API results</a></li>
 <li class="toctree-l2"><a class="reference internal" href="otis_api.html">Online triage/intake API</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="cms_structured_content_api.html">Structured content API</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="cms_api_taxonomy_terms.html">Content taxonomy terms</a></li>
@@ -221,14 +222,27 @@
 <div class="section" id="function-call">
 <h2>Function call<a class="headerlink" href="#function-call" title="Permalink to this headline">¶</a></h2>
 <p>Method: GET</p>
+<p>URLs:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.illinoislegalaid.org/jsonapi/node/legal_solution/[uuid">https://www.illinoislegalaid.org/jsonapi/node/legal_solution/[uuid</a>] (English)</p></li>
+<li><p><a class="reference external" href="https://www.illinoislegalaid.org/es/jsonapi/node/legal_solution/[uuid">https://www.illinoislegalaid.org/es/jsonapi/node/legal_solution/[uuid</a>] (Spanish)</p></li>
+<li><p><a class="reference external" href="https://www.illinoislegalaid.org/pl/jsonapi/node/legal_solution[uuid">https://www.illinoislegalaid.org/pl/jsonapi/node/legal_solution[uuid</a>] (Polish)</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For example:  <a class="reference external" href="https://www.illinoislegalaid.org/jsonapi/node/legal_solution/608b2d24-b283-46ec-a8e0-4fb2ec920b2d">https://www.illinoislegalaid.org/jsonapi/node/legal_solution/608b2d24-b283-46ec-a8e0-4fb2ec920b2d</a> will return the Legal Solution Apply for unemployment insurance (UI) benefits.</p>
+</div>
 </div>
 <div class="section" id="sample-response">
 <h2>Sample Response<a class="headerlink" href="#sample-response" title="Permalink to this headline">¶</a></h2>
-<p>See the order of protection schema</p>
+<p>See the <a class="reference internal" href="cms_api_solutions_list.html#legal-solution-list-api"><span class="std std-ref">Content API:  Solutions List</span></a> for a full example.</p>
 </div>
 <div class="section" id="parameters">
 <h2>Parameters<a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h2>
-<p>identifier:  the uuid of the specific solution</p>
+<ul class="simple">
+<li><p>identifier (required):  the uuid of the specific solution must be included.</p></li>
+</ul>
+<p>Additional parameters supported by the JSONAPI are allowed See the <a class="reference internal" href="api_filtering.html#ilao-api-filters"><span class="std std-ref">Customizing API results</span></a> for filter examples.</p>
 </div>
 </div>
 

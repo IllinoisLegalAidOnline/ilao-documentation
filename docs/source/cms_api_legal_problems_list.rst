@@ -1,3 +1,5 @@
+.. _legal-problems-list-api:
+
 ====================================
 Content API: Legal Problems List
 ====================================
@@ -13,13 +15,11 @@ URLs:
 
 * https://www.illinoislegalaid.org/jsonapi/node/legal_problem (English)
 * https://www.illinoislegalaid.org/es/jsonapi/node/legal_problem (Spanish)
-* https://www.illinoislegalaid.org/pl/jsonapi/node/legal_problem
+* https://www.illinoislegalaid.org/pl/jsonapi/node/legal_problem (Polish)
 
 Parameters
 =================
-Any parameter supported by the JSONAPI is supported.  Common ones may include:
-
-
+Any parameter supported by the JSONAPI is supported. See the :ref:`ilao-api-filters` for filter examples.
 
 
 Sample Output

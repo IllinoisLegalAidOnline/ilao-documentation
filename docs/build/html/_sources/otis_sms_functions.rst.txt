@@ -546,7 +546,20 @@ This function is called when:
 
 
 
+Increase intake counter
+==========================
 
+**Function name:**  otis-increase-intake-counter
+
+**Purpose**:  Updates the current count for an intake setings id when a case is successfully transferred to Legal Server.
+
+**Parameters:** event.current_count & event.uuid
+
+**Requires:** JSON API for online intake
+
+**Returns:** Nothing
+
+**Status:** In development.
 
 Get Matches
 ==========================

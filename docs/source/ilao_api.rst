@@ -11,7 +11,8 @@ API functionality requires an OAuth bearer token.  Please contact Gwen Daniels a
 .. toctree::
    :maxdepth: 1
    :caption: Contents:
-   
+
    api_authorization
+   api_filtering
    otis_api
    cms_structured_content_api
