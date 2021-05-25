@@ -1,3 +1,5 @@
+.. _legal-questions-list-api:
+
 ====================================
 Content API:  Legal Questions List
 ====================================
@@ -7,43 +9,21 @@ Returns list of questions from the legal question content type. The list will be
 
 
 Function call
-===============
+=================
 
 Method: GET
 
+URLs:
 
-Sample response
-===============
-
-.. code-block:: json
-
-   [{
-	"questions": [{
-			"name": "How long does an Order of Protection last?",
-			"identifier": "b06e8c24-38ab-11eb-adc1-0242ac120002",
-			"language": "en"
-		},
-		{
-			"name": "What if my abuser lives with me?",
-			"identifier": "b06e8c24-38ab-11eb-adc1-0242ac120002",
-			"language": "en"
-		},
-		{
-			"name": "What if I have pets?",
-			"identifier": "b06e8c24-38ab-11eb-adc1-0242ac120002",
-			"language": "en"
-		}
-
-	]
-  }]
-  
+* https://www.illinoislegalaid.org/jsonapi/node/legal_question (English)
+* https://www.illinoislegalaid.org/es/jsonapi/node/legal_question (Spanish)
+* https://www.illinoislegalaid.org/pl/jsonapi/node/legal_question (Polish)
 
 Parameters
-============
+=================
+Any parameter supported by the JSONAPI is supported. See the :ref:`ilao-api-filters` for filter examples.
 
-* language. The 2 digit ISO code for supported languages
-* coverage area:
+Sample response
+================
 
-   * administrativeArea (one of County, City, Postal code)
-   * locality: the value of the administrativeArea to return
-
+Coming soon

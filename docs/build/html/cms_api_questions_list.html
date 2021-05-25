@@ -43,7 +43,7 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Content API: Legal Problem FAQ" href="cms_api_faq.html" />
+    <link rel="next" title="Content API: Legal Question" href="cms_api_question.html" />
     <link rel="prev" title="Content API: Legal Solution" href="cms_api_solution.html" /> 
 </head>
 
@@ -109,6 +109,7 @@
 <li class="toctree-l1"><a class="reference internal" href="rss_feeds.html">RSS Feeds</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="ilao_api.html">ILAO’s API</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="api_authorization.html">API Authorization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_filtering.html">Customizing API results</a></li>
 <li class="toctree-l2"><a class="reference internal" href="otis_api.html">Online triage/intake API</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="cms_structured_content_api.html">Structured content API</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="cms_api_taxonomy_terms.html">Content taxonomy terms</a></li>
@@ -118,14 +119,11 @@
 <li class="toctree-l3"><a class="reference internal" href="cms_api_solution.html">Content API: Legal Solution</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Content API:  Legal Questions List</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#function-call">Function call</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#sample-response">Sample response</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#parameters">Parameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sample-response">Sample response</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="cms_api_faq.html">Content API:  Legal Problem FAQ</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cms_api_question.html">Content API:  Legal Question</a></li>
-<li class="toctree-l3"><a class="reference internal" href="cms_api_solution_eligibility.html">Content API:  Solution Eligibility Rules</a></li>
-<li class="toctree-l3"><a class="reference internal" href="cms_api_solution_information_needed.html">Content API:  Solution Information Needed</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cms_api_how_to_list.html">Content API:  How To List</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cms_api_solution_how_to.html">Content API: Solution How-To</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cms_api_step.html">Content API:  Legal Step</a></li>
@@ -216,49 +214,25 @@
            <div itemprop="articleBody">
             
   <div class="section" id="content-api-legal-questions-list">
-<h1>Content API:  Legal Questions List<a class="headerlink" href="#content-api-legal-questions-list" title="Permalink to this headline">¶</a></h1>
+<span id="legal-questions-list-api"></span><h1>Content API:  Legal Questions List<a class="headerlink" href="#content-api-legal-questions-list" title="Permalink to this headline">¶</a></h1>
 <p>Returns list of questions from the legal question content type. The list will be limited if optional parameters are included.</p>
 <div class="section" id="function-call">
 <h2>Function call<a class="headerlink" href="#function-call" title="Permalink to this headline">¶</a></h2>
 <p>Method: GET</p>
-</div>
-<div class="section" id="sample-response">
-<h2>Sample response<a class="headerlink" href="#sample-response" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span> <span class="p">[{</span>
-      <span class="nt">&quot;questions&quot;</span><span class="p">:</span> <span class="p">[{</span>
-                      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;How long does an Order of Protection last?&quot;</span><span class="p">,</span>
-                      <span class="nt">&quot;identifier&quot;</span><span class="p">:</span> <span class="s2">&quot;b06e8c24-38ab-11eb-adc1-0242ac120002&quot;</span><span class="p">,</span>
-                      <span class="nt">&quot;language&quot;</span><span class="p">:</span> <span class="s2">&quot;en&quot;</span>
-              <span class="p">},</span>
-              <span class="p">{</span>
-                      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;What if my abuser lives with me?&quot;</span><span class="p">,</span>
-                      <span class="nt">&quot;identifier&quot;</span><span class="p">:</span> <span class="s2">&quot;b06e8c24-38ab-11eb-adc1-0242ac120002&quot;</span><span class="p">,</span>
-                      <span class="nt">&quot;language&quot;</span><span class="p">:</span> <span class="s2">&quot;en&quot;</span>
-              <span class="p">},</span>
-              <span class="p">{</span>
-                      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;What if I have pets?&quot;</span><span class="p">,</span>
-                      <span class="nt">&quot;identifier&quot;</span><span class="p">:</span> <span class="s2">&quot;b06e8c24-38ab-11eb-adc1-0242ac120002&quot;</span><span class="p">,</span>
-                      <span class="nt">&quot;language&quot;</span><span class="p">:</span> <span class="s2">&quot;en&quot;</span>
-              <span class="p">}</span>
-
-      <span class="p">]</span>
-<span class="p">}]</span>
-</pre></div>
-</div>
+<p>URLs:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.illinoislegalaid.org/jsonapi/node/legal_question">https://www.illinoislegalaid.org/jsonapi/node/legal_question</a> (English)</p></li>
+<li><p><a class="reference external" href="https://www.illinoislegalaid.org/es/jsonapi/node/legal_question">https://www.illinoislegalaid.org/es/jsonapi/node/legal_question</a> (Spanish)</p></li>
+<li><p><a class="reference external" href="https://www.illinoislegalaid.org/pl/jsonapi/node/legal_question">https://www.illinoislegalaid.org/pl/jsonapi/node/legal_question</a> (Polish)</p></li>
+</ul>
 </div>
 <div class="section" id="parameters">
 <h2>Parameters<a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h2>
-<ul>
-<li><p>language. The 2 digit ISO code for supported languages</p></li>
-<li><p>coverage area:</p>
-<blockquote>
-<div><ul class="simple">
-<li><p>administrativeArea (one of County, City, Postal code)</p></li>
-<li><p>locality: the value of the administrativeArea to return</p></li>
-</ul>
-</div></blockquote>
-</li>
-</ul>
+<p>Any parameter supported by the JSONAPI is supported. See the <a class="reference internal" href="api_filtering.html#ilao-api-filters"><span class="std std-ref">Customizing API results</span></a> for filter examples.</p>
+</div>
+<div class="section" id="sample-response">
+<h2>Sample response<a class="headerlink" href="#sample-response" title="Permalink to this headline">¶</a></h2>
+<p>Coming soon</p>
 </div>
 </div>
 
@@ -268,7 +242,7 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="cms_api_faq.html" class="btn btn-neutral float-right" title="Content API: Legal Problem FAQ" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="cms_api_question.html" class="btn btn-neutral float-right" title="Content API: Legal Question" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
         <a href="cms_api_solution.html" class="btn btn-neutral float-left" title="Content API: Legal Solution" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 

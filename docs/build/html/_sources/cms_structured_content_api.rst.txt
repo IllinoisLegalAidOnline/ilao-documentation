@@ -14,10 +14,7 @@ The structured content API relies on Drupal's JSONAPI.  For information on inter
    cms_api_solutions_list
    cms_api_solution
    cms_api_questions_list
-   cms_api_faq
    cms_api_question
-   cms_api_solution_eligibility
-   cms_api_solution_information_needed
    cms_api_how_to_list
    cms_api_solution_how_to
    cms_api_step
