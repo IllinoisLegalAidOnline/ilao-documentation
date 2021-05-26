@@ -1,7 +1,7 @@
 =====================================
 Specialized reporting: State Grants
 =====================================
-
+The reports below are used for reporting on our Access to Justice(A2J) grants.
 Intake by population/legal issue
 
 * `Incarceration intakes by special population <https://www.illinoislegalaid.org/admin/reporting/a2j/otis-incarceration-populations>`_
