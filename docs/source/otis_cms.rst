@@ -13,5 +13,6 @@ Get Legal Help
    otis_third_party_support
    otis_sms_intake
 
-See also :ref:`otis_api`
-   
+See also :ref:`otis-api`
+
+
