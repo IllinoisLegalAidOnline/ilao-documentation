@@ -6,12 +6,14 @@ Online Intake Over SMS
 
 .. toctree::
    :maxdepth: 1
-   :caption: See also:
+   :caption: Contents:
 
    otis_sms_intake_architecture
    otis_sms_functions
    otis_sms_twilio_studio_workflow
    sms_eviction
+
+
 
 
 

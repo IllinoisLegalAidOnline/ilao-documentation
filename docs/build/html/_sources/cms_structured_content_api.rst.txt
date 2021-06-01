@@ -4,6 +4,16 @@ Structured content API
 
 The structured content API relies on Drupal's JSONAPI.  For information on interacting with that generally, see the `Drupal Documentation <https://www.drupal.org/docs/core-modules-and-themes/core-modules/jsonapi-module/api-overview>`_.
 
+JSONAPI results generally are formatted in JSON with the data stored in the response.data object:
+
+* type (entity type)
+* id (string of the uuid)
+* attributes, an object of field data
+* relationships, an object of types, id, and links to referenced entities
+* included, an optional object of full referenced entities. This requires an includes parameter be provided.
+
+
+
 .. toctree::
    :maxdepth: 1
    :caption: Contents:

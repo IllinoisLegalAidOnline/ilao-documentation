@@ -109,7 +109,8 @@
 <li class="toctree-l1"><a class="reference internal" href="rss_feeds.html">RSS Feeds</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="ilao_api.html">ILAO’s API</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="api_authorization.html">API Authorization</a></li>
-<li class="toctree-l2"><a class="reference internal" href="otis_api.html">Online triage/intake API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_filtering.html">Customizing API results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="otis_api.html">ILAO OTIS API</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="cms_structured_content_api.html">Structured content API</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="cms_api_taxonomy_terms.html">Content taxonomy terms</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cms_api_legal_problems_list.html">Content API: Legal Problems List</a></li>
@@ -117,10 +118,7 @@
 <li class="toctree-l3"><a class="reference internal" href="cms_api_solutions_list.html">Content API:  Solutions List</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cms_api_solution.html">Content API: Legal Solution</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cms_api_questions_list.html">Content API:  Legal Questions List</a></li>
-<li class="toctree-l3"><a class="reference internal" href="cms_api_faq.html">Content API:  Legal Problem FAQ</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cms_api_question.html">Content API:  Legal Question</a></li>
-<li class="toctree-l3"><a class="reference internal" href="cms_api_solution_eligibility.html">Content API:  Solution Eligibility Rules</a></li>
-<li class="toctree-l3"><a class="reference internal" href="cms_api_solution_information_needed.html">Content API:  Solution Information Needed</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cms_api_how_to_list.html">Content API:  How To List</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cms_api_solution_how_to.html">Content API: Solution How-To</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Content API:  Legal Step</a><ul>
@@ -217,37 +215,1007 @@
             
   <div class="section" id="content-api-legal-step">
 <h1>Content API:  Legal Step<a class="headerlink" href="#content-api-legal-step" title="Permalink to this headline">¶</a></h1>
-<p>Returns a specific Legal Step. The UUID of the specific Legal Step must be provided.</p>
+<p>Returns one or more Legal Steps. The UUID of the specific Legal Step may be provided.</p>
 <div class="section" id="function-call">
 <h2>Function call<a class="headerlink" href="#function-call" title="Permalink to this headline">¶</a></h2>
 <p>Method: GET</p>
 </div>
 <div class="section" id="sample-response">
 <h2>Sample response<a class="headerlink" href="#sample-response" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span>   <span class="p">[{</span>
-       <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Make sure you are safe&quot;</span><span class="p">,</span>
-       <span class="nt">&quot;identifier&quot;</span><span class="p">:</span> <span class="s2">&quot;396fdcd8-3a61-11eb-adc1-0242ac120002&quot;</span><span class="p">,</span>
-       <span class="nt">&quot;position&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-       <span class="nt">&quot;howToDirections&quot;</span><span class="p">:</span> <span class="p">[{</span>
-               <span class="nt">&quot;position&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-               <span class="nt">&quot;direction&quot;</span><span class="p">:</span> <span class="s2">&quot;Domestic violence victims are most likely to be attacked when they leave the abuser and/or when they seek legal help. A safety plan[1] increase your safety and prepare you in advance for violence that may happen in the future. See [1] https://www.illinoislegalaid.org/node/30281&quot;</span><span class="p">,</span>
-               <span class="nt">&quot;referenceUrls&quot;</span><span class="p">:</span> <span class="p">[</span>
-                       <span class="s2">&quot;https://www.illinoislegalaid.org/node/30281&quot;</span>
-               <span class="p">]</span>
-       <span class="p">}],</span>
-       <span class="nt">&quot;howToTips&quot;</span><span class="p">:</span> <span class="p">[{</span>
-               <span class="nt">&quot;position&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
-               <span class="nt">&quot;tip&quot;</span><span class="p">:</span> <span class="s2">&quot;You don&#39;t have control over your partner&#39;s violence, but you do have a choice about how to respond, and how best to get you and your loved ones to safety.&quot;</span>
-       <span class="p">}]</span>
-<span class="p">}]</span>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span> <span class="p">{</span>
+  <span class="nt">&quot;jsonapi&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;1.0&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;meta&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+              <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;http://jsonapi.org/format/1.0/&quot;</span>
+              <span class="p">}</span>
+          <span class="p">}</span>
+      <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;node--legal_step&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;5e640607-35a5-4d8b-a2f9-d3b5e40710f0&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+              <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/legal_step/5e640607-35a5-4d8b-a2f9-d3b5e40710f0?resourceVersion=id%3A2358466&quot;</span>
+              <span class="p">}</span>
+          <span class="p">},</span>
+          <span class="nt">&quot;attributes&quot;</span><span class="p">:</span> <span class="p">{</span>
+              <span class="nt">&quot;drupal_internal__nid&quot;</span><span class="p">:</span> <span class="mi">166886</span><span class="p">,</span>
+              <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Prepare and gather information for unemployment application&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;drupal_internal__vid&quot;</span><span class="p">:</span> <span class="mi">2358466</span><span class="p">,</span>
+              <span class="nt">&quot;langcode&quot;</span><span class="p">:</span> <span class="s2">&quot;en&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;revision_timestamp&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-05-05T19:27:58+00:00&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;revision_log&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+              <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+              <span class="nt">&quot;created&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-05-05T18:57:54+00:00&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;changed&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-05-05T19:27:58+00:00&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;promote&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+              <span class="nt">&quot;sticky&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+              <span class="nt">&quot;default_langcode&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+              <span class="nt">&quot;revision_translation_affected&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+              <span class="nt">&quot;moderation_state&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+              <span class="nt">&quot;scheduled_transition_date&quot;</span><span class="p">:</span> <span class="p">[],</span>
+              <span class="nt">&quot;scheduled_transition_state&quot;</span><span class="p">:</span> <span class="p">[],</span>
+              <span class="nt">&quot;metatag&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+              <span class="nt">&quot;path&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;alias&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+                  <span class="nt">&quot;pid&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+                  <span class="nt">&quot;langcode&quot;</span><span class="p">:</span> <span class="s2">&quot;en&quot;</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;content_translation_source&quot;</span><span class="p">:</span> <span class="s2">&quot;und&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;content_translation_outdated&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+              <span class="nt">&quot;body&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+              <span class="nt">&quot;field_content_description&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+              <span class="nt">&quot;field_legal_position&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+              <span class="nt">&quot;field_meta_description&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+              <span class="nt">&quot;field_request_translation&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;field_translation_outdated&quot;</span><span class="p">:</span> <span class="kc">false</span>
+          <span class="p">},</span>
+          <span class="nt">&quot;relationships&quot;</span><span class="p">:</span> <span class="p">{</span>
+              <span class="nt">&quot;node_type&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;node_type--node_type&quot;</span><span class="p">,</span>
+                      <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;facbbaa1-fabf-43ca-9792-734a4682cbf0&quot;</span>
+                  <span class="p">},</span>
+                  <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/legal_step/5e640607-35a5-4d8b-a2f9-d3b5e40710f0/node_type?resourceVersion=id%3A2358466&quot;</span>
+                      <span class="p">},</span>
+                      <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/legal_step/5e640607-35a5-4d8b-a2f9-d3b5e40710f0/relationships/node_type?resourceVersion=id%3A2358466&quot;</span>
+                      <span class="p">}</span>
+                  <span class="p">}</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;revision_uid&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;user--user&quot;</span><span class="p">,</span>
+                      <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;a230c24c-033c-4bfc-b1bf-5e5266dc0022&quot;</span>
+                  <span class="p">},</span>
+                  <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/legal_step/5e640607-35a5-4d8b-a2f9-d3b5e40710f0/revision_uid?resourceVersion=id%3A2358466&quot;</span>
+                      <span class="p">},</span>
+                      <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/legal_step/5e640607-35a5-4d8b-a2f9-d3b5e40710f0/relationships/revision_uid?resourceVersion=id%3A2358466&quot;</span>
+                      <span class="p">}</span>
+                  <span class="p">}</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;uid&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;user--user&quot;</span><span class="p">,</span>
+                      <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;a230c24c-033c-4bfc-b1bf-5e5266dc0022&quot;</span>
+                  <span class="p">},</span>
+                  <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/legal_step/5e640607-35a5-4d8b-a2f9-d3b5e40710f0/uid?resourceVersion=id%3A2358466&quot;</span>
+                      <span class="p">},</span>
+                      <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/legal_step/5e640607-35a5-4d8b-a2f9-d3b5e40710f0/relationships/uid?resourceVersion=id%3A2358466&quot;</span>
+                      <span class="p">}</span>
+                  <span class="p">}</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;field_annual_updates&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[],</span>
+                  <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/legal_step/5e640607-35a5-4d8b-a2f9-d3b5e40710f0/field_annual_updates?resourceVersion=id%3A2358466&quot;</span>
+                      <span class="p">},</span>
+                      <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/legal_step/5e640607-35a5-4d8b-a2f9-d3b5e40710f0/relationships/field_annual_updates?resourceVersion=id%3A2358466&quot;</span>
+                      <span class="p">}</span>
+                  <span class="p">}</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;field_legal_issues&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;39affc4e-e0e0-4091-addc-c049916dedfc&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;afa23f49-7a9d-4caf-b9ac-63da005dc20a&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;meta&quot;</span><span class="p">:</span> <span class="p">{</span>
+                              <span class="nt">&quot;arity&quot;</span><span class="p">:</span> <span class="mi">0</span>
+                          <span class="p">}</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;dc2775b1-8496-4c61-aead-c1a7ba9c7057&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;meta&quot;</span><span class="p">:</span> <span class="p">{</span>
+                              <span class="nt">&quot;arity&quot;</span><span class="p">:</span> <span class="mi">0</span>
+                          <span class="p">}</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;746c32e5-7cab-48b6-94ac-3a84dbb16b56&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;meta&quot;</span><span class="p">:</span> <span class="p">{</span>
+                              <span class="nt">&quot;arity&quot;</span><span class="p">:</span> <span class="mi">0</span>
+                          <span class="p">}</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;2e7b3842-d298-4935-b281-529ec2db2438&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;afa23f49-7a9d-4caf-b9ac-63da005dc20a&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;meta&quot;</span><span class="p">:</span> <span class="p">{</span>
+                              <span class="nt">&quot;arity&quot;</span><span class="p">:</span> <span class="mi">1</span>
+                          <span class="p">}</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;dc2775b1-8496-4c61-aead-c1a7ba9c7057&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;meta&quot;</span><span class="p">:</span> <span class="p">{</span>
+                              <span class="nt">&quot;arity&quot;</span><span class="p">:</span> <span class="mi">1</span>
+                          <span class="p">}</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;746c32e5-7cab-48b6-94ac-3a84dbb16b56&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;meta&quot;</span><span class="p">:</span> <span class="p">{</span>
+                              <span class="nt">&quot;arity&quot;</span><span class="p">:</span> <span class="mi">1</span>
+                          <span class="p">}</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;d5934598-03f4-4c8d-b705-85a3da6822b9&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;afa23f49-7a9d-4caf-b9ac-63da005dc20a&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;meta&quot;</span><span class="p">:</span> <span class="p">{</span>
+                              <span class="nt">&quot;arity&quot;</span><span class="p">:</span> <span class="mi">2</span>
+                          <span class="p">}</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;dc2775b1-8496-4c61-aead-c1a7ba9c7057&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;meta&quot;</span><span class="p">:</span> <span class="p">{</span>
+                              <span class="nt">&quot;arity&quot;</span><span class="p">:</span> <span class="mi">2</span>
+                          <span class="p">}</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;746c32e5-7cab-48b6-94ac-3a84dbb16b56&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;meta&quot;</span><span class="p">:</span> <span class="p">{</span>
+                              <span class="nt">&quot;arity&quot;</span><span class="p">:</span> <span class="mi">2</span>
+                          <span class="p">}</span>
+                      <span class="p">}</span>
+                  <span class="p">],</span>
+                  <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/legal_step/5e640607-35a5-4d8b-a2f9-d3b5e40710f0/field_legal_issues?resourceVersion=id%3A2358466&quot;</span>
+                      <span class="p">},</span>
+                      <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/legal_step/5e640607-35a5-4d8b-a2f9-d3b5e40710f0/relationships/field_legal_issues?resourceVersion=id%3A2358466&quot;</span>
+                      <span class="p">}</span>
+                  <span class="p">}</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;field_primary_legal_category&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                      <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;39affc4e-e0e0-4091-addc-c049916dedfc&quot;</span>
+                  <span class="p">},</span>
+                  <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/legal_step/5e640607-35a5-4d8b-a2f9-d3b5e40710f0/field_primary_legal_category?resourceVersion=id%3A2358466&quot;</span>
+                      <span class="p">},</span>
+                      <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/legal_step/5e640607-35a5-4d8b-a2f9-d3b5e40710f0/relationships/field_primary_legal_category?resourceVersion=id%3A2358466&quot;</span>
+                      <span class="p">}</span>
+                  <span class="p">}</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;field_step_information&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;paragraph--step_information&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;980d29a7-cc68-48d5-a2a5-f11d0153e936&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;meta&quot;</span><span class="p">:</span> <span class="p">{</span>
+                              <span class="nt">&quot;target_revision_id&quot;</span><span class="p">:</span> <span class="mi">1416716</span>
+                          <span class="p">}</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;paragraph--step_information&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;5641195b-0e27-4ff3-8a65-b7bc5ac64657&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;meta&quot;</span><span class="p">:</span> <span class="p">{</span>
+                              <span class="nt">&quot;target_revision_id&quot;</span><span class="p">:</span> <span class="mi">1416726</span>
+                          <span class="p">}</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;paragraph--step_information&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;3e3a5354-e631-43e5-8289-457bb1a6917f&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;meta&quot;</span><span class="p">:</span> <span class="p">{</span>
+                              <span class="nt">&quot;target_revision_id&quot;</span><span class="p">:</span> <span class="mi">1416736</span>
+                          <span class="p">}</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;paragraph--step_information&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;620ebaa3-5b8d-43ad-9a40-fa2630259274&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;meta&quot;</span><span class="p">:</span> <span class="p">{</span>
+                              <span class="nt">&quot;target_revision_id&quot;</span><span class="p">:</span> <span class="mi">1416746</span>
+                          <span class="p">}</span>
+                      <span class="p">}</span>
+                  <span class="p">],</span>
+                  <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/legal_step/5e640607-35a5-4d8b-a2f9-d3b5e40710f0/field_step_information?resourceVersion=id%3A2358466&quot;</span>
+                      <span class="p">},</span>
+                      <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/legal_step/5e640607-35a5-4d8b-a2f9-d3b5e40710f0/relationships/field_step_information?resourceVersion=id%3A2358466&quot;</span>
+                      <span class="p">}</span>
+                  <span class="p">}</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;field_subject_matter_expert&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[],</span>
+                  <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/legal_step/5e640607-35a5-4d8b-a2f9-d3b5e40710f0/field_subject_matter_expert?resourceVersion=id%3A2358466&quot;</span>
+                      <span class="p">},</span>
+                      <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/legal_step/5e640607-35a5-4d8b-a2f9-d3b5e40710f0/relationships/field_subject_matter_expert?resourceVersion=id%3A2358466&quot;</span>
+                      <span class="p">}</span>
+                  <span class="p">}</span>
+              <span class="p">}</span>
+          <span class="p">}</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;node--legal_step&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;b741a4d5-f4c5-4370-83d1-b76f6a2f6938&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+              <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/legal_step/b741a4d5-f4c5-4370-83d1-b76f6a2f6938?resourceVersion=id%3A2358481&quot;</span>
+              <span class="p">}</span>
+          <span class="p">},</span>
+          <span class="nt">&quot;attributes&quot;</span><span class="p">:</span> <span class="p">{</span>
+              <span class="nt">&quot;drupal_internal__nid&quot;</span><span class="p">:</span> <span class="mi">166896</span><span class="p">,</span>
+              <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Fill out and submit your unemployment application&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;drupal_internal__vid&quot;</span><span class="p">:</span> <span class="mi">2358481</span><span class="p">,</span>
+              <span class="nt">&quot;langcode&quot;</span><span class="p">:</span> <span class="s2">&quot;en&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;revision_timestamp&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-05-05T19:34:08+00:00&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;revision_log&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+              <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+              <span class="nt">&quot;created&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-05-05T19:28:21+00:00&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;changed&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-05-05T19:34:08+00:00&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;promote&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+              <span class="nt">&quot;sticky&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+              <span class="nt">&quot;default_langcode&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+              <span class="nt">&quot;revision_translation_affected&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+              <span class="nt">&quot;moderation_state&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+              <span class="nt">&quot;scheduled_transition_date&quot;</span><span class="p">:</span> <span class="p">[],</span>
+              <span class="nt">&quot;scheduled_transition_state&quot;</span><span class="p">:</span> <span class="p">[],</span>
+              <span class="nt">&quot;metatag&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+              <span class="nt">&quot;path&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;alias&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+                  <span class="nt">&quot;pid&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+                  <span class="nt">&quot;langcode&quot;</span><span class="p">:</span> <span class="s2">&quot;en&quot;</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;content_translation_source&quot;</span><span class="p">:</span> <span class="s2">&quot;und&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;content_translation_outdated&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+              <span class="nt">&quot;body&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+              <span class="nt">&quot;field_content_description&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+              <span class="nt">&quot;field_legal_position&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+              <span class="nt">&quot;field_meta_description&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+              <span class="nt">&quot;field_request_translation&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+              <span class="nt">&quot;field_translation_outdated&quot;</span><span class="p">:</span> <span class="kc">false</span>
+          <span class="p">},</span>
+          <span class="nt">&quot;relationships&quot;</span><span class="p">:</span> <span class="p">{</span>
+              <span class="nt">&quot;node_type&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;node_type--node_type&quot;</span><span class="p">,</span>
+                      <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;facbbaa1-fabf-43ca-9792-734a4682cbf0&quot;</span>
+                  <span class="p">},</span>
+                  <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/legal_step/b741a4d5-f4c5-4370-83d1-b76f6a2f6938/node_type?resourceVersion=id%3A2358481&quot;</span>
+                      <span class="p">},</span>
+                      <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/legal_step/b741a4d5-f4c5-4370-83d1-b76f6a2f6938/relationships/node_type?resourceVersion=id%3A2358481&quot;</span>
+                      <span class="p">}</span>
+                  <span class="p">}</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;revision_uid&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;user--user&quot;</span><span class="p">,</span>
+                      <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;a230c24c-033c-4bfc-b1bf-5e5266dc0022&quot;</span>
+                  <span class="p">},</span>
+                  <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/legal_step/b741a4d5-f4c5-4370-83d1-b76f6a2f6938/revision_uid?resourceVersion=id%3A2358481&quot;</span>
+                      <span class="p">},</span>
+                      <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/legal_step/b741a4d5-f4c5-4370-83d1-b76f6a2f6938/relationships/revision_uid?resourceVersion=id%3A2358481&quot;</span>
+                      <span class="p">}</span>
+                  <span class="p">}</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;uid&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;user--user&quot;</span><span class="p">,</span>
+                      <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;a230c24c-033c-4bfc-b1bf-5e5266dc0022&quot;</span>
+                  <span class="p">},</span>
+                  <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/legal_step/b741a4d5-f4c5-4370-83d1-b76f6a2f6938/uid?resourceVersion=id%3A2358481&quot;</span>
+                      <span class="p">},</span>
+                      <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/legal_step/b741a4d5-f4c5-4370-83d1-b76f6a2f6938/relationships/uid?resourceVersion=id%3A2358481&quot;</span>
+                      <span class="p">}</span>
+                  <span class="p">}</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;field_annual_updates&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[],</span>
+                  <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/legal_step/b741a4d5-f4c5-4370-83d1-b76f6a2f6938/field_annual_updates?resourceVersion=id%3A2358481&quot;</span>
+                      <span class="p">},</span>
+                      <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/legal_step/b741a4d5-f4c5-4370-83d1-b76f6a2f6938/relationships/field_annual_updates?resourceVersion=id%3A2358481&quot;</span>
+                      <span class="p">}</span>
+                  <span class="p">}</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;field_legal_issues&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;39affc4e-e0e0-4091-addc-c049916dedfc&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;afa23f49-7a9d-4caf-b9ac-63da005dc20a&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;dc2775b1-8496-4c61-aead-c1a7ba9c7057&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;746c32e5-7cab-48b6-94ac-3a84dbb16b56&quot;</span>
+                      <span class="p">}</span>
+                  <span class="p">],</span>
+                  <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/legal_step/b741a4d5-f4c5-4370-83d1-b76f6a2f6938/field_legal_issues?resourceVersion=id%3A2358481&quot;</span>
+                      <span class="p">},</span>
+                      <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/legal_step/b741a4d5-f4c5-4370-83d1-b76f6a2f6938/relationships/field_legal_issues?resourceVersion=id%3A2358481&quot;</span>
+                      <span class="p">}</span>
+                  <span class="p">}</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;field_primary_legal_category&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                      <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;39affc4e-e0e0-4091-addc-c049916dedfc&quot;</span>
+                  <span class="p">},</span>
+                  <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/legal_step/b741a4d5-f4c5-4370-83d1-b76f6a2f6938/field_primary_legal_category?resourceVersion=id%3A2358481&quot;</span>
+                      <span class="p">},</span>
+                      <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/legal_step/b741a4d5-f4c5-4370-83d1-b76f6a2f6938/relationships/field_primary_legal_category?resourceVersion=id%3A2358481&quot;</span>
+                      <span class="p">}</span>
+                  <span class="p">}</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;field_step_information&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;paragraph--step_information&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;4309a2b9-0e16-463f-b8ca-177ca62e7e21&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;meta&quot;</span><span class="p">:</span> <span class="p">{</span>
+                              <span class="nt">&quot;target_revision_id&quot;</span><span class="p">:</span> <span class="mi">1416756</span>
+                          <span class="p">}</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;paragraph--step_information&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;429beebd-d7e9-4880-943e-8d2d6dc17f2b&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;meta&quot;</span><span class="p">:</span> <span class="p">{</span>
+                              <span class="nt">&quot;target_revision_id&quot;</span><span class="p">:</span> <span class="mi">1416766</span>
+                          <span class="p">}</span>
+                      <span class="p">}</span>
+                  <span class="p">],</span>
+                  <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/legal_step/b741a4d5-f4c5-4370-83d1-b76f6a2f6938/field_step_information?resourceVersion=id%3A2358481&quot;</span>
+                      <span class="p">},</span>
+                      <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/legal_step/b741a4d5-f4c5-4370-83d1-b76f6a2f6938/relationships/field_step_information?resourceVersion=id%3A2358481&quot;</span>
+                      <span class="p">}</span>
+                  <span class="p">}</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;field_subject_matter_expert&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[],</span>
+                  <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/legal_step/b741a4d5-f4c5-4370-83d1-b76f6a2f6938/field_subject_matter_expert?resourceVersion=id%3A2358481&quot;</span>
+                      <span class="p">},</span>
+                      <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/legal_step/b741a4d5-f4c5-4370-83d1-b76f6a2f6938/relationships/field_subject_matter_expert?resourceVersion=id%3A2358481&quot;</span>
+                      <span class="p">}</span>
+                  <span class="p">}</span>
+              <span class="p">}</span>
+          <span class="p">}</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;node--legal_step&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;513e366f-abce-43c6-9cdc-e59e9c12b0cf&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+              <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/legal_step/513e366f-abce-43c6-9cdc-e59e9c12b0cf?resourceVersion=id%3A2358501&quot;</span>
+              <span class="p">}</span>
+          <span class="p">},</span>
+          <span class="nt">&quot;attributes&quot;</span><span class="p">:</span> <span class="p">{</span>
+              <span class="nt">&quot;drupal_internal__nid&quot;</span><span class="p">:</span> <span class="mi">166901</span><span class="p">,</span>
+              <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Wait for a response from IDES&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;drupal_internal__vid&quot;</span><span class="p">:</span> <span class="mi">2358501</span><span class="p">,</span>
+              <span class="nt">&quot;langcode&quot;</span><span class="p">:</span> <span class="s2">&quot;en&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;revision_timestamp&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-05-05T19:46:44+00:00&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;revision_log&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+              <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+              <span class="nt">&quot;created&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-05-05T19:41:03+00:00&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;changed&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-05-05T19:46:44+00:00&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;promote&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+              <span class="nt">&quot;sticky&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+              <span class="nt">&quot;default_langcode&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+              <span class="nt">&quot;revision_translation_affected&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+              <span class="nt">&quot;moderation_state&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+              <span class="nt">&quot;scheduled_transition_date&quot;</span><span class="p">:</span> <span class="p">[],</span>
+              <span class="nt">&quot;scheduled_transition_state&quot;</span><span class="p">:</span> <span class="p">[],</span>
+              <span class="nt">&quot;metatag&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+              <span class="nt">&quot;path&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;alias&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+                  <span class="nt">&quot;pid&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+                  <span class="nt">&quot;langcode&quot;</span><span class="p">:</span> <span class="s2">&quot;en&quot;</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;content_translation_source&quot;</span><span class="p">:</span> <span class="s2">&quot;und&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;content_translation_outdated&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+              <span class="nt">&quot;body&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+              <span class="nt">&quot;field_content_description&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+              <span class="nt">&quot;field_legal_position&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+              <span class="nt">&quot;field_meta_description&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+              <span class="nt">&quot;field_request_translation&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+              <span class="nt">&quot;field_translation_outdated&quot;</span><span class="p">:</span> <span class="kc">false</span>
+          <span class="p">},</span>
+          <span class="nt">&quot;relationships&quot;</span><span class="p">:</span> <span class="p">{</span>
+              <span class="nt">&quot;node_type&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;node_type--node_type&quot;</span><span class="p">,</span>
+                      <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;facbbaa1-fabf-43ca-9792-734a4682cbf0&quot;</span>
+                  <span class="p">},</span>
+                  <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/legal_step/513e366f-abce-43c6-9cdc-e59e9c12b0cf/node_type?resourceVersion=id%3A2358501&quot;</span>
+                      <span class="p">},</span>
+                      <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/legal_step/513e366f-abce-43c6-9cdc-e59e9c12b0cf/relationships/node_type?resourceVersion=id%3A2358501&quot;</span>
+                      <span class="p">}</span>
+                  <span class="p">}</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;revision_uid&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;user--user&quot;</span><span class="p">,</span>
+                      <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;a230c24c-033c-4bfc-b1bf-5e5266dc0022&quot;</span>
+                  <span class="p">},</span>
+                  <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/legal_step/513e366f-abce-43c6-9cdc-e59e9c12b0cf/revision_uid?resourceVersion=id%3A2358501&quot;</span>
+                      <span class="p">},</span>
+                      <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/legal_step/513e366f-abce-43c6-9cdc-e59e9c12b0cf/relationships/revision_uid?resourceVersion=id%3A2358501&quot;</span>
+                      <span class="p">}</span>
+                  <span class="p">}</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;uid&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;user--user&quot;</span><span class="p">,</span>
+                      <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;a230c24c-033c-4bfc-b1bf-5e5266dc0022&quot;</span>
+                  <span class="p">},</span>
+                  <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/legal_step/513e366f-abce-43c6-9cdc-e59e9c12b0cf/uid?resourceVersion=id%3A2358501&quot;</span>
+                      <span class="p">},</span>
+                      <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/legal_step/513e366f-abce-43c6-9cdc-e59e9c12b0cf/relationships/uid?resourceVersion=id%3A2358501&quot;</span>
+                      <span class="p">}</span>
+                  <span class="p">}</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;field_annual_updates&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[],</span>
+                  <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/legal_step/513e366f-abce-43c6-9cdc-e59e9c12b0cf/field_annual_updates?resourceVersion=id%3A2358501&quot;</span>
+                      <span class="p">},</span>
+                      <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/legal_step/513e366f-abce-43c6-9cdc-e59e9c12b0cf/relationships/field_annual_updates?resourceVersion=id%3A2358501&quot;</span>
+                      <span class="p">}</span>
+                  <span class="p">}</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;field_legal_issues&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;39affc4e-e0e0-4091-addc-c049916dedfc&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;afa23f49-7a9d-4caf-b9ac-63da005dc20a&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;dc2775b1-8496-4c61-aead-c1a7ba9c7057&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;746c32e5-7cab-48b6-94ac-3a84dbb16b56&quot;</span>
+                      <span class="p">}</span>
+                  <span class="p">],</span>
+                  <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/legal_step/513e366f-abce-43c6-9cdc-e59e9c12b0cf/field_legal_issues?resourceVersion=id%3A2358501&quot;</span>
+                      <span class="p">},</span>
+                      <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/legal_step/513e366f-abce-43c6-9cdc-e59e9c12b0cf/relationships/field_legal_issues?resourceVersion=id%3A2358501&quot;</span>
+                      <span class="p">}</span>
+                  <span class="p">}</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;field_primary_legal_category&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                      <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;39affc4e-e0e0-4091-addc-c049916dedfc&quot;</span>
+                  <span class="p">},</span>
+                  <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/legal_step/513e366f-abce-43c6-9cdc-e59e9c12b0cf/field_primary_legal_category?resourceVersion=id%3A2358501&quot;</span>
+                      <span class="p">},</span>
+                      <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/legal_step/513e366f-abce-43c6-9cdc-e59e9c12b0cf/relationships/field_primary_legal_category?resourceVersion=id%3A2358501&quot;</span>
+                      <span class="p">}</span>
+                  <span class="p">}</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;field_step_information&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;paragraph--step_information&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;60a0180a-4e15-4259-bdca-5dcf8915d5d8&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;meta&quot;</span><span class="p">:</span> <span class="p">{</span>
+                              <span class="nt">&quot;target_revision_id&quot;</span><span class="p">:</span> <span class="mi">1416776</span>
+                          <span class="p">}</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;paragraph--step_information&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;9001b053-94ab-48ce-baf0-f53de5235008&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;meta&quot;</span><span class="p">:</span> <span class="p">{</span>
+                              <span class="nt">&quot;target_revision_id&quot;</span><span class="p">:</span> <span class="mi">1416786</span>
+                          <span class="p">}</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;paragraph--step_information&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;190caf5b-d4fd-48c9-987b-5a4088a300c6&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;meta&quot;</span><span class="p">:</span> <span class="p">{</span>
+                              <span class="nt">&quot;target_revision_id&quot;</span><span class="p">:</span> <span class="mi">1416796</span>
+                          <span class="p">}</span>
+                      <span class="p">}</span>
+                  <span class="p">],</span>
+                  <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/legal_step/513e366f-abce-43c6-9cdc-e59e9c12b0cf/field_step_information?resourceVersion=id%3A2358501&quot;</span>
+                      <span class="p">},</span>
+                      <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/legal_step/513e366f-abce-43c6-9cdc-e59e9c12b0cf/relationships/field_step_information?resourceVersion=id%3A2358501&quot;</span>
+                      <span class="p">}</span>
+                  <span class="p">}</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;field_subject_matter_expert&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[],</span>
+                  <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/legal_step/513e366f-abce-43c6-9cdc-e59e9c12b0cf/field_subject_matter_expert?resourceVersion=id%3A2358501&quot;</span>
+                      <span class="p">},</span>
+                      <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/legal_step/513e366f-abce-43c6-9cdc-e59e9c12b0cf/relationships/field_subject_matter_expert?resourceVersion=id%3A2358501&quot;</span>
+                      <span class="p">}</span>
+                  <span class="p">}</span>
+              <span class="p">}</span>
+          <span class="p">}</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;node--legal_step&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;e3c26aee-3641-4015-8499-1a6b52345c44&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+              <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/legal_step/e3c26aee-3641-4015-8499-1a6b52345c44?resourceVersion=id%3A2358506&quot;</span>
+              <span class="p">}</span>
+          <span class="p">},</span>
+          <span class="nt">&quot;attributes&quot;</span><span class="p">:</span> <span class="p">{</span>
+              <span class="nt">&quot;drupal_internal__nid&quot;</span><span class="p">:</span> <span class="mi">166906</span><span class="p">,</span>
+              <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Certify your unemployment online or by phone&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;drupal_internal__vid&quot;</span><span class="p">:</span> <span class="mi">2358506</span><span class="p">,</span>
+              <span class="nt">&quot;langcode&quot;</span><span class="p">:</span> <span class="s2">&quot;en&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;revision_timestamp&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-05-05T19:58:08+00:00&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;revision_log&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+              <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+              <span class="nt">&quot;created&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-05-05T19:46:54+00:00&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;changed&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-05-05T19:58:08+00:00&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;promote&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+              <span class="nt">&quot;sticky&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+              <span class="nt">&quot;default_langcode&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+              <span class="nt">&quot;revision_translation_affected&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+              <span class="nt">&quot;moderation_state&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+              <span class="nt">&quot;scheduled_transition_date&quot;</span><span class="p">:</span> <span class="p">[],</span>
+              <span class="nt">&quot;scheduled_transition_state&quot;</span><span class="p">:</span> <span class="p">[],</span>
+              <span class="nt">&quot;metatag&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+              <span class="nt">&quot;path&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;alias&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+                  <span class="nt">&quot;pid&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+                  <span class="nt">&quot;langcode&quot;</span><span class="p">:</span> <span class="s2">&quot;en&quot;</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;content_translation_source&quot;</span><span class="p">:</span> <span class="s2">&quot;und&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;content_translation_outdated&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+              <span class="nt">&quot;body&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+              <span class="nt">&quot;field_content_description&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+              <span class="nt">&quot;field_legal_position&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+              <span class="nt">&quot;field_meta_description&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+              <span class="nt">&quot;field_request_translation&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+              <span class="nt">&quot;field_translation_outdated&quot;</span><span class="p">:</span> <span class="kc">false</span>
+          <span class="p">},</span>
+          <span class="nt">&quot;relationships&quot;</span><span class="p">:</span> <span class="p">{</span>
+              <span class="nt">&quot;node_type&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;node_type--node_type&quot;</span><span class="p">,</span>
+                      <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;facbbaa1-fabf-43ca-9792-734a4682cbf0&quot;</span>
+                  <span class="p">},</span>
+                  <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/legal_step/e3c26aee-3641-4015-8499-1a6b52345c44/node_type?resourceVersion=id%3A2358506&quot;</span>
+                      <span class="p">},</span>
+                      <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/legal_step/e3c26aee-3641-4015-8499-1a6b52345c44/relationships/node_type?resourceVersion=id%3A2358506&quot;</span>
+                      <span class="p">}</span>
+                  <span class="p">}</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;revision_uid&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;user--user&quot;</span><span class="p">,</span>
+                      <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;a230c24c-033c-4bfc-b1bf-5e5266dc0022&quot;</span>
+                  <span class="p">},</span>
+                  <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/legal_step/e3c26aee-3641-4015-8499-1a6b52345c44/revision_uid?resourceVersion=id%3A2358506&quot;</span>
+                      <span class="p">},</span>
+                      <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/legal_step/e3c26aee-3641-4015-8499-1a6b52345c44/relationships/revision_uid?resourceVersion=id%3A2358506&quot;</span>
+                      <span class="p">}</span>
+                  <span class="p">}</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;uid&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;user--user&quot;</span><span class="p">,</span>
+                      <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;a230c24c-033c-4bfc-b1bf-5e5266dc0022&quot;</span>
+                  <span class="p">},</span>
+                  <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/legal_step/e3c26aee-3641-4015-8499-1a6b52345c44/uid?resourceVersion=id%3A2358506&quot;</span>
+                      <span class="p">},</span>
+                      <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/legal_step/e3c26aee-3641-4015-8499-1a6b52345c44/relationships/uid?resourceVersion=id%3A2358506&quot;</span>
+                      <span class="p">}</span>
+                  <span class="p">}</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;field_annual_updates&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[],</span>
+                  <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/legal_step/e3c26aee-3641-4015-8499-1a6b52345c44/field_annual_updates?resourceVersion=id%3A2358506&quot;</span>
+                      <span class="p">},</span>
+                      <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/legal_step/e3c26aee-3641-4015-8499-1a6b52345c44/relationships/field_annual_updates?resourceVersion=id%3A2358506&quot;</span>
+                      <span class="p">}</span>
+                  <span class="p">}</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;field_legal_issues&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;39affc4e-e0e0-4091-addc-c049916dedfc&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;afa23f49-7a9d-4caf-b9ac-63da005dc20a&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;dc2775b1-8496-4c61-aead-c1a7ba9c7057&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;746c32e5-7cab-48b6-94ac-3a84dbb16b56&quot;</span>
+                      <span class="p">}</span>
+                  <span class="p">],</span>
+                  <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/legal_step/e3c26aee-3641-4015-8499-1a6b52345c44/field_legal_issues?resourceVersion=id%3A2358506&quot;</span>
+                      <span class="p">},</span>
+                      <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/legal_step/e3c26aee-3641-4015-8499-1a6b52345c44/relationships/field_legal_issues?resourceVersion=id%3A2358506&quot;</span>
+                      <span class="p">}</span>
+                  <span class="p">}</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;field_primary_legal_category&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                      <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;39affc4e-e0e0-4091-addc-c049916dedfc&quot;</span>
+                  <span class="p">},</span>
+                  <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/legal_step/e3c26aee-3641-4015-8499-1a6b52345c44/field_primary_legal_category?resourceVersion=id%3A2358506&quot;</span>
+                      <span class="p">},</span>
+                      <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/legal_step/e3c26aee-3641-4015-8499-1a6b52345c44/relationships/field_primary_legal_category?resourceVersion=id%3A2358506&quot;</span>
+                      <span class="p">}</span>
+                  <span class="p">}</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;field_step_information&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;paragraph--step_information&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;80bc6931-ca83-4a67-8348-b5a07b257a5f&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;meta&quot;</span><span class="p">:</span> <span class="p">{</span>
+                              <span class="nt">&quot;target_revision_id&quot;</span><span class="p">:</span> <span class="mi">1416806</span>
+                          <span class="p">}</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;paragraph--step_information&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;d83ef54d-6abb-4261-be54-30a5b1029f7e&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;meta&quot;</span><span class="p">:</span> <span class="p">{</span>
+                              <span class="nt">&quot;target_revision_id&quot;</span><span class="p">:</span> <span class="mi">1416816</span>
+                          <span class="p">}</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;paragraph--step_information&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;09bf220f-2f46-4777-805a-20cb89b79494&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;meta&quot;</span><span class="p">:</span> <span class="p">{</span>
+                              <span class="nt">&quot;target_revision_id&quot;</span><span class="p">:</span> <span class="mi">1416826</span>
+                          <span class="p">}</span>
+                      <span class="p">}</span>
+                  <span class="p">],</span>
+                  <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/legal_step/e3c26aee-3641-4015-8499-1a6b52345c44/field_step_information?resourceVersion=id%3A2358506&quot;</span>
+                      <span class="p">},</span>
+                      <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/legal_step/e3c26aee-3641-4015-8499-1a6b52345c44/relationships/field_step_information?resourceVersion=id%3A2358506&quot;</span>
+                      <span class="p">}</span>
+                  <span class="p">}</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;field_subject_matter_expert&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[],</span>
+                  <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/legal_step/e3c26aee-3641-4015-8499-1a6b52345c44/field_subject_matter_expert?resourceVersion=id%3A2358506&quot;</span>
+                      <span class="p">},</span>
+                      <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/legal_step/e3c26aee-3641-4015-8499-1a6b52345c44/relationships/field_subject_matter_expert?resourceVersion=id%3A2358506&quot;</span>
+                      <span class="p">}</span>
+                  <span class="p">}</span>
+              <span class="p">}</span>
+          <span class="p">}</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;node--legal_step&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;563ae0c8-b643-4434-bb08-4e308886c021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+              <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/legal_step/563ae0c8-b643-4434-bb08-4e308886c021?resourceVersion=id%3A2358511&quot;</span>
+              <span class="p">}</span>
+          <span class="p">},</span>
+          <span class="nt">&quot;attributes&quot;</span><span class="p">:</span> <span class="p">{</span>
+              <span class="nt">&quot;drupal_internal__nid&quot;</span><span class="p">:</span> <span class="mi">166911</span><span class="p">,</span>
+              <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Consider appealing if you are denied unemployment benefits&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;drupal_internal__vid&quot;</span><span class="p">:</span> <span class="mi">2358511</span><span class="p">,</span>
+              <span class="nt">&quot;langcode&quot;</span><span class="p">:</span> <span class="s2">&quot;en&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;revision_timestamp&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-05-05T20:04:29+00:00&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;revision_log&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+              <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+              <span class="nt">&quot;created&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-05-05T20:01:43+00:00&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;changed&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-05-05T20:04:29+00:00&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;promote&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+              <span class="nt">&quot;sticky&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+              <span class="nt">&quot;default_langcode&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+              <span class="nt">&quot;revision_translation_affected&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+              <span class="nt">&quot;moderation_state&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+              <span class="nt">&quot;scheduled_transition_date&quot;</span><span class="p">:</span> <span class="p">[],</span>
+              <span class="nt">&quot;scheduled_transition_state&quot;</span><span class="p">:</span> <span class="p">[],</span>
+              <span class="nt">&quot;metatag&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+              <span class="nt">&quot;path&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;alias&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+                  <span class="nt">&quot;pid&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+                  <span class="nt">&quot;langcode&quot;</span><span class="p">:</span> <span class="s2">&quot;en&quot;</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;content_translation_source&quot;</span><span class="p">:</span> <span class="s2">&quot;und&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;content_translation_outdated&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+              <span class="nt">&quot;body&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+              <span class="nt">&quot;field_content_description&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+              <span class="nt">&quot;field_legal_position&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+              <span class="nt">&quot;field_meta_description&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+              <span class="nt">&quot;field_request_translation&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+              <span class="nt">&quot;field_translation_outdated&quot;</span><span class="p">:</span> <span class="kc">false</span>
+          <span class="p">},</span>
+          <span class="nt">&quot;relationships&quot;</span><span class="p">:</span> <span class="p">{</span>
+              <span class="nt">&quot;node_type&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;node_type--node_type&quot;</span><span class="p">,</span>
+                      <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;facbbaa1-fabf-43ca-9792-734a4682cbf0&quot;</span>
+                  <span class="p">},</span>
+                  <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/legal_step/563ae0c8-b643-4434-bb08-4e308886c021/node_type?resourceVersion=id%3A2358511&quot;</span>
+                      <span class="p">},</span>
+                      <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/legal_step/563ae0c8-b643-4434-bb08-4e308886c021/relationships/node_type?resourceVersion=id%3A2358511&quot;</span>
+                      <span class="p">}</span>
+                  <span class="p">}</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;revision_uid&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;user--user&quot;</span><span class="p">,</span>
+                      <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;a230c24c-033c-4bfc-b1bf-5e5266dc0022&quot;</span>
+                  <span class="p">},</span>
+                  <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/legal_step/563ae0c8-b643-4434-bb08-4e308886c021/revision_uid?resourceVersion=id%3A2358511&quot;</span>
+                      <span class="p">},</span>
+                      <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/legal_step/563ae0c8-b643-4434-bb08-4e308886c021/relationships/revision_uid?resourceVersion=id%3A2358511&quot;</span>
+                      <span class="p">}</span>
+                  <span class="p">}</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;uid&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;user--user&quot;</span><span class="p">,</span>
+                      <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;a230c24c-033c-4bfc-b1bf-5e5266dc0022&quot;</span>
+                  <span class="p">},</span>
+                  <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/legal_step/563ae0c8-b643-4434-bb08-4e308886c021/uid?resourceVersion=id%3A2358511&quot;</span>
+                      <span class="p">},</span>
+                      <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/legal_step/563ae0c8-b643-4434-bb08-4e308886c021/relationships/uid?resourceVersion=id%3A2358511&quot;</span>
+                      <span class="p">}</span>
+                  <span class="p">}</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;field_annual_updates&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[],</span>
+                  <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/legal_step/563ae0c8-b643-4434-bb08-4e308886c021/field_annual_updates?resourceVersion=id%3A2358511&quot;</span>
+                      <span class="p">},</span>
+                      <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/legal_step/563ae0c8-b643-4434-bb08-4e308886c021/relationships/field_annual_updates?resourceVersion=id%3A2358511&quot;</span>
+                      <span class="p">}</span>
+                  <span class="p">}</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;field_legal_issues&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;39affc4e-e0e0-4091-addc-c049916dedfc&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;afa23f49-7a9d-4caf-b9ac-63da005dc20a&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;dc2775b1-8496-4c61-aead-c1a7ba9c7057&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;746c32e5-7cab-48b6-94ac-3a84dbb16b56&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;4b215793-795c-417c-b695-af07a83488b9&quot;</span>
+                      <span class="p">}</span>
+                  <span class="p">],</span>
+                  <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/legal_step/563ae0c8-b643-4434-bb08-4e308886c021/field_legal_issues?resourceVersion=id%3A2358511&quot;</span>
+                      <span class="p">},</span>
+                      <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/legal_step/563ae0c8-b643-4434-bb08-4e308886c021/relationships/field_legal_issues?resourceVersion=id%3A2358511&quot;</span>
+                      <span class="p">}</span>
+                  <span class="p">}</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;field_primary_legal_category&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                      <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;39affc4e-e0e0-4091-addc-c049916dedfc&quot;</span>
+                  <span class="p">},</span>
+                  <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/legal_step/563ae0c8-b643-4434-bb08-4e308886c021/field_primary_legal_category?resourceVersion=id%3A2358511&quot;</span>
+                      <span class="p">},</span>
+                      <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/legal_step/563ae0c8-b643-4434-bb08-4e308886c021/relationships/field_primary_legal_category?resourceVersion=id%3A2358511&quot;</span>
+                      <span class="p">}</span>
+                  <span class="p">}</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;field_step_information&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;paragraph--step_information&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;f407fc4d-a8cc-4a1e-9b99-f98bf7550464&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;meta&quot;</span><span class="p">:</span> <span class="p">{</span>
+                              <span class="nt">&quot;target_revision_id&quot;</span><span class="p">:</span> <span class="mi">1416836</span>
+                          <span class="p">}</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;paragraph--step_information&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;9a936446-1d64-4482-8304-7f6afab8fdc3&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;meta&quot;</span><span class="p">:</span> <span class="p">{</span>
+                              <span class="nt">&quot;target_revision_id&quot;</span><span class="p">:</span> <span class="mi">1416846</span>
+                          <span class="p">}</span>
+                      <span class="p">}</span>
+                  <span class="p">],</span>
+                  <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/legal_step/563ae0c8-b643-4434-bb08-4e308886c021/field_step_information?resourceVersion=id%3A2358511&quot;</span>
+                      <span class="p">},</span>
+                      <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/legal_step/563ae0c8-b643-4434-bb08-4e308886c021/relationships/field_step_information?resourceVersion=id%3A2358511&quot;</span>
+                      <span class="p">}</span>
+                  <span class="p">}</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;field_subject_matter_expert&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[],</span>
+                  <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/legal_step/563ae0c8-b643-4434-bb08-4e308886c021/field_subject_matter_expert?resourceVersion=id%3A2358511&quot;</span>
+                      <span class="p">},</span>
+                      <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/legal_step/563ae0c8-b643-4434-bb08-4e308886c021/relationships/field_subject_matter_expert?resourceVersion=id%3A2358511&quot;</span>
+                      <span class="p">}</span>
+                  <span class="p">}</span>
+              <span class="p">}</span>
+          <span class="p">}</span>
+      <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;next&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/legal_step?page%5Boffset%5D=5&amp;page%5Blimit%5D=5&quot;</span>
+      <span class="p">},</span>
+      <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/legal_step?page%5Blimit%5D=5&quot;</span>
+      <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="parameters">
 <h2>Parameters<a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>step_identifier:  uuid of the step. Required</p></li>
-</ul>
+<p>Parameters supported by the JSONAPI are allowed See the <a class="reference internal" href="api_filtering.html#ilao-api-filters"><span class="std std-ref">Customizing API results</span></a> for filter examples.</p>
 </div>
 </div>
 

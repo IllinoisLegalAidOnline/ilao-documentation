@@ -110,7 +110,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="ilao_api.html">ILAO’s API</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="api_authorization.html">API Authorization</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api_filtering.html">Customizing API results</a></li>
-<li class="toctree-l2"><a class="reference internal" href="otis_api.html">Online triage/intake API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="otis_api.html">ILAO OTIS API</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Structured content API</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="cms_api_taxonomy_terms.html">Content taxonomy terms</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cms_api_legal_problems_list.html">Content API: Legal Problems List</a></li>
@@ -209,6 +209,14 @@
   <div class="section" id="structured-content-api">
 <h1>Structured content API<a class="headerlink" href="#structured-content-api" title="Permalink to this headline">¶</a></h1>
 <p>The structured content API relies on Drupal’s JSONAPI.  For information on interacting with that generally, see the <a class="reference external" href="https://www.drupal.org/docs/core-modules-and-themes/core-modules/jsonapi-module/api-overview">Drupal Documentation</a>.</p>
+<p>JSONAPI results generally are formatted in JSON with the data stored in the response.data object:</p>
+<ul class="simple">
+<li><p>type (entity type)</p></li>
+<li><p>id (string of the uuid)</p></li>
+<li><p>attributes, an object of field data</p></li>
+<li><p>relationships, an object of types, id, and links to referenced entities</p></li>
+<li><p>included, an optional object of full referenced entities. This requires an includes parameter be provided.</p></li>
+</ul>
 <div class="toctree-wrapper compound">
 <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul>
