@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>ILAO OTIS API &mdash; ILAO 2.22 documentation</title>
+  <title>OTIS API Related Entities &mdash; ILAO 2.22 documentation</title>
   
 
   
@@ -43,8 +43,7 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="OTIS API Triage User" href="otis_api_triage_user.html" />
-    <link rel="prev" title="Customizing API results" href="api_filtering.html" /> 
+    <link rel="prev" title="OTIS API Intake Settings" href="otis_api_intake_settings.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -110,10 +109,15 @@
 <li class="toctree-l1 current"><a class="reference internal" href="ilao_api.html">ILAO’s API</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="api_authorization.html">API Authorization</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api_filtering.html">Customizing API results</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">ILAO OTIS API</a><ul>
+<li class="toctree-l2 current"><a class="reference internal" href="otis_api.html">ILAO OTIS API</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="otis_api_triage_user.html">OTIS API Triage User</a></li>
 <li class="toctree-l3"><a class="reference internal" href="otis_api_intake_settings.html">OTIS API Intake Settings</a></li>
-<li class="toctree-l3"><a class="reference internal" href="otis_api_relationships.html">OTIS API Related Entities</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">OTIS API Related Entities</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#triage-users">Triage users</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#intake-settings">Intake settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#example-curl-call-to">Example cUrl call to</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="cms_structured_content_api.html">Structured content API</a></li>
@@ -173,13 +177,15 @@
         
           <li><a href="ilao_api.html">ILAO’s API</a> &raquo;</li>
         
-      <li>ILAO OTIS API</li>
+          <li><a href="otis_api.html">ILAO OTIS API</a> &raquo;</li>
+        
+      <li>OTIS API Related Entities</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="_sources/otis_api.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/otis_api_relationships.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -192,15 +198,57 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="ilao-otis-api">
-<span id="otis-api"></span><h1>ILAO OTIS API<a class="headerlink" href="#ilao-otis-api" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">Contents:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="otis_api_triage_user.html">OTIS API Triage User</a></li>
-<li class="toctree-l1"><a class="reference internal" href="otis_api_intake_settings.html">OTIS API Intake Settings</a></li>
-<li class="toctree-l1"><a class="reference internal" href="otis_api_relationships.html">OTIS API Related Entities</a></li>
+  <div class="section" id="otis-api-related-entities">
+<h1>OTIS API Related Entities<a class="headerlink" href="#otis-api-related-entities" title="Permalink to this headline">¶</a></h1>
+<p>There are numerous related entities attached to triage user and intake settings entities.</p>
+<p>These can be added via includes or accessed directly through their own API calls in the format of jsonapi/[type]/[bundle].</p>
+<p>For example:
+* /jsonapi/taxonomy_term/region/[uuid]
+* /jsonapi/income_standard/income_standard/[uuid]</p>
+<div class="section" id="triage-users">
+<h2>Triage users<a class="headerlink" href="#triage-users" title="Permalink to this headline">¶</a></h2>
+<p>Triage users have the following relationships:</p>
+<ul class="simple">
+<li><p>user_id : the user entity of the author of the intake settings</p></li>
+<li><p>intake_organization: the oas_intake_setings uuid of the applicable intake settings</p></li>
+<li><p>oas_limited_populations: an array of type taxonomy_term–intake_populations that represents the populations selected by the user</p></li>
+<li><p>oas_triage_problem: the taxonomy_term from legal issues that represents the user’s issue</p></li>
+<li><p>oas_triage_problem_history: the taxonomyt_term from legal issues that represents the user’s issue, with full taxonomy path</p></li>
 </ul>
+</div>
+<div class="section" id="intake-settings">
+<h2>Intake settings<a class="headerlink" href="#intake-settings" title="Permalink to this headline">¶</a></h2>
+<p>Intake settings have the following relationships:</p>
+<ul class="simple">
+<li><p>user_id : the user entity of the author of the intake settings</p></li>
+<li><p>entity_id of type node–location_services: the service associated with the intake settings</p></li>
+<li><p>field_cities: an array of type taxonomy_term–region of ids from the region taxonomy that represent cities selected for use in the intake settings</p></li>
+<li><p>field_counties: an array of type taxonomy_term–region of ids from the region taxonomy that represent counties selected for use in the intake settings</p></li>
+<li><p>field_zipcodes: an array of type taxonomy_term–region of ids from the region taxonomy that represent counties selected for use in the intake settings</p></li>
+<li><p>field_legal_issues: an array of type taxonomy_term–legal_issues from the legal issues taxonomy that represent the legal issues associated with the intake settings</p></li>
+<li><p>field_oas_callback_hours_fri: an array of type taxonomy_term–oas_callback_hours that represent the callback hour slots for the intake settings on Fridays</p></li>
+<li><p>field_oas_callback_hours_mon: an array of type taxonomy_term–oas_callback_hours that represent the callback hour slots for the intake settings on Mondays</p></li>
+<li><p>field_oas_callback_hours_sat: an array of type taxonomy_term–oas_callback_hours that represent the callback hour slots for the intake settings on Saturdays</p></li>
+<li><p>field_oas_callback_hours_sun: an array of type taxonomy_term–oas_callback_hours that represent the callback hour slots for the intake settings on Sundays</p></li>
+<li><p>field_oas_callback_hours_thurs: an array of type taxonomy_term–oas_callback_hours that represent the callback hour slots for the intake settings on Fridays</p></li>
+<li><p>field_oas_callback_hours_tue: an array of type taxonomy_term–oas_callback_hours that represent the callback hour slots for the intake settings on Fridays</p></li>
+<li><p>field_oas_callback_hours_wed: an array of type taxonomy_term–oas_callback_hours that represent the callback hour slots for the intake settings on Fridays</p></li>
+<li><p>oas_asset_catagories</p></li>
+<li><p>oas_expense_categories</p></li>
+<li><p>oas_income_categories: an array of type ilao_oas_financial_category–income_type that represent the financial category entities of type income to collect.</p></li>
+<li><p>oas_income_exempt: an array of type taxonomy_term–intake_populations that represents user populations that should be exempt from income limits</p></li>
+<li><p>oas_income_standard: an array of type income_standard–income_standard that represents the entity id of the income standard to apply if needed</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Only one of the field_cities, field_counties, and field_zipcodes will have actual data.</p>
+</div>
+</div>
+<div class="section" id="example-curl-call-to">
+<h2>Example cUrl call to<a class="headerlink" href="#example-curl-call-to" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>curl -X GET -H “Content-Type:application/vnd.api+json” http://ilaodrupal8.prod.dd:8083/jsonapi/taxonomy_term/region</p>
+</div></blockquote>
 </div>
 </div>
 
@@ -210,8 +258,7 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="otis_api_triage_user.html" class="btn btn-neutral float-right" title="OTIS API Triage User" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="api_filtering.html" class="btn btn-neutral float-left" title="Customizing API results" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="otis_api_intake_settings.html" class="btn btn-neutral float-left" title="OTIS API Intake Settings" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>
