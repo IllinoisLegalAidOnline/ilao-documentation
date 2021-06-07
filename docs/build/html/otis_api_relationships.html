@@ -115,7 +115,7 @@
 <li class="toctree-l3 current"><a class="current reference internal" href="#">OTIS API Related Entities</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#triage-users">Triage users</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#intake-settings">Intake settings</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#example-curl-call-to">Example cUrl call to</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#example-curl-call-for-taxonomy-term">Example cUrl call for taxonomy term</a></li>
 </ul>
 </li>
 </ul>
@@ -202,9 +202,11 @@
 <h1>OTIS API Related Entities<a class="headerlink" href="#otis-api-related-entities" title="Permalink to this headline">¶</a></h1>
 <p>There are numerous related entities attached to triage user and intake settings entities.</p>
 <p>These can be added via includes or accessed directly through their own API calls in the format of jsonapi/[type]/[bundle].</p>
-<p>For example:
-* /jsonapi/taxonomy_term/region/[uuid]
-* /jsonapi/income_standard/income_standard/[uuid]</p>
+<p>For example:</p>
+<ul class="simple">
+<li><p>/jsonapi/taxonomy_term/region/[uuid]</p></li>
+<li><p>/jsonapi/income_standard/income_standard/[uuid]</p></li>
+</ul>
 <div class="section" id="triage-users">
 <h2>Triage users<a class="headerlink" href="#triage-users" title="Permalink to this headline">¶</a></h2>
 <p>Triage users have the following relationships:</p>
@@ -244,11 +246,11 @@
 <p>Only one of the field_cities, field_counties, and field_zipcodes will have actual data.</p>
 </div>
 </div>
-<div class="section" id="example-curl-call-to">
-<h2>Example cUrl call to<a class="headerlink" href="#example-curl-call-to" title="Permalink to this headline">¶</a></h2>
-<blockquote>
-<div><p>curl -X GET -H “Content-Type:application/vnd.api+json” http://ilaodrupal8.prod.dd:8083/jsonapi/taxonomy_term/region</p>
-</div></blockquote>
+<div class="section" id="example-curl-call-for-taxonomy-term">
+<h2>Example cUrl call for taxonomy term<a class="headerlink" href="#example-curl-call-for-taxonomy-term" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>curl -X GET -H &quot;Content-Type:application/vnd.api+json&quot; http://ilaodrupal8.prod.dd:8083/jsonapi/taxonomy_term/region
+</pre></div>
+</div>
 </div>
 </div>
 

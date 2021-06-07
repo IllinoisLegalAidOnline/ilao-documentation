@@ -7,6 +7,7 @@ There are numerous related entities attached to triage user and intake settings 
 These can be added via includes or accessed directly through their own API calls in the format of jsonapi/[type]/[bundle].
 
 For example:
+
 * /jsonapi/taxonomy_term/region/[uuid]
 * /jsonapi/income_standard/income_standard/[uuid]
 
@@ -48,6 +49,11 @@ Intake settings have the following relationships:
 
 .. note:: Only one of the field_cities, field_counties, and field_zipcodes will have actual data.
 
-Example cUrl call to
-======================
-      curl -X GET -H "Content-Type:application/vnd.api+json" http://ilaodrupal8.prod.dd:8083/jsonapi/taxonomy_term/region
+Example cUrl call for taxonomy term
+=====================================
+
+.. code-block:: html
+
+   curl -X GET -H "Content-Type:application/vnd.api+json" http://ilaodrupal8.prod.dd:8083/jsonapi/taxonomy_term/region
+
+
