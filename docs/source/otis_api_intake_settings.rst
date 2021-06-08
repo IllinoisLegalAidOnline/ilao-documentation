@@ -1441,16 +1441,73 @@ Sample Response
 
 Create intake setting
 ======================
-Creating an intake setting requires minimally:
+Creating an intake setting requires minimally the following attributes:
 
 * name
-* entity id of the service associated with the intake setting. This is the Drupal ID
-* reset_limit_frequency.  This should be 0, 1, 7, or 30
+* reset_limit_frequency.  This should be 1, 7, or 30
 * callback_number
-* callback_type.  This should be we_call or client_calls
+* callback_type.  This should be we_call_client or client_calls
+* field_bypsss_intake_message.  This can be set to "" but is a required element.
+* oas_help_race. This can be set to "" but is a required element.
+* oas_help_gender.  This can be set to "" but is a required element.
+* oas_help_marital_status.  This can be set to "" but is a required element.
+* oas_help_language.  This can be set to "" but is a required element.
+* oas_help_immigration_status.  This can be set to "" but is a required element.
+* oas_help_ethnicity.  This can be set to "" but is a required element.
+* oas_help_country_of_origin.  This can be set to "" but is a required element.
+* oas_help_citizenship_status.  This can be set to "" but is a required element.
+* oas_msg_current_client
+* oas_msg_already_applied
+
+
+And the following relationships:
+
+* entity_id.  This should be the UUID of the service associated with the intake setting
 * field_service_single. This should be the UUID of the service associated with the intake setting
 
-.. note:: format for the oas_[demo] fields is being required and it should not be.
+Sample request
+----------------
+
+.. code-block:: json
+
+   {
+    "data": {
+        "type": "oas_intake_settings--oas_intake_settings",
+        "attributes": {
+
+            "name": "Gwen test",
+            "reset_limit_frequency": 1,
+            "callback_number": "630-881-1337",
+            "callback_type": "we_call_client",
+            "field_bypass_intake_message": "",
+            "oas_msg_current_client": "Text",
+            "oas_msg_already_applied": "Message",
+            "oas_household_definition": "",
+            "oas_help_race": "",
+            "oas_help_gender": "",
+            "oas_help_marital_status": "",
+            "oas_help_language": "",
+            "oas_help_immigration_status": "",
+            "oas_help_ethnicity": "",
+            "oas_help_country_of_origin": "",
+            "oas_help_citizenship_status": ""
+        },
+        "relationships": {
+            "entity_id": {
+                "data": {
+                    "type": "node--location_services",
+                    "id": "3356a19b-396d-4e9c-8e9c-fa97822b1b1c"
+                }
+            },
+            "field_service_single": {
+                "data": {
+                    "type": "node--location_services",
+                    "id": "3356a19b-396d-4e9c-8e9c-fa97822b1b1c"
+                }
+            }
+        }
+    }
+  }
 
 
 

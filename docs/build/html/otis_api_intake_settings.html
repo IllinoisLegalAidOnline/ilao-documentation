@@ -1633,18 +1633,71 @@
 </div>
 <div class="section" id="create-intake-setting">
 <h2>Create intake setting<a class="headerlink" href="#create-intake-setting" title="Permalink to this headline">¶</a></h2>
-<p>Creating an intake setting requires minimally:</p>
+<p>Creating an intake setting requires minimally the following attributes:</p>
 <ul class="simple">
 <li><p>name</p></li>
-<li><p>entity id of the service associated with the intake setting. This is the Drupal ID</p></li>
-<li><p>reset_limit_frequency.  This should be 0, 1, 7, or 30</p></li>
+<li><p>reset_limit_frequency.  This should be 1, 7, or 30</p></li>
 <li><p>callback_number</p></li>
-<li><p>callback_type.  This should be we_call or client_calls</p></li>
+<li><p>callback_type.  This should be we_call_client or client_calls</p></li>
+<li><p>field_bypsss_intake_message.  This can be set to “” but is a required element.</p></li>
+<li><p>oas_help_race. This can be set to “” but is a required element.</p></li>
+<li><p>oas_help_gender.  This can be set to “” but is a required element.</p></li>
+<li><p>oas_help_marital_status.  This can be set to “” but is a required element.</p></li>
+<li><p>oas_help_language.  This can be set to “” but is a required element.</p></li>
+<li><p>oas_help_immigration_status.  This can be set to “” but is a required element.</p></li>
+<li><p>oas_help_ethnicity.  This can be set to “” but is a required element.</p></li>
+<li><p>oas_help_country_of_origin.  This can be set to “” but is a required element.</p></li>
+<li><p>oas_help_citizenship_status.  This can be set to “” but is a required element.</p></li>
+<li><p>oas_msg_current_client</p></li>
+<li><p>oas_msg_already_applied</p></li>
+</ul>
+<p>And the following relationships:</p>
+<ul class="simple">
+<li><p>entity_id.  This should be the UUID of the service associated with the intake setting</p></li>
 <li><p>field_service_single. This should be the UUID of the service associated with the intake setting</p></li>
 </ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>format for the oas_[demo] fields is being required and it should not be.</p>
+<div class="section" id="sample-request">
+<h3>Sample request<a class="headerlink" href="#sample-request" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span> <span class="p">{</span>
+  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;oas_intake_settings--oas_intake_settings&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;attributes&quot;</span><span class="p">:</span> <span class="p">{</span>
+
+          <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Gwen test&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;reset_limit_frequency&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+          <span class="nt">&quot;callback_number&quot;</span><span class="p">:</span> <span class="s2">&quot;630-881-1337&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;callback_type&quot;</span><span class="p">:</span> <span class="s2">&quot;we_call_client&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;field_bypass_intake_message&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;oas_msg_current_client&quot;</span><span class="p">:</span> <span class="s2">&quot;Text&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;oas_msg_already_applied&quot;</span><span class="p">:</span> <span class="s2">&quot;Message&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;oas_household_definition&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;oas_help_race&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;oas_help_gender&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;oas_help_marital_status&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;oas_help_language&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;oas_help_immigration_status&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;oas_help_ethnicity&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;oas_help_country_of_origin&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;oas_help_citizenship_status&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>
+      <span class="p">},</span>
+      <span class="nt">&quot;relationships&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;entity_id&quot;</span><span class="p">:</span> <span class="p">{</span>
+              <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;node--location_services&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;3356a19b-396d-4e9c-8e9c-fa97822b1b1c&quot;</span>
+              <span class="p">}</span>
+          <span class="p">},</span>
+          <span class="nt">&quot;field_service_single&quot;</span><span class="p">:</span> <span class="p">{</span>
+              <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;node--location_services&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;3356a19b-396d-4e9c-8e9c-fa97822b1b1c&quot;</span>
+              <span class="p">}</span>
+          <span class="p">}</span>
+      <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 </div>
 </div>
 <div class="section" id="update-intake-setting">

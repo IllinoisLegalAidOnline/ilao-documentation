@@ -34,3 +34,4 @@ Use the include parameter to return related resources.  Examples:
 .. note:: Paragraphs add a layer of complexity to ILAO's JSON API. These should be included when attempting to render content that requires the full text. Creating REST exports in Views that use the same OAUTH permission may work better for some use cases.
 
 
+
