@@ -44,7 +44,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Legal Content Volunteers Program" href="cms_lcv_program.html" />
-    <link rel="prev" title="Content API: Solution Result" href="cms_api_solution_result.html" /> 
+    <link rel="prev" title="Content API: Legal Form" href="cms_api_solution_form.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -109,7 +109,8 @@
 <li class="toctree-l1"><a class="reference internal" href="rss_feeds.html">RSS Feeds</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="ilao_api.html">ILAO’s API</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="api_authorization.html">API Authorization</a></li>
-<li class="toctree-l2"><a class="reference internal" href="otis_api.html">Online triage/intake API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_filtering.html">Customizing API results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="otis_api.html">ILAO OTIS API</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="cms_structured_content_api.html">Structured content API</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="cms_api_taxonomy_terms.html">Content taxonomy terms</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cms_api_legal_problems_list.html">Content API: Legal Problems List</a></li>
@@ -117,16 +118,11 @@
 <li class="toctree-l3"><a class="reference internal" href="cms_api_solutions_list.html">Content API:  Solutions List</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cms_api_solution.html">Content API: Legal Solution</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cms_api_questions_list.html">Content API:  Legal Questions List</a></li>
-<li class="toctree-l3"><a class="reference internal" href="cms_api_faq.html">Content API:  Legal Problem FAQ</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cms_api_question.html">Content API:  Legal Question</a></li>
-<li class="toctree-l3"><a class="reference internal" href="cms_api_solution_eligibility.html">Content API:  Solution Eligibility Rules</a></li>
-<li class="toctree-l3"><a class="reference internal" href="cms_api_solution_information_needed.html">Content API:  Solution Information Needed</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cms_api_how_to_list.html">Content API:  How To List</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cms_api_solution_how_to.html">Content API: Solution How-To</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cms_api_step.html">Content API:  Legal Step</a></li>
-<li class="toctree-l3"><a class="reference internal" href="cms_api_solution_forms.html">Content API:  Legal Solution Forms Needed</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cms_api_solution_form.html">Content API:  Legal Form</a></li>
-<li class="toctree-l3"><a class="reference internal" href="cms_api_solution_result.html">Content API:  Solution Result</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Content API: Legal Solution Helpful Organization</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#function-call">Function call</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#sample-response">Sample response</a></li>
@@ -217,46 +213,199 @@
             
   <div class="section" id="content-api-legal-solution-helpful-organization">
 <h1>Content API: Legal Solution Helpful Organization<a class="headerlink" href="#content-api-legal-solution-helpful-organization" title="Permalink to this headline">¶</a></h1>
-<p>Returns a specific helpful organization</p>
+<p>Returns helpful organization content.  When the uuid is provided, returns the specific organization.</p>
+<p>..note:: Helpful organization content is different from the OTIS organization/location/location-services content.  Helpful organizations are organizations attached to specific legal problem content that are not legal organizations.</p>
 <div class="section" id="function-call">
 <h2>Function call<a class="headerlink" href="#function-call" title="Permalink to this headline">¶</a></h2>
 <p>Method: GET</p>
+<p>ethod: GET</p>
+<p>If the /[uuid] is left off, all forms will be returned.  See parameters below.</p>
+<p>URLs:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.illinoislegalaid.org/jsonapi/node/legal_step/[uuid">https://www.illinoislegalaid.org/jsonapi/node/legal_step/[uuid</a>] (English)</p></li>
+<li><p><a class="reference external" href="https://www.illinoislegalaid.org/es/jsonapi/node/legal_step/[uuid">https://www.illinoislegalaid.org/es/jsonapi/node/legal_step/[uuid</a>] (Spanish)</p></li>
+<li><p><a class="reference external" href="https://www.illinoislegalaid.org/pl/jsonapi/node/legal_step/[uuid">https://www.illinoislegalaid.org/pl/jsonapi/node/legal_step/[uuid</a>] (Polish)</p></li>
+</ul>
 </div>
 <div class="section" id="sample-response">
 <h2>Sample response<a class="headerlink" href="#sample-response" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">[{</span>
-              <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Illinois Domestic Violence Helpline&quot;</span><span class="p">,</span>
-              <span class="nt">&quot;identifier&quot;</span><span class="p">:</span> <span class="s2">&quot;e862348a-3a3d-11eb-adc1-0242ac120002&quot;</span><span class="p">,</span>
-              <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;A hotline open 24/7 for people in Illinois who need help with domestic violence.&quot;</span><span class="p">,</span>
-              <span class="nt">&quot;contact&quot;</span><span class="p">:</span> <span class="p">{</span>
-                      <span class="nt">&quot;contactType&quot;</span><span class="p">:</span> <span class="p">[</span>
-                              <span class="s2">&quot;phone&quot;</span>
-                      <span class="p">],</span>
-                      <span class="nt">&quot;telephone&quot;</span><span class="p">:</span> <span class="s2">&quot;(877) 863-6338&quot;</span>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span> <span class="p">{</span>
+  <span class="nt">&quot;jsonapi&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;1.0&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;meta&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+              <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;http://jsonapi.org/format/1.0/&quot;</span>
+              <span class="p">}</span>
+          <span class="p">}</span>
+      <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;node--helpful_organization&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;a7071ee6-9eb9-4001-961a-a9b060af3fe2&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+              <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/helpful_organization/a7071ee6-9eb9-4001-961a-a9b060af3fe2?resourceVersion=id%3A2644036&quot;</span>
+              <span class="p">}</span>
+          <span class="p">},</span>
+          <span class="nt">&quot;attributes&quot;</span><span class="p">:</span> <span class="p">{</span>
+              <span class="nt">&quot;drupal_internal__nid&quot;</span><span class="p">:</span> <span class="mi">167456</span><span class="p">,</span>
+              <span class="nt">&quot;drupal_internal__vid&quot;</span><span class="p">:</span> <span class="mi">2644036</span><span class="p">,</span>
+              <span class="nt">&quot;langcode&quot;</span><span class="p">:</span> <span class="s2">&quot;en&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;revision_timestamp&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-06-09T12:38:29+00:00&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;revision_log&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+              <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+              <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Test Helpful Org&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;created&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-06-09T12:33:11+00:00&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;changed&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-06-09T12:38:29+00:00&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;promote&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+              <span class="nt">&quot;sticky&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+              <span class="nt">&quot;default_langcode&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+              <span class="nt">&quot;revision_translation_affected&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+              <span class="nt">&quot;moderation_state&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+              <span class="nt">&quot;scheduled_transition_date&quot;</span><span class="p">:</span> <span class="p">[],</span>
+              <span class="nt">&quot;scheduled_transition_state&quot;</span><span class="p">:</span> <span class="p">[],</span>
+              <span class="nt">&quot;metatag&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+              <span class="nt">&quot;path&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;alias&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+                  <span class="nt">&quot;pid&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+                  <span class="nt">&quot;langcode&quot;</span><span class="p">:</span> <span class="s2">&quot;en&quot;</span>
               <span class="p">},</span>
-              <span class="nt">&quot;areaServed&quot;</span><span class="p">:</span> <span class="p">[{</span>
-                              <span class="nt">&quot;administrativeArea&quot;</span><span class="p">:</span> <span class="s2">&quot;County&quot;</span><span class="p">,</span>
-                              <span class="nt">&quot;locality&quot;</span><span class="p">:</span> <span class="p">[</span>
-                                      <span class="s2">&quot;Kane&quot;</span><span class="p">,</span> <span class="s2">&quot;Lake&quot;</span><span class="p">,</span> <span class="s2">&quot;Will&quot;</span>
-                              <span class="p">]</span>
+              <span class="nt">&quot;content_translation_source&quot;</span><span class="p">:</span> <span class="s2">&quot;und&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;content_translation_outdated&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+              <span class="nt">&quot;field_address&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;langcode&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;country_code&quot;</span><span class="p">:</span> <span class="s2">&quot;US&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;administrative_area&quot;</span><span class="p">:</span> <span class="s2">&quot;IL&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;locality&quot;</span><span class="p">:</span> <span class="s2">&quot;Chicago&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;dependent_locality&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+                  <span class="nt">&quot;postal_code&quot;</span><span class="p">:</span> <span class="s2">&quot;60603&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;sorting_code&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+                  <span class="nt">&quot;address_line1&quot;</span><span class="p">:</span> <span class="s2">&quot;120 S LaSalle Street&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;address_line2&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;organization&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+                  <span class="nt">&quot;given_name&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+                  <span class="nt">&quot;additional_name&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+                  <span class="nt">&quot;family_name&quot;</span><span class="p">:</span> <span class="kc">null</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;field_content_description&quot;</span><span class="p">:</span> <span class="s2">&quot;Content description&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;field_h_o_email&quot;</span><span class="p">:</span> <span class="s2">&quot;info@illinoislegalaid.org&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;field_meta_description&quot;</span><span class="p">:</span> <span class="s2">&quot;Meta description&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;field_request_translation&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;field_telephone&quot;</span><span class="p">:</span> <span class="s2">&quot;555-555-5555&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;field_translation_outdated&quot;</span><span class="p">:</span> <span class="kc">false</span>
+          <span class="p">},</span>
+          <span class="nt">&quot;relationships&quot;</span><span class="p">:</span> <span class="p">{</span>
+              <span class="nt">&quot;node_type&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;node_type--node_type&quot;</span><span class="p">,</span>
+                      <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;8b1e2e3e-5e47-484c-a208-dfb063b8a380&quot;</span>
+                  <span class="p">},</span>
+                  <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/helpful_organization/a7071ee6-9eb9-4001-961a-a9b060af3fe2/node_type?resourceVersion=id%3A2644036&quot;</span>
                       <span class="p">},</span>
-                      <span class="p">{</span>
-                              <span class="nt">&quot;administrativeArea&quot;</span><span class="p">:</span> <span class="s2">&quot;Postal code&quot;</span><span class="p">,</span>
-                              <span class="nt">&quot;locality&quot;</span><span class="p">:</span> <span class="p">[</span>
-                                      <span class="s2">&quot;60505&quot;</span><span class="p">,</span> <span class="s2">&quot;60506&quot;</span>
-                              <span class="p">]</span>
+                      <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/helpful_organization/a7071ee6-9eb9-4001-961a-a9b060af3fe2/relationships/node_type?resourceVersion=id%3A2644036&quot;</span>
                       <span class="p">}</span>
-
-              <span class="p">]</span>
-      <span class="p">}]</span>
+                  <span class="p">}</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;revision_uid&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;user--user&quot;</span><span class="p">,</span>
+                      <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;968d01db-d9d4-41d8-845c-da3d8a8ac18e&quot;</span>
+                  <span class="p">},</span>
+                  <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/helpful_organization/a7071ee6-9eb9-4001-961a-a9b060af3fe2/revision_uid?resourceVersion=id%3A2644036&quot;</span>
+                      <span class="p">},</span>
+                      <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/helpful_organization/a7071ee6-9eb9-4001-961a-a9b060af3fe2/relationships/revision_uid?resourceVersion=id%3A2644036&quot;</span>
+                      <span class="p">}</span>
+                  <span class="p">}</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;uid&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;user--user&quot;</span><span class="p">,</span>
+                      <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;968d01db-d9d4-41d8-845c-da3d8a8ac18e&quot;</span>
+                  <span class="p">},</span>
+                  <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/helpful_organization/a7071ee6-9eb9-4001-961a-a9b060af3fe2/uid?resourceVersion=id%3A2644036&quot;</span>
+                      <span class="p">},</span>
+                      <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/helpful_organization/a7071ee6-9eb9-4001-961a-a9b060af3fe2/relationships/uid?resourceVersion=id%3A2644036&quot;</span>
+                      <span class="p">}</span>
+                  <span class="p">}</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;field_area_served&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;paragraph--coverage_area&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;68b6eb1a-8d77-4cc0-936e-8e11a79f7929&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;meta&quot;</span><span class="p">:</span> <span class="p">{</span>
+                              <span class="nt">&quot;target_revision_id&quot;</span><span class="p">:</span> <span class="mi">1429781</span>
+                          <span class="p">}</span>
+                      <span class="p">}</span>
+                  <span class="p">],</span>
+                  <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/helpful_organization/a7071ee6-9eb9-4001-961a-a9b060af3fe2/field_area_served?resourceVersion=id%3A2644036&quot;</span>
+                      <span class="p">},</span>
+                      <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/helpful_organization/a7071ee6-9eb9-4001-961a-a9b060af3fe2/relationships/field_area_served?resourceVersion=id%3A2644036&quot;</span>
+                      <span class="p">}</span>
+                  <span class="p">}</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;field_contact&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;paragraph--contact_point&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;680c1835-a929-461f-97df-61aeea27c326&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;meta&quot;</span><span class="p">:</span> <span class="p">{</span>
+                              <span class="nt">&quot;target_revision_id&quot;</span><span class="p">:</span> <span class="mi">1429791</span>
+                          <span class="p">}</span>
+                      <span class="p">}</span>
+                  <span class="p">],</span>
+                  <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/helpful_organization/a7071ee6-9eb9-4001-961a-a9b060af3fe2/field_contact?resourceVersion=id%3A2644036&quot;</span>
+                      <span class="p">},</span>
+                      <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/helpful_organization/a7071ee6-9eb9-4001-961a-a9b060af3fe2/relationships/field_contact?resourceVersion=id%3A2644036&quot;</span>
+                      <span class="p">}</span>
+                  <span class="p">}</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;field_content_management_tags&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[],</span>
+                  <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/helpful_organization/a7071ee6-9eb9-4001-961a-a9b060af3fe2/field_content_management_tags?resourceVersion=id%3A2644036&quot;</span>
+                      <span class="p">},</span>
+                      <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/helpful_organization/a7071ee6-9eb9-4001-961a-a9b060af3fe2/relationships/field_content_management_tags?resourceVersion=id%3A2644036&quot;</span>
+                      <span class="p">}</span>
+                  <span class="p">}</span>
+              <span class="p">}</span>
+          <span class="p">}</span>
+      <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/node/helpful_organization&quot;</span>
+      <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="parameters">
 <h2>Parameters<a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>identifier: uuid of the organization; required</p></li>
+<li><p>identifier:  the uuid of the specific helpful organization can be included to return a specific organization.</p></li>
 </ul>
+<p>Additional parameters supported by the JSONAPI are allowed See the <a class="reference internal" href="api_filtering.html#ilao-api-filters"><span class="std std-ref">Customizing API results</span></a> for filter examples.</p>
 </div>
 </div>
 
@@ -267,7 +416,7 @@
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
         <a href="cms_lcv_program.html" class="btn btn-neutral float-right" title="Legal Content Volunteers Program" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="cms_api_solution_result.html" class="btn btn-neutral float-left" title="Content API: Solution Result" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="cms_api_solution_form.html" class="btn btn-neutral float-left" title="Content API: Legal Form" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

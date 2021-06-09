@@ -26,7 +26,7 @@ See the :ref:`legal-solution-list-api` for a full example.
 Parameters
 ============
 
-* identifier (required):  the uuid of the specific solution must be included.
+* identifier:  the uuid of the specific solution can be included to return a specific solution.
 
 
 Additional parameters supported by the JSONAPI are allowed See the :ref:`ilao-api-filters` for filter examples.

@@ -28,9 +28,7 @@ JSONAPI results generally are formatted in JSON with the data stored in the resp
    cms_api_how_to_list
    cms_api_solution_how_to
    cms_api_step
-   cms_api_solution_forms
    cms_api_solution_form
-   cms_api_solution_result
    cms_api_solution_helpful_organization
 
 

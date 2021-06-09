@@ -9,6 +9,19 @@ Function call
 
 Method: GET
 
+
+If the /[uuid] is left off, all forms will be returned.  See parameters below.
+
+
+URLs:
+
+* https://www.illinoislegalaid.org/jsonapi/node/legal_step/[uuid] (English)
+* https://www.illinoislegalaid.org/es/jsonapi/node/legal_step/[uuid] (Spanish)
+* https://www.illinoislegalaid.org/pl/jsonapi/node/legal_step/[uuid] (Polish)
+
+.. note:: For example: https://www.illinoislegalaid.org/jsonapi/node/legal_step/5e640607-35a5-4d8b-a2f9-d3b5e40710f0?resourceVersion=id%3A2358466" will return the "Prepare and gather information for unemployment application" step.
+
+
 Sample response
 ==================
 
@@ -1007,3 +1020,5 @@ Parameters
 =============
 
 Parameters supported by the JSONAPI are allowed See the :ref:`ilao-api-filters` for filter examples.
+
+
