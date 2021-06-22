@@ -28,4 +28,4 @@ Parameters
 
 * identifier:  the uuid of the problem (required)
 
-Additional parameters supported by the JSONAPI are allowed See the :ref:`ilao-api-filters` for filter examples.
+Additional parameters supported by the JSONAPI are allowed. See the :ref:`ilao-api-filters` for filter examples.
