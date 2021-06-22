@@ -225,7 +225,7 @@ Sample response
 
 Parameters
 ==============
-Parameters supported by the JSONAPI are allowed See the :ref:`ilao-api-filters` for filter examples.
+Parameters supported by the JSONAPI are allowed. See the :ref:`ilao-api-filters` for filter examples.
 
 
 
