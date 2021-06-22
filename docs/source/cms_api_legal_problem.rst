@@ -15,7 +15,7 @@ URLS:
 * https://www.illinoislegalaid.org/es/jsonapi/node/legal_problem/[uuid] (Spanish)
 * https://www.illinoislegalaid.org/pl/jsonapi/node/legal_problem/[uuid](Polish)
 
-.. note:: For example https://www.illinoislegalaid.org/jsonapi/node/legal_problem/9cff9122-2e2e-404a-b909-bf58955c40a6 returns the Legal Problem of "I am unemployed"
+.. note:: For example https://www.illinoislegalaid.org/jsonapi/node/legal_problem/9cff9122-2e2e-404a-b909-bf58955c40a6 returns the Legal Problem of "I am unemployed".
 
 
 Sample Output
