@@ -8,9 +8,9 @@ JSONAPI results generally are formatted in JSON with the data stored in the resp
 
 * type (entity type)
 * id (string of the uuid)
-* attributes, an object of field data
-* relationships, an object of types, id, and links to referenced entities
-* included, an optional object of full referenced entities. This requires an includes parameter be provided.
+* attributes (an object of field data)
+* relationships (an object of types, id, and links to referenced entities)
+* included (an optional object of full referenced entities. This requires an includes parameter be provided)
 
 
 
