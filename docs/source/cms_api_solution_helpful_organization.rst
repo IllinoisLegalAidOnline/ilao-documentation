@@ -5,14 +5,12 @@ Content API: Legal Solution Helpful Organization
 
 Returns helpful organization content.  When the uuid is provided, returns the specific organization.
 
-..note:: Helpful organization content is different from the OTIS organization/location/location-services content.  Helpful organizations are organizations attached to specific legal problem content that are not legal organizations.
+.. note:: Helpful organization content is different from the OTIS organization/location/location-services content.  Helpful organizations are organizations attached to specific legal problem content that are not legal organizations.
 
 Function call
 ================
 
 Method: GET
-
-ethod: GET
 
 
 If the /[uuid] is left off, all forms will be returned.  See parameters below.
@@ -203,4 +201,4 @@ Parameters
 * identifier:  the uuid of the specific helpful organization can be included to return a specific organization.
 
 
-Additional parameters supported by the JSONAPI are allowed See the :ref:`ilao-api-filters` for filter examples.
+Additional parameters supported by the JSONAPI are allowed. See the :ref:`ilao-api-filters` for filter examples.
