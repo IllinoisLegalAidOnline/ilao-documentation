@@ -2,29 +2,21 @@
 LCV Dashboard
 ====================
 
-User profile data
-====================
-The website should store as part of the user's profile:
+.. image:: ../assets/editorial-dashboard.png
 
-* the current total number of points earned
-* the badges earned with the date the badge was earned
-* the current total number of words captured
-* the current total number of articles captured
-* this quarter totals
-* last quarter totals
-* current month streak number
+The LCV dashboard is accessible to:
 
-These fields should not be visible to users in their regular profile.
+* Any user with the legal aid member role
+* Any user with the subject matter expert role
 
+The Dashboard includes:
 
-System Tasks
-==============
-To generate content for the dashboard, the following scheduled tasks must be executed daily:
+* 4 most recent badges awarded, with an overflow page.
+* The user's all time stats (points, articles, words)
+* Quarterly statistics in chart format (last quarter and the current quarter)
+* A list of the user's recent activity (edits made), with an overflow page if the user has more activity.
+* Current rankings (the user's current rank in the individual standings and their organization's rank)
 
-* a daily task to award badges
-* a daily task to award milestones
-* a daily task to update totals. We don't want to have to manually update the data every time the page is viewed (technically similar to the voting API module)
-* monthly task to update streak
 
 
 

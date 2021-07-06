@@ -1,6 +1,6 @@
-==============
-Badges
-==============
+=======================
+Badges and Milestones
+=======================
 
 ILAO awards badges to users based on activity.
 

@@ -44,7 +44,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="LCV Leaderboards" href="lcv_leaderboards.html" />
-    <link rel="prev" title="Badges" href="lcv_badges.html" /> 
+    <link rel="prev" title="Badges and Milestones" href="lcv_badges.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -108,12 +108,8 @@
 <li class="toctree-l2 current"><a class="reference internal" href="cms_lcv_program.html">Legal Content Volunteers Program</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="lcv_roles.html">LCV Permissions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="lcv_points_system.html">Points System</a></li>
-<li class="toctree-l3"><a class="reference internal" href="lcv_badges.html">Badges</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">LCV Dashboard</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#user-profile-data">User profile data</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#system-tasks">System Tasks</a></li>
-</ul>
-</li>
+<li class="toctree-l3"><a class="reference internal" href="lcv_badges.html">Badges and Milestones</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">LCV Dashboard</a></li>
 <li class="toctree-l3"><a class="reference internal" href="lcv_leaderboards.html">LCV Leaderboards</a></li>
 <li class="toctree-l3"><a class="reference internal" href="lcv_reporting.html">Gamefication Reports</a></li>
 </ul>
@@ -151,12 +147,8 @@
 <li class="toctree-l2 current"><a class="reference internal" href="cms_lcv_program.html">Legal Content Volunteers Program</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="lcv_roles.html">LCV Permissions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="lcv_points_system.html">Points System</a></li>
-<li class="toctree-l3"><a class="reference internal" href="lcv_badges.html">Badges</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">LCV Dashboard</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#user-profile-data">User profile data</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#system-tasks">System Tasks</a></li>
-</ul>
-</li>
+<li class="toctree-l3"><a class="reference internal" href="lcv_badges.html">Badges and Milestones</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">LCV Dashboard</a></li>
 <li class="toctree-l3"><a class="reference internal" href="lcv_leaderboards.html">LCV Leaderboards</a></li>
 <li class="toctree-l3"><a class="reference internal" href="lcv_reporting.html">Gamefication Reports</a></li>
 </ul>
@@ -237,30 +229,20 @@
             
   <div class="section" id="lcv-dashboard">
 <h1>LCV Dashboard<a class="headerlink" href="#lcv-dashboard" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="user-profile-data">
-<h2>User profile data<a class="headerlink" href="#user-profile-data" title="Permalink to this headline">¶</a></h2>
-<p>The website should store as part of the user’s profile:</p>
+<img alt="_images/editorial-dashboard.png" src="_images/editorial-dashboard.png" />
+<p>The LCV dashboard is accessible to:</p>
 <ul class="simple">
-<li><p>the current total number of points earned</p></li>
-<li><p>the badges earned with the date the badge was earned</p></li>
-<li><p>the current total number of words captured</p></li>
-<li><p>the current total number of articles captured</p></li>
-<li><p>this quarter totals</p></li>
-<li><p>last quarter totals</p></li>
-<li><p>current month streak number</p></li>
+<li><p>Any user with the legal aid member role</p></li>
+<li><p>Any user with the subject matter expert role</p></li>
 </ul>
-<p>These fields should not be visible to users in their regular profile.</p>
-</div>
-<div class="section" id="system-tasks">
-<h2>System Tasks<a class="headerlink" href="#system-tasks" title="Permalink to this headline">¶</a></h2>
-<p>To generate content for the dashboard, the following scheduled tasks must be executed daily:</p>
+<p>The Dashboard includes:</p>
 <ul class="simple">
-<li><p>a daily task to award badges</p></li>
-<li><p>a daily task to award milestones</p></li>
-<li><p>a daily task to update totals. We don’t want to have to manually update the data every time the page is viewed (technically similar to the voting API module)</p></li>
-<li><p>monthly task to update streak</p></li>
+<li><p>4 most recent badges awarded, with an overflow page.</p></li>
+<li><p>The user’s all time stats (points, articles, words)</p></li>
+<li><p>Quarterly statistics in chart format (last quarter and the current quarter)</p></li>
+<li><p>A list of the user’s recent activity (edits made), with an overflow page if the user has more activity.</p></li>
+<li><p>Current rankings (the user’s current rank in the individual standings and their organization’s rank)</p></li>
 </ul>
-</div>
 </div>
 
 
@@ -270,7 +252,7 @@
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
         <a href="lcv_leaderboards.html" class="btn btn-neutral float-right" title="LCV Leaderboards" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="lcv_badges.html" class="btn btn-neutral float-left" title="Badges" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="lcv_badges.html" class="btn btn-neutral float-left" title="Badges and Milestones" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

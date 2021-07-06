@@ -5,16 +5,41 @@ LCV Leaderboards
 There are three leaderboards:
 
 * Overall individual leaderboard
-* Organization leaderboard
-* Organization editor leaderboard
+* Organization leaderboard (in development)
+* Organization editor leaderboard (in development)
 
 Content editor leaderboard
 ============================
 
-* highlights the top 3 point earners for the current quarter as of the last update (usually the night before).
-* includes:
+The content editor leaderboard shows standings for the current quarter, last quarter, and all time. Changing the toggle in the leaderboard will update the Quarter leaders and the overall standings.
 
-  * a listing of next 10 users. This should default to the page that the user appears on. For example, if the user is #7, then the first page (showing 1 - 10) should show. If the user is #25, the third page (showing 21 - 30) should show. 
-  * a block of milestones earned in the current quarter
-  
+.. image:: ../assets/editorial-leaderboard.png
+
+Quarter Leaders
+-----------------
+
+Quarter leaders are the top point earners during the selected quarter (current, last quarter, all time).
+
+Listings
+-----------
+Listings show all point earner and includes:
+
+* Their rank
+* Their photo, if uploaded
+* Their name
+* The total number of points earned during the period
+* The total number of articles revised during the period
+* The total number of words edited during the period
+
+The listing will:
+
+* Default to the current quarter
+* Defaults to the page the user appears on
+* Has a link to the user's dashboard and organization leaderboard next to their record in the listing.
+
+Milestones this quarter
+-------------------------
+
+This block shows the most recent milestones awarded. The more link goes to an overflow page that shows all milestones awarded.
+
 
