@@ -23,16 +23,19 @@ Badges vs Milestones
 Badges
 ------------
 
+`Add a badge <https://www.illinoislegalaid.org/admin/structure/gamification/badge/add>`_
+
 * Can only be awarded to individuals
 * Are awarded based on points (but points can be awarded per word or at a flat rate)
 * Have an associated badge image
 * May be earned:
 
   * one time
+  * once per month
   * once a quarter
   * once a year
-  * as many times as the criteria is met
-  * only during a defined time period
+
+.. note:: The badge can further be limited to a specific time period. For example, a badge that can be awarded once a quarter but limited to a time period of July 1, 2021 to August 15, 2021 can not be earned between August 16, 2021 and September 30, 2021 despite the badge being available once a quarter.
 
 Examples:
 
@@ -55,6 +58,8 @@ The partner badge might be awarded:
 
 Milestones
 ------------
+
+`Add a milestone <https://www.illinoislegalaid.org/admin/structure/gamification/milestone/add>`_
 
 * Can be awarded to individuals or to organizations
 * Can be tied to words, articles, points, or editors (for organizations)
@@ -120,9 +125,7 @@ Example:  User has: 210 points on Jan 28, 305 points on Feb 28, 500 points on Ap
 | Once per year      | User awarded the badge on February 28                        |
 | 300 points         |                                                              |
 +--------------------+--------------------------------------------------------------+
-| No limit           | User awarded the badge on Jan 28, Feb 28, April 30           |
-| 150 points         |                                                              |
-+--------------------+--------------------------------------------------------------+
+
 
 * Which content categories count towards the badge. A badge could be limited points earned from tasks associated with family & safety content or not limited for example. The category used is either:
 

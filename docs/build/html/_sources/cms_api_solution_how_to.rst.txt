@@ -19,11 +19,11 @@ URLS:
 Sample response
 ================
 
-See the :ref:`legal-howto-list-api` for  an example response
+See the :ref:`legal-howto-list-api` for  an example response.
 
 Parameters
 =============
 
 * howto_identifier:  uuid of the howto. Required
 
-Additional parameters supported by the JSONAPI are allowed See the :ref:`ilao-api-filters` for filter examples.
+Additional parameters supported by the JSONAPI are allowed. See the :ref:`ilao-api-filters` for filter examples.

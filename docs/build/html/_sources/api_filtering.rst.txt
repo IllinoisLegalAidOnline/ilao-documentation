@@ -10,8 +10,8 @@ For more specific examples, see the `Drupal filtering page <https://www.drupal.o
 
 Each filter includes:
 
-* Path this is the field information. Note that these can be nested within relationships as well.
-* Condition.  The condition to test for
+* Path (This is the field information. Note that these can be nested within relationships as well.)
+* Condition (The condition to test for)
 * Operator (if the operator is = it can be omitted)
 
 Some examples:
@@ -26,9 +26,9 @@ Include
 
 Use the include parameter to return related resources.  Examples:
 
-* https://www.illinoislegalaid.org/jsonapi/node/legal_problem?include=field_legal_issues will return the legal issues associated with a specific legal problem
-* https://www.illinoislegalaid.org/jsonapi/node/adrm/ed6914c6-6755-4281-a322-142f1b73cc21?include=field_content_type will include all of the content blocks within an ADRM article
-* https://www.illinoislegalaid.org/jsonapi/node/adrm/ed6914c6-6755-4281-a322-142f1b73cc21?include=field_content_type, field_content_type.paragraph_type will include all of the content blocks within an ADRM article and the parapgaph type associated with each paragraphs block in the content type.
+* https://www.illinoislegalaid.org/jsonapi/node/legal_problem?include=field_legal_issues will return the legal issues associated with a specific legal problem.
+* https://www.illinoislegalaid.org/jsonapi/node/adrm/ed6914c6-6755-4281-a322-142f1b73cc21?include=field_content_type will include all of the content blocks within an ADRM article.
+* https://www.illinoislegalaid.org/jsonapi/node/adrm/ed6914c6-6755-4281-a322-142f1b73cc21?include=field_content_type, field_content_type.paragraph_type will include all of the content blocks within an ADRM article and the paragraph type associated with each paragraphs block in the content type.
 
 
 .. note:: Paragraphs add a layer of complexity to ILAO's JSON API. These should be included when attempting to render content that requires the full text. Creating REST exports in Views that use the same OAUTH permission may work better for some use cases.

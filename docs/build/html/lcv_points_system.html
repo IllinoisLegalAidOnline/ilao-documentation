@@ -111,7 +111,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#point-types">Point Types</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#rules-for-automated-point-awards">Rules for Automated Point Awards</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#rules-for-manual-points">Rules for Manual points</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#point-tracking">Point Tracking</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#points-awarded">Points Awarded</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="lcv_badges.html">Badges</a></li>
@@ -156,7 +156,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#point-types">Point Types</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#rules-for-automated-point-awards">Rules for Automated Point Awards</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#rules-for-manual-points">Rules for Manual points</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#point-tracking">Point Tracking</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#points-awarded">Points Awarded</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="lcv_badges.html">Badges</a></li>
@@ -241,10 +241,6 @@
             
   <div class="section" id="points-system">
 <h1>Points System<a class="headerlink" href="#points-system" title="Permalink to this headline">¶</a></h1>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>this is in development</p>
-</div>
 <div class="section" id="point-types">
 <h2>Point Types<a class="headerlink" href="#point-types" title="Permalink to this headline">¶</a></h2>
 <p>Users with the Staff role may create point types and view a list of all point types.</p>
@@ -263,7 +259,8 @@
 <p>Points may be configured to be awarded at a flat rate or based on the number of words in the node.</p>
 <div class="section" id="creating-a-point-type">
 <h3>Creating a point type<a class="headerlink" href="#creating-a-point-type" title="Permalink to this headline">¶</a></h3>
-<p>Point types are created as content, although they do not have their own defined visible interface.</p>
+<p><a class="reference external" href="https://www.illinoislegalaid.org/admin/structure/gamification/points_type/add">Add a point type</a></p>
+<p>Point types use a custom entity, similar to content types but without a defined front-facing interface.</p>
 <img alt="_images/cms-lcv-add-points-form.png" src="_images/cms-lcv-add-points-form.png" />
 <p>Each point type:</p>
 <ul class="simple">
@@ -300,6 +297,10 @@
 <li><p>To revision authors who do not have the staff or intern role</p></li>
 <li><p>Only to the same node/language/author pair once every 24 hours (so that we don’t accidentally award points multiple times)</p></li>
 </ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Automated awards run on a scheduled task overnight. They will not be awarded automatically.</p>
+</div>
 </div>
 <div class="section" id="rules-for-manual-points">
 <h2>Rules for Manual points<a class="headerlink" href="#rules-for-manual-points" title="Permalink to this headline">¶</a></h2>
@@ -310,38 +311,12 @@
 <li><p>Portal main pages</p></li>
 </ul>
 </div>
-<div class="section" id="point-tracking">
-<h2>Point Tracking<a class="headerlink" href="#point-tracking" title="Permalink to this headline">¶</a></h2>
-<p>Point awards should be recorded on the website with the following information:</p>
-<ul class="simple">
-<li><p>The timestamp of when the record was created</p></li>
-<li><p>The timestamp of when the record was last updated</p></li>
-<li><p>A reference to the point type awarded</p></li>
-<li><p>The user ID of the person earning the point</p>
-<ul>
-<li><p>for automated points, it is always the revision author</p></li>
-<li><p>for manual points, it is the user added to the user field on the form</p></li>
-</ul>
-</li>
-<li><p>The entity id of the node associated with the points, if one exists</p>
-<ul>
-<li><p>for automated awards, it is the node of the content being revised</p></li>
-<li><p>for manual awards, it comes from the manual credit form</p></li>
-</ul>
-</li>
-<li><p>The revision id of the revision being tracked, for automated awards</p></li>
-<li><p>The language code of the revision, for automated awards</p></li>
-<li><p>The primary legal category associated with the points</p>
-<ul>
-<li><p>for automated awards, it is the primary legal category of the node at the time the points are awarded</p></li>
-<li><p>for manual awards, it comes from the manual credit form</p></li>
-</ul>
-</li>
-<li><p>The number of points awarded</p></li>
-<li><p>The number of words in the node at the time points were awarded</p></li>
-<li><p>The user id of the person awarding the points (for automated awards, this is anonymous as the system user)</p></li>
-<li><p>The date the points were earned (this may be different from when they are awarded)</p></li>
-</ul>
+<div class="section" id="points-awarded">
+<h2>Points Awarded<a class="headerlink" href="#points-awarded" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://www.illinoislegalaid.org/admin/content/gamefication/manual-credit">Manually Award Points</a></p>
+<img alt="_images/manually-award-points.png" src="_images/manually-award-points.png" />
+<p>“Points awarded” is the entity that stores points awarded to specific users, either automatically or manually.</p>
+<p>A <a class="reference external" href="https://www.illinoislegalaid.org/admin/content/gamification/point-awards">report of points awarded</a> shows all points awarded in the system.</p>
 </div>
 </div>
 

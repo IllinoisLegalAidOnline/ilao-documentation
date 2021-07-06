@@ -214,11 +214,13 @@
   <div class="section" id="content-api-legal-solution-helpful-organization">
 <h1>Content API: Legal Solution Helpful Organization<a class="headerlink" href="#content-api-legal-solution-helpful-organization" title="Permalink to this headline">¶</a></h1>
 <p>Returns helpful organization content.  When the uuid is provided, returns the specific organization.</p>
-<p>..note:: Helpful organization content is different from the OTIS organization/location/location-services content.  Helpful organizations are organizations attached to specific legal problem content that are not legal organizations.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Helpful organization content is different from the OTIS organization/location/location-services content.  Helpful organizations are organizations attached to specific legal problem content that are not legal organizations.</p>
+</div>
 <div class="section" id="function-call">
 <h2>Function call<a class="headerlink" href="#function-call" title="Permalink to this headline">¶</a></h2>
 <p>Method: GET</p>
-<p>ethod: GET</p>
 <p>If the /[uuid] is left off, all forms will be returned.  See parameters below.</p>
 <p>URLs:</p>
 <ul class="simple">
@@ -405,7 +407,7 @@
 <ul class="simple">
 <li><p>identifier:  the uuid of the specific helpful organization can be included to return a specific organization.</p></li>
 </ul>
-<p>Additional parameters supported by the JSONAPI are allowed See the <a class="reference internal" href="api_filtering.html#ilao-api-filters"><span class="std std-ref">Customizing API results</span></a> for filter examples.</p>
+<p>Additional parameters supported by the JSONAPI are allowed. See the <a class="reference internal" href="api_filtering.html#ilao-api-filters"><span class="std std-ref">Customizing API results</span></a> for filter examples.</p>
 </div>
 </div>
 

@@ -198,8 +198,8 @@
 <p>For more specific examples, see the <a class="reference external" href="https://www.drupal.org/docs/core-modules-and-themes/core-modules/jsonapi-module/filtering">Drupal filtering page</a>.</p>
 <p>Each filter includes:</p>
 <ul class="simple">
-<li><p>Path this is the field information. Note that these can be nested within relationships as well.</p></li>
-<li><p>Condition.  The condition to test for</p></li>
+<li><p>Path (This is the field information. Note that these can be nested within relationships as well.)</p></li>
+<li><p>Condition (The condition to test for)</p></li>
 <li><p>Operator (if the operator is = it can be omitted)</p></li>
 </ul>
 <p>Some examples:</p>
@@ -212,9 +212,9 @@
 <h2>Include<a class="headerlink" href="#include" title="Permalink to this headline">¶</a></h2>
 <p>Use the include parameter to return related resources.  Examples:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://www.illinoislegalaid.org/jsonapi/node/legal_problem?include=field_legal_issues">https://www.illinoislegalaid.org/jsonapi/node/legal_problem?include=field_legal_issues</a> will return the legal issues associated with a specific legal problem</p></li>
-<li><p><a class="reference external" href="https://www.illinoislegalaid.org/jsonapi/node/adrm/ed6914c6-6755-4281-a322-142f1b73cc21?include=field_content_type">https://www.illinoislegalaid.org/jsonapi/node/adrm/ed6914c6-6755-4281-a322-142f1b73cc21?include=field_content_type</a> will include all of the content blocks within an ADRM article</p></li>
-<li><p><a class="reference external" href="https://www.illinoislegalaid.org/jsonapi/node/adrm/ed6914c6-6755-4281-a322-142f1b73cc21?include=field_content_type">https://www.illinoislegalaid.org/jsonapi/node/adrm/ed6914c6-6755-4281-a322-142f1b73cc21?include=field_content_type</a>, field_content_type.paragraph_type will include all of the content blocks within an ADRM article and the parapgaph type associated with each paragraphs block in the content type.</p></li>
+<li><p><a class="reference external" href="https://www.illinoislegalaid.org/jsonapi/node/legal_problem?include=field_legal_issues">https://www.illinoislegalaid.org/jsonapi/node/legal_problem?include=field_legal_issues</a> will return the legal issues associated with a specific legal problem.</p></li>
+<li><p><a class="reference external" href="https://www.illinoislegalaid.org/jsonapi/node/adrm/ed6914c6-6755-4281-a322-142f1b73cc21?include=field_content_type">https://www.illinoislegalaid.org/jsonapi/node/adrm/ed6914c6-6755-4281-a322-142f1b73cc21?include=field_content_type</a> will include all of the content blocks within an ADRM article.</p></li>
+<li><p><a class="reference external" href="https://www.illinoislegalaid.org/jsonapi/node/adrm/ed6914c6-6755-4281-a322-142f1b73cc21?include=field_content_type">https://www.illinoislegalaid.org/jsonapi/node/adrm/ed6914c6-6755-4281-a322-142f1b73cc21?include=field_content_type</a>, field_content_type.paragraph_type will include all of the content blocks within an ADRM article and the paragraph type associated with each paragraphs block in the content type.</p></li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
