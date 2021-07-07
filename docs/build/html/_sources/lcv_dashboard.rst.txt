@@ -1,6 +1,6 @@
-====================
-LCV Dashboard
-====================
+======================
+Editorial Dashboard
+======================
 
 .. image:: ../assets/editorial-dashboard2.png
 

@@ -1,5 +1,5 @@
 ====================
-LCV Leaderboards
+Leaderboards
 ====================
 
 There are three leaderboards:

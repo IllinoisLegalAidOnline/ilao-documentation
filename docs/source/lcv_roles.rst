@@ -1,5 +1,5 @@
 =======================
-LCV Permissions
+Permissions
 =======================
 
 Who can earn points
@@ -19,7 +19,7 @@ who have point activity will see a link to the Content Editor dashboard from the
 Who can view leaderboards
 ============================
 
-Legal aid members and pro bono members who have point activity can access the leaderboard.
+Legal aid members and subject matter expert members who have point activity can access the leaderboard.
 
 Legal aid members can view the leaderboard of their organization.
 

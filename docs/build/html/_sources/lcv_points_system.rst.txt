@@ -1,5 +1,5 @@
 ===============================
-Points System
+Gamification: Points
 ===============================
 
 
@@ -51,6 +51,8 @@ All point types can be viewed on the `Points Type report <https://www.illinoisle
 
 .. image:: ../assets/points-type-report.png
 
+.. note:: A generic set of point types should be created. For example, a point type of "Points per word", "Points per article", "User testing points", etc.  These can be mixed and matched in badges and/or milestones.
+
 Rules for Automated Point Awards
 ==================================
 
@@ -59,7 +61,7 @@ Automated point awards will be awarded:
 * To revision authors who do not have the staff or intern role
 * Only to the same node/language/author pair once every 24 hours (so that we don't accidentally award points multiple times)
 
-.. note:: Automated awards run on a scheduled task overnight. They will not be awarded automatically.
+.. note:: Automated awards run on a scheduled task overnight. They will not be awarded automatically and they can not be awarded manually.
 
 Rules for Manual points
 =================================
@@ -81,6 +83,7 @@ Points Awarded
 "Points awarded" is the entity that stores points awarded to specific users, either automatically or manually.
 
 A `report of points awarded <https://www.illinoislegalaid.org/admin/content/gamification/point-awards>`_ shows all points awarded in the system.
+
 
 
 
