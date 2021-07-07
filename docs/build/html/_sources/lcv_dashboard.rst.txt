@@ -2,7 +2,7 @@
 LCV Dashboard
 ====================
 
-.. image:: ../assets/editorial-dashboard.png
+.. image:: ../assets/editorial-dashboard2.png
 
 The LCV dashboard is accessible to:
 
