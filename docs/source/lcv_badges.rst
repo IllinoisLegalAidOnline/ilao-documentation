@@ -18,6 +18,10 @@ There are 6 badge icons for each legal category:
 There are also 3 "Champion" badges per category (1st, 2nd, 3rd).
 There is also a star image for milestone awards.
 
+
+`Badge icons can be found on the Google drive <https://drive.google.com/drive/folders/10Bsr_Q7OMw_4REJ1abGzWIZINNKJR4SM>`_.
+
+
 Badges vs Milestones
 ======================
 Badges
@@ -54,7 +58,6 @@ The author and partner badges are reserved for specialty awards rather than gene
 The partner badge might be awarded:
 * with a category of "UX Tester" the first time a user completes an observeration test
 * with a category of "QA Partner" when a user tests an Easy Form
-
 
 Milestones
 ------------
