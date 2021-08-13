@@ -98,10 +98,14 @@
 <li class="toctree-l1"><a class="reference internal" href="basic_pages_cms.html">Basic pages</a></li>
 <li class="toctree-l1"><a class="reference internal" href="testimonials_cms.html">Testimonials Content Type</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="webforms_cms.html">Webforms</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="cms_webforms_admin.html">Webforms Administration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_webforms_admin.html">Webforms administration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cms_webforms_triage_rules.html">Webforms used in triage rules</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cms_webforms_guided_navigation.html">Webforms for Guided Navigation</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Webforms in legal content</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Webforms in legal content</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#creating-a-webform-for-legal-content">Creating a webform for legal content</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#adding-to-legal-content">Adding to legal content</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="translation_cms.html">Translation Management</a></li>
@@ -189,6 +193,54 @@
             
   <div class="section" id="webforms-in-legal-content">
 <h1>Webforms in legal content<a class="headerlink" href="#webforms-in-legal-content" title="Permalink to this headline">¶</a></h1>
+<p>Webforms can be created an embedded within legal content.  Existing examples include:</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Currently, webforms can only be embedded in portal main page content and toolbox steps.</p>
+</div>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.illinoislegalaid.org/voc/are-you-victim-or-survivor-crime">Are you a victim?</a> on VOCA</p></li>
+</ul>
+<div class="section" id="creating-a-webform-for-legal-content">
+<h2>Creating a webform for legal content<a class="headerlink" href="#creating-a-webform-for-legal-content" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Go to Structure =&gt; Webform and Add webform</p></li>
+<li><p>Enter a title that complies with our style guidelines in the title</p></li>
+<li><p>Set the category to Legal Content</p></li>
+</ul>
+<img alt="_images/webform-add-lc.png" src="_images/webform-add-lc.png" />
+<ul class="simple">
+<li><p>Go to Build and build your form.  See <a class="reference external" href="https://www.drupal.org/docs/8/modules/webform/webform-features">Drupal’s webform documentation</a> for general information on how to build a webform.</p></li>
+</ul>
+<img alt="_images/lc-webform-example.png" src="_images/lc-webform-example.png" />
+<ul class="simple">
+<li><p>Go to test or view to test your webform. If you use view, any data will be stored as a webform submission.</p></li>
+<li><p>Go to reference and create a webform node to attache your webform too.</p></li>
+</ul>
+<img alt="_images/lc-webform-reference.png" src="_images/lc-webform-reference.png" />
+</div>
+<div class="section" id="adding-to-legal-content">
+<h2>Adding to legal content<a class="headerlink" href="#adding-to-legal-content" title="Permalink to this headline">¶</a></h2>
+<p>To add to portal main page:</p>
+<ul class="simple">
+<li><p>Add the paragraph bundle “portal layout webform”</p></li>
+<li><p>Provide a title for the webform.</p></li>
+<li><p>Add a summary.  This is a place to provide text for the user to understand the form.</p></li>
+<li><p>Select the webform from the dropdown.</p></li>
+</ul>
+<img alt="_images/lc-webform-portal-page.png" src="_images/lc-webform-portal-page.png" />
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">Todo</p>
+<p>Add support for webforms embedded in legal content.</p>
+</div>
+<p>To add to tool step content:</p>
+<ul class="simple">
+<li><p>Add the paragraph bundle “Webform”</p></li>
+<li><p>Optionally, provide a title for the webform.</p></li>
+<li><p>Optionally, add a summary.  This is a place to provide text for the user to understand the form.</p></li>
+<li><p>Select the webform from the dropdown.</p></li>
+</ul>
+</div>
 </div>
 
 
