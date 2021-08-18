@@ -20,6 +20,7 @@ Welcome to Illinois Legal Aid Online Product Documentation
    translation_cms
    calendar_cms
    jobs_cms
+   discussion_groups
    otis_cms
    site_search
    site_faqs
@@ -29,8 +30,6 @@ Welcome to Illinois Legal Aid Online Product Documentation
    ilao_api 
    
 See also:
-   
-   `Google groups documentation <https://docs.google.com/document/d/10jq9kULtQsnE1LlcnsoC6dLErqDeAwCpT2AsnTb3Vqc/edit>`_
    
    `ContentNet <https://sites.google.com/illinoislegalaid.org/contentnet/content-team-documentation>`_
 
