@@ -59,7 +59,8 @@ Group managers and owners will be notified when someone uses the Google group to
 
 .. warning:: Users should be approved only if they are employees of a legal aid organization. An exception exists on some lists for grantees of particular funders. Check with Gwen or Teri if you are unsure if someone should be approved.
 
-Users without a Google account will create a support ticket to join a listserv. These will be added to the content team Jira board. To add a member:
+Users without a Google account will create a Zendesk support ticket from the Contact US page to join a listserv. These will be added to the content team Jira board to be resolved by a content team member.
+To add a member:
 
 * Go to the group page on Google Groups
 * Click on the People section (if collapsed)
