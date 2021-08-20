@@ -1,18 +1,16 @@
 =====================================
-Get Legal Help text line  Workflow
+Get Legal Help text line workflow
 =====================================
 
-This documents the flow of the OTIS Master flow in Twilio Studio.
+This documents the flow of the OTIS Main flow in Twilio Studio.
 
 
 .. note::
 
-  * Future enhancement will include scheduling a callback slot
   * Initial pilot is limited to unemployment, food stamps, and TANF
-  * Future build out should include referral
 
-Workflow Tree
-=================
+Prescreening
+===============
 
 Initial message
 
@@ -23,11 +21,10 @@ Overview message
 
 First name
 
-Last name
 
 Zip code
 
-  System:  Get region data for zip code (state, county, county FIPS)
+  System:  Get region data for zip code (state, county, county FIPS, city)
 
   In Illinois,
 
@@ -42,31 +39,23 @@ Zip code
      Otherwise, Link to LawHelp
 
 
-Get Legal Issue (7 options)
-
-  User replies More
-
-    Show definitions
-
-    Return to legal issue
+Get Legal Issue (5 options)
 
   User replies 1 (Unemployment)
 
-     Runs Guided Navigation
-
-     CONTINUE to matches
-
   User replies 2 (Food stamps)
-
-     Runs Guided Navigation
-
-     CONTINUE to matches
 
   User replies 3 (TANF)
 
-     Runs Guided Navigation
+.. note:: In all 3 of the above, the next step is to do an income pre-screen.  For this, the system asks for the number of adults and number of children
 
-     CONTINUE to matches
+   * System: Saves household data to user's profile in OTIS database
+   * Throw error if either is not numeric
+   * Get the basic income level  approximately 300% of FPL)
+   * Ask user if there income is more than this. If they:
+
+     * Reply Yes, they are exited to Get Legal Help
+     * Reply No, they continue to Guided Navigation-based triage
 
   User replies 4 (Eviction)
 
@@ -76,38 +65,53 @@ Get Legal Issue (7 options)
 
      User gets exit message to Get Legal Help
 
-System runs matches code based on:
+Guided Navigation Triage
+==========================
 
-  * legal issue/guided navigation results
-  * first name and last name
-  * zip code
+If a user makes it through the pre-screen, the system gets:
 
-.. note::  If there are no matches, provide legal information and referrals.
+* Process ID from Legal Server for the appropriate starting Guided Navigation
+* LSC problem code for the selected problem
+* Default search term
 
-Matches: Ask user if they want to continue to apply to the organizations
+.. note:: These values are contained in Twilio's Guided Navigation service in the get-process-list function.
 
-  User says no
+The system then loops through the Guided Navigation process as follows:
 
-    System: Save user data to OTIS database
+* Gets the current form from Legal Server
+* If the current form has a value false in the "is_complete" field, the form is displayed to the user
+* If the current form has a value true in the "is_complete" field, Twilio moves to evaluation.
+* Twilio sends the response back to Legal Server
 
-    Exits to Legal content
 
-  Users says yes CONTINUE
+Guided Navigation Evaluation
+==============================
 
-Household prompt
+The final response from Legal Server's Guided Navigation is an outcome field. This field matches against case acceptance values from webforms on our website. The system then:
 
-  Household adult
+* Returns the intake settings id for any matches on the legal problem
+* Runs another filter that filters this list on location
+* Returns any and all matches.
 
-  Household children
+Matches
+=========
 
-  System: Saves household data to user's profile in OTIS database
+* If no matches are found, the user is sent to Get Legal Help
+* If 1 match is found, the user is offered the opportunity to apply to that organization
+* If multiple organizations are found, the user is offered the opportunity to pick one to continue to apply to.
 
-    Throw error if either is not numeric
+.. note:: If the user says no, the system saves the user's data to OTIS database and exists the system.
+
+Intake
+=========
+Get last name
 
 Get maiden names, if any
 
 Get nicknames, if any
 
+Get date of birth
+-------------------
 Get birth month
 
   System: Validate birth month based on name/abbreviation or numeric input
@@ -135,6 +139,7 @@ Ask user to confirm birthdate
   If not confirmed, go back to birth month
 
 Start demographics
+---------------------
 
 Get race
 
@@ -158,7 +163,8 @@ Get preferred language
 
 System:  Save demographic data to user's profile in OTIS database
 
-Income prompt
+Start income questions
+------------------------
 
 Ask wages/salary
   Yes
@@ -287,6 +293,8 @@ System: Calculate total income and compare to allowable income based on 80% of A
 
     CONTINUE
 
+Get Contact Information
+=========================
 
 Ask if current number is best to reach at
 
@@ -316,7 +324,8 @@ Ask user to confirm their contact information
   NO
     Re-ask contact questions starting with phone number
 
-System:  Check program contact type.
+Process contact type
+======================
 
   If client calls
 
@@ -334,11 +343,13 @@ System:  Check program contact type.
 
   If callback
 
-    Ask user whether they prefer morning or afternoon callback
+    Ask user if the first available slot will work for them
 
-      If morning or afternoon, CONTINUE
+    If they say no, provide list of days to pick from
 
-      If neither, throw error and re-ask
+    If user picks a day, provide list of available time slots
+
+    If user declines a callback, revert to please call
 
     System: eTransfer case file to Legal Server
 
