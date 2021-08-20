@@ -12,8 +12,7 @@ Setting up a Google group
 
 * Enter the group info:
 
-  * Enter the group name; by default this gets appended to @illinoislegalaid.org to become the group email list name.  This can be overridden in the Group email address field
-Review and edit if needed the group email address.  This email address must be unique to the IllinoisLegalAid.org domain.
+  * Enter the group name; by default this gets appended to @illinoislegalaid.org to become the group email list name.  This can be overridden in the Group email address field; Review and edit if needed the group email address.  This email address must be unique to the IllinoisLegalAid.org domain.
 
   * Enter an optional description
 
@@ -59,7 +58,8 @@ Group managers and owners will be notified when someone uses the Google group to
 
 .. warning:: Users should be approved only if they are employees of a legal aid organization. An exception exists on some lists for grantees of particular funders. Check with Gwen or Teri if you are unsure if someone should be approved.
 
-Users without a Google account will create a support ticket to join a listserv. These will be added to the content team Jira board. To add a member:
+Users without a Google account will create a Zendesk support ticket from the Contact US page to join a listserv. These will be added to the content team Jira board to be resolved by a content team member.
+To add a member:
 
 * Go to the group page on Google Groups
 * Click on the People section (if collapsed)
@@ -74,4 +74,5 @@ Information for discussion groups should be added to the Discussion Groups page 
 * The email address to send messages to in the "How discussion groups work" section
 * The name of the group (for example Foreclosure discussion group), linked to the landing page on Google groups
 * The name, job title, organization and email address of the facilitator
+
 

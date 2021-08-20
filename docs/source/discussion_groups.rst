@@ -12,8 +12,7 @@ Setting up a Google group
 
 * Enter the group info:
 
-  * Enter the group name; by default this gets appended to @illinoislegalaid.org to become the group email list name.  This can be overridden in the Group email address field
-Review and edit if needed the group email address.  This email address must be unique to the IllinoisLegalAid.org domain.
+  * Enter the group name; by default this gets appended to @illinoislegalaid.org to become the group email list name.  This can be overridden in the Group email address field; Review and edit if needed the group email address.  This email address must be unique to the IllinoisLegalAid.org domain.
 
   * Enter an optional description
 
@@ -75,4 +74,5 @@ Information for discussion groups should be added to the Discussion Groups page 
 * The email address to send messages to in the "How discussion groups work" section
 * The name of the group (for example Foreclosure discussion group), linked to the landing page on Google groups
 * The name, job title, organization and email address of the facilitator
+
 
