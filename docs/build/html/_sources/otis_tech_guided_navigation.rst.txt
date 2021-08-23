@@ -17,6 +17,7 @@ Selecting I quit takes the user to this screen:
 .. image:: ../assets/otis-gn-screen2.png
 
 
+
 Creating Dialogues & Segments
 ==============================
 
@@ -25,11 +26,11 @@ As a practice we:
 * Dialogues to be used as starting points in OTIS are set against the top level LSC problem code.
 * Dialogues to be used within Guided Navigation to surface sub-issues are not tagged to OTIS.
 * Limit segments to 1 question per segment, unless that segment is setting a single field.
-* Users may be moved from one dialogue to another based on answers. For example, a user may enter on Bankruptcy and get moved to Foreclosure when they are seeking a bankruptcy to save their home. 
+* Users may be moved from one dialogue to another based on answers. For example, a user may enter on Bankruptcy and get moved to Foreclosure when they are seeking a bankruptcy to save their home.
 
 Examples
 -----------
-ILAO may create a Guided Navigation for Divorce that is called from OTIS when a user may have a divorce issue. 
+ILAO may create a Guided Navigation for Divorce that is called from OTIS when a user may have a divorce issue.
 
 The divorce dialogue may call a "has domestic violence" dialogue that sets whether there is DV in the divorce before returning to ask the user additional divorce triage questions.
 

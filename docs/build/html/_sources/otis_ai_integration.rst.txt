@@ -2,17 +2,18 @@
 OTIS AI Integration
 ====================
 
-We have access to 2 legal issue classifiers that return one or more likely legal issues. 
+We have access to 2 legal issue classifiers that return one or more likely legal issues.
 
 Both produce similar results although they don't always perform evenly.
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
-   
+
    otis_tech_guided_navigation
    otis_tech_guided_navigation_api
    otis_tech_guided_navigation_forms
+   otis_guided_nav_functions
    otis_tech_houston_ai
    otis_tech_spot_classifier
    otis_natural_language_processing
@@ -50,4 +51,3 @@ With Guided Navigation we can handle multiple matching organizations where we ca
 
 Guided navigation: `multiple matches <https://dnlmkx.axshare.com/matches_-_multiple.html>`_
 
- 
