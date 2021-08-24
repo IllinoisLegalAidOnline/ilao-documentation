@@ -130,3 +130,20 @@ When the form element type is "Date", returns:
 Getting Guided Navigation matches
 ===================================
 
+This function returns any intake settings ids that are a match based on a match be
+
+**Function name:** get-gn-matches
+
+**Parameters:**
+
+* event.user_issue = the number of the final case acceptance outcome value
+* event.outcome_field = the outcome field name
+
+**Returns:** An array of intake settings ids that match on the outcome field and value. This array does not filter on location or any other criteria. It simply returns webform case acceptance matches against Guided Navigation.
+
+.. note:: This function currently relies on the gn-outcome-list asset in Twilio for data. This asset should be updated whenever webforms change.
+
+.. todo:: Replace gn-outcome-list with live data from our API.
+
+
+

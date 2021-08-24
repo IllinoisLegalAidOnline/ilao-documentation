@@ -12,6 +12,10 @@ To add a new legal issue to OTIS-based Guided Navigation over SMS:
 * Update the Case acceptance view to include the new legal issue
 * In Twilio:
 
+  * Update the gn-outcome-list asset in the guided-nav service.  For best results, delete all the existing data and copy and paste the REST export for every Rest export in the website view.
+
+  * Save and deploy the asset.
+
   * In the OTIS flow:
 
     * Step 1: Add a number and label for the legal issue.
@@ -52,6 +56,23 @@ To add a new legal issue to OTIS-based Guided Navigation over SMS:
 Demographic taxonomy terms
 =============================
 
+Taxonomy terms for gender, race, ethnicity, etc, that are used in the SMS application, are stored in functions rather than pulled from the website.
 
+Any change needs to be made in both the relevant otis-load and otis-validate functions. Each demographic term has its own pair of functions (for example, otis-load-genders and otis-validate-genders).
+
+.. code-block:: javascript
+
+
+   if (event.langcode == null || event.langcode == 'en') {
+     marital.push('Single','Married','Divorced','Separated','Widowed');
+     marital.push('Other', 'Prefer not to respond');
+   }
+   else {
+    marital.push('Soltero','Casado','Divorciado','Separado','Viudo');
+    marital.push('Otros', 'Prefiero no contestar');
+  }
+
+
+.. todo:: Replace this with API calls to the website.
 
 

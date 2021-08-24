@@ -335,6 +335,22 @@
 </div>
 <div class="section" id="getting-guided-navigation-matches">
 <h2>Getting Guided Navigation matches<a class="headerlink" href="#getting-guided-navigation-matches" title="Permalink to this headline">¶</a></h2>
+<p>This function returns any intake settings ids that are a match based on a match be</p>
+<p><strong>Function name:</strong> get-gn-matches</p>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>event.user_issue = the number of the final case acceptance outcome value</p></li>
+<li><p>event.outcome_field = the outcome field name</p></li>
+</ul>
+<p><strong>Returns:</strong> An array of intake settings ids that match on the outcome field and value. This array does not filter on location or any other criteria. It simply returns webform case acceptance matches against Guided Navigation.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This function currently relies on the gn-outcome-list asset in Twilio for data. This asset should be updated whenever webforms change.</p>
+</div>
+<div class="admonition-todo admonition" id="id2">
+<p class="admonition-title">Todo</p>
+<p>Replace gn-outcome-list with live data from our API.</p>
+</div>
 </div>
 </div>
 

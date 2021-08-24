@@ -215,6 +215,8 @@
 <li><p>Update the Case acceptance view to include the new legal issue</p></li>
 <li><p>In Twilio:</p>
 <ul>
+<li><p>Update the gn-outcome-list asset in the guided-nav service.  For best results, delete all the existing data and copy and paste the REST export for every Rest export in the website view.</p></li>
+<li><p>Save and deploy the asset.</p></li>
 <li><p>In the OTIS flow:</p>
 <ul class="simple">
 <li><p>Step 1: Add a number and label for the legal issue.</p></li>
@@ -259,6 +261,22 @@
 </div>
 <div class="section" id="demographic-taxonomy-terms">
 <h2>Demographic taxonomy terms<a class="headerlink" href="#demographic-taxonomy-terms" title="Permalink to this headline">¶</a></h2>
+<p>Taxonomy terms for gender, race, ethnicity, etc, that are used in the SMS application, are stored in functions rather than pulled from the website.</p>
+<p>Any change needs to be made in both the relevant otis-load and otis-validate functions. Each demographic term has its own pair of functions (for example, otis-load-genders and otis-validate-genders).</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span> <span class="k">if</span> <span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">langcode</span> <span class="o">==</span> <span class="kc">null</span> <span class="o">||</span> <span class="nx">event</span><span class="p">.</span><span class="nx">langcode</span> <span class="o">==</span> <span class="s1">&#39;en&#39;</span><span class="p">)</span> <span class="p">{</span>
+   <span class="nx">marital</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="s1">&#39;Single&#39;</span><span class="p">,</span><span class="s1">&#39;Married&#39;</span><span class="p">,</span><span class="s1">&#39;Divorced&#39;</span><span class="p">,</span><span class="s1">&#39;Separated&#39;</span><span class="p">,</span><span class="s1">&#39;Widowed&#39;</span><span class="p">);</span>
+   <span class="nx">marital</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="s1">&#39;Other&#39;</span><span class="p">,</span> <span class="s1">&#39;Prefer not to respond&#39;</span><span class="p">);</span>
+ <span class="p">}</span>
+ <span class="k">else</span> <span class="p">{</span>
+  <span class="nx">marital</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="s1">&#39;Soltero&#39;</span><span class="p">,</span><span class="s1">&#39;Casado&#39;</span><span class="p">,</span><span class="s1">&#39;Divorciado&#39;</span><span class="p">,</span><span class="s1">&#39;Separado&#39;</span><span class="p">,</span><span class="s1">&#39;Viudo&#39;</span><span class="p">);</span>
+  <span class="nx">marital</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="s1">&#39;Otros&#39;</span><span class="p">,</span> <span class="s1">&#39;Prefiero no contestar&#39;</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">Todo</p>
+<p>Replace this with API calls to the website.</p>
+</div>
 </div>
 </div>
 
