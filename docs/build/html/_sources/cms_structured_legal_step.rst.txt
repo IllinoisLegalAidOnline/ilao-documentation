@@ -4,11 +4,11 @@
 Legal Step
 ===================
 
-Legal steps are part of a :ref:`cms-legal-howto` which are part of a :ref:`cms-legal-solution`. 
+Legal steps are part of a :ref:`cms-legal-howto` which are part of a :ref:`cms-legal-solution`.
 
 A step is composed of 1 or more directions and 0 or more tips.
 
-.. note:: Legal steps can be re-used in multiple how-tos. 
+.. note:: Legal steps can be re-used in multiple how-tos.
 
 Direction vs Tip
 ==================
@@ -26,9 +26,9 @@ For example, the step "Move out and clean the apartment" might have:
 
 Bulleted lists
 ===================
-Bulleted lists are not supported within a Direction or Tip as direction and tips are themselves list items within a step. 
+Bulleted lists are not supported within a Direction or Tip as direction and tips are themselves list items within a step.
 
-Return all of the keys to the landlord right after you move. If you do not, the landlord may charge you. If you return the keys to a leasing office, have the landlord write up a receipt acknowledging that the keys have been returned. If you are returning keys by mail, send the keys with a tracking number and keep that tracking number for your records. 
+Return all of the keys to the landlord right after you move. If you do not, the landlord may charge you. If you return the keys to a leasing office, have the landlord write up a receipt acknowledging that the keys have been returned. If you are returning keys by mail, send the keys with a tracking number and keep that tracking number for your records.
 
 This could be structured as:
 
@@ -39,12 +39,12 @@ This could be structured as:
 
 This might render on the web as:
 
-1. Return all of the keys to the landlord right after you move. If you do not, the landlord may charge you. 
+1. Return all of the keys to the landlord right after you move. If you do not, the landlord may charge you.
 2. Get proof that you returned the keys. If you return the keys to a leasing office, have the landlord write up a receipt acknowledging that the keys have been returned. If you are returning keys by mail, send the keys with a tracking number and keep that tracking number for your records.
 
 and over SMS may be:
 
-* Segment 1:  Return all of the keys to the landlord right after you move. 
+* Segment 1:  Return all of the keys to the landlord right after you move.
 * Segment 2:  Tip:  If you do not, the landlord may charge you. Reply N for the next direction
 * Segment 3:  Get proof that you returned the keys.
 * Segment 4:  Tip:  If you return the keys to a leasing office, have the landlord write up a receipt acknowledging that the keys have been returned.
@@ -54,15 +54,16 @@ Creating or editing a step
 ============================
 Every step:
 
-* must have a title; this  
+* must have a title; this
 * should have a content description
 * should have a meta description
 * should have one or more legal issues
 * should have a primary legal category
 * one or more step blocks (see below)
+* may have one or more legal forms
 * should have a legal position
 * may have an annual update selection
-* may have an author/SME 
+* may have an author/SME
 * may request a translation
 * may mark translation as outdated
 
@@ -73,11 +74,10 @@ Step block
 A  step block consists of:
 
 * a type (direction or tip)
-* one or more body elements, using :ref:`cms-paired-markup`. Using multiple body elements allows us to better segment content over non-web channels. 
+* one or more body elements, using :ref:`cms-paired-markup`. Using multiple body elements allows us to better segment content over non-web channels.
 * reference URLS (links within the content)
 
 .. todo:: Determine whether the metadata fields should be required, whether last revised/reviewed dates should be added (or is at the how-to level sufficient) and whether we need the referenceUrls field (those were added before we had paired markup).
-
 
 
 

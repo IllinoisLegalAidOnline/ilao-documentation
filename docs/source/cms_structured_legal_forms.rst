@@ -4,12 +4,12 @@
 Legal forms
 =======================
 
-Legal forms can be part of a legal solution. Legal forms should be the **specific** form, not to a form generator packet. 
+Legal forms can be part of a legal step. Legal forms should be the **specific** form, not to a form generator packet.
 
 Relationship to Easy Forms
 ============================
 
-Easy forms are our guided interviews that generate one or more court forms. An Easy form may be referenced as the form prep program that generates the specific legal form. 
+Easy forms are our guided interviews that generate one or more court forms. An Easy form may be referenced as the form prep program that generates the specific legal form.
 
 For example, our Order of Protection Easy Form generates:
 
@@ -44,17 +44,20 @@ A legal form should have:
   * The url to the form
   * The link text (this is optional)
   * The form preparation program type. This is an `ILAO taxonomy <https://www.illinoislegalaid.org/admin/structure/taxonomy_manager/voc/form_prep_programs>`_ that includes:
-  
+
     * A2J interview
     * Docassemble
     * HotDocs
     * PDF
-    
-* Optionally, indicate the form use. This is particularly helpful when the form is part of a larger package and is only sometimes generated. For example:  This form is required when there are minor children in a divorce-related case.
-* Indicate the jurisdiction for the legal form. 
 
-.. note:: Both legal forms and legal solutions have jurisdiction tags. It is possible for a solution to be statewide and have legal forms that apply only to a specific jurisdiction. It is not necessary to create individual solutions for jurisdictions unless the solution content itself varies by zip code, city, county, or state.     
-    
+* Optionally, indicate the form use. This is particularly helpful when the form is part of a larger package and is only sometimes generated. For example:  This form is required when there are minor children in a divorce-related case.
+* Indicate the jurisdiction for the legal form.
+
+.. note:: Both legal forms and legal steps have jurisdiction tags. It is possible for a step to be statewide and have legal forms that apply only to a specific jurisdiction. It is not necessary to create individual steps for jurisdictions unless the step content itself varies by zip code, city, county, or state.
+
+   * Create separate steps in this example: Legal Forms - Kane county and Legal Forms - Lake county have different signing requirements that need to be included in the Directions for the step.
+   * Do not create separate steps in this example: Legal Forms - Kane county and Legal Forms - Lake county have identical instructions for filling out the form but the forms themselves are different
+
 
 Full add/edit form
 ======================
