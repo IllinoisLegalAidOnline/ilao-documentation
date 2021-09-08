@@ -53,7 +53,7 @@ Direct referral to JEP for any legal issue:
 
 Direct referral to Legal Aid Chicago's housing practice group:
 
-`https://www.illinoislegalaid.org/get-legal-help?source=1226&helptype[]=lawyer <https://www.illinoislegalaid.org/get-legal-help?source=1226&referral_source_type=intake_settings&helptype[]=lawyer>`_
+`https://www.illinoislegalaid.org/get-legal-help?source=1226&referral_source_type=intake_settings&helptype[]=lawyer <https://www.illinoislegalaid.org/get-legal-help?source=1226&referral_source_type=intake_settings&helptype[]=lawyer>`_
 
 When used in a chatbot
 --------------------------

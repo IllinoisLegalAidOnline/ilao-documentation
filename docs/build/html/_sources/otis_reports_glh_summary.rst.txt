@@ -44,3 +44,21 @@ Triage statuses
 * Program triage completed: User completed program triage 
 
 .. note:: Modal-related statuses were deprecated June 24, 2020 with the launch of our Drupal 8 website.
+
+Intake statuses
+================
+
+* Diverted: Users who diverted from intake because their legal issue does not match an organization's case acceptance criteria
+* Referrals: Users who complete the program's triage but indicate that they do not have a safe phone number
+* Started: Users who were matched to an organization, started the intake process, but did not finish it (excluding users who were just determined eligible)
+* Incomplete: 
+* Offered: Users who were matched to an organization, but did not start the intake
+* Over-income: Users who completed the income questions during intake, but were not eligible
+* Over-asset: Uses who completed the asset questions during intake, but were not eligible
+* Eligible: Users who completed the income questions during intake and were eligible, but did not continue
+* Bypass: SMS users who completed program triage and are instructed to contact the organization rather than completing an intake
+* Bypass Intake: Users who complted program triage and are instructed to contact the organization rather than completing an intake
+* eTransferred: Users who were matched to an organization and completed the intake process
+* Not_eTransferred: Users who were matched to an organization and completed the intake process, but there was an error when eTransferring
+
+.. note:: As of January 1, 2020, users are no longer being asked about their assets

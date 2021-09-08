@@ -101,6 +101,7 @@
 <li class="toctree-l1"><a class="reference internal" href="translation_cms.html">Translation Management</a></li>
 <li class="toctree-l1"><a class="reference internal" href="calendar_cms.html">Calendar</a></li>
 <li class="toctree-l1"><a class="reference internal" href="jobs_cms.html">Job Listings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="discussion_groups.html">Discussion groups</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="otis_cms.html">Get Legal Help</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="otis_endusers.html">Get Legal Help Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="otis_organization_management.html">Organization management</a></li>
@@ -110,6 +111,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#report-data">Report Data</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#filters">Filters</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#triage-statuses">Triage statuses</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#intake-statuses">Intake statuses</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="otis_reports_etransfer.html">Intake/Triage Report</a></li>
@@ -120,7 +122,6 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="otis_ai_integration.html">OTIS AI Integration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="otis_third_party_support.html">Supported Integrations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="otis_ilao_api.html">ILAO OTIS API</a></li>
 <li class="toctree-l2"><a class="reference internal" href="otis_sms_intake.html">Online Intake Over SMS</a></li>
 </ul>
 </li>
@@ -253,6 +254,27 @@
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Modal-related statuses were deprecated June 24, 2020 with the launch of our Drupal 8 website.</p>
+</div>
+</div>
+<div class="section" id="intake-statuses">
+<h2>Intake statuses<a class="headerlink" href="#intake-statuses" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Diverted: Users who diverted from intake because their legal issue does not match an organization’s case acceptance criteria</p></li>
+<li><p>Referrals: Users who complete the program’s triage but indicate that they do not have a safe phone number</p></li>
+<li><p>Started: Users who were matched to an organization, started the intake process, but did not finish it (excluding users who were just determined eligible)</p></li>
+<li><p>Incomplete:</p></li>
+<li><p>Offered: Users who were matched to an organization, but did not start the intake</p></li>
+<li><p>Over-income: Users who completed the income questions during intake, but were not eligible</p></li>
+<li><p>Over-asset: Uses who completed the asset questions during intake, but were not eligible</p></li>
+<li><p>Eligible: Users who completed the income questions during intake and were eligible, but did not continue</p></li>
+<li><p>Bypass: SMS users who completed program triage and are instructed to contact the organization rather than completing an intake</p></li>
+<li><p>Bypass Intake: Users who complted program triage and are instructed to contact the organization rather than completing an intake</p></li>
+<li><p>eTransferred: Users who were matched to an organization and completed the intake process</p></li>
+<li><p>Not_eTransferred: Users who were matched to an organization and completed the intake process, but there was an error when eTransferring</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>As of January 1, 2020, users are no longer being asked about their assets</p>
 </div>
 </div>
 </div>
