@@ -16,14 +16,52 @@ A legal solution is tied to one or more legal problems (see :ref:`cms-legal-prob
 * Zero or more helpful organizations
 * Zero or more legal organizations
 * One or more HowTos
+* Zero or more citations
 * A result
+* Zero or more questions.
 
 .. todo:: Determine if we should have information needed when we have tools/supplies in the how-to; This is especially important if the information needed might vary at a local level. How Tos should be required.
+
+Title
+======
+
+Title should match our standard title style for process-oriented legal content. An alternative name can be provided for use in search results.
+
+Disambiguation description
+===========================
+This is an internal descriptor to be used to distinguish one solution from another. Examples may include:
+
+* Appealing a UI denial at the initial stage vs Appealing a UI denial by UI board
+* Getting a divorce with children vs Getting a divorce without children
 
 Solution type
 =================
 
 A solution type are defined by our `solution types taxonomy <https://www.illinoislegalaid.org/admin/structure/taxonomy_manager/voc/solution_types>`_.
+
+Information needed
+===================
+If the user needs specific pieces of information to solve the problem, these should be listed individually here.
+
+For example, a solution to get a divorce with children may require that the user:
+
+* the name of their spouse
+* the spouse's current address
+* the children's names and ages
+
+Legal difficulty
+==================
+Legal difficulty can be used to indicate how difficult the solution is to execute on your own. Example legal difficulty statements:
+
+* "We rate this an easy task in most cases. Fill out the form and file it with the court. No court appearance is generally required."
+
+* "We rate this as a moderate task in most cases when our Easy Forms are used. You will likely have to appear in court."
+
+* "We rate this as a moderate task in most cases. If you are not a legal resident or citizen, this task should not be undertaken without an attorney."
+
+Estimated time required
+=========================
+We want to provide an estimated duration from start to finish to solve the problem. This likely requires input from SMEs
 
 
 Eligibility rules
@@ -119,6 +157,10 @@ This segment above may be structured as:
 * Structured text block 3 with body markup of "A judge can also change a person's parental duties (custody/visitation) in an Order of Protection."
 
 .. note::  Like in the example for eligibility rules, we have stripped off punctuation and and/or. Basic html markup like italics can be used in body markup but will be stripped in the plain text version.
+
+Questions
+============
+Legal solutions can have Legal Questions attached. Questions should relate generally to the solution provided. Questions specifically related to how the solution affects a problem should go here. For example: When am I eligible for a second bankruptcy? would go in the bankruptcy solution but Can I save my house if I file for bankruptcy would go in a foreclosure-related problem.
 
 
 
