@@ -50,6 +50,33 @@ and over SMS may be:
 * Segment 4:  Tip:  If you return the keys to a leasing office, have the landlord write up a receipt acknowledging that the keys have been returned.
 * If you are returning keys by mail, send the keys with a tracking number and keep that tracking number for your records.
 
+Legal forms needed
+====================
+
+Steps may have one or more legal forms attached to them.  For example, the step "Complete a motion" may have the direction of "You will need to complete a motion form" and also link to the motion form(s) in Legal forms needed.
+
+Jurisdiction
+==============
+Individual steps may be tagged to a specific jurisdiction. When attached to a how-to, the correct steps will display for the specific user's location.
+
+For example, a "How-to" with a jurisdiction of Illinois may have 10 steps; 9 are tagged to Illinois but 1 is tagged to Cook county. A user in Kane county would see 9 steps; a user in Cook county would see 10 steps.
+
+The order of the steps would depend on the How-to.
+
+When to use Jurisdiction-specific How-to vs Jurisdication-specific steps
+--------------------------------------------------------------------------
+Use jurisdiction specific How-tos when all of the steps apply statewide except for
+
+Use jurisdiction specific How-tos when at least one of the steps applies only to a specific jurisdiction.
+
+Examples:
+
+* A how-to has 5 steps. Step 1,2,4,5 apply to everyone in Illinois. Step 3 applies only to Cook county. In this scenario, it is okay to create 1 How-to for Illinois and tag Step 3 to Cook county.
+
+* A how-to has 5 steps. Steps 1,2,4,5 apply to everyone in Ilinois. Step 3 applies to everyone but Cook County. There is no Cook county equivalent. In this scenario, it is better to create 2 How-tos (one limited to Cook county and one limited to the other 101 counties.
+
+.. note:: it would be nice to have a way to tag jurisdiction as "all but Cook/Chicago"
+
 Creating or editing a step
 ============================
 Every step:
@@ -61,6 +88,7 @@ Every step:
 * should have a primary legal category
 * one or more step blocks (see below)
 * may have one or more legal forms
+* must have a jurisidiction
 * should have a legal position
 * may have an annual update selection
 * may have an author/SME

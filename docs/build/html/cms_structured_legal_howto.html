@@ -134,6 +134,7 @@
 <li class="toctree-l1"><a class="reference internal" href="translation_cms.html">Translation Management</a></li>
 <li class="toctree-l1"><a class="reference internal" href="calendar_cms.html">Calendar</a></li>
 <li class="toctree-l1"><a class="reference internal" href="jobs_cms.html">Job Listings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="discussion_groups.html">Discussion groups</a></li>
 <li class="toctree-l1"><a class="reference internal" href="otis_cms.html">Get Legal Help</a></li>
 <li class="toctree-l1"><a class="reference internal" href="site_search.html">Site Search</a></li>
 <li class="toctree-l1"><a class="reference internal" href="site_faqs.html">Site FAQs</a></li>
@@ -265,6 +266,10 @@
 <p>It is attached to one or more Legal solutions. See the <a class="reference internal" href="cms_structured_legal_solution.html#cms-legal-solution"><span class="std std-ref">Legal Solution</span></a> documentation.</p>
 <div class="section" id="times">
 <h2>Times<a class="headerlink" href="#times" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>we made these fields not required at this time. We need information from SME to provide this information.</p>
+</div>
 <p>A How-to requires three time entries:</p>
 <ul class="simple">
 <li><p>prep time:  the estimated amount of time it takes to prepare to complete the how-to. This time should the time to prepare the materials used to execute the How-to. This should include the time to:</p>
@@ -316,16 +321,21 @@ P, followed by the number for each:</p>
 <p>Step lists can be created in sections. A how-to may have a single linear steps section or may have multiple step sections.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>An example how-to for washing a car may have a step section labeled “Option 1:  Take it the car washing service” and “Option 2:  Hand wash in the driveway.”  Even linear, but complex How-tos may benefit from sections. For example, in applying for unemployment, it may make sense to have a Step section “Determine if you are eligible” with steps of Determine whether the reason you no longer have a job is eligible, determine whether you have sufficient earnings to be eligible.</p>
+<p>An example how-to for washing a car may have a step section labeled</p>
 </div>
+<ul class="simple">
+<li><p>“Option 1:  Take it the car washing service”</p></li>
+<li><p>“Option 2:  Hand wash in the driveway.”</p></li>
+</ul>
+<p>Even linear, but complex How-tos may benefit from sections. For example, in applying for unemployment, it may make sense to have a Step section “Determine if you are eligible” with steps of Determine whether the reason you no longer have a job is eligible, determine whether you have sufficient earnings to be eligible.</p>
 <p>Each section should have:</p>
 <ul class="simple">
 <li><p>A heading or title. This can be set to display or not display. For how-to’s with one step section, this should be set to not display.</p></li>
 <li><p>One or more steps. These are entity references to legal step content. The step must be written before it can be included.</p></li>
 </ul>
 </div>
-<div class="section" id="supplies-tools-yield">
-<h2>Supplies, tools, &amp; yield<a class="headerlink" href="#supplies-tools-yield" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="supplies-and-tools">
+<h2>Supplies and tools<a class="headerlink" href="#supplies-and-tools" title="Permalink to this headline">¶</a></h2>
 <p>Supplies and tools should be entered one at a time.</p>
 <p>A supply is something needed to complete the steps in the how-to. Supply examples might be:</p>
 <ul class="simple">
@@ -339,18 +349,27 @@ P, followed by the number for each:</p>
 <li><p>a pen</p></li>
 <li><p>an email address for e-filing.</p></li>
 </ul>
-<p>Yield is likely not applicable but is part of the standard. It’s used to indicate a quantity that results by performing instructions (and in Schema is most often used in recipes).</p>
 </div>
 <div class="section" id="jurisdiction">
 <h2>Jurisdiction<a class="headerlink" href="#jurisdiction" title="Permalink to this headline">¶</a></h2>
-<p>Each how-to should be coded to the jurisdiction(s) it applies to. See <a class="reference internal" href="cms_structured_jurisdiction.html#cms-coverage-area"><span class="std std-ref">Coverage area</span></a>. A <a class="reference internal" href="cms_structured_legal_solution.html#cms-legal-solution"><span class="std std-ref">Legal Solution</span></a> can have multiple how-tos, each with different jurisdictions. Individual steps are not tagged by jurisdiction.</p>
+<p>Each how-to should be coded to the jurisdiction(s) it applies to. See <a class="reference internal" href="cms_structured_jurisdiction.html#cms-coverage-area"><span class="std std-ref">Coverage area</span></a>. A <a class="reference internal" href="cms_structured_legal_solution.html#cms-legal-solution"><span class="std std-ref">Legal Solution</span></a> can have multiple how-tos, each with different jurisdictions. Individual steps may also be tagged by jurisdiction.</p>
 <p>For example:</p>
 <ul class="simple">
 <li><p>Getting an order of protection solution could have 102 how-tos, one for each county. Each how-to could contain then same 8 steps but step 9 is specific to that county.</p></li>
 </ul>
-<div class="admonition-todo admonition" id="id2">
-<p class="admonition-title">Todo</p>
-<p>Should individual steps be tagged to jurisdiction?</p>
+<div class="section" id="when-to-use-jurisdiction-specific-how-to-vs-jurisdication-specific-steps">
+<h3>When to use Jurisdiction-specific How-to vs Jurisdication-specific steps<a class="headerlink" href="#when-to-use-jurisdiction-specific-how-to-vs-jurisdication-specific-steps" title="Permalink to this headline">¶</a></h3>
+<p>Use jurisdiction specific How-tos when all of the steps apply statewide except for</p>
+<p>Use jurisdiction specific How-tos when at least one of the steps applies only to a specific jurisdiction.</p>
+<p>Examples:</p>
+<ul class="simple">
+<li><p>A how-to has 5 steps. Step 1,2,4,5 apply to everyone in Illinois. Step 3 applies only to Cook county. In this scenario, it is okay to create 1 How-to for Illinois and tag Step 3 to Cook county.</p></li>
+<li><p>A how-to has 5 steps. Steps 1,2,4,5 apply to everyone in Ilinois. Step 3 applies to everyone but Cook County. There is no Cook county equivalent. In this scenario, it is better to create 2 How-tos (one limited to Cook county and one limited to the other 101 counties.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>it would be nice to have a way to tag jurisdiction as “all but Cook/Chicago”</p>
+</div>
 </div>
 </div>
 <div class="section" id="full-add-edit-form">

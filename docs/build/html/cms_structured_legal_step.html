@@ -297,6 +297,30 @@
 <li><p>If you are returning keys by mail, send the keys with a tracking number and keep that tracking number for your records.</p></li>
 </ul>
 </div>
+<div class="section" id="legal-forms-needed">
+<h2>Legal forms needed<a class="headerlink" href="#legal-forms-needed" title="Permalink to this headline">¶</a></h2>
+<p>Steps may have one or more legal forms attached to them.  For example, the step “Complete a motion” may have the direction of “You will need to complete a motion form” and also link to the motion form(s) in Legal forms needed.</p>
+</div>
+<div class="section" id="jurisdiction">
+<h2>Jurisdiction<a class="headerlink" href="#jurisdiction" title="Permalink to this headline">¶</a></h2>
+<p>Individual steps may be tagged to a specific jurisdiction. When attached to a how-to, the correct steps will display for the specific user’s location.</p>
+<p>For example, a “How-to” with a jurisdiction of Illinois may have 10 steps; 9 are tagged to Illinois but 1 is tagged to Cook county. A user in Kane county would see 9 steps; a user in Cook county would see 10 steps.</p>
+<p>The order of the steps would depend on the How-to.</p>
+<div class="section" id="when-to-use-jurisdiction-specific-how-to-vs-jurisdication-specific-steps">
+<h3>When to use Jurisdiction-specific How-to vs Jurisdication-specific steps<a class="headerlink" href="#when-to-use-jurisdiction-specific-how-to-vs-jurisdication-specific-steps" title="Permalink to this headline">¶</a></h3>
+<p>Use jurisdiction specific How-tos when all of the steps apply statewide except for</p>
+<p>Use jurisdiction specific How-tos when at least one of the steps applies only to a specific jurisdiction.</p>
+<p>Examples:</p>
+<ul class="simple">
+<li><p>A how-to has 5 steps. Step 1,2,4,5 apply to everyone in Illinois. Step 3 applies only to Cook county. In this scenario, it is okay to create 1 How-to for Illinois and tag Step 3 to Cook county.</p></li>
+<li><p>A how-to has 5 steps. Steps 1,2,4,5 apply to everyone in Ilinois. Step 3 applies to everyone but Cook County. There is no Cook county equivalent. In this scenario, it is better to create 2 How-tos (one limited to Cook county and one limited to the other 101 counties.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>it would be nice to have a way to tag jurisdiction as “all but Cook/Chicago”</p>
+</div>
+</div>
+</div>
 <div class="section" id="creating-or-editing-a-step">
 <h2>Creating or editing a step<a class="headerlink" href="#creating-or-editing-a-step" title="Permalink to this headline">¶</a></h2>
 <p>Every step:</p>
@@ -308,6 +332,7 @@
 <li><p>should have a primary legal category</p></li>
 <li><p>one or more step blocks (see below)</p></li>
 <li><p>may have one or more legal forms</p></li>
+<li><p>must have a jurisidiction</p></li>
 <li><p>should have a legal position</p></li>
 <li><p>may have an annual update selection</p></li>
 <li><p>may have an author/SME</p></li>
