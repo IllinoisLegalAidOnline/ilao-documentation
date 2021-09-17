@@ -69,10 +69,10 @@ Step lists can be created in sections. A how-to may have a single linear steps s
 
 .. note::  An example how-to for washing a car may have a step section labeled
 
-* "Option 1:  Take it the car washing service"
-* "Option 2:  Hand wash in the driveway."
+   * "Option 1:  Take it the car washing service"
+   * "Option 2:  Hand wash in the driveway."
 
-Even linear, but complex How-tos may benefit from sections. For example, in applying for unemployment, it may make sense to have a Step section "Determine if you are eligible" with steps of Determine whether the reason you no longer have a job is eligible, determine whether you have sufficient earnings to be eligible.
+   Even linear, but complex How-tos may benefit from sections. For example, in applying for unemployment, it may make sense to have a Step section "Determine if you are eligible" with steps of Determine whether the reason you no longer have a job is eligible, determine whether you have sufficient earnings to be eligible.
 
 Each section should have:
 
