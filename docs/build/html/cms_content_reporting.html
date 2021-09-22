@@ -123,6 +123,8 @@
 <li class="toctree-l3"><a class="reference internal" href="#id7">Localized content report</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#comments-and-ratings-report">Comments and Ratings report</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#historical-revision-report">Historical Revision report</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id9">Last Revision report</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id10">Last SME Review report</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#moderated-content-report">Moderated content report</a></li>
 </ul>
 </li>
@@ -137,6 +139,7 @@
 <li class="toctree-l1"><a class="reference internal" href="translation_cms.html">Translation Management</a></li>
 <li class="toctree-l1"><a class="reference internal" href="calendar_cms.html">Calendar</a></li>
 <li class="toctree-l1"><a class="reference internal" href="jobs_cms.html">Job Listings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="discussion_groups.html">Discussion groups</a></li>
 <li class="toctree-l1"><a class="reference internal" href="otis_cms.html">Get Legal Help</a></li>
 <li class="toctree-l1"><a class="reference internal" href="site_search.html">Site Search</a></li>
 <li class="toctree-l1"><a class="reference internal" href="site_faqs.html">Site FAQs</a></li>
@@ -176,6 +179,8 @@
 <li class="toctree-l3"><a class="reference internal" href="#id7">Localized content report</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#comments-and-ratings-report">Comments and Ratings report</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#historical-revision-report">Historical Revision report</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id9">Last Revision report</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id10">Last SME Review report</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#moderated-content-report">Moderated content report</a></li>
 </ul>
 </li>
@@ -265,6 +270,8 @@
 <li><p><a class="reference external" href="https://www.illinoislegalaid.org/admin/reporting/content/toolboxes/tool-usage">Toolbox tool step usage report</a></p></li>
 <li><p><a class="reference external" href="https://www.illinoislegalaid.org/admin/reporting/content-page-views">Content page views report (basic)</a></p></li>
 <li><p><a class="reference external" href="https://www.illinoislegalaid.org/admin/reporting/content/legal-revisions">Historical review/revised date data</a></p></li>
+<li><p><a class="reference external" href="https://www.illinoislegalaid.org/admin/content/last-revision-report">Last revision report</a></p></li>
+<li><p><a class="reference external" href="https://www.illinoislegalaid.org/admin/content/last-sme-review">Last SME review report</a></p></li>
 <li><p><a class="reference external" href="https://www.illinoislegalaid.org/admin/reporting/content/localized-content">Localized content report</a></p></li>
 <li><p>Comments/Ratings report</p></li>
 </ul>
@@ -481,6 +488,10 @@
 <p class="admonition-title">Note</p>
 <p>The “hide staff users” requires that the user have the staff role. If former staff have been left active but had the staff role removed, they will not be filtered out. The better practice for former staff is to block their account but leave their permission in place.</p>
 </div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>On revision reports, revisions are not separatable by language.</p>
+</div>
 </div>
 <div class="section" id="historical-revision-report">
 <h2>Historical Revision report<a class="headerlink" href="#historical-revision-report" title="Permalink to this headline">¶</a></h2>
@@ -496,10 +507,48 @@
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>For data after May 24, 2020:
-* ADRM (lawyer manual) content did not have the internal revision/expert review fields until recently.
-* Older toolbox tools do not have an internal revision or expert review dates because they did not exist on the old website.
-* Language filtering does not work because the date fields are not translatable on legal content. That means that an edit to the Spanish or Polish version will still have an English field revision causing every revision to be displayed. That is why this report should be limited to date field tracking.</p>
+<p>For data after May 24, 2020:</p>
+<ul class="simple">
+<li><p>ADRM (lawyer manual) content did not have the internal revision/expert review fields until recently.</p></li>
+<li><p>Older toolbox tools do not have an internal revision or expert review dates because they did not exist on the old website.</p></li>
+<li><p>Language filtering does not work because the date fields are not translatable on legal content. That means that an edit to the Spanish or Polish version will still have an English field revision causing every revision to be displayed. That is why this report should be limited to date field tracking.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="id9">
+<h2>Last Revision report<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h2>
+<p>The last revision report shows all revisions where the last revision date field has been changed.</p>
+<p>The report includes:</p>
+<ul class="simple">
+<li><p>Title</p></li>
+<li><p>Last revision date associated with the specific revision</p></li>
+<li><p>Revision author</p></li>
+<li><p>Node ID as ID</p></li>
+<li><p>Revision log message (this may be used to help filter by language)</p></li>
+<li><p>Revision ID</p></li>
+<li><p>The type of content. Only Legal Content, Portal Main Page, Toolbox, Toolbox Tool Step, and Toolbox Tool are included.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Depending on how quickly a user saves the revision, it is possible to have multiple revisions close together. For reporting, the best option is to export the date range you need and de-duplicate on node ID (ID) and the last revision date.</p>
+</div>
+</div>
+<div class="section" id="id10">
+<h2>Last SME Review report<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h2>
+<p>The last SME report shows all revisions where the last reviewed date field has been changed.</p>
+<p>The report includes:</p>
+<ul class="simple">
+<li><p>Title</p></li>
+<li><p>Last reviewed date associated with the specific revision</p></li>
+<li><p>Revision author</p></li>
+<li><p>Node ID as ID</p></li>
+<li><p>Revision log message (this may be used to help filter by language)</p></li>
+<li><p>Revision ID</p></li>
+<li><p>The type of content. Only Legal Content, Portal Main Page, Toolbox, Toolbox Tool Step, and Toolbox Tool are included.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Depending on how quickly a user saves the revision, it is possible to have multiple revisions close together. For reporting, the best option is to export the date range you need and de-duplicate on node ID (ID) and the last revision date.</p>
 </div>
 </div>
 <div class="section" id="moderated-content-report">

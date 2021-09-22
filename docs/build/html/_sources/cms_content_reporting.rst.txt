@@ -12,6 +12,8 @@ Available reports:
 * `Toolbox tool step usage report <https://www.illinoislegalaid.org/admin/reporting/content/toolboxes/tool-usage>`_
 * `Content page views report (basic) <https://www.illinoislegalaid.org/admin/reporting/content-page-views>`_
 * `Historical review/revised date data <https://www.illinoislegalaid.org/admin/reporting/content/legal-revisions>`_
+* `Last revision report <https://www.illinoislegalaid.org/admin/content/last-revision-report>`_
+* `Last SME review report <https://www.illinoislegalaid.org/admin/content/last-sme-review>`_
 * `Localized content report <https://www.illinoislegalaid.org/admin/reporting/content/localized-content>`_
 * Comments/Ratings report
 
@@ -35,7 +37,7 @@ Filters
 -----------
 This report can be filtered on:
 
-* node ID. This will return a specific node. 
+* node ID. This will return a specific node.
 * Title (contains)
 * Content type (this is the system content type like legal content, event, basic page)
 * Published status (yes or no)
@@ -46,10 +48,10 @@ Bulk actions
 ---------------
 This is the system set of actions that can be applied to content. Some of these are not relevant.
 
-* Delete content  **Be careful** this will in fact delete selected content. 
+* Delete content  **Be careful** this will in fact delete selected content.
 * Save content. This will re-save content and update the last updated/changed date.
-* Publish content. This will publish unpublished content AND update the last updated/changed date. It will not move legal content revisions that is under moderation from an unpublished state like draft/revise to published. 
-* Unpublish content. This will unpublish published content and update the last updated/changed date. 
+* Publish content. This will publish unpublished content AND update the last updated/changed date. It will not move legal content revisions that is under moderation from an unpublished state like draft/revise to published.
+* Unpublish content. This will unpublish published content and update the last updated/changed date.
 * Update URL alias. **Use only if Gwen tells you to**  This will reset path aliases. This is helpful for some content types **other than legal content.**
 
 .. todo:: Update the action list to only relevant items.
@@ -72,35 +74,35 @@ Report data
 * Node ID (ID) of the content
 * Title of the content
 * Format of the content. Applies only to legal content.
-* Primary legal category of the content. 
+* Primary legal category of the content.
 * Created date. This is the date the system creates when the node is first created in any state. It does not necessarily represent published date.
 * Original author
 * Last changed. This is the date the system last recorded a change. This is triggered whenever:
 
   * A user saves the node
   * A system update saves the node. This may happen if there is a scheduled change, Google analytics data added, or any other system action that causes a call to the node save function.
-  
+
 * Last revised. This is the "last internal revision" field. This date is manually sent when a staff user makes a substantive change to the content. Does not include typos, grammatical fixes, or style changes. Does include anything that adds or removes information, especially law changes.
-* Last expert review. 
+* Last expert review.
 * Published status (Yes or No)
 * Language of the node (content in more than one language will have multiple rows in the report)
 * Page views from Google analytics. These are pulled in from the English content and associated with the node (so it will show the same page views on Spanish and Polish versions). These are pulled in as a scheduled task in batches and are based on the last 60 days +/- 14 days depending on when it was last imported. **This was added to aid in prioritization not as a 100% accurate measure**
 * Word count. The number of words in the node (see :ref:`word-count-label`)
 
-.. note::  The last revised and last expert review fields are not translatable in legal content but are translatable in toolbox, tool, and tool step content.   The last changed date is per language. 
+.. note::  The last revised and last expert review fields are not translatable in legal content but are translatable in toolbox, tool, and tool step content.   The last changed date is per language.
 
 .. todo:: standardize date fields (translatable vs not translatable)
 
 
 Filters
 --------------
-The find legal content report has many filters. Filters are based on an AND condition. 
+The find legal content report has many filters. Filters are based on an AND condition.
 
 * ID is the node ID
 * Title is the partial match of the title
 * Category is the primary legal category for the content. This is the single select dropdown for category versus the legal issues multiple-select field.
 * Published status (yes or no). Note that publish status is per node. An unpublished translation in Spanish with a published English version would show as published.
-* Content format. This applies to legal content only and is set based on the paragraphs bundles included in the node. 
+* Content format. This applies to legal content only and is set based on the paragraphs bundles included in the node.
 * Created filters on the created date and can be set with a start date and/or end date
 * Last revised filters on the last internal revision date and can be set with a start date and/or end date
 * Last expert review filters on the last expert review date and can be set with a start date and/or end date
@@ -110,14 +112,14 @@ The find legal content report has many filters. Filters are based on an AND cond
 * Jurisdiction (whether content is marked as national, statewide or relevant only to specific counties or cities) and to what counties, cities, or zip codes the content is tagged. Applies only to legal content type content.
 * Annual updates tagged to the content  Applies only to legal content type content and ADRM content.
 * Whether the translation is currently marked as outdated
-* Whether there is an open request to create a translation. This field applies only to legal content. 
+* Whether there is an open request to create a translation. This field applies only to legal content.
 * Translation language. This should be used to limit the list to English, Spanish or Polish.
 * Content management tags. This should be used to limit the results to those that have a term from the content management tags taxonomy. Separate terms by commas.
 * Legal issue. This is a single autocomplete of the legal issues taxonomy. Filtering on this will include any content tagged to that term or any child term, if a child term exists.
 
 .. note:: because of the way jurisdictions were handled on the D7 site, the counties, cities and zipcodes show what jurisdictions the content is tagged to but the report **does not show** whether the relationship between the jurisdiction (some part of Illinois) includes or excludes the jurisdictions. The jurisdiction data is not used in any way on the website's front-end.
 
-.. todo:: Determine whether toolbox and portal content should have translation fields. 
+.. todo:: Determine whether toolbox and portal content should have translation fields.
 
 Learn more in Guide report
 ============================
@@ -173,7 +175,7 @@ The toolbox tool displays data captured as users interact with the steps in a to
 * Tool step title - title of the step
 * Started - timestamp of when the record was created
 * Changed - timestamp of the last recorded interaction
-* Status - started, saved, or completed. Started means the user viewed the tool step;saved means they've marked the step complete and complete means they've completed all the applicable steps in a tool. 
+* Status - started, saved, or completed. Started means the user viewed the tool step;saved means they've marked the step complete and complete means they've completed all the applicable steps in a tool.
 
 
 .. warning:: Data from before June 24, 2020 is not reliable. The last activity date was updated for the time of migration and changes to the toolbox platform changed the way the toolbox activity works.
@@ -194,11 +196,11 @@ Localized content report
 This report shows what legal content contains markup for localized content. At this point, it can only show that it contains the span| markup used in localized content.
 
 
-The list can be exported to CSV. 
+The list can be exported to CSV.
 
 .. todo::
    Explore if we can expose the field filters to allow for searching on span|County|[values] for example to support better filtering.
-   
+
 Comments and Ratings report
 ===========================
 
@@ -217,7 +219,9 @@ The report has filters for:
 * Node ID
 * Whether to exclude staff comments or not
 
-.. note:: The "hide staff users" requires that the user have the staff role. If former staff have been left active but had the staff role removed, they will not be filtered out. The better practice for former staff is to block their account but leave their permission in place.  
+.. note:: The "hide staff users" requires that the user have the staff role. If former staff have been left active but had the staff role removed, they will not be filtered out. The better practice for former staff is to block their account but leave their permission in place.
+
+.. warning:: On revision reports, revisions are not separatable by language.
 
 Historical Revision report
 ===============================
@@ -228,13 +232,51 @@ This report should be used only to track date fields over time. It's primary pur
 
    * Content revisions were handled differently in that each unpublished change was within a single revision.
    * Language management was handled differently; it is impossible to sort by language on older revisions.
-   * All legal content was set with a last internal revision date of 5/24/2020 when it was migrated over. 
-   
+   * All legal content was set with a last internal revision date of 5/24/2020 when it was migrated over.
+
 .. note:: For data after May 24, 2020:
-   * ADRM (lawyer manual) content did not have the internal revision/expert review fields until recently. 
+
+   * ADRM (lawyer manual) content did not have the internal revision/expert review fields until recently.
    * Older toolbox tools do not have an internal revision or expert review dates because they did not exist on the old website.
    * Language filtering does not work because the date fields are not translatable on legal content. That means that an edit to the Spanish or Polish version will still have an English field revision causing every revision to be displayed. That is why this report should be limited to date field tracking.
-   
+
+
+Last Revision report
+======================
+
+The last revision report shows all revisions where the last revision date field has been changed.
+
+The report includes:
+
+* Title
+* Last revision date associated with the specific revision
+* Revision author
+* Node ID as ID
+* Revision log message (this may be used to help filter by language)
+* Revision ID
+* The type of content. Only Legal Content, Portal Main Page, Toolbox, Toolbox Tool Step, and Toolbox Tool are included.
+
+
+.. note:: Depending on how quickly a user saves the revision, it is possible to have multiple revisions close together. For reporting, the best option is to export the date range you need and de-duplicate on node ID (ID) and the last revision date.
+
+
+Last SME Review report
+=======================
+
+The last SME report shows all revisions where the last reviewed date field has been changed.
+
+The report includes:
+
+* Title
+* Last reviewed date associated with the specific revision
+* Revision author
+* Node ID as ID
+* Revision log message (this may be used to help filter by language)
+* Revision ID
+* The type of content. Only Legal Content, Portal Main Page, Toolbox, Toolbox Tool Step, and Toolbox Tool are included.
+
+
+.. note:: Depending on how quickly a user saves the revision, it is possible to have multiple revisions close together. For reporting, the best option is to export the date range you need and de-duplicate on node ID (ID) and the last revision date.
 
 Moderated content report
 ===========================
