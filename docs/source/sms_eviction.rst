@@ -55,6 +55,10 @@ Get Legal Issue (7 options)
 
     User is asked if they have a summons
 
+      If yes, offer information on CBRAP and option to apply or continue application
+
+        If CBRAP, give CRBRAP link to apply and end
+
       If neither a Yes/No response, user is re-asked question
 
       If Yes,
@@ -121,7 +125,31 @@ Get Legal Issue (7 options)
          System: Update case notes for transfer
          CONTINUE to matches
 
-  User replies 5 or 6,
+  User replies 5
+
+    System: Save user's data
+
+    Asks if the user has received a summons
+
+      If yes, offer information on CBRAP and option to apply or see counselors
+
+      If apply, show CBRAP application link
+
+      If no apply, show nearest housing counselor
+
+        Option to show all
+
+        Loops through results
+
+        Exits to Legal content
+
+    Option to show all
+
+      Loops through results
+
+    Exits to Legal content
+
+  User replies 6
 
     System: Save user's data
 
@@ -132,7 +160,6 @@ Get Legal Issue (7 options)
       Loops through results
 
     Exits to Legal content
-
 
   User replies 7, user gets exit message to Get Legal Help
 

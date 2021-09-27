@@ -43,8 +43,8 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Site Search" href="site_search.html" />
-    <link rel="prev" title="Get Legal Help text line Workflow" href="otis_sms_twilio_studio_workflow.html" /> 
+    <link rel="next" title="Maintaining and expanding OTIS SMS" href="otis_maintenance.html" />
+    <link rel="prev" title="Get Legal Help text line workflow" href="otis_sms_twilio_studio_workflow.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -101,6 +101,7 @@
 <li class="toctree-l1"><a class="reference internal" href="translation_cms.html">Translation Management</a></li>
 <li class="toctree-l1"><a class="reference internal" href="calendar_cms.html">Calendar</a></li>
 <li class="toctree-l1"><a class="reference internal" href="jobs_cms.html">Job Listings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="discussion_groups.html">Discussion groups</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="otis_cms.html">Get Legal Help</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="otis_endusers.html">Get Legal Help Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="otis_organization_management.html">Organization management</a></li>
@@ -108,15 +109,15 @@
 <li class="toctree-l2"><a class="reference internal" href="otis_reports.html">Get Legal Help Reporting</a></li>
 <li class="toctree-l2"><a class="reference internal" href="otis_ai_integration.html">OTIS AI Integration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="otis_third_party_support.html">Supported Integrations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="otis_ilao_api.html">ILAO OTIS API</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="otis_sms_intake.html">Online Intake Over SMS</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="otis_sms_intake_architecture.html">General architecture</a></li>
 <li class="toctree-l3"><a class="reference internal" href="otis_sms_functions.html">Twilio Functions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="otis_sms_twilio_studio_workflow.html">Get Legal Help text line  Workflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="otis_sms_twilio_studio_workflow.html">Get Legal Help text line workflow</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Eviction SMS Flow</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#workflow-tree">Workflow Tree</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="otis_maintenance.html">Maintaining and expanding OTIS SMS</a></li>
 </ul>
 </li>
 </ul>
@@ -254,7 +255,11 @@ Any other response =&gt; CONTINUE</p>
 <div><p>User is asked if they have a summons</p>
 <blockquote>
 <div><blockquote>
-<div><p>If neither a Yes/No response, user is re-asked question</p>
+<div><p>If yes, offer information on CBRAP and option to apply or continue application</p>
+<blockquote>
+<div><p>If CBRAP, give CRBRAP link to apply and end</p>
+</div></blockquote>
+<p>If neither a Yes/No response, user is re-asked question</p>
 <p>If Yes,</p>
 <blockquote>
 <div><p>System: update case notes for etransfer</p>
@@ -316,7 +321,27 @@ CONTINUE to matches</p>
 </div></blockquote>
 </div></blockquote>
 </div></blockquote>
-<p>User replies 5 or 6,</p>
+<p>User replies 5</p>
+<blockquote>
+<div><p>System: Save user’s data</p>
+<p>Asks if the user has received a summons</p>
+<blockquote>
+<div><p>If yes, offer information on CBRAP and option to apply or see counselors</p>
+<p>If apply, show CBRAP application link</p>
+<p>If no apply, show nearest housing counselor</p>
+<blockquote>
+<div><p>Option to show all</p>
+<p>Loops through results</p>
+<p>Exits to Legal content</p>
+</div></blockquote>
+</div></blockquote>
+<p>Option to show all</p>
+<blockquote>
+<div><p>Loops through results</p>
+</div></blockquote>
+<p>Exits to Legal content</p>
+</div></blockquote>
+<p>User replies 6</p>
 <blockquote>
 <div><p>System: Save user’s data</p>
 <p>Show nearest housing counselor</p>
@@ -582,8 +607,8 @@ CONTINUE</p>
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="site_search.html" class="btn btn-neutral float-right" title="Site Search" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="otis_sms_twilio_studio_workflow.html" class="btn btn-neutral float-left" title="Get Legal Help text line Workflow" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="otis_maintenance.html" class="btn btn-neutral float-right" title="Maintaining and expanding OTIS SMS" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="otis_sms_twilio_studio_workflow.html" class="btn btn-neutral float-left" title="Get Legal Help text line workflow" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>
