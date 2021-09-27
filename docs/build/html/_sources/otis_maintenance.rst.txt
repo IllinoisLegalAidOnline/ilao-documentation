@@ -7,6 +7,7 @@ Expanding for new legal issues
 
 
 .. toctree::
+   :numbered:
 
    otis_maintenance_gn
    otis_maintain_case_acceptance_webform
