@@ -216,9 +216,8 @@
 <li><p>Have a title of Case acceptance - [legal issue] where legal issue is the name of the specific legal problem covered by the form.</p></li>
 <li><p>Be tagged to the Guided Navigation category.</p></li>
 </ul>
-</div>
 <div class="section" id="required-fields">
-<h2><span class="section-number">2.2. </span>Required fields<a class="headerlink" href="#required-fields" title="Permalink to this headline">¶</a></h2>
+<h3><span class="section-number">2.1.1. </span>Required fields<a class="headerlink" href="#required-fields" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>service. This field must:</p>
 <ul>
@@ -249,8 +248,34 @@
 <img alt="_images/case-acceptance-webform-options.png" src="_images/case-acceptance-webform-options.png" />
 </div>
 <div class="section" id="optional-fields">
-<h2><span class="section-number">2.3. </span>Optional fields<a class="headerlink" href="#optional-fields" title="Permalink to this headline">¶</a></h2>
+<h3><span class="section-number">2.1.2. </span>Optional fields<a class="headerlink" href="#optional-fields" title="Permalink to this headline">¶</a></h3>
 <p>Additional fields can be used to improve usability but will not be used in the Guided Navigation/SMS system.</p>
+</div>
+</div>
+<div class="section" id="populate-the-webform">
+<h2><span class="section-number">2.2. </span>Populate the webform<a class="headerlink" href="#populate-the-webform" title="Permalink to this headline">¶</a></h2>
+<p>Once created, the webform needs to be populated with case acceptance information for each service.</p>
+<p>This means:</p>
+<ul class="simple">
+<li><p>Selecting the service to apply it to. The service should have an intake settings that matches on the hidden legal issue.</p></li>
+<li><p>Check the boxes that align with the program’s case acceptance priorities.</p></li>
+</ul>
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">Todo</p>
+<p>At this time, we aren’t filtering on population in SMS. Therefore, any population settings in the service(s) will be ignored.</p>
+</div>
+</div>
+<div class="section" id="what-submissions-get-used">
+<h2><span class="section-number">2.3. </span>What submissions get used<a class="headerlink" href="#what-submissions-get-used" title="Permalink to this headline">¶</a></h2>
+<p>As changes are made, the system will ignore:</p>
+<ul class="simple">
+<li><p>any webform submission in a draft state</p></li>
+<li><p>any webform submission for a particular service that is older than another webform submission for the same service.  For example, if on Monday, i create a submission for Legal Aid Chicago’s client screening unit and create another one on Friday, only Friday’s will be used.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Only services will matching intake settings on the legal issue will be returned. For example, if on the unemployment benefits case acceptance form, Legal Aid Chicago’s client screening unit does not have any intake settings tied to unemployment benefits, they will not return as a result even if the case acceptance form indicates that they take cases for unemployment.</p>
+</div>
 </div>
 </div>
 

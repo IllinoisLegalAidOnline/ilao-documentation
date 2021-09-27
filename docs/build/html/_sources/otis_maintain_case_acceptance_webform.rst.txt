@@ -15,7 +15,7 @@ The webform should:
 * Be tagged to the Guided Navigation category.
 
 Required fields
-=================
+-----------------
 * service. This field must:
 
   * be of type entity_radios
@@ -40,5 +40,28 @@ Required fields
 
 
 Optional fields
-=================
+-----------------
 Additional fields can be used to improve usability but will not be used in the Guided Navigation/SMS system.
+
+
+Populate the webform
+======================
+
+Once created, the webform needs to be populated with case acceptance information for each service.
+
+This means:
+
+* Selecting the service to apply it to. The service should have an intake settings that matches on the hidden legal issue.
+* Check the boxes that align with the program's case acceptance priorities.
+
+.. todo:: At this time, we aren't filtering on population in SMS. Therefore, any population settings in the service(s) will be ignored.
+
+What submissions get used
+==========================
+As changes are made, the system will ignore:
+
+* any webform submission in a draft state
+* any webform submission for a particular service that is older than another webform submission for the same service.  For example, if on Monday, i create a submission for Legal Aid Chicago's client screening unit and create another one on Friday, only Friday's will be used.
+
+.. note:: Only services will matching intake settings on the legal issue will be returned. For example, if on the unemployment benefits case acceptance form, Legal Aid Chicago's client screening unit does not have any intake settings tied to unemployment benefits, they will not return as a result even if the case acceptance form indicates that they take cases for unemployment.
+
