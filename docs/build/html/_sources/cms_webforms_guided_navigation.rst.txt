@@ -17,12 +17,10 @@ We can then check to see if the user's outcome is in a service's webform results
 
 See the following:
 
+
+:ref:`otis-case-webform`
+
+
 :ref:`otis-case-view`
 
-
-
-Creating the Webform
-======================
-
-Coming soon!
 

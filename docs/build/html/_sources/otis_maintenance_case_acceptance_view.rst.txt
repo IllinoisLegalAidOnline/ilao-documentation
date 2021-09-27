@@ -6,8 +6,6 @@ Create a rest export for the case acceptance
 
 Once the case acceptance webform is created, the next step is to update the case acceptance view to create a REST-based export for the webform.
 
-See the :ref:`gn-webforms-info` for how to create the specific view.
-
 
 Creating the REST Export
 ==========================
