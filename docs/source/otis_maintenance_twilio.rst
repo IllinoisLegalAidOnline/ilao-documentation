@@ -2,8 +2,11 @@
 Updating Twilio for new legal issue
 ====================================
 
-Step 1: Update the Get process function
+Step 1: Update functions
 =========================================
+
+Update the "get process" function
+----------------------------------
 
 Open the get-process-list function in the guided-nav function under Functions->Services in Twilio.  There is a case function that contains each of the legal issues supported by the application.
 
@@ -43,6 +46,24 @@ To add a new issue:
 
 .. warning:: If you get anything other than JSON, you have an error. If you can not find it quickly, undo your changes and ask Gwen for help.
 
+Update the ""validate process" function
+--------------------------------------
+In the validate-legal-issue-gn function, there is an array of numbers that are valid input for the list of legal issues. This needs to be updated to include the newly added number from the case statement.
+
+.. code-block:: javascript
+
+    valid_numbers = ["1","2","3","4","5","6"];
+
+There is also a series of if statments that can be used for some natural language processing. You can add new variations by copying and pasting the code below and replacing the 'tanf' with whatever string you want to match against and updating the response = to the number that corresponds to the legal issue in the list.
+
+.. code-block:: javascript
+
+    if (legal_issue.includes('tanf')) {
+     response = 3;
+   }
+
+
+.. warning:: All text to search for in the .includes function should be lower-case.
 
 Step 2: Update the Studio Flow
 ================================
