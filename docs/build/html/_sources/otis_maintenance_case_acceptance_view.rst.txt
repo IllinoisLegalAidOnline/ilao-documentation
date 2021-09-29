@@ -14,6 +14,8 @@ To make the webform submission data available in other systems, we need a REST e
 
 The REST export connects webform submission data with the service associated with the webform and with the intake settings entity associated with the service.
 
+.. warning:: You will want to back up the view just in case you mess it up so badly that you need to restore it. See the backup and restore instructions at the bottom of this page.
+
 Path settings
 --------------
 Each REST export must have a path. That path should be set to /rest/[category]-cases
@@ -164,3 +166,31 @@ Next Steps
 Once the view is created and accessible, it can be added to Twilio as the final step in the process.
 
 .. note:: Changes to the case acceptance webform will automatically be included in the REST-export each time the view updates.
+
+
+Backing up and restoring a view
+=================================
+
+To backup a view
+------------------
+
+* Go to the `single export page <https://www.illinoislegalaid.org/admin/config/development/configuration/single/export>`_
+* Under configuration type, select View
+* Under configuration name, select case acceptance
+* Copy the configuration into a text editor
+
+.. image:: ../assets/config-single-export.png
+
+To restore a view
+-------------------
+
+* Go to the `single import page <https://www.illinoislegalaid.org/admin/config/development/configuration/single/import>`_
+* Under configuration type, select View
+* Copy the configuration from the text editor back into the website
+* Press import
+
+
+.. image:: ../assets/config-import-single.png
+
+
+

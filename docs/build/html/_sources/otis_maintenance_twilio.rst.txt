@@ -46,8 +46,8 @@ To add a new issue:
 
 .. warning:: If you get anything other than JSON, you have an error. If you can not find it quickly, undo your changes and ask Gwen for help.
 
-Update the validate process function
---------------------------------------
+Update the ""validate process" function
+-----------------------------------------
 In the validate-legal-issue-gn function, there is an array of numbers that are valid input for the list of legal issues. This needs to be updated to include the newly added number from the case statement.
 
 .. code-block:: javascript

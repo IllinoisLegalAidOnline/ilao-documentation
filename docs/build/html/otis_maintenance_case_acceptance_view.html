@@ -213,6 +213,10 @@
 <h2><span class="section-number">3.1. </span>Creating the REST Export<a class="headerlink" href="#creating-the-rest-export" title="Permalink to this headline">¶</a></h2>
 <p>To make the webform submission data available in other systems, we need a REST export for each individual webform.  This is accomplished by creating a REST export in the <a class="reference external" href="https://www.illinoislegalaid.org/admin/structure/views/view/case_acceptance">case acceptance</a> view.</p>
 <p>The REST export connects webform submission data with the service associated with the webform and with the intake settings entity associated with the service.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>You will want to back up the view just in case you mess it up so badly that you need to restore it. See the backup and restore instructions at the bottom of this page.</p>
+</div>
 <div class="section" id="path-settings">
 <h3><span class="section-number">3.1.1. </span>Path settings<a class="headerlink" href="#path-settings" title="Permalink to this headline">¶</a></h3>
 <p>Each REST export must have a path. That path should be set to /rest/[category]-cases</p>
@@ -358,6 +362,29 @@
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Changes to the case acceptance webform will automatically be included in the REST-export each time the view updates.</p>
+</div>
+</div>
+<div class="section" id="backing-up-and-restoring-a-view">
+<h2><span class="section-number">3.4. </span>Backing up and restoring a view<a class="headerlink" href="#backing-up-and-restoring-a-view" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="to-backup-a-view">
+<h3><span class="section-number">3.4.1. </span>To backup a view<a class="headerlink" href="#to-backup-a-view" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Go to the <a class="reference external" href="https://www.illinoislegalaid.org/admin/config/development/configuration/single/export">single export page</a></p></li>
+<li><p>Under configuration type, select View</p></li>
+<li><p>Under configuration name, select case acceptance</p></li>
+<li><p>Copy the configuration into a text editor</p></li>
+</ul>
+<img alt="_images/config-single-export.png" src="_images/config-single-export.png" />
+</div>
+<div class="section" id="to-restore-a-view">
+<h3><span class="section-number">3.4.2. </span>To restore a view<a class="headerlink" href="#to-restore-a-view" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Go to the <a class="reference external" href="https://www.illinoislegalaid.org/admin/config/development/configuration/single/import">single import page</a></p></li>
+<li><p>Under configuration type, select View</p></li>
+<li><p>Copy the configuration from the text editor back into the website</p></li>
+<li><p>Press import</p></li>
+</ul>
+<img alt="_images/config-import-single.png" src="_images/config-import-single.png" />
 </div>
 </div>
 </div>
