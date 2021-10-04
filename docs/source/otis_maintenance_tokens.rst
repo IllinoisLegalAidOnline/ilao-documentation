@@ -16,6 +16,8 @@ ILAO service
 * pilot-get-matches
 * otis-update-triage-user
 * otis-create-triage-user
+* eviction-matches
+* eviction-intake-settings
 
 Guided-nav service
 -------------------
