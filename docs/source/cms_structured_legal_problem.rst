@@ -16,6 +16,7 @@ To create a legal problem:
 * Add a content description. This is the description that will
 * Add a meta description. This is the description that will be used in social media, search indexes, and in any API. This should be limited to 300 characters.
 * Optionally, add a disambiguation description. This is used to better describe how one problem is different from a related problem.
+* Add an introduction as structured markup.  The purpose of the introduction is to provide a basic overview of the problem and available solutions. It should be enough to entice the user to stay on the page and navigate through but should not duplicate information in the solution, how-tos, or questions.
 * Tag the legal problem to one or more legal issues.
 * Select the primary legal category
 * Add a legal code. Legal codes should come from either the LSC problem codes or the `LIST <https://taxonomy.legal>`_ codes.
