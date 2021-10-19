@@ -14,6 +14,7 @@ Expanding for new legal issues
    otis_maintenance_case_acceptance_view
    otis_maintenance_twilio
    otis_maintenance_tokens
+   otis_maintenance_failures
 
 
 
