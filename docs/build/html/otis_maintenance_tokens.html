@@ -208,45 +208,15 @@
             
   <div class="section" id="twilio-token-updates">
 <h1><span class="section-number">5. </span>Twilio token updates<a class="headerlink" href="#twilio-token-updates" title="Permalink to this headline">¶</a></h1>
-<p>At the current time, we need to manually update the bearer tokens in Twilio functions.</p>
-<div class="section" id="standard-token">
-<h2><span class="section-number">5.1. </span>Standard Token<a class="headerlink" href="#standard-token" title="Permalink to this headline">¶</a></h2>
-<p>You can get the standard token using the standard token request in Postman.</p>
-<div class="section" id="ilao-service">
-<h3><span class="section-number">5.1.1. </span>ILAO service<a class="headerlink" href="#ilao-service" title="Permalink to this headline">¶</a></h3>
+<p>All of our Twilio to IllinoisLegalAid.org calls require the use of Bearer tokens. These are acquired at the start of our OTIS and eviction bot flows and passed into the functions as needed.</p>
+<p>Each flow should use the widget flow below to get and set the tokens:</p>
 <ul class="simple">
-<li><p>pilot-get-callback-slots</p></li>
-<li><p>pilot-get-organization-names</p></li>
-<li><p>pilot-get-intake-settings</p></li>
-<li><p>pilot-get-matches</p></li>
-<li><p>otis-update-triage-user</p></li>
-<li><p>otis-create-triage-user</p></li>
-<li><p>eviction-matches</p></li>
-<li><p>eviction-intake-settings</p></li>
+<li><p>Get standard token requires a call to the <a class="reference external" href="https://ilao-8092.twil.io/oauth-get-token">https://ilao-8092.twil.io/oauth-get-token</a> function. This will return a body containing the bearer token.</p></li>
+<li><p>To get a nonstandard token, make a call to the <a class="reference external" href="https://ilao-8092.twil.io/oauth-get-custom-token">https://ilao-8092.twil.io/oauth-get-custom-token</a></p></li>
+<li><p>Set the tokens in a set variables function to set them in flow.variables</p></li>
+<li><p>Reference them in function calls with a name of token. For example, to use the standard token (stored as std_token in variables) in the update_triage_user function, pass a parameter named token with a value of {{flow.variables.std_token}}.  the function can then access it as event.token.</p></li>
 </ul>
-</div>
-<div class="section" id="guided-nav-service">
-<h3><span class="section-number">5.1.2. </span>Guided-nav service<a class="headerlink" href="#guided-nav-service" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><p>get-gn-case-acceptances</p></li>
-</ul>
-</div>
-</div>
-<div class="section" id="nonstandard-token">
-<h2><span class="section-number">5.2. </span>Nonstandard token<a class="headerlink" href="#nonstandard-token" title="Permalink to this headline">¶</a></h2>
-<p>The get-gn-matches in the Guided Nav service requires the nonstandard token. You can get the non-standard token using the non-standard token request in Postman.</p>
-</div>
-<div class="section" id="how-to-update">
-<h2><span class="section-number">5.3. </span>How to update<a class="headerlink" href="#how-to-update" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>Go to the team workspace in Postman</p></li>
-</ul>
-<img alt="_images/postman-tokens.png" src="_images/postman-tokens.png" />
-<ul class="simple">
-<li><p>Open the Production token collection and run both functions. Copy and paste the access token into each Twilio function, replacing the [token] in token = “Bearer [token]” with the actual access token.</p></li>
-</ul>
-<img alt="_images/twilio-token.png" src="_images/twilio-token.png" />
-</div>
+<p>(Previously, these had been added manually to each function)</p>
 </div>
 
 
