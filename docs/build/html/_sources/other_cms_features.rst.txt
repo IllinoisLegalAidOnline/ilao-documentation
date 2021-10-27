@@ -10,4 +10,5 @@ Other Website Features
    eupdate
    comments_ratings
    contact_us
-   donations   
+   donations
+   feedback   
