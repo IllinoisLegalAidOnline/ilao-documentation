@@ -17,7 +17,6 @@ We use a single survey for capturing initial feedback. This survey captures:
 * presenter or navigator
 
 
-
 When sent over SMS:
 
 * we ask the user to text the presenter's name. This is stored in the presenter field, which is not visible in the form.
@@ -45,7 +44,8 @@ When sent over SMS:
 
 In any other medium:
 
-* we will provide the correct url
+* we will provide the correct url to the specific presentation.
+
 
 
 
