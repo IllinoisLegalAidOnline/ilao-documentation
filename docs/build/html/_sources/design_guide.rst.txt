@@ -1,5 +1,5 @@
 ============================
-Design Guide
+Design & Style Guide
 ============================
 
 .. toctree::
@@ -9,6 +9,7 @@ Design Guide
    design_colors
    design_buttons
    design_legal_content_format_icons
+   content_style_guide
 
 Related Documents
 ====================
