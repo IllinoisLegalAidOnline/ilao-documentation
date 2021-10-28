@@ -1,2 +1,3 @@
 sphinx==4.0.1
 readthedocs-sphinx-search==0.1.0
+docutils==0.12
