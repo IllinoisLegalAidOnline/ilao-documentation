@@ -8,12 +8,15 @@ Initial survey
 =================
 We use a single survey for capturing initial feedback. This survey captures:
 
-* the survey attended
-* the user's knowledge before/after
-* presentation feedback
+* the presentation attended
+* the user's knowledge before/after presentation
+* presentation information feedback
+* presenter rating
 * recommend or not (Net Promoter Score)
-* confidence level
-* cell phone or email
+* confidence level explaining rights
+* confidence level practicing rights
+* how presentation could be better
+* cell phone
 * presenter or navigator
 
 
@@ -33,9 +36,16 @@ When sent from a web-based/tablet presentation:
 Followup surveys
 ====================
 
-We have a separate follow up survey for each presentation.
+We have a separate follow up survey for each presentation. These surveys capture:
 
-.. todo:: Add field data
+* the user's current knowledge of rights learned in presentation
+* did user recommend presenation - yes/no/why/why not
+* did user explain rights to anyone - yes/no/why/why not
+* used magic words learned in presentation - yes/no/why/why not
+* referred anyone to Illinois Legal Aid Online - yes/no/why/why not
+* any information missing
+presentation information feedback
+
 
 When sent over SMS:
 
