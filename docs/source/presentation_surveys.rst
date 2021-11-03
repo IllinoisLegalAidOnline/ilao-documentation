@@ -16,16 +16,16 @@ We use a single survey for capturing initial feedback. This survey is named "CN 
 
 This survey captures:
 
-* the survey attended
-* the user's knowledge before/after
-* presentation feedback
-* presenter feedback
+* the presentation attended
+* the user's knowledge before/after presentation
+* presentation information feedback
+* presenter rating
 * recommend or not (Net Promoter Score)
-* confidence level
+* confidence level explaining rights
+* confidence level practicing rights
+* how presentation could be better
 * cell phone
-* presenter
-
-.. note:: As we add new presentations, the survey attended will need updated.
+* presenter or navigator
 
 
 When sent over SMS:
@@ -56,21 +56,17 @@ Followup surveys
 
 We have a separate follow up survey for each presentation. These surveys are named "CN [presentation name] Follow-up Survey"
 
-Each survey asks:
+These surveys capture:
 
-* Understanding of material after 4 weeks
-* Whether they recommended the presentation to anyone else
-* Why they didn't recommend it if they didn't
-* Whether they shared the information with others
-* Why they didn't share the information if they didn't
-* Specific presentation-specific questions
-* Whether they referred anyone to IllinoisLegalAid.org
-* Why they didn't refer anyone to IllinoisLegalAId.org, if they didn't
-* Whether anything else should have been included in the presentation
-* What else should have been included, if applicable
-* An open feedback question
+* the user’s current knowledge of rights learned in presentation
+* did user recommend presenation - yes/no/why/why not
+* did user explain rights to anyone - yes/no/why/why not
+* used magic words learned in presentation - yes/no/why/why not
+* referred anyone to Illinois Legal Aid Online - yes/no/why/why not
+* any information missing from the presentation
 
 .. note:: A hidden src (source) field is stored to track which presentation was watched [may not need this]
+
 
 When sent over SMS:
 
