@@ -28,7 +28,8 @@ This survey captures:
 * presenter or navigator
 
 
-When sent over SMS:
+When sent over SMS
+------------------------
 
 * we ask the user to text the presenter's name. This is stored in the presenter field, which is not visible in the form.
 
@@ -43,8 +44,10 @@ When sent from a web-based/tablet presentation:
 
 .. todo:: The web-based/tablet fields need to be added.
 
-When submitted:
-* The submission date, presentation, and cell phone number will be automatically copied to a Google sheet on ILAO's team drive. A follow up date field will show the date 4 weeks from the submission date. This date can then be used to send out follow-up surveys.
+When submitted
+-----------------
+
+The submission date, presentation, and cell phone number will be automatically copied to a Google sheet on ILAO's team drive. A follow up date field will show the date 4 weeks from the submission date. This date can then be used to send out follow-up surveys.
 
 .. note::
    * If a user checks multiple presentations attended, we need to manually copy the row and separate the presentations.
@@ -68,11 +71,6 @@ These surveys capture:
 .. note:: A hidden src (source) field is stored to track which presentation was watched [may not need this]
 
 
-When sent over SMS:
-
-* we use a REST-based API and Zapier to send the correct survey to the right people where we have an opt-ed in SMS number
-* In the Google sheet used to send the data, the source column should be the presentation name's shorthand that then will map to the correct survey.
-
 Setting up a new followup survey
 ----------------------------------
 To set up a new followup survey for new presentations:
@@ -88,6 +86,8 @@ To set up a new followup survey for new presentations:
 
 Sending out followup surveys
 ------------------------------
+
+We use Twilio's REST-based API and Zapier to send the correct survey to the right people where we have an opt-ed in SMS number
 
 To send followup surveys:
 

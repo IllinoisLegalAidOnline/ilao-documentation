@@ -228,7 +228,8 @@
 <li><p>cell phone</p></li>
 <li><p>presenter or navigator</p></li>
 </ul>
-<p>When sent over SMS:</p>
+<div class="section" id="when-sent-over-sms">
+<h3>When sent over SMS<a class="headerlink" href="#when-sent-over-sms" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>we ask the user to text the presenter’s name. This is stored in the presenter field, which is not visible in the form.</p></li>
 </ul>
@@ -245,14 +246,17 @@
 <p class="admonition-title">Todo</p>
 <p>The web-based/tablet fields need to be added.</p>
 </div>
-<p>When submitted:
-* The submission date, presentation, and cell phone number will be automatically copied to a Google sheet on ILAO’s team drive. A follow up date field will show the date 4 weeks from the submission date. This date can then be used to send out follow-up surveys.</p>
+</div>
+<div class="section" id="when-submitted">
+<h3>When submitted<a class="headerlink" href="#when-submitted" title="Permalink to this headline">¶</a></h3>
+<p>The submission date, presentation, and cell phone number will be automatically copied to a Google sheet on ILAO’s team drive. A follow up date field will show the date 4 weeks from the submission date. This date can then be used to send out follow-up surveys.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <ul class="simple">
 <li><p>If a user checks multiple presentations attended, we need to manually copy the row and separate the presentations.</p></li>
 <li><p>We will need to copy and paste the follow up date field to new rows.</p></li>
 </ul>
+</div>
 </div>
 </div>
 <div class="section" id="followup-surveys">
@@ -271,11 +275,6 @@
 <p class="admonition-title">Note</p>
 <p>A hidden src (source) field is stored to track which presentation was watched [may not need this]</p>
 </div>
-<p>When sent over SMS:</p>
-<ul class="simple">
-<li><p>we use a REST-based API and Zapier to send the correct survey to the right people where we have an opt-ed in SMS number</p></li>
-<li><p>In the Google sheet used to send the data, the source column should be the presentation name’s shorthand that then will map to the correct survey.</p></li>
-</ul>
 <div class="section" id="setting-up-a-new-followup-survey">
 <h3>Setting up a new followup survey<a class="headerlink" href="#setting-up-a-new-followup-survey" title="Permalink to this headline">¶</a></h3>
 <p>To set up a new followup survey for new presentations:</p>
@@ -293,6 +292,7 @@
 </div>
 <div class="section" id="sending-out-followup-surveys">
 <h3>Sending out followup surveys<a class="headerlink" href="#sending-out-followup-surveys" title="Permalink to this headline">¶</a></h3>
+<p>We use Twilio’s REST-based API and Zapier to send the correct survey to the right people where we have an opt-ed in SMS number</p>
 <p>To send followup surveys:</p>
 <ul class="simple">
 <li><p>Check the intial survey response spreadsheet for any responses that are 4 weeks old and have cell phone numbers</p></li>
