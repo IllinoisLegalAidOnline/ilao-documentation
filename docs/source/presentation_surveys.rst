@@ -62,7 +62,7 @@ We have a separate follow up survey for each presentation. These surveys are nam
 These surveys capture:
 
 * the user’s current knowledge of rights learned in presentation
-* did user recommend presenation - yes/no/why/why not
+* did user recommend presentation - yes/no/why/why not
 * did user explain rights to anyone - yes/no/why/why not
 * used magic words learned in presentation - yes/no/why/why not
 * referred anyone to Illinois Legal Aid Online - yes/no/why/why not
@@ -81,7 +81,7 @@ To set up a new followup survey for new presentations:
 
   * Log into short.io
   * Create a new link with a url of go.illinoislegalaid.org/kyr-[source]
-  * Update the followup survey spreadsheet (Community Navigator Followup Surveys0 to include the source in the source sheet
+  * Update the followup survey spreadsheet (Community Navigator Followup Surveys) to include the source in the source sheet
 
 
 Sending out followup surveys
@@ -92,10 +92,10 @@ We use Twilio's REST-based API and Zapier to send the correct survey to the righ
 To send followup surveys:
 
 * Check the intial survey response spreadsheet for any responses that are 4 weeks old and have cell phone numbers
-* Copy each cell phone numbers into the followup survey spreadsheet in the raw phone field, stripped of all characters except numbers.
+* Copy each cell phone number into the followup survey spreadsheet in the raw phone field, stripped of all characters except numbers
 * Add the source to the followup survey spreadsheet
 * Save the row
-* This will trigger Zapier within 10 minutes to send the phone number and source via API to Twilio to send the survey.
+* This will trigger Zapier within 10 minutes to send the phone number and source via API to Twilio to send the survey
 
 .. warning:: There is a limit to the number of requests Zapier will handle at once. Add the data in batches no larger than 50 rows and wait about 30 minutes between batches.
 
