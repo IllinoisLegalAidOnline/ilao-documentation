@@ -97,7 +97,7 @@ To send followup surveys:
 * Save the row
 * This will trigger Zapier within 10 minutes to send the phone number and source via API to Twilio to send the survey.
 
-.. warning:: There is a limit to the number of new rows to add at any one time.
+.. warning:: There is a limit to the number of requests Zapier will handle at once. Add the data in batches no larger than 50 rows and wait about 30 minutes between batches.
 
 
 How the SMS flow works
