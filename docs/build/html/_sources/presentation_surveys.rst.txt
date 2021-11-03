@@ -4,17 +4,28 @@ Presentation surveys
 
 All community engagement surveys are hosted on JotForm.
 
+.. warning:: Due to access restrictions, the associated spreadsheet integrations can not live in team drive. They are shared as needed with staff. These spreadsheets are:
+
+* Community Navigator Followup Surveys
+* CN Presentation Initial Survey Responses
+
 Initial survey
 =================
-We use a single survey for capturing initial feedback. This survey captures:
+We use a single survey for capturing initial feedback. This survey is named "CN Presentation Initial Survey" in JotForm.
+
+
+This survey captures:
 
 * the survey attended
 * the user's knowledge before/after
 * presentation feedback
+* presenter feedback
 * recommend or not (Net Promoter Score)
 * confidence level
-* cell phone or email
-* presenter or navigator
+* cell phone
+* presenter
+
+.. note:: As we add new presentations, the survey attended will need updated.
 
 
 When sent over SMS:
@@ -28,23 +39,94 @@ When sent from a web-based/tablet presentation:
 * zip code question will appear and be required
 * name or initials will appear and be required
 * name of navigator will appear and be required
+* cell phone or email must be required
+
+.. todo:: The web-based/tablet fields need to be added.
+
+When submitted:
+* The submission date, presentation, and cell phone number will be automatically copied to a Google sheet on ILAO's team drive. A follow up date field will show the date 4 weeks from the submission date. This date can then be used to send out follow-up surveys.
+
+.. note::
+   * If a user checks multiple presentations attended, we need to manually copy the row and separate the presentations.
+   * We will need to copy and paste the follow up date field to new rows.
 
 
 Followup surveys
 ====================
 
-We have a separate follow up survey for each presentation.
+We have a separate follow up survey for each presentation. These surveys are named "CN [presentation name] Follow-up Survey"
 
-.. todo:: Add field data
+Each survey asks:
+
+* Understanding of material after 4 weeks
+* Whether they recommended the presentation to anyone else
+* Why they didn't recommend it if they didn't
+* Whether they shared the information with others
+* Why they didn't share the information if they didn't
+* Specific presentation-specific questions
+* Whether they referred anyone to IllinoisLegalAid.org
+* Why they didn't refer anyone to IllinoisLegalAId.org, if they didn't
+* Whether anything else should have been included in the presentation
+* What else should have been included, if applicable
+* An open feedback question
+
+.. note:: A hidden src (source) field is stored to track which presentation was watched [may not need this]
 
 When sent over SMS:
 
 * we use a REST-based API and Zapier to send the correct survey to the right people where we have an opt-ed in SMS number
 * In the Google sheet used to send the data, the source column should be the presentation name's shorthand that then will map to the correct survey.
 
-In any other medium:
+Setting up a new followup survey
+----------------------------------
+To set up a new followup survey for new presentations:
 
-* we will provide the correct url to the specific presentation.
+* Copy an existing followup survey
+* Update the survey with presentation-specific questions
+* Create a new short.io link for the survey:
+
+  * Log into short.io
+  * Create a new link with a url of go.illinoislegalaid.org/kyr-[source]
+  * Update the followup survey spreadsheet (Community Navigator Followup Surveys0 to include the source in the source sheet
+
+
+Sending out followup surveys
+------------------------------
+
+To send followup surveys:
+
+* Check the intial survey response spreadsheet for any responses that are 4 weeks old and have cell phone numbers
+* Copy each cell phone numbers into the followup survey spreadsheet in the raw phone field, stripped of all characters except numbers.
+* Add the source to the followup survey spreadsheet
+* Save the row
+* This will trigger Zapier within 10 minutes to send the phone number and source via API to Twilio to send the survey.
+
+.. warning:: There is a limit to the number of new rows to add at any one time.
+
+
+How the SMS flow works
+=========================
+
+All surveys are contained in the A2J Survey Studio Flow.
+
+Incoming texts
+------------------
+
+When an incoming text is received, it responds with a link to the short.io link go.illinoislegalaid.org/kyr that links to our survey. It passes the incoming text message as the presenter parameter.
+
+Incoming API requests
+-----------------------
+When an incoming API request is received, it responds with a link to the short.io link go.illinoislegalaid.org/kyr-[source] where source is included in the API request and should represent the survey to send.
+
+For example, source = 'police' should send the police encounter follow up survey.
+
+
+Translations
+=============
+
+At this time, the surveys are English only.
+
+.. todo:: Add Spanish translations and update Twilio, Zapier to send correct language.
 
 
 

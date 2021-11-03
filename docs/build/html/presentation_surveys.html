@@ -91,7 +91,7 @@
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="design_guide.html">Design Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="design_guide.html">Design &amp; Style Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="block_management.html">Custom blocks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="people_management.html">User Management</a></li>
 <li class="toctree-l1"><a class="reference internal" href="legal_content_cms.html">Legal Content CMS</a></li>
@@ -115,6 +115,8 @@
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Presentation surveys</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#initial-survey">Initial survey</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#followup-surveys">Followup surveys</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#how-the-sms-flow-works">How the SMS flow works</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#translations">Translations</a></li>
 </ul>
 </li>
 </ul>
@@ -202,18 +204,32 @@
   <div class="section" id="presentation-surveys">
 <h1>Presentation surveys<a class="headerlink" href="#presentation-surveys" title="Permalink to this headline">¶</a></h1>
 <p>All community engagement surveys are hosted on JotForm.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Due to access restrictions, the associated spreadsheet integrations can not live in team drive. They are shared as needed with staff. These spreadsheets are:</p>
+</div>
+<ul class="simple">
+<li><p>Community Navigator Followup Surveys</p></li>
+<li><p>CN Presentation Initial Survey Responses</p></li>
+</ul>
 <div class="section" id="initial-survey">
 <h2>Initial survey<a class="headerlink" href="#initial-survey" title="Permalink to this headline">¶</a></h2>
-<p>We use a single survey for capturing initial feedback. This survey captures:</p>
+<p>We use a single survey for capturing initial feedback. This survey is named “CN Presentation Initial Survey” in JotForm.</p>
+<p>This survey captures:</p>
 <ul class="simple">
 <li><p>the survey attended</p></li>
 <li><p>the user’s knowledge before/after</p></li>
 <li><p>presentation feedback</p></li>
+<li><p>presenter feedback</p></li>
 <li><p>recommend or not (Net Promoter Score)</p></li>
 <li><p>confidence level</p></li>
-<li><p>cell phone or email</p></li>
-<li><p>presenter or navigator</p></li>
+<li><p>cell phone</p></li>
+<li><p>presenter</p></li>
 </ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>As we add new presentations, the survey attended will need updated.</p>
+</div>
 <p>When sent over SMS:</p>
 <ul class="simple">
 <li><p>we ask the user to text the presenter’s name. This is stored in the presenter field, which is not visible in the form.</p></li>
@@ -225,24 +241,99 @@
 <li><p>zip code question will appear and be required</p></li>
 <li><p>name or initials will appear and be required</p></li>
 <li><p>name of navigator will appear and be required</p></li>
+<li><p>cell phone or email must be required</p></li>
 </ul>
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">Todo</p>
+<p>The web-based/tablet fields need to be added.</p>
+</div>
+<p>When submitted:
+* The submission date, presentation, and cell phone number will be automatically copied to a Google sheet on ILAO’s team drive. A follow up date field will show the date 4 weeks from the submission date. This date can then be used to send out follow-up surveys.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>If a user checks multiple presentations attended, we need to manually copy the row and separate the presentations.</p></li>
+<li><p>We will need to copy and paste the follow up date field to new rows.</p></li>
+</ul>
+</div>
 </div>
 <div class="section" id="followup-surveys">
 <h2>Followup surveys<a class="headerlink" href="#followup-surveys" title="Permalink to this headline">¶</a></h2>
-<p>We have a separate follow up survey for each presentation.</p>
-<div class="admonition-todo admonition" id="id1">
-<p class="admonition-title">Todo</p>
-<p>Add field data</p>
+<p>We have a separate follow up survey for each presentation. These surveys are named “CN [presentation name] Follow-up Survey”</p>
+<p>Each survey asks:</p>
+<ul class="simple">
+<li><p>Understanding of material after 4 weeks</p></li>
+<li><p>Whether they recommended the presentation to anyone else</p></li>
+<li><p>Why they didn’t recommend it if they didn’t</p></li>
+<li><p>Whether they shared the information with others</p></li>
+<li><p>Why they didn’t share the information if they didn’t</p></li>
+<li><p>Specific presentation-specific questions</p></li>
+<li><p>Whether they referred anyone to IllinoisLegalAid.org</p></li>
+<li><p>Why they didn’t refer anyone to IllinoisLegalAId.org, if they didn’t</p></li>
+<li><p>Whether anything else should have been included in the presentation</p></li>
+<li><p>What else should have been included, if applicable</p></li>
+<li><p>An open feedback question</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A hidden src (source) field is stored to track which presentation was watched [may not need this]</p>
 </div>
 <p>When sent over SMS:</p>
 <ul class="simple">
 <li><p>we use a REST-based API and Zapier to send the correct survey to the right people where we have an opt-ed in SMS number</p></li>
 <li><p>In the Google sheet used to send the data, the source column should be the presentation name’s shorthand that then will map to the correct survey.</p></li>
 </ul>
-<p>In any other medium:</p>
+<div class="section" id="setting-up-a-new-followup-survey">
+<h3>Setting up a new followup survey<a class="headerlink" href="#setting-up-a-new-followup-survey" title="Permalink to this headline">¶</a></h3>
+<p>To set up a new followup survey for new presentations:</p>
 <ul class="simple">
-<li><p>we will provide the correct url to the specific presentation.</p></li>
+<li><p>Copy an existing followup survey</p></li>
+<li><p>Update the survey with presentation-specific questions</p></li>
+<li><p>Create a new short.io link for the survey:</p>
+<ul>
+<li><p>Log into short.io</p></li>
+<li><p>Create a new link with a url of go.illinoislegalaid.org/kyr-[source]</p></li>
+<li><p>Update the followup survey spreadsheet (Community Navigator Followup Surveys0 to include the source in the source sheet</p></li>
 </ul>
+</li>
+</ul>
+</div>
+<div class="section" id="sending-out-followup-surveys">
+<h3>Sending out followup surveys<a class="headerlink" href="#sending-out-followup-surveys" title="Permalink to this headline">¶</a></h3>
+<p>To send followup surveys:</p>
+<ul class="simple">
+<li><p>Check the intial survey response spreadsheet for any responses that are 4 weeks old and have cell phone numbers</p></li>
+<li><p>Copy each cell phone numbers into the followup survey spreadsheet in the raw phone field, stripped of all characters except numbers.</p></li>
+<li><p>Add the source to the followup survey spreadsheet</p></li>
+<li><p>Save the row</p></li>
+<li><p>This will trigger Zapier within 10 minutes to send the phone number and source via API to Twilio to send the survey.</p></li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>There is a limit to the number of new rows to add at any one time.</p>
+</div>
+</div>
+</div>
+<div class="section" id="how-the-sms-flow-works">
+<h2>How the SMS flow works<a class="headerlink" href="#how-the-sms-flow-works" title="Permalink to this headline">¶</a></h2>
+<p>All surveys are contained in the A2J Survey Studio Flow.</p>
+<div class="section" id="incoming-texts">
+<h3>Incoming texts<a class="headerlink" href="#incoming-texts" title="Permalink to this headline">¶</a></h3>
+<p>When an incoming text is received, it responds with a link to the short.io link go.illinoislegalaid.org/kyr that links to our survey. It passes the incoming text message as the presenter parameter.</p>
+</div>
+<div class="section" id="incoming-api-requests">
+<h3>Incoming API requests<a class="headerlink" href="#incoming-api-requests" title="Permalink to this headline">¶</a></h3>
+<p>When an incoming API request is received, it responds with a link to the short.io link go.illinoislegalaid.org/kyr-[source] where source is included in the API request and should represent the survey to send.</p>
+<p>For example, source = ‘police’ should send the police encounter follow up survey.</p>
+</div>
+</div>
+<div class="section" id="translations">
+<h2>Translations<a class="headerlink" href="#translations" title="Permalink to this headline">¶</a></h2>
+<p>At this time, the surveys are English only.</p>
+<div class="admonition-todo admonition" id="id2">
+<p class="admonition-title">Todo</p>
+<p>Add Spanish translations and update Twilio, Zapier to send correct language.</p>
+</div>
 </div>
 </div>
 
