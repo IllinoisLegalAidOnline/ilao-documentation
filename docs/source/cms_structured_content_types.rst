@@ -7,7 +7,7 @@ Content Types
 
 Legal Problem
 ----------------
-The primary content type for structured content is the Legal Problem. 
+The primary content type for structured content is the Legal Problem.
 
 +-----------------+-------------------+----------------+-----------------------------+
 | Field           | Type              | Cardinality    | Description                 |
@@ -17,7 +17,7 @@ The primary content type for structured content is the Legal Problem.
 | Description     | Text area         | 1,required     | Content description         |
 +-----------------+-------------------+----------------+-----------------------------+
 | Meta            | Text area         | 1, required    | Current meta description    |
-| Description     |                   |                |                             |  
+| Description     |                   |                |                             |
 +-----------------+-------------------+----------------+-----------------------------+
 | Disambiguation  | Text area (plain) | 1              | A short description of the  |
 | Description     |                   |                | item used to disambiguate   |
@@ -51,32 +51,32 @@ The primary content type for structured content is the Legal Problem.
 +-----------------+-------------------+----------------+-----------------------------+
 |Possible solution| Entity reference  | unlimited      | Entity reference to Legal   |
 |                 |                   | required       | Solution nodes              |
-+-----------------+-------------------+----------------+-----------------------------+ 
++-----------------+-------------------+----------------+-----------------------------+
 | Primary         | Entity reference  | 1              | Entity reference to legal   |
 | prevention      |                   |                | solution nodes              |
-+-----------------+-------------------+----------------+-----------------------------+ 
++-----------------+-------------------+----------------+-----------------------------+
 | Secondary       | Entity reference  | 1              | Entity reference to legal   |
 | prevention      |                   |                | solution nodes              |
-+-----------------+-------------------+----------------+-----------------------------+ 
++-----------------+-------------------+----------------+-----------------------------+
 | FAQ             | Entity reference  | unlimited      | Entity reference to         |
 |                 |                   |                | Legal Question              |
-+-----------------+-------------------+----------------+-----------------------------+ 
++-----------------+-------------------+----------------+-----------------------------+
 | RelatedResources| Entity reference  | unlimited      | Entity reference to legal   |
 |                 |                   |                | content types               |
-+-----------------+-------------------+----------------+-----------------------------+ 
++-----------------+-------------------+----------------+-----------------------------+
 | RelatedProblems | Entity reference  | unlimited      | Entity reference to Legal   |
 |                 |                   |                | Problem                     |
 +-----------------+-------------------+----------------+-----------------------------+
 | Citations       | Paragraphs        | unlimited      | Citation block              |
-+-----------------+-------------------+----------------+-----------------------------+ 
++-----------------+-------------------+----------------+-----------------------------+
 | Image           | Image             | 1              | Image to associate with node|
-+-----------------+-------------------+----------------+-----------------------------+ 
++-----------------+-------------------+----------------+-----------------------------+
 | Language        | Hidden            | 1              | Language of the node        |
-+-----------------+-------------------+----------------+-----------------------------+ 
++-----------------+-------------------+----------------+-----------------------------+
 | url             | Hidden            | 1              | Website url for the node    |
 +-----------------+-------------------+----------------+-----------------------------+
 | legal position  | List              | 1, required    | Current field_legal_position|
-+-----------------+-------------------+----------------+-----------------------------+ 
++-----------------+-------------------+----------------+-----------------------------+
 | content managem | Term reference    | unlimited      | Current content management  |
 | ent tags        |                   |                | tags                        |
 +-----------------+-------------------+----------------+-----------------------------+
@@ -87,8 +87,8 @@ The primary content type for structured content is the Legal Problem.
 | as outdated     |                   | No             | mark as outdated            |
 +-----------------+-------------------+----------------+-----------------------------+
 
-.. note:: 
-   
+.. note::
+
    The related resources will automatically pull the name, last modified (last internal revision date), last reviewed (last expert review date), url, and content format as additionalType in exporting the schema.
 
 Legal Solution
@@ -105,7 +105,7 @@ Legal Solution
 | Description     | Text area         | 1,required     | Content description         |
 +-----------------+-------------------+----------------+-----------------------------+
 | Meta            | Text area         | 1, required    | Current meta description    |
-| Description     |                   |                |                             |                
+| Description     |                   |                |                             |
 +-----------------+-------------------+----------------+-----------------------------+
 | Disambiguation  | Text area (plain) | 1              | A short description of the  |
 | Description     |                   |                | item used to disambiguate   |
@@ -142,6 +142,9 @@ Legal Solution
 +-----------------+-------------------+----------------+-----------------------------+
 | jurisdiction    | Paragraphs        | unlimited      | Coverage area paragraphs    |
 +-----------------+-------------------+----------------+-----------------------------+
+| negate          |                   |                |                             |
+| jurisdiction    | Paragraphs        | unlimited      | Coverage area paragraphs    |
++-----------------+-------------------+----------------+-----------------------------+
 | helpful         | entity reference  | unlimited      | Helpful organizations       |
 | organizations   |                   |                | content type                |
 +-----------------+-------------------+----------------+-----------------------------+
@@ -153,9 +156,9 @@ Legal Solution
 | result          | Paragraphs        | one            | Text blocks                 |
 +-----------------+-------------------+----------------+-----------------------------+
 | citations       | Paragraphs        | unlimited      | Citation block              |
-+-----------------+-------------------+----------------+-----------------------------+ 
++-----------------+-------------------+----------------+-----------------------------+
 | legal position  | List              | 1, required    | Current field_legal_position|
-+-----------------+-------------------+----------------+-----------------------------+ 
++-----------------+-------------------+----------------+-----------------------------+
 | content managem | Term reference    | unlimited      | Current content management  |
 | ent tags        |                   |                | tags                        |
 +-----------------+-------------------+----------------+-----------------------------+
@@ -172,7 +175,7 @@ Legal Question
 
 Single question; packaged within an FAQ in a legal problem or legal solution.
 
-.. note::  General questions related to solutions should be added to the Legal Solution but questions specifically related to how the solution affects a problem should go in the Legal Problem. For example:  When am I eligible for a second bankruptcy? would go in the bankruptcy solution but Can I save my house if I file for bankruptcy would go in a foreclosure-related problem. 
+.. note::  General questions related to solutions should be added to the Legal Solution but questions specifically related to how the solution affects a problem should go in the Legal Problem. For example:  When am I eligible for a second bankruptcy? would go in the bankruptcy solution but Can I save my house if I file for bankruptcy would go in a foreclosure-related problem.
 
 
 +-----------------+-------------------+----------------+-----------------------------+
@@ -186,7 +189,7 @@ Single question; packaged within an FAQ in a legal problem or legal solution.
 | Answer          |                   |                |                             |
 +-----------------+-------------------+----------------+-----------------------------+
 | legal position  | List              | 1, required    | Current field_legal_position|
-+-----------------+-------------------+----------------+-----------------------------+ 
++-----------------+-------------------+----------------+-----------------------------+
 | content managem | Term reference    | unlimited      | Current content management  |
 | ent tags        |                   |                | tags                        |
 +-----------------+-------------------+----------------+-----------------------------+
@@ -199,7 +202,7 @@ Single question; packaged within an FAQ in a legal problem or legal solution.
 | Description     | Text area         | 1,required     | Content description         |
 +-----------------+-------------------+----------------+-----------------------------+
 | Meta            | Text area         | 1, required    | Current meta description    |
-| Description     |                   |                |                             |                
+| Description     |                   |                |                             |
 +-----------------+-------------------+----------------+-----------------------------+
 | Legal issues    | Term reference    | unlimited,     | Current legal issues field  |
 |                 |                   | required       |                             |
@@ -211,6 +214,9 @@ Single question; packaged within an FAQ in a legal problem or legal solution.
 +-----------------+-------------------+----------------+-----------------------------+
 | Author/SME      | Entity reference  | unlimited      | Current author/SME field    |
 +-----------------+-------------------+----------------+-----------------------------+
+| jurisdiction    | Paragraphs        | unlimited      | Coverage area paragraphs    |
++-----------------+-------------------+----------------+-----------------------------+
+| negate          |                   |                |                             |
 | jurisdiction    | Paragraphs        | unlimited      | Coverage area paragraphs    |
 +-----------------+-------------------+----------------+-----------------------------+
 | Last reviewed   | Date time         | 1              | Current last reviewed field |
@@ -231,7 +237,7 @@ Legal Forms
 |                 |                   |                | form is used                |
 +-----------------+-------------------+----------------+-----------------------------+
 | legal position  | List              | 1, required    | Current field_legal_position|
-+-----------------+-------------------+----------------+-----------------------------+ 
++-----------------+-------------------+----------------+-----------------------------+
 | content managem | Term reference    | unlimited      | Current content management  |
 | ent tags        |                   |                | tags                        |
 +-----------------+-------------------+----------------+-----------------------------+
@@ -244,8 +250,11 @@ Legal Forms
 | Description     | Text area         | 1,required     | Content description         |
 +-----------------+-------------------+----------------+-----------------------------+
 | Meta            | Text area         | 1, required    | Current meta description    |
-| Description     |                   |                |                             |                
+| Description     |                   |                |                             |
 +-----------------+-------------------+----------------+-----------------------------+
+| jurisdiction    | Paragraphs        | unlimited      | Coverage area paragraphs    |
++-----------------+-------------------+----------------+-----------------------------+
+| negate          |                   |                |                             |
 | jurisdiction    | Paragraphs        | unlimited      | Coverage area paragraphs    |
 +-----------------+-------------------+----------------+-----------------------------+
 | Legal issues    | Term reference    | unlimited,     | Current legal issues field  |
@@ -286,7 +295,7 @@ Legal How-to
 |                 |                   |                | performing instructions     |
 +-----------------+-------------------+----------------+-----------------------------+
 | legal position  | List              | 1, required    | Current field_legal_position|
-+-----------------+-------------------+----------------+-----------------------------+ 
++-----------------+-------------------+----------------+-----------------------------+
 | content managem | Term reference    | unlimited      | Current content management  |
 | ent tags        |                   |                | tags                        |
 +-----------------+-------------------+----------------+-----------------------------+
@@ -299,7 +308,7 @@ Legal How-to
 | Description     | Text area         | 1,required     | Content description         |
 +-----------------+-------------------+----------------+-----------------------------+
 | Meta            | Text area         | 1, required    | Current meta description    |
-| Description     |                   |                |                             |                
+| Description     |                   |                |                             |
 +-----------------+-------------------+----------------+-----------------------------+
 | Legal issues    | Term reference    | unlimited,     | Current legal issues field  |
 |                 |                   | required       |                             |
@@ -311,6 +320,9 @@ Legal How-to
 +-----------------+-------------------+----------------+-----------------------------+
 | Author/SME      | Entity reference  | unlimited      | Current author/SME field    |
 +-----------------+-------------------+----------------+-----------------------------+
+| jurisdiction    | Paragraphs        | unlimited      | Coverage area paragraphs    |
++-----------------+-------------------+----------------+-----------------------------+
+| negate          |                   |                |                             |
 | jurisdiction    | Paragraphs        | unlimited      | Coverage area paragraphs    |
 +-----------------+-------------------+----------------+-----------------------------+
 | Last reviewed   | Date time         | 1              | Current last reviewed field |
@@ -330,7 +342,7 @@ Legal Step
 | Step information| paragraphs bundle | unlimited      | Directions or Tips bundle   |
 +-----------------+-------------------+----------------+-----------------------------+
 | legal position  | List              | 1, required    | Current field_legal_position|
-+-----------------+-------------------+----------------+-----------------------------+ 
++-----------------+-------------------+----------------+-----------------------------+
 | content managem | Term reference    | unlimited      | Current content management  |
 | ent tags        |                   |                | tags                        |
 +-----------------+-------------------+----------------+-----------------------------+
@@ -343,7 +355,7 @@ Legal Step
 | Description     | Text area         | 1,required     | Content description         |
 +-----------------+-------------------+----------------+-----------------------------+
 | Meta            | Text area         | 1, required    | Current meta description    |
-| Description     |                   |                |                             |                
+| Description     |                   |                |                             |
 +-----------------+-------------------+----------------+-----------------------------+
 | Legal issues    | Term reference    | unlimited,     | Current legal issues field  |
 |                 |                   | required       |                             |
@@ -355,6 +367,9 @@ Legal Step
 +-----------------+-------------------+----------------+-----------------------------+
 | Author/SME      | Entity reference  | unlimited      | Current author/SME field    |
 +-----------------+-------------------+----------------+-----------------------------+
+| jurisdiction    | Paragraphs        | unlimited      | Coverage area paragraphs    |
++-----------------+-------------------+----------------+-----------------------------+
+| negate          |                   |                |                             |
 | jurisdiction    | Paragraphs        | unlimited      | Coverage area paragraphs    |
 +-----------------+-------------------+----------------+-----------------------------+
 | Last reviewed   | Date time         | 1              | Current last reviewed field |
@@ -370,7 +385,7 @@ Helpful Organization
 ---------------------
 .. note::
    ILAO already has organization profile data that should be used for any organization in our system. New entities should only be added to reference organizations that are not legal services providers within our Organization platform.
-   
+
    Fields will be hidden when an Organization is included.
 
 +-----------------+-------------------+----------------+-----------------------------+
@@ -433,7 +448,7 @@ Form Prep Program
 | Field           | Type              | Cardinality    | Description                 |
 +=================+===================+================+=============================+
 | name            | text  field       | 1              | Name of the form prep       |
-|                 |                   |                | package or Easy Form        |                
+|                 |                   |                | package or Easy Form        |
 +-----------------+-------------------+----------------+-----------------------------+
 | url             | link              | 1              | link to the form prep       |
 +-----------------+-------------------+----------------+-----------------------------+
@@ -453,7 +468,7 @@ Legal Step Sections
 | Steps           | Entity reference  | unlimited      | Reference to legal steps    |
 +-----------------+-------------------+----------------+-----------------------------+
 
-.. note:: There is also a position property in the steps section in the schema. This is computed in the How To and not stored directly in the steps. 
+.. note:: There is also a position property in the steps section in the schema. This is computed in the How To and not stored directly in the steps.
 
 How To Directions & Tips
 --------------------------
@@ -484,10 +499,10 @@ Structured Text Block
 |                 |                   | unlimited      |                             |
 +-----------------+-------------------+----------------+-----------------------------+
 | List            | Paragraphs bundle | unlimited      | Item list bundle            |
-+-----------------+-------------------+----------------+-----------------------------+   
++-----------------+-------------------+----------------+-----------------------------+
 
 Paired Markup
------------------         
+-----------------
 
 +-----------------+-------------------+----------------+-----------------------------+
 | Field           | Type              | Cardinality    | Description                 |
@@ -509,7 +524,7 @@ Structured Item List
 |                 |                   |                | unordered                   |
 +-----------------+-------------------+----------------+-----------------------------+
 | Item List       | Paragraphs bundle | unlimited,     | Paired markup               |
-| Elements        |                   | required       |                             |  
+| Elements        |                   | required       |                             |
 +-----------------+-------------------+----------------+-----------------------------+
 
 
@@ -572,7 +587,7 @@ Taxonomies
 Technical Notes
 ===================
 
-* We can use \Drupal\Core\Mail\MailFormatHelper::htmlToText($string) to render plain text with urls as footnotes from the with markup fields. 
+* We can use \Drupal\Core\Mail\MailFormatHelper::htmlToText($string) to render plain text with urls as footnotes from the with markup fields.
 
 
 .. image:: ../assets/clean-markup.png

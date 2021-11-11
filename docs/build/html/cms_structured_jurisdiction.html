@@ -91,7 +91,7 @@
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="design_guide.html">Design Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="design_guide.html">Design &amp; Style Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="block_management.html">Custom blocks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="people_management.html">User Management</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="legal_content_cms.html">Legal Content CMS</a><ul class="current">
@@ -267,6 +267,28 @@
 <img alt="_images/cms_structured_coverage_closed.png" src="_images/cms_structured_coverage_closed.png" />
 <p>Multiple coverage areas can be set to allow content to be tagged across different administrative areas (for example, by tagging the county of Kane and the city of Aurora, which crosses county lines).</p>
 <img alt="_images/cms_structured_coverage_expanded.png" src="_images/cms_structured_coverage_expanded.png" />
+<div class="section" id="jurisdiction-and-negate-jurisdiction">
+<h2>Jurisdiction and Negate Jurisdiction<a class="headerlink" href="#jurisdiction-and-negate-jurisdiction" title="Permalink to this headline">¶</a></h2>
+<p>In structured content that can be tagged to a jurisdiction, there are two fields: Jurisdiction and Negate Jurisdiction that rely on the coverage area. Negate jurisdiction should only be used when content applies statewide except for one or more cities or counties.</p>
+<p>Examples:</p>
+<ul class="simple">
+<li><p>Content applies the same statewide, then the negate jurisdiction field would not be used and the jurisdiction would be set to State - Illinois.</p></li>
+<li><p>Content applies differently in Cook county, there would be two pieces of content:</p>
+<ul>
+<li><p>Content A would be set to a jurisdiction of Cook; this step would not be delivered for users outside of Cook county.</p></li>
+<li><p>Content B would be set to a jurisdiction of Illinois and a negate jurisdiction of County = Cook; this step would not be delivered for users inside Cook county.</p></li>
+</ul>
+</li>
+<li><p>Content applies statewide and another step applies just in Cook County (except Chicago), and another applies just in Chicago:</p>
+<ul>
+<li><p>The statewide step would be tagged to Illinois and no negate jurisdiction set</p></li>
+<li><p>The Cook county step would be tagged to County = Cook with a negate jurisdiction of city = Chicago</p></li>
+<li><p>The Chicago step would be tagged to city = Chicago</p></li>
+<li><p>A Chicago user would see the Chicago and statewide step; A suburban Cook county user would see the Cook step and the statewide step. All other users would get the statewide step only.</p></li>
+</ul>
+</li>
+</ul>
+</div>
 </div>
 
 

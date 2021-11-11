@@ -13,6 +13,7 @@ A legal solution is tied to one or more legal problems (see :ref:`cms-legal-prob
 * Estimated time required to complete the entire process
 * One or more eligibility rules to be able to use a specific solution
 * A jurisdiction
+* Optionally, a negate jurisdiction
 * Zero or more helpful organizations
 * Zero or more legal organizations
 * One or more HowTos
@@ -101,6 +102,7 @@ Structured content supports jurisdiction across different pieces of data. See :r
 * the result varies by location
 
 .. note:: Example:  The steps for getting an order of protection are different in Cook county than in the rest of the states. McHenry county requires a specific form that no one else does. But the eligibility rules, difficulty, and result is the same across Illinois. The solution should be set to Illinois while there should be 2 How-tos (one for Cook county, one for the other 101 counties), and the McHenry form should be specificially tagged to McHenry county.
+
 
 Legal organization vs Helpful organization
 ===========================================
