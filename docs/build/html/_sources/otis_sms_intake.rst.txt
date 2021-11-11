@@ -13,7 +13,7 @@ Online Intake Over SMS
    otis_sms_twilio_studio_workflow
    sms_eviction
    otis_maintenance
-
+   otis_sms_translations
 
 
 
