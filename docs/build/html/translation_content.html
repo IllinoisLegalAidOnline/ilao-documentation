@@ -91,7 +91,7 @@
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="design_guide.html">Design Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="design_guide.html">Design &amp; Style Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="block_management.html">Custom blocks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="people_management.html">User Management</a></li>
 <li class="toctree-l1"><a class="reference internal" href="legal_content_cms.html">Legal Content CMS</a></li>
@@ -99,9 +99,25 @@
 <li class="toctree-l1"><a class="reference internal" href="testimonials_cms.html">Testimonials Content Type</a></li>
 <li class="toctree-l1"><a class="reference internal" href="webforms_cms.html">Webforms</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="translation_cms.html">Translation Management</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Content Translation</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Content Translation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#in-node-translation">In node translation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#shared-fields">Shared fields</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#using-the-translation-management-system">Using the translation management system</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#checking-out-a-cart">Checking out a cart</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#check-out-a-job">Check out a job</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#importing-a-file">Importing a file</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#reviewing-content">Reviewing content</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#legal-content-tools">Legal content tools</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="translation_ui.html">Interface translation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="translation_config.html">Configuration translation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_webforms_translation.html">Webforms Translation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="otis_sms_translations.html">OTIS SMS Translations</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="calendar_cms.html">Calendar</a></li>
@@ -189,6 +205,74 @@
             
   <div class="section" id="content-translation">
 <h1>Content Translation<a class="headerlink" href="#content-translation" title="Permalink to this headline">¶</a></h1>
+<p>Content translation includes:</p>
+<ul class="simple">
+<li><p>Content types, like legal content, basic pages, organizations, locations, and services.</p></li>
+<li><p>Blocks, like the banner on the top of pages</p></li>
+</ul>
+<div class="section" id="in-node-translation">
+<h2>In node translation<a class="headerlink" href="#in-node-translation" title="Permalink to this headline">¶</a></h2>
+<p>Content can be translated by clicking the “Translate” link on the edit page or when viewing the content and clicking Add to create a new translation or Edit to edit an existing translation under Operations</p>
+<img alt="_images/node-translation.png" src="_images/node-translation.png" />
+<p>In the image above, there is a Spanish translation that can be edited. A Polish translation would need to be added.</p>
+<div class="section" id="shared-fields">
+<h3>Shared fields<a class="headerlink" href="#shared-fields" title="Permalink to this headline">¶</a></h3>
+<p>Shared fields are those that are shared across languages. For example, the legal issues taxonomy on legal content are the same regardless of language so the field to tag content to legal issue is shared across all languages - a change in one language affects all languages.</p>
+<p>For some content types, like legal content, fields that are shared are only visible on English content.</p>
+<p>For other types of content, where conditional fields or paragraphs cause issues with hiding shared fields, the fields are visible but have an (all languages) label.</p>
+<img alt="_images/translation-all-languages.png" src="_images/translation-all-languages.png" />
+</div>
+</div>
+<div class="section" id="using-the-translation-management-system">
+<h2>Using the translation management system<a class="headerlink" href="#using-the-translation-management-system" title="Permalink to this headline">¶</a></h2>
+<p>The translation management system can be used to import and export content for translation. This can be done:</p>
+<ul class="simple">
+<li><p>Directly in content, by clicking translate and add to cart or request translation</p></li>
+<li><p>Using <a class="reference external" href="https://www.illinoislegalaid.org/admin/tmgmt/sources">sources</a> under the Translation menu.</p></li>
+</ul>
+<img alt="_images/translation-sources.png" src="_images/translation-sources.png" />
+<p>Using source, you can:</p>
+<ul class="simple">
+<li><p>Filter on a source type. The source type for content items is content. Blocks can also be accessed here.</p></li>
+<li><p>Filter by Content type</p></li>
+<li><p>Check the nodes you want to add to cart (you do have to page through all pages)</p></li>
+</ul>
+<div class="section" id="checking-out-a-cart">
+<h3>Checking out a cart<a class="headerlink" href="#checking-out-a-cart" title="Permalink to this headline">¶</a></h3>
+<p>To check out a cart, select the language(s) to translate to and press Request translation.</p>
+<img alt="_images/translation-cart.png" src="_images/translation-cart.png" />
+</div>
+<div class="section" id="check-out-a-job">
+<h3>Check out a job<a class="headerlink" href="#check-out-a-job" title="Permalink to this headline">¶</a></h3>
+<p>You can check out a job in Xliff or HTML format. Xliff is usable with POeditor and many translation systems. Check the job out by pressing “Submit to provider” This will then show a file can be downloaded here message.</p>
+</div>
+<div class="section" id="importing-a-file">
+<h3>Importing a file<a class="headerlink" href="#importing-a-file" title="Permalink to this headline">¶</a></h3>
+<p>Translations are in jobs that can then be imported back in by selecting Manage next to the job on the <a class="reference external" href="https://www.illinoislegalaid.org/admin/tmgmt/jobs">Jobs</a> tab.</p>
+<img alt="_images/translation-jobs.png" src="_images/translation-jobs.png" />
+<p>This will show a list of content in the job and a space to import a translated file. Once a file is imported, each content needs to be reviewed.</p>
+<img alt="_images/translation-job-details.png" src="_images/translation-job-details.png" />
+</div>
+<div class="section" id="reviewing-content">
+<h3>Reviewing content<a class="headerlink" href="#reviewing-content" title="Permalink to this headline">¶</a></h3>
+<p>Pressing review next to an item will show a page with all of the translatable fields.</p>
+<ul class="simple">
+<li><p>Press the check next to a translation to approve it</p></li>
+<li><p>You can change the text if it is incorrect</p></li>
+<li><p>You can save and return</p></li>
+<li><p>You can save as completed. This is true even if yu do not approve all translations.</p></li>
+</ul>
+<img alt="_images/translation-review.png" src="_images/translation-review.png" />
+</div>
+</div>
+<div class="section" id="legal-content-tools">
+<h2>Legal content tools<a class="headerlink" href="#legal-content-tools" title="Permalink to this headline">¶</a></h2>
+<p>Legal content types have translation-related fields that can be used to flag content for translation/re-translation</p>
+<ul class="simple">
+<li><p>Request translation be created is a yes/no (defaults to no) to indicate that content should be translated</p></li>
+<li><p>Mark translation as outdated is a yes/no to indicate if the English version has been so substantially changed that we need to re-translate the Spanish and Polish versions.</p></li>
+</ul>
+</div>
 </div>
 
 
