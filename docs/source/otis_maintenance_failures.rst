@@ -15,7 +15,8 @@ When a failure occurs, the ILAO contact should:
 .. image:: ../assets/sms-failure-data.png
 
 * Copy and paste the error message piece into a text editor (the section within the outermost quotes.
-* Do a find replace on all / to replace with nothing
+* Do a find and replace on all \n to replace with nothing
+* Do a find and replace on all \ to replace with nothing
 * Fix the problem in the code (examples may include an extra space in a date field, too long of a phone number)
 * Open postman and in the team workspace, use the e-transfer JSON request in the Legal Server folder
 * Drop the pasted text into the body
