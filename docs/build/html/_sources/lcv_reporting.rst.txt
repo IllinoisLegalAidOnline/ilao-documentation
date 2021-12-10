@@ -1,6 +1,17 @@
+.. _LCVreports:
+
 =========================================
 Legal Content Volunteer Program Reports
 =========================================
+
+Available reports:
+
+* `Point type report <https://www.illinoislegalaid.org/admin/content/gamification/point-types>`_
+* `Available badges report <https://www.illinoislegalaid.org/admin/content/gamification/badges-listing>`_
+* `Available milestones report <https://www.illinoislegalaid.org/admin/content/gamification/milestone-listing>`_
+* `Earned points report <https://www.illinoislegalaid.org/admin/content/gamification/point-awards>`_
+
+.. note:: Badges and milestone awarded are tracked under Manage Gamification at the present time. These lists the awards in a format of badgename_uid where uid is the user id who received the award.
 
 Point Type Report
 ===================

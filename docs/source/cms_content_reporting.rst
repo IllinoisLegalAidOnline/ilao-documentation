@@ -17,6 +17,11 @@ Available reports:
 * `Localized content report <https://www.illinoislegalaid.org/admin/reporting/content/localized-content>`_
 * Comments/Ratings report
 
+See also:
+
+* :ref:`StructuredContentreports`
+* :ref:`LCVreports`
+
 Main content report
 =====================
 This is the basic Drupal report for content. It includes all available content types.
