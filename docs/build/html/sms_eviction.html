@@ -91,7 +91,7 @@
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="design_guide.html">Design Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="design_guide.html">Design &amp; Style Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="block_management.html">Custom blocks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="people_management.html">User Management</a></li>
 <li class="toctree-l1"><a class="reference internal" href="legal_content_cms.html">Legal Content CMS</a></li>
@@ -118,8 +118,10 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="otis_maintenance.html">Maintaining and expanding OTIS SMS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="otis_sms_translations.html">OTIS SMS Translations</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="otis_facebook.html">Facebook Integrations</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="site_search.html">Site Search</a></li>
@@ -243,6 +245,21 @@ Any other response =&gt; CONTINUE</p>
 </div></blockquote>
 </div></blockquote>
 <p>System:  Get intake settings for organization based on zip code</p>
+<p>Is landlord or Tenant?</p>
+<div class="section" id="landlord-flow">
+<h3>Landlord flow<a class="headerlink" href="#landlord-flow" title="Permalink to this headline">¶</a></h3>
+<p>Own 6 or less rental units?</p>
+<blockquote>
+<div><p>If YES, offer intake to CVLS</p>
+<blockquote>
+<div><p>If intake accepted, complete full application (see Household prompt, Tenant flow below)</p>
+<p>If intake declined, offer legal information</p>
+</div></blockquote>
+<p>If NO, divert</p>
+</div></blockquote>
+</div>
+<div class="section" id="tenant-flow">
+<h3>Tenant flow<a class="headerlink" href="#tenant-flow" title="Permalink to this headline">¶</a></h3>
 <p>Get Legal Issue (7 options)</p>
 <blockquote>
 <div><p>User replies More</p>
@@ -598,6 +615,7 @@ CONTINUE</p>
 </div></blockquote>
 </div></blockquote>
 <p>END</p>
+</div>
 </div>
 </div>
 

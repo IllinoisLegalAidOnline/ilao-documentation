@@ -43,6 +43,24 @@ Zip code
 
 System:  Get intake settings for organization based on zip code
 
+Is landlord or Tenant?
+
+Landlord flow
+--------------
+
+Own 6 or less rental units?
+
+   If YES, offer intake to CVLS
+
+     If intake accepted, complete full application (see Household prompt, Tenant flow below)
+
+     If intake declined, offer legal information
+
+   If NO, divert
+
+Tenant flow
+-------------
+
 Get Legal Issue (7 options)
 
   User replies More
