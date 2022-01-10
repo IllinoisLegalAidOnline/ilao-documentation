@@ -16,7 +16,7 @@ The core function of the short code for inbound messaging will be to route peopl
 +=======================+================================+
 | eviction              | Eviction Help (English)        |
 +-----------------------+--------------------------------+
-| desolajes             | Eviction Help (Spanish)        |
+| desalojo              | Eviction Help (Spanish)        |
 +-----------------------+--------------------------------+
 | ayuda legal           | OTIS (Spanish)                 |
 +-----------------------+--------------------------------+
