@@ -1,3 +1,5 @@
+.. _block_config:
+
 ========================
 Configuring blocks
 ========================
@@ -15,7 +17,7 @@ These settings can be changed per block and can be combined (for example, I can 
 Language
 ----------
 
-To limit to a specific language, click on the language tab and check the languages of pages that the block should appear on. For example, if you click on Spanish, then the block will only appear on pages that start with illinoislegalaid.org/es. 
+To limit to a specific language, click on the language tab and check the languages of pages that the block should appear on. For example, if you click on Spanish, then the block will only appear on pages that start with illinoislegalaid.org/es.
 
 .. note:: This has no bearing on whether a translation exists. If a block is not translated but tagged to all languages, the English block will appear.
 

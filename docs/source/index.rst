@@ -27,14 +27,15 @@ Welcome to Illinois Legal Aid Online Product Documentation
    other_cms_features
    taxonomies
    rss_feeds
-   ilao_api 
-   
+   ilao_api
+   sms_overview
+
 See also:
-   
+
    `ContentNet <https://sites.google.com/illinoislegalaid.org/contentnet/content-team-documentation>`_
 
-   
-   
+
+
 
 .. toctree::
    :maxdepth: 1
@@ -42,4 +43,4 @@ See also:
 
    legal_content_cms
 
-   
+

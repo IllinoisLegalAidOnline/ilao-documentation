@@ -2,12 +2,24 @@
 Smart blocks
 ==================
 
-Smart blocks provide some tools to allow us to display existing blocks based on defined conditions. To use:
+Smart blocks provide some tools to allow us to display existing blocks based on defined conditions. How these are used depends on where the block is being placed.
 
-* create the blocks you need to use
-* create a Decision block
+Existing criteria
+==================
+We can create smart blocks that display based on:
 
-.. note::  In its initial implementation this is very limited. It only allows us to create segments based on whether the user is on mobile, browser language, operating system. It supports cookies and localStorage but will require additional build out for ILAO to use these methods.
+* Device (mobile or not mobile)
+* Operating system
+* Browser language
+* Zipcode (as defined in localstorage as localStorage.zipCode)
+* visit_count [can only filter on equals, not less than/greater than]
+* first_visit
+* last_visit
+* role (community or professional)
+
+In addition, we can leverage the regular block conditions. See :ref:`block_config`.
+
+.. note:: We need to do additional work to allow for negating conditions
 
 Creating segments
 ==================
@@ -15,11 +27,7 @@ Segments are managed under `Structure/Smart Content <https://www.illinoislegalai
 
 Segment sets can include segments that filter on:
 
-* Mobile
-* Operating systems
-* Language (browser); this may be different than their viewing language on the website. 
-* Cookies. These require ILAO to define and store user cookies in the user's browser
-* LocalStorage. These require ILAO to define and store data in the user's local storage on their browser.
+
 
 Conditions can be complex. In the example below, there is a condition of if the user is on mobile and either they have a donor cookie or a return user localStorage value, then the user meets this segment.
 
@@ -29,7 +37,7 @@ Conditions can be complex. In the example below, there is a condition of if the 
 
 Decision Block
 ================
-To use these segments to deliver appropriate smart blocks, you would place a block of type "Decision block" and 
+To use these segments to deliver appropriate smart blocks, you would place a block of type "Decision block" and
 
 Decision blocks:
 * Can use only one segment set
@@ -47,4 +55,4 @@ Decision blocks:
 <p style="text-align: right; margin-bottom: 20px; font-size: 16px; font-family: Helvetica;"><a style="background: #0079d0; color: #fff; padding: 16px 32px 16px 32px; margin-right: 20px;">Chat Now</a></p>
 </div>
 </div>
-</div>                             
+</div>

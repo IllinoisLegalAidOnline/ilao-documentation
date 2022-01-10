@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Configuring blocks &mdash; ILAO 2.22 documentation</title>
+  <title>Sponsorship blocks &mdash; ILAO 2.22 documentation</title>
   
 
   
@@ -43,8 +43,8 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Block translation" href="blocks_translation.html" />
-    <link rel="prev" title="Smart blocks" href="blocks_smart.html" /> 
+    <link rel="next" title="User Management" href="people_management.html" />
+    <link rel="prev" title="User profile blocks" href="blocks_user_profiles.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -96,15 +96,10 @@
 <li class="toctree-l2"><a class="reference internal" href="blocks_current.html">Donation blocks</a></li>
 <li class="toctree-l2"><a class="reference internal" href="blocks_sectional.html">Sectional Blocks</a></li>
 <li class="toctree-l2"><a class="reference internal" href="blocks_smart.html">Smart blocks</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Configuring blocks</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#language">Language</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#pages-content-types">Pages &amp; Content types</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#roles">Roles</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="blocks_configuration.html">Configuring blocks</a></li>
 <li class="toctree-l2"><a class="reference internal" href="blocks_translation.html">Block translation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="blocks_user_profiles.html">User profile blocks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="block_conditional_visibility.html">Sponsorship blocks</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Sponsorship blocks</a></li>
 <li class="toctree-l2"><a class="reference internal" href="block_management.html#drupal-blocks-overview">Drupal Blocks Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="block_management.html#placing-a-block">Placing a block</a></li>
 </ul>
@@ -179,13 +174,13 @@
         
           <li><a href="block_management.html">Custom blocks</a> &raquo;</li>
         
-      <li>Configuring blocks</li>
+      <li>Sponsorship blocks</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="_sources/blocks_configuration.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/block_conditional_visibility.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -198,42 +193,25 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="configuring-blocks">
-<span id="block-config"></span><h1>Configuring blocks<a class="headerlink" href="#configuring-blocks" title="Permalink to this headline">¶</a></h1>
-<p>By default blocks are:</p>
+  <div class="section" id="sponsorship-blocks">
+<h1>Sponsorship blocks<a class="headerlink" href="#sponsorship-blocks" title="Permalink to this headline">¶</a></h1>
+<p>Sponsorship blocks are created in the system using these steps:</p>
+<ol class="arabic simple">
+<li><p>Create a basic block. At this point, let Gwen know that the block is created. She will need to work with the developers for the remaining steps.</p></li>
+</ol>
+<p>Technical steps:</p>
+<ol class="arabic simple" start="2">
+<li><p>A block visibility group is defined. This determines where a block appears. This can be limited to specific:</p></li>
+</ol>
 <ul class="simple">
-<li><p>shown on every page</p></li>
-<li><p>shown in every language</p></li>
-<li><p>shown for every user</p></li>
+<li><p>Term reference</p></li>
+<li><p>Content level</p></li>
+<li><p>Specific pages if required</p></li>
 </ul>
-<p>These settings can be changed per block and can be combined (for example, I can create a block that appears only on the Spanish divorce easy form for legal aid members)</p>
-<img alt="_images/blocks-configureblock.png" src="_images/blocks-configureblock.png" />
-<div class="section" id="language">
-<h2>Language<a class="headerlink" href="#language" title="Permalink to this headline">¶</a></h2>
-<p>To limit to a specific language, click on the language tab and check the languages of pages that the block should appear on. For example, if you click on Spanish, then the block will only appear on pages that start with illinoislegalaid.org/es.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This has no bearing on whether a translation exists. If a block is not translated but tagged to all languages, the English block will appear.</p>
-</div>
-</div>
-<div class="section" id="pages-content-types">
-<h2>Pages &amp; Content types<a class="headerlink" href="#pages-content-types" title="Permalink to this headline">¶</a></h2>
-<p>Blocks can be set to be visible or hidden per content type (legal content, basic page, job posting, etc) or per page or page paths. Examples:</p>
-<ul class="simple">
-<li><p>/node/29671 will cause a block to appear only on that page or on every page but that page depending on the show/hide settings</p></li>
-<li><p>/about/* will cause a block to appear on every page that starts with /about/</p></li>
-<li><p>/get-legal-help will cause the block to appear on the get-legal-help page but not any child pages.</p></li>
-</ul>
-</div>
-<div class="section" id="roles">
-<h2>Roles<a class="headerlink" href="#roles" title="Permalink to this headline">¶</a></h2>
-<p>Blocks can be set to be visible for specific roles. Keep in mind:</p>
-<ul class="simple">
-<li><p>the block will be visible if the user has any of the selected roles. For example, staff users also have the legal aid member role so a block set to be visible for legal aid members will be visible to staff users even if the staff role is not set</p></li>
-<li><p>authenticated users means any logged in user</p></li>
-<li><p>anonymous users means any not logged in user</p></li>
-</ul>
-</div>
+<ol class="arabic simple" start="3">
+<li><p>The block is placed in legal content using the layout builder</p></li>
+<li><p>The configuration is saved.</p></li>
+</ol>
 </div>
 
 
@@ -242,8 +220,8 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="blocks_translation.html" class="btn btn-neutral float-right" title="Block translation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="blocks_smart.html" class="btn btn-neutral float-left" title="Smart blocks" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="people_management.html" class="btn btn-neutral float-right" title="User Management" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="blocks_user_profiles.html" class="btn btn-neutral float-left" title="User profile blocks" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

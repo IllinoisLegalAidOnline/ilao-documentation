@@ -1,0 +1,362 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>SMS Overview &mdash; ILAO 2.22 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
+  <link rel="stylesheet" href="../html/_static/css/theme_overrides.css" type="text/css" />
+  <link rel="stylesheet" href="../build/html/_static/css/theme_overrides.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme_overrides.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="OTIS API Related Entities" href="otis_api_relationships.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> ILAO
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="design_guide.html">Design &amp; Style Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="block_management.html">Custom blocks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="people_management.html">User Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="legal_content_cms.html">Legal Content CMS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basic_pages_cms.html">Basic pages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="testimonials_cms.html">Testimonials Content Type</a></li>
+<li class="toctree-l1"><a class="reference internal" href="webforms_cms.html">Webforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="translation_cms.html">Translation Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="calendar_cms.html">Calendar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jobs_cms.html">Job Listings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="discussion_groups.html">Discussion groups</a></li>
+<li class="toctree-l1"><a class="reference internal" href="otis_cms.html">Get Legal Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="site_search.html">Site Search</a></li>
+<li class="toctree-l1"><a class="reference internal" href="site_faqs.html">Site FAQs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="other_cms_features.html">Other Website Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="taxonomies.html">Taxonomies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rss_feeds.html">RSS Feeds</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ilao_api.html">ILAO’s API</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">SMS Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#inbound-messaging">Inbound messaging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#rest-based-messaging">REST-based messaging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mermaid-code-for-images">Mermaid code for images</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Workarounds:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="legal_content_cms.html">Legal Content CMS</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ILAO</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>SMS Overview</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/sms_overview.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="sms-overview">
+<h1>SMS Overview<a class="headerlink" href="#sms-overview" title="Permalink to this headline">¶</a></h1>
+<p>We deliver many things over SMS. As of January 2022, we are in the process of applying for a short code that will serve as a master landing spot for all of our SMS transactions. When this is implemented, the short code will route traffic as indicated below.</p>
+<div class="section" id="inbound-messaging">
+<h2>Inbound messaging<a class="headerlink" href="#inbound-messaging" title="Permalink to this headline">¶</a></h2>
+<p>Inbound messaging relies on a keyword being texted to the number and then routed correctly.</p>
+<p>The core function of the short code for inbound messaging will be to route people into OTIS. We currently have 4 defined flows: OTIS-english, OTIS-spanish, Eviction-english, Eviction-spanish.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 42%" />
+<col style="width: 58%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Keyword</p></th>
+<th class="head"><p>Flow</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>eviction</p></td>
+<td><p>Eviction Help (English)</p></td>
+</tr>
+<tr class="row-odd"><td><p>desolajes</p></td>
+<td><p>Eviction Help (Spanish)</p></td>
+</tr>
+<tr class="row-even"><td><p>ayuda legal</p></td>
+<td><p>OTIS (Spanish)</p></td>
+</tr>
+<tr class="row-odd"><td><p>kyr</p></td>
+<td><p>Know your rights initial survey</p></td>
+</tr>
+<tr class="row-even"><td><p>All other inbound</p></td>
+<td><p>OTIS (English)</p></td>
+</tr>
+</tbody>
+</table>
+<p>In the future, we will break the flows out within OTIS to support substantive keyword routing like the one below:</p>
+<img alt="_images/inbound-sms.jpeg" src="_images/inbound-sms.jpeg" />
+</div>
+<div class="section" id="rest-based-messaging">
+<h2>REST-based messaging<a class="headerlink" href="#rest-based-messaging" title="Permalink to this headline">¶</a></h2>
+<p>We will also use the short code to deliver system-based messages. These are sent over REST from the website or Zapier-based transactions to specific flows. Currently, we use REST for reminders, the SMS feedback survey, and Know your rights (KYR) follow up surveys.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 29%" />
+<col style="width: 41%" />
+<col style="width: 30%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>REST App</p></th>
+<th class="head"><p>Flow</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>sms</p></td>
+<td><p>SMS follow up survey</p></td>
+<td><p>Built as flow</p></td>
+</tr>
+<tr class="row-odd"><td><p>kyr follow up surveys</p></td>
+<td><p>KYR surveys</p></td>
+<td><p>Built as flow</p></td>
+</tr>
+<tr class="row-even"><td><p>Otis confirmations</p></td>
+<td><p>N/A</p></td>
+<td><p>Built in code</p></td>
+</tr>
+<tr class="row-odd"><td><p>OTIS reminders</p></td>
+<td><p>Not yet built</p></td>
+<td><p>In backlog</p></td>
+</tr>
+<tr class="row-even"><td><p>Next steps from
+content</p></td>
+<td><p>Not yet built</p></td>
+<td><p>Not defined</p></td>
+</tr>
+<tr class="row-odd"><td><p>Feedback surveys</p></td>
+<td><p>Not yet built</p></td>
+<td><p>Not defined</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The built in code will need to be migrated to a flow to be handled correctly.</p>
+</div>
+<p>This is the envisioned RESt system:</p>
+<img alt="_images/rest-sms.jpeg" src="_images/rest-sms.jpeg" />
+</div>
+<div class="section" id="mermaid-code-for-images">
+<h2>Mermaid code for images<a class="headerlink" href="#mermaid-code-for-images" title="Permalink to this headline">¶</a></h2>
+<p>This code below can be used in a Mermaid editor to create new images.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">graph</span> <span class="n">TD</span>
+<span class="n">sc</span><span class="p">[</span><span class="s2">&quot;Short code (inbound)&quot;</span><span class="p">]</span> <span class="o">--&gt;|</span><span class="n">eviction</span><span class="o">|</span> <span class="n">ev</span>
+<span class="n">ev</span><span class="p">[</span><span class="s2">&quot;Eviction flow&quot;</span><span class="p">]</span>
+<span class="n">sc</span> <span class="o">--&gt;</span> <span class="o">|</span><span class="s2">&quot;legal help&quot;</span><span class="o">|</span> <span class="n">otis</span>
+<span class="n">otis</span><span class="p">[</span><span class="s2">&quot;Master OTIS flow&quot;</span><span class="p">]</span>
+<span class="n">sc</span> <span class="o">--&gt;|</span><span class="n">SNAP</span><span class="o">|</span> <span class="n">snap</span>
+<span class="n">otis</span> <span class="o">--&gt;</span> <span class="n">snap</span>
+<span class="n">snap</span><span class="p">[</span><span class="s2">&quot;SNAP subflow&quot;</span><span class="p">]</span>
+<span class="n">sc</span> <span class="o">--&gt;|</span><span class="n">TANF</span><span class="o">|</span> <span class="n">tanf</span>
+<span class="n">otis</span> <span class="o">--&gt;</span> <span class="n">tanf</span>
+<span class="n">unemployment</span><span class="p">[</span><span class="s2">&quot;unemployment subflow&quot;</span><span class="p">]</span>
+<span class="n">sc</span> <span class="o">--&gt;|</span><span class="n">unemployment</span><span class="o">|</span> <span class="n">unemployment</span>
+<span class="n">otis</span> <span class="o">--&gt;</span> <span class="n">unemployment</span>
+<span class="n">unemployment</span><span class="p">[</span><span class="s2">&quot;unemployment subflow&quot;</span><span class="p">]</span>
+<span class="n">sc</span> <span class="o">--&gt;</span> <span class="o">|</span><span class="n">kyr</span><span class="o">|</span> <span class="n">kyr</span>
+<span class="n">kyr</span><span class="p">[</span><span class="s2">&quot;Know your rights survey&quot;</span><span class="p">]</span>
+
+<span class="n">graph</span> <span class="n">TD</span>
+<span class="n">sc</span><span class="p">[</span><span class="s2">&quot;Short code (rest)&quot;</span><span class="p">]</span> <span class="o">--&gt;|</span><span class="n">sms</span><span class="o">|</span> <span class="n">ev</span>
+<span class="n">ev</span><span class="p">[</span><span class="s2">&quot;SMS feedback survey&quot;</span><span class="p">]</span>
+<span class="n">sc</span> <span class="o">--&gt;</span> <span class="o">|</span><span class="n">kyr</span><span class="o">-</span><span class="n">followup</span><span class="o">-</span><span class="n">police</span><span class="o">|</span> <span class="n">kyr</span><span class="o">-</span><span class="n">police</span>
+<span class="n">kyr</span><span class="o">-</span><span class="n">police</span><span class="p">[</span><span class="s2">&quot;Police followup survey&quot;</span><span class="p">]</span>
+<span class="n">sc</span> <span class="o">--&gt;</span> <span class="o">|</span><span class="n">kyr</span><span class="o">-</span><span class="n">followp</span><span class="o">-</span><span class="n">eviction</span><span class="o">|</span> <span class="n">kyr</span><span class="o">-</span><span class="n">eviction</span>
+<span class="n">sc</span> <span class="o">--&gt;</span> <span class="o">|</span><span class="n">otis</span><span class="o">-</span><span class="n">confirmations</span><span class="o">|</span> <span class="n">otisc</span>
+<span class="n">sc</span> <span class="o">--&gt;</span> <span class="o">|</span><span class="n">otis</span><span class="o">-</span><span class="n">reminders</span><span class="o">|</span> <span class="n">otisr</span>
+<span class="n">otisr</span><span class="p">[</span><span class="s2">&quot;OTIS reminders&quot;</span><span class="p">]</span>
+<span class="n">otisc</span><span class="p">[</span><span class="s2">&quot;OTIS confirmations&quot;</span><span class="p">]</span>
+<span class="n">nextsteps</span><span class="p">[</span><span class="s2">&quot;Content next steps&quot;</span><span class="p">]</span>
+<span class="n">sc</span> <span class="o">--&gt;</span> <span class="o">|</span><span class="s2">&quot;Next steps&quot;</span><span class="o">|</span> <span class="n">nextsteps</span>
+<span class="n">fb</span><span class="p">[</span><span class="s2">&quot;Feedback surveys&quot;</span><span class="p">]</span>
+<span class="n">sc</span> <span class="o">--&gt;</span> <span class="o">|</span><span class="n">Feedback</span> <span class="n">surveys</span><span class="o">|</span> <span class="n">fb</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="otis_api_relationships.html" class="btn btn-neutral float-left" title="OTIS API Related Entities" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Gwen Daniels.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

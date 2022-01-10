@@ -5,7 +5,7 @@ Custom blocks
 .. toctree::
    :maxdepth: 1
    :caption: Contents:
-   
+
 
    blocks_current
    blocks_sectional
@@ -13,9 +13,11 @@ Custom blocks
    blocks_configuration
    blocks_translation
    blocks_user_profiles
-  
-   
-   
+   block_conditional_visibility
+
+
+
+
 
 Drupal Blocks Overview
 ========================

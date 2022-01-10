@@ -91,11 +91,12 @@
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="design_guide.html">Design Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="design_guide.html">Design &amp; Style Guide</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="block_management.html">Custom blocks</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="blocks_current.html">Donation blocks</a></li>
 <li class="toctree-l2"><a class="reference internal" href="blocks_sectional.html">Sectional Blocks</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Smart blocks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#existing-criteria">Existing criteria</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#creating-segments">Creating segments</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#decision-block">Decision Block</a></li>
 </ul>
@@ -103,6 +104,7 @@
 <li class="toctree-l2"><a class="reference internal" href="blocks_configuration.html">Configuring blocks</a></li>
 <li class="toctree-l2"><a class="reference internal" href="blocks_translation.html">Block translation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="blocks_user_profiles.html">User profile blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="block_conditional_visibility.html">Sponsorship blocks</a></li>
 <li class="toctree-l2"><a class="reference internal" href="block_management.html#drupal-blocks-overview">Drupal Blocks Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="block_management.html#placing-a-block">Placing a block</a></li>
 </ul>
@@ -198,26 +200,30 @@
             
   <div class="section" id="smart-blocks">
 <h1>Smart blocks<a class="headerlink" href="#smart-blocks" title="Permalink to this headline">¶</a></h1>
-<p>Smart blocks provide some tools to allow us to display existing blocks based on defined conditions. To use:</p>
+<p>Smart blocks provide some tools to allow us to display existing blocks based on defined conditions. How these are used depends on where the block is being placed.</p>
+<div class="section" id="existing-criteria">
+<h2>Existing criteria<a class="headerlink" href="#existing-criteria" title="Permalink to this headline">¶</a></h2>
+<p>We can create smart blocks that display based on:</p>
 <ul class="simple">
-<li><p>create the blocks you need to use</p></li>
-<li><p>create a Decision block</p></li>
+<li><p>Device (mobile or not mobile)</p></li>
+<li><p>Operating system</p></li>
+<li><p>Browser language</p></li>
+<li><p>Zipcode (as defined in localstorage as localStorage.zipCode)</p></li>
+<li><p>visit_count [can only filter on equals, not less than/greater than]</p></li>
+<li><p>first_visit</p></li>
+<li><p>last_visit</p></li>
+<li><p>role (community or professional)</p></li>
 </ul>
+<p>In addition, we can leverage the regular block conditions. See <a class="reference internal" href="blocks_configuration.html#block-config"><span class="std std-ref">Configuring blocks</span></a>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>In its initial implementation this is very limited. It only allows us to create segments based on whether the user is on mobile, browser language, operating system. It supports cookies and localStorage but will require additional build out for ILAO to use these methods.</p>
+<p>We need to do additional work to allow for negating conditions</p>
+</div>
 </div>
 <div class="section" id="creating-segments">
 <h2>Creating segments<a class="headerlink" href="#creating-segments" title="Permalink to this headline">¶</a></h2>
 <p>Segments are managed under <a class="reference external" href="https://www.illinoislegalaid.org/admin/structure/smart_content_segment_set">Structure/Smart Content</a></p>
 <p>Segment sets can include segments that filter on:</p>
-<ul class="simple">
-<li><p>Mobile</p></li>
-<li><p>Operating systems</p></li>
-<li><p>Language (browser); this may be different than their viewing language on the website.</p></li>
-<li><p>Cookies. These require ILAO to define and store user cookies in the user’s browser</p></li>
-<li><p>LocalStorage. These require ILAO to define and store data in the user’s local storage on their browser.</p></li>
-</ul>
 <p>Conditions can be complex. In the example below, there is a condition of if the user is on mobile and either they have a donor cookie or a return user localStorage value, then the user meets this segment.</p>
 <img alt="_images/smart-block-segments.png" src="_images/smart-block-segments.png" />
 <div class="admonition note">
