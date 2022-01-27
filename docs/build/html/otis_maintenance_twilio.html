@@ -91,7 +91,7 @@
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="design_guide.html">Design Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="design_guide.html">Design &amp; Style Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="block_management.html">Custom blocks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="people_management.html">User Management</a></li>
 <li class="toctree-l1"><a class="reference internal" href="legal_content_cms.html">Legal Content CMS</a></li>
@@ -119,8 +119,10 @@
 <li class="toctree-l4"><a class="reference internal" href="otis_maintenance.html#demographic-taxonomy-terms">Demographic taxonomy terms</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="otis_sms_translations.html">OTIS SMS Translations</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="otis_facebook.html">Facebook Integrations</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="site_search.html">Site Search</a></li>
@@ -129,10 +131,11 @@
 <li class="toctree-l1"><a class="reference internal" href="taxonomies.html">Taxonomies</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rss_feeds.html">RSS Feeds</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ilao_api.html">ILAO’s API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sms_overview.html">SMS Overview</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Workarounds:</span></p>
+<p class="caption"><span class="caption-text">See also:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="legal_content_cms.html">Legal Content CMS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="creating_docs_in_github.html">Creating new docs in Github</a></li>
 </ul>
 
             
@@ -228,11 +231,13 @@
 </div>
 <p>For each legal issue there is:</p>
 <ul class="simple">
-<li><p>A case with a number. This matches the number from the SMS widget that asks user to select their problem. Adding a new one should be added after the last one with the next sequential number.</p></li>
-<li><p>processid: this is the unique process id from Legal Server</p></li>
-<li><p>lsc_code: this should be the string that matches Legal Server’s problem code list</p></li>
-<li><p>content_url: this should be a landing page for sending a user when they exit the system for a legal topic.</p></li>
-<li><p>rest_export: this is the url for the rest export of the related case acceptance view for the legal issue.</p></li>
+<li><p>A case with a number. This matches the number from the SMS widget that asks the user to select their problem. Adding a new one should be added after the last one with the next sequential number.</p></li>
+<li><p>processid: this is the unique process id from Legal Server;</p></li>
+<li><p>lsc_code: this should be the string that matches Legal Server’s problem code list;</p></li>
+<li><p>search_term: [NEEDS COMPLETED];</p></li>
+<li><p>content_url: this should be a landing page for sending a user when they exit the system for a legal topic;</p></li>
+<li><p>rest_export: this is the url for the rest export of the related case acceptance view for the legal issue;</p></li>
+<li><p>break: be sure to end the legal issue with “break;”</p></li>
 </ul>
 <p>To add a new issue:
 * Add a new case statement with the new information

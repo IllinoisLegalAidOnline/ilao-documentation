@@ -1,0 +1,364 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Creating new docs in Github &mdash; ILAO 2.22 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
+  <link rel="stylesheet" href="../html/_static/css/theme_overrides.css" type="text/css" />
+  <link rel="stylesheet" href="../build/html/_static/css/theme_overrides.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme_overrides.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="SMS Overview" href="sms_overview.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> ILAO
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="design_guide.html">Design &amp; Style Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="block_management.html">Custom blocks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="people_management.html">User Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="legal_content_cms.html">Legal Content CMS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basic_pages_cms.html">Basic pages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="testimonials_cms.html">Testimonials Content Type</a></li>
+<li class="toctree-l1"><a class="reference internal" href="webforms_cms.html">Webforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="translation_cms.html">Translation Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="calendar_cms.html">Calendar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jobs_cms.html">Job Listings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="discussion_groups.html">Discussion groups</a></li>
+<li class="toctree-l1"><a class="reference internal" href="otis_cms.html">Get Legal Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="site_search.html">Site Search</a></li>
+<li class="toctree-l1"><a class="reference internal" href="site_faqs.html">Site FAQs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="other_cms_features.html">Other Website Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="taxonomies.html">Taxonomies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rss_feeds.html">RSS Feeds</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ilao_api.html">ILAO’s API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sms_overview.html">SMS Overview</a></li>
+</ul>
+<p class="caption"><span class="caption-text">See also:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Creating new docs in Github</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#heading-styles">Heading styles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#links">Links</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#bulleted-lists">Bulleted lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#warnings-to-do-and-notes">Warnings, To-do and Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#images">Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#table-of-contents">Table of contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#code-blocks">Code blocks</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ILAO</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Creating new docs in Github</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/creating_docs_in_github.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="creating-new-docs-in-github">
+<h1>Creating new docs in Github<a class="headerlink" href="#creating-new-docs-in-github" title="Permalink to this headline">¶</a></h1>
+<p>Authorized users can create new documents in the documentation repository directly in GitHub:</p>
+<ul class="simple">
+<li><p>Go to ilao-documentation/docs/source</p></li>
+<li><p>Create a new file. New files should be named with a .rst extension and with a meaningful file name.</p></li>
+<li><p>Save the file</p></li>
+</ul>
+<p>In the file:</p>
+<ul class="simple">
+<li><p>Create your title. Title blocks should be sandwiched between 2 rows of equal length equal signs. See below.</p></li>
+</ul>
+<img alt="_images/quick_tips_title.png" src="_images/quick_tips_title.png" />
+<ul class="simple">
+<li><p>Add content</p></li>
+<li><p>Commit your changes by adding a commit message</p></li>
+<li><p>This will trigger a rebuild on readthedocs.  This will take a few minutes to run.</p></li>
+</ul>
+<p>A similar process applies for editing existing pages. Make your change, commit, and the documentation will rebuild automatically.</p>
+<div class="section" id="heading-styles">
+<h2>Heading styles<a class="headerlink" href="#heading-styles" title="Permalink to this headline">¶</a></h2>
+<p>Headings can be added to a RST as follows:</p>
+<ul class="simple">
+<li><p>Heading 1 is equal signs under the text</p></li>
+<li><p>Heading 2 is dashes under the text</p></li>
+<li><p>Heading 3 is ^ carots under the text</p></li>
+</ul>
+</div>
+<div class="section" id="links">
+<h2>Links<a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h2>
+<p>External links are added by creating text as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>`Link title&lt;url&gt;`_
+</pre></div>
+</div>
+</div>
+<div class="section" id="bulleted-lists">
+<h2>Bulleted lists<a class="headerlink" href="#bulleted-lists" title="Permalink to this headline">¶</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>There must be a blank line at the start and end of each list.</p>
+</div>
+<p>Bulleted lists are added using astrerisks. Each level must be set off with a blank line and indented</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="n">This</span> <span class="ow">is</span> <span class="nb">list</span> <span class="n">one</span>
+
+  <span class="o">*</span> <span class="n">Item</span> <span class="n">A</span>
+  <span class="o">*</span> <span class="n">Item</span> <span class="n">B</span>
+
+<span class="o">*</span> <span class="n">Next</span> <span class="n">item</span>
+
+  <span class="o">*</span> <span class="n">Item</span> <span class="n">C</span>
+  <span class="o">*</span> <span class="n">Item</span> <span class="n">D</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>which will render as:</p>
+<ul class="simple">
+<li><p>This is list one</p>
+<ul>
+<li><p>Item A</p></li>
+<li><p>Item B</p></li>
+</ul>
+</li>
+<li><p>Next item</p>
+<ul>
+<li><p>Item C</p></li>
+<li><p>Item D</p></li>
+</ul>
+</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Directives below must start at the far left margin.</p>
+</div>
+</div>
+<div class="section" id="warnings-to-do-and-notes">
+<h2>Warnings, To-do and Notes<a class="headerlink" href="#warnings-to-do-and-notes" title="Permalink to this headline">¶</a></h2>
+<p>Warnings, to-do items, and notes can be added within the document using the appropriate directive.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">warning</span><span class="p">::</span> <span class="n">This</span> <span class="n">will</span> <span class="n">show</span> <span class="n">a</span> <span class="n">warning</span>
+
+<span class="o">..</span> <span class="n">todo</span><span class="p">::</span> <span class="n">This</span> <span class="n">will</span> <span class="n">show</span> <span class="n">a</span> <span class="n">todo</span>
+
+<span class="o">..</span> <span class="n">note</span><span class="p">::</span> <span class="n">This</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">note</span><span class="o">.</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="images">
+<h2>Images<a class="headerlink" href="#images" title="Permalink to this headline">¶</a></h2>
+<p>Images can be inserted into a page by adding the image to the assets directory and then adding an image directive to the page.</p>
+<ul class="simple">
+<li><p>Create your image elsewhere. Save as a PNG file</p></li>
+<li><p>Navigate to ilao-documentation/docs/assets</p></li>
+<li><p>Go to upload files and drag your images to the folder.</p></li>
+<li><p>Commit your changes by adding a description why.</p></li>
+</ul>
+<img alt="_images/adding-image-github.png" src="_images/adding-image-github.png" />
+<p>Then, in the rst file, add an image directive:</p>
+<p>2 dots, space, the word image,2 colons, space 2 dots backslash, the word assets, backslash, the file name</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">image</span><span class="p">::</span> <span class="o">../</span><span class="n">assets</span><span class="o">/</span><span class="n">adding</span><span class="o">-</span><span class="n">image</span><span class="o">-</span><span class="n">github</span><span class="o">.</span><span class="n">png</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="table-of-contents">
+<h2>Table of contents<a class="headerlink" href="#table-of-contents" title="Permalink to this headline">¶</a></h2>
+<p>If you are creating a new major section, you may want to add a table of contents. Maxdepth indicates the number of levels of headings to show. Ideally, this is one or two.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">toctree</span><span class="p">::</span>
+<span class="p">:</span><span class="n">maxdepth</span><span class="p">:</span> <span class="mi">2</span>
+<span class="p">:</span><span class="n">caption</span><span class="p">:</span> <span class="n">Contents</span><span class="p">:</span>
+
+<span class="n">design_guide</span>
+<span class="n">block_management</span>
+<span class="n">people_management</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="code-blocks">
+<h2>Code blocks<a class="headerlink" href="#code-blocks" title="Permalink to this headline">¶</a></h2>
+<p>Code blocks can be added in multiple languages: PHP, JSON, javascript, html</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>.. code:: language
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>This is some html<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="sms_overview.html" class="btn btn-neutral float-left" title="SMS Overview" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Gwen Daniels.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

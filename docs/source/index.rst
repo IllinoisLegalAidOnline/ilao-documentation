@@ -37,10 +37,12 @@ See also:
 
 
 
+
+
 .. toctree::
    :maxdepth: 1
-   :caption: Workarounds:
+   :caption: See also:
 
-   legal_content_cms
+   creating_docs_in_github
 
 
