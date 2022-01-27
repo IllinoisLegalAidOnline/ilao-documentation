@@ -23,7 +23,7 @@ Required fields
 
     * type of item to reference = Content
     * reference method = Views: Filter by an entity reference view
-    * view used to select the entities: entity_referenc_content - Location Services (accepted through IllinoisLegalAid)
+    * view used to select the entities: entity_reference_content - Location Services (accepted through IllinoisLegalAid)
 
 * legal_issue
 
@@ -61,7 +61,7 @@ What submissions get used
 As changes are made, the system will ignore:
 
 * any webform submission in a draft state
-* any webform submission for a particular service that is older than another webform submission for the same service.  For example, if on Monday, i create a submission for Legal Aid Chicago's client screening unit and create another one on Friday, only Friday's will be used.
+* any webform submission for a particular service that is older than another webform submission for the same service.  For example, if on Monday, I create a submission for Legal Aid Chicago's client screening unit and create another one on Friday, only Friday's will be used.
 
-.. note:: Only services will matching intake settings on the legal issue will be returned. For example, if on the unemployment benefits case acceptance form, Legal Aid Chicago's client screening unit does not have any intake settings tied to unemployment benefits, they will not return as a result even if the case acceptance form indicates that they take cases for unemployment.
+.. note:: Only services with matching intake settings on the legal issue will be returned. For example, if on the unemployment benefits case acceptance form, Legal Aid Chicago's client screening unit does not have any intake settings tied to unemployment benefits, they will not return as a result even if the case acceptance form indicates that they take cases for unemployment.
 

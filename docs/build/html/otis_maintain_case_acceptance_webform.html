@@ -91,7 +91,7 @@
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="design_guide.html">Design Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="design_guide.html">Design &amp; Style Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="block_management.html">Custom blocks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="people_management.html">User Management</a></li>
 <li class="toctree-l1"><a class="reference internal" href="legal_content_cms.html">Legal Content CMS</a></li>
@@ -119,8 +119,10 @@
 <li class="toctree-l4"><a class="reference internal" href="otis_maintenance.html#demographic-taxonomy-terms">Demographic taxonomy terms</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="otis_sms_translations.html">OTIS SMS Translations</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="otis_facebook.html">Facebook Integrations</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="site_search.html">Site Search</a></li>
@@ -129,6 +131,7 @@
 <li class="toctree-l1"><a class="reference internal" href="taxonomies.html">Taxonomies</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rss_feeds.html">RSS Feeds</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ilao_api.html">ILAO’s API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sms_overview.html">SMS Overview</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Workarounds:</span></p>
 <ul>
@@ -226,7 +229,7 @@
 <ul>
 <li><p>type of item to reference = Content</p></li>
 <li><p>reference method = Views: Filter by an entity reference view</p></li>
-<li><p>view used to select the entities: entity_referenc_content - Location Services (accepted through IllinoisLegalAid)</p></li>
+<li><p>view used to select the entities: entity_reference_content - Location Services (accepted through IllinoisLegalAid)</p></li>
 </ul>
 </li>
 </ul>
@@ -270,11 +273,11 @@
 <p>As changes are made, the system will ignore:</p>
 <ul class="simple">
 <li><p>any webform submission in a draft state</p></li>
-<li><p>any webform submission for a particular service that is older than another webform submission for the same service.  For example, if on Monday, i create a submission for Legal Aid Chicago’s client screening unit and create another one on Friday, only Friday’s will be used.</p></li>
+<li><p>any webform submission for a particular service that is older than another webform submission for the same service.  For example, if on Monday, I create a submission for Legal Aid Chicago’s client screening unit and create another one on Friday, only Friday’s will be used.</p></li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Only services will matching intake settings on the legal issue will be returned. For example, if on the unemployment benefits case acceptance form, Legal Aid Chicago’s client screening unit does not have any intake settings tied to unemployment benefits, they will not return as a result even if the case acceptance form indicates that they take cases for unemployment.</p>
+<p>Only services with matching intake settings on the legal issue will be returned. For example, if on the unemployment benefits case acceptance form, Legal Aid Chicago’s client screening unit does not have any intake settings tied to unemployment benefits, they will not return as a result even if the case acceptance form indicates that they take cases for unemployment.</p>
 </div>
 </div>
 </div>

@@ -91,7 +91,7 @@
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="design_guide.html">Design Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="design_guide.html">Design &amp; Style Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="block_management.html">Custom blocks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="people_management.html">User Management</a></li>
 <li class="toctree-l1"><a class="reference internal" href="legal_content_cms.html">Legal Content CMS</a></li>
@@ -119,6 +119,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#example-json-body">Example JSON body</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#example-call-using-axios-node-js">Example call using Axios Node.js</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#sample-responses">Sample responses</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#integration-with-statewide-website">Integration with Statewide Website</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="otis_ai_integration.html#prototype">Prototype</a></li>
@@ -126,6 +127,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="otis_third_party_support.html">Supported Integrations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="otis_sms_intake.html">Online Intake Over SMS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="otis_facebook.html">Facebook Integrations</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="site_search.html">Site Search</a></li>
@@ -134,6 +136,7 @@
 <li class="toctree-l1"><a class="reference internal" href="taxonomies.html">Taxonomies</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rss_feeds.html">RSS Feeds</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ilao_api.html">ILAO’s API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sms_overview.html">SMS Overview</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Workarounds:</span></p>
 <ul>
@@ -212,6 +215,7 @@
   <div class="section" id="conflict-api">
 <h1>Conflict API<a class="headerlink" href="#conflict-api" title="Permalink to this headline">¶</a></h1>
 <p>The conflict check API is accessible at <a class="reference external" href="https://[site].legalserver.org/api/v1/conflict_check">https://[site].legalserver.org/api/v1/conflict_check</a> and request basic authorization from the specific instance of Legal Server</p>
+<p>LegalServer provides <a class="reference external" href="https://apidocs.legalserver.org/">documentation for the API</a>.</p>
 <div class="section" id="example-json-body">
 <h2>Example JSON body<a class="headerlink" href="#example-json-body" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span>  <span class="p">{</span>
@@ -232,37 +236,37 @@
 </div>
 <div class="section" id="example-call-using-axios-node-js">
 <h2>Example call using Axios Node.js<a class="headerlink" href="#example-call-using-axios-node-js" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span> var axios = require(&#39;axios&#39;);
- var data = JSON.stringify({
-&quot;first&quot;: &quot;string&quot;,
-&quot;middle&quot;: &quot;string&quot;,
-&quot;last&quot;: &quot;string&quot;,
-&quot;dob&quot;: &quot;2020-10-15&quot;,
-&quot;visa_number&quot;: &quot;string&quot;,
-&quot;phones&quot;: [
-  {
-    &quot;number&quot;: &quot;555-555-5555, 5555555555, (555) 555-5555&quot;,
-    &quot;type&quot;: &quot;business&quot;
-  }
-]
-});
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span> <span class="kd">var</span> <span class="nx">axios</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;axios&#39;</span><span class="p">);</span>
+ <span class="kd">var</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">({</span>
+ <span class="s2">&quot;first&quot;</span><span class="o">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+ <span class="s2">&quot;middle&quot;</span><span class="o">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+ <span class="s2">&quot;last&quot;</span><span class="o">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+ <span class="s2">&quot;dob&quot;</span><span class="o">:</span> <span class="s2">&quot;2020-10-15&quot;</span><span class="p">,</span>
+ <span class="s2">&quot;visa_number&quot;</span><span class="o">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+ <span class="s2">&quot;phones&quot;</span><span class="o">:</span> <span class="p">[</span>
+  <span class="p">{</span>
+    <span class="s2">&quot;number&quot;</span><span class="o">:</span> <span class="s2">&quot;555-555-5555, 5555555555, (555) 555-5555&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;business&quot;</span>
+  <span class="p">}</span>
+ <span class="p">]</span>
+ <span class="p">});</span>
 
-var config = {
-method: &#39;post&#39;,
-url: &#39;https://legalaidchicago-demo.legalserver.org/api/v1/conflict_check&#39;,
-headers: {
-  &#39;Content-Type&#39;: &#39;application/json&#39;
-},
-data : data
-};
+<span class="kd">var</span> <span class="nx">config</span> <span class="o">=</span> <span class="p">{</span>
+<span class="nx">method</span><span class="o">:</span> <span class="s1">&#39;post&#39;</span><span class="p">,</span>
+<span class="nx">url</span><span class="o">:</span> <span class="s1">&#39;https://legalaidchicago-demo.legalserver.org/api/v1/conflict_check&#39;</span><span class="p">,</span>
+<span class="nx">headers</span><span class="o">:</span> <span class="p">{</span>
+  <span class="s1">&#39;Content-Type&#39;</span><span class="o">:</span> <span class="s1">&#39;application/json&#39;</span>
+<span class="p">},</span>
+<span class="nx">data</span> <span class="o">:</span> <span class="nx">data</span>
+<span class="p">};</span>
 
-axios(config)
-.then(function (response) {
-console.log(JSON.stringify(response.data));
-})
-.catch(function (error) {
-console.log(error);
-});
+<span class="nx">axios</span><span class="p">(</span><span class="nx">config</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">));</span>
+<span class="p">})</span>
+<span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
+<span class="p">});</span>
 </pre></div>
 </div>
 </div>
@@ -285,6 +289,24 @@ console.log(error);
   <span class="nt">&quot;score&quot;</span><span class="p">:</span> <span class="mi">100</span>
 <span class="p">}</span>
 </pre></div>
+</div>
+</div>
+<div class="section" id="integration-with-statewide-website">
+<h2>Integration with Statewide Website<a class="headerlink" href="#integration-with-statewide-website" title="Permalink to this headline">¶</a></h2>
+<p>Each organization controls whether to support conflict checking within OTIS and at what level. Each participating organization must then provide appropriate credentials and set the level of conflict required to trigger a conflict warning.</p>
+<div class="section" id="configuration">
+<h3>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h3>
+<p>ILAO staff enter the appropriate configuration settings under “Legal Server Configuration.” This includes:</p>
+<ul class="simple">
+<li><p>Program LegalServer URL</p></li>
+<li><p>Program API username</p></li>
+<li><p>Program API password</p></li>
+<li><p>Conflict warning level: this is a multi-select of Highest, High, Low, and Lowest. An exact match is required. So selecting “High” will not cause a warning if the conflict check results in Highest but checking both would.</p></li>
+</ul>
+</div>
+<div class="section" id="fast-entry">
+<h3>Fast Entry<a class="headerlink" href="#fast-entry" title="Permalink to this headline">¶</a></h3>
+<p>When a conflict is detected, a warning appears to allow the submitted to pick a different organization. Notes for the e-transfer are updated to prepend “POTENTIAL CONFLICT DETECTED”</p>
 </div>
 </div>
 </div>
