@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Get Legal Help &mdash; ILAO 2.22 documentation</title>
+  <title>Legal Server Configuration &mdash; ILAO 2.22 documentation</title>
   
 
   
@@ -43,8 +43,8 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Get Legal Help Overview" href="otis_endusers.html" />
-    <link rel="prev" title="Discussion groups" href="discussion_groups.html" /> 
+    <link rel="next" title="Triage" href="otis_endusers_triage.html" />
+    <link rel="prev" title="Get Legal Help Overview" href="otis_endusers.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -102,8 +102,19 @@
 <li class="toctree-l1"><a class="reference internal" href="calendar_cms.html">Calendar</a></li>
 <li class="toctree-l1"><a class="reference internal" href="jobs_cms.html">Job Listings</a></li>
 <li class="toctree-l1"><a class="reference internal" href="discussion_groups.html">Discussion groups</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Get Legal Help</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="otis_endusers.html">Get Legal Help Overview</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="otis_cms.html">Get Legal Help</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="otis_endusers.html">Get Legal Help Overview</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Legal Server Configuration</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#general-settings">General settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#per-organization-settings">Per organization settings</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="otis_endusers_triage.html">Triage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="otis_endusers_intake.html">Intake</a></li>
+<li class="toctree-l3"><a class="reference internal" href="otis_endusers_referrals.html">Referrals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="otis_endusers_lshc.html">Legal Self-Help Center Directory</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="otis_organization_management.html">Organization management</a></li>
 <li class="toctree-l2"><a class="reference internal" href="otis_endpoints.html">Triage rule endpoints</a></li>
 <li class="toctree-l2"><a class="reference internal" href="otis_reports.html">Get Legal Help Reporting</a></li>
@@ -172,13 +183,17 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Get Legal Help</li>
+          <li><a href="otis_cms.html">Get Legal Help</a> &raquo;</li>
+        
+          <li><a href="otis_endusers.html">Get Legal Help Overview</a> &raquo;</li>
+        
+      <li>Legal Server Configuration</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="_sources/otis_cms.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/otis_endusers_legalserver.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -191,74 +206,39 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="get-legal-help">
-<h1>Get Legal Help<a class="headerlink" href="#get-legal-help" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">Contents:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="otis_endusers.html">Get Legal Help Overview</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="otis_endusers_legalserver.html">Legal Server Configuration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="otis_endusers_triage.html">Triage</a></li>
-<li class="toctree-l2"><a class="reference internal" href="otis_endusers_intake.html">Intake</a></li>
-<li class="toctree-l2"><a class="reference internal" href="otis_endusers_referrals.html">Referrals</a></li>
-<li class="toctree-l2"><a class="reference internal" href="otis_endusers_lshc.html">Legal Self-Help Center Directory</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="otis_organization_management.html">Organization management</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="otis_manage_organization.html">Adding/editing organizations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="otis_manage_membership.html">Organization “group” roles</a></li>
-<li class="toctree-l2"><a class="reference internal" href="otis_manage_nodes.html">Locations &amp; Services</a></li>
-<li class="toctree-l2"><a class="reference internal" href="otis_organization_triage_rules.html">Triage Rules Content</a></li>
-<li class="toctree-l2"><a class="reference internal" href="otis_manage_triage_webforms.html">Triage rule webforms</a></li>
-<li class="toctree-l2"><a class="reference internal" href="otis_manage_intake_settings.html">Intake settings</a></li>
-<li class="toctree-l2"><a class="reference internal" href="otis_organization_reports.html">Organization Reports</a></li>
-<li class="toctree-l2"><a class="reference internal" href="otis_fast_entry.html">Fast Entry Form</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="otis_endpoints.html">Triage rule endpoints</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="otis_endpoints.html#standard-usage">Standard Usage</a></li>
-<li class="toctree-l2"><a class="reference internal" href="otis_endpoints.html#prioritization">Prioritization</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="otis_reports.html">Get Legal Help Reporting</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="otis_reports_glh_summary.html">Get Legal Help Summary Report</a></li>
-<li class="toctree-l2"><a class="reference internal" href="otis_reports_etransfer.html">Intake/Triage Report</a></li>
-<li class="toctree-l2"><a class="reference internal" href="otis_reports_referral_counts.html">GLH Referral Count Report</a></li>
-<li class="toctree-l2"><a class="reference internal" href="otis_reports_referrals.html">Referrals Report</a></li>
-<li class="toctree-l2"><a class="reference internal" href="reporting_otis_a2j.html">Specialized reporting: State Grants</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="otis_ai_integration.html">OTIS AI Integration</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="otis_tech_guided_navigation.html">Guided Navigation Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="otis_tech_guided_navigation_api.html">Guided Navigation API</a></li>
-<li class="toctree-l2"><a class="reference internal" href="otis_tech_guided_navigation_forms.html">Guided Navigation Forms</a></li>
-<li class="toctree-l2"><a class="reference internal" href="otis_guided_nav_functions.html">Guided Navigation SMS functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="otis_tech_houston_ai.html">Houston AI Classifier API Docs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="otis_tech_spot_classifier.html">Spot Classsifer API Docs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="otis_natural_language_processing.html">Natural language processing of legal problem</a></li>
-<li class="toctree-l2"><a class="reference internal" href="conflict_check.html">Conflict API</a></li>
-<li class="toctree-l2"><a class="reference internal" href="otis_ai_integration.html#prototype">Prototype</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="otis_third_party_support.html">Supported Integrations</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="otis_third_party_support.html#url-pre-fill-method">URL Pre-fill method</a></li>
-<li class="toctree-l2"><a class="reference internal" href="otis_third_party_support.html#source-parameters">Source parameters</a></li>
-<li class="toctree-l2"><a class="reference internal" href="otis_third_party_support.html#examples">Examples</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="otis_sms_intake.html">Online Intake Over SMS</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="otis_sms_intake_architecture.html">General architecture</a></li>
-<li class="toctree-l2"><a class="reference internal" href="otis_sms_functions.html">Twilio Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="otis_sms_twilio_studio_workflow.html">Get Legal Help text line workflow</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sms_eviction.html">Eviction SMS Flow</a></li>
-<li class="toctree-l2"><a class="reference internal" href="otis_maintenance.html">Maintaining and expanding OTIS SMS</a></li>
-<li class="toctree-l2"><a class="reference internal" href="otis_sms_translations.html">OTIS SMS Translations</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="otis_facebook.html">Facebook Integrations</a></li>
-</ul>
+  <div class="section" id="legal-server-configuration">
+<h1>Legal Server Configuration<a class="headerlink" href="#legal-server-configuration" title="Permalink to this headline">¶</a></h1>
+<p>Settings to connect the website to Legal Server are managed through our <a class="reference external" href="https://www.illinoislegalaid.org/admin/intake/legal-server">Legal Server Configuration page</a></p>
+<div class="section" id="general-settings">
+<h2>General settings<a class="headerlink" href="#general-settings" title="Permalink to this headline">¶</a></h2>
+<p>In the general settings, we link to the end point for etransferring an intake from ILAO to the statewide instance of Legal Server.</p>
+<p>We can include both the demo server and live server. We also include our API-enabled usernames and passwords to use the REST-based etransfer.</p>
+<img alt="_images/legal-server-overview.png" src="_images/legal-server-overview.png" />
+<p>If the “Run in demo mode” checkox is checked, etransfers will go to the Legal server demo URL.</p>
+<p>If the “Do not send etransfers; run in suspended mode” is checked, no etransfer will be sent.</p>
 </div>
-<p>See also <a class="reference internal" href="otis_api.html#otis-api"><span class="std std-ref">ILAO OTIS API</span></a></p>
+<div class="section" id="per-organization-settings">
+<h2>Per organization settings<a class="headerlink" href="#per-organization-settings" title="Permalink to this headline">¶</a></h2>
+<p>Each organization that has a service set to accept intakes via IllinoisLegalAid.org have a profile setting. This setting includes:</p>
+<img alt="_images/legal-server-org-profile.png" src="_images/legal-server-org-profile.png" />
+<p>For each organization, we include:</p>
+<ul class="simple">
+<li><p>The Legal Server instance name. This may differ from the organization’s name and should be pasted directly out of LegalServer.</p></li>
+<li><p>An intake settings id to associate with Fast Entry</p></li>
+<li><p>Whether to enable conflict checking</p></li>
+</ul>
+<p>If conflict checking is enabled, we must also include:</p>
+<ul class="simple">
+<li><p>The url to the organization’s LegalServer instance</p></li>
+<li><p>API credentials for that organization’s instance. This account should be limited by the organization to only allow API access to the conflict check</p></li>
+<li><p>The levels that should flag a warning for conflict in Fast Entry. When a conflict check returns a checked response, a note will be added to the etransfer and a warning will appear before the application is submitted.</p></li>
+<li><p>The levels that should flag a conflict in regular intakes.</p></li>
+</ul>
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">Todo</p>
+<p>Currently the conflict in regular intakes does not exist.</p>
+</div>
+</div>
 </div>
 
 
@@ -267,8 +247,8 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="otis_endusers.html" class="btn btn-neutral float-right" title="Get Legal Help Overview" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="discussion_groups.html" class="btn btn-neutral float-left" title="Discussion groups" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="otis_endusers_triage.html" class="btn btn-neutral float-right" title="Triage" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="otis_endusers.html" class="btn btn-neutral float-left" title="Get Legal Help Overview" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

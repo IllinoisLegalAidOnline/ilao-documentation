@@ -8,6 +8,7 @@ This section covers the functionality of Get Legal Help on IllinoisLegalAid.org.
    :maxdepth: 2
    :caption: Contents
 
+   otis_endusers_legalserver
    otis_endusers_triage
    otis_endusers_intake
    otis_endusers_referrals
