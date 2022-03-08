@@ -34,7 +34,36 @@ ILAO may create a Guided Navigation for Divorce that is called from OTIS when a 
 
 The divorce dialogue may call a "has domestic violence" dialogue that sets whether there is DV in the divorce before returning to ask the user additional divorce triage questions.
 
-The has domestic violence dialogue has 1 segment containing 4 questions. The result sets a single field "hasDV" to true.
+The has domestic violence dialogue has 4 segments each containing 1 question. The result sets a single field "hasDV" to true.
+
+Steps to create Dialogues & Segments
+--------------------------------------
+Step 1
+^^^^^^^^
+Create a new Dialogue within LegalServer by searching Guided Navigation within the Admin tab. New Dialogues should be created as Interactive Dialogue (plus in the top right of the list of interactive dialogues). 
+
+Step 2
+^^^^^^^^
+Create new Segments within the Dialogue. Each Segment should have only one question or instruction. Each question within a segment is made by creating a custom field and custom lookup values. Custom fields and lookup values can be create from within the Segment by selecting Create Field in the top right corner of the Segment.
+
+[image: create_field]
+
+.. note:: Custom Fields should follow the naming convention "ilao-[issue]_short title". 
+
+[image: field_name]
+
+Step 3
+^^^^^^^^
+Choose New Custom Lookup from the types. The Custom Lookup will automatically be given the same name as the Custom Field. Assign answer options as Lookup values.
+
+[image: lookup_values]
+
+Step 4
+^^^^^^^^
+Create a Navigation Dialogue, which will route the user to the appropriate Interactive Dialogue. 
+Add the Dialogue Runner Block to the form where the user should see the Dialogues.
+
+[further expansion here]
 
 Integration into Website
 ==========================

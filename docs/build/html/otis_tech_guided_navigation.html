@@ -91,7 +91,7 @@
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="design_guide.html">Design Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="design_guide.html">Design &amp; Style Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="block_management.html">Custom blocks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="people_management.html">User Management</a></li>
 <li class="toctree-l1"><a class="reference internal" href="legal_content_cms.html">Legal Content CMS</a></li>
@@ -126,6 +126,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="otis_third_party_support.html">Supported Integrations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="otis_sms_intake.html">Online Intake Over SMS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="otis_facebook.html">Facebook Integrations</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="site_search.html">Site Search</a></li>
@@ -134,10 +135,11 @@
 <li class="toctree-l1"><a class="reference internal" href="taxonomies.html">Taxonomies</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rss_feeds.html">RSS Feeds</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ilao_api.html">ILAO’s API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sms_overview.html">SMS Overview</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Workarounds:</span></p>
+<p class="caption"><span class="caption-text">See also:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="legal_content_cms.html">Legal Content CMS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="creating_docs_in_github.html">Creating new docs in Github</a></li>
 </ul>
 
             
@@ -231,7 +233,35 @@
 <h3>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h3>
 <p>ILAO may create a Guided Navigation for Divorce that is called from OTIS when a user may have a divorce issue.</p>
 <p>The divorce dialogue may call a “has domestic violence” dialogue that sets whether there is DV in the divorce before returning to ask the user additional divorce triage questions.</p>
-<p>The has domestic violence dialogue has 1 segment containing 4 questions. The result sets a single field “hasDV” to true.</p>
+<p>The has domestic violence dialogue has 4 segments each containing 1 question. The result sets a single field “hasDV” to true.</p>
+</div>
+<div class="section" id="steps-to-create-dialogues-segments">
+<h3>Steps to create Dialogues &amp; Segments<a class="headerlink" href="#steps-to-create-dialogues-segments" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="step-1">
+<h4>Step 1<a class="headerlink" href="#step-1" title="Permalink to this headline">¶</a></h4>
+<p>Create a new Dialogue within LegalServer by searching Guided Navigation within the Admin tab. New Dialogues should be created as Interactive Dialogue (plus in the top right of the list of interactive dialogues).</p>
+</div>
+<div class="section" id="step-2">
+<h4>Step 2<a class="headerlink" href="#step-2" title="Permalink to this headline">¶</a></h4>
+<p>Create new Segments within the Dialogue. Each Segment should have only one question or instruction. Each question within a segment is made by creating a custom field and custom lookup values. Custom fields and lookup values can be create from within the Segment by selecting Create Field in the top right corner of the Segment.</p>
+<p>[image: create_field]</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Custom Fields should follow the naming convention “ilao-[issue]_short title”.</p>
+</div>
+<p>[image: field_name]</p>
+</div>
+<div class="section" id="step-3">
+<h4>Step 3<a class="headerlink" href="#step-3" title="Permalink to this headline">¶</a></h4>
+<p>Choose New Custom Lookup from the types. The Custom Lookup will automatically be given the same name as the Custom Field. Assign answer options as Lookup values.</p>
+<p>[image: lookup_values]</p>
+</div>
+<div class="section" id="step-4">
+<h4>Step 4<a class="headerlink" href="#step-4" title="Permalink to this headline">¶</a></h4>
+<p>Create a Navigation Dialogue, which will route the user to the appropriate Interactive Dialogue.
+Add the Dialogue Runner Block to the form where the user should see the Dialogues.</p>
+<p>[further expansion here]</p>
+</div>
 </div>
 </div>
 <div class="section" id="integration-into-website">

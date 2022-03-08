@@ -4,6 +4,12 @@ Automated eUpdate
 
 The automated eUpdate compiles information from the website into a Mailchimp template that is then sent to targeted groups.
 
+.. toctree::
+   :maxdepth: 2
+   :caption: See also:
+
+   announcements
+
 Who Gets the eUpdate
 =======================
 
@@ -31,7 +37,7 @@ Sending
 The eUpdate is scheduled to send at:
 
 * 9am Tuesdays for weekly subscribers.
-* 9am on the 1st of the month for weekly subscribers.
+* 9am on the 1st of the month for monthly subscribers.
 
 Because the scheduled task system runs once per hour, it may be delayed and run anytime between 9am and 10am.
 
@@ -65,14 +71,13 @@ The mailchimp block that appears on the user registration/profile page is tied t
   * if they sign up for the weekly eUpdate, they are added to the weekly eUpdate segment
   * if they sign up for the monthly eupdate, they are added to the monthly eUpdate segment
   * if they sign up for the blog alerts, they are added to the blog segment
-  
+
 .. note:: There are also signup forms for anonymous users for the newsletter and the blog alerts.
 
 
-.. todo:: Need to verify that editing my profile to unsubscribe in website in fact changes my settings in Mailchimp.
 
 
-  
+
 
 
 
