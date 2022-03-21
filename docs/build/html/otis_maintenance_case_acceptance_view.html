@@ -242,9 +242,9 @@
 <h3><span class="section-number">3.1.3. </span>Fields<a class="headerlink" href="#fields" title="Permalink to this headline">¶</a></h3>
 <p>The fields should include data associated with the specific webform:</p>
 <ul class="simple">
-<li><p>the legal issue field</p></li>
-<li><p>the service from the webform</p></li>
-<li><p>each outcome field in the webform. These should be set to show all multiple values with a format of raw value.</p></li>
+<li><p>the legal issue field - labelled (legal_issue)</p></li>
+<li><p>the service from the webform - labelled (Service)</p></li>
+<li><p>each outcome field in the webform. These should be set to show all multiple values with a format of raw value - labelled ([raw field name for the outcome]).</p></li>
 </ul>
 <p>In addition, we need to relate the service and the service’s matching intake settings. To do this, first, we need to create the relationships.</p>
 <ul class="simple">
@@ -253,16 +253,17 @@
 </ul>
 <p>Once the relationships are set, the fields should be updated to include:</p>
 <ul class="simple">
-<li><p>the uuid for the service.  This is found under title = UUID, category = Content. This must have a relationship of Content</p></li>
-<li><p>the id for the intake settings. This is found under title = id, category = OAS intake settings.  This should have a relationship of field_service_single in the drop down.</p></li>
-<li><p>the uuid for the intake settings.  This is found under title = UUID, category = OAS intake settings.  This should have a relationship of field_service_single in the drop down.</p></li>
-<li><p>the name of the intake settings.  This is found under title = name, category = OAS intake settings.  This should have a relationship of field_service_single in the drop down.</p></li>
+<li><p>the uuid for the service.  This is found under title = UUID, category = Content. This must have a relationship of Content - labelled (service_uuid)</p></li>
+<li><p>the id for the intake settings. This is found under title = id, category = OAS intake settings.  This should have a relationship of field_service_single in the drop down - labelled (intake_setting_id)</p></li>
+<li><p>the uuid for the intake settings.  This is found under title = UUID, category = OAS intake settings.  This should have a relationship of field_service_single in the drop down - labelled (intake_uuid)</p></li>
+<li><p>the name of the intake settings.  This is found under title = name, category = OAS intake settings.  This should have a relationship of field_service_single in the drop down - labelled (intake_name).</p></li>
 </ul>
 </div>
 <div class="section" id="filter-criteria">
 <h3><span class="section-number">3.1.4. </span>Filter Criteria<a class="headerlink" href="#filter-criteria" title="Permalink to this headline">¶</a></h3>
 <p>There should be a filter criteria to limit the intake settings to the legal issue that matches the webform.  For example, the SNAP webform is limited to intake settings with a legal issue of “Food stamps” (which automatically includes child terms). The Views filter requires that you match on the term NAME rather than the ID.</p>
 <img alt="_images/gn-webforms-filter.png" src="_images/gn-webforms-filter.png" />
+<p>This should have a relationship of field_service_single. The Operator: is one of and the term should be the legal issue term (i.e. “Food stamps”,”Eviction”,”Renting a mobile home”,etc.</p>
 </div>
 <div class="section" id="sort-criteria">
 <h3><span class="section-number">3.1.5. </span>Sort Criteria<a class="headerlink" href="#sort-criteria" title="Permalink to this headline">¶</a></h3>

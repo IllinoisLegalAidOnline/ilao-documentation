@@ -13,19 +13,18 @@ To create a legal problem:
 
 * Add a title. This should describe the problem to be solved or prevented using the embedded solutions.
 * Add a subtype. This should describe any subcategory of a problem.
-* Add a content description. This is the description that will
+* Add a content description. This is the description that will be used on the website.
 * Add a meta description. This is the description that will be used in social media, search indexes, and in any API. This should be limited to 300 characters.
 * Optionally, add a disambiguation description. This is used to better describe how one problem is different from a related problem.
 * Add an introduction as structured markup.  The purpose of the introduction is to provide a basic overview of the problem and available solutions. It should be enough to entice the user to stay on the page and navigate through but should not duplicate information in the solution, how-tos, or questions.
 * Tag the legal problem to one or more legal issues.
+* Tag the legal problem to one or more navigational IA tags.
 * Select the primary legal category
 * Add a legal code. Legal codes should come from either the LSC problem codes or the `LIST <https://taxonomy.legal>`_ codes.
 
 .. image:: ../assets/cms_structured_legal_code.png
 
 The above image includes the legal code for Food stamps from both the LSC problem codes and LIST.
-
-.. note::  Ideally, we would update this to use a taxonomy.
 
 * Add at least one life area affected. This is an `ILAO-hosted taxonomy <https://www.illinoislegalaid.org/admin/structure/taxonomy_manager/voc/life_areas>`_.
 

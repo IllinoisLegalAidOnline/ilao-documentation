@@ -40,9 +40,9 @@ Fields
 -----------
 The fields should include data associated with the specific webform:
 
-* the legal issue field
-* the service from the webform
-* each outcome field in the webform. These should be set to show all multiple values with a format of raw value.
+* the legal issue field - labelled (legal_issue)
+* the service from the webform - labelled (Service)
+* each outcome field in the webform. These should be set to show all multiple values with a format of raw value - labelled ([raw field name for the outcome]).
 
 
 In addition, we need to relate the service and the service's matching intake settings. To do this, first, we need to create the relationships.
@@ -52,10 +52,10 @@ In addition, we need to relate the service and the service's matching intake set
 
 Once the relationships are set, the fields should be updated to include:
 
-* the uuid for the service.  This is found under title = UUID, category = Content. This must have a relationship of Content
-* the id for the intake settings. This is found under title = id, category = OAS intake settings.  This should have a relationship of field_service_single in the drop down.
-* the uuid for the intake settings.  This is found under title = UUID, category = OAS intake settings.  This should have a relationship of field_service_single in the drop down.
-* the name of the intake settings.  This is found under title = name, category = OAS intake settings.  This should have a relationship of field_service_single in the drop down.
+* the uuid for the service.  This is found under title = UUID, category = Content. This must have a relationship of Content - labelled (service_uuid)
+* the id for the intake settings. This is found under title = id, category = OAS intake settings.  This should have a relationship of field_service_single in the drop down - labelled (intake_setting_id)
+* the uuid for the intake settings.  This is found under title = UUID, category = OAS intake settings.  This should have a relationship of field_service_single in the drop down - labelled (intake_uuid)
+* the name of the intake settings.  This is found under title = name, category = OAS intake settings.  This should have a relationship of field_service_single in the drop down - labelled (intake_name).
 
 Filter Criteria
 -------------------
@@ -63,6 +63,7 @@ There should be a filter criteria to limit the intake settings to the legal issu
 
 .. image:: ../assets/gn-webforms-filter.png
 
+This should have a relationship of field_service_single. The Operator: is one of and the term should be the legal issue term (i.e. "Food stamps","Eviction","Renting a mobile home",etc.
 
 Sort Criteria
 ----------------
