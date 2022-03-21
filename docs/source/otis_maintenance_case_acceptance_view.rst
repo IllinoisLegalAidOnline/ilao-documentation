@@ -25,7 +25,7 @@ Format
 
 Each rest export must:
 
-* have a format of serializer set to show fields
+* have a format of serializer set to show fields. Once the format is set to serializer, open settings and select json from the Accepted request formats.
 * in the Show field settings, each field in the results should have an alias that matches the actual key name
 
 .. image:: ../assets/webform-gn-alias.png
