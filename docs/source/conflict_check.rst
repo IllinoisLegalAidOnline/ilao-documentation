@@ -110,6 +110,8 @@ Fast Entry
 
 When a conflict is detected, a warning appears to allow the submitted to pick a different organization. Notes for the e-transfer are updated to prepend "POTENTIAL CONFLICT DETECTED"
 
+.. image:: ../assets/conflict_legalserver_notes.png
+
 
 
 
