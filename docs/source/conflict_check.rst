@@ -105,6 +105,8 @@ ILAO staff enter the appropriate configuration settings under "Legal Server Conf
 * Program API password
 * Conflict warning level: this is a multi-select of Highest, High, Low, and Lowest. An exact match is required. So selecting "High" will not cause a warning if the conflict check results in Highest but checking both would.
 
+.. image:: ../assets/conflict_legalserver_config.png
+
 Fast Entry
 -------------
 
