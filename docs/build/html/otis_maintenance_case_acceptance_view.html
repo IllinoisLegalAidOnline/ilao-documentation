@@ -228,7 +228,7 @@
 <h3><span class="section-number">3.1.2. </span>Format<a class="headerlink" href="#format" title="Permalink to this headline">¶</a></h3>
 <p>Each rest export must:</p>
 <ul class="simple">
-<li><p>have a format of serializer set to show fields</p></li>
+<li><p>have a format of serializer set to show fields. Once the format is set to serializer, open settings and select json from the Accepted request formats.</p></li>
 <li><p>in the Show field settings, each field in the results should have an alias that matches the actual key name</p></li>
 </ul>
 <img alt="_images/webform-gn-alias.png" src="_images/webform-gn-alias.png" />
@@ -264,6 +264,7 @@
 <p>There should be a filter criteria to limit the intake settings to the legal issue that matches the webform.  For example, the SNAP webform is limited to intake settings with a legal issue of “Food stamps” (which automatically includes child terms). The Views filter requires that you match on the term NAME rather than the ID.</p>
 <img alt="_images/gn-webforms-filter.png" src="_images/gn-webforms-filter.png" />
 <p>This should have a relationship of field_service_single. The Operator: is one of and the term should be the legal issue term (i.e. “Food stamps”,”Eviction”,”Renting a mobile home”,etc.</p>
+<p>There should also be a filter criteria to limit the intake settigns to open intake settings. Search “Is Intake Setting open or not?” in the category OAS Intake Settings. Relationship should be field_service_single. Operator Is equal to. Is Intake Setting open or not? set to True.</p>
 </div>
 <div class="section" id="sort-criteria">
 <h3><span class="section-number">3.1.5. </span>Sort Criteria<a class="headerlink" href="#sort-criteria" title="Permalink to this headline">¶</a></h3>

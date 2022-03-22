@@ -91,7 +91,7 @@
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="design_guide.html">Design Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="design_guide.html">Design &amp; Style Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="block_management.html">Custom blocks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="people_management.html">User Management</a></li>
 <li class="toctree-l1"><a class="reference internal" href="legal_content_cms.html">Legal Content CMS</a></li>
@@ -104,8 +104,14 @@
 <li class="toctree-l1"><a class="reference internal" href="discussion_groups.html">Discussion groups</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="otis_cms.html">Get Legal Help</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="otis_endusers.html">Get Legal Help Overview</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="otis_endusers_legalserver.html">Legal Server Configuration</a></li>
 <li class="toctree-l3"><a class="reference internal" href="otis_endusers_triage.html">Triage</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Intake</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Intake</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#intake-process">Intake process</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#validation">Validation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#e-transfer">E-Transfer</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="otis_endusers_referrals.html">Referrals</a></li>
 <li class="toctree-l3"><a class="reference internal" href="otis_endusers_lshc.html">Legal Self-Help Center Directory</a></li>
 </ul>
@@ -116,6 +122,7 @@
 <li class="toctree-l2"><a class="reference internal" href="otis_ai_integration.html">OTIS AI Integration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="otis_third_party_support.html">Supported Integrations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="otis_sms_intake.html">Online Intake Over SMS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="otis_facebook.html">Facebook Integrations</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="site_search.html">Site Search</a></li>
@@ -124,10 +131,11 @@
 <li class="toctree-l1"><a class="reference internal" href="taxonomies.html">Taxonomies</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rss_feeds.html">RSS Feeds</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ilao_api.html">ILAO’s API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sms_overview.html">SMS Overview</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Workarounds:</span></p>
+<p class="caption"><span class="caption-text">See also:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="legal_content_cms.html">Legal Content CMS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="creating_docs_in_github.html">Creating new docs in Github</a></li>
 </ul>
 
             
@@ -202,6 +210,133 @@
   <div class="section" id="intake">
 <h1>Intake<a class="headerlink" href="#intake" title="Permalink to this headline">¶</a></h1>
 <p>When a user successfully completes a program’s triage rules, they are provided the matching organization and may begin intake.</p>
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">Todo</p>
+<p>Once Guided Navigation is fully implemented, users will be able to chose where to apply to.</p>
+</div>
+<div class="section" id="intake-process">
+<h2>Intake process<a class="headerlink" href="#intake-process" title="Permalink to this headline">¶</a></h2>
+<p>The intake process generally:</p>
+<ul class="simple">
+<li><p>Collects client information including:</p>
+<ul>
+<li><p>Name</p></li>
+<li><p>Alias</p></li>
+<li><p>Nicknames</p></li>
+<li><p>Date of birth</p></li>
+<li><p>Demographics information, based on organization preferences, including:</p>
+<ul>
+<li><p>Race</p></li>
+<li><p>Ethnicity</p></li>
+<li><p>Gender</p></li>
+<li><p>Marital Status</p></li>
+<li><p>Preferred language</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Collects household size, broken into number of adults and children. Each organization may have their own definition of who to count.</p></li>
+<li><p>Collects income information. Some organizations may:</p>
+<ul>
+<li><p>Not collect any income information</p></li>
+<li><p>Waive income limits for some populations</p></li>
+</ul>
+</li>
+<li><p>Contact information, including:</p>
+<ul>
+<li><p>Phone type</p></li>
+<li><p>Phone number</p></li>
+<li><p>Opt-in for SMS</p></li>
+<li><p>Email address</p></li>
+<li><p>Address</p></li>
+</ul>
+</li>
+</ul>
+<p>If the user passes validation (see below):</p>
+<ul class="simple">
+<li><p>If the intake settings is set to “We call you,” the user is given a list of appointment times.</p>
+<ul>
+<li><p>These times are based on the intake settings, the service maximum limit, and the number of slots already filled.</p></li>
+<li><p>The number of slots the user can pick is limited to the lesser of 3 or the number indicated by the program.</p></li>
+<li><p>The user may opt to call the program instead</p></li>
+</ul>
+</li>
+<li><p>If the intake settings is set to “You call us,” the user is given a list of times they can call the program.</p></li>
+</ul>
+<div class="admonition-todo admonition" id="id2">
+<p class="admonition-title">Todo</p>
+<p>Currently this shows the callback slots; we will be replacing this to use Office hours instead.</p>
+</div>
+</div>
+<div class="section" id="validation">
+<h2>Validation<a class="headerlink" href="#validation" title="Permalink to this headline">¶</a></h2>
+<p>Most partners have income limits.</p>
+<ul class="simple">
+<li><p>For programs with no income limits, the system will not check income</p></li>
+<li><p>For programs that waive income limits for some populations, the system will ignore income limits if the user indicated that they are a member of the population.</p></li>
+<li><p>For programs that have applicable income limits:</p>
+<ul>
+<li><p>The system pulls the income standard to use and the maximum percentage from the intake settings or location_services.</p></li>
+<li><p>The system pulls the income limits from the relevant Income standard entity.</p></li>
+<li><p>The system calculates the user’s monthly income based on the collected income information.</p></li>
+<li><p>The system calculates the user’s maximum income based on the income standard and household size</p></li>
+<li><p>The system determines if the user is over income (monthly income exceeds maximum income) or not.</p></li>
+</ul>
+</li>
+</ul>
+<p>If the user is over-income, the user is diverted to referrals.</p>
+<p>If the user is not over-income, they continue to the appointment and confirmation piece.</p>
+</div>
+<div class="section" id="e-transfer">
+<h2>E-Transfer<a class="headerlink" href="#e-transfer" title="Permalink to this headline">¶</a></h2>
+<p>When the user gets to the final intake confirmation screen, their information is sent to the statewide online intake server.</p>
+<p>The e-transfer leverages Legal Server’ intake API.</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span> <span class="nt">&quot;firstName&quot;</span><span class="p">:</span> <span class="s2">&quot;Test&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;middleName&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;lastName&quot;</span><span class="p">:</span> <span class="s2">&quot;Test&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;eTransferOrganization&quot;</span><span class="p">:</span> <span class="s2">&quot;Land Of Lincoln Legal Assistance Foundation&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;aliasFirst&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;aliasLast&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;addressHome&quot;</span><span class="p">:</span> <span class="p">{</span>
+     <span class="nt">&quot;address1&quot;</span><span class="p">:</span> <span class="s2">&quot;120 Main Street &quot;</span><span class="p">,</span>
+     <span class="nt">&quot;city&quot;</span><span class="p">:</span> <span class="s2">&quot;Belleville&quot;</span><span class="p">,</span>
+     <span class="nt">&quot;state&quot;</span><span class="p">:</span> <span class="s2">&quot;IL&quot;</span><span class="p">,</span>
+     <span class="nt">&quot;zip&quot;</span><span class="p">:</span> <span class="s2">&quot;62220&quot;</span><span class="p">,</span>
+     <span class="nt">&quot;county&quot;</span><span class="p">:</span> <span class="s2">&quot;17163&quot;</span>
+ <span class="p">},</span>
+ <span class="nt">&quot;phoneHome&quot;</span><span class="p">:</span> <span class="s2">&quot;315555555&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;phoneHomeNote&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;dateOfBirth&quot;</span><span class="p">:</span> <span class="s2">&quot;1989-11-17&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;test@gmail.com &quot;</span><span class="p">,</span>
+ <span class="nt">&quot;maritalStatus&quot;</span><span class="p">:</span> <span class="s2">&quot;Separated&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;race&quot;</span><span class="p">:</span> <span class="s2">&quot;Other&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;ethnicity&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gender&quot;</span><span class="p">:</span> <span class="s2">&quot;Female&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;language&quot;</span><span class="p">:</span> <span class="s2">&quot;en&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;citizenshipStatus&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;immigrationStatus&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;veteran&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;disabled&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;note&quot;</span><span class="p">:</span> <span class="s2">&quot;Select the one that best fits your case:I want a divorce because I am being abused by my spouse. Or I want a divorce because my kids are being abused or in danger.; Do you have a safe phone number we can call you at?:Yes;; We call client; Callback Times:Wednesday, Jun 30, 2021, 12:00pm - 1:00pm;&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;numberOfAdults&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;numberOfChildren&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;callbackType&quot;</span><span class="p">:</span> <span class="s2">&quot;Callback&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;callbackDayTime&quot;</span><span class="p">:</span> <span class="s2">&quot;Callback Times:Wednesday, Jun 30, 2021, 12:00pm - 1:00pm&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;externalID&quot;</span><span class="p">:</span> <span class="s2">&quot;ILAOWeb-35825811&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;incomes&quot;</span><span class="p">:</span> <span class="p">[{</span><span class="nt">&quot;amount&quot;</span><span class="p">:</span><span class="s2">&quot;1100&quot;</span><span class="p">,</span><span class="nt">&quot;frequency&quot;</span><span class="p">:</span><span class="mi">12</span><span class="p">,</span> <span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="s2">&quot;Employment&quot;</span><span class="p">}],</span>
+ <span class="nt">&quot;adverse_parties&quot;</span><span class="p">:</span> <span class="p">{},</span>
+ <span class="nt">&quot;program&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;customField&quot;</span><span class="p">:</span> <span class="p">{},</span>
+ <span class="nt">&quot;jsonPayloadItem&quot;</span><span class="p">:</span> <span class="p">{},</span>
+ <span class="nt">&quot;legalProblemCode&quot;</span><span class="p">:</span> <span class="s2">&quot;32 Divorce/ Separation/ Annulment&quot;</span>
+ <span class="p">}</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In 2022 - 2023, we will begin to leverage the program, adverse_parties, customField, and jsonPayloadItem fields.</p>
+</div>
+</div>
 </div>
 
 

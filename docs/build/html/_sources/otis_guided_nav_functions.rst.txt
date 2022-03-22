@@ -16,10 +16,11 @@ Get process list
 
 * processid - the unique identifier for a Guided Navigation process; if no matching process is found, will return 0.
 * lsc_code - the LSC problem code associated with the process
-* search_term - the default search term to store in ILAO's data
+* search_term - the default search term to store in ILAO's data. The search_term can be found by going to https://www.illinoislegalaid.org/jsonapi/taxonomy_term/legal_issues?filter[foo][condition][operator]==&filter[foo][condition][path]=drupal_internal__tid&filter[foo][condition][value]=514486, but changing "514486" to the legal_issue value used on the Case Acceptance webform. The search_term value is the "id".
 
+.. image:: ../assets/twilio_get_process_search_term.png
 
-.. note:: Processes are as follows so far 1 - unemployment benefits, 2 - TANF, 3 - Food stamps/SNAP.
+.. note:: Processes are as follows so far 1 - unemployment benefits, 2 - TANF, 3 - Food stamps/SNAP, 4 - Eviction, 5 - Mobile Home, 6 - Landlord.
 
 
 Start a new session for given process

@@ -25,7 +25,7 @@ Format
 
 Each rest export must:
 
-* have a format of serializer set to show fields
+* have a format of serializer set to show fields. Once the format is set to serializer, open settings and select json from the Accepted request formats.
 * in the Show field settings, each field in the results should have an alias that matches the actual key name
 
 .. image:: ../assets/webform-gn-alias.png
@@ -64,6 +64,8 @@ There should be a filter criteria to limit the intake settings to the legal issu
 .. image:: ../assets/gn-webforms-filter.png
 
 This should have a relationship of field_service_single. The Operator: is one of and the term should be the legal issue term (i.e. "Food stamps","Eviction","Renting a mobile home",etc.
+
+There should also be a filter criteria to limit the intake settigns to open intake settings. Search "Is Intake Setting open or not?" in the category OAS Intake Settings. Relationship should be field_service_single. Operator Is equal to. Is Intake Setting open or not? set to True.
 
 Sort Criteria
 ----------------
