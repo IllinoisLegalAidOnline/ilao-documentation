@@ -105,7 +105,10 @@
 <li class="toctree-l1 current"><a class="reference internal" href="otis_cms.html">Get Legal Help</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="otis_endusers.html">Get Legal Help Overview</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="otis_endusers_legalserver.html">Legal Server Configuration</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Triage</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Triage</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#guided-navigation-implementation-on-website">Guided Navigation Implementation on Website</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="otis_endusers_intake.html">Intake</a></li>
 <li class="toctree-l3"><a class="reference internal" href="otis_endusers_referrals.html">Referrals</a></li>
 <li class="toctree-l3"><a class="reference internal" href="otis_endusers_lshc.html">Legal Self-Help Center Directory</a></li>
@@ -218,7 +221,7 @@
 </li>
 <li><p>The user is required to accept terms &amp; conditions.</p></li>
 </ul>
-<img alt="_images/otis-glh-form.png" src="_images/otis-glh-form.png" />
+<a class="reference internal image-reference" href="_images/otis-glh-form.png"><img alt="Mobile view of Get Legal Help page." src="_images/otis-glh-form.png" style="width: 50%;" /></a>
 <p>When the user submits the form, the system:</p>
 <p>Step 1: Evaluates the term entered by the user. If the term:</p>
 <blockquote>
@@ -232,15 +235,18 @@
 <blockquote>
 <div><ul class="simple">
 <li><p>Users who have indicated “Yes” to the income questions are directed to referrals unless there is an OTIS organization that is free to everyone service or a service where income limits are waived for specific populations.</p></li>
-<li><p>The system checks for available OTIS partners first (ahead of referrals). This requires looking for:
-* an intake setting with a service area that matches the user’s location
-* an intake setting that matches the user’s legal issue
-* an intake setting that is published
-* an intake setting that has either no capacity limit or has not yet reached that limit
-* an intake setting that is either available to everyone or matches any selected populations the user identifies with
-* a triage rule that matches the service of the intake setting
-* a triage rule that matches the user’s legal issue
-* a triage rule that is published</p></li>
+<li><p>The system checks for available OTIS partners first (ahead of referrals). This requires looking for:</p>
+<ul>
+<li><p>an intake setting with a service area that matches the user’s location</p></li>
+<li><p>an intake setting that matches the user’s legal issue</p></li>
+<li><p>an intake setting that is published</p></li>
+<li><p>an intake setting that has either no capacity limit or has not yet reached that limit</p></li>
+<li><p>an intake setting that is either available to everyone or matches any selected populations the user identifies with</p></li>
+<li><p>a triage rule that matches the service of the intake setting</p></li>
+<li><p>a triage rule that matches the user’s legal issue</p></li>
+<li><p>a triage rule that is published</p></li>
+</ul>
+</li>
 </ul>
 </div></blockquote>
 <dl class="simple">
@@ -256,6 +262,15 @@
 <div class="admonition-todo admonition" id="id1">
 <p class="admonition-title">Todo</p>
 <p>We are in the process of implementing Guided Navigation into the website and streamlining triage for legal issues that use Guided Navigation to allow us to eliminate the round robin in 3A and offer the user choices in those legal issues.</p>
+</div>
+<div class="section" id="guided-navigation-implementation-on-website">
+<h2>Guided Navigation Implementation on Website<a class="headerlink" href="#guided-navigation-implementation-on-website" title="Permalink to this headline">¶</a></h2>
+<p>Initially, we are running a hybrid webform/Guided Navigation solution.</p>
+<p>To determine if Guided Navigation should be used over webforms:</p>
+<ul class="simple">
+<li><p>The system checks to see if the Legal Issues taxonomy has a Rest export and Guided Navigation process ID for the term or its first parent.</p></li>
+<li><p>If there are no matches, the system defaults to webforms or referrals.</p></li>
+</ul>
 </div>
 </div>
 

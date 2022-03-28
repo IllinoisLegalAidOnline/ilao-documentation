@@ -16,6 +16,8 @@ The first piece of Get Legal Help is a triage system designed to route the user 
 * The user is required to accept terms & conditions.
 
 .. image::  ../assets/otis-glh-form.png
+   :width: 50%
+   :alt: Mobile view of Get Legal Help page.
 
 When the user submits the form, the system:
 
@@ -29,6 +31,7 @@ Step 2:  Evaluates the type of help; if the user is seeking a lawyer, the system
 
  * Users who have indicated "Yes" to the income questions are directed to referrals unless there is an OTIS organization that is free to everyone service or a service where income limits are waived for specific populations.
  * The system checks for available OTIS partners first (ahead of referrals). This requires looking for:
+
    * an intake setting with a service area that matches the user's location
    * an intake setting that matches the user's legal issue
    * an intake setting that is published
@@ -49,3 +52,17 @@ When a user is diverted from Step 3a and there are multiple organizations, the u
 
 
 .. todo:: We are in the process of implementing Guided Navigation into the website and streamlining triage for legal issues that use Guided Navigation to allow us to eliminate the round robin in 3A and offer the user choices in those legal issues.
+
+Guided Navigation Implementation on Website
+==============================================
+
+Initially, we are running a hybrid webform/Guided Navigation solution.
+
+To determine if Guided Navigation should be used over webforms:
+
+* The system checks to see if the Legal Issues taxonomy has a Rest export and Guided Navigation process ID for the term or its first parent.
+
+* If there are no matches, the system defaults to webforms or referrals.
+
+
+
