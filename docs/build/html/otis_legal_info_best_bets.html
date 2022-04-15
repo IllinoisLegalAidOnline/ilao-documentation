@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Referrals &mdash; ILAO 2.22 documentation</title>
+  <title>Legal forms and information &mdash; ILAO 2.22 documentation</title>
   
 
   
@@ -43,8 +43,8 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Legal forms and information" href="otis_legal_info_best_bets.html" />
-    <link rel="prev" title="Intake" href="otis_endusers_intake.html" /> 
+    <link rel="next" title="Organization referrals" href="otis_organization_referrals.html" />
+    <link rel="prev" title="Referrals" href="otis_endusers_referrals.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -107,9 +107,9 @@
 <li class="toctree-l3"><a class="reference internal" href="otis_endusers_legalserver.html">Legal Server Configuration</a></li>
 <li class="toctree-l3"><a class="reference internal" href="otis_endusers_triage.html">Triage</a></li>
 <li class="toctree-l3"><a class="reference internal" href="otis_endusers_intake.html">Intake</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Referrals</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#user-seeking-legal-information-and-or-forms">User seeking legal information and/or forms</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#user-seeking-a-lawyer-and-legal-information-or-forms">User seeking a lawyer and legal information or forms</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="otis_endusers_referrals.html">Referrals</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="otis_endusers_referrals.html#user-seeking-legal-information-and-or-forms">User seeking legal information and/or forms</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="otis_endusers_referrals.html#user-seeking-a-lawyer-and-legal-information-or-forms">User seeking a lawyer and legal information or forms</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="otis_endusers_lshc.html">Legal Self-Help Center Directory</a></li>
@@ -187,13 +187,15 @@
         
           <li><a href="otis_endusers.html">Get Legal Help Overview</a> &raquo;</li>
         
-      <li>Referrals</li>
+          <li><a href="otis_endusers_referrals.html">Referrals</a> &raquo;</li>
+        
+      <li>Legal forms and information</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="_sources/otis_endusers_referrals.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/otis_legal_info_best_bets.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -206,29 +208,31 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="referrals">
-<h1>Referrals<a class="headerlink" href="#referrals" title="Permalink to this headline">¶</a></h1>
-<p>There are 3 main pieces to referrals when OTIS is not an option:</p>
+  <div class="section" id="legal-forms-and-information">
+<h1>Legal forms and information<a class="headerlink" href="#legal-forms-and-information" title="Permalink to this headline">¶</a></h1>
+<p>We prioritize “best bets” over other options.</p>
+<p>Best bets are currently defined as:</p>
 <ul class="simple">
-<li><p>Organization referrals</p></li>
-<li><p>Legal information</p></li>
-<li><p>Forms</p></li>
+<li><p>A Guide, for legal information, that matches on the taxonomy term with depth</p></li>
+<li><p>An Easy form, form download, form link, or form that matches on the taxonomy term with depth</p></li>
 </ul>
-<p>How these appear and are tagged depend on a variety of factors.</p>
-<div class="section" id="user-seeking-legal-information-and-or-forms">
-<h2>User seeking legal information and/or forms<a class="headerlink" href="#user-seeking-legal-information-and-or-forms" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is probably not the ideal match up.</p>
 </div>
-<div class="section" id="user-seeking-a-lawyer-and-legal-information-or-forms">
-<h2>User seeking a lawyer and legal information or forms<a class="headerlink" href="#user-seeking-a-lawyer-and-legal-information-or-forms" title="Permalink to this headline">¶</a></h2>
-<div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">Algorithms in use:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="otis_legal_info_best_bets.html">Legal forms and information</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="otis_legal_info_best_bets.html#how-content-referrals-are-selected">How content referrals are selected</a></li>
+<p>Legal content referrals are currently limited to legal content. This should likely be expanded to cover additional content types.</p>
+<div class="section" id="how-content-referrals-are-selected">
+<h2>How content referrals are selected<a class="headerlink" href="#how-content-referrals-are-selected" title="Permalink to this headline">¶</a></h2>
+<p>Up to 6 results are returned. These are based on:</p>
+<ul class="simple">
+<li><p>legal content with a level of “Basic”</p></li>
+<li><p>portal main page content with a page type of “main page”</p></li>
+<li><p>ordered by page views descending</p></li>
+<li><p>are a match to the taxonomy term, with depth</p></li>
 </ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="otis_organization_referrals.html">Organization referrals</a></li>
-</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is pending completion of DEV-3401</p>
 </div>
 </div>
 </div>
@@ -239,8 +243,8 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="otis_legal_info_best_bets.html" class="btn btn-neutral float-right" title="Legal forms and information" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="otis_endusers_intake.html" class="btn btn-neutral float-left" title="Intake" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="otis_organization_referrals.html" class="btn btn-neutral float-right" title="Organization referrals" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="otis_endusers_referrals.html" class="btn btn-neutral float-left" title="Referrals" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>
