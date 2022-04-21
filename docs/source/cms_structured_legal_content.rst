@@ -13,4 +13,5 @@ Structured Legal Content
    cms_structured_content_types
    cms_structured_legal_content_admin
    cms_structured_content_api
-   cms_structured_content_reports 
+   cms_structured_content_reports
+   cms_structured_content_sms
