@@ -56,7 +56,7 @@ Returns an object of metadata about the problem. This includes:
 * array of citations; this is the uuid of the citations paragraph objects.
 * array of uuids of legal questions attached to the problem
 * array of uuids of of the introduction paragraph object
-* array of uuids for attached solutions
+* array of uuids of attached solutions.
 * array of uuids of related resources
 
 
@@ -104,6 +104,46 @@ Returns an object containing:
 Dependencies
 --------------
 Requires the parse-paragraphs-into-structure function to put the paragraphs that make up the introduction together and in the proper order.
+
+
+Get Solution List for Problem
+===============================
+
+Requires a legal problem UUID
+
+Returns an array of solutions. Each solution object includes:
+
+* id (the UUID of the solution)
+* title of the solution
+* description of the solution
+
+.. code-block:: JSON
+
+   [
+   {"id":"b2349f43-cac0-4653-8f01-1d36b266362c",
+   "title":"Catch up on rent",
+   "description":"One way to avoid an eviction is to catch up on your rent."},
+   {"id":"e2575a13-3da5-4e3f-90c3-bf158dbb1279",
+   "title":"Negotiate a settlement",
+   "description":"To avoid being evicted, you can try to negotiate a settlement with your landlord."},
+   {"id":"c1b23431-953e-43ab-b0e4-dfd84453a456",
+   "title":"Challenge the eviction notice","description":"You can challenge the service of the notice."},
+   {"id":"158672a4-02be-4e63-8872-f370ff78cbc7",
+   "title":"Challenge the eviction notice",
+   "description":"You can challenge the service of the notice."},
+   {"id":"62113f64-39e8-4849-ab7a-925a4bbf57fc",
+   "title":"Challenge the eviction notice ",
+   "description":"You can challenge the service of the notice."},
+   {"id":"ea941419-5cea-44a2-83ab-66fc1ec3aca1",
+   "title":"Ask the judge to dismiss because the summons wasn't served properly",
+   "description":"If you were never properly served the summons, you can ask the judge to dismiss the case."},
+   {"id":"658128a7-65cd-444c-8096-8f0dd266f5e4",
+   "title":"Participate in the eviction case",
+   "description":"Guides you through the options and steps to participate in the case when you are being evicted"},
+   {"id":"d6f2f0c9-34f1-4ef7-bbac-4cfa18b057a0",
+   "title":"Do nothing",
+   "description":"You can choose to ignore the eviction process. This will not stop the eviciton."}
+   ]
 
 
 Get Legal Solution
@@ -283,3 +323,34 @@ Easy Forms usually produce multiple forms in a single package. Each Easy form ur
    "Additional Cannabis Convictions",
    "Additional Notice of Court Date for Motion to Vacate & Expunge Eligible Cannabis Convictions"]}
    ]}
+
+Get Legal Question
+====================
+Requires a UUID for a specific legal question.
+
+Returns an object:
+
+* id (uuid of the question)
+* nid (node id of the question)
+* langcode
+* title
+* description
+* answer, which is an object containing:
+
+  * segment_count
+  * array of segments
+
+.. code-block:: JSON
+
+   {"id":"0bfcc9fb-a36a-4673-a3e8-6033eb348242",
+   "nid":172616,
+   "langcode":"en",
+   "title":"What is cannabis expungement?",
+   "description":"Explains what cannabis expungement is.",
+   "answer":
+     {"segment_count":1,
+      "segments":
+       [ "Part of the law that legalized weed (also known as cannabis or marijuana) created ways to clear criminal records for weed. This is called expungement. There are different ways to have your record expunged, depending on what type of record you have.\n\n"]
+     }
+   }
+

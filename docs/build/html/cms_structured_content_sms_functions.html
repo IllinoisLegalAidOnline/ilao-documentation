@@ -114,6 +114,7 @@
 <li class="toctree-l3 current"><a class="reference internal" href="cms_structured_content_sms.html">Delivery over SMS</a><ul class="current">
 <li class="toctree-l4 current"><a class="current reference internal" href="#">Twilio service: Structured content functions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cms_structured_content_sms_utilities.html">Twilio service: Structured content utilities</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_content_single_problem_workflow.html">SMS Prototype for Single Problem</a></li>
 </ul>
 </li>
 </ul>
@@ -269,7 +270,7 @@
 <li><p>array of citations; this is the uuid of the citations paragraph objects.</p></li>
 <li><p>array of uuids of legal questions attached to the problem</p></li>
 <li><p>array of uuids of of the introduction paragraph object</p></li>
-<li><p>array of uuids for attached solutions</p></li>
+<li><p>array of uuids of attached solutions.</p></li>
 <li><p>array of uuids of related resources</p></li>
 </ul>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;2c155241-4ece-429e-a415-6f674da0ed63&quot;</span><span class="p">,</span>
@@ -315,6 +316,43 @@
 <div class="section" id="dependencies">
 <h3>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this headline">¶</a></h3>
 <p>Requires the parse-paragraphs-into-structure function to put the paragraphs that make up the introduction together and in the proper order.</p>
+</div>
+</div>
+<div class="section" id="get-solution-list-for-problem">
+<h2>Get Solution List for Problem<a class="headerlink" href="#get-solution-list-for-problem" title="Permalink to this headline">¶</a></h2>
+<p>Requires a legal problem UUID</p>
+<p>Returns an array of solutions. Each solution object includes:</p>
+<ul class="simple">
+<li><p>id (the UUID of the solution)</p></li>
+<li><p>title of the solution</p></li>
+<li><p>description of the solution</p></li>
+</ul>
+<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+<span class="p">{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;b2349f43-cac0-4653-8f01-1d36b266362c&quot;</span><span class="p">,</span>
+<span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="s2">&quot;Catch up on rent&quot;</span><span class="p">,</span>
+<span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;One way to avoid an eviction is to catch up on your rent.&quot;</span><span class="p">},</span>
+<span class="p">{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;e2575a13-3da5-4e3f-90c3-bf158dbb1279&quot;</span><span class="p">,</span>
+<span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="s2">&quot;Negotiate a settlement&quot;</span><span class="p">,</span>
+<span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;To avoid being evicted, you can try to negotiate a settlement with your landlord.&quot;</span><span class="p">},</span>
+<span class="p">{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;c1b23431-953e-43ab-b0e4-dfd84453a456&quot;</span><span class="p">,</span>
+<span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="s2">&quot;Challenge the eviction notice&quot;</span><span class="p">,</span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;You can challenge the service of the notice.&quot;</span><span class="p">},</span>
+<span class="p">{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;158672a4-02be-4e63-8872-f370ff78cbc7&quot;</span><span class="p">,</span>
+<span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="s2">&quot;Challenge the eviction notice&quot;</span><span class="p">,</span>
+<span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;You can challenge the service of the notice.&quot;</span><span class="p">},</span>
+<span class="p">{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;62113f64-39e8-4849-ab7a-925a4bbf57fc&quot;</span><span class="p">,</span>
+<span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="s2">&quot;Challenge the eviction notice &quot;</span><span class="p">,</span>
+<span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;You can challenge the service of the notice.&quot;</span><span class="p">},</span>
+<span class="p">{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;ea941419-5cea-44a2-83ab-66fc1ec3aca1&quot;</span><span class="p">,</span>
+<span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="s2">&quot;Ask the judge to dismiss because the summons wasn&#39;t served properly&quot;</span><span class="p">,</span>
+<span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;If you were never properly served the summons, you can ask the judge to dismiss the case.&quot;</span><span class="p">},</span>
+<span class="p">{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;658128a7-65cd-444c-8096-8f0dd266f5e4&quot;</span><span class="p">,</span>
+<span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="s2">&quot;Participate in the eviction case&quot;</span><span class="p">,</span>
+<span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;Guides you through the options and steps to participate in the case when you are being evicted&quot;</span><span class="p">},</span>
+<span class="p">{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;d6f2f0c9-34f1-4ef7-bbac-4cfa18b057a0&quot;</span><span class="p">,</span>
+<span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="s2">&quot;Do nothing&quot;</span><span class="p">,</span>
+<span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;You can choose to ignore the eviction process. This will not stop the eviciton.&quot;</span><span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
 </div>
 </div>
 <div class="section" id="get-legal-solution">
@@ -488,6 +526,37 @@
 <span class="s2">&quot;Additional Cannabis Convictions&quot;</span><span class="p">,</span>
 <span class="s2">&quot;Additional Notice of Court Date for Motion to Vacate &amp; Expunge Eligible Cannabis Convictions&quot;</span><span class="p">]}</span>
 <span class="p">]}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="get-legal-question">
+<h2>Get Legal Question<a class="headerlink" href="#get-legal-question" title="Permalink to this headline">¶</a></h2>
+<p>Requires a UUID for a specific legal question.</p>
+<p>Returns an object:</p>
+<ul class="simple">
+<li><p>id (uuid of the question)</p></li>
+<li><p>nid (node id of the question)</p></li>
+<li><p>langcode</p></li>
+<li><p>title</p></li>
+<li><p>description</p></li>
+<li><p>answer, which is an object containing:</p>
+<ul>
+<li><p>segment_count</p></li>
+<li><p>array of segments</p></li>
+</ul>
+</li>
+</ul>
+<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;0bfcc9fb-a36a-4673-a3e8-6033eb348242&quot;</span><span class="p">,</span>
+<span class="nt">&quot;nid&quot;</span><span class="p">:</span><span class="mi">172616</span><span class="p">,</span>
+<span class="nt">&quot;langcode&quot;</span><span class="p">:</span><span class="s2">&quot;en&quot;</span><span class="p">,</span>
+<span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="s2">&quot;What is cannabis expungement?&quot;</span><span class="p">,</span>
+<span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;Explains what cannabis expungement is.&quot;</span><span class="p">,</span>
+<span class="nt">&quot;answer&quot;</span><span class="p">:</span>
+  <span class="p">{</span><span class="nt">&quot;segment_count&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span>
+   <span class="nt">&quot;segments&quot;</span><span class="p">:</span>
+    <span class="p">[</span> <span class="s2">&quot;Part of the law that legalized weed (also known as cannabis or marijuana) created ways to clear criminal records for weed. This is called expungement. There are different ways to have your record expunged, depending on what type of record you have.\n\n&quot;</span><span class="p">]</span>
+  <span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 </div>
