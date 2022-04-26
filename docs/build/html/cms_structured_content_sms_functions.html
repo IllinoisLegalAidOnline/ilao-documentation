@@ -366,37 +366,38 @@
 <li><p>solution (title of the node)</p></li>
 <li><p>description</p></li>
 <li><p>legal_difficulty</p></li>
+<li><p>has_eligibility (true or false)</p></li>
 <li><p>array of UUID’s of legal questions attached to the solution</p></li>
 <li><p>how_to_count (number of how to’s in the solution)</p></li>
-<li><p>array of how_tos</p></li>
+<li><p>array of how_tos. Each how to object includes:</p>
+<ul>
+<li><p>node id (nid)</p></li>
+<li><p>title</p></li>
+<li><p>id (uuid)</p></li>
+<li><p>order. This number can be used to show how_tos in a numbered list when needed.</p></li>
 </ul>
-<div class="admonition-todo admonition" id="id3">
-<p class="admonition-title">Todo</p>
-<p>Can we return question titles? Also how_tos array should include title and uuid.</p>
-</div>
+</li>
+</ul>
 </div>
 <div class="section" id="get-legal-solution-eligibility">
 <h2>Get Legal Solution Eligibility<a class="headerlink" href="#get-legal-solution-eligibility" title="Permalink to this headline">¶</a></h2>
 <p>Requires a specific UUID for a legal solution</p>
-<p>Returns an object contaiining:</p>
+<p>Returns an object containing:</p>
 <ul class="simple">
 <li><p>Segment count (number of segments in the response)</p></li>
 <li><p>Array of segments</p></li>
 </ul>
-<div class="section" id="id4">
-<h3>Dependencies<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id3">
+<h3>Dependencies<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
 <p>Requires the parse-paragraphs-into-structure function to put the paragraphs that make up the introduction together and in the proper order.</p>
-<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="nt">&quot;segment_count&quot;</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span>
-<span class="nt">&quot;segments&quot;</span><span class="p">:</span>
-<span class="p">[</span><span class="s2">&quot;You must have:\n\n&quot;</span><span class="p">,</span>
-<span class="s2">&quot;* An arrest as an adult, \n* For possession or dealing 30 grams or less,\n* Before June 25, 2019.\n&quot;</span><span class="p">,</span>
-<span class="s2">&quot;The arrest must have:&quot;</span><span class="p">,</span>
-<span class="s2">&quot;* Occurred at least 1 year ago,\n* Not resulted in charges,\n* Resulted in charges that were dismissed or vacated,\n* Resulted in charges but you were acquitted, or \n* Resulted in charges, you were given supervision or qualified probation, and \nyou completed it.\n&quot;</span><span class="p">,</span>
-<span class="s2">&quot;This does not include arrests outside sections 4 and 5 of the Cannabis Control Act, like&quot;</span><span class="p">,</span>
-<span class="s2">&quot;* Delivery on school grounds,\n* Cannabis trafficking, or \n* Possession of cannabis plants.\n&quot;</span><span class="p">,</span><span class="s2">&quot;You must not have:&quot;</span><span class="p">,</span>
-<span class="s2">&quot;* Given weed to someone under 18 who was at least 3 years younger than you, or\n\n \n* Been arrested for a violent crime in the same case as the weed charges. This \nincludes:\n* Any felony where force or threat of force was used,\n* Any offense involving sexual conduct,\n* Child pornography or revenge pornography,\n* Domestic battery or stalking,\n* Violating an Order of Protection, \n* Any misdemeanor that results in death or major injury, and\n* Involuntary manslaughter or reckless homicide.\n&quot;</span><span class="p">,</span>
-<span class="s2">&quot;If all of this is true, the police will automatically remove your record based on when you were arrested.&quot;</span><span class="p">,</span><span class="s2">&quot;The process above only applies to police records. If a court case was started, there will also be court records. These will not be automatically expunged. You must file a request to expunge them with the circuit clerk.\n\n&quot;</span><span class="p">]</span>
-<span class="p">}</span>
+<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="nt">&quot;segments&quot;</span><span class="p">:[</span>
+<span class="s2">&quot;You must have:\n\n\n* An arrest as an adult, \n* For possession or dealing 30 grams or less,\n* Before June 25, 2019.\n&quot;</span><span class="p">,</span>
+<span class="s2">&quot;The arrest must have:\n* Occurred at least 1 year ago,\n* Not resulted in charges,\n* Resulted in charges that were dismissed or vacated,\n* Resulted in charges but you were acquitted, or \n* Resulted in charges, you were given supervision or qualified probation, and \nyou completed it.\n&quot;</span><span class="p">,</span>
+<span class="s2">&quot;This does not include arrests outside sections 4 and 5 of the Cannabis Control Act, like\n* Delivery on school grounds,\n* Cannabis trafficking, or \n* Possession of cannabis plants.\n&quot;</span><span class="p">,</span>
+<span class="s2">&quot;You must not have:\n* Given weed to someone under 18 who was at least 3 years younger than you, or\n\n \n* Been arrested for a violent crime in the same case as the weed charges. This \nincludes:\n* Any felony where force or threat of force was used,\n* Any offense involving sexual conduct,\n* Child pornography or revenge pornography,\n* Domestic battery or stalking,\n* Violating an Order of Protection, \n* Any misdemeanor that results in death or major injury, and\n* Involuntary manslaughter or reckless homicide.\n&quot;</span><span class="p">,</span>
+<span class="s2">&quot;If all of this is true, the police will automatically remove your record based on when you were arrested.&quot;</span><span class="p">,</span>
+<span class="s2">&quot;The process above only applies to police records. If a court case was started, there will also be court records. These will not be automatically expunged. You must file a request to expunge them with the circuit clerk.\n\n&quot;</span><span class="p">],</span>
+<span class="nt">&quot;segment_count&quot;</span><span class="p">:</span><span class="mi">6</span><span class="p">}</span>
 </pre></div>
 </div>
 </div>
@@ -421,24 +422,29 @@
 </ul>
 </li>
 </ul>
-<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;faba2f2c-bd13-4474-90a6-160d6605680e&quot;</span><span class="p">,</span>
-<span class="nt">&quot;nid&quot;</span><span class="p">:</span><span class="mi">166921</span><span class="p">,</span>
+<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;c39cf67b-4bb9-459f-9690-7e8d1bc13bf5&quot;</span><span class="p">,</span>
+<span class="nt">&quot;nid&quot;</span><span class="p">:</span><span class="mi">172756</span><span class="p">,</span>
 <span class="nt">&quot;langcode&quot;</span><span class="p">:</span><span class="s2">&quot;en&quot;</span><span class="p">,</span>
-<span class="nt">&quot;howto&quot;</span><span class="p">:</span><span class="s2">&quot;How to apply for unemployment benefits from IDES&quot;</span><span class="p">,</span>
-<span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;Explains how to apply for unemployment benefits if you have lost your job. Includes how to continue receiving them every two weeks.&quot;</span><span class="p">,</span>
-<span class="nt">&quot;steps&quot;</span><span class="p">:[</span>
-<span class="p">{</span><span class="nt">&quot;nid&quot;</span><span class="p">:</span><span class="mi">166886</span><span class="p">,</span>
-<span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;5e640607-35a5-4d8b-a2f9-d3b5e40710f0&quot;</span><span class="p">,</span>
-<span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="s2">&quot;Prepare and gather information for unemployment application&quot;</span><span class="p">,</span>
-<span class="nt">&quot;order&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">},</span>
-<span class="p">{</span><span class="nt">&quot;nid&quot;</span><span class="p">:</span><span class="mi">166896</span><span class="p">,</span><span class="nt">&quot;</span>
-<span class="nt">id&quot;</span><span class="p">:</span><span class="s2">&quot;b741a4d5-f4c5-4370-83d1-b76f6a2f6938&quot;</span><span class="p">,</span>
-<span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="s2">&quot;Fill out and submit your unemployment application&quot;</span><span class="p">,</span>
-<span class="nt">&quot;order&quot;</span><span class="p">:</span><span class="mi">2</span><span class="p">},</span>
- <span class="p">]}</span>
+<span class="nt">&quot;howto&quot;</span><span class="p">:</span><span class="s2">&quot;Wait for your Group 1 arrest to be automatically expunged&quot;</span><span class="p">,</span>
+<span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;Explains how to expunge group 1 cannabis arrests&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;steps&quot;</span><span class="p">:[</span>
+  <span class="p">{</span><span class="nt">&quot;nid&quot;</span><span class="p">:</span><span class="mi">172751</span><span class="p">,</span>
+  <span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;ca9d66da-0371-4e62-add7-63d50f445349&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="s2">&quot;Wait&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;order&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">},</span>
+  <span class="p">{</span><span class="nt">&quot;nid&quot;</span><span class="p">:</span><span class="mi">172776</span><span class="p">,</span>
+  <span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;a6977fb8-85a8-4b09-b667-1a7e8afacf9c&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="s2">&quot;Receive notice&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;order&quot;</span><span class="p">:</span><span class="mi">2</span><span class="p">},</span>
+  <span class="p">{</span><span class="nt">&quot;nid&quot;</span><span class="p">:</span><span class="mi">172811</span><span class="p">,</span>
+  <span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;febf6469-6203-4937-8dd5-15be88d03a3e&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="s2">&quot;Clear the court record &quot;</span><span class="p">,</span>
+  <span class="nt">&quot;order&quot;</span><span class="p">:</span><span class="mi">3</span>
+  <span class="p">}],</span>
+  <span class="nt">&quot;step_count&quot;</span><span class="p">:</span><span class="mi">3</span><span class="p">}</span>
 </pre></div>
 </div>
-<div class="admonition-todo admonition" id="id5">
+<div class="admonition-todo admonition" id="id4">
 <p class="admonition-title">Todo</p>
 <p>Review for when we have multiple step sections.</p>
 </div>

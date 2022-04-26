@@ -159,22 +159,50 @@ Returns an object containing metadata about the solution:
 * solution (title of the node)
 * description
 * legal_difficulty
+* has_eligibility (true or false)
 * array of UUID's of legal questions attached to the solution
 * how_to_count (number of how to's in the solution)
-* array of how_tos
+* array of how_tos. Each how to object includes:
 
+  * node id (nid)
+  * title
+  * id (uuid)
+  * order. This number can be used to show how_tos in a numbered list when needed.
 
-.. todo:: Can we return question titles? Also how_tos array should include title and uuid.
+.. code-block: JSON
+
+   {"id":"a910a290-5112-4206-94fb-f2e67cb74394",
+   "nid":172906,
+   "langcode":"en",
+   "solution":"Clear a Group 1 arrest ",
+   "description":"Clearing your group 1 cannabis record can help you apply for jobs, housing, college, and loans. ",
+   "legal_difficulty":"We rate this as an easy task in most cases. ",
+   "has_eligibility":true,
+   "faq_field":"node--legal_question",
+   "legal_questions":
+   ["0691bef4-0f23-4167-8f9a-95c0de5fa178",
+   "9384eb96-25d4-4ba8-848f-9f51757d917f",
+   "c350d34c-4477-401d-9078-6be10e4edb61",
+   "c308d294-f7d7-4f90-9c77-ca6cd3dc001e"],
+   "how_to_count":1,
+   "how_tos":[
+   {"nid":172756,
+   "title":"Wait for your Group 1 arrest to be automatically expunged",
+   "id":"c39cf67b-4bb9-459f-9690-7e8d1bc13bf5",
+   "order":1}
+   ]
+   }
 
 Get Legal Solution Eligibility
 =================================
 
 Requires a specific UUID for a legal solution
 
-Returns an object contaiining:
+Returns an object containing:
 
 * Segment count (number of segments in the response)
 * Array of segments
+
 
 Dependencies
 --------------
@@ -182,17 +210,14 @@ Requires the parse-paragraphs-into-structure function to put the paragraphs that
 
 .. code-block:: JSON
 
-   {"segment_count":10,
-   "segments":
-   ["You must have:\n\n",
-   "* An arrest as an adult, \n* For possession or dealing 30 grams or less,\n* Before June 25, 2019.\n",
-   "The arrest must have:",
-   "* Occurred at least 1 year ago,\n* Not resulted in charges,\n* Resulted in charges that were dismissed or vacated,\n* Resulted in charges but you were acquitted, or \n* Resulted in charges, you were given supervision or qualified probation, and \nyou completed it.\n",
-   "This does not include arrests outside sections 4 and 5 of the Cannabis Control Act, like",
-   "* Delivery on school grounds,\n* Cannabis trafficking, or \n* Possession of cannabis plants.\n","You must not have:",
-   "* Given weed to someone under 18 who was at least 3 years younger than you, or\n\n \n* Been arrested for a violent crime in the same case as the weed charges. This \nincludes:\n* Any felony where force or threat of force was used,\n* Any offense involving sexual conduct,\n* Child pornography or revenge pornography,\n* Domestic battery or stalking,\n* Violating an Order of Protection, \n* Any misdemeanor that results in death or major injury, and\n* Involuntary manslaughter or reckless homicide.\n",
-   "If all of this is true, the police will automatically remove your record based on when you were arrested.","The process above only applies to police records. If a court case was started, there will also be court records. These will not be automatically expunged. You must file a request to expunge them with the circuit clerk.\n\n"]
-   }
+   {"segments":[
+   "You must have:\n\n\n* An arrest as an adult, \n* For possession or dealing 30 grams or less,\n* Before June 25, 2019.\n",
+   "The arrest must have:\n* Occurred at least 1 year ago,\n* Not resulted in charges,\n* Resulted in charges that were dismissed or vacated,\n* Resulted in charges but you were acquitted, or \n* Resulted in charges, you were given supervision or qualified probation, and \nyou completed it.\n",
+   "This does not include arrests outside sections 4 and 5 of the Cannabis Control Act, like\n* Delivery on school grounds,\n* Cannabis trafficking, or \n* Possession of cannabis plants.\n",
+   "You must not have:\n* Given weed to someone under 18 who was at least 3 years younger than you, or\n\n \n* Been arrested for a violent crime in the same case as the weed charges. This \nincludes:\n* Any felony where force or threat of force was used,\n* Any offense involving sexual conduct,\n* Child pornography or revenge pornography,\n* Domestic battery or stalking,\n* Violating an Order of Protection, \n* Any misdemeanor that results in death or major injury, and\n* Involuntary manslaughter or reckless homicide.\n",
+   "If all of this is true, the police will automatically remove your record based on when you were arrested.",
+   "The process above only applies to police records. If a court case was started, there will also be court records. These will not be automatically expunged. You must file a request to expunge them with the circuit clerk.\n\n"],
+   "segment_count":6}
 
 
 Get Legal How-to
@@ -218,22 +243,26 @@ Returns an object containing metadata for the how-to including:
 
 .. code-block:: JSON
 
-   {"id":"faba2f2c-bd13-4474-90a6-160d6605680e",
-   "nid":166921,
+   {"id":"c39cf67b-4bb9-459f-9690-7e8d1bc13bf5",
+   "nid":172756,
    "langcode":"en",
-   "howto":"How to apply for unemployment benefits from IDES",
-   "description":"Explains how to apply for unemployment benefits if you have lost your job. Includes how to continue receiving them every two weeks.",
-   "steps":[
-   {"nid":166886,
-   "id":"5e640607-35a5-4d8b-a2f9-d3b5e40710f0",
-   "title":"Prepare and gather information for unemployment application",
-   "order":1},
-   {"nid":166896,"
-   id":"b741a4d5-f4c5-4370-83d1-b76f6a2f6938",
-   "title":"Fill out and submit your unemployment application",
-   "order":2},
-    ]}
-
+   "howto":"Wait for your Group 1 arrest to be automatically expunged",
+   "description":"Explains how to expunge group 1 cannabis arrests",
+     "steps":[
+     {"nid":172751,
+     "id":"ca9d66da-0371-4e62-add7-63d50f445349",
+     "title":"Wait",
+     "order":1},
+     {"nid":172776,
+     "id":"a6977fb8-85a8-4b09-b667-1a7e8afacf9c",
+     "title":"Receive notice",
+     "order":2},
+     {"nid":172811,
+     "id":"febf6469-6203-4937-8dd5-15be88d03a3e",
+     "title":"Clear the court record ",
+     "order":3
+     }],
+     "step_count":3}
 
 .. todo:: Review for when we have multiple step sections.
 
