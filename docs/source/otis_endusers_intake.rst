@@ -126,4 +126,62 @@ The e-transfer leverages Legal Server' intake API.
 
 .. note:: In 2022 - 2023, we will begin to leverage the program, adverse_parties, customField, and jsonPayloadItem fields.
 
+Adverse parties
+-----------------
+
+The JSON API supports passing Adverse party data. This includes:
+
+* Type, required
+* First name
+* Last name
+* Middle name
+* Address (in addr1, addr2, city, state, and zip elements)
+* Date of birth
+* Social security number
+* Gender
+* Race
+
+Supported types are:
+
+* Business (not Landlord)
+* Child
+* Domestic Partner (not Spouse)
+* Employer/Work Colleague
+* Former Domestic Partner
+* Former Spouse
+* Landlord (Owner)
+* Legal Guardian
+* Neighbor
+* Other
+* Other Family Member
+* Parent
+* Property Manager
+* Spouse
+
+.. note:: ILAO will never collect or eTransfer social security numbers
+
+.. code-block:: JSON
+
+   [
+   { "type": "Spouse",
+   "first": "Test",
+   "last": "Test",
+   "middle": "Test",
+   "zip": "55555",
+   "addr1": "500 Test Boulevard",
+   "addr2": "Apartment 333",
+   "city": "Bensonville",
+    "state": "IL",
+    "dob": "2/02/1972",
+   "ssn": "555-55-5555",
+   "gender": "Male",
+   "race": "Other" },
+   { "type": "Landlord",
+   "business_name": "XYZ Property Management",
+   "zip": "55555",
+   "addr1": "500 Test Boulevard",
+   "addr2": "Apartment 333",
+   "city": "Bensonville",
+   "state": "IL",
+    } ]
 

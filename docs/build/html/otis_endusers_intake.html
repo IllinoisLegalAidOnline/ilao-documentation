@@ -336,6 +336,66 @@
 <p class="admonition-title">Note</p>
 <p>In 2022 - 2023, we will begin to leverage the program, adverse_parties, customField, and jsonPayloadItem fields.</p>
 </div>
+<div class="section" id="adverse-parties">
+<h3>Adverse parties<a class="headerlink" href="#adverse-parties" title="Permalink to this headline">¶</a></h3>
+<p>The JSON API supports passing Adverse party data. This includes:</p>
+<ul class="simple">
+<li><p>Type, required</p></li>
+<li><p>First name</p></li>
+<li><p>Last name</p></li>
+<li><p>Middle name</p></li>
+<li><p>Address (in addr1, addr2, city, state, and zip elements)</p></li>
+<li><p>Date of birth</p></li>
+<li><p>Social security number</p></li>
+<li><p>Gender</p></li>
+<li><p>Race</p></li>
+</ul>
+<p>Supported types are:</p>
+<ul class="simple">
+<li><p>Business (not Landlord)</p></li>
+<li><p>Child</p></li>
+<li><p>Domestic Partner (not Spouse)</p></li>
+<li><p>Employer/Work Colleague</p></li>
+<li><p>Former Domestic Partner</p></li>
+<li><p>Former Spouse</p></li>
+<li><p>Landlord (Owner)</p></li>
+<li><p>Legal Guardian</p></li>
+<li><p>Neighbor</p></li>
+<li><p>Other</p></li>
+<li><p>Other Family Member</p></li>
+<li><p>Parent</p></li>
+<li><p>Property Manager</p></li>
+<li><p>Spouse</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>ILAO will never collect or eTransfer social security numbers</p>
+</div>
+<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+<span class="p">{</span> <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Spouse&quot;</span><span class="p">,</span>
+<span class="nt">&quot;first&quot;</span><span class="p">:</span> <span class="s2">&quot;Test&quot;</span><span class="p">,</span>
+<span class="nt">&quot;last&quot;</span><span class="p">:</span> <span class="s2">&quot;Test&quot;</span><span class="p">,</span>
+<span class="nt">&quot;middle&quot;</span><span class="p">:</span> <span class="s2">&quot;Test&quot;</span><span class="p">,</span>
+<span class="nt">&quot;zip&quot;</span><span class="p">:</span> <span class="s2">&quot;55555&quot;</span><span class="p">,</span>
+<span class="nt">&quot;addr1&quot;</span><span class="p">:</span> <span class="s2">&quot;500 Test Boulevard&quot;</span><span class="p">,</span>
+<span class="nt">&quot;addr2&quot;</span><span class="p">:</span> <span class="s2">&quot;Apartment 333&quot;</span><span class="p">,</span>
+<span class="nt">&quot;city&quot;</span><span class="p">:</span> <span class="s2">&quot;Bensonville&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;state&quot;</span><span class="p">:</span> <span class="s2">&quot;IL&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;dob&quot;</span><span class="p">:</span> <span class="s2">&quot;2/02/1972&quot;</span><span class="p">,</span>
+<span class="nt">&quot;ssn&quot;</span><span class="p">:</span> <span class="s2">&quot;555-55-5555&quot;</span><span class="p">,</span>
+<span class="nt">&quot;gender&quot;</span><span class="p">:</span> <span class="s2">&quot;Male&quot;</span><span class="p">,</span>
+<span class="nt">&quot;race&quot;</span><span class="p">:</span> <span class="s2">&quot;Other&quot;</span> <span class="p">},</span>
+<span class="p">{</span> <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Landlord&quot;</span><span class="p">,</span>
+<span class="nt">&quot;business_name&quot;</span><span class="p">:</span> <span class="s2">&quot;XYZ Property Management&quot;</span><span class="p">,</span>
+<span class="nt">&quot;zip&quot;</span><span class="p">:</span> <span class="s2">&quot;55555&quot;</span><span class="p">,</span>
+<span class="nt">&quot;addr1&quot;</span><span class="p">:</span> <span class="s2">&quot;500 Test Boulevard&quot;</span><span class="p">,</span>
+<span class="nt">&quot;addr2&quot;</span><span class="p">:</span> <span class="s2">&quot;Apartment 333&quot;</span><span class="p">,</span>
+<span class="nt">&quot;city&quot;</span><span class="p">:</span> <span class="s2">&quot;Bensonville&quot;</span><span class="p">,</span>
+<span class="nt">&quot;state&quot;</span><span class="p">:</span> <span class="s2">&quot;IL&quot;</span><span class="p">,</span>
+ <span class="p">}</span> <span class="p">]</span>
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 

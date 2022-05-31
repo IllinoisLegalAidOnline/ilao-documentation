@@ -38,7 +38,7 @@ Returns an array of objects. Each object in the array contains:
     }]
 
 
-.. todo:: Need to update to better segment problems based on legal topic.
+.. note:: We have hard coded Drupal node ids for legal problems by topic for eviction, tanf, snap, and canex/new leaf.
 
 Get Legal Problem
 ===================
@@ -168,6 +168,9 @@ Returns an object containing metadata about the solution:
   * title
   * id (uuid)
   * order. This number can be used to show how_tos in a numbered list when needed.
+
+* has_legal_help (true or false), if there is 1 or more legal organizations attached to the solution
+* referral_org which is the id of the legal organization (currently only 1 is returned)
 
 .. code-block: JSON
 
@@ -353,6 +356,21 @@ Easy Forms usually produce multiple forms in a single package. Each Easy form ur
    "Additional Notice of Court Date for Motion to Vacate & Expunge Eligible Cannabis Convictions"]}
    ]}
 
+Get Legal Question List
+=========================
+
+Requires;
+
+* A content_type; defaults to problem
+* A uuid of the entity who has the question list attached (either the uuid of the problem or the uuid of the solution)
+
+.. note:: Currently this is used to get legal questions attached to a problem. It should be refactored to return legal questions for either a problem or solution depending on a passed-in content_type parameter.
+
+Returns an object named "questions" which is an array of question object. Each object then contains:
+
+* an id, which is the UUID for a question
+* the title of the question
+
 Get Legal Question
 ====================
 Requires a UUID for a specific legal question.
@@ -382,4 +400,17 @@ Returns an object:
        [ "Part of the law that legalized weed (also known as cannabis or marijuana) created ways to clear criminal records for weed. This is called expungement. There are different ways to have your record expunged, depending on what type of record you have.\n\n"]
      }
    }
+
+Get Legal Organization
+========================
+
+Requires uuid of an organization.
+
+Returns an object that is the:
+
+* name of the organization
+* description of the organization
+* body from the call-to-action for getting legal help
+* link to get legal help for the organization
+* heading from the call-to-action for getting legal help
 
