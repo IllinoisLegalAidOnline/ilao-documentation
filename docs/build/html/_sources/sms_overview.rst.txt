@@ -2,7 +2,25 @@
 SMS Overview
 ==================
 
-We deliver many things over SMS. As of January 2022, we are in the process of applying for a short code that will serve as a master landing spot for all of our SMS transactions. When this is implemented, the short code will route traffic as indicated below.
+We deliver many things over SMS.
+
+Short code implementation
+==========================
+
+ILAO has a short code that processes inbound requests:
+
+First prompt asks user for language and then passes the user to the specific flow.
+
++-----------------------+--------------------------------+
+| Keyword               | Flow                           |
++=======================+================================+
+| eviction              | Eviction Help (English)        |
++-----------------------+--------------------------------+
+| desalojo              | Eviction Help (Spanish)        |
++-----------------------+--------------------------------+
+| All other inbound     | OTIS (English)                 |
++-----------------------+--------------------------------+
+
 
 
 Inbound messaging

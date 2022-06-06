@@ -110,6 +110,7 @@
 <li class="toctree-l1"><a class="reference internal" href="rss_feeds.html">RSS Feeds</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ilao_api.html">ILAO’s API</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">SMS Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#short-code-implementation">Short code implementation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#inbound-messaging">Inbound messaging</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#rest-based-messaging">REST-based messaging</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#mermaid-code-for-images">Mermaid code for images</a></li>
@@ -188,7 +189,34 @@
             
   <div class="section" id="sms-overview">
 <h1>SMS Overview<a class="headerlink" href="#sms-overview" title="Permalink to this headline">¶</a></h1>
-<p>We deliver many things over SMS. As of January 2022, we are in the process of applying for a short code that will serve as a master landing spot for all of our SMS transactions. When this is implemented, the short code will route traffic as indicated below.</p>
+<p>We deliver many things over SMS.</p>
+<div class="section" id="short-code-implementation">
+<h2>Short code implementation<a class="headerlink" href="#short-code-implementation" title="Permalink to this headline">¶</a></h2>
+<p>ILAO has a short code that processes inbound requests:</p>
+<p>First prompt asks user for language and then passes the user to the specific flow.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 42%" />
+<col style="width: 58%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Keyword</p></th>
+<th class="head"><p>Flow</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>eviction</p></td>
+<td><p>Eviction Help (English)</p></td>
+</tr>
+<tr class="row-odd"><td><p>desalojo</p></td>
+<td><p>Eviction Help (Spanish)</p></td>
+</tr>
+<tr class="row-even"><td><p>All other inbound</p></td>
+<td><p>OTIS (English)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <div class="section" id="inbound-messaging">
 <h2>Inbound messaging<a class="headerlink" href="#inbound-messaging" title="Permalink to this headline">¶</a></h2>
 <p>Inbound messaging relies on a keyword being texted to the number and then routed correctly.</p>
