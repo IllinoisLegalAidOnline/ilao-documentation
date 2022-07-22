@@ -26,7 +26,7 @@ For each legal issue there is:
 
 * A case with a number. This matches the number from the SMS widget that asks the user to select their problem. Adding a new one should be added after the last one with the next sequential number.
 * processid: this is the unique process id from Legal Server;
-* lsc_code: this should be the string that matches Legal Server's problem code list;
+* lsc_code: this should be the string that matches Legal Server's incoming values for Legal Problem Code list;
 * search_term: [NEEDS COMPLETED];
 * content_url: this should be a landing page for sending a user when they exit the system for a legal topic;
 * rest_export: this is the url for the rest export of the related case acceptance view for the legal issue;

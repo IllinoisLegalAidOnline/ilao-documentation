@@ -13,6 +13,7 @@ Welcome to Illinois Legal Aid Online Product Documentation
    design_guide
    block_management
    people_management
+   legal_information
    legal_content_cms
    basic_pages_cms
    testimonials_cms
