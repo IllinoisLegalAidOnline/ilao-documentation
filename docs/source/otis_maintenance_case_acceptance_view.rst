@@ -65,7 +65,7 @@ There should be a filter criteria to limit the intake settings to the legal issu
 
 This should have a relationship of field_service_single. The Operator: is one of and the term should be the legal issue term (i.e. "Food stamps","Eviction","Renting a mobile home",etc.
 
-There should also be a filter criteria to limit the intake settigns to open intake settings. Search "Is Intake Setting open or not?" in the category OAS Intake Settings. Relationship should be field_service_single. Operator Is equal to. Is Intake Setting open or not? set to True.
+There should also be a filter criteria to limit the intake settings to open intake settings. Search "Is Intake Setting open or not?" in the category OAS Intake Settings. Relationship should be field_service_single. Operator Is equal to. Is Intake Setting open or not? set to True.
 
 Sort Criteria
 ----------------
