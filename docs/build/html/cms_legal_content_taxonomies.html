@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Legal taxonomies status &mdash; ILAO 2.22 documentation</title>
+  <title>Tagging content &mdash; ILAO 2.22 documentation</title>
   
 
   
@@ -94,6 +94,7 @@
 <li class="toctree-l1"><a class="reference internal" href="design_guide.html">Design &amp; Style Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="block_management.html">Custom blocks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="people_management.html">User Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="legal_information.html">Legal Information (Resources)</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="legal_content_cms.html">Legal Content CMS</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="cms_wysiwyg.html">WYSIWYG Tools</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cms_custom_tokens.html">Custom Tokens</a></li>
@@ -104,9 +105,9 @@
 <li class="toctree-l3"><a class="reference internal" href="cms_legal_content_annual_updates.html">Annual Updates</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cms_legal_content_workflows.html">Workflow Moderation States</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cms_legal_content_scheduling.html">Scheduling Revisions</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Legal taxonomies status</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#best-practices">Best practices</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#next-steps">Next steps</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Tagging content</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#by-topic">By Topic</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#by-user-role">By user role</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="cms_legal_content.html#related-content">Related content</a></li>
@@ -195,7 +196,7 @@
         
           <li><a href="cms_legal_content.html">Legal content type</a> &raquo;</li>
         
-      <li>Legal taxonomies status</li>
+      <li>Tagging content</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -214,9 +215,10 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="legal-taxonomies-status">
-<span id="taxonomy-status-label"></span><h1>Legal taxonomies status<a class="headerlink" href="#legal-taxonomies-status" title="Permalink to this headline">¶</a></h1>
-<p>This is accurate as of November 2021.</p>
+  <div class="section" id="tagging-content">
+<span id="taxonomy-status-label"></span><h1>Tagging content<a class="headerlink" href="#tagging-content" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="by-topic">
+<h2>By Topic<a class="headerlink" href="#by-topic" title="Permalink to this headline">¶</a></h2>
 <p>The legal issues taxonomy:</p>
 <ul class="simple">
 <li><p>is used to tag legal content at a granular legal issue</p></li>
@@ -224,43 +226,23 @@
 </ul>
 <p>The navigational IA:
 * Has terms created
-* All legal content has been updated to use it.</p>
+* All legal content has been updated to use this as its primary navigational terms</p>
 <div class="section" id="best-practices">
-<h2>Best practices<a class="headerlink" href="#best-practices" title="Permalink to this headline">¶</a></h2>
+<h3>Best practices<a class="headerlink" href="#best-practices" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Tag the content to the best category you can find. One is the goal - only tag multiple categories if the content truly fits both places.</p></li>
 <li><p>If you tag a piece of content to a taxonomy tag that starts with “another” or “other,” <strong>do not tag that piece of content to any other taxonomy tags</strong></p></li>
 </ul>
 </div>
-<div class="section" id="next-steps">
-<h2>Next steps<a class="headerlink" href="#next-steps" title="Permalink to this headline">¶</a></h2>
-<p>We envision that we will use the <a class="reference external" href="https://www.illinoislegalaid.org/admin/structure/taxonomy_manager/voc/navigational_ia">navigational IA taxonomy</a> for navigating the website by mid-2022.</p>
-<p>In order to do this, we must:</p>
-<ul>
-<li><p>Add translations for Spanish and Polish</p></li>
-<li><p>Populate the navigational IA taxonomy with our revised legal issues taxonomy (content) This will include for each language (English, Spanish, and Polish):</p>
-<blockquote>
-<div><ul class="simple">
-<li><p>Copying definitions</p></li>
-<li><p>Copying any alternates</p></li>
-<li><p>Copying icons</p></li>
-<li><p>Copying images</p></li>
-</ul>
-</div></blockquote>
-</li>
-<li><p>Implement changes to our front end:</p>
-<ul class="simple">
-<li><p>Remove existing path aliases so that they can be re-used (Gwen)</p></li>
-<li><p>Update navigational IA to use the current legal issues taxonomy (Gwen)</p></li>
-<li><p>Update category, subcategory, forms, practice resources to use new taxonomy (developers)</p></li>
-<li><p>Re-run sitemaps (Gwen)</p></li>
-</ul>
-</li>
-</ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>We will continue to tag content to both taxonomies as Get Legal Help relies heavily on the depth of the legal issues taxonomy and some relationships between content also use this information.</p>
 </div>
+<div class="section" id="by-user-role">
+<h2>By user role<a class="headerlink" href="#by-user-role" title="Permalink to this headline">¶</a></h2>
+<p>We can also tag legal content by user role, using the taxonomy used for online intake. Content should be tagged to a user role when:</p>
+<ul class="simple">
+<li><p>The content is specifically written for that audience OR</p></li>
+<li><p>the content is especially relevant to that audience (more so than the general website visitor population)</p></li>
+</ul>
+<img alt="_images/user-types-taxonomy.png" src="_images/user-types-taxonomy.png" />
 </div>
 </div>
 
