@@ -53,19 +53,23 @@ In addition, we need to relate the service and the service's matching intake set
 Once the relationships are set, the fields should be updated to include:
 
 * the uuid for the service.  This is found under title = UUID, category = Content. This must have a relationship of Content - labelled (service_uuid)
-* the id for the intake settings. This is found under title = id, category = OAS intake settings.  This should have a relationship of field_service_single in the drop down - labelled (intake_setting_id)
+* the id for the intake settings. This is found under title = id, category = OAS intake settings.  This should have a relationship of field_service_single in the drop down - labelled (intake_settings_id)
 * the uuid for the intake settings.  This is found under title = UUID, category = OAS intake settings.  This should have a relationship of field_service_single in the drop down - labelled (intake_uuid)
 * the name of the intake settings.  This is found under title = name, category = OAS intake settings.  This should have a relationship of field_service_single in the drop down - labelled (intake_name).
 
 Filter Criteria
 -------------------
-There should be a filter criteria to limit the intake settings to the legal issue that matches the webform.  For example, the SNAP webform is limited to intake settings with a legal issue of "Food stamps" (which automatically includes child terms). The Views filter requires that you match on the term NAME rather than the ID.
+The first filter criteria should limit the intake settings to the legal issue that matches the webform.  For example, the SNAP webform is limited to intake settings with a legal issue of "Food stamps" (which automatically includes child terms). The Views filter requires that you match on the term NAME rather than the ID.
 
 .. image:: ../assets/gn-webforms-filter.png
 
 This should have a relationship of field_service_single. The Operator: is one of and the term should be the legal issue term (i.e. "Food stamps","Eviction","Renting a mobile home",etc.
 
-There should also be a filter criteria to limit the intake settigns to open intake settings. Search "Is Intake Setting open or not?" in the category OAS Intake Settings. Relationship should be field_service_single. Operator Is equal to. Is Intake Setting open or not? set to True.
+The second filter criteria should limit the intake settings to open intake settings. Search "Is Intake Setting open or not?" in the category OAS Intake Settings. Relationship should be field_service_single. Operator Is equal to. Is Intake Setting open or not? set to True.
+
+The third filter criteria should limit the Case Acceptance Webforms to the one with the correct legal issue. Search "Legal issue" in the category Webform Case Acceptance - [legal issue] submission data. Operator Is equal to. The Legal issue should be the same legal issue id in the Case Acceptane Webform for the issue. (i.e. Expungement = 517681 (criminal records)).
+
+The final filter criteria should limit the Case Acceptance Webforms to ones that have been completed (not drafts). Search "Is draft" in the category Webform submission. Operator Is equal to. Is draft set to False.
 
 Sort Criteria
 ----------------
@@ -76,7 +80,7 @@ To ensure we are only counting the most recent webform for a service, the sort c
 
 Pager
 ---------
-Pager should be set to show all items
+Pager should be set to Display all items
 
 
 Sample REST Export

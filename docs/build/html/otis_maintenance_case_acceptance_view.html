@@ -94,6 +94,7 @@
 <li class="toctree-l1"><a class="reference internal" href="design_guide.html">Design &amp; Style Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="block_management.html">Custom blocks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="people_management.html">User Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="legal_information.html">Legal Information (Resources)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="legal_content_cms.html">Legal Content CMS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="basic_pages_cms.html">Basic pages</a></li>
 <li class="toctree-l1"><a class="reference internal" href="testimonials_cms.html">Testimonials Content Type</a></li>
@@ -254,17 +255,19 @@
 <p>Once the relationships are set, the fields should be updated to include:</p>
 <ul class="simple">
 <li><p>the uuid for the service.  This is found under title = UUID, category = Content. This must have a relationship of Content - labelled (service_uuid)</p></li>
-<li><p>the id for the intake settings. This is found under title = id, category = OAS intake settings.  This should have a relationship of field_service_single in the drop down - labelled (intake_setting_id)</p></li>
+<li><p>the id for the intake settings. This is found under title = id, category = OAS intake settings.  This should have a relationship of field_service_single in the drop down - labelled (intake_settings_id)</p></li>
 <li><p>the uuid for the intake settings.  This is found under title = UUID, category = OAS intake settings.  This should have a relationship of field_service_single in the drop down - labelled (intake_uuid)</p></li>
 <li><p>the name of the intake settings.  This is found under title = name, category = OAS intake settings.  This should have a relationship of field_service_single in the drop down - labelled (intake_name).</p></li>
 </ul>
 </div>
 <div class="section" id="filter-criteria">
 <h3><span class="section-number">3.1.4. </span>Filter Criteria<a class="headerlink" href="#filter-criteria" title="Permalink to this headline">¶</a></h3>
-<p>There should be a filter criteria to limit the intake settings to the legal issue that matches the webform.  For example, the SNAP webform is limited to intake settings with a legal issue of “Food stamps” (which automatically includes child terms). The Views filter requires that you match on the term NAME rather than the ID.</p>
+<p>The first filter criteria should limit the intake settings to the legal issue that matches the webform.  For example, the SNAP webform is limited to intake settings with a legal issue of “Food stamps” (which automatically includes child terms). The Views filter requires that you match on the term NAME rather than the ID.</p>
 <img alt="_images/gn-webforms-filter.png" src="_images/gn-webforms-filter.png" />
 <p>This should have a relationship of field_service_single. The Operator: is one of and the term should be the legal issue term (i.e. “Food stamps”,”Eviction”,”Renting a mobile home”,etc.</p>
-<p>There should also be a filter criteria to limit the intake settigns to open intake settings. Search “Is Intake Setting open or not?” in the category OAS Intake Settings. Relationship should be field_service_single. Operator Is equal to. Is Intake Setting open or not? set to True.</p>
+<p>The second filter criteria should limit the intake settings to open intake settings. Search “Is Intake Setting open or not?” in the category OAS Intake Settings. Relationship should be field_service_single. Operator Is equal to. Is Intake Setting open or not? set to True.</p>
+<p>The third filter criteria should limit the Case Acceptance Webforms to the one with the correct legal issue. Search “Legal issue” in the category Webform Case Acceptance - [legal issue] submission data. Operator Is equal to. The Legal issue should be the same legal issue id in the Case Acceptane Webform for the issue. (i.e. Expungement = 517681 (criminal records)).</p>
+<p>The final filter criteria should limit the Case Acceptance Webforms to ones that have been completed (not drafts). Search “Is draft” in the category Webform submission. Operator Is equal to. Is draft set to False.</p>
 </div>
 <div class="section" id="sort-criteria">
 <h3><span class="section-number">3.1.5. </span>Sort Criteria<a class="headerlink" href="#sort-criteria" title="Permalink to this headline">¶</a></h3>
@@ -276,7 +279,7 @@
 </div>
 <div class="section" id="pager">
 <h3><span class="section-number">3.1.6. </span>Pager<a class="headerlink" href="#pager" title="Permalink to this headline">¶</a></h3>
-<p>Pager should be set to show all items</p>
+<p>Pager should be set to Display all items</p>
 </div>
 </div>
 <div class="section" id="sample-rest-export">
