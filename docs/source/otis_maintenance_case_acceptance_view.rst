@@ -55,7 +55,8 @@ Once the relationships are set, the fields should be updated to include:
 * the uuid for the service.  This is found under title = UUID, category = Content. This must have a relationship of Content - labelled (service_uuid)
 * the id for the intake settings. This is found under title = id, category = OAS intake settings.  This should have a relationship of field_service_single in the drop down - labelled (intake_settings_id)
 * the uuid for the intake settings.  This is found under title = UUID, category = OAS intake settings.  This should have a relationship of field_service_single in the drop down - labelled (intake_uuid)
-* the name of the intake settings.  This is found under title = name, category = OAS intake settings.  This should have a relationship of field_service_single in the drop down - labelled (intake_name).
+* the name of the intake settings.  This is found under title = name, category = OAS intake settings.  This should have a relationship of field_service_single in the drop down - labelled (intake_name)
+* the id for the service. This is found under title = id, category = content. This should have a relationship of content - labelled (service_id).
 
 Filter Criteria
 -------------------
