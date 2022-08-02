@@ -41,7 +41,7 @@ Fields
 The fields should include data associated with the specific webform:
 
 * the legal issue field - labelled (legal_issue)
-* the service from the webform - labelled (Service)
+* the service from the webform - labelled (service)
 * each outcome field in the webform. These should be set to show all multiple values with a format of raw value - labelled ([raw field name for the outcome]).
 
 
