@@ -27,7 +27,7 @@ For each legal issue there is:
 * A case with a number. This matches the number from the SMS widget that asks the user to select their problem. Adding a new one should be added after the last one with the next sequential number.
 * processid: this is the unique process id from Legal Server;
 * lsc_code: this should be the string that matches Legal Server's incoming values for Legal Problem Code list;
-* search_term: [NEEDS COMPLETED];
+* search_term: this is the id for the legal issue taxonomy term. You can find this by going to https://www.illinoislegalaid.org/jsonapi/taxonomy_term/legal_issues?filter[foo][condition][operator]==&filter[foo][condition][path]=drupal_internal__tid&filter[foo][condition][value]=514486 (replace the id at the end for the actual term id; then grab the id.;
 * content_url: this should be a landing page for sending a user when they exit the system for a legal topic;
 * rest_export: this is the url for the rest export of the related case acceptance view for the legal issue;
 * break: be sure to end the legal issue with "break;"
