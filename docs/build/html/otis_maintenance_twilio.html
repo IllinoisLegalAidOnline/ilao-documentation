@@ -235,7 +235,7 @@
 <li><p>A case with a number. This matches the number from the SMS widget that asks the user to select their problem. Adding a new one should be added after the last one with the next sequential number.</p></li>
 <li><p>processid: this is the unique process id from Legal Server;</p></li>
 <li><p>lsc_code: this should be the string that matches Legal Server’s incoming values for Legal Problem Code list;</p></li>
-<li><p>search_term: [NEEDS COMPLETED];</p></li>
+<li><p>search_term: this is the id for the legal issue taxonomy term. You can find this by going to <a class="reference external" href="https://www.illinoislegalaid.org/jsonapi/taxonomy_term/legal_issues?filter[foo][condition][operator]==&amp;filter[foo][condition][path]=drupal_internal__tid&amp;filter[foo][condition][value]=514486">https://www.illinoislegalaid.org/jsonapi/taxonomy_term/legal_issues?filter[foo][condition][operator]==&amp;filter[foo][condition][path]=drupal_internal__tid&amp;filter[foo][condition][value]=514486</a> (replace the id at the end for the actual term id; then grab the id.;</p></li>
 <li><p>content_url: this should be a landing page for sending a user when they exit the system for a legal topic;</p></li>
 <li><p>rest_export: this is the url for the rest export of the related case acceptance view for the legal issue;</p></li>
 <li><p>break: be sure to end the legal issue with “break;”</p></li>

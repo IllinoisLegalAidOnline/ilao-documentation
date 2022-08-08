@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Legal content formats &mdash; ILAO 2.22 documentation</title>
+  <title>Docassemble Embed &mdash; ILAO 2.22 documentation</title>
   
 
   
@@ -43,8 +43,8 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Easy Forms" href="cms_legal_content_easyforms.html" />
-    <link rel="prev" title="Legal content type" href="cms_legal_content.html" /> 
+    <link rel="next" title="Annual Updates" href="cms_legal_content_annual_updates.html" />
+    <link rel="prev" title="Flowcharts" href="cms_flowcharts.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -101,7 +101,7 @@
 <li class="toctree-l2"><a class="reference internal" href="cms_redirects.html">Creating redirects between pages</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cms_content_management_tags.html">Content management tags</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="cms_legal_content.html">Legal content type</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Legal content formats</a><ul>
+<li class="toctree-l3 current"><a class="reference internal" href="cms_legal_content_by_type.html">Legal content formats</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="cms_legal_content_easyforms.html">Easy Forms</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cms_legal_content_guides.html">Guides</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cms_legal_content_iicles.html">IICLE Content</a></li>
@@ -113,8 +113,8 @@
 <li class="toctree-l4"><a class="reference internal" href="cms_legal_content_teach_me.html">Teach Me Content</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cms_legal_content_decision_tree.html">Decision trees</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cms_flowcharts.html">Flowcharts</a></li>
-<li class="toctree-l4"><a class="reference internal" href="cms_legal_content_docassemble.html">Docassemble Embed</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#common-elements">Common Elements</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Docassemble Embed</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_legal_content_by_type.html#common-elements">Common Elements</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="cms_legal_content_annual_updates.html">Annual Updates</a></li>
@@ -207,13 +207,15 @@
         
           <li><a href="cms_legal_content.html">Legal content type</a> &raquo;</li>
         
-      <li>Legal content formats</li>
+          <li><a href="cms_legal_content_by_type.html">Legal content formats</a> &raquo;</li>
+        
+      <li>Docassemble Embed</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="_sources/cms_legal_content_by_type.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/cms_legal_content_docassemble.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -226,65 +228,37 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="legal-content-formats">
-<h1>Legal content formats<a class="headerlink" href="#legal-content-formats" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">Contents:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="cms_legal_content_easyforms.html">Easy Forms</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cms_legal_content_guides.html">Guides</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cms_legal_content_iicles.html">IICLE Content</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cms_legal_content_videos.html">Video content</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cms_legal_content_howto.html">How-to content</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cms_legal_content_static_forms.html">Blank forms</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cms_legal_content_link.html">Link content</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cms_legal_content_download.html">File content</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cms_legal_content_teach_me.html">Teach Me Content</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cms_legal_content_decision_tree.html">Decision trees</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cms_flowcharts.html">Flowcharts</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cms_legal_content_docassemble.html">Docassemble Embed</a></li>
+  <div class="section" id="docassemble-embed">
+<h1>Docassemble Embed<a class="headerlink" href="#docassemble-embed" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="master-configuration">
+<h2>Master configuration<a class="headerlink" href="#master-configuration" title="Permalink to this headline">¶</a></h2>
+<p>The master configuration applies to all embeddeded Docassemble interviews. It includes 3 components:</p>
+<ul class="simple">
+<li><p>Docassemble server url. This url should not include an ending /</p></li>
+<li><p>A default style for the embedded interview</p></li>
+<li><p>A link to a Bootstrap CSS url on the docassemble server</p></li>
 </ul>
+<p>These are configuration variables. When changed on production, let Gwen know so she can ensure the developers back-port the configuration so that it is not overwritten in future deployments.</p>
 </div>
+<div class="section" id="adding-to-legal-content">
+<h2>Adding to legal content<a class="headerlink" href="#adding-to-legal-content" title="Permalink to this headline">¶</a></h2>
+<p>To embed a Docassemble interview, add a content block of type “Docassemble Embed”</p>
+<img alt="_images/cms-docassemble-embed.png" src="_images/cms-docassemble-embed.png" />
+<p>Then:</p>
+<ul class="simple">
+<li><p>Leave the default docassemble URL and title</p></li>
+<li><p>Ensure display title is not checked</p></li>
+<li><p>Paste in the .yml file name from the Docassemble server</p></li>
+<li><p>You can change the default style of the div if needed</p></li>
+<li><p>Check iframe as the type of embedding</p></li>
+<li><p>Check the two boxes for full width and navigation bar</p></li>
+<li><p>Select the content type: Decision tree or Easy Form. When selected, this will set the primary content type correctly.</p></li>
+</ul>
+<p>You can add other content block types ahead of or after the embedded interview, for example adding a text block to introduce the interview.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Content formats above is a work in progress.</p>
+<p>Direct Embed is not supported at this time. It is unclear if the hide the navigation bar has any impact when using the iframe option.</p>
 </div>
-<div class="section" id="common-elements">
-<h2>Common Elements<a class="headerlink" href="#common-elements" title="Permalink to this headline">¶</a></h2>
-<p>All legal content, regardless of format:</p>
-<ul class="simple">
-<li><p>Requires a title</p></li>
-<li><p>Requires a meta description and is limited to 300 characters. The meta description is used on communications outside of the website, including:</p>
-<ul>
-<li><p>social media posts</p></li>
-<li><p>eUpdates</p></li>
-<li><p>RSS and API feeds</p></li>
-<li><p>SERP snippets in our sitemap XML files</p></li>
-</ul>
-</li>
-<li><p>Requires a content description and is limited to 200 characters. The content description is used on the website for search results and related blocks.</p></li>
-<li><p>Requires one or more selections in the Navigational IA. This is not used on the website (see <a class="reference internal" href="cms_legal_content_taxonomies.html#taxonomy-status-label"><span class="std std-ref">Tagging content</span></a>) yet but will replace the legal issues taxonomy for navigation through category/sub-category and form library pages.</p></li>
-<li><p>Requires one or more selections in the legal category. This is used currently for navigation and for relating content and for linking content with OTIS/Get Legal Help.</p></li>
-<li><p>Requires a single selection for primary legal category. This is where breadcrumbs should generate from when a user lands on a page.</p></li>
-<li><p>Add an image. Images are not required but should be added as this is used for social media. If the image is not added, a default image from the page (usually the contact us or fundraising icons will be used).</p></li>
-<li><p>Select zero or more annual updates. See <a class="reference internal" href="cms_legal_content_annual_updates.html#annual-updates-label"><span class="std std-ref">Annual Updates</span></a></p></li>
-<li><p>Select the appropriate jurisdiction for the content.</p></li>
-<li><p>Select the legal position: Neutral, Plaintiff/petitioner, or Defendant/respondent depending on the content.</p></li>
-<li><p>Requires one or more content blocks. See the individual format links above. The types of content blocks used will determine the content format.</p></li>
-<li><p>Requires a content level selection. Advanced content will appear in practice resources. Basic resources will be included in public-facing RSS feeds.</p></li>
-<li><p>Optionally, restrict the content to legal aid members or pro bono members or both. This will add an access layer to the content, requiring the user to be logged in with the correct role to view.</p></li>
-<li><p>Optionally, set the content to be a best bet for one or more search terms. See <a class="reference internal" href="search_content.html#search-content-label"><span class="std std-ref">Manipulating Search</span></a></p></li>
-<li><p>Optionally, set up to 3 recommended/related content nodes. See previous page.</p></li>
-<li><p>Indicate whether you want the content to be translated. This defaults to no.</p></li>
-<li><p>When editing English content, you can flag the translation as outdated. This defaults to no.</p></li>
-<li><p>Optionally, set the last revised date. When creating content, this will default to the current date/time. When editing content, this should be updated whenever  staff user makes a substantive change to the content. Does not include typos, grammatical fixes, or style changes. Does include anything that adds or removes information, especially law changes.</p></li>
-<li><p>Optionally, set the last reviewed date/time. When creating content, this will default to the current date/time. The last reviewed date when a subject matter expert has done a substantive review of the content to ensure legal accuracy.</p></li>
-<li><p>For blog posts, set the author/subject matter expert.</p></li>
-<li><p>Optionally, add appropriate content management tags.</p></li>
-<li><p>The word count will automatically update. See <a class="reference internal" href="cms_word_counts.html#word-count-label"><span class="std std-ref">Word counts</span></a></p></li>
-<li><p>Set the status. When creating content, it defaults to draft/revise. Until published, it will not be visible on the website to users.</p></li>
-<li><p>A revision log message is required.</p></li>
-</ul>
 </div>
 </div>
 
@@ -294,8 +268,8 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="cms_legal_content_easyforms.html" class="btn btn-neutral float-right" title="Easy Forms" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="cms_legal_content.html" class="btn btn-neutral float-left" title="Legal content type" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="cms_legal_content_annual_updates.html" class="btn btn-neutral float-right" title="Annual Updates" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="cms_flowcharts.html" class="btn btn-neutral float-left" title="Flowcharts" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

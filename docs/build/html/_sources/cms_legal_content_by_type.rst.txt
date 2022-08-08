@@ -11,15 +11,16 @@ Legal content formats
    cms_legal_content_iicles
    cms_legal_content_videos
    cms_legal_content_howto
-   cms_legal_content_static_forms   
+   cms_legal_content_static_forms
    cms_legal_content_link
    cms_legal_content_download
    cms_legal_content_teach_me
    cms_legal_content_decision_tree
    cms_flowcharts
-   
+   cms_legal_content_docassemble
+
 .. note::  Content formats above is a work in progress.
-   
+
 Common Elements
 =================
 
@@ -32,7 +33,7 @@ All legal content, regardless of format:
   * eUpdates
   * RSS and API feeds
   * SERP snippets in our sitemap XML files
-  
+
 * Requires a content description and is limited to 200 characters. The content description is used on the website for search results and related blocks.
 
 * Requires one or more selections in the Navigational IA. This is not used on the website (see :ref:`taxonomy-status-label`) yet but will replace the legal issues taxonomy for navigation through category/sub-category and form library pages.
@@ -43,13 +44,13 @@ All legal content, regardless of format:
 
 * Add an image. Images are not required but should be added as this is used for social media. If the image is not added, a default image from the page (usually the contact us or fundraising icons will be used).
 
-* Select zero or more annual updates. See :ref:`annual-updates-label` 
+* Select zero or more annual updates. See :ref:`annual-updates-label`
 
 * Select the appropriate jurisdiction for the content.
 
 * Select the legal position: Neutral, Plaintiff/petitioner, or Defendant/respondent depending on the content.
 
-* Requires one or more content blocks. See the individual format links above. The types of content blocks used will determine the content format. 
+* Requires one or more content blocks. See the individual format links above. The types of content blocks used will determine the content format.
 
 * Requires a content level selection. Advanced content will appear in practice resources. Basic resources will be included in public-facing RSS feeds.
 
@@ -65,9 +66,9 @@ All legal content, regardless of format:
 
 * Optionally, set the last revised date. When creating content, this will default to the current date/time. When editing content, this should be updated whenever  staff user makes a substantive change to the content. Does not include typos, grammatical fixes, or style changes. Does include anything that adds or removes information, especially law changes.
 
-* Optionally, set the last reviewed date/time. When creating content, this will default to the current date/time. The last reviewed date when a subject matter expert has done a substantive review of the content to ensure legal accuracy. 
+* Optionally, set the last reviewed date/time. When creating content, this will default to the current date/time. The last reviewed date when a subject matter expert has done a substantive review of the content to ensure legal accuracy.
 
-* For blog posts, set the author/subject matter expert. 
+* For blog posts, set the author/subject matter expert.
 
 * Optionally, add appropriate content management tags.
 
@@ -79,7 +80,7 @@ All legal content, regardless of format:
 
 
 
-  
-  
-     
+
+
+
 
