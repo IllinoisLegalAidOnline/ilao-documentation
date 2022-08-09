@@ -21,12 +21,13 @@ Selecting I quit takes the user to this screen:
 Creating Dialogues & Segments
 ==============================
 
-As a practice we:
+As a practice:
 
-* Dialogues to be used as starting points in OTIS are set against the top level LSC problem code.
-* Dialogues to be used within Guided Navigation to surface sub-issues are not tagged to OTIS.
-* Limit segments to 1 question per segment, unless that segment is setting a single field.
-* Users may be moved from one dialogue to another based on answers. For example, a user may enter on Bankruptcy and get moved to Foreclosure when they are seeking a bankruptcy to save their home.
+* Dialogues used as starting points in OTIS should match top level LSC problem codes.
+* Dialogues used within Guided Navigation to surface sub-issues are not matched to LSC problem codes.
+* Segments within Dialogues are set to 1 question or instruction (elements) per segment.
+* Segments within Dialogues can have multiple elements if nothing is being displayed to the OTIS applicant.
+* Applicants may be moved from one dialogue to another based on answers. For example, an applicant may enter on Bankruptcy and get moved to Foreclosure when they are seeking a bankruptcy to save their home.
 
 Examples
 -----------
@@ -60,10 +61,34 @@ Choose New Custom Lookup from the types. The Custom Lookup will automatically be
 
 Step 4
 ^^^^^^^^
+Add the Custom Field to the Segment by adding an element, select Field to capture from the dropdown, and find the field using the "ilao-[issue)_short title" provided earlier. Once the correct field is identified, give the field a Label. The label will be displayed to the applicant as the question.
+
+To add instructions to a segment, simply Add element, select Instructions and complete the box with the text you want to display to the applicant. 
+
+Step 5
+^^^^^^^^
+[add output expressions]
+
+Step 6
+^^^^^^^^
+[create outcomes]
+[within Dialogue or switch to another]
+[rest-export]
+
+Step 7
+^^^^^^^
+[Create Primary Form] - 
+
+New Intake Form - give name like, "GN-SNAP" to easily identify the form. A description is not necessary. Create New Process Containing This Form = yes; Active = yes; Add Continue Button = yes; Process type = Intake. Under Form Elements select Block and then choose Dialog Runner and Add. Within the Dialogue Runner, choose the Dialogue created above. Scroll to the bottom and Continue.
+
 Create a Navigation Dialogue, which will route the user to the appropriate Interactive Dialogue. 
 Add the Dialogue Runner Block to the form where the user should see the Dialogues.
 
 [further expansion here]
+
+Step 8
+^^^^^^^
+[Update Process created in Step 7] - rename with the following naming convention ilao-GN-[top legal issue]_[more specific legal issue]. You may not have a more specific legal issue. Two examples of names are ilao-GN-HSG_landlord and ilao-GN-SNAP. *Process can be used with the Guided Navigation API must be set to yes.* For ease of adding the legal issue to SMS and the website, copy to Process UUID and paste it in the Process Description
 
 Integration into Website
 ==========================
