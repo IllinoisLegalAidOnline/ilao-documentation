@@ -22,6 +22,27 @@ The main landing page for each of the 9 top-level categories shows all of the se
 
 Clicking on the "View all" when there are more than 4 items will open the subcategory page. This page shows an image, the category title and description and then all of the various pieces of legal content.
 
+Items are ordered by:
+
+* Sticky at top of list (when tagged, these will appear first)
+* Page views descending (based on last 60 days)
+* Date revised descending
+
+.. note:: Only Legal Problems can be marked sticky to appear first on the list.
+
+
+Sample views
+===============
+
+Mobile
+----------
+
+.. image:: ../assets/legal_issues_mobile.png
+
+Desktop
+----------
+
+.. image:: ../assets/legal_issues_desktop.png
 
 
 
