@@ -1,13 +1,10 @@
 =====================================
-Get Legal Help text line workflow
+Short code workflow
 =====================================
 
-This documents the flow of the OTIS Main flow in Twilio Studio.
+This documents the flow of the short code flow to get legal help over SMS.
 
 
-.. note::
-
-  * Initial pilot is limited to unemployment, food stamps, and TANF
 
 Prescreening
 ===============

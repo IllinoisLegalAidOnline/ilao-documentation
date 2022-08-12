@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Get Legal Help text line workflow &mdash; ILAO 2.22 documentation</title>
+  <title>Short code workflow &mdash; ILAO 2.22 documentation</title>
   
 
   
@@ -91,9 +91,10 @@
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="design_guide.html">Design Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="design_guide.html">Design &amp; Style Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="block_management.html">Custom blocks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="people_management.html">User Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="legal_information.html">Legal Information (Resources)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="legal_content_cms.html">Legal Content CMS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="basic_pages_cms.html">Basic pages</a></li>
 <li class="toctree-l1"><a class="reference internal" href="testimonials_cms.html">Testimonials Content Type</a></li>
@@ -110,9 +111,10 @@
 <li class="toctree-l2"><a class="reference internal" href="otis_ai_integration.html">OTIS AI Integration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="otis_third_party_support.html">Supported Integrations</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="otis_sms_intake.html">Online Intake Over SMS</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="otis_sms_as_a_user.html">Getting legal help over SMS</a></li>
 <li class="toctree-l3"><a class="reference internal" href="otis_sms_intake_architecture.html">General architecture</a></li>
 <li class="toctree-l3"><a class="reference internal" href="otis_sms_functions.html">Twilio Functions</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Get Legal Help text line workflow</a><ul>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Short code workflow</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#prescreening">Prescreening</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#guided-navigation-triage">Guided Navigation Triage</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#guided-navigation-evaluation">Guided Navigation Evaluation</a></li>
@@ -124,8 +126,10 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="sms_eviction.html">Eviction SMS Flow</a></li>
 <li class="toctree-l3"><a class="reference internal" href="otis_maintenance.html">Maintaining and expanding OTIS SMS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="otis_sms_translations.html">OTIS SMS Translations</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="otis_facebook.html">Facebook Integrations</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="site_search.html">Site Search</a></li>
@@ -134,10 +138,11 @@
 <li class="toctree-l1"><a class="reference internal" href="taxonomies.html">Taxonomies</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rss_feeds.html">RSS Feeds</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ilao_api.html">ILAO’s API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sms_overview.html">SMS Overview</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Workarounds:</span></p>
+<p class="caption"><span class="caption-text">See also:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="legal_content_cms.html">Legal Content CMS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="creating_docs_in_github.html">Creating new docs in Github</a></li>
 </ul>
 
             
@@ -190,7 +195,7 @@
         
           <li><a href="otis_sms_intake.html">Online Intake Over SMS</a> &raquo;</li>
         
-      <li>Get Legal Help text line workflow</li>
+      <li>Short code workflow</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -209,15 +214,9 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="get-legal-help-text-line-workflow">
-<h1>Get Legal Help text line workflow<a class="headerlink" href="#get-legal-help-text-line-workflow" title="Permalink to this headline">¶</a></h1>
-<p>This documents the flow of the OTIS Main flow in Twilio Studio.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<ul class="simple">
-<li><p>Initial pilot is limited to unemployment, food stamps, and TANF</p></li>
-</ul>
-</div>
+  <div class="section" id="short-code-workflow">
+<h1>Short code workflow<a class="headerlink" href="#short-code-workflow" title="Permalink to this headline">¶</a></h1>
+<p>This documents the flow of the short code flow to get legal help over SMS.</p>
 <div class="section" id="prescreening">
 <h2>Prescreening<a class="headerlink" href="#prescreening" title="Permalink to this headline">¶</a></h2>
 <p>Initial message</p>
