@@ -137,8 +137,20 @@ Unless otherwise noted, the JSON element is at counseling_agencies[i]
 +--------------------------------------+----------------------------------------------+
 | Source                               | "ConsumerFinanceHousingCounselors"           |
 +--------------------------------------+----------------------------------------------+
-| Navigational IA                      |                                              |
+| Navigational IA                      |  If proudcts supported includes "Rental      |
+|                                      |  housing counseling," being evicted; if      |
+|                                      |  includes any term with mortgage delingquency|
+|                                      |  then "foreclosure of a home I own"          |
 +--------------------------------------+----------------------------------------------+
+| Website                              | .website                                     |
++--------------------------------------+----------------------------------------------+
+
+Hard-coded content and meta description: Housing counselors approved by HUD offer free or low cost independent advice on renting, foreclosures, and other housing and credit issues.
+
+
+
+
+
 
 
 
