@@ -24,7 +24,7 @@ Then:
 
 * Leave the default docassemble URL and title
 * Ensure display title is not checked
-* Paste in the .yml file name from the Docassemble server
+* Enter the .yml file name in the following format: docassemble.[package name]:data/questions/[interview name].yml
 * You can change the default style of the div if needed
 * Check iframe as the type of embedding
 * Check the two boxes for full width and navigation bar
