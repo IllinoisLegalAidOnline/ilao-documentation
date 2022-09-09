@@ -29,6 +29,7 @@ The monthly version includes content from the current date minus 30 days
 The content includes:
 
 * Legal content, portal main pages, tools, toolboxes, and ADRM content that has a last revised date within the selected timeframe
+* Legal content that has a created date = last revised date will show as "New" in the eUpdate
 * The next 3 upcoming calendar events
 * The 3 most recently updated published job postings
 

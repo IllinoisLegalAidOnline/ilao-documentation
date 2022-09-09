@@ -19,6 +19,15 @@ The first piece of Get Legal Help is a triage system designed to route the user 
    :width: 50%
    :alt: Mobile view of Get Legal Help page.
 
+Hybrid Triage
+================
+The current website users two different methods for triaging users: webforms and Guided Navigation via LegalServer's API. The user experience differs depending on the legal issue.
+
+As of September 2022, Guided Navigation is live for TANF, food stamps, unemployment.
+
+Triage via webform
+-----------------------
+
 When the user submits the form, the system:
 
 Step 1: Evaluates the term entered by the user. If the term:
@@ -50,19 +59,25 @@ Step 3b:  When there are no matches, the user is provided referrals.
 
 When a user is diverted from Step 3a and there are multiple organizations, the user will be routed back to the next organization until there are no organizations they could apply to.
 
+Guided Navigation Triage
+---------------------------
 
-.. todo:: We are in the process of implementing Guided Navigation into the website and streamlining triage for legal issues that use Guided Navigation to allow us to eliminate the round robin in 3A and offer the user choices in those legal issues.
+Guided navigation-based triage offers improvement over the webform implementation and is being rolled out across all legal issues.
 
-Guided Navigation Implementation on Website
-==============================================
+When Guided navigation is available:
 
-Initially, we are running a hybrid webform/Guided Navigation solution.
+* The user is triaged through the legal issue that matches their query. This may be slightly duplicative of the text input but ensures consistency
+* The system matches the user to 1 or more legal organizations
+* The user is provided a list of matching organizations to pick from. This list is prioritized based on the same algorithm as webforms (reverse last intake).
 
-To determine if Guided Navigation should be used over webforms:
+Qualifiers
+^^^^^^^^^^^^^
 
-* The system checks to see if the Legal Issues taxonomy has a Rest export and Guided Navigation process ID for the term or its first parent.
+If the selected organization has additional questions beyond the initial triage, those questions are then asked.
 
-* If there are no matches, the system defaults to webforms or referrals.
+If the user still qualifies, they proceed to intake.
+If the user is no longer a match to the organization, they are:
 
-
+* Returned to the matches screen with the no-longer matching organization crossed out to make another selection when other matches are available
+* Provided referrals with a message that they do not qualify with that organization and there are no other OTIS partners available.
 

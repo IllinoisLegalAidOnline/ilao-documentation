@@ -126,6 +126,7 @@ The e-transfer leverages Legal Server' intake API.
 
 .. note:: In 2022 - 2023, we will begin to leverage the program, adverse_parties, customField, and jsonPayloadItem fields.
 
+
 Adverse parties
 -----------------
 
@@ -184,4 +185,21 @@ Supported types are:
    "city": "Bensonville",
    "state": "IL",
     } ]
+
+Reminders
+===============
+
+Reminders are sent to completed e-transfers as follows:
+
+* For those users who have a callback scheduled
+
+  * By SMS, 1 hour and 24 hours before appointment if they opted-in to text
+  * By email, 1 hour before appointment if they have not opted-in to text
+
+* For those users who are instructred to call the organization:
+
+  * By SMS, 1 day after their application, if they have opted in to text messaging
+  * By email, 1 day after their application, if they have not opted in to text messaging
+
+
 
