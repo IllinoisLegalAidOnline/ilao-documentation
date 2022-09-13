@@ -1,0 +1,309 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>SMS Short Code Architecture &mdash; ILAO 2.22 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
+  <link rel="stylesheet" href="../html/_static/css/theme_overrides.css" type="text/css" />
+  <link rel="stylesheet" href="../build/html/_static/css/theme_overrides.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme_overrides.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> ILAO
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="design_guide.html">Design &amp; Style Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="block_management.html">Custom blocks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="people_management.html">User Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="legal_information.html">Legal Information (Resources)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="legal_content_cms.html">Legal Content CMS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basic_pages_cms.html">Basic pages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="testimonials_cms.html">Testimonials Content Type</a></li>
+<li class="toctree-l1"><a class="reference internal" href="webforms_cms.html">Webforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="translation_cms.html">Translation Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="calendar_cms.html">Calendar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jobs_cms.html">Job Listings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="discussion_groups.html">Discussion groups</a></li>
+<li class="toctree-l1"><a class="reference internal" href="otis_cms.html">Get Legal Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="site_search.html">Site Search</a></li>
+<li class="toctree-l1"><a class="reference internal" href="site_faqs.html">Site FAQs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="other_cms_features.html">Other Website Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="taxonomies.html">Taxonomies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rss_feeds.html">RSS Feeds</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ilao_api.html">ILAO’s API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sms_overview.html">SMS Overview</a></li>
+</ul>
+<p class="caption"><span class="caption-text">See also:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="creating_docs_in_github.html">Creating new docs in Github</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ILAO</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>SMS Short Code Architecture</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/sms_superbot.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="sms-short-code-architecture">
+<h1>SMS Short Code Architecture<a class="headerlink" href="#sms-short-code-architecture" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="subflow-otis-get-location">
+<h2>Subflow: Otis Get Location<a class="headerlink" href="#subflow-otis-get-location" title="Permalink to this headline">¶</a></h2>
+<p>Purpose: Determines whether the user is in Illinois or not.</p>
+<p>Parameters: none
+Returns:</p>
+<p>first_name
+location (from pilot-validate-zipcode function)</p>
+</div>
+<div class="section" id="subflow-otisguided-navigation">
+<h2>Subflow: OTISGuided Navigation<a class="headerlink" href="#subflow-otisguided-navigation" title="Permalink to this headline">¶</a></h2>
+<p>Purpose: Executes a specific Guided Navigation segment</p>
+<p>Parameters: process_id
+Returns:</p>
+<ul class="simple">
+<li><p>Status</p></li>
+<li><p>Profile (the completed Guided Navigation profile)</p></li>
+<li><p>Notes</p></li>
+<li><p>rest_export</p></li>
+<li><p>lsc_code</p></li>
+<li><p>content_url</p></li>
+</ul>
+</div>
+<div class="section" id="subflow-get-legal-issue">
+<h2>Subflow: Get Legal Issue<a class="headerlink" href="#subflow-get-legal-issue" title="Permalink to this headline">¶</a></h2>
+<p>Purpose: Validates input from the user and gets the correct process id</p>
+<p>Parameters: keyword</p>
+<p>Returns: status (success, failed)
+If success, returns:</p>
+<ul class="simple">
+<li><p>process_id</p></li>
+<li><p>lsc_code</p></li>
+<li><p>search_term</p></li>
+<li><p>content_url</p></li>
+<li><p>rest_export</p></li>
+</ul>
+</div>
+<div class="section" id="subflow-run-household-information">
+<h2>Subflow: Run household information<a class="headerlink" href="#subflow-run-household-information" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="subflow-otis-income-intake">
+<h2>Subflow: OTIS income intake<a class="headerlink" href="#subflow-otis-income-intake" title="Permalink to this headline">¶</a></h2>
+<p>Purpose: Gathers income information and validates income eligilibty</p>
+<p>Parameters: Organization match</p>
+<p>Returns:</p>
+<ul class="simple">
+<li><p>total_income</p></li>
+<li><p>income_private_disability</p></li>
+<li><p>income_investments</p></li>
+<li><p>income_tanf</p></li>
+<li><p>income_veterans_amount</p></li>
+<li><p>income_unemployment</p></li>
+<li><p>income_ssi</p></li>
+<li><p>income_social_security</p></li>
+<li><p>income_alimony</p></li>
+<li><p>income_child_support</p></li>
+<li><p>income_workers_comp</p></li>
+<li><p>income_pension</p></li>
+<li><p>income_investments</p></li>
+<li><p>income_other_income</p></li>
+<li><p>income_wages</p></li>
+<li><p>income_self_employment</p></li>
+<li><p>wage_frequency</p></li>
+</ul>
+</div>
+<div class="section" id="subflow-otis-demographics">
+<h2>Subflow: OTIS demographics<a class="headerlink" href="#subflow-otis-demographics" title="Permalink to this headline">¶</a></h2>
+<p>Purpose: Asks and validates demographic information</p>
+<p>Parameters: None</p>
+<p>Returns:</p>
+<ul class="simple">
+<li><p>marital_status</p></li>
+<li><p>preferred_language</p></li>
+<li><p>race</p></li>
+<li><p>ethnicity</p></li>
+<li><p>marital_status</p></li>
+</ul>
+<p>Subflow:</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Gwen Daniels.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
