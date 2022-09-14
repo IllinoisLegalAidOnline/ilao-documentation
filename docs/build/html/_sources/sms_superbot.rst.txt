@@ -52,6 +52,14 @@ If success, returns:
 Subflow: Run household information
 ===================================
 
+TO DO
+Purpose: Gathers last name, household size, aliases and does an initial income check
+
+Returns: status (success, failed)
+If success, also returns:
+
+*
+
 
 Subflow: OTIS income intake
 ===========================
@@ -96,7 +104,45 @@ Returns:
 * ethnicity
 * marital_status
 
-Subflow:
+Subflow: Get matches
+=======================
+
+
+Sublfow: OTIS appointment scheduler
+======================================
+
+Purpose: Schedules an appointment when a callback is available
+
+Parameters:
+
+* Intake settings id
+* Token
+
+Returns:
+
+* Callback_selected (user-friendly format)
+* Callback_selected_term (taxonomy-friendly format)
+
+
+Sublfow: OTIS contact information
+====================================
+
+Purpose: To gather contact information from the user
+
+Parameters:
+* user_phone
+* zip_code
+
+Returns:
+
+* Contact phone
+* Email
+* Street address
+* City
+
+
+
+
 
 
 
