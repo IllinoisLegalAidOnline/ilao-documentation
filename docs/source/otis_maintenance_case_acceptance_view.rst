@@ -40,9 +40,9 @@ Fields
 -----------
 The fields should include data associated with the specific webform:
 
-* the legal issue field - labelled (legal_issue). This should be set to value.
-* the service from the webform - labelled (service). This should be set to Entity ID
-* each outcome field in the webform. These should be set to show all multiple values with a format of raw value - labelled ([raw field name for the outcome]).
+* the legal issue field - labelled (**legal_issue**). This should be set to **value**.
+* the service from the webform - labelled (**service**). This should be set to **Entity ID**.
+* each **outcome field** in the webform. These should be set to show all multiple values with a format of **raw value** - labelled ([raw field name for the outcome]).
 
 
 In addition, we need to relate the service and the service's matching intake settings. To do this, first, we need to create the relationships.
