@@ -40,9 +40,9 @@ Fields
 -----------
 The fields should include data associated with the specific webform:
 
-* the legal issue field - labelled (legal_issue). This should be set to value.
-* the service from the webform - labelled (service). This should be set to Entity ID
-* each outcome field in the webform. These should be set to show all multiple values with a format of raw value - labelled ([raw field name for the outcome]).
+* the legal issue field - labelled (**legal_issue**). This should be set to **value**.
+* the service from the webform - labelled (**service**). This should be set to **Entity ID**.
+* each **outcome field** in the webform. These should be set to show all multiple values with a format of **raw value** - labelled ([raw field name for the outcome]).
 
 
 In addition, we need to relate the service and the service's matching intake settings. To do this, first, we need to create the relationships.
@@ -57,6 +57,7 @@ Once the relationships are set, the fields should be updated to include:
 * the uuid for the intake settings.  This is found under title = UUID, category = OAS intake settings.  This should have a relationship of field_service_single in the drop down - labelled (intake_uuid)
 * the name of the intake settings.  This is found under title = name, category = OAS intake settings.  This should have a relationship of field_service_single in the drop down - labelled (intake_name)
 * the id for the service. This is found under title = id, category = content. This should have a relationship of content - labelled (service_id).
+   * this may not be necessary. the service id is being captured above under service 
 
 Filter Criteria
 -------------------
