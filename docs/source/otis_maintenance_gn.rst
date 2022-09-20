@@ -44,7 +44,15 @@ Step 7
 ^^^^^^^
 [Create Primary Form] - 
 
-New Intake Form - give name like, "GN-SNAP" to easily identify the form. A description is not necessary. Create New Process Containing This Form = yes; Active = yes; Add Continue Button = yes; Process type = Intake. Under Form Elements select Block and then choose Dialog Runner and Add. Within the Dialogue Runner, choose the Dialogue created above. Scroll to the bottom and Continue.
+* New Intake Form - give name like, "GN-SNAP" to easily identify the form. 
+* A description is not necessary. 
+* Create New Process Containing This Form = yes; 
+* Active = yes; 
+* Add Continue Button = yes; 
+* Process type = Intake. 
+* Under Form Elements select Block and then choose Dialog Runner and Add. 
+* Within the Dialogue Runner, choose the Dialogue created above. 
+* Scroll to the bottom and Continue.
 
 Create a Navigation Dialogue, which will route the user to the appropriate Interactive Dialogue. 
 Add the Dialogue Runner Block to the form where the user should see the Dialogues.
@@ -53,4 +61,8 @@ Add the Dialogue Runner Block to the form where the user should see the Dialogue
 
 Step 8
 ^^^^^^^
-[Update Process created in Step 7] - rename with the following naming convention ilao-GN-[top legal issue]_[more specific legal issue]. You may not have a more specific legal issue. Two examples of names are ilao-GN-HSG_landlord and ilao-GN-SNAP. *Process can be used with the Guided Navigation API must be set to yes.* For ease of adding the legal issue to SMS and the website, copy to Process UUID and paste it in the Process Description
+[Update Process created in Step 7]:
+
+* Rename with the following naming convention ilao-GN-[top legal issue]_[more specific legal issue]. You may not have a more specific legal issue. Two examples of names are ilao-GN-HSG_landlord and ilao-GN-SNAP. 
+* ***Process can be used with the Guided Navigation API must be set to yes.***
+* For ease of adding the legal issue to SMS and the website, copy to Process UUID and paste it in the Process Description
