@@ -2,6 +2,37 @@
 SMS Short Code Architecture
 =============================
 
+Main Flow
+===========
+The main flow executes in the following order:
+
+* Gets required tokens to interact with ILAO website
+* Gets user's preferred language
+* Validate the text entered in the initial call;
+
+  * if it can be matched to Guided Navigation automatically, we do that
+  * if it can not be matched to Guided Navigation automatically, we run the Get Legal Issue subflow
+  * sets process id as a flow variable
+* Run location subflow
+* For Illinois users:
+
+  * Create the triage user
+  * Run the household flow
+  * Run the OTIS Guided Navigation Flow
+  * Run the Matches flow
+  * Routes matches based on:
+
+    * Intake - continues to intake
+    * Self-exit - continues to self-exit message
+    * No organizations - continues to content url and get legal help
+
+
+
+English uses the refactored code; Spanish and Polish have not been transitioned
+
+.. note:: Twilio limits subflows to 10 unique subflows in a single flow and subflows can not call other subflows. For that reason, we are limited in how our sublflows are configured.
+
+
 Subflow: Otis Get Location
 ============================
 
@@ -28,6 +59,10 @@ Returns:
 * rest_export
 * lsc_code
 * content_url
+* outcome_variable
+* data_value
+* search_term
+* user_issue !!
 
 Subflow: Get Legal Issue
 ==========================
@@ -47,26 +82,72 @@ If success, returns:
 
 
 
-
-
 Subflow: Run household information
 ===================================
 
-TO DO
-Purpose: Gathers last name, household size, aliases and does an initial income check
+Purpose:  household size and does an initial income check
 
-Returns: status (success, failed)
-If success, also returns:
+Parameters:
 
-*
+* uuid of the triage user
+* triage id of the triage user
+* token
+
+Updates the triage record on OTIS database to:
+
+* last_screen_viewed = sms_household_size
+* household size
+* number of adults
+* number of children
+* overincome status
+
+Returns:
+
+* overincome (1 = true; 0 = false)
+* household_size
+* adults
+* children
 
 
-Subflow: OTIS income intake
-===========================
+Subflow: OTIS Intake
+==============================
+
+Purpose: collects and validates date of birth
+
+Parameters:
+* uuid of the triage user
+* token
+
+Updates triage user object:
+
+* last_screen_viewed = sms_date_of_birth
+* age
+
+
+Returns:
+* Numeric value of Month, Day, and Year
+* Age
+
+Status: Done
+
+
+Purpose: collects last name, maiden name, and nickname
+
+Returns: last name, maiden name, and nickname
+
+Status: Done
 
 Purpose: Gathers income information and validates income eligilibty
 
-Parameters: Organization match
+Parameters:
+* Organization match
+* uuid (of the triage user)
+* token
+
+Updates triage user:
+* total_income
+* overincome
+* last_screen_viewed sms_income
 
 Returns:
 
@@ -89,9 +170,6 @@ Returns:
 * wage_frequency
 
 
-Subflow: OTIS demographics
-============================
-
 Purpose: Asks and validates demographic information
 
 Parameters: None
@@ -106,6 +184,45 @@ Returns:
 
 Subflow: Get matches
 =======================
+
+Parameters:
+
+* token
+* outcome_variable
+* rest_export
+* user_issue
+* zip_id (zip code id)
+* county_id
+* city_id
+* issue_id !!!
+
+Returns:
+* orgs, which is an object of
+
+  * count = number of organizations
+  * intakeids = list of intakeIds
+  * serviceids = list of service ids
+  * orgs, whichi is an array of organizations. Each organization includes:
+
+    * id, the uuid of the service
+    * callback number
+    * node id
+    * callback type
+    * bypass message
+    * disclaimer
+    * please call message
+    * we call message
+
+* Selected organization id (service id)
+* Match accepted status
+
+picked: 0
+intake_id: {{widgets.matches-get-name.parsed.organizations[0].intake_id}}
+organization: {{widgets.matches-get-name.parsed.organizations[0].organization}}
+legalservername: {{widgets.matches-get-name.parsed.organizations[0].legalservername}}
+response: {{widgets.match-selected.inbound.Body}}
+
+
 
 
 Sublfow: OTIS appointment scheduler

@@ -60,8 +60,11 @@ There is a check group in the master segment that is made up of Gwen and various
 .. note:: Mailchimp campaigns sent to the check group may be safely deleted from Mailchimp.
 
 
-Technical Integration
-=======================
+Mailchimp/Website Integration
+===============================
+
+Subscribing to eUpdate via user account
+-------------------------------------------
 The mailchimp block that appears on the user registration/profile page is tied to the Master list within Mailchimp. When a user creates an account on the website:
 
 * They are added to the master list
@@ -74,6 +77,24 @@ The mailchimp block that appears on the user registration/profile page is tied t
   * if they sign up for the blog alerts, they are added to the blog segment
 
 .. note:: There are also signup forms for anonymous users for the newsletter and the blog alerts.
+
+Unsubscribing from eUpdates via user account
+-----------------------------------------------
+If a user edits their profile and changes the selections for eUpdates, ILAO blog, newsletter, those are reflected in their Mailchimp profile
+
+If a user is marked inactive or deleted, no changes in Mailchimp are made.
+
+.. todo:: Add a checkbox field to unsubscribe a user completely from Mailchimp. When checked, this will clear out all website subsriptions and mark them unsubscribed in Mailchimp
+
+.. todo:: Add an additional automatic task that when an account is disabled or deleted, all website subscriptions will be deleted in Mailchimp and the user will be unsubscribed in Mailchimp and that, for disabled accounts, all subscriptions will be cleared out in Drupal.
+
+
+
+Unsubscribing via Mailchimp
+----------------------------
+There is no automatic updates to the user's profile on the website if they unsubscribe from the master list in Mailchimp. This may result in resubscribing a user if their account is later resaved in Drupal
+
+.. todo:: Add a Zap to add the unsubscriber to a spreadsheet that gets reviewed monthly to update website accounts and remove their subscriptions.
 
 
 

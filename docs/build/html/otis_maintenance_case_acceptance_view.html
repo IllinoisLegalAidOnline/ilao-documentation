@@ -111,10 +111,9 @@
 <li class="toctree-l2"><a class="reference internal" href="otis_ai_integration.html">OTIS AI Integration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="otis_third_party_support.html">Supported Integrations</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="otis_sms_intake.html">Online Intake Over SMS</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="otis_sms_as_a_user.html">Getting legal help over SMS</a></li>
 <li class="toctree-l3"><a class="reference internal" href="otis_sms_intake_architecture.html">General architecture</a></li>
 <li class="toctree-l3"><a class="reference internal" href="otis_sms_functions.html">Twilio Functions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="otis_sms_twilio_studio_workflow.html">Get Legal Help text line workflow</a></li>
-<li class="toctree-l3"><a class="reference internal" href="sms_eviction.html">Eviction SMS Flow</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="otis_maintenance.html">Maintaining and expanding OTIS SMS</a><ul class="current">
 <li class="toctree-l4 current"><a class="reference internal" href="otis_maintenance.html#expanding-for-new-legal-issues">Expanding for new legal issues</a></li>
 <li class="toctree-l4"><a class="reference internal" href="otis_maintenance.html#demographic-taxonomy-terms">Demographic taxonomy terms</a></li>
@@ -243,9 +242,9 @@
 <h3><span class="section-number">3.1.3. </span>Fields<a class="headerlink" href="#fields" title="Permalink to this headline">¶</a></h3>
 <p>The fields should include data associated with the specific webform:</p>
 <ul class="simple">
-<li><p>the legal issue field - labelled (legal_issue). This should be set to value.</p></li>
-<li><p>the service from the webform - labelled (service). This should be set to Entity ID</p></li>
-<li><p>each outcome field in the webform. These should be set to show all multiple values with a format of raw value - labelled ([raw field name for the outcome]).</p></li>
+<li><p>the legal issue field - labelled (<strong>legal_issue</strong>). This should be set to <strong>value</strong>.</p></li>
+<li><p>the service from the webform - labelled (<strong>service</strong>). This should be set to <strong>Entity ID</strong>.</p></li>
+<li><p>each <strong>outcome field</strong> in the webform. These should be set to show all multiple values with a format of <strong>raw value</strong> - labelled ([raw field name for the outcome]).</p></li>
 </ul>
 <p>In addition, we need to relate the service and the service’s matching intake settings. To do this, first, we need to create the relationships.</p>
 <ul class="simple">
@@ -258,7 +257,13 @@
 <li><p>the id for the intake settings. This is found under title = id, category = OAS intake settings.  This should have a relationship of field_service_single in the drop down - labelled (intake_settings_id)</p></li>
 <li><p>the uuid for the intake settings.  This is found under title = UUID, category = OAS intake settings.  This should have a relationship of field_service_single in the drop down - labelled (intake_uuid)</p></li>
 <li><p>the name of the intake settings.  This is found under title = name, category = OAS intake settings.  This should have a relationship of field_service_single in the drop down - labelled (intake_name)</p></li>
-<li><p>the id for the service. This is found under title = id, category = content. This should have a relationship of content - labelled (service_id).</p></li>
+<li><dl class="simple">
+<dt>the id for the service. This is found under title = id, category = content. This should have a relationship of content - labelled (service_id).</dt><dd><ul>
+<li><p>this may not be necessary. the service id is being captured above under service</p></li>
+</ul>
+</dd>
+</dl>
+</li>
 </ul>
 </div>
 <div class="section" id="filter-criteria">
