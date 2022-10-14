@@ -24,7 +24,7 @@ Related content, labeled "Learn More" is pulled from one of two places, dependin
 
 (Related) Forms
 =================
-A forms block (previously related forms) is added to legal information pages based on the taxonomy term(s) associated with the legal content. 
+A forms block (previously related forms) is added to legal information pages based on the taxonomy term(s) associated with the legal content.
 
 .. note:: We are considering another option to make it so that the forms block can be manually created rather than pulled by taxonomy term.
 
@@ -55,13 +55,19 @@ There are four dates that impact content:
 
 * Created date. This is the date the content was created. This can (but shouldn't be except in exceptional circumstances in the authoring section on the content edit form)
 * Last updated date. This is a system-generated date created every time a node is changed in anyway.
-* Last revised. 
+* Last revised by staff.
 
   * This is set manually by staff.
   * Defaults to the current date/time on new content but is not changed on future edits unless it is manually changed.
   * This appears on legal content as the Last revised date.
-  
-* Last reviewed. This is set manually by staff. This appears on legal content as the Last reviewed date.
+  * The date should be changed whenever a staff user makes a substantive change to the content.
+
+    * Does not include typos, grammatical fixes, or style changes.
+    * Does include anything that adds or removes information, especially law changes.
+
+* Last reviewed by a subject matter expert. This is set manually by staff. This appears on legal content as the Last reviewed date. Defined as when a subject matter expert has done a substantive review of the content to ensure legal accuracy.
+
+.. note:: The last reviewed date may be changed even if no actual changes were made to the content, which can happen if the content is still legally correct.
 
 .. image:: ../assets/cms-legal-content-dates.png
 
