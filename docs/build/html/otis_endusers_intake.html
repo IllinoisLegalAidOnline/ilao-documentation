@@ -111,6 +111,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#intake-process">Intake process</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#validation">Validation</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#e-transfer">E-Transfer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#custom-field-transfers">Custom Field transfers</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#reminders">Reminders</a></li>
 </ul>
 </li>
@@ -329,7 +330,7 @@
  <span class="nt">&quot;adverse_parties&quot;</span><span class="p">:</span> <span class="p">{},</span>
  <span class="nt">&quot;program&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
  <span class="nt">&quot;customField&quot;</span><span class="p">:</span> <span class="p">{},</span>
- <span class="nt">&quot;jsonPayloadItem&quot;</span><span class="p">:</span> <span class="p">{},</span>
+ <span class="nt">&quot;jsonPayload&quot;</span><span class="p">:</span> <span class="p">{},</span>
  <span class="nt">&quot;legalProblemCode&quot;</span><span class="p">:</span> <span class="s2">&quot;32 Divorce/ Separation/ Annulment&quot;</span>
  <span class="p">}</span>
 </pre></div>
@@ -397,6 +398,73 @@
  <span class="p">}</span> <span class="p">]</span>
 </pre></div>
 </div>
+</div>
+</div>
+<div class="section" id="custom-field-transfers">
+<h2>Custom Field transfers<a class="headerlink" href="#custom-field-transfers" title="Permalink to this headline">¶</a></h2>
+<p>The JSON API supports passing customField data two different ways.</p>
+<ul>
+<li><p>via “jsonPayload” - using this transfer allows the customField data to transfer directly to the partnering organization’s LegalServer</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>To transfer using the custom field’s lookup number:</dt><dd><ul>
+<li><p>“jsonPayload”: {custom_field_name_lookup_123”:2[space],[any other custom fields]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>To transfer text into a custom field:
+* “jsonPayload”: {custom_field_name_lookup_321”:”text”},[any other custom fields]</p></li>
+</ul>
+</li>
+<li><p>By transferring the customField information into ILAO’s LegalServer and then matching that customField to the partnering organization’s LegalServer</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>“custom_fields”:{“ilao_custom_field_name_123”:3[space],[any other custom fields]</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span> <span class="nt">&quot;firstName&quot;</span><span class="p">:</span> <span class="s2">&quot;Test&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;middleName&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;lastName&quot;</span><span class="p">:</span> <span class="s2">&quot;Test&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;eTransferOrganization&quot;</span><span class="p">:</span> <span class="s2">&quot;Land Of Lincoln Legal Assistance Foundation&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;aliasFirst&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;aliasLast&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;addressHome&quot;</span><span class="p">:</span> <span class="p">{</span>
+     <span class="nt">&quot;address1&quot;</span><span class="p">:</span> <span class="s2">&quot;120 Main Street &quot;</span><span class="p">,</span>
+     <span class="nt">&quot;city&quot;</span><span class="p">:</span> <span class="s2">&quot;Belleville&quot;</span><span class="p">,</span>
+     <span class="nt">&quot;state&quot;</span><span class="p">:</span> <span class="s2">&quot;IL&quot;</span><span class="p">,</span>
+     <span class="nt">&quot;zip&quot;</span><span class="p">:</span> <span class="s2">&quot;62220&quot;</span><span class="p">,</span>
+     <span class="nt">&quot;county&quot;</span><span class="p">:</span> <span class="s2">&quot;17163&quot;</span>
+ <span class="p">},</span>
+ <span class="nt">&quot;phoneHome&quot;</span><span class="p">:</span> <span class="s2">&quot;315555555&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;phoneHomeNote&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;dateOfBirth&quot;</span><span class="p">:</span> <span class="s2">&quot;1989-11-17&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;test@gmail.com &quot;</span><span class="p">,</span>
+ <span class="nt">&quot;maritalStatus&quot;</span><span class="p">:</span> <span class="s2">&quot;Separated&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;race&quot;</span><span class="p">:</span> <span class="s2">&quot;Other&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;ethnicity&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gender&quot;</span><span class="p">:</span> <span class="s2">&quot;Female&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;language&quot;</span><span class="p">:</span> <span class="s2">&quot;en&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;citizenshipStatus&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;immigrationStatus&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;veteran&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;disabled&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;note&quot;</span><span class="p">:</span> <span class="s2">&quot;Select the one that best fits your case:I want a divorce because I am being abused by my spouse. Or I want a divorce because my kids are being abused or in danger.; Do you have a safe phone number we can call you at?:Yes;; We call client; Callback Times:Wednesday, Jun 30, 2021, 12:00pm - 1:00pm;&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;numberOfAdults&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;numberOfChildren&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;callbackType&quot;</span><span class="p">:</span> <span class="s2">&quot;Callback&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;callbackDayTime&quot;</span><span class="p">:</span> <span class="s2">&quot;Callback Times:Wednesday, Jun 30, 2021, 12:00pm - 1:00pm&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;externalID&quot;</span><span class="p">:</span> <span class="s2">&quot;ILAOWeb-35825811&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;incomes&quot;</span><span class="p">:</span> <span class="p">[{</span><span class="nt">&quot;amount&quot;</span><span class="p">:</span><span class="s2">&quot;1100&quot;</span><span class="p">,</span><span class="nt">&quot;frequency&quot;</span><span class="p">:</span><span class="mi">12</span><span class="p">,</span> <span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="s2">&quot;Employment&quot;</span><span class="p">}],</span>
+ <span class="nt">&quot;adverse_parties&quot;</span><span class="p">:</span> <span class="p">{},</span>
+ <span class="nt">&quot;program&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;customField&quot;</span><span class="p">:</span> <span class="p">{</span><span class="nt">&quot;ilao_custom_field_name_123&quot;</span><span class="p">:</span><span class="mi">3</span> <span class="p">,</span><span class="nt">&quot;ilao_custom_field_name_321&quot;</span><span class="p">:</span><span class="s2">&quot;Full-time&quot;</span><span class="p">},</span>
+ <span class="nt">&quot;jsonPayload&quot;</span><span class="p">:</span> <span class="p">{</span><span class="nt">&quot;custom_field_transfer_123&quot;</span><span class="p">:</span><span class="mi">2</span> <span class="p">,</span><span class="nt">&quot;custom_field_transfer_321&quot;</span><span class="p">:</span><span class="s2">&quot;Part-time&quot;</span><span class="p">},</span>
+ <span class="nt">&quot;legalProblemCode&quot;</span><span class="p">:</span> <span class="s2">&quot;32 Divorce/ Separation/ Annulment&quot;</span>
+ <span class="p">}</span>
+</pre></div>
 </div>
 </div>
 <div class="section" id="reminders">

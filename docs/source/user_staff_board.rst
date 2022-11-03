@@ -2,89 +2,45 @@
 Staff, Board & YPB pages
 =========================
 
-Adding staff, board & YPB members
-===================================
+.. note:: In October 2022, these pages were rewritten to operate as standard basic pages.
 
-The Staff, board, and young professionals pages in the About section are powered by the respective user profiles of those individuals.
+Staff
+========
+The Staff page lists each staff member. Each staff member is added using a separate portal layout side-by-side component.
 
-Staff members will be added to the staff page so long as they have an active profile with an @illinoislegalaid.org email address.
-
-Board and YPB members
-
-.. note:: New staff should register themselves and create their own profile. Board and YPB members may need to have profiles created for them since very few of them ever log into the website.
-
-Removing staff
-=================
-Staff accounts should not be deleted when a staff member leaves. The account should be blocked to preserve their content work. Set their account status to "blocked" from "active " in their profile. This will cause them to disappear from the staff listing automatically.
-
-Removing board and YPB members
-=================================
-
-If they have never logged in
-------------------------------
-If they have never logged in, you can safely delete their accounts.
-
-If they have logged in
-------------------------
-Edit their profile and remove any selections from the internal organization list. Once they are untagged from the board or YPB, they will be removed from those pages.
-
-Updating staff, board, and YPB information
-===========================================
-* Ask staff to update their own information
-* For Board and YPB members:
-
-  * Use the `board and YPB report <https://www.illinoislegalaid.org/admin/people/board-ypb-users>`_ (located on your profile when you log in) to see the list of members for editing
-  * Click edit next to the member
-  * Update their profile. Fields we use are:
-
-    * First name
-    * Last name
-    * Company
-    * Job title
-
-      * For board members, this should be there real job title, not their role at ILAO
-      * For YPB members, this should be their role, if applicable, on the YPB.
-    * Biography
-    * Photo
-
-  * Save their profile.
-
-.. note:: The Board automatically adds Chair, Vice-chair, Treasurer, Secretary to the 1st 4 board members in that order.
+Staff are ordered with the Executive Director listed first, then alphabetical. In the summer, a media + text block is added to list all of our interns and fellows at the bottom.
 
 
+Each portal layout side-by-sider and should adhere to this style:
 
-Ordering staff, board, and YPB members on pages
-=================================================
-
-On each of the pages, there is a dropdown with an option to order the view. Select "order view"
-
-.. image:: ../assets/draggable-views-start.png
-
-You will then see a list of staff, board, or YPB members to order.
-
-.. image:: ../assets/draggable-order.png
+* Image; if no image has been provided, use the people placeholder image. If an image is provided and is large, it should be resized to 300 pixels wide.
+* Name in the heading field
+* Next line is their job title, italicized
+* Biography in the body field
 
 
-Staff list
--------------
+If one needs to insert a new board member, they may need to edit the portal layout side-by-side under the new board member to change the image location to preserve the alternating left/right layout.
 
-The Executive Director should be listed first; all other staff should be listed alphabetically.
 
 Board
----------
-Outside of the officers, the rest of the board should be listed alphabetically, starting with a DraggableViews Weight of 4.
+========
+The Board of Directors page lists each board member. Each board member is added using a separate portal layout side-by-side component.
 
-Board should be listed in the first 4 spots as:
+Board members are ordered first by office, then alphabetical. Officers are listed in the order of chair, vice-chair, treasurer, secretary.
 
-* Chair => 0
-* Vice-chair => 1
-* Treasurer => 2
-* Secretary => 3
 
+Each portal layout side-by-sider and should adhere to this style:
+
+* Image; if no image has been provided, use the people placeholder image. If an image is provided and is large, it should be resized to 300 pixels wide.
+* Name, bolded (or put in heading field)
+* If the board member is an officer, their officer position is listed after their name
+* Next line is their job title and affiliation, italicized
+* Biography in the body field
+
+
+If one needs to insert a new board member, they may need to edit the portal layout side-by-side under the new board member to change the image location to preserve the alternating left/right layout.
 
 YPB
----------
-Chairs and/or co-chairs should be listed first. All others should be listed alphabetically below.
+========
 
-
-
+The Young Professionals Board page lists the name and role of each member in a single text block. This can be edited by anyone on the staff.

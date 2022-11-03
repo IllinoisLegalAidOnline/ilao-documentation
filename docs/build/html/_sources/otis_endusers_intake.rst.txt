@@ -120,7 +120,7 @@ The e-transfer leverages Legal Server' intake API.
     "adverse_parties": {},
     "program": "",
     "customField": {},
-    "jsonPayloadItem": {},
+    "jsonPayload": {},
     "legalProblemCode": "32 Divorce/ Separation/ Annulment"
     }
 
@@ -185,6 +185,65 @@ Supported types are:
    "city": "Bensonville",
    "state": "IL",
     } ]
+
+Custom Field transfers
+=========================
+
+The JSON API supports passing customField data two different ways.
+
+* via "jsonPayload" - using this transfer allows the customField data to transfer directly to the partnering organization's LegalServer
+
+  * To transfer using the custom field's lookup number:
+     * "jsonPayload": {custom_field_name_lookup_123":2[space],[any other custom fields]
+  * To transfer text into a custom field:
+    * "jsonPayload": {custom_field_name_lookup_321":"text"},[any other custom fields]
+
+* By transferring the customField information into ILAO's LegalServer and then matching that customField to the partnering organization's LegalServer
+
+   * "custom_fields":{"ilao_custom_field_name_123":3[space],[any other custom fields]
+
+.. code-block:: JSON
+
+
+   { "firstName": "Test",
+    "middleName": "",
+    "lastName": "Test",
+    "eTransferOrganization": "Land Of Lincoln Legal Assistance Foundation",
+    "aliasFirst": "",
+    "aliasLast": "",
+    "addressHome": {
+        "address1": "120 Main Street ",
+        "city": "Belleville",
+        "state": "IL",
+        "zip": "62220",
+        "county": "17163"
+    },
+    "phoneHome": "315555555",
+    "phoneHomeNote": "",
+    "dateOfBirth": "1989-11-17",
+    "email": "test@gmail.com ",
+    "maritalStatus": "Separated",
+    "race": "Other",
+    "ethnicity": "",
+    "gender": "Female",
+    "language": "en",
+    "citizenshipStatus": "",
+    "immigrationStatus": "",
+    "veteran": "",
+    "disabled": "",
+    "note": "Select the one that best fits your case:I want a divorce because I am being abused by my spouse. Or I want a divorce because my kids are being abused or in danger.; Do you have a safe phone number we can call you at?:Yes;; We call client; Callback Times:Wednesday, Jun 30, 2021, 12:00pm - 1:00pm;",
+    "numberOfAdults": "1",
+    "numberOfChildren": "1",
+    "callbackType": "Callback",
+    "callbackDayTime": "Callback Times:Wednesday, Jun 30, 2021, 12:00pm - 1:00pm",
+    "externalID": "ILAOWeb-35825811",
+    "incomes": [{"amount":"1100","frequency":12, "type":"Employment"}],
+    "adverse_parties": {},
+    "program": "",
+    "customField": {"ilao_custom_field_name_123":3 ,"ilao_custom_field_name_321":"Full-time"},
+    "jsonPayload": {"custom_field_transfer_123":2 ,"custom_field_transfer_321":"Part-time"},
+    "legalProblemCode": "32 Divorce/ Separation/ Annulment"
+    }
 
 Reminders
 ===============

@@ -114,12 +114,19 @@ Hex color: #Adbaff
 
 .. note:: Decision tree format is limited to legal content that contains the decision tree paragraphs bundle or have a content format of flowchart.
 
-Teach Me
-=========
+DIY Legal Solution / Teach Me
+===============================
 
 .. image:: ../assets/design-teachme.png
 
 Hex color: #96e6ff
+
+Legal Question
+=================
+
+.. image:: ../assets/legal-question-icon.png
+
+Hex color: #ebdc34
 
 Blog
 ========

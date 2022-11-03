@@ -295,22 +295,26 @@ The monthly version includes content from the current date minus 30 days</p>
 <div class="section" id="unsubscribing-from-eupdates-via-user-account">
 <h3>Unsubscribing from eUpdates via user account<a class="headerlink" href="#unsubscribing-from-eupdates-via-user-account" title="Permalink to this headline">¶</a></h3>
 <p>If a user edits their profile and changes the selections for eUpdates, ILAO blog, newsletter, those are reflected in their Mailchimp profile</p>
-<p>If a user is marked inactive or deleted, no changes in Mailchimp are made.</p>
-<div class="admonition-todo admonition" id="id1">
-<p class="admonition-title">Todo</p>
-<p>Add a checkbox field to unsubscribe a user completely from Mailchimp. When checked, this will clear out all website subsriptions and mark them unsubscribed in Mailchimp</p>
-</div>
-<div class="admonition-todo admonition" id="id2">
-<p class="admonition-title">Todo</p>
-<p>Add an additional automatic task that when an account is disabled or deleted, all website subscriptions will be deleted in Mailchimp and the user will be unsubscribed in Mailchimp and that, for disabled accounts, all subscriptions will be cleared out in Drupal.</p>
-</div>
+<p>If a user is marked inactive or deleted:</p>
+<ul class="simple">
+<li><p>their subscriptions are removed from the website</p></li>
+<li><p>their subscriptions are removed from Mailchimp</p></li>
+<li><p>they are set as “unsubscribed” in Mailchimp</p></li>
+</ul>
 </div>
 <div class="section" id="unsubscribing-via-mailchimp">
 <h3>Unsubscribing via Mailchimp<a class="headerlink" href="#unsubscribing-via-mailchimp" title="Permalink to this headline">¶</a></h3>
 <p>There is no automatic updates to the user’s profile on the website if they unsubscribe from the master list in Mailchimp. This may result in resubscribing a user if their account is later resaved in Drupal</p>
-<div class="admonition-todo admonition" id="id3">
+<p>On a monthly basis, the product support manager should export a list of mailchimp users who have unsubscribed and who have website subscriptions and then edit their profile on the website.</p>
+<p>If a user’s account is edited by a staff user and the “Unsubscribe” box is checked:</p>
+<ul class="simple">
+<li><p>their subscriptions are removed from the website</p></li>
+<li><p>their subscriptions are removed from Mailchimp</p></li>
+<li><p>they are set as “unsubscribed” in Mailchimp</p></li>
+</ul>
+<div class="admonition-todo admonition" id="id1">
 <p class="admonition-title">Todo</p>
-<p>Add a Zap to add the unsubscriber to a spreadsheet that gets reviewed monthly to update website accounts and remove their subscriptions.</p>
+<p>Set up a Zap to simplify this process</p>
 </div>
 </div>
 </div>

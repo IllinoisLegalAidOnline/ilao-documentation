@@ -82,11 +82,11 @@ Unsubscribing from eUpdates via user account
 -----------------------------------------------
 If a user edits their profile and changes the selections for eUpdates, ILAO blog, newsletter, those are reflected in their Mailchimp profile
 
-If a user is marked inactive or deleted, no changes in Mailchimp are made.
+If a user is marked inactive or deleted:
 
-.. todo:: Add a checkbox field to unsubscribe a user completely from Mailchimp. When checked, this will clear out all website subsriptions and mark them unsubscribed in Mailchimp
-
-.. todo:: Add an additional automatic task that when an account is disabled or deleted, all website subscriptions will be deleted in Mailchimp and the user will be unsubscribed in Mailchimp and that, for disabled accounts, all subscriptions will be cleared out in Drupal.
+* their subscriptions are removed from the website
+* their subscriptions are removed from Mailchimp
+* they are set as "unsubscribed" in Mailchimp
 
 
 
@@ -94,9 +94,15 @@ Unsubscribing via Mailchimp
 ----------------------------
 There is no automatic updates to the user's profile on the website if they unsubscribe from the master list in Mailchimp. This may result in resubscribing a user if their account is later resaved in Drupal
 
-.. todo:: Add a Zap to add the unsubscriber to a spreadsheet that gets reviewed monthly to update website accounts and remove their subscriptions.
+On a monthly basis, the product support manager should export a list of mailchimp users who have unsubscribed and who have website subscriptions and then edit their profile on the website.
 
+If a user's account is edited by a staff user and the "Unsubscribe" box is checked:
 
+* their subscriptions are removed from the website
+* their subscriptions are removed from Mailchimp
+* they are set as "unsubscribed" in Mailchimp
+
+.. todo:: Set up a Zap to simplify this process
 
 
 

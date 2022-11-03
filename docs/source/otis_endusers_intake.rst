@@ -190,14 +190,18 @@ Custom Field transfers
 =========================
 
 The JSON API supports passing customField data two different ways.
+
 * via "jsonPayload" - using this transfer allows the customField data to transfer directly to the partnering organization's LegalServer
- * To transfer using the custom field's lookup number:
-  * "jsonPayload": {custom_field_name_lookup_123":2[space],[any other custom fields]
- * To transfer text into a custom field:
-  * "jsonPayload": {custom_field_name_lookup_321":"text"},[any other custom fields]
+
+  * To transfer using the custom field's lookup number:
+     * "jsonPayload": {custom_field_name_lookup_123":2[space],[any other custom fields]
+  * To transfer text into a custom field:
+    * "jsonPayload": {custom_field_name_lookup_321":"text"},[any other custom fields]
+
 * By transferring the customField information into ILAO's LegalServer and then matching that customField to the partnering organization's LegalServer
- * "custom_fields":{"ilao_custom_field_name_123":3[space],[any other custom fields] 
- 
+
+   * "custom_fields":{"ilao_custom_field_name_123":3[space],[any other custom fields]
+
 .. code-block:: JSON
 
 
