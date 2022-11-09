@@ -33,7 +33,15 @@ To create a Legal Question:
 
 Legal Question vs Related Resource
 ===================================
-Not all of our legal content needs to be "transformed" into questions.
+Not all of our legal content needs to be "transformed" into questions. Some information, particularly those that are videos, flowcharts, decision trees that would be better suited as articles can stay that way and be linked to as Related Resources
+
+Related Questions
+===================
+On the sidebar when viewed in a web browser, related questions can appear. There is a related question field that allows one to group legal questions together.
+
+.. note:: Can we or should we write a query to return related questions where the question being viewed is in a related question field OR when the question being viewed has related questions to prevent the need to add related questions to every question.
+
+Where no legal question
 
 Legal Questions in Problems vs Legal Questions in Solutions
 =============================================================

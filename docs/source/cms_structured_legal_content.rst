@@ -9,6 +9,7 @@ Structured Legal Content
    :caption: Contents:
 
    cms_structured_content_overview
+   cms_structured_content_navigation
    cms_structured_content
    cms_structured_content_types
    cms_structured_legal_content_admin

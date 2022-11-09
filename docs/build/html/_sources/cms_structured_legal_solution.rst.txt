@@ -164,6 +164,9 @@ Questions
 ============
 Legal solutions can have Legal Questions attached. Questions should relate generally to the solution provided. Questions specifically related to how the solution affects a problem should go here. For example: When am I eligible for a second bankruptcy? would go in the bankruptcy solution but Can I save my house if I file for bankruptcy would go in a foreclosure-related problem.
 
+Related Resources
+===================
+Legal solutions can also have related resources (other legal content) attached to it just like a legal problem.
 
 
 Full add/edit form

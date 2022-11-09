@@ -1,10 +1,10 @@
 =============================
-Structured Content Overview
+DIY Legal Solutions Overview
 =============================
 
-Structured legal content is designed to offer a way of delivering legal information across channels, whether it be the web, SMS, chatbots, or voice services. It is structured to be problem/solution-focused.
+DIY Legal Solutions (formerly structured legal content) is designed to offer a way of delivering legal information across channels, whether it be the web, SMS, chatbots, or voice services. It is structured to be problem/solution-focused.
 
-Every problem in our structured content:
+Every legal problem in our DIY Legal Solutions packages:
 
 * has a description of the problem
 * may have one or more questions that help more fully describe the problem. Each question:
@@ -42,8 +42,6 @@ Every problem in our structured content:
 
    * Jurisdiction - this is required
    * Negate jurisdiction - this is optional and is used to exclude an area from the jurisdiction (for example, to set something to "all but Cook county", you can set the jurisdiction to Illinois and the negate jurisdiction to Cook county).
-
-
 
 
 Content formats
