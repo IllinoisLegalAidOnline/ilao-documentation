@@ -22,6 +22,11 @@ Each REST export must have a path. That path should be set to /rest/[category]-c
 
 Format
 ---------
+.. warning::
+
+   It is absolutely CRITICAL that when creating the rest export, the "For" dropdown is always ALWAYS set to This rest_export override to avoid messing up other exports.
+
+.. image:: ../assets/this-rest-export.png
 
 Each rest export must:
 
@@ -29,12 +34,6 @@ Each rest export must:
 * in the Show field settings, each field in the results should have an alias that matches the actual key name
 
 .. image:: ../assets/webform-gn-alias.png
-
-.. warning::
-
-   It is absolutely CRITICAL that when creating the rest export, the "For" dropdown is always ALWAYS set to This rest_export override to avoid messing up other exports.
-
-.. image:: ../assets/this-rest-export.png
 
 Fields
 -----------
