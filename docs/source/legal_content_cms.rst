@@ -7,19 +7,19 @@ Content types for legal content:
 .. toctree::
    :maxdepth: 2
    :caption: Content types for legal content:
-   
+
    cms_wysiwyg
    cms_custom_tokens
    cms_redirects
    cms_content_management_tags
    cms_legal_content
+   cms_structured_legal_content
    cms_portal_main_page
    cms_toolboxes
    cms_adrm
    cms_content_reporting
-   cms_structured_legal_content
    cms_lcv_program
-  
+
 
 Known Workarounds
 ===================
@@ -41,7 +41,7 @@ To fix:
 
 Node form is outdated or modified by someone else
 ---------------------------------------------------
-This bug happens when a staff or intern leaves content in draft or ready to review mode and then someone tried to edit that node, an error 
+This bug happens when a staff or intern leaves content in draft or ready to review mode and then someone tried to edit that node, an error
 
 .. image:: ../assets/error-modified-by-another.png
 
@@ -51,7 +51,7 @@ To resolve:
 * If it still persists, check that no one else has the page open for editing
 * If that still doesn't resolve it, check that the current publish status is draft/revise or ready to review. The only known workaround for this:
 
-  * View the latest version 
+  * View the latest version
   * That page has a drop down to change the state
   * Set the state to published
   * You should be able to edit and save the node now

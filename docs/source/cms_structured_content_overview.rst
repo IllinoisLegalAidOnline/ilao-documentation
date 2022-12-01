@@ -4,8 +4,9 @@ DIY Legal Solutions Overview
 
 DIY Legal Solutions (formerly structured legal content) is designed to offer a way of delivering legal information across channels, whether it be the web, SMS, chatbots, or voice services. It is structured to be problem/solution-focused.
 
-Every legal problem in our DIY Legal Solutions packages:
+Every  DIY Legal Solution packages:
 
+* starts with a defined problem
 * has a description of the problem
 * may have one or more questions that help more fully describe the problem. Each question:
 
@@ -20,17 +21,11 @@ Every legal problem in our DIY Legal Solutions packages:
     * Includes one or more steps
     * An optional title
     * Each step consists of one or more directions or tips
+    * Any legal forms necessary to complete the step
 
   * Eligibility information for the solution
   * Information needed to complete the solution
   * Any helpful organizations that may be relevant
-  * Forms needed to complete the solution. This includes:
-
-    * The name of the court form
-    * What the form is filled out with (name, type of program, link)
-    * Jurisdiction
-    * When it may or may not be used (optional)
-
   * Jurisdiction applicable to the solution.
   * Expected result from completing the solution. This may include segments of text and/or structured lists.
 

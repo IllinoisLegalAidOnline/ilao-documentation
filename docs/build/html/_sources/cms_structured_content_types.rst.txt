@@ -1,18 +1,29 @@
 =================================
-Structured Content Types
+DIY Legal Solution Content Types
 =================================
 
 Content Types
 ===============
 
-Legal Problem
-----------------
-The primary content type for structured content is the Legal Problem.
+DIY Legal Solution
+--------------------
+The primary content type for structured content is the DIY Legal Solution. This defines the problem and is the container for all of the other components, like questions and solutions.
+
+A DIY legal solution should describe:
+
+* the problem the person may be facing
+* any options that may be used to resolve the problem, from inaction to resolutions
 
 +-----------------+-------------------+----------------+-----------------------------+
 | Field           | Type              | Cardinality    | Description                 |
 +=================+===================+================+=============================+
 | Title (name)    | Title field       | 1; required    | Name of the legal problem   |
++-----------------+-------------------+----------------+-----------------------------+
+| Subtype         | Text field        | unlimited      | A more specific type of the |
+|                 |                   |                | legal problem. For example, |
+|                 |                   |                | 'being evicted from public  |
+|                 |                   |                | housing' under the problem  |
+|                 |                   |                | "being evicted"             |
 +-----------------+-------------------+----------------+-----------------------------+
 | Description     | Text area         | 1,required     | Content description         |
 +-----------------+-------------------+----------------+-----------------------------+
@@ -25,22 +36,30 @@ The primary content type for structured content is the Legal Problem.
 +-----------------+-------------------+----------------+-----------------------------+
 | Identifier      | Hidden            |                | Node UUID                   |
 +-----------------+-------------------+----------------+-----------------------------+
-| Legal issues    | Term reference    | unlimited,     | Current legal issues field  |
-|                 |                   | required       |                             |
-+-----------------+-------------------+----------------+-----------------------------+
-| Primary legal   | Term reference    | 1, required    | Current primary legal       |
-| category        |                   |                | category                    |
+| Introduction    | Structured Text   | Unlimited      | Provides an introduction to |
+|                 |                   |                | the legal problem covered by|
+|                 |                   |                | the DIY Legal Solution      |
 +-----------------+-------------------+----------------+-----------------------------+
 | Stage           | Text field        | 1              | The stage of the legal      |
 |                 |                   |                | problem, if applicable. For |
 |                 |                   |                | example, pre-filing, post-  |
 |                 |                   |                | filing/pre-trial, trial, etc|
 +-----------------+-------------------+----------------+-----------------------------+
-| Subtype         | Text field        | unlimited      | A more specific type of the |
-|                 |                   |                | legal problem. For example, |
-|                 |                   |                | 'being evicted from public  |
-|                 |                   |                | housing' under the problem  |
-|                 |                   |                | "being evicted"             |
+| Navigational IA | Term reference    | unlimited,     | Navigational IA taxonomy    |
+|                 |                   | required       | used for drill downs        |
++-----------------+-------------------+----------------+-----------------------------+
+| Legal issues    | Term reference    | unlimited,     | Current legal issues field  |
+|                 |                   | required       |                             |
++-----------------+-------------------+----------------+-----------------------------+
+| Primary legal   | Term reference    | 1, required    | Current primary legal       |
+| category        |                   |                | category                    |
++-----------------+-------------------+----------------+-----------------------------+
+| Primary level 2 | Term reference    | 1, required    | Level 2 term from navigat-  |
+| category        |                   |                | ional category              |
++-----------------+-------------------+----------------+-----------------------------+
+| User type       | Term reference    | Unlimited      | Used to cause a problem to  |
+|                 |                   |                | appear on user-centric      |
+|                 |                   |                | landing pages               |
 +-----------------+-------------------+----------------+-----------------------------+
 | LegalCode       | Paragraphs: Legal | unlimited      | Legal code from standard    |
 |                 |                   | required       | coding systems              |
@@ -50,30 +69,31 @@ The primary content type for structured content is the Legal Problem.
 |                 |                   |                | legal problem.              |
 +-----------------+-------------------+----------------+-----------------------------+
 |Possible solution| Entity reference  | unlimited      | Entity reference to Legal   |
-|                 |                   | required       | Solution nodes              |
+|                 |                   | required       | Solution that may help a    |
+|                 |                   |                | user with this problem      |
 +-----------------+-------------------+----------------+-----------------------------+
 | Primary         | Entity reference  | 1              | Entity reference to legal   |
-| prevention      |                   |                | solution nodes              |
+| prevention      |                   |                | solution that may prevent   |
+|                 |                   |                | the legal problem           |
 +-----------------+-------------------+----------------+-----------------------------+
 | Secondary       | Entity reference  | 1              | Entity reference to legal   |
-| prevention      |                   |                | solution nodes              |
+| prevention      |                   |                | solution that may prevent   |
+|                 |                   |                | the legal problem           |
 +-----------------+-------------------+----------------+-----------------------------+
 | FAQ             | Entity reference  | unlimited      | Entity reference to         |
-|                 |                   |                | Legal Question              |
+|                 |                   |                | Legal Question content      |
+|                 |                   |                | related to the problem      |
 +-----------------+-------------------+----------------+-----------------------------+
 | RelatedResources| Entity reference  | unlimited      | Entity reference to legal   |
-|                 |                   |                | content types               |
+|                 |                   |                | content.                    |
 +-----------------+-------------------+----------------+-----------------------------+
 | RelatedProblems | Entity reference  | unlimited      | Entity reference to Legal   |
 |                 |                   |                | Problem                     |
 +-----------------+-------------------+----------------+-----------------------------+
-| Citations       | Paragraphs        | unlimited      | Citation block              |
+| Citations       | Paragraphs        | unlimited      | Citations in support of the |
+|                 |                   |                | legal problem               |
 +-----------------+-------------------+----------------+-----------------------------+
 | Image           | Image             | 1              | Image to associate with node|
-+-----------------+-------------------+----------------+-----------------------------+
-| Language        | Hidden            | 1              | Language of the node        |
-+-----------------+-------------------+----------------+-----------------------------+
-| url             | Hidden            | 1              | Website url for the node    |
 +-----------------+-------------------+----------------+-----------------------------+
 | legal position  | List              | 1, required    | Current field_legal_position|
 +-----------------+-------------------+----------------+-----------------------------+
@@ -86,6 +106,12 @@ The primary content type for structured content is the Legal Problem.
 | mark translation| Boolean           | 1, default to  | Existing field              |
 | as outdated     |                   | No             | mark as outdated            |
 +-----------------+-------------------+----------------+-----------------------------+
+| editorial notes | Long text         | 1              | Space to leave notes        |
++-----------------+-------------------+----------------+-----------------------------+
+| word count      | Integer           | 1, automated   | Words in the introduction   |
++-----------------+-------------------+----------------+-----------------------------+
+| page views      | Hidden            | 1              |                             |
++-----------------+-------------------+----------------+-----------------------------+
 
 .. note::
 
@@ -93,6 +119,8 @@ The primary content type for structured content is the Legal Problem.
 
 Legal Solution
 ----------------
+
+The Legal Solution content type is used to contain the details of each option a person may have to resolve a related problem. A solution may be tied to more than one problem. For example, filing for Chapter 13 bankruptcy may be a solution for dealing with credit card debt and for dealing with medical debt.
 
 +-----------------+-------------------+----------------+-----------------------------+
 | Field           | Type              | Cardinality    | Description                 |

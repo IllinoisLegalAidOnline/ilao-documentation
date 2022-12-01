@@ -102,7 +102,7 @@ If a user's account is edited by a staff user and the "Unsubscribe" box is check
 * their subscriptions are removed from Mailchimp
 * they are set as "unsubscribed" in Mailchimp
 
-.. todo:: Set up a Zap to simplify this process
+
 
 
 

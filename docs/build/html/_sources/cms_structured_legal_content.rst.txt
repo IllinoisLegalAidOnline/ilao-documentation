@@ -1,6 +1,14 @@
 ==========================
-Structured Legal Content
+DIY Legal Solutions
 ==========================
+
+DIY Legal Solutions were created to create a "Create Once Publish Everywhere" model based on a problem/solution(s) approach.
+
+It evolved from much of ILAO's work over the last twenty years, including:
+
+* Improving the way we create and manage jurisdiction specific content.
+* Trying to streamline legal information into more actionable pieces with less duplication
+* Breaking large chunks of text into smaller pieces that can be delivered in different ways more easily.
 
 
 

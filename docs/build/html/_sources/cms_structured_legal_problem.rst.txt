@@ -1,25 +1,34 @@
 .. _cms-legal-problem:
 
-=========================
-Legal Problem
-=========================
+=============================
+Creating DIY Legal Solution
+=============================
 
 
-A Legal Problem is the top-level container for structured content. All other types of structured content are relate back to one or more legal problems (although depending on the use case, one could render the other elements separately).
+A DIY Legal Solution is the top-level container for structured content. The DIY Legal Solution describes a specific problem and the options for potentially dealing with the problem. All other types of structured content relate ultimately relate back to one or more legal problems
 
-.. note::  Fields should comply with our content style guide.
+To create a DIY Legal Solution
+--------------------------------
 
-To create a legal problem:
+Create the core problem information
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 
 * Add a title. This should describe the problem to be solved or prevented using the embedded solutions.
 * Add a subtype. This should describe any subcategory of a problem.
 * Add a content description. This is the description that will be used on the website.
 * Add a meta description. This is the description that will be used in social media, search indexes, and in any API. This should be limited to 300 characters.
 * Optionally, add a disambiguation description. This is used to better describe how one problem is different from a related problem.
-* Add an introduction as structured markup.  The purpose of the introduction is to provide a basic overview of the problem and available solutions. It should be enough to entice the user to stay on the page and navigate through but should not duplicate information in the solution, how-tos, or questions.
-* Tag the legal problem to one or more legal issues.
-* Tag the legal problem to one or more navigational IA tags.
-* Select the primary legal category
+* Add an introduction as structured markup.  The purpose of the introduction is to provide a basic overview of the problem. It should be enough to entice the user to stay on the page and navigate through but should not duplicate information in the solution, how-tos, or questions.
+* Stage can be optionally used to distinguish between phases of a problem (for example, being evicted vs post-eviction issues)
+
+Categorize the legal problem
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+* Tag the legal problem to one or more navigational IA tags. This is used to manage the drill down.
+* Tag the legal problem to one or more legal issues. This is used to associate with Get Legal Help tools.
+* Select the primary legal category. This is used to keep the information organized when it is tagged to multiple primary categories (for example, we may tag a criminal records issue to Business & Work and Crime & Traffic).
+* Select the primary level 2 navigation term. This is used to help with breadcrumbs, reporting, and Guided Navigation. This single term comes from the navigational IA taxonomy.
 * Add a legal code. Legal codes should come from either the LSC problem codes or the `LIST <https://taxonomy.legal>`_ codes.
 
 .. image:: ../assets/cms_structured_legal_code.png
@@ -28,19 +37,28 @@ The above image includes the legal code for Food stamps from both the LSC proble
 
 * Add at least one life area affected. This is an `ILAO-hosted taxonomy <https://www.illinoislegalaid.org/admin/structure/taxonomy_manager/voc/life_areas>`_.
 
+Add supporting legal information
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Add one or more possible solutions to solve the problem. This is just a reference to an existing Legal Solution (see the :ref:`cms-legal-solution` documentation).
 * Optionally, add up to 2 preventative solutions. A preventative solution should help the user avoid the problem. For example, if the legal problem is I am being evicted, a preventative solution may be to cure a late rent payment.
 * Optionally, add a FAQ by adding individual Legal Questions. This is just a reference to an existing Legal Question (see the Legal Question documentation).
-* Optionally, add one or more related resources by adding individual pieces of legal content. This is just a reference to an existing Legal content, portal main pages, and toolbox content.
+* Optionally, add one or more related resources by adding individual pieces of legal content. This is just a reference to an existing Legal content, portal main pages, and toolbox content. Ideally, related resources will be those that can not be created within the structured content framework (for example, videos, flowcharts, decision trees, external links).
+* Indicate the legal position associated with the problem
 
 .. note::  We envision that the API will automatically pull in data about related resources, such as last revised dates and content format.
 
+Add additional metadata
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+* Add an image; this will be used in social media sharing
 * Optionally, add any content management tags
 * Indicate whether a translation should be requested.
 * Indicate whether an existing translation should be marked as outdated.
+* The word count will be automatically added
 
-.. note:: A legal problem itself contains no real content. It is a container for other content. As such, it does not have the last reviewed/revised dates that other content types have. It will inherit the oldest reviewed/revised dates from its child components.
+.. note:: A legal problem itself contains very little content beyond the introduction. It is a container for other content. As such, it does not have the last reviewed/revised dates that other content types have. It will inherit the oldest reviewed/revised dates from its child components.
 
+.. todo:: this section should be revised as part of a style guide
 
 Legal problems, subtypes, disambiguation descriptions, and solutions
 ======================================================================
