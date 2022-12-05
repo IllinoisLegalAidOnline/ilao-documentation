@@ -101,17 +101,13 @@
 <li class="toctree-l2"><a class="reference internal" href="cms_redirects.html">Creating redirects between pages</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cms_content_management_tags.html">Content management tags</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cms_legal_content.html">Legal content type</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cms_portal_main_page.html">Portal main page content type</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cms_toolboxes.html">Toolbox and related content types</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cms_adrm.html">Lawyer Manuals</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cms_content_reporting.html">Legal content reporting</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="cms_structured_legal_content.html">Structured Legal Content</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="cms_structured_legal_content.html">DIY Legal Solutions</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="cms_structured_content_overview.html">DIY Legal Solutions Overview</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cms_structured_content_navigation.html">DIY Solutions - Navigation and Layouts</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cms_structured_content.html">Structured Content Schema</a></li>
-<li class="toctree-l3"><a class="reference internal" href="cms_structured_content_types.html">Structured Content Types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cms_structured_content_types.html">DIY Legal Solution Content Types</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="cms_structured_legal_content_admin.html">Creating and editing structured content</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_problem.html">Legal Problem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_problem.html">Creating DIY Legal Solution</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_solution.html">Legal Solution</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_howto.html">Legal How-To</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_step.html">Legal Step</a></li>
@@ -129,6 +125,10 @@
 <li class="toctree-l3"><a class="reference internal" href="cms_structured_content_sms.html">Delivery over SMS</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="cms_portal_main_page.html">Portal main page content type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_toolboxes.html">Toolbox and related content types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_adrm.html">Lawyer Manuals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_content_reporting.html">Legal content reporting</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cms_lcv_program.html">Legal Content Volunteers Program</a></li>
 <li class="toctree-l2"><a class="reference internal" href="legal_content_cms.html#known-workarounds">Known Workarounds</a></li>
 </ul>
@@ -202,7 +202,7 @@
         
           <li><a href="legal_content_cms.html">Legal Content CMS</a> &raquo;</li>
         
-          <li><a href="cms_structured_legal_content.html">Structured Legal Content</a> &raquo;</li>
+          <li><a href="cms_structured_legal_content.html">DIY Legal Solutions</a> &raquo;</li>
         
           <li><a href="cms_structured_legal_content_admin.html">Creating and editing structured content</a> &raquo;</li>
         
@@ -227,10 +227,30 @@
             
   <div class="section" id="legal-question">
 <span id="cms-legal-question"></span><h1>Legal Question<a class="headerlink" href="#legal-question" title="Permalink to this headline">¶</a></h1>
-<p>Legal questions can potentially “stand alone” or be part of a larger FAQ within a specific  <a class="reference internal" href="cms_structured_legal_problem.html#cms-legal-problem"><span class="std std-ref">Legal Problem</span></a>.</p>
-<p>To create a Legal Question:</p>
+<p>Legal questions can potentially “stand alone” or be part of a larger FAQ within a specific  DIY Legal Solution packet or attached to a specific legal solution.</p>
+<div class="section" id="creating-a-legal-question">
+<h2>Creating a legal question<a class="headerlink" href="#creating-a-legal-question" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="create-the-core-problem-information">
+<h3>Create the core problem information<a class="headerlink" href="#create-the-core-problem-information" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><p>Add the Question title</p></li>
+<li><p>Add the Question title. The title should be drafted as a question.</p></li>
+<li><p>Add a content description. This is the description that will be used if the question is displayed independently on our website.</p></li>
+<li><p>Add a meta description. This is the description that will be used in social media, search indexes, and in any API. This should be limited to 300 characters.</p></li>
+</ul>
+</div>
+<div class="section" id="categorize-the-legal-problem">
+<h3>Categorize the legal problem<a class="headerlink" href="#categorize-the-legal-problem" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Tag the legal problem to one or more navigational IA tags. This is used to manage the drill down.</p></li>
+<li><p>Tag the legal problem to one or more legal issues. This is used to associate with Get Legal Help tools.</p></li>
+<li><p>Select the primary legal category. This is used to keep the information organized when it is tagged to multiple primary categories (for example, we may tag a criminal records issue to Business &amp; Work and Crime &amp; Traffic).</p></li>
+<li><p>Select the primary level 2 navigation term. This is used to help with breadcrumbs, reporting, and Guided Navigation. This single term comes from the navigational IA taxonomy.</p></li>
+<li><p>Optionally add a disambiguation tag to distinguish between similar questions. For example, What is the fee to file? may be a question for bankruptcy cases, small claims, and name changes but the answer varies depending on the case type.</p></li>
+</ul>
+</div>
+<div class="section" id="create-the-answer">
+<h3>Create the answer<a class="headerlink" href="#create-the-answer" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
 <li><p>Add the Answer as the Accepted Answer. An accepted answer uses the <a class="reference internal" href="cms_structured_structured_text.html#cms-structured-text"><span class="std std-ref">Structured Text &amp; Lists</span></a> block.</p></li>
 </ul>
 <div class="admonition note">
@@ -238,20 +258,25 @@
 <p>Answers should be broken into segments, either paired markup or list items to avoid having to deliver large blocks of text over non-web interfaces. Web interfaces can concatenate segments back together.</p>
 </div>
 <ul class="simple">
-<li><p>Optionally add one or more suggested answers.</p></li>
+<li><p>Optionally add one or more suggested answers. Suggested answers can be used when there is an official answer but there may be additional options. This is rarely used in our legal content.</p></li>
 <li><p>Add a jurisdiction for the question. See <a class="reference internal" href="cms_structured_jurisdiction.html#cms-coverage-area"><span class="std std-ref">Coverage area</span></a> documentation.</p></li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>By adding jurisdictions to questions, we can offer location-specific answers. For example, in answering “Can I deduct a repair cost?,” the answer may be different in Chicago than in Naperville. When included in an Illinois problem of “My landlord won’t fix my bathroom,” we can deliver the right Legal Questions to the right users.</p>
+<p>By adding jurisdictions to questions, we can offer location-specific answers. For example, in answering “Can I deduct a repair cost?,” the answer may be different in Chicago than in Naperville. When included in an Illinois problem of “My landlord won’t fix my bathroom,” we can deliver the right Legal Questions to the right users based on location.</p>
 </div>
+</div>
+<div class="section" id="add-related-questions">
+<h3>Add related questions<a class="headerlink" href="#add-related-questions" title="Permalink to this headline">¶</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>waiting on content team decisions</p>
+</div>
+</div>
+<div class="section" id="add-additional-metadata">
+<h3>Add additional metadata<a class="headerlink" href="#add-additional-metadata" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><p>Add a content description. This is the description that will be used if the question is displayed independently on our website.</p></li>
-<li><p>Add a meta description. This is the description that will be used in social media, search indexes, and in any API. This should be limited to 300 characters.</p></li>
-<li><p>Optionally, add a disambiguation description. This is used to better describe how one problem is different from a related problem.</p></li>
-<li><p>Tag the legal question to one or more legal issues.</p></li>
-<li><p>Select the primary legal category</p></li>
-<li><p>Add the legal position associated with the problem.</p></li>
+<li><p>Add the legal position associated with the question.</p></li>
 <li><p>Tag the legal question to annual updates.</p></li>
 <li><p>Optionally, add an author/SME to the question</p></li>
 <li><p>Indicate whether a translation should be requested.</p></li>
@@ -259,6 +284,8 @@
 <li><p>Optionally, add any content management tags</p></li>
 <li><p>Set the last reviewed and last revised date per content policy.</p></li>
 </ul>
+</div>
+</div>
 <div class="section" id="legal-question-vs-related-resource">
 <h2>Legal Question vs Related Resource<a class="headerlink" href="#legal-question-vs-related-resource" title="Permalink to this headline">¶</a></h2>
 <p>Not all of our legal content needs to be “transformed” into questions. Some information, particularly those that are videos, flowcharts, decision trees that would be better suited as articles can stay that way and be linked to as Related Resources</p>
@@ -270,7 +297,6 @@
 <p class="admonition-title">Note</p>
 <p>Can we or should we write a query to return related questions where the question being viewed is in a related question field OR when the question being viewed has related questions to prevent the need to add related questions to every question.</p>
 </div>
-<p>Where no legal question</p>
 </div>
 <div class="section" id="legal-questions-in-problems-vs-legal-questions-in-solutions">
 <h2>Legal Questions in Problems vs Legal Questions in Solutions<a class="headerlink" href="#legal-questions-in-problems-vs-legal-questions-in-solutions" title="Permalink to this headline">¶</a></h2>
