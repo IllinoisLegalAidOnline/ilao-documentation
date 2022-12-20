@@ -70,6 +70,8 @@ The second filter criteria should limit the intake settings to open intake setti
 
 The third filter criteria should limit the Case Acceptance Webforms to the one with the correct legal issue. Search "Legal issue" in the category Webform Case Acceptance - [legal issue] submission data. Operator Is equal to. The Legal issue should be the same legal issue id in the Case Acceptane Webform for the issue. (i.e. Expungement = 517681 (criminal records)).
 
+The fourth and fifth filter criteria should limit the results to only display the English versions of the Service and Intake settings. Search "Language" in the category of All. Select both Translation language in the category of Content with a description of The language of the content or translation and Translation language in the category of OAS Intake Settings with no description. For Content: Translation language: the Relationship should be set to Content; Operator Is one of; and Language is Site's default language (English). For OAS Intake Settings: Translation language: the Relationship should be set to field_service_single; Operator Is one of; and Language is Site's default language (English).
+
 The final filter criteria should limit the Case Acceptance Webforms to ones that have been completed (not drafts). Search "Is draft" in the category Webform submission. Operator Is equal to. Is draft set to False.
 
 Sort Criteria
