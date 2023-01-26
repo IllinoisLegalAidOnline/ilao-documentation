@@ -475,7 +475,8 @@ Numbers & Currency
 Phone number format
 ======================
 
-(xxx) xxx-xxxx
+
+   "(555) 555-5555"
 
 Phone numbers can also be hyperlinked. The correct way to link a phone number is <a href="tel:555-555-5555">(555) 555-5555</a>
 
@@ -484,6 +485,7 @@ Dates
 Spell out month, xx day, xxxx year (American English); xx day, month, year (non-English).
 
 Examples:
+
 * May 7, 2021
 * November 12, 1984
 
@@ -495,7 +497,8 @@ Don't hyperlink words like "click here" or "more."  Instead, hyperlink the speci
 
 Connecting to external resources
 ------------------------------------
-Always link when you can over downloading and storing on our website.
+
+.. note:: Always link when you can over downloading and storing on our website.
 
 In other words, if there is a PDF we want to create content for, we should try to create a "link" form to the URL where that form is hosted on an external site like a circuit clerk's site, instead of downloading the form and re-uploading as a "download" form. This is so that if the form is updated we will be alerted because the link will break.
 
@@ -678,7 +681,7 @@ Editorial tracking
 =========================
 
 Annual updates
-------------------
+==================
 Only use this section if there is information in the content that will change regularly.
 
 This includes:
@@ -691,13 +694,13 @@ This includes:
 Do not tag these just because the content deals with that issue - only if something in the content is definitely going to change regularly.
 
 Work logs
--------------
+=============
 
 Revision logs should be used to indicate what work was done when a revision is created
 
 
 Editorial notes
--------------------
+=================
 
 Most legal content types include an optional editorial notes field. This can be used to make additional notes on a piece of content that may be helpful for someone to know about. Some examples:
 
@@ -706,12 +709,13 @@ Most legal content types include an optional editorial notes field. This can be 
 * This content may need to be combined with another article but we didn't have time to do it
 
 Author/Subject matter expert
--------------------------------
+==============================
 
 This was originally added for the blog. It can be used to tag who has ever touched it as a subject matter expert so that we can build out our SME pool.
 
 Content management tags
--------------------------
+==========================
+
 These were initially created and can be used to track content to specific grants. For example, most of our cannabis-related content have the canEx tag so that we can pull that content in a single collection for reporting.
 
 
