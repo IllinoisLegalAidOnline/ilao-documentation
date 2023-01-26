@@ -16,116 +16,230 @@ Length
 
 Standard formats
 -----------------------
-* For overview articles, add "basics" at the end. ("Divorce basics")
-* For how-to articles that involve a court process, start with "Starting a case to." ("Starting a case to expunge your criminal record").
-* Do not include content type
+The standard format depends on the content type.
+
+* Guides: should be titled with "basics" at the end or Understanding x (optionally as a y)
+
+  * Divorce basics
+  * Understanding eviction as a tenant
+  * Understanding eviction as a landlord
+  * SNAP basics
+
+.. warning:: Many Guides do not follow this standard currently. As we work on transforming content, that should be revisited.
+
+* For DIY Legal Solutions, titles should be user-centric. Examples may include:
+
+  * I need help lowering my rent
+  * My SNAP benefits were cut
+  * Someone stole my identity
+
+* For Legal solutions/how-tos, the titles should be action oriented
+
+  * Participate in the case,
+  * File for Chapter 13 bankruptcy
+  * Create a safety plan, including someplace to go
+
+* Legal questions should be written as questions:
+
+  * What is domestic violence?
+  * How much in SNAP benefits can I get?
+
+* Legal steps should be action oriented:
+
+  * Fill out your forms,
+  * File your forms,
+  * Go to your hearing,
+  * Wait.
+
+* Easy form landing pages should be titled with the name of the packet:
+
+  * Divorce
+  * Financial Affidavit
+
+For all content types
+-------------------------
+
 * Do not include the content type ("video," "easy form," etc.)  in the title. It will be added by the website automatically where necessary like in search results.
+* Only include jurisdiction on standard legal content type where the entire article applies to a specific location other than all of Illinois, unless it is an IICLE that contains Illinois in the title.
 
-Jurisdiction
----------------
-If the content piece applies statewide or nationally, we don't include geographic/jurisdictional indicator. If it is is less than all of Illinois, then include in the content title.
+  * Yes: Dealing with bed bugs in Chicago
+  * Yes: Dealing with bed bugs in Kane county
+  * No: Dealing with bed bugs in Illinois
+  * Yes: Illinois civil practice (IICLE)
 
-YES: Dealing with bed bugs in Chicago
-NO: Dealing with bed bugs in Illinois
-
-The exception is for IICLEs. If an IICLE has "Illinois" in the title, keep it.
-
-.. note:: Preserving URLs when changing titles
-
-   When changing a title, uncheck the box next to "Generate automatic alias" so that the URL stays the same. This is so that our Google Analytics tracking for the page will be preserved.
+.. note:: DIY Legal Solutions and their associated legal solutions and legal how-to should replace the existing How to sub-content type.
 
 
-Metadata
-==========
-Meta description and content description
--------------------------------------------
-Good meta descriptions are short blurbs that describe accurately the content of the page. They are like a pitch that convince the user that the page is exactly what they're looking for. If possilbe, start your meta descriptions and content descriptions with the word "Explains..."
+.. warning:: Preserving URLs when changing titles - When changing a title, uncheck the box next to "Generate automatic alias" so that the URL stays the same. This is so that our Google Analytics tracking for the page will be preserved.
+
+
+
+Descriptions
+===========================================
+Good meta descriptions are short blurbs that describe accurately the content of the page. They are like a pitch that convince the user that the page is exactly what they're looking for. They should provide additional "information scent" for the user to decide if this is the help they are looking for.
 
 **Descriptions should not repeat/mimic the title.**
-Yes: Title: Divorce basics; Meta description: Explains the basics of divorce. Includes requirements, timeline, and fees.
-No: Title: Divorce basics; Meta description: The basics of how to get a divorce.
+
+Examples
+-------------
+Divorce basics
+
+* Bad: The basics of how to get a divorce
+* Bad: Explains the basics of divorce
+* Acceptable: Explains the basics of divorce, including requirements, timeline and fees.
+* Better: Explains the requirements, timeline, and what happens during a divorce.
+
+DIY Legal solution: I have a cannabis arrest or conviction
+
+* Bad: Explains what to do if you have a cannabis arrest or conviction
+* Good: Explains your options for clearing a cannabis arrest or conviction
+* Better: Explains your options and provides step-by-step instructions for clearing a cannabis arrest or conviction
+
+DIY Legal solution: I don't feel safe because of my partner, family member, or someone in my household
+
+* Bad: Explains what to do if you don't feel safe
+* Good: Explains how to use an order of protection to keep yourself safe
+* Better: Explains what domestic abuse is and the legal tools you may have to get help
 
 End each description with a period.
 
-In general, do not use “more” or “etc” at the end of the description. Instead, focus on summarizing the main point of the article and don’t worry about including every issue covered by the article in the description.
+Notes
+---------
+
+In general, do not use “more” or “etc” at the end of the description.
 
 Write the content description first, and then copy and paste it into the meta description. There is no need to add more text to the meta description just because the character limit is higher. But feel free to utilize it if you think there is more helpful information to include in the description.
 
-.. note:: The content description is used on the website while the meta description is used in social media and external search engines like Google.
+Disambiguation description
+----------------------------
 
-Legal category
-------------------
+In structured content types, there is often a disambiguation type. Because many components, like legal steps, often share the same or similar title, this can be useful to identify the right one.
 
-Navigational IA & Legal issues IA
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Examples may include:
+
+* Appealing a UI denial at the initial stage vs Appealing a UI denial by UI board
+* Getting a divorce with children vs Getting a divorce without children
+
+This is used internally only.
+
+Legal difficulty
+====================
+
+Appears in Legal solutions and can be used to indicate how difficult the solution is to execute on your own. Example legal difficulty statements:
+
+* "We rate this an easy task in most cases. Fill out the form and file it with the court. No court appearance is generally required."
+* "We rate this as a moderate task in most cases when our Easy Forms are used. You will likely have to appear in court."
+* "We rate this as a moderate task in most cases. If you are not a legal resident or citizen, this task should not be undertaken without an attorney."
+* "We rate this as a difficult task in most cases. We recommend getting legal advice from a lawyer."
+
+
+Legal category tagging
+==========================
+
+Navigational IA & Legal issues IA tagging
+--------------------------------------------
 Tag the content to the best category you can find. One is the goal - only tag multiple categories if the content truly fits both places.
 
 If you tag a piece of content to a taxonomy tag that starts with "another" or "other," do not tag that piece of content to any other taxonomy tags, except another "another" or "other" tag in a different topic.
 
-.. note:: The navigational IA will be used in the future for browsing articles from the home page down and the legal issues categories will continue to be used to deliver content via Get Legal Help
 
 Primary legal category
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+------------------------
 Pick the top-level category that you think best fits the content.
+
+Primary secondary legal category
+-------------------------------------
+Pick the 2nd level category that best fits the content. This is used for internal reporting and for helping to recommend subject matter experts from Salesforce [future enhancement]
 
 
 Image
-------------
-Every piece of content should have an image associated with it. This will be displayed on social media and other places the content is shared.
+===========
+Every piece of content that is directly accessible should have an image associated with it. This will be displayed on social media and other places the content is shared.
 
-Use iStock to find a photo that is engaging and describes the content. Download the Small version and put it on Team Drive in the "Stock Photos" folder in the appropriate sub-folder.
+Many images are already loaded into the website and can be re-used.
 
-The images that will work best are horizontal images with the subject(s) in the center of the image. If the subject is on the outer edge it could be cropped out so adjust the photo yourself using a crop tool.
+If you are using a new image:
 
-Annual updates
-----------------
-Only use this section if there is information in the content that will change regularly.
+* Use iStock to find a photo that is engaging and describes the content. Download the Small version and put it on Team Drive in the "Stock Photos" folder in the appropriate sub-folder.
 
-This includes:
+* The images that will work best are horizontal images with the subject(s) in the center of the image. If the subject is on the outer edge it could be cropped out so adjust the photo yourself using a crop tool.
 
-* Legal content that contains the minimum wage
-* Legal content that contains dates that change year to year
-* Legal content that contains income levels or benefits levels that change each year
-
-
-Do not tag these just because the content deals with that issue - only if something in the content is definitely going to change regularly.
-
-
-Jurisdiction
---------------
-Most of our content is "All of Illinois," but if the content applies to federal law (Immigration, Bankruptcy, etc.) or only a specific locality (usually Cook County or Chicago) you can indicate that here.
+.. note:: individual steps and legal forms are not directly accessible by end users; they are only accessed as part of a solution or how-to.
 
 
 Legal position
------------------
+==================
 Use "Neutral" unless the content is only talking about one side in a legal proceeding. For example, if the content is telling the user how to change your name, you would set this to Plaintiff. If the content is talking about how to defend against a debt collection lawsuit, set this to Defendant (but note that if the content is talking about the other side - how to collect a judgment - it would be Plaintiff).
+
+For DIY Legal Solutions, these are almost always written with a particular side in mind and should rarely be marked neutral.
 
 Be careful to use the actual position in the case. For example, for criminal records, you are the plaintiff, because you are filing a petition to expunge. You are not the defendant (even though you were in the criminal case).
 
 Content level
-----------------
+==================
 Use "Advanced" if the content is clearly talking to lawyers. For example, it talks about working with a client.
 
 Otherwise, use "Basic."
 
+
 Restrictions and exclusions
-------------------------------
-Only restrict to Legal Aid users if it is an IICLE. Otherwise do not use that field.
+=============================
+Only restrict to Legal Aid users if it is an IICLE. Otherwise do not use that field. A small exception may exist for video content that is contributed by an organization and specifically ask that it be limited to the legal aid or legal aid/pro bono audiences.
 
 
-Body text
-=============
+Jurisdiction
+===============
+Most of our content is "All of Illinois," but if the content applies to federal law (Immigration, Bankruptcy, etc.) or only a specific locality (usually Cook County or Chicago) you can indicate that here.
+
+For structured content, there are 2 separate jurisdiction fields:
+
+* Jurisdiction is used to set the overall jurisdiction and should be set to the largest applicable area.
+* Negate jurisdiction is optional and can be used to exclude a county, city, or zip code(s) from the jurisdiction.
+* Examples:
+
+  * A solution applies to all of Illinois. It should have a jurisdiction of Illinois and negate jurisdiction removed.
+  * A legal step applies to Cook county except for the city of Chicago. It should have a jurisdiction of Cook county and a negate jurisdiction of Chicago.
+  * A legal step applies to all of Illinois except for Cook county. It should have a jurisdiction of Illinois and a negate jurisdiction of Cook county.
+
+
+.. note:: See :ref:`cms-coverage-area` for specific jurisdiction use cases (when to use create jurisdiction-specific how-tos vs jursidiction specific steps for example)
+
+================
+Writing content
+================
+
+Referrals within legal content
+================================
+
+Within legal content (not a structured content format)
+---------------------------------------------------------
+
+* Use legal difficulty language where appropriate.
+* Do not include referrals to legal organizations, social services, or community organizations within the text of content
+
+.. todo: Determine if the legal difficulty field should be added to this content type
+
+Within structured content format
+-----------------------------------
+
+* Do not include sentences like "It is best to do this with a lawyer"
+* Do not include referrals to legal organizations, social services, or community organizations within the text of content
+* DO use the legal difficulty field to rate the solution; this will ensure consistency across content
+* DO add social service or community organizations that ILAO has partnerships with for referrals as Helpful Organization content and link to these in the legal solution
+* DO add ILAO as a legal organization if OTIS partners routinely take cases
+* DO add hotline/help desk services as legal organizations when relevant
+
 Headings/Subheadings
------------------------------
+=========================
 Subheadings should be used as they are helpful to a user when scanning a page. There are 3 levels of subheadings:
 
 * Heading 3 (h3),
 * Heading 4 (h4), and
 * Heading 5 (h5).
 
-There must be atleast one h3 before an h4, and at least one h4 before an h5. This includes process articles.
+There must be atleast one h3 before an h4, and at least one h4 before an h5.
 
-.. warning:: Headings should not be used solely for the purpose of style!
+.. warning:: Headings should not be used solely for the purpose of style! They should be used to organize the legal information.
 
 You can use headings and subheadings instead of using nested bullets, if the bullets go more than two levels down.
 
@@ -140,18 +254,36 @@ When deciding between using bullets and using subheadings:
   * they are different aspects or considerations under the same parent heading, or
   * when the items are more than 3 sentences.
 
-Tables
---------
+Structured content formats
+============================
+The same general style rules apply to structured text. Additional considerations:
+
+When working with paired markup,
+
+* Bulleted lists, if they otherwise comply with this style guide, may be used. If working with a structured text block that allows for structured lists, those should be used instead of bulleted lists within a paired markup element.
+* Keep the length to less than 1000 characters, ideally shorter.
+* Limit each paired markup element to one idea, point, or paragraph
+
+
+Using tables
+================================
 Tables should have at least 2 or more rows and 2 - 4 columns (4 or more columns are difficult to read. Use sentence caps for table titles and column headings.
 
 .. todo:: Add responsive table considerations
 
 Glossary terms/definitions
------------------------------
-Try and avoid using terms that need to be defined. If the word/term needs a definition, define it using plain language once in the bundle or article. If the word/term is used more than once in the bundle or article, make sure it is included in the glossary as we will rely on the glossary for the times it is used after it is first defined.
+=============================
+Try and avoid using terms that need to be defined.
+
+If the word/term needs a definition:
+
+* define it using plain language once in the content, if it is a short definition. If the word/term is used more than once in the content, make sure it is included in the glossary as we will rely on the glossary for the times it is used after it is first defined.
+* consider making it a legal question that can be linked to, if the definition needs to be more than one sentence long. For example, the definition of economic abuse is multiple sentences and includes a bulleted list and is better suited as a legal question that can be linked to in articles rather than defined multiple times in individual guides or solutions.
+
+.. note:: Glossary terms can include links to further information in the form of a legal question. For example, "Domestic violence may include economic abuse" that then links to the economic abuse legal question.
 
 Point of view
------------------
+=================
 Use 3rd person when giving general information, or when using 2nd person would be confusing or would result in awkward phrasing. Use 2nd person when you are giving the user instructions. Often, an article will start in 3rd person (because it's general information) and then shift into 2nd person when the info becomes more specific and you start giving instructions.
 
 Good example
@@ -174,39 +306,39 @@ Bad example
    about which state’s courts can decide issues about the custody of you child....
 
 Formatting
--------------
+===============
 
 Italics
-^^^^^^^^^
-Italics should be rarely used.
+----------
+Italics should be used only for:
 
-* Court forms should be italicized. This includes shortened versions of their names. For example, if you refer to a Notice of Appeal  as "the Notice" later in the article, you would still italicize it.
-* Any editors notes (like at the very beginning of a blog where we give the author's byline).
-* Legal citations, case law, and book title.
+* Court form names. This includes shortened versions of their names. For example, if you refer to a Notice of Appeal  as "the Notice" later in the article, you would still italicize it.
+* Editorial notes (like at the very beginning of a blog post where we give the author's byline).
+* Legal citations, case law, and book titles.
 
 
 Bold
-^^^^^^^^
+-----------
 Only bold individual words or phrases; never bold an entire sentence or paragraph. Use for the rare instance of subheadings in an article, or when there is an important deadline, alert or notice for the reader to note.
 
 Underline
-^^^^^^^^^^^^^
+--------------
 Don't ever use.
 
 Underline is reserved to display hyperlinks.
 
 ALL CAPS
-^^^^^^^^^^^
+-------------
 Don't ever use.
 
 Spacing
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-----------
 Between sentences us one space, not two.
 
 Between paragraphs, use one hard return, not two.
 
 Bulleted and numbered lists
-----------------------------
+==============================
 
 * Use bullets (unordered lists) when there is no sequence to the items
 * Use numbers (ordered lists) when there is
@@ -234,6 +366,9 @@ EXAMPLE:
 
 There should only be one hierarchical level for bullet lists. A second level may be used only when absolutely necessary. (See Page Design in Content Design London's Readability Guidelines.)
 
+Bulleted and numbered lists in structured content formats
+-------------------------------------------------------------
+
 
 Grammar and Usage
 ====================
@@ -256,7 +391,7 @@ Do not use "and/or" where it will cause confusing ambiguity. Use it sparingly if
 
 He/She/Them
 --------------
-Do not use he/she or he or she. Use gender neutral terms.
+Do not use he/she or he or she. Use gender neutral terms (they, their, them).
 
 **It is OK to use plural gender neutral pronouns for singular objects**, as in "The judge will make their decision.
 
@@ -330,10 +465,19 @@ Numbers & Currency
 * Spell out 'zero' and 'one'; use digits otherwise.
 * Use commas in numbers of 4 or more digits.
 * Use dollar sign. Only use decimals if there are cents (not ".00").
+* Fractions are preferred over decimals and should be written as 1/2, 1/4, 1/3. If they start a sentence, they should be spelled out:
+
+  * One-third of the group have multiple convictions
+  * In the group, 1/3 have multiple convictions
+
+* If in doubt, follow the AP style guide.
 
 Phone number format
 ======================
+
 (xxx) xxx-xxxx
+
+Phone numbers can also be hyperlinked. The correct way to link a phone number is <a href="tel:555-555-5555">(555) 555-5555</a>
 
 Dates
 ========
@@ -351,7 +495,7 @@ Don't hyperlink words like "click here" or "more."  Instead, hyperlink the speci
 
 Connecting to external resources
 ------------------------------------
-Always link when you can over download.
+Always link when you can over downloading and storing on our website.
 
 In other words, if there is a PDF we want to create content for, we should try to create a "link" form to the URL where that form is hosted on an external site like a circuit clerk's site, instead of downloading the form and re-uploading as a "download" form. This is so that if the form is updated we will be alerted because the link will break.
 
@@ -405,6 +549,58 @@ Automated document (or "autodoc")
 Form preparation program
 A2J
 AutoDoc
+
+Legal solution
+-----------------
+
+Eligibility rules
+^^^^^^^^^^^^^^^^^^^
+Eligibility rules should be discrete and help the user understand whether a specific solution applies to them. It should:
+
+* Include specific legal rules that apply to the solution Examples:
+  * You must not have filed for bankruptcy in the last 3 years
+  * You must have gross income of less than 200% of the Federal Poverty Level
+  * You must have lived in Illinois for the last 6 months
+  * You were never served notice by the landlord
+
+* Include warnings where applicable
+
+  * Do not use this solution if you are collection-proof
+  * If you are not a US citizen, your immgiration status could be jeopardized by using this solution
+
+
+Result
+^^^^^^^^^
+
+The result field should contain information that encourages the user to take the action if it applies to them. This should include content under headings like:
+
+* Why should I do this?
+* Why shouldn't I do this?
+* What can't this do for me?
+* What can this do for me?
+
+Legal step
+-----------------
+
+Legal steps are comprised of directions and tips.
+
+A direction may have multiple paired markup segments to allow us to parse and deliver long blocks of text. A direction should be around a single action. For example a step may have:
+
+* A direction to file specific bankruptcy forms
+* A direction related to waiving court fees
+* A tip indicating the amount of the court fee
+
+.. note:: It is better to break a long direction into multiple segments so that they will work across channels beyond the web.
+
+Don't put all the directions in 1 direction. For example, if filling out forms requires one to:
+
+  * Fill out the forms
+  * Sign them
+  * Make copies
+
+Those should be 3 separate directions.
+
+If a segment does not ask the user to do something, it should most likely be a tip.
 
 
 
@@ -476,4 +672,47 @@ Should be sentence case
 Buttons
 ---------
 Should be title case (Get Legal Help vs Get legal help)
+
+=========================
+Editorial tracking
+=========================
+
+Annual updates
+------------------
+Only use this section if there is information in the content that will change regularly.
+
+This includes:
+
+* Legal content that contains the minimum wage
+* Legal content that contains dates that change year to year
+* Legal content that contains income levels or benefits levels that change each year
+
+
+Do not tag these just because the content deals with that issue - only if something in the content is definitely going to change regularly.
+
+Work logs
+-------------
+
+Revision logs should be used to indicate what work was done when a revision is created
+
+
+Editorial notes
+-------------------
+
+Most legal content types include an optional editorial notes field. This can be used to make additional notes on a piece of content that may be helpful for someone to know about. Some examples:
+
+* This content replaces our cannabis expungement toolboxes
+* This content was unpublished on 1/2/2023 because it was out-of-date
+* This content may need to be combined with another article but we didn't have time to do it
+
+Author/Subject matter expert
+-------------------------------
+
+This was originally added for the blog. It can be used to tag who has ever touched it as a subject matter expert so that we can build out our SME pool.
+
+Content management tags
+-------------------------
+These were initially created and can be used to track content to specific grants. For example, most of our cannabis-related content have the canEx tag so that we can pull that content in a single collection for reporting.
+
+
 
