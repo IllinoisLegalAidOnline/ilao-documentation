@@ -524,7 +524,9 @@ When you refer to a Statewide Form, hyperlink the name of it to the AOIC page fo
 Legal Citations
 -----------------
 Dealing with citations, statutes, regulations, & case law
-We do not use citations in content that is designed for the general public. We do use them in Advanced content, though. In that case, use Blue Book.
+We do not display citations in content that is designed for the general public. We do use them in Advanced content, though. In that case, use Blue Book.
+
+In structured content formats, include the citation(s) where relevant. This will support ongoing content maintenance.
 
 Specific Content Formats
 ==========================
@@ -717,6 +719,16 @@ Content management tags
 ==========================
 
 These were initially created and can be used to track content to specific grants. For example, most of our cannabis-related content have the canEx tag so that we can pull that content in a single collection for reporting.
+
+Metatags
+============
+
+Metatag standards are set by the system for the most part. They only require manual editing when the legal content is:
+
+* an Easy Form. Easy forms should have the title meta tags set to [node:title] [node:field_primary_content_type] | [site:name]
+
+* an DIY Legal solution will be titled with the DIY Legal solution tag
+* Legal solutions will be titled with just the title
 
 
 
