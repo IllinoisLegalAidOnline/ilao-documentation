@@ -76,6 +76,10 @@ For all content types
 
 Descriptions
 ===========================================
+Meta descriptions are used in Metatags so they are used by Google, Facebook, and Twitter.
+
+Content descriptions are used in site search and navigation drill-downs.
+
 Good meta descriptions are short blurbs that describe accurately the content of the page. They are like a pitch that convince the user that the page is exactly what they're looking for. They should provide additional "information scent" for the user to decide if this is the help they are looking for.
 
 **Descriptions should not repeat/mimic the title.**
@@ -99,16 +103,29 @@ DIY Legal solution: I don't feel safe because of my partner, family member, or s
 
 * Bad: Explains what to do if you don't feel safe
 * Good: Explains how to use an order of protection to keep yourself safe
-* Better: Explains what domestic abuse is and the legal tools you may have to get help
+* Better: Explains what domestic abuse is and the legal tools you may have to get help.
+* Also better: Understand what domestic abuse is and how the law can protect you.
+
+DIY Legal solution: I am being evicted because I did not pay the rent
+
+* Bad: Explains what to do if you are being evicted because you did not pay the rent
+* Better: From negotiating with your landlord to going to court, you have options if you are being evicted.
+
+DIY Legal solution: I have a cannabis arrest or conviction
+
+* Not good: Explains the cannabis expungement process
+* Okay: Explains the different ways a cannabis record can be expunged
+* Better: Understand what types of cannabis records can be cleared and how to do it.
+
+
 
 End each description with a period.
 
-Notes
----------
-
 In general, do not use “more” or “etc” at the end of the description.
 
-Write the content description first, and then copy and paste it into the meta description. There is no need to add more text to the meta description just because the character limit is higher. But feel free to utilize it if you think there is more helpful information to include in the description.
+.. note:: While we have usually just used the same text for both the content and meta description, we do not have to.
+
+
 
 Disambiguation description
 ----------------------------

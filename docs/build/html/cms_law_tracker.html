@@ -1,0 +1,333 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Law tracker &mdash; ILAO 2.22 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
+  <link rel="stylesheet" href="../html/_static/css/theme_overrides.css" type="text/css" />
+  <link rel="stylesheet" href="../build/html/_static/css/theme_overrides.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme_overrides.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> ILAO
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="design_guide.html">Design &amp; Style Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="block_management.html">Custom blocks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="people_management.html">User Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="legal_information.html">Legal Information (Resources)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="legal_content_cms.html">Legal Content CMS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basic_pages_cms.html">Basic pages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="testimonials_cms.html">Testimonials Content Type</a></li>
+<li class="toctree-l1"><a class="reference internal" href="webforms_cms.html">Webforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="translation_cms.html">Translation Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="calendar_cms.html">Calendar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jobs_cms.html">Job Listings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="discussion_groups.html">Discussion groups</a></li>
+<li class="toctree-l1"><a class="reference internal" href="otis_cms.html">Get Legal Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="site_search.html">Site Search</a></li>
+<li class="toctree-l1"><a class="reference internal" href="site_faqs.html">Site FAQs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="other_cms_features.html">Other Website Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="taxonomies.html">Taxonomies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rss_feeds.html">RSS Feeds</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ilao_api.html">ILAO’s API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sms_overview.html">SMS Overview</a></li>
+</ul>
+<p class="caption"><span class="caption-text">See also:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="creating_docs_in_github.html">Creating new docs in Github</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ILAO</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Law tracker</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/cms_law_tracker.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="law-tracker">
+<h1>Law tracker<a class="headerlink" href="#law-tracker" title="Permalink to this headline">¶</a></h1>
+<p>The law tracker helps ILAO’s content team track pending and recent legislation.</p>
+<div class="section" id="configuration">
+<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
+<p>To allow flexibility and potential re-use beyond ILAO’s website, the law tracker has a configuration page for storing settings related to the law tracker. This includes:</p>
+<ul class="simple">
+<li><p>API key for OpenStates.org</p></li>
+<li><p>URL for OpenStates API requests for bills</p></li>
+<li><p>Session to monitor. If left empty, session will be ignored.</p></li>
+<li><p>A date field for initial launch to track when to pull data from. As this becomes a nightly task, this will prevent us from pulling in all data with each request.</p></li>
+<li><p>An email field to add emails of those who should receive update notifications</p></li>
+<li><p>A statuses to watch field to track which action descriptions should be included in the database</p></li>
+<li><p>A text field for the jurisdiction to track</p></li>
+</ul>
+</div>
+<div class="section" id="drupal-data-storage">
+<h2>Drupal Data Storage<a class="headerlink" href="#drupal-data-storage" title="Permalink to this headline">¶</a></h2>
+<p>The law tracker users a [custom entity/content type] to store legislative data. This entity includes these items from OpenStates</p>
+<ul class="simple">
+<li><p>Title; this is the title of the legislation</p></li>
+<li><p>OpenStates ID; this is the unique identifier from OpenStates. This is used to control new vs updates to records</p></li>
+<li><p>Identiifier; text field that stores the identifier by the legislature (for example, HB1500)</p></li>
+<li><p>Abstract</p></li>
+<li><p>Last action date</p></li>
+<li><p>Last action description. Only last action descriptions that match the statuses to watch in the configuration will be included in our data set</p></li>
+<li><p>Passage date, if it exists</p></li>
+<li><p>Sources; these are the sources for the legislation from the ILGA website</p></li>
+<li><p>Legislative session</p></li>
+<li><p>Documents; this pulls any documents associated with the bill. This will often include the marked up version.</p></li>
+</ul>
+<p>It also includes these fields to allow ILAO to manage their workflow:</p>
+<ul class="simple">
+<li><p>Effective date</p></li>
+<li><p>Associated taxonomy term (term reference to navigational IA, unlimited cardinality)</p></li>
+<li><p>Associated content (entity reference, using autocomplete, unlimited cardinality)</p></li>
+<li><p>Jira ticket created (yes/no), defaults to no, required</p></li>
+<li><p>Jira ticket id (text field)</p></li>
+<li><p>Notes (WYSIWYG, no summary)</p></li>
+<li><p>Status:</p>
+<ul>
+<li><p>New - this is a newly created item that has not been looked at by the staff</p></li>
+<li><p>Open - this is an item that has been looked at by the staff and impacts our content</p></li>
+<li><p>In progress - this is an item that has been looked at by the staff, impacts our content, and is being worked on. Notifications will not be sent for these.</p></li>
+<li><p>Ignore - this is an item that has been looked at by the staff and does not impact our content. It will be hidden in reports.</p></li>
+<li><p>Closed - this is an item that has been looked at by the staff, impacts our content, and changes have been completed.</p></li>
+</ul>
+</li>
+</ul>
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">Todo</p>
+<p>In a future iteration, direct integration with Jira would be nice.</p>
+</div>
+</div>
+<div class="section" id="automated-updates">
+<h2>Automated Updates<a class="headerlink" href="#automated-updates" title="Permalink to this headline">¶</a></h2>
+<p>The system will automatically check each night for updated data. It will pull in any data that has a last_action_date greater than or equal to the configuration’s track from date. This date is updated with each data pull to limit the number of requests we have to make.</p>
+<p>Once pulled, the system will loop through the data and:</p>
+<ul class="simple">
+<li><p>Create a record for anything that matches the “Statuses to match” field. It is enough if there is a partial starting match. This is necessary as last action description that begin with Public Act change act numbers.</p></li>
+<li><p>Update a record for anything that matches the Statuses to match field and the OpenStatesID already exists. This is necessary to preserve changes made by staff.</p></li>
+</ul>
+</div>
+<div class="section" id="notifications">
+<h2>Notifications<a class="headerlink" href="#notifications" title="Permalink to this headline">¶</a></h2>
+<p>On a nightly basis, the system will send an automated email to anyone listed in the configuration. The notification will include:</p>
+<ul class="simple">
+<li><p>Any bill that has a status of Open and either a past or upcoming (+60 days) effective date</p></li>
+<li><p>Any bill that is New</p></li>
+</ul>
+</div>
+<div class="section" id="reporting">
+<h2>Reporting<a class="headerlink" href="#reporting" title="Permalink to this headline">¶</a></h2>
+<p>A report exists at /admin/content/law-tracker that shows details of the current law tracker:</p>
+<div class="section" id="filters">
+<h3>Filters<a class="headerlink" href="#filters" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Status (defaults to New and Open)</p></li>
+<li><p>Legislative session (equals)</p></li>
+<li><p>Last action date (between)</p></li>
+<li><p>Effective date (between)</p></li>
+<li><p>Last action description (contains)</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="includes">
+<h3>Includes<a class="headerlink" href="#includes" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Title</p></li>
+<li><p>Identifier</p></li>
+<li><p>Abstract</p></li>
+<li><p>Last action date</p></li>
+<li><p>Last action description</p></li>
+<li><p>Effective date</p></li>
+<li><p>Sources (as links)</p></li>
+<li><p>Associated navigational IA terms (with links)</p></li>
+<li><p>Associated content (with links to edit)</p></li>
+<li><p>Jira ticket ID</p></li>
+<li><p>Notes</p></li>
+</ul>
+<p>The report can also be exported to CSV.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Gwen Daniels.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
