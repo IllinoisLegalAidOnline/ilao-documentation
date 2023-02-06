@@ -68,7 +68,7 @@ Notifications
 
 On a nightly basis, the system will send an automated email to anyone listed in the configuration. The notification will include:
 
-* Any bill that has a status of Open and either a past or upcoming (+60 days) effective date
+* Any bill that has a status of New or Open and either a past or upcoming (+60 days) effective date
 * Any bill that is New
 
 
