@@ -142,13 +142,18 @@ This is used internally only.
 Legal difficulty
 ====================
 
-Appears in Legal solutions and can be used to indicate how difficult the solution is to execute on your own. Example legal difficulty statements:
+Appears in Legal solutions indicates how difficult the solution is to do on your own. Example legal difficulty statements:
 
 * "We rate this an easy task in most cases. Fill out the form and file it with the court. No court appearance is generally required."
 * "We rate this as a moderate task in most cases when our Easy Forms are used. You will likely have to appear in court."
-* "We rate this as a moderate task in most cases. If you are not a legal resident or citizen, this task should not be undertaken without an attorney."
+* "We rate this as a moderate task in most cases. If you are not a legal resident or citizen, do not do this task without a lawyer."
 * "We rate this as a difficult task in most cases. We recommend getting legal advice from a lawyer."
 
+These may then appear at the top of the content:
+
+.. warning:: We rate this as a difficult task in most cases. We recommend getting legal help from a lawyer.
+
+.. warning:: We rate this as an easy task in many cases. We recommend getting legal help from a lawyer if you are not a US citizen.
 
 Legal category tagging
 ==========================
