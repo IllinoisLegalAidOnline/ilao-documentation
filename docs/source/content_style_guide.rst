@@ -76,11 +76,16 @@ For all content types
 
 Descriptions
 ===========================================
-Meta descriptions are used in Metatags so they are used by Google, Facebook, and Twitter.
+We have 2 different description fields:
 
-Content descriptions are used in site search and navigation drill-downs.
+* Meta description - this is used in Metatags so they are used by Google, Facebook, and Twitter in creating search results, snipppets, and automatic sharing on social media platforms.
+* Content description is used in the navigation drill-downs and in the Solr search results.
 
-Good meta descriptions are short blurbs that describe accurately the content of the page. They are like a pitch that convince the user that the page is exactly what they're looking for. They should provide additional "information scent" for the user to decide if this is the help they are looking for.
+.. note:: The meta descriptions will get used in site search when we move to Google site search; at that point we may start to consider deprecating the content description field.
+
+Good meta descriptions are short blurbs that describe accurately the content of the page. They are like a pitch that convince the user that the page is exactly what they're looking for. They should provide additional "information scent" for the user to decide if this is the help they are looking for. While the content and meta description can be the same, they do not have to be. The meta description is especially important because it, along with the title, may be all the user sees to decide if this is the page they want to go to.
+
+.. note:: In the examples, the better options are user-centric. This is a shift from our approach of starting descriptions with "Explains."
 
 **Descriptions should not repeat/mimic the title.**
 
@@ -91,39 +96,33 @@ Divorce basics
 * Bad: The basics of how to get a divorce
 * Bad: Explains the basics of divorce
 * Acceptable: Explains the basics of divorce, including requirements, timeline and fees.
-* Better: Explains the requirements, timeline, and what happens during a divorce.
+* Better: Learn about the requirements, timeline, and what happens during a divorce.
 
 DIY Legal solution: I have a cannabis arrest or conviction
 
-* Bad: Explains what to do if you have a cannabis arrest or conviction
-* Good: Explains your options for clearing a cannabis arrest or conviction
-* Better: Explains your options and provides step-by-step instructions for clearing a cannabis arrest or conviction
+* Bad: Explains what to do if you have a cannabis arrest or conviction.
+* Good: Explains your options for clearing a cannabis arrest or conviction.
+* Better: Explains your options and provides step-by-step instructions for clearing a cannabis arrest or conviction.
+* Best:  Use these steps to clear a cannabis arrest or conviction.
 
 DIY Legal solution: I don't feel safe because of my partner, family member, or someone in my household
 
-* Bad: Explains what to do if you don't feel safe
-* Good: Explains how to use an order of protection to keep yourself safe
+* Bad: Explains what to do if you don't feel safe.
+* Good: Explains how to use an order of protection to keep yourself safe.
 * Better: Explains what domestic abuse is and the legal tools you may have to get help.
 * Also better: Understand what domestic abuse is and how the law can protect you.
+* Best: Use orders of protection to protect yourself from abuse.
 
 DIY Legal solution: I am being evicted because I did not pay the rent
 
 * Bad: Explains what to do if you are being evicted because you did not pay the rent
 * Better: From negotiating with your landlord to going to court, you have options if you are being evicted.
 
-DIY Legal solution: I have a cannabis arrest or conviction
-
-* Not good: Explains the cannabis expungement process
-* Okay: Explains the different ways a cannabis record can be expunged
-* Better: Understand what types of cannabis records can be cleared and how to do it.
-
-
 
 End each description with a period.
 
 In general, do not use “more” or “etc” at the end of the description.
 
-.. note:: While we have usually just used the same text for both the content and meta description, we do not have to.
 
 
 
@@ -142,7 +141,9 @@ This is used internally only.
 Legal difficulty
 ====================
 
-Appears in Legal solutions indicates how difficult the solution is to do on your own. Example legal difficulty statements:
+Appears in Legal solutions indicates how difficult the solution is to do on your own, as determined by the content team.  Example legal difficulty statements:
+
+.. todo:: Discuss the text for these as a content team.
 
 * "We rate this an easy task in most cases. Fill out the form and file it with the court. No court appearance is generally required."
 * "We rate this as a moderate task in most cases when our Easy Forms are used. You will likely have to appear in court."
@@ -265,6 +266,8 @@ There must be atleast one h3 before an h4, and at least one h4 before an h5.
 
 You can use headings and subheadings instead of using nested bullets, if the bullets go more than two levels down.
 
+.. note:: While we use both unordered (bulleted) lists and ordered (numbered) lists, ordered lists should never be used in place of a subheading.
+
 When deciding between using bullets and using subheadings:
 
 * use bullets when
@@ -275,6 +278,7 @@ When deciding between using bullets and using subheadings:
 * Use subheadings when
   * they are different aspects or considerations under the same parent heading, or
   * when the items are more than 3 sentences.
+
 
 Structured content formats
 ============================
@@ -407,6 +411,9 @@ Contractions
 ----------------
 Contractions are acceptable when used for plain language. Do not use informal contractions.
 
+Formal contractions include: can't, won't, shouldn't. They use a single apostrophe.
+Informal contractions include: gonna, watcha, wanna. They do not use a single apostrophe.
+
 And/Or
 ----------
 Do not use "and/or" where it will cause confusing ambiguity. Use it sparingly if it avoids confusion between two or more equally viable options.
@@ -438,6 +445,8 @@ Example: Diversity, equity, and inclusion. NOT: Diversity, equity and inclusion.
 Double quotes
 ----------------
 Double quotes can be used when introducing/defining a word for the first time.
+
+.. todo:: Should this be should?
 
 
 Periods
@@ -546,9 +555,11 @@ When you refer to a Statewide Form, hyperlink the name of it to the AOIC page fo
 Legal Citations
 -----------------
 Dealing with citations, statutes, regulations, & case law
-We do not display citations in content that is designed for the general public. We do use them in Advanced content, though. In that case, use Blue Book.
+We do not currently display citations in content that is designed for the general public. We do use them in Advanced content, though. In that case, use Blue Book.
 
 In structured content formats, include the citation(s) where relevant. This will support ongoing content maintenance.
+
+.. note:: Regular legal content does not currently support citations. As we move to structured content, citations may be made visible to users.
 
 Specific Content Formats
 ==========================
@@ -592,8 +603,8 @@ Eligibility rules should be discrete and help the user understand whether a spec
 
 * Include warnings where applicable
 
-  * Do not use this solution if you are collection-proof
-  * If you are not a US citizen, your immgiration status could be jeopardized by using this solution
+  * Do not use this solution if you are collection-proof (link to definition)
+  * If you are not a US citizen, talk to a lawyer before using this solution. It could impact your status.
 
 
 Result
