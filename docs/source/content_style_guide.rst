@@ -290,12 +290,18 @@ When working with paired markup,
 * Keep the length to less than 1000 characters, ideally shorter.
 * Limit each paired markup element to one idea, point, or paragraph
 
+.. note:: Paired markup is a field type in structured content where the content author/editor creates standard HTML text and the system pairs it with a plain text version that can be used on platforms other than the web.
+
+.. image:: ../assets/paired-markup.png
+
 
 Using tables
 ================================
-Tables should have at least 2 or more rows and 2 - 4 columns (4 or more columns are difficult to read. Use sentence caps for table titles and column headings.
+Tables should have at least 2 or more rows and 2 - 4 columns (4 or more columns are difficult to read. Use sentence case for table titles and column headings.
 
-.. todo:: Add responsive table considerations
+.. note:: Tables should be used sparingly as they do not render well on mobile. The tables will be responsive but may squish the text to accommodate. Consider mobile accessibility in designing tables.
+
+
 
 Glossary terms/definitions
 =============================
@@ -307,6 +313,8 @@ If the word/term needs a definition:
 * consider making it a legal question that can be linked to, if the definition needs to be more than one sentence long. For example, the definition of economic abuse is multiple sentences and includes a bulleted list and is better suited as a legal question that can be linked to in articles rather than defined multiple times in individual guides or solutions.
 
 .. note:: Glossary terms can include links to further information in the form of a legal question. For example, "Domestic violence may include economic abuse" that then links to the economic abuse legal question.
+
+..todo:: Add reference to adding glossary terms.
 
 Point of view
 =================
@@ -444,9 +452,8 @@ Example: Diversity, equity, and inclusion. NOT: Diversity, equity and inclusion.
 
 Double quotes
 ----------------
-Double quotes can be used when introducing/defining a word for the first time.
+Double quotes should be used when introducing/defining a word for the first time.
 
-.. todo:: Should this be should?
 
 
 Periods
@@ -554,12 +561,25 @@ When you refer to a Statewide Form, hyperlink the name of it to the AOIC page fo
 
 Legal Citations
 -----------------
-Dealing with citations, statutes, regulations, & case law
-We do not currently display citations in content that is designed for the general public. We do use them in Advanced content, though. In that case, use Blue Book.
+Citations should use Blue Book format.
 
-In structured content formats, include the citation(s) where relevant. This will support ongoing content maintenance.
+Citations should be used within Advanced content.
+
+Citations should be included in structured content formats.
+
+Citations are not included in basic legal content.
 
 .. note:: Regular legal content does not currently support citations. As we move to structured content, citations may be made visible to users.
+
+Examples
+^^^^^^^^^^
+
+* Rental Property Utility Services Act, 765 ILCS 735.
+* Fair Housing Act (FHA), 42 U.S.C. § 3604
+* Chicago Residential Landlords and Tenants Ordinance.  Chicago Municipal Code, Title 5, Chapter 12 (CRLTO)
+* People v. Evans, 163 Ill. App. 3d 561, 564 (1st Dist. 1987)
+* 55 ILCS 5/3-6019
+* Soldal v. Cook County, Illinois, 506 U.S. 56, 58 (1992)
 
 Specific Content Formats
 ==========================
@@ -603,7 +623,7 @@ Eligibility rules should be discrete and help the user understand whether a spec
 
 * Include warnings where applicable
 
-  * Do not use this solution if you are collection-proof (link to definition)
+  * If you are collection-proof (link to definition), this option may not help you.
   * If you are not a US citizen, talk to a lawyer before using this solution. It could impact your status.
 
 
@@ -642,6 +662,8 @@ If a segment does not ask the user to do something, it should most likely be a t
 
 
 
+
+
 Images
 ============
 Alt text
@@ -660,6 +682,8 @@ Reading level
 ================
 Target reading level is 6th-8th grade. The reading level will be assessed by running a Flesch-Kincaid test using Readable.io (see Operations site for username and pw). If you cannot get the readability to a 6th-8th grade reading level, see the Legal Content Director for assistance.
 
+.. note:: There are other tools, like the WriteClearly plugin that you can use to evaluate readability as well.
+
 People-first language
 =========================
 If you are using a word to describe a person, put the word after the word "person."
@@ -670,7 +694,7 @@ Acronyms
 ============
 Spell out first instance of the acronym in each individual article; do this by writing, not by using parentheses. Some acronyms are better known than their full, formal names ("SSI," for example) but should still be spelled out in their first instance.
 
-Example: You can apply for Supplemental Security Income, or SSI, through the Social Security Administration. SSI provides income for persons with a disabiliy.
+Example: You can apply for Supplemental Security Income, or SSI, through the Social Security Administration (SSA). SSI provides income for persons with a disabiliy.
 
 Specific use cases
 ======================
