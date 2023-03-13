@@ -185,7 +185,7 @@
 <p>The law tracker helps ILAO’s content team track pending and recent legislation.</p>
 <div class="section" id="configuration">
 <h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
-<p>To allow flexibility and potential re-use beyond ILAO’s website, the law tracker has a configuration page for storing settings related to the law tracker. This includes:</p>
+<p>To allow flexibility and potential re-use beyond ILAO’s website, the law tracker has a <a class="reference external" href="https://www.illinoislegalaid.org/admin/config/ilao_legislation_records/statesmonitoringsettings">configuration page</a> for storing settings related to the law tracker. This includes:</p>
 <ul class="simple">
 <li><p>API key for OpenStates.org</p></li>
 <li><p>URL for OpenStates API requests for bills</p></li>
@@ -195,10 +195,11 @@
 <li><p>A statuses to watch field to track which action descriptions should be included in the database</p></li>
 <li><p>A text field for the jurisdiction to track</p></li>
 </ul>
+<img alt="_images/cms_law_tracker_config.png" src="_images/cms_law_tracker_config.png" />
 </div>
-<div class="section" id="drupal-data-storage">
-<h2>Drupal Data Storage<a class="headerlink" href="#drupal-data-storage" title="Permalink to this headline">¶</a></h2>
-<p>The law tracker users a [custom entity/content type] to store legislative data. This entity includes these items from OpenStates</p>
+<div class="section" id="legislative-records">
+<h2>Legislative records<a class="headerlink" href="#legislative-records" title="Permalink to this headline">¶</a></h2>
+<p>The law tracker stores each legislative record as its own entity. This entity includes the following data from OpenStates:</p>
 <ul class="simple">
 <li><p>Title; this is the title of the legislation</p></li>
 <li><p>OpenStates ID; this is the unique identifier from OpenStates. This is used to control new vs updates to records</p></li>
@@ -213,7 +214,7 @@
 </ul>
 <p>It also includes these fields to allow ILAO to manage their workflow:</p>
 <ul class="simple">
-<li><p>Effective date</p></li>
+<li><p>Effective date. This is the date the legislation becomes effective.</p></li>
 <li><p>Associated taxonomy term (term reference to navigational IA, unlimited cardinality)</p></li>
 <li><p>Associated content (entity reference, using autocomplete, unlimited cardinality)</p></li>
 <li><p>Jira ticket created (yes/no), defaults to no, required</p></li>
@@ -229,6 +230,7 @@
 </ul>
 </li>
 </ul>
+<img alt="_images/cms_legislative_record.png" src="_images/cms_legislative_record.png" />
 <div class="admonition-todo admonition" id="id1">
 <p class="admonition-title">Todo</p>
 <p>In a future iteration, direct integration with Jira would be nice.</p>

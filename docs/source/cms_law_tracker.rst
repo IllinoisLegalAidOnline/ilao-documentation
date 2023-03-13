@@ -7,7 +7,7 @@ The law tracker helps ILAO's content team track pending and recent legislation.
 Configuration
 ==============
 
-To allow flexibility and potential re-use beyond ILAO's website, the law tracker has a configuration page for storing settings related to the law tracker. This includes:
+To allow flexibility and potential re-use beyond ILAO's website, the law tracker has a `configuration page <https://www.illinoislegalaid.org/admin/config/ilao_legislation_records/statesmonitoringsettings>`_ for storing settings related to the law tracker. This includes:
 
 * API key for OpenStates.org
 * URL for OpenStates API requests for bills
@@ -17,10 +17,12 @@ To allow flexibility and potential re-use beyond ILAO's website, the law tracker
 * A statuses to watch field to track which action descriptions should be included in the database
 * A text field for the jurisdiction to track
 
-Drupal Data Storage
+.. image:: ../assets/cms_law_tracker_config.png
+
+Legislative records
 =====================
 
-The law tracker users a [custom entity/content type] to store legislative data. This entity includes these items from OpenStates
+The law tracker stores each legislative record as its own entity. This entity includes the following data from OpenStates:
 
 * Title; this is the title of the legislation
 * OpenStates ID; this is the unique identifier from OpenStates. This is used to control new vs updates to records
@@ -35,7 +37,7 @@ The law tracker users a [custom entity/content type] to store legislative data. 
 
 It also includes these fields to allow ILAO to manage their workflow:
 
-* Effective date
+* Effective date. This is the date the legislation becomes effective.
 * Associated taxonomy term (term reference to navigational IA, unlimited cardinality)
 * Associated content (entity reference, using autocomplete, unlimited cardinality)
 * Jira ticket created (yes/no), defaults to no, required
@@ -49,6 +51,7 @@ It also includes these fields to allow ILAO to manage their workflow:
   * Ignore - this is an item that has been looked at by the staff and does not impact our content. It will be hidden in reports.
   * Closed - this is an item that has been looked at by the staff, impacts our content, and changes have been completed.
 
+.. image:: ../assets/cms_legislative_record.png
 
 .. todo:: In a future iteration, direct integration with Jira would be nice.
 
