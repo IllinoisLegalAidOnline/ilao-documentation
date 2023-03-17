@@ -30,6 +30,7 @@ Welcome to Illinois Legal Aid Online Product Documentation
    rss_feeds
    ilao_api
    sms_overview
+   data_analytics
 
 See also:
 
