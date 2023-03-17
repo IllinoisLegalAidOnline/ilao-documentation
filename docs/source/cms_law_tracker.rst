@@ -7,6 +7,8 @@ The law tracker helps ILAO's content team track pending and recent legislation.
 Configuration
 ==============
 
+.. warning:: Please do not change the configuration without clearing it with Gwen or Matt.
+
 To allow flexibility and potential re-use beyond ILAO's website, the law tracker has a `configuration page <https://www.illinoislegalaid.org/admin/config/ilao_legislation_records/statesmonitoringsettings>`_ for storing settings related to the law tracker. This includes:
 
 * API key for OpenStates.org
@@ -18,6 +20,8 @@ To allow flexibility and potential re-use beyond ILAO's website, the law tracker
 * A text field for the jurisdiction to track
 
 .. image:: ../assets/cms_law_tracker_config.png
+
+
 
 Legislative records
 =====================

@@ -314,7 +314,7 @@ If the word/term needs a definition:
 
 .. note:: Glossary terms can include links to further information in the form of a legal question. For example, "Domestic violence may include economic abuse" that then links to the economic abuse legal question.
 
-..todo:: Add reference to adding glossary terms.
+.. todo:: Add reference to adding glossary terms.
 
 Point of view
 =================
