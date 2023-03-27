@@ -1,6 +1,8 @@
-=================================
-DIY Legal Solution Content Types
-=================================
+=====================================================
+Structured Content Types - Technical Architecture
+=====================================================
+
+.. todo:: Update to current version
 
 Content Types
 ===============

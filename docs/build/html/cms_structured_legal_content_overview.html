@@ -1,0 +1,407 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Authoring best practices and guidelines &mdash; ILAO 2.22 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
+  <link rel="stylesheet" href="../html/_static/css/theme_overrides.css" type="text/css" />
+  <link rel="stylesheet" href="../build/html/_static/css/theme_overrides.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme_overrides.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Creating and editing structured content" href="cms_structured_legal_content_admin.html" />
+    <link rel="prev" title="Structured content authoring guide" href="structured_content_authoring.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> ILAO
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="design_guide.html">Design &amp; Style Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="block_management.html">Custom blocks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="people_management.html">User Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="legal_information.html">Legal Information (Resources)</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="legal_content_cms.html">Legal Content CMS</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="cms_wysiwyg.html">WYSIWYG Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_custom_tokens.html">Custom Tokens</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_redirects.html">Creating redirects between pages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_content_management_tags.html">Content management tags</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_legal_content.html">Legal content type</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="cms_structured_legal_content.html">COPE/Structured Content</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="cms_structured_content_overview.html">Structured content (COPE content) Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cms_structured_content_navigation.html">DIY Solutions - Navigation and Layouts</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="structured_content_authoring.html">Structured content authoring guide</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Authoring best practices and guidelines</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_content_admin.html">Creating and editing structured content</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="cms_structured_content_reports.html">Structured content reports</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cms_structured_content_sms.html">Delivery over SMS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structured_content_tech.html">Structured content technical documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cms_portal_main_page.html">Portal main page content type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_toolboxes.html">Toolbox and related content types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_adrm.html">Lawyer Manuals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_content_reporting.html">Legal content reporting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_lcv_program.html">Legal Content Volunteers Program</a></li>
+<li class="toctree-l2"><a class="reference internal" href="legal_content_cms.html#known-workarounds">Known Workarounds</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="basic_pages_cms.html">Basic pages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="testimonials_cms.html">Testimonials Content Type</a></li>
+<li class="toctree-l1"><a class="reference internal" href="webforms_cms.html">Webforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="translation_cms.html">Translation Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="calendar_cms.html">Calendar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jobs_cms.html">Job Listings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="discussion_groups.html">Discussion groups</a></li>
+<li class="toctree-l1"><a class="reference internal" href="otis_cms.html">Get Legal Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="site_search.html">Site Search</a></li>
+<li class="toctree-l1"><a class="reference internal" href="site_faqs.html">Site FAQs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="other_cms_features.html">Other Website Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="taxonomies.html">Taxonomies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rss_feeds.html">RSS Feeds</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ilao_api.html">ILAO’s API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sms_overview.html">SMS Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_analytics.html">Data and Analytics</a></li>
+</ul>
+<p class="caption"><span class="caption-text">See also:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="creating_docs_in_github.html">Creating new docs in Github</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ILAO</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="legal_content_cms.html">Legal Content CMS</a> &raquo;</li>
+        
+          <li><a href="cms_structured_legal_content.html">COPE/Structured Content</a> &raquo;</li>
+        
+          <li><a href="structured_content_authoring.html">Structured content authoring guide</a> &raquo;</li>
+        
+      <li>Authoring best practices and guidelines</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/cms_structured_legal_content_overview.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="authoring-best-practices-and-guidelines">
+<h1>Authoring best practices and guidelines<a class="headerlink" href="#authoring-best-practices-and-guidelines" title="Permalink to this headline">¶</a></h1>
+<p>The overall process for creating structured content is to:</p>
+<ul class="simple">
+<li><p>Identify a legal problem that members of ILAO’s target audience face.</p></li>
+<li><p>Identify the legal options someone facing this problem may have. This may include:</p>
+<ul>
+<li><p>Doing nothing</p></li>
+<li><p>Engaging in one or more court processes</p></li>
+<li><p>Negotiating a solution</p></li>
+<li><p>Going to mediation or other alternative dispute resolutions</p></li>
+</ul>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Getting the legal help of a lawyer or legal aid is always included as an option through Get Legal Help.</p>
+</div>
+<ul class="simple">
+<li><p>Build out the legal problem and its options</p></li>
+<li><p>Supplement the legal problem and options with commonly asked questions about the legal problem and/or options</p></li>
+<li><p>Supplement the legal problem and options with additional resources as needed</p></li>
+</ul>
+<div class="section" id="building-out-a-legal-problem-and-its-options">
+<h2>Building out a legal problem and its options<a class="headerlink" href="#building-out-a-legal-problem-and-its-options" title="Permalink to this headline">¶</a></h2>
+<p>One approach is to start with a basic outline of the legal problem and options. Tools like triage rules in ILAO’s online triage and intake system, ChatGPT, or existing ILAO content may help frame the problem and options.</p>
+</div>
+<div class="section" id="two-approaches-to-problem-scope">
+<h2>Two approaches to problem scope<a class="headerlink" href="#two-approaches-to-problem-scope" title="Permalink to this headline">¶</a></h2>
+<p>We currently have taken 2 approaches to defining a problem. One is to broadly define the problem and then offer a variety of solutions (for example, the problem “I don’t feel safe because of my partner, family member, or someone in my household” encompasses as options all phases of getting, keeping, or enforcing an order of protection). Other problems have been defined more narrowly (I am being evicted because I didn’t pay the rent, I need help applying for SNAP).</p>
+<p>Both approaches are valid and because this is a new content model, we can test different approaches and refine over time.</p>
+<p>Regardless of the problem scope used:</p>
+<ul class="simple">
+<li><p>Each problem will have at least one legal option and may have many options</p></li>
+<li><p>Narrower scoped problems may have more related problems that re-use the same options. This is okay</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It is important to distinguish between a legal problem that should be crafted as a DIY Legal Solution and a legal process that may be a solution or option to multiple legal problems. A good example of this is bankruptcy. One could view bankruptcy as a legal problem (I need to file bankruptcy) but it is better viewed as a potential option for a number of legal problems, including debt issues, drivers license problems, foreclosure).</p>
+</div>
+</div>
+<div class="section" id="factors-to-consider-in-a-legal-solution">
+<h2>Factors to consider in a Legal Solution<a class="headerlink" href="#factors-to-consider-in-a-legal-solution" title="Permalink to this headline">¶</a></h2>
+<p>When defining a legal solution/option, there are two key fields that need to be filled out: eligibility and result.</p>
+<div class="section" id="eligiblity">
+<h3>Eligiblity<a class="headerlink" href="#eligiblity" title="Permalink to this headline">¶</a></h3>
+<p>Depending on the option, eligibility may include any of the following:</p>
+<ul class="simple">
+<li><p>Legal qualifications to use the option. Examples may include:</p>
+<ul>
+<li><p>Must have received notice</p></li>
+<li><p>Must meet income limits</p></li>
+<li><p>Must have an arrest and not a conviction</p></li>
+<li><p>Must have entered the United States before a specific date</p></li>
+</ul>
+</li>
+<li><p>Practical qualifications. Examples may include:</p>
+<ul>
+<li><p>Sufficient income to maintain a payment plan, in a solution requiring the user to create a payment plan with a creditor</p></li>
+<li><p>A desire to stay in a rental unit, in a solution to negotiate to stay in a property</p></li>
+<li><p>Be willing and able to continue to comply with their lease</p></li>
+</ul>
+</li>
+<li><p>Disqualifiers to use the soliution. Examples may include:</p>
+<ul>
+<li><p>Being convicted of a violent crime in conjunction with a cannabis conviction</p></li>
+<li><p>Having filed for bankruptcy in the last 5 years</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="results">
+<h3>Results<a class="headerlink" href="#results" title="Permalink to this headline">¶</a></h3>
+<p>The results should explain to the person:</p>
+<ul class="simple">
+<li><p>What completing the option may get them. For example, filing for bankruptcy will stay any current foreclosure proceedings.</p></li>
+<li><p>What completing the option will not get them. For example, someone “choosing not to participate in a divorce case” will not prevent the divorce from occurring but will instead give up any say in the terms of the divorce.</p></li>
+<li><p>What risks completing the option might entail. For example, undocumented immigrants may face deportation risks if they try to clear a criminal record.</p></li>
+<li><p>What real-life benefits that may flow from completing the option. For example, a tenant who participates in an eviction case, even if they lose, may still be able to ask the judge to seal the eviction from their record or get a few extra weeks to move out.</p></li>
+<li><p>What real-life consequences may come from completing the option. For example, someone completing a chapter 7 bankruptcy will have that on their credit report for several years.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="supplementing-with-legal-questions">
+<h2>Supplementing with Legal Questions<a class="headerlink" href="#supplementing-with-legal-questions" title="Permalink to this headline">¶</a></h2>
+<p>Both legal problems (DIY Legal Solutions) and legal options can have quesitons associated with them. Questions can also be accessed independently.</p>
+<p>Include a Legal Question within a DIY Legal Solution when it:</p>
+<ul class="simple">
+<li><p>asks and answers a question that a person might ask in determining if the legal problem applies to them. For example, What is economic abuse? and What types of abuse can be considered domestic violence? are good questions to include in the I don’t feel safe because of my partner, family member, or someone in my household DIY Legal Solution</p></li>
+<li><p>flags a specific concern of high importance to an individual who may have the legal problem but may have complicating factors. For example, Should I clear my cannabis record if I am not a citizen? would warn an individual that there may be special factors to consider in that situation.</p></li>
+<li><p>are directly relevant to the DIY Legal solution</p></li>
+</ul>
+<p>Include a Legal Question within a legal option when it:</p>
+<ul class="simple">
+<li><p>applies more specifically to the option rather than to a problem. For example most of our Chapter 7 or 13 legal questions should attach to the legal option rather than any single problem that bankruptcy can solve</p></li>
+<li><p>is more process-focused rather than substantive in nature. For example, “What evidence do I need to show that proves I paid my rent” would be better on the Legal option “Participate in the case” in eviction DIY Legal solutions than on the</p></li>
+<li><p>is directly relevant to the Legal option’s steps, eligibility, or results.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Not every Legal Question needs to be attached to a problem or solution. Questions can stand alone. Questions that are not tied to a specific problem or solution will still be grouped on legal question pages that match on taxonomy term. For example, “Can I get arrested for driving high?” is not directly relevant to cannabis expungement DIY Legal solutions. It should not be attached to a solution or option but should still be available as a related question to other cannabis questions. It may be attached to a cannabis legalization and expungement guide.</p>
+</div>
+</div>
+<div class="section" id="role-of-existing-legal-content">
+<h2>Role of existing legal content<a class="headerlink" href="#role-of-existing-legal-content" title="Permalink to this headline">¶</a></h2>
+<p>When structured content was started, the goal was to replace much of our guides, text articles, how-tos, and toolboxes.</p>
+<div class="section" id="guides">
+<h3>Guides<a class="headerlink" href="#guides" title="Permalink to this headline">¶</a></h3>
+<p>Guides (misnomered as they don’t actually guide) should provide basic overview information for a legal topic. A guide will likely be broader than a DIY Legal Solution. For example, a TANF basics Guide would provide an individual with an understanding of what TANF is, who may be eligible, what it provides, what ongoing requirements may be involved.</p>
+<p>A guide should:</p>
+<ul class="simple">
+<li><p>Link to relevant Legal Questions or resources in the main body when those resources answer basic questions</p></li>
+<li><p>Link to relevant DIY Legal Solutions in the Take Action block</p></li>
+<li><p>Link to any additional Legal Questions or resources in the Learn more block when they are more tangential to the basics article</p></li>
+<li><p>Will automatically link to relevant forms</p></li>
+</ul>
+<p>See the prototype Guide created using these rules here: <a class="reference external" href="https://www.illinoislegalaid.org/legal-information/cannabis-legalization-and-expungement-basics">Cannabis legalization and expungement basics</a></p>
+</div>
+<div class="section" id="how-tos">
+<h3>How-tos<a class="headerlink" href="#how-tos" title="Permalink to this headline">¶</a></h3>
+<p>Legal options will replace how-tos. When a DIY Legal Solution is published with related legal options, how-tos should be redirected to the best legal option or, if no one individual option is best, to the DIY Legal Solution and archived.</p>
+</div>
+<div class="section" id="other-resources">
+<h3>Other resources<a class="headerlink" href="#other-resources" title="Permalink to this headline">¶</a></h3>
+<p>Other resources that have been fully incorporated into DIY Legal Solutions, legal options, steps, or Legal Questions:</p>
+<ul>
+<li><p>redirected to the best resource, if one exists.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>If an article was converted to a single Legal Question, the article should be directed there.</p></li>
+<li><p>If an article was converted primarily to a legal option, it should be directed there.</p></li>
+<li><p>If an article was converted to multiple legal questions, it is acceptable to redirect to the Legal questions overflow page for the topic.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>set to archived</p></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="cms_structured_legal_content_admin.html" class="btn btn-neutral float-right" title="Creating and editing structured content" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="structured_content_authoring.html" class="btn btn-neutral float-left" title="Structured content authoring guide" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Gwen Daniels.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
