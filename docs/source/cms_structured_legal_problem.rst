@@ -5,148 +5,109 @@ Creating DIY Legal Solution
 =============================
 
 
-A DIY Legal Solution is the top-level container for structured content. The DIY Legal Solution describes a specific problem and the options for potentially dealing with the problem. All other types of structured content relate ultimately relate back to one or more legal problems
+A DIY Legal Solution is the top-level container for structured content. The DIY Legal Solution describes a specific problem and the options for potentially dealing with the problem. All other types of structured content, except for legal questions, ultimately relate back to one or more legal problems.
 
-To create a DIY Legal Solution
---------------------------------
+Provide a title and subtype
+==============================
 
-Create the core problem information
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Add a title that complies with the style guide.
+
+.. image:: ../assets/legal-solution-title.png
+
+You should also add a subtype. This is not currently viewable to users but in a future iteration, we may want to combine DIY legal problems with the same title and then allow the user to pick by sub-type.
+
+Current version example:
+-------------------------
+Example title: I am being evicted for not paying rent
+
+Example subtype: because I didn't pay the rent
 
 
-* Add a title. This should describe the problem to be solved or prevented using the embedded solutions.
-* Add a subtype. This should describe any subcategory of a problem.
-* Add a content description. This is the description that will be used on the website.
-* Add a meta description. This is the description that will be used in social media, search indexes, and in any API. This should be limited to 300 characters.
-* Optionally, add a disambiguation description. This is used to better describe how one problem is different from a related problem.
-* Add an introduction as structured markup.  The purpose of the introduction is to provide a basic overview of the problem. It should be enough to entice the user to stay on the page and navigate through but should not duplicate information in the solution, how-tos, or questions.
-* Stage can be optionally used to distinguish between phases of a problem (for example, being evicted vs post-eviction issues)
+Example title: I am being evicted because the lease ended
 
-Categorize the legal problem
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Example subtype: because the lease ended
+
+Future version example:
+--------------------------
+
+Example title: I am being evicted
+
+Example subtype: because I didn't pay the rent
+
+
+Example title: I am being evicted
+
+Example subtype: because the lease ended
+
+Provide descriptions
+======================
+
+Provide content and meta-descriptions that comply with the style guide. Remember that these should be user-centric.
+
+Example: From negotiating with your landlord to going to court, you have options if you are being evicted.
+
+Draft introduction
+======================
+The purpose of the introduction is to provide a basic overview of the problem. It should be enough to entice the user to stay on the page and navigate through but should not duplicate information in the solution, how-tos, or questions.
+
+The introduction may:
+
+* Have a header
+* Have one or more paragraphs
+* Have one or more lists
+
+.. image:: ../assets/diy_solution_introduction.png
+
+Tag the DIY Legal Solution to specific taxonomies
+====================================================
+
+.. image:: ../assets/diy_solution_tagging.png
 
 * Tag the legal problem to one or more navigational IA tags. This is used to manage the drill down.
 * Tag the legal problem to one or more legal issues. This is used to associate with Get Legal Help tools.
 * Select the primary legal category. This is used to keep the information organized when it is tagged to multiple primary categories (for example, we may tag a criminal records issue to Business & Work and Crime & Traffic).
 * Select the primary level 2 navigation term. This is used to help with breadcrumbs, reporting, and Guided Navigation. This single term comes from the navigational IA taxonomy.
-* Add a legal code. Legal codes should come from either the LSC problem codes or the `LIST <https://taxonomy.legal>`_ codes.
-
-.. image:: ../assets/cms_structured_legal_code.png
-
-The above image includes the legal code for Food stamps from both the LSC problem codes and LIST.
-
+* Add a legal code. Legal codes should come from either the LSC problem codes or the `LIST <https://taxonomy.legal>`_ codes, or both.
 * Add at least one life area affected. This is an `ILAO-hosted taxonomy <https://www.illinoislegalaid.org/admin/structure/taxonomy_manager/voc/life_areas>`_.
 
-Add supporting legal information
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* Add one or more possible solutions to solve the problem. This is just a reference to an existing Legal Solution (see the :ref:`cms-legal-solution` documentation).
-* Optionally, add up to 2 preventative solutions. A preventative solution should help the user avoid the problem. For example, if the legal problem is I am being evicted, a preventative solution may be to cure a late rent payment.
-* Optionally, add a FAQ by adding individual Legal Questions. This is just a reference to an existing Legal Question (see the Legal Question documentation).
-* Optionally, add one or more related resources by adding individual pieces of legal content. This is just a reference to an existing Legal content, portal main pages, and toolbox content. Ideally, related resources will be those that can not be created within the structured content framework (for example, videos, flowcharts, decision trees, external links).
-* Indicate the legal position associated with the problem
 
-.. note::  We envision that the API will automatically pull in data about related resources, such as last revised dates and content format.
+Include possible solutions and prevention options
+==================================================
+
+Add one or more possible legal options to solve the problem. This is just a reference to an existing Legal Options (see the :ref:`cms-legal-solution` documentation).
+
+.. image:: ../assets/diy_solution_options.png
+
+Optionally, add up to 2 preventative solutions. A preventative solution should help the user avoid the problem. For example, if the legal problem is I am being evicted, a preventative solution may be to cure a late rent payment.
+
+Link to frequently asked questions
+====================================
+
+You can link to existing Legal Questions in the Frequently asked questions block. See the authoring guide for best practices.
+
+.. image:: ../assets/diy_legal_solution_question.png
+
+
+Link to related content
+==========================
+
+.. image:: ../assets/diy_solution_related.png
+
+You can also add references to:
+
+* Other legal problems that relate to this legal problem or that a user who has this problem would also likely have.
+* If there is a basics article (Guide), include it here as a cross-referenced resource
+* Any other related content
+
 
 Add additional metadata
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+* Add the party type. It is rare for a legal problem to be neutral
 * Add an image; this will be used in social media sharing
 * Optionally, add any content management tags
 * Indicate whether a translation should be requested.
 * Indicate whether an existing translation should be marked as outdated.
 * The word count will be automatically added
 
-.. note:: A legal problem itself contains very little content beyond the introduction. It is a container for other content. As such, it does not have the last reviewed/revised dates that other content types have. It will inherit the oldest reviewed/revised dates from its child components.
-
-.. todo:: this section should be revised as part of a style guide
-
-Legal problems, subtypes, disambiguation descriptions, and solutions
-======================================================================
-
-Legal problems are generally broad. "I am losing my rental housing" or "I am being abused" are legal problems.
-
-Subtypes are narrower types of problems within a legal problem.
-
-A disambiguation description distinguishes between problems and subtypes.
-
-A solution describes the solution for solving the problem/subtype pair.
-
-Examples
---------------------------
-Problem:  I am at risk of losing my rental housing
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-* Subtype 1: Being evicted from an unsubsidized apartment, with a disambiguation description of "This applies when the tenant is not using a housing voucher and/or their rent is not based on their income."
-* Subtype 2: Being evicted from a subsidized apartment, with a disambiguation description of "This applies when the tenant isusing a housing voucher and/or their rent is not based on their income but is not in public housing."
-* Subtype 3: Being evicted from a public housing unit
-* Subtype 4: Being evicted from a unit in foreclosure.
-
-Problem:  I am being abused
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-* Subtype 1: Being abused by a spouse or someone you live with
-* Subtype 2: Being abused by someone who is or was a romantic partner but who doesn't live with you.
-* Subtype 2: Survivor of sexual abuse or assault
-* Subtype 3: Being stalked
-* Subtype 4: Being abused by an adult child
-* Subtype 5: Being abused by a parent
-
-Solutions for each of these may include:
-
-* Getting an order of protection
-* Getting a civil no contact order
-* Getting a stalking no contact order
-* Changing an order of protection
-* Changing a civil no contact order
-* Changing a stalking no contact order
-* Renewing an order of protection
-* Renewing a civil no contact order
-* Renewing a stalking no contact order
-
-and the subtypes may share the solutions.
-
-
-Life areas affected
-======================
-
-As of January 2021, the terms include:
-
-  * Ability to work
-  * Consumer rights
-  * Creditworthiness
-  * Driving privileges
-  * Family
-  * Freedom to move
-  * Health and safety
-  * Housing
-  * Immigration status
-  * Income
-  * Last wishes
-
-Frequently Asked Questions
-===========================
-Legal problems can have Legal Questions attached. FAQs should address the problem directly. General questions related to solutions should be added to the Legal Solution but questions specifically related to how the solution affects the problem should go here. For example: When am I eligible for a second bankruptcy? would go in the bankruptcy solution but Can I save my house if I file for bankruptcy would go in a foreclosure-related problem.
-
-Legal Question vs Related Resource
-====================================
-
-A Legal Question is a piece of structured content that answers a specific question relevant to a problem or solution.
-
-Related resources are pieces of legal content that are not transformable into a Question/Answer (for example, a video or flowchart) or are more tangential to a specific problem or solution.
-
-Examples of good Legal Questions attached to Applying for unemployment
-
-* Can I get unemployment if I work part-time?
-* Can I get unemployment if I was fired for cause?
-
-Examples of good related resources that might be attached to applying for unemployment:
-
-* Unemployed parents and paying child support
-* Calculating unemployment benefits
-
-
-Full add/edit form
-====================
-
-.. image:: ../assets/cms-structured-legal-problem.png
 

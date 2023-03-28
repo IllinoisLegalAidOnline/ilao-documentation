@@ -8,3 +8,5 @@ Structured content authoring guide
 
    cms_structured_legal_content_overview
    cms_structured_legal_content_admin
+   cms_structured_legal_problem
+

@@ -101,28 +101,18 @@
 <li class="toctree-l2"><a class="reference internal" href="cms_redirects.html">Creating redirects between pages</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cms_content_management_tags.html">Content management tags</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cms_legal_content.html">Legal content type</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="cms_structured_legal_content.html">DIY Legal Solutions</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="cms_structured_content_overview.html">DIY Legal Solutions Overview</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="cms_structured_legal_content.html">COPE/Structured Content</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="cms_structured_content_overview.html">Structured content (COPE content) Overview</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cms_structured_content_navigation.html">DIY Solutions - Navigation and Layouts</a></li>
-<li class="toctree-l3"><a class="reference internal" href="cms_structured_content.html">Structured Content Schema</a></li>
-<li class="toctree-l3"><a class="reference internal" href="cms_structured_content_types.html">DIY Legal Solution Content Types</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="cms_structured_legal_content_admin.html">Creating and editing structured content</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="structured_content_authoring.html">Structured content authoring guide</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_content_overview.html">Authoring best practices and guidelines</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_content_admin.html">Creating and editing structured content</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">Creating DIY Legal Solution</a></li>
-<li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_solution.html">Legal Solution</a></li>
-<li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_howto.html">Legal How-To</a></li>
-<li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_step.html">Legal Step</a></li>
-<li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_forms.html">Legal forms</a></li>
-<li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_question.html">Legal Question</a></li>
-<li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_helpful_organization.html">Structured Helpful Organization</a></li>
-<li class="toctree-l4"><a class="reference internal" href="cms_structured_faqs.html">Managing structured content FAQs</a></li>
-<li class="toctree-l4"><a class="reference internal" href="cms_structured_paired_markup.html">Paired Markup</a></li>
-<li class="toctree-l4"><a class="reference internal" href="cms_structured_jurisdiction.html">Coverage area</a></li>
-<li class="toctree-l4"><a class="reference internal" href="cms_structured_structured_text.html">Structured Text &amp; Lists</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="cms_structured_content_api.html">Structured content API</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cms_structured_content_reports.html">Structured content reports</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cms_structured_content_sms.html">Delivery over SMS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structured_content_tech.html">Structured content technical documentation</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="cms_portal_main_page.html">Portal main page content type</a></li>
@@ -148,6 +138,7 @@
 <li class="toctree-l1"><a class="reference internal" href="rss_feeds.html">RSS Feeds</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ilao_api.html">ILAO’s API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sms_overview.html">SMS Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_analytics.html">Data and Analytics</a></li>
 </ul>
 <p class="caption"><span class="caption-text">See also:</span></p>
 <ul>
@@ -202,7 +193,9 @@
         
           <li><a href="legal_content_cms.html">Legal Content CMS</a> &raquo;</li>
         
-          <li><a href="cms_structured_legal_content.html">DIY Legal Solutions</a> &raquo;</li>
+          <li><a href="cms_structured_legal_content.html">COPE/Structured Content</a> &raquo;</li>
+        
+          <li><a href="structured_content_authoring.html">Structured content authoring guide</a> &raquo;</li>
         
           <li><a href="cms_structured_legal_content_admin.html">Creating and editing structured content</a> &raquo;</li>
         
@@ -227,153 +220,83 @@
             
   <div class="section" id="creating-diy-legal-solution">
 <span id="cms-legal-problem"></span><h1>Creating DIY Legal Solution<a class="headerlink" href="#creating-diy-legal-solution" title="Permalink to this headline">¶</a></h1>
-<p>A DIY Legal Solution is the top-level container for structured content. The DIY Legal Solution describes a specific problem and the options for potentially dealing with the problem. All other types of structured content relate ultimately relate back to one or more legal problems</p>
-<div class="section" id="to-create-a-diy-legal-solution">
-<h2>To create a DIY Legal Solution<a class="headerlink" href="#to-create-a-diy-legal-solution" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="create-the-core-problem-information">
-<h3>Create the core problem information<a class="headerlink" href="#create-the-core-problem-information" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><p>Add a title. This should describe the problem to be solved or prevented using the embedded solutions.</p></li>
-<li><p>Add a subtype. This should describe any subcategory of a problem.</p></li>
-<li><p>Add a content description. This is the description that will be used on the website.</p></li>
-<li><p>Add a meta description. This is the description that will be used in social media, search indexes, and in any API. This should be limited to 300 characters.</p></li>
-<li><p>Optionally, add a disambiguation description. This is used to better describe how one problem is different from a related problem.</p></li>
-<li><p>Add an introduction as structured markup.  The purpose of the introduction is to provide a basic overview of the problem. It should be enough to entice the user to stay on the page and navigate through but should not duplicate information in the solution, how-tos, or questions.</p></li>
-<li><p>Stage can be optionally used to distinguish between phases of a problem (for example, being evicted vs post-eviction issues)</p></li>
-</ul>
+<p>A DIY Legal Solution is the top-level container for structured content. The DIY Legal Solution describes a specific problem and the options for potentially dealing with the problem. All other types of structured content, except for legal questions, ultimately relate back to one or more legal problems.</p>
+<div class="section" id="provide-a-title-and-subtype">
+<h2>Provide a title and subtype<a class="headerlink" href="#provide-a-title-and-subtype" title="Permalink to this headline">¶</a></h2>
+<p>Add a title that complies with the style guide.</p>
+<img alt="_images/legal-solution-title.png" src="_images/legal-solution-title.png" />
+<p>You should also add a subtype. This is not currently viewable to users but in a future iteration, we may want to combine DIY legal problems with the same title and then allow the user to pick by sub-type.</p>
+<div class="section" id="current-version-example">
+<h3>Current version example:<a class="headerlink" href="#current-version-example" title="Permalink to this headline">¶</a></h3>
+<p>Example title: I am being evicted for not paying rent</p>
+<p>Example subtype: because I didn’t pay the rent</p>
+<p>Example title: I am being evicted because the lease ended</p>
+<p>Example subtype: because the lease ended</p>
 </div>
-<div class="section" id="categorize-the-legal-problem">
-<h3>Categorize the legal problem<a class="headerlink" href="#categorize-the-legal-problem" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="future-version-example">
+<h3>Future version example:<a class="headerlink" href="#future-version-example" title="Permalink to this headline">¶</a></h3>
+<p>Example title: I am being evicted</p>
+<p>Example subtype: because I didn’t pay the rent</p>
+<p>Example title: I am being evicted</p>
+<p>Example subtype: because the lease ended</p>
+</div>
+</div>
+<div class="section" id="provide-descriptions">
+<h2>Provide descriptions<a class="headerlink" href="#provide-descriptions" title="Permalink to this headline">¶</a></h2>
+<p>Provide content and meta-descriptions that comply with the style guide. Remember that these should be user-centric.</p>
+<p>Example: From negotiating with your landlord to going to court, you have options if you are being evicted.</p>
+</div>
+<div class="section" id="draft-introduction">
+<h2>Draft introduction<a class="headerlink" href="#draft-introduction" title="Permalink to this headline">¶</a></h2>
+<p>The purpose of the introduction is to provide a basic overview of the problem. It should be enough to entice the user to stay on the page and navigate through but should not duplicate information in the solution, how-tos, or questions.</p>
+<p>The introduction may:</p>
+<ul class="simple">
+<li><p>Have a header</p></li>
+<li><p>Have one or more paragraphs</p></li>
+<li><p>Have one or more lists</p></li>
+</ul>
+<img alt="_images/diy_solution_introduction.png" src="_images/diy_solution_introduction.png" />
+</div>
+<div class="section" id="tag-the-diy-legal-solution-to-specific-taxonomies">
+<h2>Tag the DIY Legal Solution to specific taxonomies<a class="headerlink" href="#tag-the-diy-legal-solution-to-specific-taxonomies" title="Permalink to this headline">¶</a></h2>
+<img alt="_images/diy_solution_tagging.png" src="_images/diy_solution_tagging.png" />
 <ul class="simple">
 <li><p>Tag the legal problem to one or more navigational IA tags. This is used to manage the drill down.</p></li>
 <li><p>Tag the legal problem to one or more legal issues. This is used to associate with Get Legal Help tools.</p></li>
 <li><p>Select the primary legal category. This is used to keep the information organized when it is tagged to multiple primary categories (for example, we may tag a criminal records issue to Business &amp; Work and Crime &amp; Traffic).</p></li>
 <li><p>Select the primary level 2 navigation term. This is used to help with breadcrumbs, reporting, and Guided Navigation. This single term comes from the navigational IA taxonomy.</p></li>
-<li><p>Add a legal code. Legal codes should come from either the LSC problem codes or the <a class="reference external" href="https://taxonomy.legal">LIST</a> codes.</p></li>
-</ul>
-<img alt="_images/cms_structured_legal_code.png" src="_images/cms_structured_legal_code.png" />
-<p>The above image includes the legal code for Food stamps from both the LSC problem codes and LIST.</p>
-<ul class="simple">
+<li><p>Add a legal code. Legal codes should come from either the LSC problem codes or the <a class="reference external" href="https://taxonomy.legal">LIST</a> codes, or both.</p></li>
 <li><p>Add at least one life area affected. This is an <a class="reference external" href="https://www.illinoislegalaid.org/admin/structure/taxonomy_manager/voc/life_areas">ILAO-hosted taxonomy</a>.</p></li>
 </ul>
 </div>
-<div class="section" id="add-supporting-legal-information">
-<h3>Add supporting legal information<a class="headerlink" href="#add-supporting-legal-information" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="include-possible-solutions-and-prevention-options">
+<h2>Include possible solutions and prevention options<a class="headerlink" href="#include-possible-solutions-and-prevention-options" title="Permalink to this headline">¶</a></h2>
+<p>Add one or more possible legal options to solve the problem. This is just a reference to an existing Legal Options (see the <a class="reference internal" href="cms_structured_legal_solution.html#cms-legal-solution"><span class="std std-ref">Legal Solution</span></a> documentation).</p>
+<img alt="_images/diy_solution_options.png" src="_images/diy_solution_options.png" />
+<p>Optionally, add up to 2 preventative solutions. A preventative solution should help the user avoid the problem. For example, if the legal problem is I am being evicted, a preventative solution may be to cure a late rent payment.</p>
+</div>
+<div class="section" id="link-to-frequently-asked-questions">
+<h2>Link to frequently asked questions<a class="headerlink" href="#link-to-frequently-asked-questions" title="Permalink to this headline">¶</a></h2>
+<p>You can link to existing Legal Questions in the Frequently asked questions block. See the authoring guide for best practices.</p>
+<img alt="_images/diy_legal_solution_question.png" src="_images/diy_legal_solution_question.png" />
+</div>
+<div class="section" id="link-to-related-content">
+<h2>Link to related content<a class="headerlink" href="#link-to-related-content" title="Permalink to this headline">¶</a></h2>
+<img alt="_images/diy_solution_related.png" src="_images/diy_solution_related.png" />
+<p>You can also add references to:</p>
 <ul class="simple">
-<li><p>Add one or more possible solutions to solve the problem. This is just a reference to an existing Legal Solution (see the <a class="reference internal" href="cms_structured_legal_solution.html#cms-legal-solution"><span class="std std-ref">Legal Solution</span></a> documentation).</p></li>
-<li><p>Optionally, add up to 2 preventative solutions. A preventative solution should help the user avoid the problem. For example, if the legal problem is I am being evicted, a preventative solution may be to cure a late rent payment.</p></li>
-<li><p>Optionally, add a FAQ by adding individual Legal Questions. This is just a reference to an existing Legal Question (see the Legal Question documentation).</p></li>
-<li><p>Optionally, add one or more related resources by adding individual pieces of legal content. This is just a reference to an existing Legal content, portal main pages, and toolbox content. Ideally, related resources will be those that can not be created within the structured content framework (for example, videos, flowcharts, decision trees, external links).</p></li>
-<li><p>Indicate the legal position associated with the problem</p></li>
+<li><p>Other legal problems that relate to this legal problem or that a user who has this problem would also likely have.</p></li>
+<li><p>If there is a basics article (Guide), include it here as a cross-referenced resource</p></li>
+<li><p>Any other related content</p></li>
 </ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>We envision that the API will automatically pull in data about related resources, such as last revised dates and content format.</p>
-</div>
-</div>
-<div class="section" id="add-additional-metadata">
-<h3>Add additional metadata<a class="headerlink" href="#add-additional-metadata" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
+<li><p>Add the party type. It is rare for a legal problem to be neutral</p></li>
 <li><p>Add an image; this will be used in social media sharing</p></li>
 <li><p>Optionally, add any content management tags</p></li>
 <li><p>Indicate whether a translation should be requested.</p></li>
 <li><p>Indicate whether an existing translation should be marked as outdated.</p></li>
 <li><p>The word count will be automatically added</p></li>
 </ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>A legal problem itself contains very little content beyond the introduction. It is a container for other content. As such, it does not have the last reviewed/revised dates that other content types have. It will inherit the oldest reviewed/revised dates from its child components.</p>
-</div>
-<div class="admonition-todo admonition" id="id1">
-<p class="admonition-title">Todo</p>
-<p>this section should be revised as part of a style guide</p>
-</div>
-<div class="section" id="legal-problems-subtypes-disambiguation-descriptions-and-solutions">
-<h4>Legal problems, subtypes, disambiguation descriptions, and solutions<a class="headerlink" href="#legal-problems-subtypes-disambiguation-descriptions-and-solutions" title="Permalink to this headline">¶</a></h4>
-<p>Legal problems are generally broad. “I am losing my rental housing” or “I am being abused” are legal problems.</p>
-<p>Subtypes are narrower types of problems within a legal problem.</p>
-<p>A disambiguation description distinguishes between problems and subtypes.</p>
-<p>A solution describes the solution for solving the problem/subtype pair.</p>
-</div>
-</div>
-</div>
-<div class="section" id="examples">
-<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="problem-i-am-at-risk-of-losing-my-rental-housing">
-<h3>Problem:  I am at risk of losing my rental housing<a class="headerlink" href="#problem-i-am-at-risk-of-losing-my-rental-housing" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><p>Subtype 1: Being evicted from an unsubsidized apartment, with a disambiguation description of “This applies when the tenant is not using a housing voucher and/or their rent is not based on their income.”</p></li>
-<li><p>Subtype 2: Being evicted from a subsidized apartment, with a disambiguation description of “This applies when the tenant isusing a housing voucher and/or their rent is not based on their income but is not in public housing.”</p></li>
-<li><p>Subtype 3: Being evicted from a public housing unit</p></li>
-<li><p>Subtype 4: Being evicted from a unit in foreclosure.</p></li>
-</ul>
-</div>
-<div class="section" id="problem-i-am-being-abused">
-<h3>Problem:  I am being abused<a class="headerlink" href="#problem-i-am-being-abused" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><p>Subtype 1: Being abused by a spouse or someone you live with</p></li>
-<li><p>Subtype 2: Being abused by someone who is or was a romantic partner but who doesn’t live with you.</p></li>
-<li><p>Subtype 2: Survivor of sexual abuse or assault</p></li>
-<li><p>Subtype 3: Being stalked</p></li>
-<li><p>Subtype 4: Being abused by an adult child</p></li>
-<li><p>Subtype 5: Being abused by a parent</p></li>
-</ul>
-<p>Solutions for each of these may include:</p>
-<ul class="simple">
-<li><p>Getting an order of protection</p></li>
-<li><p>Getting a civil no contact order</p></li>
-<li><p>Getting a stalking no contact order</p></li>
-<li><p>Changing an order of protection</p></li>
-<li><p>Changing a civil no contact order</p></li>
-<li><p>Changing a stalking no contact order</p></li>
-<li><p>Renewing an order of protection</p></li>
-<li><p>Renewing a civil no contact order</p></li>
-<li><p>Renewing a stalking no contact order</p></li>
-</ul>
-<p>and the subtypes may share the solutions.</p>
-<div class="section" id="life-areas-affected">
-<h4>Life areas affected<a class="headerlink" href="#life-areas-affected" title="Permalink to this headline">¶</a></h4>
-<p>As of January 2021, the terms include:</p>
-<blockquote>
-<div><ul class="simple">
-<li><p>Ability to work</p></li>
-<li><p>Consumer rights</p></li>
-<li><p>Creditworthiness</p></li>
-<li><p>Driving privileges</p></li>
-<li><p>Family</p></li>
-<li><p>Freedom to move</p></li>
-<li><p>Health and safety</p></li>
-<li><p>Housing</p></li>
-<li><p>Immigration status</p></li>
-<li><p>Income</p></li>
-<li><p>Last wishes</p></li>
-</ul>
-</div></blockquote>
-</div>
-<div class="section" id="frequently-asked-questions">
-<h4>Frequently Asked Questions<a class="headerlink" href="#frequently-asked-questions" title="Permalink to this headline">¶</a></h4>
-<p>Legal problems can have Legal Questions attached. FAQs should address the problem directly. General questions related to solutions should be added to the Legal Solution but questions specifically related to how the solution affects the problem should go here. For example: When am I eligible for a second bankruptcy? would go in the bankruptcy solution but Can I save my house if I file for bankruptcy would go in a foreclosure-related problem.</p>
-</div>
-<div class="section" id="legal-question-vs-related-resource">
-<h4>Legal Question vs Related Resource<a class="headerlink" href="#legal-question-vs-related-resource" title="Permalink to this headline">¶</a></h4>
-<p>A Legal Question is a piece of structured content that answers a specific question relevant to a problem or solution.</p>
-<p>Related resources are pieces of legal content that are not transformable into a Question/Answer (for example, a video or flowchart) or are more tangential to a specific problem or solution.</p>
-<p>Examples of good Legal Questions attached to Applying for unemployment</p>
-<ul class="simple">
-<li><p>Can I get unemployment if I work part-time?</p></li>
-<li><p>Can I get unemployment if I was fired for cause?</p></li>
-</ul>
-<p>Examples of good related resources that might be attached to applying for unemployment:</p>
-<ul class="simple">
-<li><p>Unemployed parents and paying child support</p></li>
-<li><p>Calculating unemployment benefits</p></li>
-</ul>
-</div>
-<div class="section" id="full-add-edit-form">
-<h4>Full add/edit form<a class="headerlink" href="#full-add-edit-form" title="Permalink to this headline">¶</a></h4>
-<img alt="_images/cms-structured-legal-problem.png" src="_images/cms-structured-legal-problem.png" />
-</div>
-</div>
 </div>
 </div>
 

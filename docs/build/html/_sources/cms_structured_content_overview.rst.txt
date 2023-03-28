@@ -2,21 +2,41 @@
 Structured content (COPE content) Overview
 =============================================
 
-Structured content types were defined in the CMS as a move towards Create Once Publish Everywhere (COPE) model for authoring legal information.
+Structured content types were defined in the CMS as a move towards Create Once Publish Everywhere (COPE)
 
-It builds on
+There are [x] types of structured content:
 
-The DIY Legal Solution content type is the core wrapper for COPE content.
+* DIY Legal Solution - this provides an introduction section and then links to other content including other structured content formats (DIY Legal solutions, legal options, legal questions) and other non-structured content (Guides, other related resources)
+* Legal options - this provides:
 
+  * legal difficulty
+  * eligibility rules
+  * results expected
+  * links to step-by-step instructions
+  * references to non-legal helpful organizations
+  * references to legal organizations
 
-Every  DIY Legal Solution packages:
+* Legal how-to
 
-* starts with a defined problem (Introduction)
-* has a description of the problem
-* links to the legal options that one might take to resolve the problem
-* may have one or more legal questions that help more fully describe the problem.
-* may link to a related guide or basics article ("Learn the basics")
-* may link to other resources
+  * time required to complete the how-to
+  * Contains 1 or more step sections; the step sections references 1 or more legal steps
+
+* Legal step
+
+  * Has a type (direction or step)
+  * Links to legal forms needed
+  * Is jurisdiction-based
+
+* Legal question - supplemental information relevant to the DIY Legal solution, legal option, or otherwise independent related questions. Each question includes:
+
+  * An accepted answer, which is jurisdiction-based
+  * Links to other questions
+  * Links to other resources
+
+* Legal forms
+
+See the authoring guide for how to build each of these content types.
+See the website layouts section for how these appear on the website.
 
 
 

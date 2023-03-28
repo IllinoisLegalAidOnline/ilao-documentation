@@ -107,12 +107,10 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="cms_structured_content_navigation.html">DIY Solutions - Navigation and Layouts</a></li>
-<li class="toctree-l3"><a class="reference internal" href="cms_structured_content.html">Structured Content Schema</a></li>
-<li class="toctree-l3"><a class="reference internal" href="cms_structured_content_types.html">Structured Content Types - Technical Architecture</a></li>
-<li class="toctree-l3"><a class="reference internal" href="cms_structured_legal_content_admin.html">Creating and editing structured content</a></li>
-<li class="toctree-l3"><a class="reference internal" href="cms_structured_content_api.html">Structured content API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structured_content_authoring.html">Structured content authoring guide</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cms_structured_content_reports.html">Structured content reports</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cms_structured_content_sms.html">Delivery over SMS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structured_content_tech.html">Structured content technical documentation</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="cms_portal_main_page.html">Portal main page content type</a></li>
@@ -216,18 +214,44 @@
             
   <div class="section" id="structured-content-cope-content-overview">
 <h1>Structured content (COPE content) Overview<a class="headerlink" href="#structured-content-cope-content-overview" title="Permalink to this headline">¶</a></h1>
-<p>Structured content types were defined in the CMS as a move towards Create Once Publish Everywhere (COPE) model for authoring legal information.</p>
-<p>It builds on</p>
-<p>The DIY Legal Solution content type is the core wrapper for COPE content.</p>
-<p>Every  DIY Legal Solution packages:</p>
+<p>Structured content types were defined in the CMS as a move towards Create Once Publish Everywhere (COPE)</p>
+<p>There are [x] types of structured content:</p>
 <ul class="simple">
-<li><p>starts with a defined problem (Introduction)</p></li>
-<li><p>has a description of the problem</p></li>
-<li><p>links to the legal options that one might take to resolve the problem</p></li>
-<li><p>may have one or more legal questions that help more fully describe the problem.</p></li>
-<li><p>may link to a related guide or basics article (“Learn the basics”)</p></li>
-<li><p>may link to other resources</p></li>
+<li><p>DIY Legal Solution - this provides an introduction section and then links to other content including other structured content formats (DIY Legal solutions, legal options, legal questions) and other non-structured content (Guides, other related resources)</p></li>
+<li><p>Legal options - this provides:</p>
+<ul>
+<li><p>legal difficulty</p></li>
+<li><p>eligibility rules</p></li>
+<li><p>results expected</p></li>
+<li><p>links to step-by-step instructions</p></li>
+<li><p>references to non-legal helpful organizations</p></li>
+<li><p>references to legal organizations</p></li>
 </ul>
+</li>
+<li><p>Legal how-to</p>
+<ul>
+<li><p>time required to complete the how-to</p></li>
+<li><p>Contains 1 or more step sections; the step sections references 1 or more legal steps</p></li>
+</ul>
+</li>
+<li><p>Legal step</p>
+<ul>
+<li><p>Has a type (direction or step)</p></li>
+<li><p>Links to legal forms needed</p></li>
+<li><p>Is jurisdiction-based</p></li>
+</ul>
+</li>
+<li><p>Legal question - supplemental information relevant to the DIY Legal solution, legal option, or otherwise independent related questions. Each question includes:</p>
+<ul>
+<li><p>An accepted answer, which is jurisdiction-based</p></li>
+<li><p>Links to other questions</p></li>
+<li><p>Links to other resources</p></li>
+</ul>
+</li>
+<li><p>Legal forms</p></li>
+</ul>
+<p>See the authoring guide for how to build each of these content types.
+See the website layouts section for how these appear on the website.</p>
 <div class="section" id="content-formats">
 <h2>Content formats<a class="headerlink" href="#content-formats" title="Permalink to this headline">¶</a></h2>
 <p>We have defined two key formats for text-based markup:</p>
