@@ -101,7 +101,7 @@ You can also add references to:
 
 
 Add additional metadata
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+===========================
 
 * Add the party type. It is rare for a legal problem to be neutral
 * Add an image; this will be used in social media sharing
