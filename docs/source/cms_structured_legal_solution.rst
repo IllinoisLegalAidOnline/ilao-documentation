@@ -1,42 +1,28 @@
 .. _cms-legal-solution:
 
 ==============================
-Legal Solution
+Creating a Legal Option
 ==============================
 
-A legal solution is tied to one or more legal problems (see :ref:`cms-legal-problem`) and features:
+A legal option (solution) is tied to one or more legal problems (see :ref:`cms-legal-problem`). It provides a framework for when and why a person may want to pursue a specific option. It also includes the step-by-step instructions for the process to complete the option; there may be more than one way to implement an option and multiple sets of instructions are supported.
 
-* content metadata
-* a solution type
-* 0 or more pieces of needed information
-* Legal difficulty (optional)
-* Estimated time required to complete the entire process
-* One or more eligibility rules to be able to use a specific solution
-* A jurisdiction
-* Optionally, a negate jurisdiction
-* Zero or more helpful organizations
-* Zero or more legal organizations
-* One or more HowTos
-* Zero or more citations
-* A result
-* Zero or more questions.
 
-.. todo:: Determine if we should have information needed when we have tools/supplies in the how-to; This is especially important if the information needed might vary at a local level. How Tos should be required.
-
-To create a legal solution
-=============================
 
 Create the core solution information
----------------------------------------
+=======================================
+
+.. image:: ../assets/legal_solution_title.png
 
 * Add a title. The title should match our standard title style for process-oriented legal content.
 * Add a disambiguation tag, if applicable, to identify this solution from other similarly titled solutions. For example, if the content title is "Participate in the court case" the disambiguation tag might be "Eviction" or "Foreclosure" to distinguish between the two.
-* Provide an alternative name if applicable.
 * Add a meta description. This is the description that will be used in social media, search indexes, and in any API. This should be limited to 300 characters.
-* Optionally, add a disambiguation description. This is used to better describe how one problem is different from a related problem.
+
+See the style guide for standards.
 
 Categorize the solution
--------------------------
+===========================
+
+.. image:: ../assets/legal_solution_tagging.png
 
 * Tag the legal problem to one or more navigational IA tags. This is used to manage the drill down.
 * Tag the legal problem to one or more legal issues. This is used to associate with Get Legal Help tools.
@@ -45,75 +31,32 @@ Categorize the solution
 * Define the solution type. A solution type are defined by our `solution types taxonomy <https://www.illinoislegalaid.org/admin/structure/taxonomy_manager/voc/solution_types>`_.
 
 
-Create the solution content
-------------------------------
+Add legal difficulty
+=======================
+The legal difficulty section can be used to help individuals understand when they really should have legal help. See examples in the  :ref:`cms-style-guide`. The purpose of this field is to ensure consistency in how this information is provided to individuals; in many cases, while a lawyer would be the BEST option, it is not feasible for the individual.
 
-* Define any information the individual needs to complete the solution. For example, a solution to get a divorce with children may require that the user:
+.. warning:: Do not add additional "You might need a lawyer" language within structured content.
 
-  * the name of their spouse
-  * the spouse's current address
-  * the children's names and ages
+This is optional. For easy tasks (such as applying for a drivers license), this would likely not be completed.
 
-* Define the legal difficulty. See style notes below.
-* Define any eligibility rules to use a specific solution, if there are specific requirements for using a solution.
-* Add the specific how-tos that outline the steps for a solution. A solution can have different how-tos depending on the solution.
-* Define the result. This can include:
+.. image:: ../assets/legal_solution_legal_difficulty_text.png
 
-  * What the individual will get from completing this solution
-  * What the user will not get from completing this solution
-  * Why the user may not want to use this solution
+Different display options are provided to allow the content managers to control how this information will appear to individuals. The options are:
 
-* Add any helpful organizations to include. A helpful organization would be a non-legal organization that can provide help. See the helpful organization page.
-* Add any legal organization that we need to highlight. This typically will be limited to Illinois Legal Aid Online.
-* Add any Legal Questions related to the solution that should be included
-* Add any Related Resources related to the solution. This would generally be legal content that can not be converted to a Legal Question (for example, videos, flowcharts, decision trees)
-* Tag the solution to a specific jurisdiction. In most cases, this will be Illinois. We can define individual steps or how-tos to a specific county or city. This is the preferred approach over making an entire solution county/city specific.
-* Add any citations related to the solution.
-* Indicate the legal position associated with the solution. This is almost never going to be neutral.
+  * Warning - this will place the text at the top of the content with a clear Warning label and/or design
+  * Tip - this will place the text at the top of the content styled like tips in steps
+  * Normal - top will place the text in a paragraph at the top of the content with a header of Do I need a lawyer?
+  * Normal - bottom will place the text in a paragraph at the end of the content with a header of Do I need a lawyer?
 
+.. image:: ../assets/legal_solution_display_difficulty.png
 
-.. note:: See the style notes for more information on when to use helpful vs. legal organizations
+Define eligibility rules
+===========================
 
-Add additional metadata
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+Most solutions only apply to specific types of cases. The eligibility section allows us to spell out when a person can/should consider this specific solution.
 
-* Optionally, add any content management tags
-* Indicate whether a translation should be requested.
-* Indicate whether an existing translation should be marked as outdated.
+.. image:: ../assets/legal_option_eligibility.png
 
-Style notes
-===============
-
-
-Disambiguation description
------------------------------
-This is an internal descriptor to be used to distinguish one solution from another. Examples may include:
-
-* Appealing a UI denial at the initial stage vs Appealing a UI denial by UI board
-* Getting a divorce with children vs Getting a divorce without children
-
-This is used internally only.
-
-
-Legal difficulty
---------------------
-Legal difficulty can be used to indicate how difficult the solution is to execute on your own. Example legal difficulty statements:
-
-* "We rate this an easy task in most cases. Fill out the form and file it with the court. No court appearance is generally required."
-
-* "We rate this as a moderate task in most cases when our Easy Forms are used. You will likely have to appear in court."
-
-* "We rate this as a moderate task in most cases. If you are not a legal resident or citizen, this task should not be undertaken without an attorney."
-
-* "We rate this as a difficult task in most cases. We recommend getting legal advice from a lawyer."
-
-Estimated time required
---------------------------
-We want to provide an estimated duration from start to finish to solve the problem. This likely requires input from SMEs
-
-
-Eligibility rules
---------------------
 Eligibility rules use the :ref:`cms-structured-text` block. Each eligibility rule should have its own structured text block.
 
 Examples
@@ -138,48 +81,23 @@ might be created:
 * The abuse must have taken place in the county
 * You must be living in the county temporarily to avoid abuse elsewhere
 
-.. note:: Because these may be rendered differently in different services, we've removed any punctuation at the end of each list item and have removed any AND/OR parts (instead, the header makes that case clear).
 
-Jurisdiction
----------------
-Structured content supports jurisdiction across different pieces of data. See :ref:`cms-coverage-area` documentation. A solution may have a jurisdiction that is broader than an attached How-to, attached steps, or attached organization. A solution, even if it has How-tos that vary by location or forms that apply only to some jurisdictions, can still be marked at a broader jurisdiction so long as:
+See the :ref:`cms-style-guide` for more example rules.
 
-* the eligibility rules apply to the solution jurisdiction
-* the legal difficulty does not vary by location
-* the result does not vary location
+.. note:: For some types of cases, there may be a better resource to help them determine eligibility (for example, a benefits calculator for TANF/SNAP, a means test evaluation tool for bankruptcy, an Are you a victim quiz for domestic violence). It is okay to add an eligibility rule similar to "See if you meet income limits", "Make sure you can pass the required means test" and link to those tools.
 
-.. note:: Example:  The steps for getting an order of protection are different in Cook county than in the rest of the states. McHenry county requires a specific form that no one else does. But the eligibility rules, difficulty, and result is the same across Illinois. The solution should be set to Illinois while there should be 2 How-tos (one for Cook county, one for the other 101 counties), and the McHenry form should be specificially tagged to McHenry county.
+Define the result
+===================
+Use the results section to explain what benefits the individual will get by completing the steps associated with this solution. It is also the place to explain to the individual what they won't get using the option.
 
+Some examples:
 
-Legal organization vs Helpful organization
---------------------------------------------
+* Using the "You can choose to do nothing" option in a divorce will not stop the divorce and will result in your spouse getting a default judgment against you."
+* Using the Chapter 7 bankruptcy option successfully will result in credit card and medical debts being discharged; it will not usually discharge student loans.
+* Using the "Clear a cannabis conviction of over 35 grams" may make it easier to get a job or secure housing.
 
-Solutions support both :ref:`cms-legal-helpful-org` and legal organizations.
-
-A helpful organization is one that exists as a structured helpful organization.
-
-Structured helpful organizations have much less information in our system. These are organizations that do not belong in our organization system but that may still be helpful to users  This might include:
-
-* DV shelters and/or hotlines
-* Social services
-* Government offices
-
-A legal organization is one that exists in `ILAO's organization system <https://www.illinoislegalaid.org/admin/group>`_. Rather than replicate the data as a structured helpful organization, these can be referenced directly as needed in the legal organization field. When one or more OTIS partners take cases in this area and the legal difficulty level is moderate to difficult, we should refer to Illinois Legal Aid Online as a legal organization to cause a prioritized block to appear versus the standard Get Legal Help block.
-
-Result
-------------
-
-The result also uses the structured text block. It should be broken down to best support delivery across channels.
-
-Example headings for a result might include:
-
-* Why should I do this?
-* Why shouldn't I do this?
-* What can't [x] do for me?
-* What can [x] do for me?
-
-Example
--------------
+Mocked up example
+--------------------
 
 .. code-block:: html
 
@@ -212,19 +130,32 @@ This segment above may be structured as:
 * Structured text block 2 with body markup of "A judge can prevent an abuser from viewing the phone records of the victim and any minor child in the victim's custody. The <em>Order of Protection </em>can require phone service providers to transfer service so that the victim can keep the same phone number. The victim will have to pay the bill."
 * Structured text block 3 with body markup of "A judge can also change a person's parental duties (custody/visitation) in an Order of Protection."
 
-.. note::  Like in the example for eligibility rules, we have stripped off punctuation and and/or. Basic html markup like italics can be used in body markup but will be stripped in the plain text version.
+Build out additional related components
+========================================
 
-Questions
---------------
-Legal solutions can have Legal Questions attached. Questions should relate generally to the solution provided. Questions specifically related to how the solution affects a problem should go here. For example: When am I eligible for a second bankruptcy? would go in the bankruptcy solution but Can I save my house if I file for bankruptcy would go in a foreclosure-related problem.
+There are 5 types of resources that can be added to a Legal Option:
 
-Related Resources
-----------------------
-Legal solutions can also have related resources (other legal content) attached to it just like a legal problem.
+* HowTos - these should always be added as they are the step-by-step instructions
+* Helpful organizations A helpful organization would be a non-legal organization that can provide help. See the helpful organization page.
+* Legal organization that we need to highlight. This typically will be empty or set to Illinois Legal Aid Online when we know OTIS takes cases in the area.
+* Legal Questions related to the solution that should be included
+* Related Resources related to the solution. This would generally be legal content that can not or is not converted to a Legal Question
 
-
-Full add/edit form
-======================
+.. image:: ../assets/legal_solution_entity_references.png
 
 
-.. image:: ../assets/cms-legal-solution-edit-form.png
+
+Complete the Legal Option legal metadata
+==========================================
+
+* Add any citations related to the solution.
+* Indicate the legal position associated with the solution. This is almost never going to be neutral.
+
+
+Add additional metadata
+=========================
+
+* Optionally, add any content management tags
+* Indicate whether a translation should be requested.
+* Indicate whether an existing translation should be marked as outdated.
+

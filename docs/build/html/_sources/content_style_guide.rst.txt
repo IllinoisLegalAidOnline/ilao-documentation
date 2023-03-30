@@ -1,3 +1,5 @@
+.. _cms-style-guide:
+
 ======================
 Content style guide
 ======================
@@ -125,36 +127,17 @@ In general, do not use “more” or “etc” at the end of the description.
 
 
 
-
-Disambiguation description
-----------------------------
-
-In structured content types, there is often a disambiguation type. Because many components, like legal steps, often share the same or similar title, this can be useful to identify the right one.
-
-Examples may include:
-
-* Appealing a UI denial at the initial stage vs Appealing a UI denial by UI board
-* Getting a divorce with children vs Getting a divorce without children
-
-This is used internally only.
-
 Legal difficulty
 ====================
 
-Appears in Legal solutions indicates how difficult the solution is to do on your own, as determined by the content team.  Example legal difficulty statements:
+Appears in Legal options (solutions) indicates how difficult the solution is to do on your own, as determined by the content team.  Example legal difficulty statements:
 
-.. todo:: Discuss the text for these as a content team.
 
 * "We rate this an easy task in most cases. Fill out the form and file it with the court. No court appearance is generally required."
 * "We rate this as a moderate task in most cases when our Easy Forms are used. You will likely have to appear in court."
 * "We rate this as a moderate task in most cases. If you are not a legal resident or citizen, do not do this task without a lawyer."
 * "We rate this as a difficult task in most cases. We recommend getting legal advice from a lawyer."
 
-These may then appear at the top of the content:
-
-.. warning:: We rate this as a difficult task in most cases. We recommend getting legal help from a lawyer.
-
-.. warning:: We rate this as an easy task in many cases. We recommend getting legal help from a lawyer if you are not a US citizen.
 
 Legal category tagging
 ==========================
