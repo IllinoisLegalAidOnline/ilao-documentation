@@ -109,6 +109,7 @@
 <li class="toctree-l1"><a class="reference internal" href="rss_feeds.html">RSS Feeds</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ilao_api.html">ILAO’s API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sms_overview.html">SMS Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_analytics.html">Data and Analytics</a></li>
 </ul>
 <p class="caption"><span class="caption-text">See also:</span></p>
 <ul>
@@ -242,7 +243,7 @@
 </div>
 <div class="section" id="automated-updates">
 <h2>Automated Updates<a class="headerlink" href="#automated-updates" title="Permalink to this headline">¶</a></h2>
-<p>The system will automatically check each night for updated data. It will pull in any data that has a last_action_date greater than or equal to the configuration’s track from date. This date is updated with each data pull to limit the number of requests we have to make.</p>
+<p>The system automaticallys check each night for updated data. It will pull in any data that has a last_action_date greater than or equal to the configuration’s track from date. This date is updated with each data pull to limit the number of requests we have to make.</p>
 <p>Once pulled, the system will loop through the data and:</p>
 <ul class="simple">
 <li><p>Create a record for anything that matches the “Statuses to match” field. It is enough if there is a partial starting match. This is necessary as last action description that begin with Public Act change act numbers.</p></li>
@@ -256,6 +257,7 @@
 <li><p>Any bill that has a status of New or Open and either a past or upcoming (+60 days) effective date</p></li>
 <li><p>Any bill that is New</p></li>
 </ul>
+<img alt="_images/law-tracker-email.png" src="_images/law-tracker-email.png" />
 </div>
 <div class="section" id="reporting">
 <h2>Reporting<a class="headerlink" href="#reporting" title="Permalink to this headline">¶</a></h2>
@@ -287,6 +289,7 @@
 <li><p>Jira ticket ID</p></li>
 <li><p>Notes</p></li>
 </ul>
+<img alt="_images/law-tracker-report.png" src="_images/law-tracker-report.png" />
 <p>The report can also be exported to CSV.</p>
 </div>
 </div>

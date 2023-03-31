@@ -62,12 +62,13 @@ It also includes these fields to allow ILAO to manage their workflow:
 Automated Updates
 ===================
 
-The system will automatically check each night for updated data. It will pull in any data that has a last_action_date greater than or equal to the configuration's track from date. This date is updated with each data pull to limit the number of requests we have to make.
+The system automaticallys check each night for updated data. It will pull in any data that has a last_action_date greater than or equal to the configuration's track from date. This date is updated with each data pull to limit the number of requests we have to make.
 
 Once pulled, the system will loop through the data and:
 
 * Create a record for anything that matches the "Statuses to match" field. It is enough if there is a partial starting match. This is necessary as last action description that begin with Public Act change act numbers.
 * Update a record for anything that matches the Statuses to match field and the OpenStatesID already exists. This is necessary to preserve changes made by staff.
+
 
 
 Notifications
@@ -77,6 +78,8 @@ On a nightly basis, the system will send an automated email to anyone listed in 
 
 * Any bill that has a status of New or Open and either a past or upcoming (+60 days) effective date
 * Any bill that is New
+
+.. image:: ../assets/law-tracker-email.png
 
 
 Reporting
@@ -107,6 +110,8 @@ Includes
 * Associated content (with links to edit)
 * Jira ticket ID
 * Notes
+
+.. image:: ../assets/law-tracker-report.png
 
 
 The report can also be exported to CSV.
