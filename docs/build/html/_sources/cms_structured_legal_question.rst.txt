@@ -4,76 +4,93 @@
 Legal Question
 ======================
 
-Legal questions can potentially "stand alone" or be part of a larger FAQ within a specific  DIY Legal Solution packet or attached to a specific legal solution.
+Legal questions can potentially "stand alone" or be part of a larger FAQ within a specific  DIY Legal Solution packet or attached to a specific legal option.
 
-Creating a legal question
-==============================
+.. note:: Due to changes in approach, use the New Accepted Answer section and not the Old Accepted Answer, Old Jurisdiction, and Old Negate Jurisdiction fields.
 
-Create the core problem information
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Add Question and Description
+=================================
 
 * Add the Question title. The title should be drafted as a question.
 * Add a content description. This is the description that will be used if the question is displayed independently on our website.
 * Add a meta description. This is the description that will be used in social media, search indexes, and in any API. This should be limited to 300 characters.
 
+See :ref:cms_style_guide
+
+.. image:: ../assets/cms-question-title.png
+
 Categorize the legal problem
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==============================
 
 * Tag the legal problem to one or more navigational IA tags. This is used to manage the drill down.
 * Tag the legal problem to one or more legal issues. This is used to associate with Get Legal Help tools.
 * Select the primary legal category. This is used to keep the information organized when it is tagged to multiple primary categories (for example, we may tag a criminal records issue to Business & Work and Crime & Traffic).
+* Tag the position of the question (neutral, plaintiff/petitioner/client, defendant/respondent/agency)
 * Select the primary level 2 navigation term. This is used to help with breadcrumbs, reporting, and Guided Navigation. This single term comes from the navigational IA taxonomy.
 * Optionally add a disambiguation tag to distinguish between similar questions. For example, What is the fee to file? may be a question for bankruptcy cases, small claims, and name changes but the answer varies depending on the case type.
 
-Create the answer
-^^^^^^^^^^^^^^^^^^^^
-* Add the Answer as the Accepted Answer. An accepted answer uses the :ref:`cms-structured-text` block.
+.. image:: ../assets/cms-question-metadata.png
 
-.. note::  Answers should be broken into segments, either paired markup or list items to avoid having to deliver large blocks of text over non-web interfaces. Web interfaces can concatenate segments back together.
+.. note:: The primary level 2 navigation category may be used to generate related questions when the content team has not selected related questions.
 
-* Optionally add one or more suggested answers. Suggested answers can be used when there is an official answer but there may be additional options. This is rarely used in our legal content.
+Draft the answer or answers
+===============================
+The accepted answer uses the :ref:`cms-structured-text` block.
 
-* Add a jurisdiction for the question. See :ref:`cms-coverage-area` documentation.
+.. warning:: Use the New Accepted Answer field
 
-.. note:: By adding jurisdictions to questions, we can offer location-specific answers. For example, in answering "Can I deduct a repair cost?," the answer may be different in Chicago than in Naperville. When included in an Illinois problem of "My landlord won't fix my bathroom," we can deliver the right Legal Questions to the right users based on location.
+A question can have more than one answer. Each answer can be jurisdictionally limited and will be presented that way. For example, the question "How do I e-file my documents?" may have answers for Chicago, Cook County (but not Chicago), Kane County, Lake County, McHenry County, and Illinois (except for Cook, Kane, Lake, and McHenry counties).
 
-Add related questions
-^^^^^^^^^^^^^^^^^^^^^^
+For each answer:
 
-.. note:: waiting on content team decisions
+* Draft the answer in structured text
+* Tag it to the jurisdiction
+* If there are multiple answers, use the negate jurisdiction to make each answer exclusive
+* If there is only one statewide answer, remove the negate jurisdiction component
 
-Add additional metadata
-^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-* Add the legal position associated with the question.
-* Tag the legal question to annual updates.
-* Optionally, add an author/SME to the question
-* Indicate whether a translation should be requested.
-* Indicate whether an existing transation should be marked as outdated.
-* Optionally, add any content management tags
-* Set the last reviewed and last revised date per content policy.
+.. image:: ../assets/cms-question-answer.png
 
 
+Tag related content
+======================
 
-Legal Question vs Related Resource
-=====================================
+By default, the system will:
 
-Not all of our legal content needs to be "transformed" into questions. Some information, particularly those that are videos, flowcharts, decision trees that would be better suited as articles can stay that way and be linked to as Related Resources
+* Create backlinks to DIY Legal Solutions the question is associated with
+* Create backlings to Guides/Basics the question is associated with
 
-Related Questions
-====================
+In addition, the content team can:
 
-On the sidebar when viewed in a web browser, related questions can appear. There is a related question field that allows one to group legal questions together.
+* Tag specific other questions to this question; if not questions are added, the system will use related questions from the DIY Legal Solution, if available, or those questions in the same primary level 2 category.
+* Tag related resources. This should be other legal content that is not:
 
-.. note:: Can we or should we write a query to return related questions where the question being viewed is in a related question field OR when the question being viewed has related questions to prevent the need to add related questions to every question.
+  * A DIY Legal Solution
+  * Legal Option
+  * Legal Question
+  * Legal content of type "Guide"
+
+* Add any applicable citations
+
+.. image:: ../assets/cms-related-questions.png
 
 
-Legal Questions in Problems vs Legal Questions in Solutions
-=============================================================
+Add Content Management Metadata
+=================================
+
+* Add an image for social media
+* Tag to annual updates, if applicable
+* Add the name of the author or subject matter expert, if known
+* Add any editorial notes
+* Add any content management tags
+* Provide any translation information:
+
+  * Request translation to be created,
+  * Mark translation as outdated,
+  * Translation type
+  * Translation status
+
+* Update Last full review by a SME, if required, per our content policy
+* Update last revised by staff, if required, per our content policy
 
 
-
-Full add/edit form
-====================
-
-.. image:: ../assets/cms-legal-question-edit-form.png

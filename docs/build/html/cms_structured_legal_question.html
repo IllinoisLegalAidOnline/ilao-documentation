@@ -101,28 +101,19 @@
 <li class="toctree-l2"><a class="reference internal" href="cms_redirects.html">Creating redirects between pages</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cms_content_management_tags.html">Content management tags</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cms_legal_content.html">Legal content type</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="cms_structured_legal_content.html">DIY Legal Solutions</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="cms_structured_content_overview.html">DIY Legal Solutions Overview</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="cms_structured_legal_content.html">COPE/Structured Content</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="cms_structured_content_overview.html">Structured content (COPE content) Overview</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cms_structured_content_navigation.html">DIY Solutions - Navigation and Layouts</a></li>
-<li class="toctree-l3"><a class="reference internal" href="cms_structured_content.html">Structured Content Schema</a></li>
-<li class="toctree-l3"><a class="reference internal" href="cms_structured_content_types.html">DIY Legal Solution Content Types</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="cms_structured_legal_content_admin.html">Creating and editing structured content</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="structured_content_authoring.html">Structured content authoring guide</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_content_overview.html">Authoring best practices and guidelines</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="cms_structured_legal_content_admin.html">Creating and editing structured content</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_problem.html">Creating DIY Legal Solution</a></li>
-<li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_solution.html">Legal Solution</a></li>
-<li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_howto.html">Legal How-To</a></li>
-<li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_step.html">Legal Step</a></li>
-<li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_forms.html">Legal forms</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">Legal Question</a></li>
-<li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_helpful_organization.html">Structured Helpful Organization</a></li>
-<li class="toctree-l4"><a class="reference internal" href="cms_structured_faqs.html">Managing structured content FAQs</a></li>
-<li class="toctree-l4"><a class="reference internal" href="cms_structured_paired_markup.html">Paired Markup</a></li>
-<li class="toctree-l4"><a class="reference internal" href="cms_structured_jurisdiction.html">Coverage area</a></li>
-<li class="toctree-l4"><a class="reference internal" href="cms_structured_structured_text.html">Structured Text &amp; Lists</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_solution.html">Creating a Legal Option</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="cms_structured_content_api.html">Structured content API</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cms_structured_content_reports.html">Structured content reports</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cms_structured_content_sms.html">Delivery over SMS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structured_content_tech.html">Structured content technical documentation</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="cms_portal_main_page.html">Portal main page content type</a></li>
@@ -148,6 +139,7 @@
 <li class="toctree-l1"><a class="reference internal" href="rss_feeds.html">RSS Feeds</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ilao_api.html">ILAO’s API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sms_overview.html">SMS Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_analytics.html">Data and Analytics</a></li>
 </ul>
 <p class="caption"><span class="caption-text">See also:</span></p>
 <ul>
@@ -202,7 +194,9 @@
         
           <li><a href="legal_content_cms.html">Legal Content CMS</a> &raquo;</li>
         
-          <li><a href="cms_structured_legal_content.html">DIY Legal Solutions</a> &raquo;</li>
+          <li><a href="cms_structured_legal_content.html">COPE/Structured Content</a> &raquo;</li>
+        
+          <li><a href="structured_content_authoring.html">Structured content authoring guide</a> &raquo;</li>
         
           <li><a href="cms_structured_legal_content_admin.html">Creating and editing structured content</a> &raquo;</li>
         
@@ -227,83 +221,95 @@
             
   <div class="section" id="legal-question">
 <span id="cms-legal-question"></span><h1>Legal Question<a class="headerlink" href="#legal-question" title="Permalink to this headline">¶</a></h1>
-<p>Legal questions can potentially “stand alone” or be part of a larger FAQ within a specific  DIY Legal Solution packet or attached to a specific legal solution.</p>
-<div class="section" id="creating-a-legal-question">
-<h2>Creating a legal question<a class="headerlink" href="#creating-a-legal-question" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="create-the-core-problem-information">
-<h3>Create the core problem information<a class="headerlink" href="#create-the-core-problem-information" title="Permalink to this headline">¶</a></h3>
+<p>Legal questions can potentially “stand alone” or be part of a larger FAQ within a specific  DIY Legal Solution packet or attached to a specific legal option.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Due to changes in approach, use the New Accepted Answer section and not the Old Accepted Answer, Old Jurisdiction, and Old Negate Jurisdiction fields.</p>
+</div>
+<div class="section" id="add-question-and-description">
+<h2>Add Question and Description<a class="headerlink" href="#add-question-and-description" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Add the Question title. The title should be drafted as a question.</p></li>
 <li><p>Add a content description. This is the description that will be used if the question is displayed independently on our website.</p></li>
 <li><p>Add a meta description. This is the description that will be used in social media, search indexes, and in any API. This should be limited to 300 characters.</p></li>
 </ul>
+<p>See :ref:cms_style_guide</p>
+<img alt="_images/cms-question-title.png" src="_images/cms-question-title.png" />
 </div>
 <div class="section" id="categorize-the-legal-problem">
-<h3>Categorize the legal problem<a class="headerlink" href="#categorize-the-legal-problem" title="Permalink to this headline">¶</a></h3>
+<h2>Categorize the legal problem<a class="headerlink" href="#categorize-the-legal-problem" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Tag the legal problem to one or more navigational IA tags. This is used to manage the drill down.</p></li>
 <li><p>Tag the legal problem to one or more legal issues. This is used to associate with Get Legal Help tools.</p></li>
 <li><p>Select the primary legal category. This is used to keep the information organized when it is tagged to multiple primary categories (for example, we may tag a criminal records issue to Business &amp; Work and Crime &amp; Traffic).</p></li>
+<li><p>Tag the position of the question (neutral, plaintiff/petitioner/client, defendant/respondent/agency)</p></li>
 <li><p>Select the primary level 2 navigation term. This is used to help with breadcrumbs, reporting, and Guided Navigation. This single term comes from the navigational IA taxonomy.</p></li>
 <li><p>Optionally add a disambiguation tag to distinguish between similar questions. For example, What is the fee to file? may be a question for bankruptcy cases, small claims, and name changes but the answer varies depending on the case type.</p></li>
 </ul>
+<img alt="_images/cms-question-metadata.png" src="_images/cms-question-metadata.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The primary level 2 navigation category may be used to generate related questions when the content team has not selected related questions.</p>
 </div>
-<div class="section" id="create-the-answer">
-<h3>Create the answer<a class="headerlink" href="#create-the-answer" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="draft-the-answer-or-answers">
+<h2>Draft the answer or answers<a class="headerlink" href="#draft-the-answer-or-answers" title="Permalink to this headline">¶</a></h2>
+<p>The accepted answer uses the <a class="reference internal" href="cms_structured_structured_text.html#cms-structured-text"><span class="std std-ref">Structured Text &amp; Lists</span></a> block.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Use the New Accepted Answer field</p>
+</div>
+<p>A question can have more than one answer. Each answer can be jurisdictionally limited and will be presented that way. For example, the question “How do I e-file my documents?” may have answers for Chicago, Cook County (but not Chicago), Kane County, Lake County, McHenry County, and Illinois (except for Cook, Kane, Lake, and McHenry counties).</p>
+<p>For each answer:</p>
 <ul class="simple">
-<li><p>Add the Answer as the Accepted Answer. An accepted answer uses the <a class="reference internal" href="cms_structured_structured_text.html#cms-structured-text"><span class="std std-ref">Structured Text &amp; Lists</span></a> block.</p></li>
+<li><p>Draft the answer in structured text</p></li>
+<li><p>Tag it to the jurisdiction</p></li>
+<li><p>If there are multiple answers, use the negate jurisdiction to make each answer exclusive</p></li>
+<li><p>If there is only one statewide answer, remove the negate jurisdiction component</p></li>
 </ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Answers should be broken into segments, either paired markup or list items to avoid having to deliver large blocks of text over non-web interfaces. Web interfaces can concatenate segments back together.</p>
+<img alt="_images/cms-question-answer.png" src="_images/cms-question-answer.png" />
 </div>
+<div class="section" id="tag-related-content">
+<h2>Tag related content<a class="headerlink" href="#tag-related-content" title="Permalink to this headline">¶</a></h2>
+<p>By default, the system will:</p>
 <ul class="simple">
-<li><p>Optionally add one or more suggested answers. Suggested answers can be used when there is an official answer but there may be additional options. This is rarely used in our legal content.</p></li>
-<li><p>Add a jurisdiction for the question. See <a class="reference internal" href="cms_structured_jurisdiction.html#cms-coverage-area"><span class="std std-ref">Coverage area</span></a> documentation.</p></li>
+<li><p>Create backlinks to DIY Legal Solutions the question is associated with</p></li>
+<li><p>Create backlings to Guides/Basics the question is associated with</p></li>
 </ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>By adding jurisdictions to questions, we can offer location-specific answers. For example, in answering “Can I deduct a repair cost?,” the answer may be different in Chicago than in Naperville. When included in an Illinois problem of “My landlord won’t fix my bathroom,” we can deliver the right Legal Questions to the right users based on location.</p>
-</div>
-</div>
-<div class="section" id="add-related-questions">
-<h3>Add related questions<a class="headerlink" href="#add-related-questions" title="Permalink to this headline">¶</a></h3>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>waiting on content team decisions</p>
-</div>
-</div>
-<div class="section" id="add-additional-metadata">
-<h3>Add additional metadata<a class="headerlink" href="#add-additional-metadata" title="Permalink to this headline">¶</a></h3>
+<p>In addition, the content team can:</p>
 <ul class="simple">
-<li><p>Add the legal position associated with the question.</p></li>
-<li><p>Tag the legal question to annual updates.</p></li>
-<li><p>Optionally, add an author/SME to the question</p></li>
-<li><p>Indicate whether a translation should be requested.</p></li>
-<li><p>Indicate whether an existing transation should be marked as outdated.</p></li>
-<li><p>Optionally, add any content management tags</p></li>
-<li><p>Set the last reviewed and last revised date per content policy.</p></li>
+<li><p>Tag specific other questions to this question; if not questions are added, the system will use related questions from the DIY Legal Solution, if available, or those questions in the same primary level 2 category.</p></li>
+<li><p>Tag related resources. This should be other legal content that is not:</p>
+<ul>
+<li><p>A DIY Legal Solution</p></li>
+<li><p>Legal Option</p></li>
+<li><p>Legal Question</p></li>
+<li><p>Legal content of type “Guide”</p></li>
 </ul>
+</li>
+<li><p>Add any applicable citations</p></li>
+</ul>
+<img alt="_images/cms-related-questions.png" src="_images/cms-related-questions.png" />
 </div>
-</div>
-<div class="section" id="legal-question-vs-related-resource">
-<h2>Legal Question vs Related Resource<a class="headerlink" href="#legal-question-vs-related-resource" title="Permalink to this headline">¶</a></h2>
-<p>Not all of our legal content needs to be “transformed” into questions. Some information, particularly those that are videos, flowcharts, decision trees that would be better suited as articles can stay that way and be linked to as Related Resources</p>
-</div>
-<div class="section" id="related-questions">
-<h2>Related Questions<a class="headerlink" href="#related-questions" title="Permalink to this headline">¶</a></h2>
-<p>On the sidebar when viewed in a web browser, related questions can appear. There is a related question field that allows one to group legal questions together.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Can we or should we write a query to return related questions where the question being viewed is in a related question field OR when the question being viewed has related questions to prevent the need to add related questions to every question.</p>
-</div>
-</div>
-<div class="section" id="legal-questions-in-problems-vs-legal-questions-in-solutions">
-<h2>Legal Questions in Problems vs Legal Questions in Solutions<a class="headerlink" href="#legal-questions-in-problems-vs-legal-questions-in-solutions" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="full-add-edit-form">
-<h2>Full add/edit form<a class="headerlink" href="#full-add-edit-form" title="Permalink to this headline">¶</a></h2>
-<img alt="_images/cms-legal-question-edit-form.png" src="_images/cms-legal-question-edit-form.png" />
+<div class="section" id="add-content-management-metadata">
+<h2>Add Content Management Metadata<a class="headerlink" href="#add-content-management-metadata" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Add an image for social media</p></li>
+<li><p>Tag to annual updates, if applicable</p></li>
+<li><p>Add the name of the author or subject matter expert, if known</p></li>
+<li><p>Add any editorial notes</p></li>
+<li><p>Add any content management tags</p></li>
+<li><p>Provide any translation information:</p>
+<ul>
+<li><p>Request translation to be created,</p></li>
+<li><p>Mark translation as outdated,</p></li>
+<li><p>Translation type</p></li>
+<li><p>Translation status</p></li>
+</ul>
+</li>
+<li><p>Update Last full review by a SME, if required, per our content policy</p></li>
+<li><p>Update last revised by staff, if required, per our content policy</p></li>
+</ul>
 </div>
 </div>
 
