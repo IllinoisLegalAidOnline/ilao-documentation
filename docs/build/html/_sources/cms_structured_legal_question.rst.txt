@@ -58,7 +58,7 @@ Tag related content
 By default, the system will:
 
 * Create backlinks to DIY Legal Solutions the question is associated with
-* Create backlings to Guides/Basics the question is associated with
+* Create backlinks to Guides/Basics the question is associated with
 
 In addition, the content team can:
 
