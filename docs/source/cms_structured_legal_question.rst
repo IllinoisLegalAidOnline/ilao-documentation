@@ -1,8 +1,8 @@
 .. _cms-legal-question:
 
-======================
-Legal Question
-======================
+===========================
+Creating a Legal Question
+===========================
 
 Legal questions can potentially "stand alone" or be part of a larger FAQ within a specific  DIY Legal Solution packet or attached to a specific legal option.
 

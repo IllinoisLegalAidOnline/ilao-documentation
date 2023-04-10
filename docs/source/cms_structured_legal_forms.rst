@@ -1,8 +1,8 @@
 .. _cms-legal-forms:
 
-=======================
-Legal forms
-=======================
+===========================================================
+Restructuing Easy forms and blank forms for use in steps
+===========================================================
 
 Legal forms can be part of a legal step. Legal forms should be the **specific** form, not to a form generator packet.
 

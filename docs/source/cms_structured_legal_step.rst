@@ -1,8 +1,8 @@
 .. _cms-legal-step:
 
-===================
-Legal Step
-===================
+======================
+Creating Legal Step
+======================
 
 Legal steps are part of a :ref:`cms-legal-howto` which are part of a :ref:`cms-legal-solution`.
 
