@@ -13,6 +13,7 @@ Get Legal Help
    otis_third_party_support
    otis_sms_intake
    otis_facebook
+   otis_features
 
 See also :ref:`otis-api`
 
