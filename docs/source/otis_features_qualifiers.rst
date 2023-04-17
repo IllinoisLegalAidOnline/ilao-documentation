@@ -21,8 +21,9 @@ All steps of creating a guided navigation path must be complete (dialogue, segme
 
 On IllinoisLegalAid.org
 -------------------------
-Once the guided navigation process has been created and you have the process id, follow these steps:
-* Create a new taxonomy term under "OTIS Qualifiers"; 
-* Name the new term and fill in the Guided Navigation Process ID;
-* Go to the OTIS partner's intake setting where the qualifier will apply; and
-* Start typing the name (taxonomy term) in the Additional qualifiers section of the intake setting
+* Once the guided navigation process has been created and you have the process id, follow these steps:
+
+  * Create a new taxonomy term under "OTIS Qualifiers"; 
+  * Name the new term and fill in the Guided Navigation Process ID;
+  * Go to the OTIS partner's intake setting where the qualifier will apply; and
+  * Start typing the name (taxonomy term) in the Additional qualifiers section of the intake setting
