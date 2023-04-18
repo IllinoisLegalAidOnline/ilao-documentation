@@ -22,4 +22,6 @@ In practice, the guided navigation field will look like: "lac_applicant_pronouns
 
 Using custom fields
 ====================
-An OTIS partner may ask specific questions where the answers can be transferred via the Additional Qualifiers section of guided navigation.
+An OTIS partner may ask specific questions where the answers can be transferred via the :ref:`otis-features-qualifiers` section of guided navigation.
+
+See :ref:`otis-features-qualifiers`
