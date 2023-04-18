@@ -7,8 +7,8 @@ LegalServer supports sending information via the jsonPayload transfer to custom 
 Options
 ==========
 LegalServer allows custom field data to be transferred using two different methods:
-* jsonPayload; or
-* custom_fields
+  * jsonPayload; or
+  * custom_fields
 
 jsonPayload allows ILAO to create custom fields that do not need to match exactly to the partner's custom field and do not need to be mapped.
 
