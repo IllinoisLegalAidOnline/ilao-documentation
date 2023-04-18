@@ -1,3 +1,5 @@
+.. _otis-qualifiers-label:
+
 ============
 Qualifiers
 ============
