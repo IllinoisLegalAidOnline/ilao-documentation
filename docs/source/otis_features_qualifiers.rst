@@ -16,7 +16,7 @@ Creating qualifers
 In LegalServer
 ---------------
 Create a new guided navigation interactive dialogue. The dialogue should be named Qualifier_[short description of the qualifier] 
-see :ref:`otis_tech_guided_navigation` 
+see :ref:`otis-tech-guided-navigation` 
 All steps of creating a guided navigation path must be complete (dialogue, segments, and process)
 
 On IllinoisLegalAid.org
