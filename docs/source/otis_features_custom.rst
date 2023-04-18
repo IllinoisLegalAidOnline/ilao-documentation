@@ -22,4 +22,4 @@ In practice, the guided navigation field will look like: "lac_applicant_pronouns
 
 Using custom fields
 ====================
-An OTIS partner may ask specific questions where the answers can be transferred via the [[Additional Qualifiers](https://github.com/IllinoisLegalAidOnline/ilao-documentation/edit/master/docs/source/otis_features_qualifiers.rst#qualifiers)] section of guided navigation.
+An OTIS partner may ask specific questions where the answers can be transferred via the :ref:'otis_features_qualifiers' section of guided navigation. 
