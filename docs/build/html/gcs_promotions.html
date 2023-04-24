@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Site Search &mdash; ILAO 2.22 documentation</title>
+  <title>Search promotions &mdash; ILAO 2.22 documentation</title>
   
 
   
@@ -43,8 +43,8 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Google custom site search" href="google_custom_site_search_overview.html" />
-    <link rel="prev" title="Document Upload" href="otis_features_upload.html" /> 
+    <link rel="next" title="Synonyms" href="gcs_enhancements.html" />
+    <link rel="prev" title="General search configuration" href="google_custom_site_search_config.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -104,10 +104,10 @@
 <li class="toctree-l1"><a class="reference internal" href="jobs_cms.html">Job Listings</a></li>
 <li class="toctree-l1"><a class="reference internal" href="discussion_groups.html">Discussion groups</a></li>
 <li class="toctree-l1"><a class="reference internal" href="otis_cms.html">Get Legal Help</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Site Search</a><ul>
+<li class="toctree-l1 current"><a class="reference internal" href="site_search.html">Site Search</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="google_custom_site_search_overview.html">Google custom site search</a></li>
 <li class="toctree-l2"><a class="reference internal" href="google_custom_site_search_config.html">General search configuration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gcs_promotions.html">Search promotions</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Search promotions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gcs_enhancements.html">Synonyms</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gcs_autocomplete.html">Custom autcomplete</a></li>
 <li class="toctree-l2"><a class="reference internal" href="search_solr_config.html">Configuration</a></li>
@@ -175,13 +175,15 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Site Search</li>
+          <li><a href="site_search.html">Site Search</a> &raquo;</li>
+        
+      <li>Search promotions</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="_sources/site_search.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/gcs_promotions.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -194,28 +196,19 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="site-search">
-<h1>Site Search<a class="headerlink" href="#site-search" title="Permalink to this headline">¶</a></h1>
-<p>In April 2023, the universal site search was replaced with Google custom site search. The form library still uses Solr.</p>
-<div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">Contents:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="google_custom_site_search_overview.html">Google custom site search</a></li>
-<li class="toctree-l1"><a class="reference internal" href="google_custom_site_search_config.html">General search configuration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="gcs_promotions.html">Search promotions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="gcs_enhancements.html">Synonyms</a></li>
-<li class="toctree-l1"><a class="reference internal" href="gcs_autocomplete.html">Custom autcomplete</a></li>
+  <div class="section" id="search-promotions">
+<h1>Search promotions<a class="headerlink" href="#search-promotions" title="Permalink to this headline">¶</a></h1>
+<p>We can create one or more promotions to appear in search results when a user searches a specific query. This can be used for a variety of purposes:</p>
+<ul class="simple">
+<li><p>To promote a new resource before it is indexed by Google</p></li>
+<li><p>To guide uses to a specific resource that may not rank high enough or compete with other resources. For example, we want to direct users looking for eviction information to our Eviction Help Illinois page over other content.</p></li>
 </ul>
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">Todo</p>
+<p>As of April 2023, Gwen is the only person who can create a promotion. In June 2023, we expect to release a tool for staff to view all promotions and submit requests for new ones.</p>
 </div>
-<div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">Original Solr search:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="search_solr_config.html">Configuration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="search_indexing.html">Indexing and Updates</a></li>
-<li class="toctree-l1"><a class="reference internal" href="search_content.html">Manipulating Search</a></li>
-<li class="toctree-l1"><a class="reference internal" href="search_frontend.html">Using Site Search</a></li>
-</ul>
-</div>
+<p>Below is an example of the New Leaf Portal promotion when a user searches for cannabis:</p>
+<img alt="_images/gcs-promotions.png" src="_images/gcs-promotions.png" />
 </div>
 
 
@@ -224,8 +217,8 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="google_custom_site_search_overview.html" class="btn btn-neutral float-right" title="Google custom site search" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="otis_features_upload.html" class="btn btn-neutral float-left" title="Document Upload" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="gcs_enhancements.html" class="btn btn-neutral float-right" title="Synonyms" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="google_custom_site_search_config.html" class="btn btn-neutral float-left" title="General search configuration" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

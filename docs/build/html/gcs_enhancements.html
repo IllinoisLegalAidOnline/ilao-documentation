@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Site Search &mdash; ILAO 2.22 documentation</title>
+  <title>Synonyms &mdash; ILAO 2.22 documentation</title>
   
 
   
@@ -43,8 +43,8 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Google custom site search" href="google_custom_site_search_overview.html" />
-    <link rel="prev" title="Document Upload" href="otis_features_upload.html" /> 
+    <link rel="next" title="Custom autcomplete" href="gcs_autocomplete.html" />
+    <link rel="prev" title="Search promotions" href="gcs_promotions.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -104,11 +104,11 @@
 <li class="toctree-l1"><a class="reference internal" href="jobs_cms.html">Job Listings</a></li>
 <li class="toctree-l1"><a class="reference internal" href="discussion_groups.html">Discussion groups</a></li>
 <li class="toctree-l1"><a class="reference internal" href="otis_cms.html">Get Legal Help</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Site Search</a><ul>
+<li class="toctree-l1 current"><a class="reference internal" href="site_search.html">Site Search</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="google_custom_site_search_overview.html">Google custom site search</a></li>
 <li class="toctree-l2"><a class="reference internal" href="google_custom_site_search_config.html">General search configuration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gcs_promotions.html">Search promotions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gcs_enhancements.html">Synonyms</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Synonyms</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gcs_autocomplete.html">Custom autcomplete</a></li>
 <li class="toctree-l2"><a class="reference internal" href="search_solr_config.html">Configuration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="search_indexing.html">Indexing and Updates</a></li>
@@ -175,13 +175,15 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Site Search</li>
+          <li><a href="site_search.html">Site Search</a> &raquo;</li>
+        
+      <li>Synonyms</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="_sources/site_search.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/gcs_enhancements.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -194,27 +196,13 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="site-search">
-<h1>Site Search<a class="headerlink" href="#site-search" title="Permalink to this headline">¶</a></h1>
-<p>In April 2023, the universal site search was replaced with Google custom site search. The form library still uses Solr.</p>
-<div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">Contents:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="google_custom_site_search_overview.html">Google custom site search</a></li>
-<li class="toctree-l1"><a class="reference internal" href="google_custom_site_search_config.html">General search configuration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="gcs_promotions.html">Search promotions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="gcs_enhancements.html">Synonyms</a></li>
-<li class="toctree-l1"><a class="reference internal" href="gcs_autocomplete.html">Custom autcomplete</a></li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">Original Solr search:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="search_solr_config.html">Configuration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="search_indexing.html">Indexing and Updates</a></li>
-<li class="toctree-l1"><a class="reference internal" href="search_content.html">Manipulating Search</a></li>
-<li class="toctree-l1"><a class="reference internal" href="search_frontend.html">Using Site Search</a></li>
-</ul>
+  <div class="section" id="synonyms">
+<h1>Synonyms<a class="headerlink" href="#synonyms" title="Permalink to this headline">¶</a></h1>
+<p>Google will automatically try to fix what it believes is a mis-entered search term. For example, if I type divoce, Google knows I meant divorce.</p>
+<p>We can also provide our own synonyms for Google to use.</p>
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">Todo</p>
+<p>Synonyms can only be added via the search configuration. We are in the process of creating a tool for the staff to submit synonym suggestions.</p>
 </div>
 </div>
 
@@ -224,8 +212,8 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="google_custom_site_search_overview.html" class="btn btn-neutral float-right" title="Google custom site search" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="otis_features_upload.html" class="btn btn-neutral float-left" title="Document Upload" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="gcs_autocomplete.html" class="btn btn-neutral float-right" title="Custom autcomplete" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="gcs_promotions.html" class="btn btn-neutral float-left" title="Search promotions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

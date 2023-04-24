@@ -1,3 +1,4 @@
+.. _otis-guided-navigation-label:
 ==============================
 Guided Navigation Overview
 ==============================

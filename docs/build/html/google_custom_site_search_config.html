@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Site Search &mdash; ILAO 2.22 documentation</title>
+  <title>General search configuration &mdash; ILAO 2.22 documentation</title>
   
 
   
@@ -43,8 +43,8 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Google custom site search" href="google_custom_site_search_overview.html" />
-    <link rel="prev" title="Document Upload" href="otis_features_upload.html" /> 
+    <link rel="next" title="Search promotions" href="gcs_promotions.html" />
+    <link rel="prev" title="Google custom site search" href="google_custom_site_search_overview.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -104,9 +104,20 @@
 <li class="toctree-l1"><a class="reference internal" href="jobs_cms.html">Job Listings</a></li>
 <li class="toctree-l1"><a class="reference internal" href="discussion_groups.html">Discussion groups</a></li>
 <li class="toctree-l1"><a class="reference internal" href="otis_cms.html">Get Legal Help</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Site Search</a><ul>
+<li class="toctree-l1 current"><a class="reference internal" href="site_search.html">Site Search</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="google_custom_site_search_overview.html">Google custom site search</a></li>
-<li class="toctree-l2"><a class="reference internal" href="google_custom_site_search_config.html">General search configuration</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">General search configuration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#search-englines">Search Englines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#search-features">Search Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#included-and-excluded-urls">Included and excluded URLS</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#english">English</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#spanish">Spanish</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#polish">Polish</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#look-and-feel">Look and Feel</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="gcs_promotions.html">Search promotions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gcs_enhancements.html">Synonyms</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gcs_autocomplete.html">Custom autcomplete</a></li>
@@ -175,13 +186,15 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Site Search</li>
+          <li><a href="site_search.html">Site Search</a> &raquo;</li>
+        
+      <li>General search configuration</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="_sources/site_search.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/google_custom_site_search_config.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -194,27 +207,70 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="site-search">
-<h1>Site Search<a class="headerlink" href="#site-search" title="Permalink to this headline">¶</a></h1>
-<p>In April 2023, the universal site search was replaced with Google custom site search. The form library still uses Solr.</p>
-<div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">Contents:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="google_custom_site_search_overview.html">Google custom site search</a></li>
-<li class="toctree-l1"><a class="reference internal" href="google_custom_site_search_config.html">General search configuration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="gcs_promotions.html">Search promotions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="gcs_enhancements.html">Synonyms</a></li>
-<li class="toctree-l1"><a class="reference internal" href="gcs_autocomplete.html">Custom autcomplete</a></li>
+  <div class="section" id="general-search-configuration">
+<span id="custom-site-config"></span><h1>General search configuration<a class="headerlink" href="#general-search-configuration" title="Permalink to this headline">¶</a></h1>
+<p>Our site search is managed through <a href="#id1"><span class="problematic" id="id2">`Google's Programmable Search Engine&lt;https://programmablesearchengine.google.com/controlpanel/all&gt;`_</span></a>. Gwen and Mike have access to the search engines; please see them if you need something done.</p>
+<div class="section" id="search-englines">
+<h2>Search Englines<a class="headerlink" href="#search-englines" title="Permalink to this headline">¶</a></h2>
+<p>ILAO has 3 search engines:</p>
+<ul class="simple">
+<li><p>ILAO-EN is used on our English language pages</p></li>
+<li><p>ILAO-PL is used on our Polish language pages</p></li>
+<li><p>ILAO-ES is used on our Spanish language pages</p></li>
 </ul>
 </div>
-<div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">Original Solr search:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="search_solr_config.html">Configuration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="search_indexing.html">Indexing and Updates</a></li>
-<li class="toctree-l1"><a class="reference internal" href="search_content.html">Manipulating Search</a></li>
-<li class="toctree-l1"><a class="reference internal" href="search_frontend.html">Using Site Search</a></li>
+<div class="section" id="search-features">
+<h2>Search Features<a class="headerlink" href="#search-features" title="Permalink to this headline">¶</a></h2>
+<p>All search engines are set to:</p>
+<ul class="simple">
+<li><p>Safe search enabled</p></li>
+<li><p>Search the entire web is disabled</p></li>
+<li><p>Ads disabled</p></li>
 </ul>
+</div>
+<div class="section" id="included-and-excluded-urls">
+<h2>Included and excluded URLS<a class="headerlink" href="#included-and-excluded-urls" title="Permalink to this headline">¶</a></h2>
+<p>ILAO defines what pages are included on each search engine</p>
+<div class="section" id="english">
+<h3>English<a class="headerlink" href="#english" title="Permalink to this headline">¶</a></h3>
+<p>Includes all pages from www.illinoislegalaid.org except for:</p>
+<ul class="simple">
+<li><p>anything in the /sites/default folder. This typically includes file content and images.</p></li>
+<li><p>share_email page</p></li>
+<li><p>search and search subpages.</p></li>
+<li><p>organization profiles, except for LSHC pages</p></li>
+</ul>
+</div>
+<div class="section" id="spanish">
+<h3>Spanish<a class="headerlink" href="#spanish" title="Permalink to this headline">¶</a></h3>
+<p>Includes all pages from www.illinoislegalaid.org/es except for:</p>
+<ul class="simple">
+<li><p>anything in the /sites/default folder. This typically includes file content and images.</p></li>
+<li><p>share_email page</p></li>
+<li><p>search and search subpages.</p></li>
+</ul>
+</div>
+<div class="section" id="polish">
+<h3>Polish<a class="headerlink" href="#polish" title="Permalink to this headline">¶</a></h3>
+<p>Includes all pages from www.illinoislegalaid.org/pl except for:</p>
+<ul class="simple">
+<li><p>anything in the /sites/default folder. This typically includes file content and images.</p></li>
+<li><p>share_email page</p></li>
+<li><p>search and search subpages.</p></li>
+<li><p>pages not normally included in our Google search results. This includes:</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="look-and-feel">
+<h2>Look and Feel<a class="headerlink" href="#look-and-feel" title="Permalink to this headline">¶</a></h2>
+<p>All engines use the same Look and Feel settings:</p>
+<ul class="simple">
+<li><p>Specific language (English, Spanish, or Polish)</p></li>
+<li><p>Two page layout</p></li>
+<li><p>Default theme</p></li>
+<li><p>We customize a series of elements.</p></li>
+</ul>
+<img alt="_images/gps-look-feel.png" src="_images/gps-look-feel.png" />
 </div>
 </div>
 
@@ -224,8 +280,8 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="google_custom_site_search_overview.html" class="btn btn-neutral float-right" title="Google custom site search" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="otis_features_upload.html" class="btn btn-neutral float-left" title="Document Upload" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="gcs_promotions.html" class="btn btn-neutral float-right" title="Search promotions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="google_custom_site_search_overview.html" class="btn btn-neutral float-left" title="Google custom site search" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>
