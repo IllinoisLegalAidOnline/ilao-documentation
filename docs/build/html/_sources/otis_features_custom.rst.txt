@@ -16,7 +16,7 @@ Naming convention
 ==================
 To easily identify custom fields that need to be transferred to a specific OTIS partner, the following naming convention must be followed:
 "[org]_custom_[partner's custom field]" 
-In practice, the guided navigation field will look like: "lac_applicant_pronouns_675" and when viewing the raw field name, "lac_applicant_pronouns_675_358"
+In practice, the guided navigation field will look like: "lac_custom_applicant_pronouns_675" and when viewing the raw field name, "lac_custom_applicant_pronouns_675_358"
 
 ..warning:: When creating the lookup values for the custom field, they must match exactly to the partner's lookup values
 
