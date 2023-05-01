@@ -280,7 +280,7 @@ When working with paired markup,
 
 Using tables
 ================================
-Tables should have at least 2 or more rows and 2 - 4 columns (4 or more columns are difficult to read. Use sentence case for table titles and column headings.
+Tables should have at least 2 or more rows and 2 - 4 columns (4 or more columns are difficult to read). Use sentence case for table titles and column headings.
 
 .. note:: Tables should be used sparingly as they do not render well on mobile. The tables will be responsive but may squish the text to accommodate. Consider mobile accessibility in designing tables.
 
