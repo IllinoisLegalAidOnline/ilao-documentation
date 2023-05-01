@@ -486,7 +486,7 @@ Numbers & Currency
 * Spell out 'zero' and 'one'; use digits otherwise.
 * Use commas in numbers of 4 or more digits.
 * Use dollar sign. Only use decimals if there are cents (not ".00").
-* Fractions are preferred over decimals and should be written as 1/2, 1/4, 1/3. If they start a sentence, they should be spelled out:
+* Fractions are preferred over decimals and should be written as 1/2, 1/4, 1/3. Avoid using the single fraction characters, like ½, as they do not render properly across all platforms. If they start a sentence, they should be spelled out:
 
   * One-third of the group have multiple convictions
   * In the group, 1/3 have multiple convictions
@@ -584,12 +584,12 @@ Include a link to another piece of content that explains how to use the form in 
 
 When referring to Easy Forms, say "Easy Form program" or simply "Easy Form."
 Do not use any of the following:
-Interview
-Automated document (or "autodoc")
 
-Form preparation program
-A2J
-AutoDoc
+* Interview
+* Automated document (or "autodoc")
+* Form preparation program
+* A2J
+* AutoDoc
 
 Legal solution
 -----------------
