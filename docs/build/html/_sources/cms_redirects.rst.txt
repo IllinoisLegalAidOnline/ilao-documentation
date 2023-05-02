@@ -25,6 +25,8 @@ You will need to do this for the path alias of every language you are redirectin
 
 .. warning:: If you get an error that the redirect will create a loop or is circular STOP and reach out to Gwen for help. There's likely an existing redirect that needs to be fixed first.
 
+.. note:: Steps 5 and 6 are only required IF the redirect is not working. Skip these steps if your redirect is working.
+
 **Step 5**:  Clean up the old path alias
 
 There is a conflict between path aliases and redirect where the path alias will override the redirect. You need to:
