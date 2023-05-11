@@ -166,7 +166,7 @@ Many images are already loaded into the website and can be re-used.
 
 If you are using a new image:
 
-* Use iStock to find a photo that is engaging and describes the content. Download the Small version and put it on Team Drive in the "Stock Photos" folder in the appropriate sub-folder.
+* Use iStock to find a photo that is engaging and describes the content. Download the Small version and put it on Team Drive in the "Stock photos for content" folder in the appropriate sub-folder.
 
 * The images that will work best are horizontal images with the subject(s) in the center of the image. If the subject is on the outer edge it could be cropped out so adjust the photo yourself using a crop tool.
 
