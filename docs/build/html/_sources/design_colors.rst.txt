@@ -2,6 +2,12 @@
 Colors
 ====================
 
+Logo colors
+==============
+
+Blue Hex value: #40CCFC
+Gray Hex value: #647B7D
+
 Primary color
 ===============
 
