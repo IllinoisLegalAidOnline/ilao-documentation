@@ -12,6 +12,8 @@ A message component is triggered when:
 * A caseworker marks the step complete in LegalServer and subscribes the user to messages
 * A different step is marked complete AND an appropriate reply to that step was received that scheduled this step to send.
 
+.. warning:: The image below is a mockup; technical requirements may have changed.
+
 .. image:: ../assets/next-steps-mockup.png
 
 For example, in the above example, the step "Submit your SNAP application" will be triggered:
@@ -78,17 +80,20 @@ Replies live within the Next Step Component and are designed to store informatio
 | Send message                 | Single select (immediately or    | List               |
 |                              | time from trigger or no reply)   |                    |
 +------------------------------+----------------------------------+--------------------+
+| Time from reply              | Number of days to send when      | Number             |
+|                              | Send message is set time         |                    |
++------------------------------+----------------------------------+--------------------+
 | Last step                    | Indicate if this is the last     | Boolean            |
 |                              | or not                           |                    |
-+------------------------------+----------------------------------+--------------------+
-| Time from trigger            | Number of days to send when      | Number             |
-|                              | Send message is set time         |                    |
 +------------------------------+----------------------------------+--------------------+
 | Next follow up step          | Single select of availalbe       | Entity reference   |
 |                              | steps                            |                    |
 +------------------------------+----------------------------------+--------------------+
 | Send follow-up step in       | Number of days to send follow    | Number             |
 |                              | up step                          |                    |
++------------------------------+----------------------------------+--------------------+
+| Maximum re-sends             | Maximum times we should send     | Number             |
+|                              | a specific initial message       |                    |
 +------------------------------+----------------------------------+--------------------+
 
 
