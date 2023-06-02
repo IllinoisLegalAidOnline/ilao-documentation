@@ -35,6 +35,10 @@ The next steps user entity is used to track users subscribed to next steps.
 +------------------------------+----------------------------------+--------------------+
 | preferred_language           | Language the user wants messages | varchar            |
 +------------------------------+----------------------------------+--------------------+
+| flow_id                      | NID of the flow subscribed to    | integer            |
++------------------------------+----------------------------------+--------------------+
+| initial_step                 | NID of the flow's first step     | integer            |
++------------------------------+----------------------------------+--------------------+
 
 
 

@@ -226,13 +226,14 @@
 </div>
 <div class="section" id="api-post">
 <h2>API Post<a class="headerlink" href="#api-post" title="Permalink to this headline">¶</a></h2>
-<p>ILAO will work with partners to implement an API block that will post back to ILAO. This API call will post:</p>
+<p>ILAO will work with partners to implement an API block that will post back to ILAO. This API call will include these parameters from Legal Server:</p>
 <ul class="simple">
 <li><p>The user’s mobile phone number</p></li>
 <li><p>The uuid from legal server</p></li>
 </ul>
 <p>Once posted, the website will:</p>
 <ul class="simple">
+<li><p>Find the relevant NextStepUser entity</p></li>
 <li><p>Update the NextStepsUser entity with the uuid based on the phone number where the uuid is empty</p></li>
 <li><p>Query the otis_triage_user table to check for the uuid; if found will add the triage user id to the NextStepsUser entity</p></li>
 </ul>

@@ -30,7 +30,7 @@ When submitted this will create a nextStepsUserEntity with:
 
 API Post
 ==============
-ILAO will work with partners to implement an API block that will post back to ILAO. This API call will post:
+ILAO will work with partners to implement an API block that will post back to ILAO. This API call will include these parameters from Legal Server:
 
 * The user's mobile phone number
 * The uuid from legal server
@@ -38,6 +38,7 @@ ILAO will work with partners to implement an API block that will post back to IL
 
 Once posted, the website will:
 
+* Find the relevant NextStepUser entity
 * Update the NextStepsUser entity with the uuid based on the phone number where the uuid is empty
 * Query the otis_triage_user table to check for the uuid; if found will add the triage user id to the NextStepsUser entity
 
