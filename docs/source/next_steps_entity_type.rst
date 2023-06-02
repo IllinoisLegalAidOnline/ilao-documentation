@@ -33,5 +33,8 @@ The next steps user entity is used to track users subscribed to next steps.
 +------------------------------+----------------------------------+--------------------+
 | zipcode                      | User's zip code                  | varchar            |
 +------------------------------+----------------------------------+--------------------+
+| preferred_language           | Language the user wants messages | varchar            |
++------------------------------+----------------------------------+--------------------+
+
 
 
