@@ -1,3 +1,5 @@
+.. _twilio_functions:
+
 =====================
 Twilio Functions
 =====================
@@ -5,6 +7,8 @@ Twilio Functions
 This documents the functions stored in our Twilio function service "ilao."
 
 All of our Twilio functions are stored in the ilao service in Twilio's functions.
+
+Guided navigation functions used in our Twilio SMS are documented in :ref:`guided_nav_functions` documentation.
 
 Function standards
 ======================

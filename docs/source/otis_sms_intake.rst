@@ -8,7 +8,6 @@ Online triage and intake is served over ILAO's short code. It relies on Guided N
 
 If the user texts a keyword that we can match to an existing Guided Navigation flow, we will direct the user directly into the online triage and intake system with the Guided Navigation flow already determined. If the texted keyword does not match a term, we will ask the user to pick from a menu.
 
-As of August 2022, the short code supports triage and intake for eviction, other rental issues, TANF, SNAP, and unemployment benefits. It is rapidly expanding to other legal issues.
 
 .. toctree::
    :maxdepth: 1

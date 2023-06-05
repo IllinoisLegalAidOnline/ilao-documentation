@@ -11,11 +11,14 @@ As of August 2022, users can apply for legal help in:
 * TANF
 * SNAP
 * Unemployment benefits
+* Clearing a criminal record
+* Bankruptcy
+* Asylum
 
 
 If a user texts a keyword that we can match to an existing Guided Navigation flow, we will direct the user directly into the online triage and intake system with the Guided Navigation flow already determined. If the texted keyword does not match a term, we will ask the user to pick from a menu.
 
-The initial prompt asks for which language they would like to proceed in (English, Spanish, or Polish) and then directs them through the correct SMS flow.
+The initial prompt asks the user to opt-in. Once the user opt-ins, they are asked for which language they would like to proceed in (English, Spanish, or Polish) and then directs them through the correct SMS flow.
 
 * Step 1: Ask the user for their language
 * Step 2: Determine if the keyword is a match to existing terms
@@ -42,6 +45,8 @@ The initial prompt asks for which language they would like to proceed in (Englis
   * If no organization matches, the system exits with legal content
   * If more than 1 organization matches, the user is given a choice
   * If 1 organization matches, the user is offered the option to apply.
+
+.. note:: This needs updated for qualifiers & maybe adverse party
 
 * Step 9: We collect the user's last name, any nicknames, and any aliases they have used
 * Step 10: We collect the user's date of birth. We ask the user to confirm their date of birth and if it is incorrect, they can re-enter
