@@ -24,14 +24,18 @@ We will also use SMS for a few other use cases that run over API. These are sent
 +-----------------------+--------------------------------+------------------------+
 | kyr follow up surveys | KYR surveys                    | Built as flow          |
 +-----------------------+--------------------------------+------------------------+
-| Otis confirmations    | N/A                            | Built in code          |
+| Otis confirmations    | N/A                            | Built in Drupal        |
 +-----------------------+--------------------------------+------------------------+
-| OTIS reminders        | Not yet built                  | In backlog             |
+| OTIS reminders        | N/A                            | Built in Drupal        |
 +-----------------------+--------------------------------+------------------------+
-| Next steps from       | Not yet built                  | Not defined            |
+| Next steps from       | Not yet built                  | Starting to bu         |
 | content               |                                |                        |
 +-----------------------+--------------------------------+------------------------+
-| Feedback surveys      | Not yet built                  | Not defined            |
+| Feedback surveys      | Depends                        | OTIS feedback, KYR     |
+|                       |                                | surveys, and eviction  |
+|                       |                                | live                   |
 +-----------------------+--------------------------------+------------------------+
+
+
 
 

@@ -1,3 +1,5 @@
+.. _guided_nav_functions:
+
 ================================
 Guided Navigation SMS functions
 ================================
