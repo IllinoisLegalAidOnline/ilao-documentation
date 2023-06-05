@@ -34,6 +34,7 @@ ILAO will work with partners to implement an API block that will post back to IL
 
 * The user's mobile phone number
 * The uuid from legal server
+* The user's zip code
 
 
 Once posted, the website will:
