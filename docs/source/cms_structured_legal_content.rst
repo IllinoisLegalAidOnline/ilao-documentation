@@ -1,6 +1,6 @@
-==========================
-COPE/Structured Content
-==========================
+==============================
+Next generation content/COPE
+==============================
 
 ILAO's structured content types were created to create a "Create Once Publish Everywhere" model based on a problem/solution(s) approach.
 
@@ -36,5 +36,6 @@ It is modeled after various elements of schema.org. Because there is no legal pr
    cms_structured_content_reports
    cms_structured_content_sms
    structured_content_tech
+
 
 

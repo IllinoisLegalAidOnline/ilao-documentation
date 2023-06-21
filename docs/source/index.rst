@@ -15,6 +15,7 @@ Welcome to Illinois Legal Aid Online Product Documentation
    people_management
    legal_information
    legal_content_cms
+   cms_structured_legal_content
    basic_pages_cms
    testimonials_cms
    webforms_cms
@@ -29,7 +30,7 @@ Welcome to Illinois Legal Aid Online Product Documentation
    taxonomies
    rss_feeds
    ilao_api
-   next_steps  
+   next_steps
    sms_overview
    data_analytics
 
