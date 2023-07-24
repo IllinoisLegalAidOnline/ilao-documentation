@@ -24,3 +24,5 @@ Next Steps Tracking
 +------------------------------+----------------------------------+--------------------+
 | resent_count                 | integer                          | integer            |
 +------------------------------+----------------------------------+--------------------+
+
+This table is used to store a history of messages sent.
