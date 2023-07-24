@@ -96,6 +96,7 @@
 <li class="toctree-l1"><a class="reference internal" href="people_management.html">User Management</a></li>
 <li class="toctree-l1"><a class="reference internal" href="legal_information.html">Legal Information (Resources)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="legal_content_cms.html">Legal Content CMS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cms_structured_legal_content.html">Next generation content/COPE</a></li>
 <li class="toctree-l1"><a class="reference internal" href="basic_pages_cms.html">Basic pages</a></li>
 <li class="toctree-l1"><a class="reference internal" href="testimonials_cms.html">Testimonials Content Type</a></li>
 <li class="toctree-l1"><a class="reference internal" href="webforms_cms.html">Webforms</a></li>
@@ -123,6 +124,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="otis_facebook.html">Facebook Integrations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="otis_features.html">Additional Features</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="site_search.html">Site Search</a></li>
@@ -131,7 +133,9 @@
 <li class="toctree-l1"><a class="reference internal" href="taxonomies.html">Taxonomies</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rss_feeds.html">RSS Feeds</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ilao_api.html">ILAO’s API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="next_steps.html">Next Steps Follow-up</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sms_overview.html">SMS Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_analytics.html">Data and Analytics</a></li>
 </ul>
 <p class="caption"><span class="caption-text">See also:</span></p>
 <ul>
@@ -220,6 +224,10 @@
 <p class="admonition-title">Warning</p>
 <p>You will want to back up the view just in case you mess it up so badly that you need to restore it. See the backup and restore instructions at the bottom of this page.</p>
 </div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>New rest-exports should be created in DEV Environment and then exported/imported to production.</p>
+</div>
 <div class="section" id="path-settings">
 <h3><span class="section-number">3.1.1. </span>Path settings<a class="headerlink" href="#path-settings" title="Permalink to this headline">¶</a></h3>
 <p>Each REST export must have a path. That path should be set to /rest/[category]-cases</p>
@@ -287,6 +295,10 @@
 <div class="section" id="pager">
 <h3><span class="section-number">3.1.6. </span>Pager<a class="headerlink" href="#pager" title="Permalink to this headline">¶</a></h3>
 <p>Pager should be set to Display all items</p>
+</div>
+<div class="section" id="saving">
+<h3><span class="section-number">3.1.7. </span>Saving<a class="headerlink" href="#saving" title="Permalink to this headline">¶</a></h3>
+<p>Before saving, you must adjust the timeout in Acquia: Select Dev Environment - Configuration/Advanced - change Max execution time to 300. Once rest-export is saved, change the timeout back to 60 seconds.</p>
 </div>
 </div>
 <div class="section" id="sample-rest-export">

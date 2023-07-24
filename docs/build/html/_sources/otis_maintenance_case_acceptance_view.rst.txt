@@ -16,6 +16,8 @@ The REST export connects webform submission data with the service associated wit
 
 .. warning:: You will want to back up the view just in case you mess it up so badly that you need to restore it. See the backup and restore instructions at the bottom of this page.
 
+.. warning:: New rest-exports should be created in DEV Environment and then exported/imported to production.
+
 Path settings
 --------------
 Each REST export must have a path. That path should be set to /rest/[category]-cases
@@ -85,6 +87,10 @@ Pager
 ---------
 Pager should be set to Display all items
 
+
+Saving
+---------
+Before saving, you must adjust the timeout in Acquia: Select Dev Environment - Configuration/Advanced - change Max execution time to 300. Once rest-export is saved, change the timeout back to 60 seconds.
 
 Sample REST Export
 ==========================

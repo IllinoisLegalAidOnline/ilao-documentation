@@ -4,50 +4,29 @@ RSS Feeds
 To use these feeds as is, copy the full code block and paste into your website. Or, you can access the raw RSS file and create your own version.
 
 
-Sample output
-=================
+Changing the feeds
+====================
 
-Each feed shows 10 hand-curated pieces of legal information in the selected categories. The feeds were generated using `feed2js.org <http://feed2js.org>`_.
+ILAO uses rss.app to create these feeds. Anyone with an account can access these feeds and create their own versions with different layouts.
 
-Customizing the look and feel
--------------------------------
-The output is contained in a div with a class of rss-box. 
-The feed title has a class of rss-title.
-Each item is a list element with a class of rss-item. 
-
-Websites can use standard CSS to customize these items. See `Feed2JS's Style information <https://feed2js.org/style.php>`_.
-
-.. image:: ../assets/sample-rss.png
-
-There is also a set of predefined styles that you can experiment with and copy and paste the CSS into your website.
-
-Family 
+Family
 ===================
 
 Raw RSS feed:  `Family RSS <https://www.illinoislegalaid.org/legal-information/housing.rss>`_
 
 .. code-block:: HTML
 
-   <script language="JavaScript" src="http://feed2js.org//feed2js.php?src=https%3A%2F%2Fwww.illinoislegalaid.org%2Flegal-information%2Ffamily.rss&chan=titlelinkno&desc=1&utf=y"  charset="UTF-8" type="text/javascript"></script>
-
-   <noscript>
-   <a    href="http://feed2js.org//feed2js.php?src=https%3A%2F%2Fwww.illinoislegalaid.org%2Flegal-information%2Ffamily.rss&chan=titlelinkno&desc=1&utf=y&html=n">View RSS feed</a>
-   </noscript>
+   <rssapp-feed id="Y53QqwBLFx9OlyXP"></rssapp-feed><script src="https://widget.rss.app/v1/feed.js" type="text/javascript" async></script>
 
 
-Housing 
+Housing
 ===================
 
 Raw RSS feed:  `Housing RSS <https://www.illinoislegalaid.org/legal-information/housing.rss>`_
 
 .. code-block:: HTML
 
-   <script language="JavaScript" src="http://feed2js.org//feed2js.php?src=https%3A%2F%2Fwww.illinoislegalaid.org%2Flegal-information%2Fhousing.rss&chan=titlelinkno&desc=1&utf=y" 
-    charset="UTF-8" type="text/javascript"></script>
-
-   <noscript>
-   <a href="http://feed2js.org//feed2js.php?src=https%3A%2F%2Fwww.illinoislegalaid.org%2Flegal-information%2Fhousing.rss&chan=titlelinkno&desc=1&utf=y&html=y">View RSS feed</a>
-  </noscript>
+   <rssapp-feed id="QkGaQbBiHzAEG0vm"></rssapp-feed><script  src="https://widget.rss.app/v1/feed.js" type="text/javascript" async></script>
 
 
 Safety
@@ -56,11 +35,7 @@ Raw RSS feed: `Safety RSS <https://www.illinoislegalaid.org/legal-information/sa
 
 .. code-block:: HTML
 
-   <script language="JavaScript" src="http://feed2js.org//feed2js.php?src=https%3A%2F%2Fwww.illinoislegalaid.org%2Flegal-information%2Fsafety.rss&chan=titlelinkno&desc=1&utf=y"  charset="UTF-8" type="text/javascript"></script>
-
-   <noscript>
-   <a href="http://feed2js.org//feed2js.php?src=https%3A%2F%2Fwww.illinoislegalaid.org%2Flegal-information%2Fsafety.rss&chan=titlelinkno&desc=1&utf=y&html=y">View RSS feed</a>
-   </noscript>
+    <rssapp-feed id="I8IsKu3rWbpYlbAg"></rssapp-feed><script src="https://widget.rss.app/v1/feed.js" type="text/javascript" async></script>
 
 Small Claims
 ==============
@@ -69,11 +44,7 @@ Raw RSS feed: `Small Claims RSS <https://www.illinoislegalaid.org/legal-informat
 
 .. code-block:: HTML
 
-   <script language="JavaScript" src="http://feed2js.org//feed2js.php?src=https%3A%2F%2Fwww.illinoislegalaid.org%2Flegal-information%2Fsmallclaims.rss&chan=titlelinkno&desc=1&utf=y"  charset="UTF-8" type="text/javascript"></script>
-
-   <noscript>
-   <a href="http://feed2js.org//feed2js.php?src=https%3A%2F%2Fwww.illinoislegalaid.org%2Flegal-information%2Fsmallclaims.rss&chan=titlelinkno&desc=1&utf=y&html=y">View RSS feed</a>
-   </noscript>
+    <rssapp-feed id="jomfLLorgfA8qwJO"></rssapp-feed><script src="https://widget.rss.app/v1/feed.js" type="text/javascript" async></script>
 
 
 Traffic
@@ -82,12 +53,7 @@ Raw RSS feed: `Traffic RSS <https://www.illinoislegalaid.org/legal-information/t
 
 .. code-block:: HTML
 
-   <script language="JavaScript" src="http://feed2js.org//feed2js.php?src=https%3A%2F%2Fwww.illinoislegalaid.org%2Flegal-information%2Ftraffic.rss&chan=titlelinkno&desc=1&utf=y"  charset="UTF-8" type="text/javascript"></script>
-
-   <noscript>
-   <a href="http://feed2js.org//feed2js.php?src=https%3A%2F%2Fwww.illinoislegalaid.org%2Flegal-information%2Ftraffic.rss&chan=titlelinkno&desc=1&utf=y&html=y">View RSS feed</a>
-   </noscript>
+    <rssapp-feed id="enny653ZsLg1Bp5h"></rssapp-feed><script src="https://widget.rss.app/v1/feed.js" type="text/javascript" async></script>
 
 
-
-For help, please contact support@illinoislegalaid.org. 
+For help, please contact support@illinoislegalaid.org.
