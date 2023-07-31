@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Next Steps Follow-up &mdash; ILAO 2.22 documentation</title>
+  <title>Next Steps Flows &mdash; ILAO 2.22 documentation</title>
   
 
   
@@ -111,7 +111,7 @@
 <li class="toctree-l1"><a class="reference internal" href="taxonomies.html">Taxonomies</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rss_feeds.html">RSS Feeds</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ilao_api.html">ILAO’s API</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Next Steps Follow-up</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Next Steps Flows</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="next_steps_content_type.html">Next Steps Flow Content Type</a></li>
 <li class="toctree-l2"><a class="reference internal" href="next_steps_entity_type.html">Next Steps User Entity</a></li>
 <li class="toctree-l2"><a class="reference internal" href="next_steps_signup_form.html">Legal Server Signup</a></li>
@@ -174,7 +174,7 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Next Steps Follow-up</li>
+      <li>Next Steps Flows</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -193,8 +193,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="next-steps-follow-up">
-<h1>Next Steps Follow-up<a class="headerlink" href="#next-steps-follow-up" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="next-steps-flows">
+<h1>Next Steps Flows<a class="headerlink" href="#next-steps-flows" title="Permalink to this headline">¶</a></h1>
 <p>“Next Steps” is designed to provide additional support to individuals along their legal journey. In phase 1, we are focusing on making the tool available to caseworkers at OTIS partner organizations to subscribe clients to these next steps. As they provide advice, they can use a component in LegalServer to assign a client to a completed step and subscribe them to follow up messages.</p>
 <p>Phase 2 envisions expanding it to website visitors and users of our ILAOHelps! SMS text line and an expansion to web notifications and email processing.</p>
 <p>Next Steps build on the work done with COPE content to define step-by-step legal processes (How-tos) associated with a specific DIY Legal Solution and its options. This adds a content type designed to deliver interactive follow-up messages initially over SMS.</p>
@@ -202,8 +202,13 @@
 <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="next_steps_content_type.html">Next Steps Flow Content Type</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="next_steps_content_type.html#next-step-component">Next Step Component</a></li>
-<li class="toctree-l2"><a class="reference internal" href="next_steps_content_type.html#replies">Replies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="next_steps_content_type.html#creating-a-next-steps-flow">Creating a Next Steps Flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="next_steps_content_type.html#create-the-first-message">Create the first message</a></li>
+<li class="toctree-l2"><a class="reference internal" href="next_steps_content_type.html#add-replies">Add replies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="next_steps_content_type.html#additional-steps">Additional Steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="next_steps_content_type.html#example-flow">Example Flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="next_steps_content_type.html#maximum-retries">Maximum retries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="next_steps_content_type.html#technical-specifications">Technical Specifications</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="next_steps_entity_type.html">Next Steps User Entity</a></li>
@@ -220,9 +225,8 @@
 <h2>How this differs from the Toolbox ticker system<a class="headerlink" href="#how-this-differs-from-the-toolbox-ticker-system" title="Permalink to this headline">¶</a></h2>
 <p>Some staff may recall that we piloted a similar concept with toolbox content. We’ve learned from that failure and have made the following improvements in this iteration:</p>
 <ul class="simple">
-<li><p>Messages are kept separate from the content associated with it</p></li>
-<li><p>Users can reply to a message and those replies are then processed to determine the next step</p></li>
-<li><p>Messages are created within a flow; this allows us to see the entire conversational process.</p></li>
+<li><p>Messages are kept separate from the content associated with it. This makes it easier to view the overall flow for a legal process.</p></li>
+<li><p>Users can reply to a message and those replies are then processed to determine the next step, rather than just a “Hey, it’s been a couple of weeks. If you have your criminal records together, the next step is to determine whether you are eligible for sealing.”</p></li>
 </ul>
 </div>
 </div>

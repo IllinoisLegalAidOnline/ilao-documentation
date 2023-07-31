@@ -11,22 +11,32 @@ The Legal Server implementation anticipates having 2 pieces:
 IFrame Form
 ===============
 
-ILAO will provide an iFrame url to partners for inclusion in their instance of LegalServer. The form will include:
+.. image:: ../assets/next_steps_signup.png
 
-* List of published Legal Flows
-* List of steps for a selected How-to
-* A field ot collect the client's mobile-number
+
+ILAO will provide an iFrame url to partners for inclusion in their instance of LegalServer. The iframe code is listed on the edit organization form for the organizaiton in the website.
+
+The form includes:
+
+* List of LSC problem codes, to make it easier for caseworkers to filter
+* List of published NextStep Flows
+* List of available steps
+* A field to collect the client's mobile-number
+* A field to collect tthe client's zip code
 * Language preference of the client
-* Client's zip code
 * Opt in field
 * Hidden organization ID as a query parameter
 
-When submitted this will create a nextStepsUserEntity with:
+When submitted this will create a nextStepsUserEntity within ILAO's website and store:
 
-* Automatically generated ID
-* NID of the Selected flow
-* NID of the Selected legal step
+* The client's mobile number
+* The client's zip code
+* The client's language preference
+* The referring organization
+* The node ID of the Next Step Flow the user is subscribed to
+* The initial step the client was subscribed to.
 
+The website will then send the initial message on the next scheduled task run.
 
 API Post
 ==============
@@ -42,4 +52,8 @@ Once posted, the website will:
 * Find the relevant NextStepUser entity
 * Update the NextStepsUser entity with the uuid based on the phone number where the uuid is empty
 * Query the otis_triage_user table to check for the uuid; if found will add the triage user id to the NextStepsUser entity
+
+The purpose of this step is to track OTIS vs non-OTIS cases and make this information available in our OTIS dashboard.
+
+
 

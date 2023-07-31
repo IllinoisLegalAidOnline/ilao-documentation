@@ -44,7 +44,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Next Steps User Entity" href="next_steps_entity_type.html" />
-    <link rel="prev" title="Next Steps Follow-up" href="next_steps.html" /> 
+    <link rel="prev" title="Next Steps Flows" href="next_steps.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -96,6 +96,7 @@
 <li class="toctree-l1"><a class="reference internal" href="people_management.html">User Management</a></li>
 <li class="toctree-l1"><a class="reference internal" href="legal_information.html">Legal Information (Resources)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="legal_content_cms.html">Legal Content CMS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cms_structured_legal_content.html">Next generation content/COPE</a></li>
 <li class="toctree-l1"><a class="reference internal" href="basic_pages_cms.html">Basic pages</a></li>
 <li class="toctree-l1"><a class="reference internal" href="testimonials_cms.html">Testimonials Content Type</a></li>
 <li class="toctree-l1"><a class="reference internal" href="webforms_cms.html">Webforms</a></li>
@@ -110,12 +111,18 @@
 <li class="toctree-l1"><a class="reference internal" href="taxonomies.html">Taxonomies</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rss_feeds.html">RSS Feeds</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ilao_api.html">ILAO’s API</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="next_steps.html">Next Steps Follow-up</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="next_steps.html">Next Steps Flows</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Next Steps Flow Content Type</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#next-step-component">Next Step Component</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#replies">Replies</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#when-the-user-replies">When the user replies</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#send-message-options">Send message options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#creating-a-next-steps-flow">Creating a Next Steps Flow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#create-the-first-message">Create the first message</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#add-replies">Add replies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#additional-steps">Additional Steps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#example-flow">Example Flow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#maximum-retries">Maximum retries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#technical-specifications">Technical Specifications</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#next-flow-content-type">Next Flow Content Type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#next-step-component">Next Step Component</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#replies">Replies</a></li>
 </ul>
 </li>
 </ul>
@@ -123,7 +130,7 @@
 <li class="toctree-l2"><a class="reference internal" href="next_steps_entity_type.html">Next Steps User Entity</a></li>
 <li class="toctree-l2"><a class="reference internal" href="next_steps_signup_form.html">Legal Server Signup</a></li>
 <li class="toctree-l2"><a class="reference internal" href="next_steps_sms_delivery.html">Next Steps SMS Subscriptions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="next_steps_tracking.html">Next Steps Tracking &amp; Reporting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="next_steps_tracking.html">Next Steps Tracking</a></li>
 <li class="toctree-l2"><a class="reference internal" href="next_steps.html#how-this-differs-from-the-toolbox-ticker-system">How this differs from the Toolbox ticker system</a></li>
 </ul>
 </li>
@@ -181,7 +188,7 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-          <li><a href="next_steps.html">Next Steps Follow-up</a> &raquo;</li>
+          <li><a href="next_steps.html">Next Steps Flows</a> &raquo;</li>
         
       <li>Next Steps Flow Content Type</li>
     
@@ -204,13 +211,74 @@
             
   <div class="section" id="next-steps-flow-content-type">
 <h1>Next Steps Flow Content Type<a class="headerlink" href="#next-steps-flow-content-type" title="Permalink to this headline">¶</a></h1>
-<p>The Next Steps Flow content type is where ILAO staff can create a specific flow for a specific Legal How-to.</p>
-<p>A Next Steps Flow must be attached to a single How-to. Once the How-to is selected, a staff member can create messages attached to 1 or more steps.</p>
-<p>A message component is triggered when:</p>
+<p>The Next Steps Flow content type is where ILAO staff can create a specific flow for a specific Legal How-to. This can then be used to send scheduled follow-up messages.</p>
+<p>A Next Steps Flow must be attached to a single Legal How-to. Once the Legal How-to is selected, a staff member can create messages attached to 1 or more steps associated with that Legal How-to.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Legacy “How-to” content can not be used for this. Only COPE-based Legal How-to’s can be used.</p>
+</div>
+<div class="section" id="creating-a-next-steps-flow">
+<h2>Creating a Next Steps Flow<a class="headerlink" href="#creating-a-next-steps-flow" title="Permalink to this headline">¶</a></h2>
+<p>For each next step flow, you must:</p>
 <ul class="simple">
-<li><p>A caseworker marks the step complete in LegalServer and subscribes the user to messages</p></li>
-<li><p>A different step is marked complete AND an appropriate reply to that step was received that scheduled this step to send.</p></li>
+<li><p>Give the flow a title. This title should reflect the how-to; it will be displayed in widgets partners use to subscribe people to NextSteps.</p></li>
+<li><p>Tie the flow to an LSC problem code. This is required to align with OTIS partners’ systems</p></li>
+<li><p>Attach the appropriate Legal How-to</p></li>
 </ul>
+<img alt="_images/nextsteps_header.png" src="_images/nextsteps_header.png" />
+</div>
+<div class="section" id="create-the-first-message">
+<h2>Create the first message<a class="headerlink" href="#create-the-first-message" title="Permalink to this headline">¶</a></h2>
+<p>Once the Legal How-to is attached, the Step dropdown will populate with the list of steps. Always start the flow with the first step.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The component is triggered when the system is told the user has BEEN ADIVISED TO COMPLETE the step.</p>
+</div>
+<p>To create the message:</p>
+<ul class="simple">
+<li><p>Pick the step</p></li>
+<li><p>Create a short message. Ideally, messages should be less than 160 characters but can not be more than 1600.</p></li>
+<li><p>Select the message type:</p>
+<ul>
+<li><p>Send and wait for reply - this tells the system to expect a reply from the individual. You’ll need to then add replies.</p></li>
+<li><p>Send, no reply - this tells the system to ignore any replies as we don’t expect them. This is typically used only on the last step.</p></li>
+</ul>
+</li>
+</ul>
+<img alt="_images/next-step-component.png" src="_images/next-step-component.png" />
+</div>
+<div class="section" id="add-replies">
+<h2>Add replies<a class="headerlink" href="#add-replies" title="Permalink to this headline">¶</a></h2>
+<p>If your message has a message type of “Send and wait for reply,” you must add reply handlers. Reply handlers are limited to processing replies of:</p>
+<ul class="simple">
+<li><p>Yes (will also handle various ways someone may reply Yes, such as Y, Yep, yeah)</p></li>
+<li><p>No (will also handle various ways someone may reply No, such as N, nope, not)</p></li>
+<li><p>No match, for cases where someone replies with something the system can’t handle</p></li>
+<li><p>No reply, for cases where someone was sent a message but does not reply within Twilio’s time out.</p></li>
+</ul>
+<p>For each reply:</p>
+<ul class="simple">
+<li><p>Creata a follow-up message. For example, if a user replies No, you might want to reassure them, remind them of the next step, and schedule another reminder.</p></li>
+<li><p>Attach the text of the step, if desired. For example, if the individual replies yes, you may want to let them know what they need to do next.</p></li>
+<li><p>Schedule when to send the message; 99% of the time, this should be set to immediately.</p></li>
+<li><p>Indicate if this is the last step in the flow.</p></li>
+<li><p>Schedule a next step follow up:</p>
+<ul>
+<li><p>Pick the step to follow up with next (this can be the current step or a future step)</p></li>
+<li><p>Schedule when to send the follow up message, in days.</p></li>
+<li><p>Set a maximum number of times to resend the reply follow up.</p></li>
+</ul>
+</li>
+<li><p>Repeat for each type of reply the system needs to handle.</p></li>
+</ul>
+<img alt="_images/next-step-replies-add.png" src="_images/next-step-replies-add.png" />
+</div>
+<div class="section" id="additional-steps">
+<h2>Additional Steps<a class="headerlink" href="#additional-steps" title="Permalink to this headline">¶</a></h2>
+<p>Repeat the “Create the first message” and “Add Replies” for each step in the flow. When you add the last step, set the Is last step to Yes.</p>
+</div>
+<div class="section" id="example-flow">
+<h2>Example Flow<a class="headerlink" href="#example-flow" title="Permalink to this headline">¶</a></h2>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>The image below is a mockup; technical requirements may have changed.</p>
@@ -218,19 +286,29 @@
 <img alt="_images/next-steps-mockup.png" src="_images/next-steps-mockup.png" />
 <p>For example, in the above example, the step “Submit your SNAP application” will be triggered:</p>
 <ul class="simple">
-<li><p>immediately, if a caseworker selects that in LegalServer</p></li>
-<li><p>6 days after the Submit your SNAP applciation is triggered and the user replies “No”</p></li>
+<li><p>immediately, if a caseworker selects Sumbit your SNAP application in LegalServer</p></li>
+<li><p>6 days after the Submit your SNAP applciation is triggered and the user replies “No” to that initial trigger (so long as the maximum number of resends has not been reached)</p></li>
 <li><p>30 days after the Fill out a SNAP application is triggered and the user replies “Yes”</p></li>
 <li><p>2 days after the Submit your SNAP application is triggered and the user does not reply.</p></li>
 </ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>For reply processing that sends a message, that message will have a maximum number of retries. For example, using the attached:</p>
 </div>
+<div class="section" id="maximum-retries">
+<h2>Maximum retries<a class="headerlink" href="#maximum-retries" title="Permalink to this headline">¶</a></h2>
+<p>Each step with a send with reply option must have a maximum number of times to retry so we are not continually leaving flows open and sending messages to individuals.</p>
+<p>In the Example case:</p>
 <ul class="simple">
 <li><p>If a user replies No to the submit their application question, the question will resend in 6 days. If the user replies No again, it will send one more time in 6 days. If the user still replies No, it will stop.</p></li>
 <li><p>If a user does not reply to the submit their application question, the question will resend up to 2 more times. If the user never replies, they are treated as discontinued. If they reply Yes or No, those replies will kick in.</p></li>
 </ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If someone replies “Stop” to a text message, they will be unsubscribed and will not receive additional messagss.</p>
+</div>
+</div>
+<div class="section" id="technical-specifications">
+<h2>Technical Specifications<a class="headerlink" href="#technical-specifications" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="next-flow-content-type">
+<h3>Next Flow Content Type<a class="headerlink" href="#next-flow-content-type" title="Permalink to this headline">¶</a></h3>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 36%" />
@@ -261,8 +339,9 @@ unlimited</p></td>
 </tr>
 </tbody>
 </table>
+</div>
 <div class="section" id="next-step-component">
-<h2>Next Step Component<a class="headerlink" href="#next-step-component" title="Permalink to this headline">¶</a></h2>
+<h3>Next Step Component<a class="headerlink" href="#next-step-component" title="Permalink to this headline">¶</a></h3>
 <p>The next step component contains the triggering step, initial message and handling for replies.</p>
 <table class="docutils align-default">
 <colgroup>
@@ -301,7 +380,7 @@ unlimited</p></td>
 </table>
 </div>
 <div class="section" id="replies">
-<h2>Replies<a class="headerlink" href="#replies" title="Permalink to this headline">¶</a></h2>
+<h3>Replies<a class="headerlink" href="#replies" title="Permalink to this headline">¶</a></h3>
 <p>Replies live within the Next Step Component and are designed to store information for processing a reply and determining next steps.</p>
 <table class="docutils align-default">
 <colgroup>
@@ -356,28 +435,6 @@ a specific initial message</p></td>
 </tr>
 </tbody>
 </table>
-<div class="section" id="when-the-user-replies">
-<h3>When the user replies<a class="headerlink" href="#when-the-user-replies" title="Permalink to this headline">¶</a></h3>
-<p>This is a term reference to the SMS replies taxonomy. This taxonomy contains:</p>
-<ul class="simple">
-<li><p>Name</p></li>
-<li><p>Alternative names</p></li>
-</ul>
-<p>This allows us to check fro various ways a user might reply (for example, for Yes: Yes, Y, Yeah, Yep, etc).</p>
-<p>Two additional terms will be added:</p>
-<ul class="simple">
-<li><p>No match (the user replies but there is no match)</p></li>
-<li><p>No reply (for users who do not reply)</p></li>
-</ul>
-</div>
-<div class="section" id="send-message-options">
-<h3>Send message options<a class="headerlink" href="#send-message-options" title="Permalink to this headline">¶</a></h3>
-<p>Sending a reply to message sent can be scheduled:</p>
-<ul class="simple">
-<li><p>Immediately</p></li>
-<li><p>In a specified number of days</p></li>
-<li><p>No reply (for when no immediate follow up is required).</p></li>
-</ul>
 </div>
 </div>
 </div>
@@ -389,7 +446,7 @@ a specific initial message</p></td>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
         <a href="next_steps_entity_type.html" class="btn btn-neutral float-right" title="Next Steps User Entity" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="next_steps.html" class="btn btn-neutral float-left" title="Next Steps Follow-up" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="next_steps.html" class="btn btn-neutral float-left" title="Next Steps Flows" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

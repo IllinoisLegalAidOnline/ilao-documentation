@@ -96,6 +96,7 @@
 <li class="toctree-l1"><a class="reference internal" href="people_management.html">User Management</a></li>
 <li class="toctree-l1"><a class="reference internal" href="legal_information.html">Legal Information (Resources)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="legal_content_cms.html">Legal Content CMS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cms_structured_legal_content.html">Next generation content/COPE</a></li>
 <li class="toctree-l1"><a class="reference internal" href="basic_pages_cms.html">Basic pages</a></li>
 <li class="toctree-l1"><a class="reference internal" href="testimonials_cms.html">Testimonials Content Type</a></li>
 <li class="toctree-l1"><a class="reference internal" href="webforms_cms.html">Webforms</a></li>
@@ -110,7 +111,7 @@
 <li class="toctree-l1"><a class="reference internal" href="taxonomies.html">Taxonomies</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rss_feeds.html">RSS Feeds</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ilao_api.html">ILAO’s API</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="next_steps.html">Next Steps Follow-up</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="next_steps.html">Next Steps Flows</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="next_steps_content_type.html">Next Steps Flow Content Type</a></li>
 <li class="toctree-l2"><a class="reference internal" href="next_steps_entity_type.html">Next Steps User Entity</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Legal Server Signup</a><ul>
@@ -119,7 +120,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="next_steps_sms_delivery.html">Next Steps SMS Subscriptions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="next_steps_tracking.html">Next Steps Tracking &amp; Reporting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="next_steps_tracking.html">Next Steps Tracking</a></li>
 <li class="toctree-l2"><a class="reference internal" href="next_steps.html#how-this-differs-from-the-toolbox-ticker-system">How this differs from the Toolbox ticker system</a></li>
 </ul>
 </li>
@@ -177,7 +178,7 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-          <li><a href="next_steps.html">Next Steps Follow-up</a> &raquo;</li>
+          <li><a href="next_steps.html">Next Steps Flows</a> &raquo;</li>
         
       <li>Legal Server Signup</li>
     
@@ -207,22 +208,29 @@
 </ul>
 <div class="section" id="iframe-form">
 <h2>IFrame Form<a class="headerlink" href="#iframe-form" title="Permalink to this headline">¶</a></h2>
-<p>ILAO will provide an iFrame url to partners for inclusion in their instance of LegalServer. The form will include:</p>
+<img alt="_images/next_steps_signup.png" src="_images/next_steps_signup.png" />
+<p>ILAO will provide an iFrame url to partners for inclusion in their instance of LegalServer. The iframe code is listed on the edit organization form for the organizaiton in the website.</p>
+<p>The form includes:</p>
 <ul class="simple">
-<li><p>List of published Legal Flows</p></li>
-<li><p>List of steps for a selected How-to</p></li>
-<li><p>A field ot collect the client’s mobile-number</p></li>
+<li><p>List of LSC problem codes, to make it easier for caseworkers to filter</p></li>
+<li><p>List of published NextStep Flows</p></li>
+<li><p>List of available steps</p></li>
+<li><p>A field to collect the client’s mobile-number</p></li>
+<li><p>A field to collect tthe client’s zip code</p></li>
 <li><p>Language preference of the client</p></li>
-<li><p>Client’s zip code</p></li>
 <li><p>Opt in field</p></li>
 <li><p>Hidden organization ID as a query parameter</p></li>
 </ul>
-<p>When submitted this will create a nextStepsUserEntity with:</p>
+<p>When submitted this will create a nextStepsUserEntity within ILAO’s website and store:</p>
 <ul class="simple">
-<li><p>Automatically generated ID</p></li>
-<li><p>NID of the Selected flow</p></li>
-<li><p>NID of the Selected legal step</p></li>
+<li><p>The client’s mobile number</p></li>
+<li><p>The client’s zip code</p></li>
+<li><p>The client’s language preference</p></li>
+<li><p>The referring organization</p></li>
+<li><p>The node ID of the Next Step Flow the user is subscribed to</p></li>
+<li><p>The initial step the client was subscribed to.</p></li>
 </ul>
+<p>The website will then send the initial message on the next scheduled task run.</p>
 </div>
 <div class="section" id="api-post">
 <h2>API Post<a class="headerlink" href="#api-post" title="Permalink to this headline">¶</a></h2>
@@ -238,6 +246,7 @@
 <li><p>Update the NextStepsUser entity with the uuid based on the phone number where the uuid is empty</p></li>
 <li><p>Query the otis_triage_user table to check for the uuid; if found will add the triage user id to the NextStepsUser entity</p></li>
 </ul>
+<p>The purpose of this step is to track OTIS vs non-OTIS cases and make this information available in our OTIS dashboard.</p>
 </div>
 </div>
 
