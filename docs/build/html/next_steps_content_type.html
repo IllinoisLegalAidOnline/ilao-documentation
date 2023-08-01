@@ -283,17 +283,12 @@
 </div>
 <div class="section" id="example-flow">
 <h2>Example Flow<a class="headerlink" href="#example-flow" title="Permalink to this headline">¶</a></h2>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>The image below is a mockup; technical requirements may have changed.</p>
-</div>
-<img alt="_images/next-steps-mockup.png" src="_images/next-steps-mockup.png" />
-<p>For example, in the above example, the step “Submit your SNAP application” will be triggered:</p>
+<img alt="_images/next-step-flow-edit.png" src="_images/next-step-flow-edit.png" />
+<p>For example, in the above example, the step “Pre-appeal conference for TANF appeal” will be triggered:</p>
 <ul class="simple">
-<li><p>immediately, if a caseworker selects Sumbit your SNAP application in LegalServer</p></li>
-<li><p>6 days after the Submit your SNAP applciation is triggered and the user replies “No” to that initial trigger (so long as the maximum number of resends has not been reached)</p></li>
-<li><p>30 days after the Fill out a SNAP application is triggered and the user replies “Yes”</p></li>
-<li><p>2 days after the Submit your SNAP application is triggered and the user does not reply.</p></li>
+<li><p>immediately, if a caseworker selects Pre-appeal conference for TANF appeal in LegalServer</p></li>
+<li><p>7 days after an individual receives the File an appeal for TANF benefits and replies Yes</p></li>
+<li><p>7 days after an individual recieves the Pre-appeal conference for TANF appeal and replies No, up to two times</p></li>
 </ul>
 </div>
 <div class="section" id="maximum-retries">
@@ -301,8 +296,7 @@
 <p>Each step with a send with reply option must have a maximum number of times to retry so we are not continually leaving flows open and sending messages to individuals.</p>
 <p>In the Example case:</p>
 <ul class="simple">
-<li><p>If a user replies No to the submit their application question, the question will resend in 6 days. If the user replies No again, it will send one more time in 6 days. If the user still replies No, it will stop.</p></li>
-<li><p>If a user does not reply to the submit their application question, the question will resend up to 2 more times. If the user never replies, they are treated as discontinued. If they reply Yes or No, those replies will kick in.</p></li>
+<li><p>If a user replies No to Pre-appeal conference message, the question will resend in 7 days. If the user replies No again, it will send one more time in 7 days. If the user still replies No, it will stop sending further messages.</p></li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>

@@ -76,18 +76,16 @@ Repeat the "Create the first message" and "Add Replies" for each step in the flo
 
 Example Flow
 ===============
-.. warning:: The image below is a mockup; technical requirements may have changed.
 
-.. image:: ../assets/next-steps-mockup.png
-
+.. image:: ../assets/next-step-flow-edit.png
 
 
-For example, in the above example, the step "Submit your SNAP application" will be triggered:
 
-* immediately, if a caseworker selects Sumbit your SNAP application in LegalServer
-* 6 days after the Submit your SNAP applciation is triggered and the user replies "No" to that initial trigger (so long as the maximum number of resends has not been reached)
-* 30 days after the Fill out a SNAP application is triggered and the user replies "Yes"
-* 2 days after the Submit your SNAP application is triggered and the user does not reply.
+For example, in the above example, the step "Pre-appeal conference for TANF appeal" will be triggered:
+
+* immediately, if a caseworker selects Pre-appeal conference for TANF appeal in LegalServer
+* 7 days after an individual receives the File an appeal for TANF benefits and replies Yes
+* 7 days after an individual recieves the Pre-appeal conference for TANF appeal and replies No, up to two times
 
 Maximum retries
 =================
@@ -95,9 +93,7 @@ Each step with a send with reply option must have a maximum number of times to r
 
 In the Example case:
 
-* If a user replies No to the submit their application question, the question will resend in 6 days. If the user replies No again, it will send one more time in 6 days. If the user still replies No, it will stop.
-
-* If a user does not reply to the submit their application question, the question will resend up to 2 more times. If the user never replies, they are treated as discontinued. If they reply Yes or No, those replies will kick in.
+* If a user replies No to Pre-appeal conference message, the question will resend in 7 days. If the user replies No again, it will send one more time in 7 days. If the user still replies No, it will stop sending further messages.
 
 .. note:: If someone replies "Stop" to a text message, they will be unsubscribed and will not receive additional messagss.
 
