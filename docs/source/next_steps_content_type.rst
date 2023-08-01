@@ -51,7 +51,7 @@ If your message has a message type of "Send and wait for reply," you must add re
 For each reply:
 
 * Creata a follow-up message. For example, if a user replies No, you might want to reassure them, remind them of the next step, and schedule another reminder.
-* Attach the text of the step, if desired. For example, if the individual replies yes, you may want to let them know what they need to do next.
+* Attach the text of a legal step or legal question(s). For example, if someone has not yet appealed their TANF denial, you might want to remind them how to do so by including that step in the message. Or maybe you want to remind them of the TANF eligibility requirements by including that legal question
 * Schedule when to send the message; 99% of the time, this should be set to immediately.
 * Indicate if this is the last step in the flow.
 * Schedule a next step follow up:
@@ -61,6 +61,8 @@ For each reply:
   * Set a maximum number of times to resend the reply follow up.
 
 * Repeat for each type of reply the system needs to handle.
+
+.. note:: Because steps and questions can be included by reference, the Next Step Flow will automatically update to send the most current version.
 
 .. image:: ../assets/next-step-replies-add.png
 
