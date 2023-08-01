@@ -14,7 +14,7 @@ IFrame Form
 .. image:: ../assets/next_steps_signup.png
 
 
-ILAO will provide an iFrame url to partners for inclusion in their instance of LegalServer. The iframe code is listed on the edit organization form for the organizaiton in the website.
+ILAO will provide an iFrame url to partners for inclusion in their instance of LegalServer. The iframe code is listed on the edit organization form for the organization in the website.
 
 The form includes:
 
