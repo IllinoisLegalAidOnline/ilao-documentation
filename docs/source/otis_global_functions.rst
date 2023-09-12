@@ -7,7 +7,7 @@ These functions are used across applications.
 OTIS Validate Total Income
 ===============================
 
-**Function name:**  otis-get-callback-times
+**Function name:**  otis-get-callback-times **This appears to be the wrong function**
 
 **Parameters:**
 
