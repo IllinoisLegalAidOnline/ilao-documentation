@@ -7,10 +7,40 @@ Guided Navigation SMS functions
 These functions allow us to interact with LegalServer's Guided Navigation API over Twilio SMS.  They can be found in the Guided Nav service on Twilio
 
 
+Validate keyword
+=================
+
+**Function name:** 
+
+* mr-validate-legal-issue-gn
+
+**Parameters:** 
+
+* event.legal_issue; this is a text value from either the initial trigger message body or in response to start-otis. This allows users to enter a word like "evict" or "snap" to bypass the OTIS get legal issue subflow to identify the user's legal issue.
+* event.language_number; this is a numerical value that identifies the language of the user to match the legal issue provided in the correct language.
+
+**Returns:** An object containing:
+
+* code - corresponds to the list of legal issues within the function. If the legal_issue parameter does not match a value in the function, the code will return as -1.
+
+**Widget(s):** 
+
+* validate_keyword
+* validate-legal-issue
+
+**Flows:**
+
+* Superbot main flows: SuperbotV2 & SuperbotV3
+* OTIS get legal issue
+
+
 Get process list
 ==================
 
-**Function name:**  get-process-list
+**Function name:**  
+
+* mr-get-process-list (current); 
+* get-process-list (depricated)
 
 **Parameters:**  event.issue; this is the numeric value from whatever Twilio flow that is calling the process list. This will return the process id and metadata for the specific legal issue's Guided Navigation.
 
@@ -22,8 +52,14 @@ Get process list
 
 .. image:: ../assets/twilio_get_process_search_term.png
 
-.. note:: Processes are as follows so far 1 - unemployment benefits, 2 - TANF, 3 - Food stamps/SNAP, 4 - Eviction, 5 - Mobile Home, 6 - Landlord.
+.. note:: Processes are as follows so far 1 - unemployment benefits, 2 - Food stamps, 3 - TANF benefits, 4 - Renting or Renters, 5 - Expungement, 6 - DV, 7 - Bankruptcy (not live yet), 8 - Asylum/Immigration (not live yet).
 
+**Widget(s):**  get_gn_process
+
+**Flow(s):** Superbot main flows:
+
+* SuperbotV2_LIVE_9.11.23
+* SuperbotV3
 
 Start a new session for given process
 =========================================
