@@ -75,13 +75,13 @@ The results should explain to the person:
 * What completing the option will not get them. For example, someone "choosing not to participate in a divorce case" will not prevent the divorce from occurring but will instead give up any say in the terms of the divorce.
 * What risks completing the option might entail. For example, undocumented immigrants may face deportation risks if they try to clear a criminal record.
 * What real-life benefits that may flow from completing the option. For example, a tenant who participates in an eviction case, even if they lose, may still be able to ask the judge to seal the eviction from their record or get a few extra weeks to move out.
-* What real-life consequences may come from completing the option. For example, someone completing a chapter 7 bankruptcy will have that on their credit report for several years.
+* What real-life consequences may come from completing the option. For example, someone completing a Chapter 7 bankruptcy will have that on their credit report for several years.
 
 
 Supplementing with Legal Questions
 ======================================
 
-Both legal problems (DIY Legal Solutions) and legal options can have quesitons associated with them. Questions can also be accessed independently.
+Both legal problems (DIY Legal Solutions) and legal options can have questions associated with them. Questions can also be accessed independently.
 
 Include a Legal Question within a DIY Legal Solution when it:
 
@@ -92,7 +92,7 @@ Include a Legal Question within a DIY Legal Solution when it:
 
 Include a Legal Question within a legal option when it:
 
-* applies more specifically to the option rather than to a problem. For example most of our Chapter 7 or 13 legal questions should attach to the legal option rather than any single problem that bankruptcy can solve
+* applies more specifically to the option rather than to a problem. For example, most of our Chapter 7 or 13 legal questions should attach to the legal option rather than any single problem that bankruptcy can solve
 * is more process-focused rather than substantive in nature. For example, "What evidence do I need to show that proves I paid my rent" would be better on the Legal option "Participate in the case" in eviction DIY Legal solutions than on the
 * is directly relevant to the Legal option's steps, eligibility, or results.
 

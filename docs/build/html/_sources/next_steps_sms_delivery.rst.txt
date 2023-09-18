@@ -2,6 +2,9 @@
 Next Steps SMS Subscriptions
 =================================
 
+Overview
+==============
+
 When a user is subscribed to a NextStepFlow:
 
 * A next step message entity is created with the minimum initial data
@@ -29,3 +32,7 @@ When a user is subscribed to a NextStepFlow:
    * Sends the "Send this message" component if send message = immediately.
 
 
+Twilio integration
+======================
+
+The website should send the initial message to

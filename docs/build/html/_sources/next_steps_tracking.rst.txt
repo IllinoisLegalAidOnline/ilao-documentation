@@ -26,3 +26,4 @@ Next Steps Tracking
 +------------------------------+----------------------------------+--------------------+
 
 This table is used to store a history of messages sent.
+

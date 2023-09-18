@@ -7,3 +7,4 @@ Data and Analytics
    :caption: Contents:
 
    google_analytics_integration
+   tableau

@@ -113,7 +113,10 @@ OTIS Get Callback Type
 OTIS Zipcode Validate
 =======================
 
-**Function name:**  otis-zipcode-validate
+**Function name:**  
+
+* pilot-validate-zipcode (current)
+* otis-zipcode-validate (deprecated)
 
 **Purpose**: Determines whether a provided zip code is in Illinois or not based on the Illinois regions asset, which is a JSON file from ILAO's region taxonomy and includes the zipcode, city, county, state, fips ID, and county UUID.
 
@@ -128,10 +131,11 @@ OTIS Zipcode Validate
 * state
 * fips id for the county (required by Legal Server)
 
-
 **Status:** Relies on a JSON object in our static assets (/illinois-regions) that contains the IL regional taxonomy data.
 
+**Widget:** validate-zipcode
 
+**Flow:** OTIS get location
 
 
 

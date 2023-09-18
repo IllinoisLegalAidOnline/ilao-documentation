@@ -35,6 +35,13 @@ These are hard-coded within the function:
 * id, which is the uuid associated with the newly created user.
 * triage_id, which is the internal Drupal ID associated with the entity.
 
+**Widget:** create_triage_user
+
+**Flow:** Superbot main flows
+
+* SuperbotV2
+* SuperbotV3
+
 OTIS Update Triage User
 ==========================
 **Function name:**  otis-update-triage-user

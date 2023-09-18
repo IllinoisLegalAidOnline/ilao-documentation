@@ -6,7 +6,7 @@ The next steps user entity is used to track users subscribed to next steps.
 
 
 +------------------------------+----------------------------------+--------------------+
-| Proeprty                     | Description                      |  Type              |
+| Property                     | Description                      |  Type              |
 +==============================+==================================+====================+
 | ID                           | Unique ID for the subscription   | Auto number        |
 +------------------------------+----------------------------------+--------------------+

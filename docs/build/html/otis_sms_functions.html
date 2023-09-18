@@ -96,6 +96,7 @@
 <li class="toctree-l1"><a class="reference internal" href="people_management.html">User Management</a></li>
 <li class="toctree-l1"><a class="reference internal" href="legal_information.html">Legal Information (Resources)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="legal_content_cms.html">Legal Content CMS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cms_structured_legal_content.html">Next generation content/COPE</a></li>
 <li class="toctree-l1"><a class="reference internal" href="basic_pages_cms.html">Basic pages</a></li>
 <li class="toctree-l1"><a class="reference internal" href="testimonials_cms.html">Testimonials Content Type</a></li>
 <li class="toctree-l1"><a class="reference internal" href="webforms_cms.html">Webforms</a></li>
@@ -142,7 +143,7 @@
 <li class="toctree-l1"><a class="reference internal" href="taxonomies.html">Taxonomies</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rss_feeds.html">RSS Feeds</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ilao_api.html">ILAO’s API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="next_steps.html">Next Steps Follow-up</a></li>
+<li class="toctree-l1"><a class="reference internal" href="next_steps.html">Next Steps Flows</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sms_overview.html">SMS Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="data_analytics.html">Data and Analytics</a></li>
 </ul>
@@ -283,6 +284,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="otis_triage_intake_functions.html">OTIS SMS intake/triage functions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="otis_guided_nav_functions.html">Guided Navigation SMS functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="otis_guided_nav_functions.html#validate-keyword">Validate keyword</a></li>
 <li class="toctree-l2"><a class="reference internal" href="otis_guided_nav_functions.html#get-process-list">Get process list</a></li>
 <li class="toctree-l2"><a class="reference internal" href="otis_guided_nav_functions.html#start-a-new-session-for-given-process">Start a new session for given process</a></li>
 <li class="toctree-l2"><a class="reference internal" href="otis_guided_nav_functions.html#save-form-data-submitted-for-a-session">Save form data submitted for a session</a></li>
@@ -344,7 +346,11 @@
 </div>
 <div class="section" id="otis-zipcode-validate">
 <h2>OTIS Zipcode Validate<a class="headerlink" href="#otis-zipcode-validate" title="Permalink to this headline">¶</a></h2>
-<p><strong>Function name:</strong>  otis-zipcode-validate</p>
+<p><strong>Function name:</strong></p>
+<ul class="simple">
+<li><p>pilot-validate-zipcode (current)</p></li>
+<li><p>otis-zipcode-validate (deprecated)</p></li>
+</ul>
 <p><strong>Purpose</strong>: Determines whether a provided zip code is in Illinois or not based on the Illinois regions asset, which is a JSON file from ILAO’s region taxonomy and includes the zipcode, city, county, state, fips ID, and county UUID.</p>
 <p><strong>Parameters:</strong>  event.zip</p>
 <p><strong>Requires:</strong>  API call to get region information based on zip code.</p>
@@ -356,6 +362,8 @@
 <li><p>fips id for the county (required by Legal Server)</p></li>
 </ul>
 <p><strong>Status:</strong> Relies on a JSON object in our static assets (/illinois-regions) that contains the IL regional taxonomy data.</p>
+<p><strong>Widget:</strong> validate-zipcode</p>
+<p><strong>Flow:</strong> OTIS get location</p>
 </div>
 <div class="section" id="increase-intake-counter">
 <h2>Increase intake counter<a class="headerlink" href="#increase-intake-counter" title="Permalink to this headline">¶</a></h2>
