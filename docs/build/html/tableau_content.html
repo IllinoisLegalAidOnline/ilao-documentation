@@ -298,6 +298,137 @@ reviewed by a SME</p></td>
 </tbody>
 </table>
 </div>
+<div class="section" id="google-analytics-page-views-flow">
+<h3>Google Analytics Page Views Flow<a class="headerlink" href="#google-analytics-page-views-flow" title="Permalink to this headline">¶</a></h3>
+<p>The Google Analytics flow merges a subset of Google Analytics data to be able to create reports that use page view data. This flow relies on:</p>
+<ul class="simple">
+<li><p>CSV files exported from universal analytics from January 1, 2017 - June 30, 2023</p></li>
+<li><p>An API call to Google Analytics 4 with data from July 1, 2023 - forward</p></li>
+</ul>
+<p>It produces a Tableau file that merges and cleans up the data into a single set of metrics that are available in both Universal Analytics and GA4.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 36%" />
+<col style="width: 40%" />
+<col style="width: 24%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Column</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>eventDate</p></td>
+<td><p>Date page was viewed</p></td>
+<td><p>Date</p></td>
+</tr>
+<tr class="row-odd"><td><p>engagementRate</p></td>
+<td><p>GA4 only</p></td>
+<td><p>Number</p></td>
+</tr>
+<tr class="row-even"><td><p>bounceRate</p></td>
+<td><p>GA4 only</p></td>
+<td><p>Number</p></td>
+</tr>
+<tr class="row-odd"><td><p>deviceCategory</p></td>
+<td><p>desktop, mobile, or tablet</p></td>
+<td><p>String</p></td>
+</tr>
+<tr class="row-even"><td><p>sessionMedium</p></td>
+<td><p>medium used (display, email, cpc
+organic)</p></td>
+<td><p>String</p></td>
+</tr>
+<tr class="row-odd"><td><p>sessionSource</p></td>
+<td><p>Direct, referral domain, etc</p></td>
+<td><p>String</p></td>
+</tr>
+<tr class="row-even"><td><p>pagePath</p></td>
+<td><p>Path of the page accessed,
+without hostname</p></td>
+<td><p>String</p></td>
+</tr>
+<tr class="row-odd"><td><p>pageReferrer</p></td>
+<td><p>URL of the previous page</p></td>
+<td><p>String</p></td>
+</tr>
+<tr class="row-even"><td><p>screenPageViews</p></td>
+<td><p>Number of page views</p></td>
+<td><p>Number</p></td>
+</tr>
+<tr class="row-odd"><td><p>sessions</p></td>
+<td><p>Number of sessions</p></td>
+<td><p>Number</p></td>
+</tr>
+<tr class="row-even"><td><p>Unique pageviews</p></td>
+<td><p>Number of unique pageviews</p></td>
+<td><p>Number</p></td>
+</tr>
+<tr class="row-odd"><td><p>Bounces</p></td>
+<td><p>Universal analytics only</p></td>
+<td><p>Number</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="content-revisions-flow">
+<h3>Content Revisions Flow<a class="headerlink" href="#content-revisions-flow" title="Permalink to this headline">¶</a></h3>
+<p>This flow takes data from our <a class="reference external" href="https://www.illinoislegalaid.org/admin/reporting/content/legal-revisions">Content Revisions</a> report exported to CSV.</p>
+<p>It produced a cleaned up data file that can be used to track revision activity, including number of SME reviews, substantive updates, and can be tied back to data in the legal content flow on tne node ID.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 36%" />
+<col style="width: 40%" />
+<col style="width: 24%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Column</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Node ID</p></td>
+<td><p>Node of the content revised</p></td>
+<td><p>Number</p></td>
+</tr>
+<tr class="row-odd"><td><p>Revision ID</p></td>
+<td><p>Unique identifier of the revision</p></td>
+<td><p>Number</p></td>
+</tr>
+<tr class="row-even"><td><p>SME date</p></td>
+<td><p>Date of the last SME review, at
+the time of the revision</p></td>
+<td><p>Date</p></td>
+</tr>
+<tr class="row-odd"><td><p>Staff revised date</p></td>
+<td><p>Date of the last staff revision,
+at the time of the revision</p></td>
+<td><p>Date</p></td>
+</tr>
+<tr class="row-even"><td><p>Revision saved</p></td>
+<td><p>Date the revision was created</p></td>
+<td><p>Date</p></td>
+</tr>
+<tr class="row-odd"><td><p>Revision log message</p></td>
+<td><p>Message entered when revision
+was created</p></td>
+<td><p>String</p></td>
+</tr>
+<tr class="row-even"><td><p>Language</p></td>
+<td><p>Language associated with the
+revision</p></td>
+<td><p>String</p></td>
+</tr>
+<tr class="row-odd"><td><p>Revision author</p></td>
+<td><p>Name of the person who created
+the revision</p></td>
+<td><p>String</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 </div>
 
