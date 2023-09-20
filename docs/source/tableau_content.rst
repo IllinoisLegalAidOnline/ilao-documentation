@@ -45,7 +45,7 @@ When processed through the Prep Builder, the resulting file is a data structure 
 |                              | a substantive way, as determined |                    |
 |                              | by the content team              |                    |
 +------------------------------+----------------------------------+--------------------+
-| Last expert view             | Date the content was last        | Date               |
+| Last expert review           | Date the content was last        | Date               |
 |                              | reviewed by a SME                |                    |
 +------------------------------+----------------------------------+--------------------+
 | Language                     | The language of the content      | String             |
@@ -134,6 +134,112 @@ It produced a cleaned up data file that can be used to track revision activity, 
 |                              | the revision                     |                    |
 +------------------------------+----------------------------------+--------------------+
 
+Legal Content Volunteer Flow
+-------------------------------
+This flow takes data from the ILAO LCV Event and Engagement report pulled from Salesforce. It produces two output files:
+
+* A file that lists each node reviewed with the LCV information
+* The LCV engagement information
+
+Nodes Reviewed
+^^^^^^^^^^^^^^^^^
+
++------------------------------+----------------------------------+--------------------+
+| Column                       | Description                      | Type               |
++==============================+==================================+====================+
+| NodeID                       | Node of the content reviewed     | Number             |
++------------------------------+----------------------------------+--------------------+
+| EngagementID                 | SF Engagement ID                 | String             |
++------------------------------+----------------------------------+--------------------+
+| Contact                      | Name of the LCV                  | String             |
++------------------------------+----------------------------------+--------------------+
+| Organization                 | Primary affiliation of the LCV   | String             |
++------------------------------+----------------------------------+--------------------+
+| Date completed               | Date assignment was completed    | Date               |
++------------------------------+----------------------------------+--------------------+
+
+LCV Assignments
+^^^^^^^^^^^^^^^^^
+
++------------------------------+----------------------------------+--------------------+
+| Column                       | Description                      | Type               |
++==============================+==================================+====================+
+| NodeID                       | Node of the content reviewed     | Number             |
++------------------------------+----------------------------------+--------------------+
+| Event                        | ILAO event name from SF          | String             |
++------------------------------+----------------------------------+--------------------+
+| EngagementID                 | SF Engagement ID                 | String             |
++------------------------------+----------------------------------+--------------------+
+| Contact                      | Name of the LCV                  | String             |
++------------------------------+----------------------------------+--------------------+
+| Organization                 | Primary affiliation of the LCV   | String             |
++------------------------------+----------------------------------+--------------------+
+| Date completed               | Date assignment was completed    | Date               |
++------------------------------+----------------------------------+--------------------+
+| Total Pieces of Content      | Number of pieces, as entered in  | Number             |
+|                              | Salesforce                       |                    |
++------------------------------+----------------------------------+--------------------+
+| Hours worked                 | Number of Hours, as entered in   | Number             |
+|                              | Salesforce                       |                    |
++------------------------------+----------------------------------+--------------------+
+| Volunteer assignment         | Assignment subject as entered in | String             |
+| subject                      | Salesforce                       |                    |
++------------------------------+----------------------------------+--------------------+
+
+Connecting Datasources
+=========================
+
+Each data source can be connected to other data sources to get specific metrics.
+
+Legal content flow can be connected to Google Analytics flow on the page path.
+Legal content flow can be connected to Content Revisions on the Node ID
+Legal content flow can be connected to Nodes Reviewed on the Node ID
+Nodes Reviewed can be connected to LCV Assignments on the Engagement ID
+
+Dashboard Metrics
+====================
+
+Key content metrics
+---------------------
+
+The key content metrics dashboard include:
+
+* Total number of pieces of content
+* Total page views
+* Total sessions
+* Average days since last SME review
+* Average days since last staff revision
+* Content trends (top 25 pieces of legal content each month, last 12 months)
+* Total number of SME reviews
+* Total number of staff revisions
+
+
+The above can be filtered by:
+
+* Language
+* Primary legal category (Family & Safety, House & Apartment)
+* Primary secondary legal category (Divoce, Being Evicted)
+* Date range, unless otherwise indicated above
+
+.. note:: Law changes should be tracked as a metric but need to confirm how we are doing this.
+
+Legal content volunteer metrics
+--------------------------------
+
+The key legal content volunteer (LCV) metrics include:
+
+* Total number of LCVs who have a completed assignment during a specified time period
+* Total number of pieces reviewed
+* Total hours worked
+* Total page views associated with pieces reviewed
+
+These metrics can be filtered by:
+
+* Primary legal category
+* Primary secondary legal category
+* Organization
+* Legal content volunteer
+* Date range
 
 
 
