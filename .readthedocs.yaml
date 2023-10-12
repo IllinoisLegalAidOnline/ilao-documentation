@@ -1,3 +1,6 @@
+version: 2
+
+# Set the OS, Python version and other tools you might need
 build:
   os: ubuntu-22.04
   tools:
@@ -6,3 +9,4 @@ build:
  python:
    install:
      - requirements: docs/requirements.txt
+     
