@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Legal Information (Resources) &mdash; ILAO 2.22 documentation</title>
+  <title>Controlling how content shows up &mdash; ILAO 2.22 documentation</title>
   
 
   
@@ -43,8 +43,8 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Legal information by topic" href="legal_info_by_topic.html" />
-    <link rel="prev" title="Staff, Board &amp; YPB pages" href="user_staff_board.html" /> 
+    <link rel="next" title="Legal Content CMS" href="legal_content_cms.html" />
+    <link rel="prev" title="Legal info by population" href="legal_info_by_role.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -94,10 +94,15 @@
 <li class="toctree-l1"><a class="reference internal" href="design_guide.html">Design &amp; Style Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="block_management.html">Custom blocks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="people_management.html">User Management</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Legal Information (Resources)</a><ul>
+<li class="toctree-l1 current"><a class="reference internal" href="legal_information.html">Legal Information (Resources)</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="legal_info_by_topic.html">Legal information by topic</a></li>
 <li class="toctree-l2"><a class="reference internal" href="legal_info_by_role.html">Legal info by population</a></li>
-<li class="toctree-l2"><a class="reference internal" href="legal_info_ordering.html">Controlling how content shows up</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Controlling how content shows up</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#tagging-content-to-navigation-terms">Tagging Content to Navigation Terms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pageviews">Pageviews</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#default-ordering">Default Ordering</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="legal_content_cms.html">Legal Content CMS</a></li>
@@ -171,13 +176,15 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Legal Information (Resources)</li>
+          <li><a href="legal_information.html">Legal Information (Resources)</a> &raquo;</li>
+        
+      <li>Controlling how content shows up</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="_sources/legal_information.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/legal_info_ordering.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -190,15 +197,46 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="legal-information-resources">
-<h1>Legal Information (Resources)<a class="headerlink" href="#legal-information-resources" title="Permalink to this headline">¶</a></h1>
-<p>Our legal information is organized in multiple ways. This includes by topic (accessible from the home page and under the resources menu), by role (available under the resources menu), and soon, by probem, as we roll out our structured content.</p>
-<div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">Contents:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="legal_info_by_topic.html">Legal information by topic</a></li>
-<li class="toctree-l1"><a class="reference internal" href="legal_info_by_role.html">Legal info by population</a></li>
-<li class="toctree-l1"><a class="reference internal" href="legal_info_ordering.html">Controlling how content shows up</a></li>
+  <div class="section" id="controlling-how-content-shows-up">
+<h1>Controlling how content shows up<a class="headerlink" href="#controlling-how-content-shows-up" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Updating the display for website browsers is in-progress as of October 12, 2023. The ability to tag top content went live on Oct 10, 2023.</p>
+</div>
+<div class="section" id="tagging-content-to-navigation-terms">
+<h2>Tagging Content to Navigation Terms<a class="headerlink" href="#tagging-content-to-navigation-terms" title="Permalink to this headline">¶</a></h2>
+<p>Content team members may prioritize certain content to show up higher than other content.
+This is done by editing the taxonomy term(s) and adding content to the Top Content field.</p>
+<img alt="_images/top_content_edit.png" src="_images/top_content_edit.png" />
+<p>Each language can have it’s own top content, reflective of different priorities for different audiences. The easiest way to edit a taxonomy term is to browse to the page on the site and click “Edit”.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Please work with the Legal Content Director on how to prioritize what content to show first. We do not yet have standards developed.</p>
+</div>
+</div>
+<div class="section" id="pageviews">
+<h2>Pageviews<a class="headerlink" href="#pageviews" title="Permalink to this headline">¶</a></h2>
+<p>As of Oct 12, 2023, the website is using existing page view data that existed at the time Universal Analytics stopped working. We are working on a tool to import those values from Google Analytics 4.</p>
+</div>
+<div class="section" id="default-ordering">
+<h2>Default Ordering<a class="headerlink" href="#default-ordering" title="Permalink to this headline">¶</a></h2>
+<p>On top-level category pages like “Family &amp; Safety”, the results are ordered by:</p>
+<ul class="simple">
+<li><p>Top content within each subcategory</p></li>
+<li><p>Page views descending</p></li>
+<li><p>Last substantive revision descending</p></li>
+</ul>
+<p>As an example, on Family &amp; Safety, if we we tagged “Random article” and “Random article 2” as the top two articles and the top 4 articles in terms of page views were Getting a divorce, Divorce, Responding to a divorce, and What if I can’t find my spouse, viewers would see:</p>
+<ul class="simple">
+<li><p>Random article</p></li>
+<li><p>Random article 2</p></li>
+<li><p>Getting a divorce</p></li>
+<li><p>Divorce</p></li>
+</ul>
+<p>On subcategory pages, it follows the same approach, except each section is broken out. For example, on the Divorce subcategory page, in the Forms section, it would show:</p>
+<ul class="simple">
+<li><p>Divorce (because it was market as top content and is a form)</p></li>
+<li><p>any other divorce forms ordered by page views</p></li>
 </ul>
 </div>
 </div>
@@ -209,8 +247,8 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="legal_info_by_topic.html" class="btn btn-neutral float-right" title="Legal information by topic" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="user_staff_board.html" class="btn btn-neutral float-left" title="Staff, Board &amp; YPB pages" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="legal_content_cms.html" class="btn btn-neutral float-right" title="Legal Content CMS" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="legal_info_by_role.html" class="btn btn-neutral float-left" title="Legal info by population" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

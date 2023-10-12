@@ -2,8 +2,65 @@
 Content metrics in Tableau
 ===============================
 
+
 Data Sources
 ================
+
+Google Analytics 4 Data
+-----------------------------
+Data has to be pulled using Query Explorer and combined into CSV files for use in Tableau
+
+.. note:: We are hoping this will change as GA4 grows or that we can find a better way to automated.
+
+
+Page View data
+^^^^^^^^^^^^^^^^^
+Page view data contains the following dimensions:
+* Date (formatted as mm/dd/yyyy)
+* deviceCategory (mobile, tablet, desktop)
+* pagePath
+* pageReferrer
+* region
+* sessionMedium
+* sessionSource
+
+And the following metrics:
+
+* Bounce rate
+* Engagement rate
+* Page views
+* Sessions
+
+
+Outgoing Link Events
+^^^^^^^^^^^^^^^^^^^^^^^
+Outgoing link data contains these dimensions:
+
+* Date
+* deviceCategory
+* linkDomain
+* linkUrl
+* pagePath
+* pageReferrer
+* region
+* sessionMedium
+* sessionSource
+
+And these metrics:
+
+* Engagement rate
+* Event count
+* Sessions
+
+When cleaned up in Tableau
+
+* Data is filtered on host name contains www.illinoislegal; this filters out dev and staging data.
+* Region is cleaned up to Illinois, US (Not Illinois), International
+
+
+
+CMS Files
+-------------
 
 Static sources
 -----------------
@@ -23,7 +80,6 @@ The Legal content flow relies on:
 * the categories export
 * the content_format export to replace the content type in Legal Content with the name of the format, in English, instead of the term ID
 
-.. note:: Should edit find legal content report to display publish status and support Any as a filter option
 
 When processed through the Prep Builder, the resulting file is a data structure as follows:
 
@@ -60,6 +116,10 @@ When processed through the Prep Builder, the resulting file is a data structure 
 +------------------------------+----------------------------------+--------------------+
 | Content format               | Name of content format           | String             |
 +------------------------------+----------------------------------+--------------------+
+
+To pull data into Tableau cloud:
+
+* Run the Find Legal Content report, unfiltered and export to CSV.
 
 Google Analytics Page Views Flow
 -----------------------------------

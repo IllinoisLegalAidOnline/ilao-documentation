@@ -6,11 +6,12 @@ Our legal information is organized in multiple ways. This includes by topic (acc
 
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Contents:
 
    legal_info_by_topic
    legal_info_by_role
    legal_info_by_problem
+   legal_info_ordering
 
 

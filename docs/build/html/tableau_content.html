@@ -205,6 +205,61 @@
 <h1>Content metrics in Tableau<a class="headerlink" href="#content-metrics-in-tableau" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="data-sources">
 <h2>Data Sources<a class="headerlink" href="#data-sources" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="google-analytics-4-data">
+<h3>Google Analytics 4 Data<a class="headerlink" href="#google-analytics-4-data" title="Permalink to this headline">¶</a></h3>
+<p>Data has to be pulled using Query Explorer and combined into CSV files for use in Tableau</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We are hoping this will change as GA4 grows or that we can find a better way to automated.</p>
+</div>
+<div class="section" id="page-view-data">
+<h4>Page View data<a class="headerlink" href="#page-view-data" title="Permalink to this headline">¶</a></h4>
+<p>Page view data contains the following dimensions:
+* Date (formatted as mm/dd/yyyy)
+* deviceCategory (mobile, tablet, desktop)
+* pagePath
+* pageReferrer
+* region
+* sessionMedium
+* sessionSource</p>
+<p>And the following metrics:</p>
+<ul class="simple">
+<li><p>Bounce rate</p></li>
+<li><p>Engagement rate</p></li>
+<li><p>Page views</p></li>
+<li><p>Sessions</p></li>
+</ul>
+</div>
+<div class="section" id="outgoing-link-events">
+<h4>Outgoing Link Events<a class="headerlink" href="#outgoing-link-events" title="Permalink to this headline">¶</a></h4>
+<p>Outgoing link data contains these dimensions:</p>
+<ul class="simple">
+<li><p>Date</p></li>
+<li><p>deviceCategory</p></li>
+<li><p>linkDomain</p></li>
+<li><p>linkUrl</p></li>
+<li><p>pagePath</p></li>
+<li><p>pageReferrer</p></li>
+<li><p>region</p></li>
+<li><p>sessionMedium</p></li>
+<li><p>sessionSource</p></li>
+</ul>
+<p>And these metrics:</p>
+<ul class="simple">
+<li><p>Engagement rate</p></li>
+<li><p>Event count</p></li>
+<li><p>Sessions</p></li>
+</ul>
+<p>When cleaned up in Tableau</p>
+<ul class="simple">
+<li><p>Data is filtered on host name contains www.illinoislegal; this filters out dev and staging data.</p></li>
+<li><p>Region is cleaned up to Illinois, US (Not Illinois), International</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="cms-files">
+<h3>CMS Files<a class="headerlink" href="#cms-files" title="Permalink to this headline">¶</a></h3>
+</div>
 <div class="section" id="static-sources">
 <h3>Static sources<a class="headerlink" href="#static-sources" title="Permalink to this headline">¶</a></h3>
 <p>These sources rarely change but are used in data cleanup:</p>
@@ -223,10 +278,6 @@
 <li><p>the categories export</p></li>
 <li><p>the content_format export to replace the content type in Legal Content with the name of the format, in English, instead of the term ID</p></li>
 </ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Should edit find legal content report to display publish status and support Any as a filter option</p>
-</div>
 <p>When processed through the Prep Builder, the resulting file is a data structure as follows:</p>
 <table class="docutils align-default">
 <colgroup>
@@ -299,6 +350,10 @@ reviewed by a SME</p></td>
 </tr>
 </tbody>
 </table>
+<p>To pull data into Tableau cloud:</p>
+<ul class="simple">
+<li><p>Run the Find Legal Content report, unfiltered and export to CSV.</p></li>
+</ul>
 </div>
 <div class="section" id="google-analytics-page-views-flow">
 <h3>Google Analytics Page Views Flow<a class="headerlink" href="#google-analytics-page-views-flow" title="Permalink to this headline">¶</a></h3>
