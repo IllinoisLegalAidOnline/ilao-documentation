@@ -3,7 +3,7 @@ Structured content technical documentation
 ===========================================
 
 .. toctree::
-   :maxdeth: 1
+   :maxdepth: 1
    :caption: Contents
 
    cms_structured_content

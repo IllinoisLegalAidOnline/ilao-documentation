@@ -96,8 +96,8 @@ Some examples:
 * Using the Chapter 7 bankruptcy option successfully will result in credit card and medical debts being discharged; it will not usually discharge student loans.
 * Using the "Clear a cannabis conviction of over 35 grams" may make it easier to get a job or secure housing.
 
-Mocked up example
---------------------
+Mocked up example:
+
 
 .. code-block:: html
 
