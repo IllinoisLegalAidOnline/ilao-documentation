@@ -18,11 +18,11 @@
 # -- Project information -----------------------------------------------------
 
 project = 'ILAO'
-copyright = '2023, Gwen Daniels'
+copyright = '2023, Illinois Legal Aid Online'
 author = 'Gwen Daniels'
 
 # The full version, including alpha/beta/rc tags
-release = 'Sprint 124'
+release = 'Sprint 124a'
 
 
 # -- General configuration ---------------------------------------------------
