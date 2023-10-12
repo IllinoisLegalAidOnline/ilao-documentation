@@ -18,11 +18,11 @@
 # -- Project information -----------------------------------------------------
 
 project = 'ILAO'
-copyright = '2021, Gwen Daniels'
+copyright = '2023, Gwen Daniels'
 author = 'Gwen Daniels'
 
 # The full version, including alpha/beta/rc tags
-release = '2.22'
+release = 'Sprint 124'
 
 
 # -- General configuration ---------------------------------------------------
@@ -57,6 +57,7 @@ todo_include_todos = True
 # a list of builtin themes.
 #
 html_theme = 'sphinx_rtd_theme'
+html_theme_path = ["_themes", ]
 #html_theme = 'classic'
 
 # Theme options are theme-specific and customize the look and feel of a theme
