@@ -16,10 +16,9 @@ Legal content formats
    cms_legal_content_download
    cms_legal_content_teach_me
    cms_legal_content_decision_tree
-   cms_flowcharts
    cms_legal_content_docassemble
-
-.. note::  Content formats above is a work in progress.
+   cms_media_text
+   cms_grid
 
 Common Elements
 =================
