@@ -5,8 +5,7 @@ Legal Content CMS
 Content types for legal content:
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Content types for legal content:
+   :maxdepth: 1
 
    cms_law_tracker
    cms_wysiwyg

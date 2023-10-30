@@ -1,8 +1,6 @@
-==================================
-Controlling how content shows up
-==================================
-
-.. note:: Updating the display for website browsers is in-progress as of October 12, 2023. The ability to tag top content went live on Oct 10, 2023.
+======================================
+Legal information navigation ordering
+======================================
 
 Tagging Content to Navigation Terms
 =======================================
@@ -18,7 +16,7 @@ Each language can have it's own top content, reflective of different priorities 
 Pageviews
 ===========
 
-As of Oct 12, 2023, the website is using existing page view data that existed at the time Universal Analytics stopped working. We are working on a tool to import those values from Google Analytics 4.
+As of Oct 12, 2023, the website is using existing page view data that existed at the time Universal Analytics stopped working (August 2023). We are working on a tool to import those values from Google Analytics 4.
 
 
 Default Ordering
