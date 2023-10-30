@@ -2,6 +2,9 @@
 Local content tool
 ========================
 
+.. warning:: The Local content tool will be deprecated in a future release. It should not be used in creating new content or added into existing content.
+
+
 The local content tool appears as a wand on the WYSIWYG tool next to the spell check button. The tool is used to insert region specific content and supports limiting the markup to the county, city, or zip code level. Front-end code then causes the text to display only to users whose location matches the inserted code; it is hidden for all other users.
 
 .. image:: ../assets/cms-local-content-button.png

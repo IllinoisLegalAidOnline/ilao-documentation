@@ -2,6 +2,9 @@
 Custom Tokens
 =========================
 
+.. warning:: Custom tokens are being deprecated. Do not insert into new content; existing custom tokens should be removed and replaced when editing existing content.
+
+
 Custom tokens may be used in legal content when inserted manually in the format of [type:machine-name].
 
 Custom tokens are managed under the `Structure <https://www.illinoislegalaid.org/admin/structure/token-custom>`_ section of the website.
