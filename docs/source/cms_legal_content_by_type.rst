@@ -14,7 +14,6 @@ Legal content formats
    cms_legal_content_static_forms
    cms_legal_content_link
    cms_legal_content_download
-   cms_legal_content_teach_me
    cms_legal_content_decision_tree
    cms_legal_content_docassemble
    cms_media_text
