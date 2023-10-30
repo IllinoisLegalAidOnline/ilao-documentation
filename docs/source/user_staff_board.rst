@@ -2,8 +2,6 @@
 Staff, Board & YPB pages
 =========================
 
-.. note:: In October 2022, these pages were rewritten to operate as standard basic pages.
-
 Staff
 ========
 The Staff page lists each staff member. Each staff member is added using a separate portal layout side-by-side component.

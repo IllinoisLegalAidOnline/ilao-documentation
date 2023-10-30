@@ -2,7 +2,7 @@
 Discussion groups
 =====================
 
-Discussion groups are managed through our Google Groups account. Our Operations Manager can provide administrative support.
+Discussion groups are managed through Groups in Google. Substantive groups are managed by the respective content manager.
 
 .. note:: Group urls are formatted as https://groups.google.com/a/illinoislegalaid.org/g/[group name]
 

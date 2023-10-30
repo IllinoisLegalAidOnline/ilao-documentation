@@ -9,7 +9,6 @@ Custom blocks
 
    blocks_current
    blocks_sectional
-   blocks_smart
    blocks_configuration
    blocks_translation
    blocks_user_profiles
