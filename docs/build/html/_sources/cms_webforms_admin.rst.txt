@@ -1,5 +1,0 @@
-=========================
-Webforms administration
-=========================
-
-coming soon
