@@ -8,7 +8,24 @@ Data Sources
 
 Google Analytics 4 Data
 -----------------------------
-Data has to be pulled using Query Explorer and combined into CSV files for use in Tableau
+Data has to be pulled using Query Explorer and combined into CSV files for use in Tableau.
+
+Specifically, the Query Explorer should look like the image below:
+
+.. image:: ../assets/ga4-extract.png
+
+The explorer exports data in increments of 10,000 records. This query results in nearly 400,000 records so the process must be repeated for every 10K records.
+
+* Make the request
+* Copy the JSON to clipboard
+* Open in the text editor and strip everything before rows and the totals segment at the bottom
+* Copy the cleaned text into a JSON to CSV converter and export
+
+Once all of these are complete, combine the individual CSVs into one file. On a Mac, the easiest way to combine is to put all the CSV files into a single directory. Then, in Terminal, navigate to the directory and enter the command below which will result in a combined CSV named combined.csv:
+
+.. code-block::
+
+  cat *.csv > combined.csv
 
 .. note:: We are hoping this will change as GA4 grows or that we can find a better way to automated.
 
