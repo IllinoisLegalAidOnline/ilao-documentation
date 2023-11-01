@@ -1,0 +1,418 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Tool step content type &mdash; ILAO Sprint 124a documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/themeoverrides.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Tool Tickler System" href="cms_tools_offline_communications.html" />
+    <link rel="prev" title="Toolbox tool content type" href="cms_tools_admin.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> ILAO
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="design_guide.html">Design &amp; Style Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="block_management.html">Custom blocks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="people_management.html">User Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="legal_information.html">Browsing to legal information</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="legal_content_cms.html">Legal Content CMS</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="cms_law_tracker.html">Law tracker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_wysiwyg.html">WYSIWYG Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_custom_tokens.html">Custom Tokens</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_redirects.html">Creating redirects between pages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_content_management_tags.html">Content management tags</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_legal_content.html">Legal content type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_structured_legal_content.html">Next generation content/COPE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_portal_main_page.html">Portal main page content type</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="cms_toolboxes.html">Toolbox and related content types</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="cms_toolboxes_admin.html">Creating and managing toolboxes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cms_tools_admin.html">Toolbox tool content type</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Tool step content type</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#creating-a-tool-step">Creating a tool step</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#what-users-see">What users see</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#my-progress-block">My Progress block</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="cms_tools_offline_communications.html">Tool Tickler System</a></li>
+<li class="toctree-l3"><a class="reference internal" href="content_toolbox_use.html">Using ILAO toolboxes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cms_adrm.html">Lawyer Manuals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_content_reporting.html">Legal content reporting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_lcv_program.html">Legal Content Volunteers Program</a></li>
+<li class="toctree-l2"><a class="reference internal" href="legal_content_cms.html#known-workarounds">Known Workarounds</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="cms_structured_legal_content.html">Next generation content/COPE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basic_pages_cms.html">Basic pages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="testimonials_cms.html">Testimonials Content Type</a></li>
+<li class="toctree-l1"><a class="reference internal" href="webforms_cms.html">Webforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="translation_cms.html">Translation Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="calendar_cms.html">Calendar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jobs_cms.html">Job Listings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="discussion_groups.html">Discussion groups</a></li>
+<li class="toctree-l1"><a class="reference internal" href="otis_cms.html">Get Legal Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="site_search.html">Site Search</a></li>
+<li class="toctree-l1"><a class="reference internal" href="site_faqs.html">Site FAQs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="other_cms_features.html">Other Website Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="taxonomies.html">Taxonomies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rss_feeds.html">RSS Feeds</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ilao_api.html">ILAO’s API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="next_steps.html">Next Steps Flows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sms_overview.html">SMS Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_analytics.html">Data and Analytics</a></li>
+</ul>
+<p class="caption"><span class="caption-text">See also:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="creating_docs_in_github.html">Creating new docs in Github</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ILAO</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="legal_content_cms.html">Legal Content CMS</a> &raquo;</li>
+        
+          <li><a href="cms_toolboxes.html">Toolbox and related content types</a> &raquo;</li>
+        
+      <li>Tool step content type</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/cms_tool_step_admin.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="tool-step-content-type">
+<h1>Tool step content type<a class="headerlink" href="#tool-step-content-type" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="creating-a-tool-step">
+<h2>Creating a tool step<a class="headerlink" href="#creating-a-tool-step" title="Permalink to this headline">¶</a></h2>
+<p>To create a tool step:</p>
+<ul class="simple">
+<li><p>Add a title</p></li>
+<li><p>Pick the tool the step goes into</p></li>
+<li><p>Indicate whether the step is always required.</p></li>
+<li><p>Indicate if this is the last step in the process. A tool should have exactly 1 last step.</p></li>
+<li><p>Add a step type. This adds the content to the page.</p></li>
+<li><p>Optionally add toolbox step components of type callout</p></li>
+</ul>
+<p><strong>After adding a step, you must go back to the associated tool and add the tool step to the tool step list and order the steps correctly</strong></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The last step in the tool must be marked as the last step. There should only ever be one and it should be at the end of the toolbox. The last step will then give the user the option to mark the toolbox complete. This is usually going to be a “Mark toolbox complete” step.</p>
+</div>
+<div class="section" id="step-types">
+<h3>Step types<a class="headerlink" href="#step-types" title="Permalink to this headline">¶</a></h3>
+<p>There are 4 supported step types in tool steps:</p>
+<ul class="simple">
+<li><p>Process step</p></li>
+<li><p>Webform</p></li>
+<li><p>Fill out forms (single)</p></li>
+<li><p>Fill out forms (multiple)</p></li>
+</ul>
+<div class="section" id="process-step">
+<h4>Process step<a class="headerlink" href="#process-step" title="Permalink to this headline">¶</a></h4>
+<p>Similar to the process step in How-to’s, this is the primary way to include text in the tool step. A process step includes:</p>
+<ul class="simple">
+<li><p>A title</p></li>
+<li><p>A body</p></li>
+</ul>
+<p>These will not be numbered in the tool steps.</p>
+</div>
+<div class="section" id="webform-step">
+<h4>Webform step<a class="headerlink" href="#webform-step" title="Permalink to this headline">¶</a></h4>
+<p>The webform step type includes:</p>
+<ul class="simple">
+<li><p>an optional heading</p></li>
+<li><p>an optional body</p></li>
+<li><p>a webform. The webform must already exist.</p></li>
+</ul>
+</div>
+<div class="section" id="fill-out-forms-single">
+<h4>Fill out forms (single)<a class="headerlink" href="#fill-out-forms-single" title="Permalink to this headline">¶</a></h4>
+<p>This should be used when adding one internal form (either an Easy Form or blank form linked to or downloadable from our website). If you need to provide multiple forms on the page, use the Fill out forms (multiple) option OR a process step.</p>
+<p>For this component you need to:</p>
+<ul class="simple">
+<li><p>Add a form (easy form or blank form)</p></li>
+<li><p>Indicate whether it is required or not (this is a required field but does not display to users at this time)</p></li>
+</ul>
+<p>The appropriate template (easy form, link form, or form download) will render automatically.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>While the internal forms paragraphs bundle has a callout option, it does not render.</p>
+</div>
+</div>
+<div class="section" id="fill-out-forms-multiple">
+<h4>Fill out forms (multiple)<a class="headerlink" href="#fill-out-forms-multiple" title="Permalink to this headline">¶</a></h4>
+<p>DO NOT USE. This is currently buggy and needs to be fixed as it doesn’t display more than one form in each section.</p>
+<p>For multiple forms, it is best to use the process step for now.</p>
+</div>
+</div>
+<div class="section" id="tool-step-components">
+<h3>Tool Step Components<a class="headerlink" href="#tool-step-components" title="Permalink to this headline">¶</a></h3>
+<p>Callout is the only tool step component supported.</p>
+<p>A callout is an optional component that can be used below the main text of the page to highlight important information. Tool steps should have no more than 1 callout and can be positioned above or below the text on process steps.</p>
+<p>Callouts display with a slightly shaded background.</p>
+</div>
+</div>
+<div class="section" id="what-users-see">
+<h2>What users see<a class="headerlink" href="#what-users-see" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="tool-with-a-process-step">
+<h3>Tool with a process step<a class="headerlink" href="#tool-with-a-process-step" title="Permalink to this headline">¶</a></h3>
+<p>Desktop:</p>
+<img alt="_images/tool_step_process.png" src="_images/tool_step_process.png" />
+<p>Mobile:</p>
+<a class="reference internal image-reference" href="_images/tool-step1-mobile.png"><img alt="_images/tool-step1-mobile.png" src="_images/tool-step1-mobile.png" style="width: 349.0px; height: 3396.5px;" /></a>
+</div>
+<div class="section" id="tool-with-a-webform">
+<h3>Tool with a webform<a class="headerlink" href="#tool-with-a-webform" title="Permalink to this headline">¶</a></h3>
+<img alt="_images/tool_step_webform.png" src="_images/tool_step_webform.png" />
+</div>
+<div class="section" id="tool-with-a-single-form">
+<h3>Tool with a single form<a class="headerlink" href="#tool-with-a-single-form" title="Permalink to this headline">¶</a></h3>
+<img alt="_images/tool_step_easyform.png" src="_images/tool_step_easyform.png" />
+</div>
+<div class="section" id="tool-with-multiple-forms">
+<h3>Tool with multiple forms<a class="headerlink" href="#tool-with-multiple-forms" title="Permalink to this headline">¶</a></h3>
+<p>Currently does not work</p>
+</div>
+<div class="section" id="last-step">
+<h3>Last Step<a class="headerlink" href="#last-step" title="Permalink to this headline">¶</a></h3>
+<p>When a user sees a step that is marked as the last step:</p>
+<ul class="simple">
+<li><p>the content of the step displays</p></li>
+<li><p>if the user has incomplete steps:</p>
+<ul>
+<li><p>those are listed as a reminder in a callout</p></li>
+<li><p>the primary button on the page is “Save toolbox progress”</p></li>
+<li><p>the secondary button is “Mark toolbox complete”</p></li>
+</ul>
+</li>
+<li><p>if the user has no incomplete steps:</p>
+<ul>
+<li><p>the primary button on the page is “Mark toolbox complete”</p></li>
+<li><p>the secondary button is “Save toolbox progress”</p></li>
+</ul>
+</li>
+</ul>
+<p>Desktop:</p>
+<img alt="_images/toolbox-incomplete.png" src="_images/toolbox-incomplete.png" />
+<p>Mobile:</p>
+<a class="reference internal image-reference" href="_images/tool-incomplete-mobile.png"><img alt="_images/tool-incomplete-mobile.png" src="_images/tool-incomplete-mobile.png" style="width: 349.0px; height: 3231.0px;" /></a>
+</div>
+<div class="section" id="when-the-tool-is-marked-complete">
+<h3>When the tool is marked complete<a class="headerlink" href="#when-the-tool-is-marked-complete" title="Permalink to this headline">¶</a></h3>
+<p>When the user completes the tool and marks the toolbox complete:</p>
+<ul class="simple">
+<li><p>they are given a well done message</p></li>
+<li><p>they have the option to view their toolboxes. This returns them to the toolbox selector results page with the completed tools marked done and incomplete tools ready to be started.</p></li>
+<li><p>they have the option to provide feedback via SurveyMonkey</p></li>
+</ul>
+<p>Desktop:</p>
+<img alt="_images/toolbox-confirm.png" src="_images/toolbox-confirm.png" />
+<p>Mobile:</p>
+<a class="reference internal image-reference" href="_images/tool-mobile-welldone.png"><img alt="_images/tool-mobile-welldone.png" src="_images/tool-mobile-welldone.png" style="width: 349.0px; height: 2580.5px;" /></a>
+<p>The well done image and text are managed in the <a class="reference external" href="https://www.illinoislegalaid.org/block/236">Final toolbox page image block.</a></p>
+</div>
+</div>
+<div class="section" id="my-progress-block">
+<h2>My Progress block<a class="headerlink" href="#my-progress-block" title="Permalink to this headline">¶</a></h2>
+<p>The “My Progress” block tracks a user’s progress across the tool.</p>
+<ul class="simple">
+<li><p>For logged in users, it will remember their progress over the course of 1 year.</p></li>
+<li><p>For anonymous users, it will remember their progress only for the current session.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is a change from the Drupal 7 site where the ‘return code’ allowed users to return.</p>
+</div>
+<p>As a user progresses through a tool:</p>
+<ul class="simple">
+<li><p>The current step, if it has not been previously marked complete, will be blue and filled</p></li>
+<li><p>Incomplete steps will be white with a blue border</p></li>
+<li><p>Steps that are marked complete will be green with a check in them</p></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="cms_tools_offline_communications.html" class="btn btn-neutral float-right" title="Tool Tickler System" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="cms_tools_admin.html" class="btn btn-neutral float-left" title="Toolbox tool content type" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2023, Illinois Legal Aid Online.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

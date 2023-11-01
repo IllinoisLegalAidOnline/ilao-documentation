@@ -1,0 +1,336 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Get Legal Help Summary Report &mdash; ILAO Sprint 124a documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/themeoverrides.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Intake/Triage Report" href="otis_reports_etransfer.html" />
+    <link rel="prev" title="Get Legal Help Reporting" href="otis_reports.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> ILAO
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="design_guide.html">Design &amp; Style Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="block_management.html">Custom blocks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="people_management.html">User Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="legal_information.html">Browsing to legal information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="legal_content_cms.html">Legal Content CMS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cms_structured_legal_content.html">Next generation content/COPE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basic_pages_cms.html">Basic pages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="testimonials_cms.html">Testimonials Content Type</a></li>
+<li class="toctree-l1"><a class="reference internal" href="webforms_cms.html">Webforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="translation_cms.html">Translation Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="calendar_cms.html">Calendar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jobs_cms.html">Job Listings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="discussion_groups.html">Discussion groups</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="otis_cms.html">Get Legal Help</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="otis_endusers.html">Get Legal Help Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="otis_organization_management.html">Organization management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="otis_endpoints.html">Triage rule endpoints</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="otis_reports.html">Get Legal Help Reporting</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Get Legal Help Summary Report</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#report-data">Report Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#filters">Filters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#triage-statuses">Triage statuses</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#intake-statuses">Intake statuses</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="otis_reports_etransfer.html">Intake/Triage Report</a></li>
+<li class="toctree-l3"><a class="reference internal" href="otis_reports_referral_counts.html">GLH Referral Count Report</a></li>
+<li class="toctree-l3"><a class="reference internal" href="otis_reports_referrals.html">Referrals Report</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reporting_otis_a2j.html">Specialized reporting: State Grants</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="otis_ai_integration.html">OTIS AI Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="otis_third_party_support.html">Supported Integrations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="otis_sms_intake.html">Online Intake Over SMS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="otis_facebook.html">Facebook Integrations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="otis_features.html">Additional Features</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="site_search.html">Site Search</a></li>
+<li class="toctree-l1"><a class="reference internal" href="site_faqs.html">Site FAQs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="other_cms_features.html">Other Website Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="taxonomies.html">Taxonomies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rss_feeds.html">RSS Feeds</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ilao_api.html">ILAO’s API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="next_steps.html">Next Steps Flows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sms_overview.html">SMS Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_analytics.html">Data and Analytics</a></li>
+</ul>
+<p class="caption"><span class="caption-text">See also:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="creating_docs_in_github.html">Creating new docs in Github</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ILAO</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="otis_cms.html">Get Legal Help</a> &raquo;</li>
+        
+          <li><a href="otis_reports.html">Get Legal Help Reporting</a> &raquo;</li>
+        
+      <li>Get Legal Help Summary Report</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/otis_reports_glh_summary.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="get-legal-help-summary-report">
+<h1>Get Legal Help Summary Report<a class="headerlink" href="#get-legal-help-summary-report" title="Permalink to this headline">¶</a></h1>
+<p>The <a class="reference external" href="https://www.illinoislegalaid.org/admin/intake/reporting/get-legal-help-summary">Get Legal Help summary report</a> provides an overview of Get Legal Help usage.</p>
+<img alt="_images/otis-glh-report1.png" src="_images/otis-glh-report1.png" />
+<div class="section" id="report-data">
+<h2>Report Data<a class="headerlink" href="#report-data" title="Permalink to this headline">¶</a></h2>
+<p>The report includes:</p>
+<ul class="simple">
+<li><p>unique ID of the triage user. Every user who fills out the Get Legal Help page form is assigned a unique ID. if a user completes the form multiple times, each instance gets a new ID.</p></li>
+<li><p>The date/time the triage was started.</p></li>
+<li><p>The provided zip code</p></li>
+<li><p>Whether the user answered Yes or No to the income question. This question is only captured when they are seeking a lawyer.</p></li>
+<li><p>Their household size. This is only captured when they are seeking a lawyer.</p></li>
+<li><p>Help type the user is seeking: information, forms, and/or lawyers</p></li>
+<li><p>Triage status</p></li>
+</ul>
+</div>
+<div class="section" id="filters">
+<h2>Filters<a class="headerlink" href="#filters" title="Permalink to this headline">¶</a></h2>
+<p>Data can be directly filtered by:</p>
+<ul class="simple">
+<li><p>One or more help types</p></li>
+<li><p>Start and end dates of when the triage form was started</p></li>
+<li><p>Legal issues.</p></li>
+<li><p>Additional filtering may be done by exporting to CSV and working with the data directly.</p></li>
+</ul>
+<div class="admonition-todo admonition" id="id2">
+<p class="admonition-title">Todo</p>
+<p>A review of the legal issues filter needs to be done to ensure that it is returning nested results even when the value is set further into triage.</p>
+</div>
+</div>
+<div class="section" id="triage-statuses">
+<h2>Triage statuses<a class="headerlink" href="#triage-statuses" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Modal: User was shown the modal but closed it</p></li>
+<li><p>Modal - intake available: User entered zip in modal &amp; shown intake was available but did not proceed</p></li>
+<li><p>Modal - intake not available: User was shown the modal, entered zip but intake was not available</p></li>
+<li><p>Started: User submitted the main form &amp; stopped</p></li>
+<li><p>Legal issue and top of triage tree: User accessed 1 of 2 pages to determine what their legal issue is and stopped</p></li>
+<li><p>Out of area: User entered a non-IL address</p></li>
+<li><p>Program triage: Users started program triage rules.</p></li>
+<li><p>Referrals: Users were given legal aid referrals, and never got to online intake.</p></li>
+<li><p>Over-income Referrals: Users were given over-income referrals, and never got to online intake.</p></li>
+<li><p>Program triage completed: User completed program triage</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Modal-related statuses were deprecated June 24, 2020 with the launch of our Drupal 8 website.</p>
+</div>
+</div>
+<div class="section" id="intake-statuses">
+<h2>Intake statuses<a class="headerlink" href="#intake-statuses" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Diverted: Users who diverted from intake because their legal issue does not match an organization’s case acceptance criteria</p></li>
+<li><p>Referrals: Users who complete the program’s triage but indicate that they do not have a safe phone number</p></li>
+<li><p>Started: Users who were matched to an organization, started the intake process, but did not finish it (excluding users who were just determined eligible)</p></li>
+<li><p>Incomplete:</p></li>
+<li><p>Offered: Users who were matched to an organization, but did not start the intake</p></li>
+<li><p>Over-income: Users who completed the income questions during intake, but were not eligible</p></li>
+<li><p>Over-asset: Uses who completed the asset questions during intake, but were not eligible</p></li>
+<li><p>Eligible: Users who completed the income questions during intake and were eligible, but did not continue</p></li>
+<li><p>Bypass: SMS users who completed program triage and are instructed to contact the organization rather than completing an intake</p></li>
+<li><p>Bypass Intake: Users who complted program triage and are instructed to contact the organization rather than completing an intake</p></li>
+<li><p>eTransferred: Users who were matched to an organization and completed the intake process</p></li>
+<li><p>Not_eTransferred: Users who were matched to an organization and completed the intake process, but there was an error when eTransferring</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>As of January 1, 2020, users are no longer being asked about their assets</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="otis_reports_etransfer.html" class="btn btn-neutral float-right" title="Intake/Triage Report" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="otis_reports.html" class="btn btn-neutral float-left" title="Get Legal Help Reporting" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2023, Illinois Legal Aid Online.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,329 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Tool Tickler System &mdash; ILAO Sprint 124a documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/themeoverrides.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Using ILAO toolboxes" href="content_toolbox_use.html" />
+    <link rel="prev" title="Tool step content type" href="cms_tool_step_admin.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> ILAO
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="design_guide.html">Design &amp; Style Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="block_management.html">Custom blocks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="people_management.html">User Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="legal_information.html">Browsing to legal information</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="legal_content_cms.html">Legal Content CMS</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="cms_law_tracker.html">Law tracker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_wysiwyg.html">WYSIWYG Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_custom_tokens.html">Custom Tokens</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_redirects.html">Creating redirects between pages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_content_management_tags.html">Content management tags</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_legal_content.html">Legal content type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_structured_legal_content.html">Next generation content/COPE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_portal_main_page.html">Portal main page content type</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="cms_toolboxes.html">Toolbox and related content types</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="cms_toolboxes_admin.html">Creating and managing toolboxes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cms_tools_admin.html">Toolbox tool content type</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cms_tool_step_admin.html">Tool step content type</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Tool Tickler System</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#who-can-receive-tickler-messages">Who Can Receive Tickler Messages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#configuring-tickler-messages">Configuring Tickler Messages</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="content_toolbox_use.html">Using ILAO toolboxes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cms_adrm.html">Lawyer Manuals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_content_reporting.html">Legal content reporting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_lcv_program.html">Legal Content Volunteers Program</a></li>
+<li class="toctree-l2"><a class="reference internal" href="legal_content_cms.html#known-workarounds">Known Workarounds</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="cms_structured_legal_content.html">Next generation content/COPE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basic_pages_cms.html">Basic pages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="testimonials_cms.html">Testimonials Content Type</a></li>
+<li class="toctree-l1"><a class="reference internal" href="webforms_cms.html">Webforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="translation_cms.html">Translation Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="calendar_cms.html">Calendar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jobs_cms.html">Job Listings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="discussion_groups.html">Discussion groups</a></li>
+<li class="toctree-l1"><a class="reference internal" href="otis_cms.html">Get Legal Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="site_search.html">Site Search</a></li>
+<li class="toctree-l1"><a class="reference internal" href="site_faqs.html">Site FAQs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="other_cms_features.html">Other Website Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="taxonomies.html">Taxonomies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rss_feeds.html">RSS Feeds</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ilao_api.html">ILAO’s API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="next_steps.html">Next Steps Flows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sms_overview.html">SMS Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_analytics.html">Data and Analytics</a></li>
+</ul>
+<p class="caption"><span class="caption-text">See also:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="creating_docs_in_github.html">Creating new docs in Github</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ILAO</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="legal_content_cms.html">Legal Content CMS</a> &raquo;</li>
+        
+          <li><a href="cms_toolboxes.html">Toolbox and related content types</a> &raquo;</li>
+        
+      <li>Tool Tickler System</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/cms_tools_offline_communications.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="tool-tickler-system">
+<h1>Tool Tickler System<a class="headerlink" href="#tool-tickler-system" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The tickler system is currently not active. We can create ticklers but nothing wil be sent out to users via SMS or email at this time.</p>
+</div>
+<div class="section" id="who-can-receive-tickler-messages">
+<h2>Who Can Receive Tickler Messages<a class="headerlink" href="#who-can-receive-tickler-messages" title="Permalink to this headline">¶</a></h2>
+<p>The tickler system allows for the sending of email or text messages to community members who:</p>
+<ul class="simple">
+<li><p>are working on a tool</p></li>
+<li><p>are logged in</p></li>
+<li><p>have notifications set to:</p>
+<ul>
+<li><p>email</p></li>
+<li><p>text message AND have opted in to receive text messages</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="configuring-tickler-messages">
+<h2>Configuring Tickler Messages<a class="headerlink" href="#configuring-tickler-messages" title="Permalink to this headline">¶</a></h2>
+<p>Ticklers can be added from the edit form of any tool step content.</p>
+<img alt="_images/cms-toolbox-tickler.png" src="_images/cms-toolbox-tickler.png" />
+<p>A tool step can have multiple ticklers. Each tickler should have:</p>
+<ul class="simple">
+<li><p>the number of days to trigger and a tickler type. This will calculate when to send.</p></li>
+<li><p>an SMS message</p></li>
+<li><p>an email message</p></li>
+</ul>
+<p>Users will receive only one of these.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>There is no automated additional text included in the messages sent. The tickler messages should be complete enough to provide context for a user who may have not been on the site recently.</p>
+</div>
+<div class="section" id="scheduling-methodology">
+<h3>Scheduling methodology<a class="headerlink" href="#scheduling-methodology" title="Permalink to this headline">¶</a></h3>
+<p>A tickler may be set based on the timestamp of the last step or the current step.</p>
+<p>For example, a 3 step tool is set to:</p>
+<ul class="simple">
+<li><p>Step 2 is configured with a tickler set to 7 days after step 1 is completed</p></li>
+<li><p>Step 2 is configured with a tickler set to 7 days after step 2 is completed</p></li>
+<li><p>Step 2 is configured with a tickler set to 14 days after step 2 is completed</p></li>
+<li><p>Step 3 is configured with a tickler set to 7 days after step 2 is completed</p></li>
+<li><p>Step 3 is configured with a tickler set to 14 days after step 3 is completed</p></li>
+</ul>
+<p>A user completes step 1 on 1/1/2021, step 2 on 1/9/2022, the user will receive ticklers:</p>
+<ul class="simple">
+<li><p>On 1/8/2021 from Step 2</p></li>
+<li><p>On 1/15/2021 from Step 2</p></li>
+<li><p>On 1/15/2021 from Step 3</p></li>
+<li><p>On 1/22/2021 from Step 2</p></li>
+<li><p>They won’t receive the final tickler message unless they complete step 3</p></li>
+</ul>
+</div>
+<div class="section" id="sample-messages">
+<h3>Sample messages<a class="headerlink" href="#sample-messages" title="Permalink to this headline">¶</a></h3>
+<p>Hello from ILAO!  This is a reminder that you recently completed “Get your police records” from our criminal expungement tool. The next step is to [name of step]. <a class="reference external" href="https://www.illinoislegalaid.org/[link">https://www.illinoislegalaid.org/[link</a> to next step].</p>
+<p>Hello from ILAO!  This is a reminder that you have an incomplete step in [name of tool]. <a class="reference external" href="https://www.illinoislegalaid.org/[link">https://www.illinoislegalaid.org/[link</a> to next step].</p>
+<p>Hello from ILAO!  You recently completed our cannabis tool. We’d appreciate your feedback on your experience. <a class="reference external" href="https://www.surveymonkey.com/toolbox-survey">https://www.surveymonkey.com/toolbox-survey</a>.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="content_toolbox_use.html" class="btn btn-neutral float-right" title="Using ILAO toolboxes" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="cms_tool_step_admin.html" class="btn btn-neutral float-left" title="Tool step content type" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2023, Illinois Legal Aid Online.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

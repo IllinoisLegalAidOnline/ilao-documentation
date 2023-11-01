@@ -1,0 +1,353 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Gamification: Points &mdash; ILAO Sprint 124a documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/themeoverrides.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Gamification: Badges and Milestones" href="lcv_badges.html" />
+    <link rel="prev" title="Permissions" href="lcv_roles.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> ILAO
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="design_guide.html">Design &amp; Style Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="block_management.html">Custom blocks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="people_management.html">User Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="legal_information.html">Browsing to legal information</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="legal_content_cms.html">Legal Content CMS</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="cms_law_tracker.html">Law tracker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_wysiwyg.html">WYSIWYG Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_custom_tokens.html">Custom Tokens</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_redirects.html">Creating redirects between pages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_content_management_tags.html">Content management tags</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_legal_content.html">Legal content type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_structured_legal_content.html">Next generation content/COPE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_portal_main_page.html">Portal main page content type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_toolboxes.html">Toolbox and related content types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_adrm.html">Lawyer Manuals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_content_reporting.html">Legal content reporting</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="cms_lcv_program.html">Legal Content Volunteers Program</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="lcv_roles.html">Permissions</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Gamification: Points</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#point-types">Point Types</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#rules-for-automated-point-awards">Rules for Automated Point Awards</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#rules-for-manual-points">Rules for Manual points</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#points-awarded">Points Awarded</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lcv_badges.html">Gamification: Badges and Milestones</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lcv_dashboard.html">Editorial Dashboard</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lcv_leaderboards.html">Leaderboards</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lcv_reporting.html">Legal Content Volunteer Program Reports</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="legal_content_cms.html#known-workarounds">Known Workarounds</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="cms_structured_legal_content.html">Next generation content/COPE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basic_pages_cms.html">Basic pages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="testimonials_cms.html">Testimonials Content Type</a></li>
+<li class="toctree-l1"><a class="reference internal" href="webforms_cms.html">Webforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="translation_cms.html">Translation Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="calendar_cms.html">Calendar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jobs_cms.html">Job Listings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="discussion_groups.html">Discussion groups</a></li>
+<li class="toctree-l1"><a class="reference internal" href="otis_cms.html">Get Legal Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="site_search.html">Site Search</a></li>
+<li class="toctree-l1"><a class="reference internal" href="site_faqs.html">Site FAQs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="other_cms_features.html">Other Website Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="taxonomies.html">Taxonomies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rss_feeds.html">RSS Feeds</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ilao_api.html">ILAO’s API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="next_steps.html">Next Steps Flows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sms_overview.html">SMS Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_analytics.html">Data and Analytics</a></li>
+</ul>
+<p class="caption"><span class="caption-text">See also:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="creating_docs_in_github.html">Creating new docs in Github</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ILAO</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="legal_content_cms.html">Legal Content CMS</a> &raquo;</li>
+        
+          <li><a href="cms_lcv_program.html">Legal Content Volunteers Program</a> &raquo;</li>
+        
+      <li>Gamification: Points</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/lcv_points_system.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="gamification-points">
+<h1>Gamification: Points<a class="headerlink" href="#gamification-points" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="point-types">
+<h2>Point Types<a class="headerlink" href="#point-types" title="Permalink to this headline">¶</a></h2>
+<p>Users with the Staff role may create point types and view a list of all point types.</p>
+<ul class="simple">
+<li><p>Automatic points are awarded when a piece of legal content or ADRM content transitions across workflows:</p>
+<ul>
+<li><p>On transition from published to draft - this may be triggered when a user starts an assignment</p></li>
+<li><p>On transition from ready to review to published - this may be triggered when a staff member finalizes submitted work</p></li>
+<li><p>On transition from draft to published - this may be triggered when a staff member creates a draft, inputs SME changes, and then publishes the revision</p></li>
+<li><p>On transition from published to ready to review - this may be triggered when a user turns in completed work and never saved it as a draft</p></li>
+<li><p>On transition from draft to ready to review - this may be triggered when a user turns in completed work and saves as a draft</p></li>
+</ul>
+</li>
+<li><p>Manual points are awarded by someone with the staff role.</p></li>
+</ul>
+<p>Points may be configured to be awarded at a flat rate or based on the number of words in the node.</p>
+<div class="section" id="creating-a-point-type">
+<h3>Creating a point type<a class="headerlink" href="#creating-a-point-type" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://www.illinoislegalaid.org/admin/structure/gamification/points_type/add">Add a point type</a></p>
+<p>Point types use a custom entity, similar to content types but without a defined front-facing interface.</p>
+<img alt="_images/cms-lcv-add-points-form.png" src="_images/cms-lcv-add-points-form.png" />
+<p>Each point type:</p>
+<ul class="simple">
+<li><p>has a name. Examples might be “User tested a feature” or “Edited legal information for the public”</p></li>
+<li><p>has an optional description. This may be helpful to keep track of why a points type exists.</p></li>
+<li><p>has a required Awarded field. This is used to help track when the points would be awarded by the system. Points can be awarded:</p>
+<ul>
+<li><p>Manually; when this is selected, the system won’t ever award the points to a user automatically. This is useful for awards for activities outside of the legal content CMS.</p></li>
+<li><p>Automatically; based on a transition in the workflow states (for example, when an article is approved by staff and moved from “ready to review” to “published”)</p></li>
+</ul>
+</li>
+<li><p>has a required Point basis. Points may be awarded at a flat rate (such as 50 points for taking a user survey) or per word (such as 2 points per word edited in an article)</p></li>
+<li><p>has a Points to award field. This is where the number of points goes.</p></li>
+</ul>
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">Todo</p>
+<p>Block point types from being indexed by robots.txt.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A warning will appear when saving a point type to remind staff to check to see if any existing badges or milestones need to be updated. For example, when a new point type is added, badges that aren’t set to include all point types may need to be updated.</p>
+</div>
+</div>
+<div class="section" id="point-type-report">
+<h3>Point Type Report<a class="headerlink" href="#point-type-report" title="Permalink to this headline">¶</a></h3>
+<p>All point types can be viewed on the <a class="reference external" href="https://www.illinoislegalaid.org/admin/content/gamification/point-types">Points Type report</a>, filtered by status and type and exported to CSV.</p>
+<img alt="_images/points-type-report.png" src="_images/points-type-report.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A generic set of point types should be created. For example, a point type of “Points per word”, “Points per article”, “User testing points”, etc.  These can be mixed and matched in badges and/or milestones.</p>
+</div>
+</div>
+</div>
+<div class="section" id="rules-for-automated-point-awards">
+<h2>Rules for Automated Point Awards<a class="headerlink" href="#rules-for-automated-point-awards" title="Permalink to this headline">¶</a></h2>
+<p>Automated point awards will be awarded:</p>
+<ul class="simple">
+<li><p>To revision authors who do not have the staff or intern role</p></li>
+<li><p>Only to the same node/language/author pair once every 24 hours (so that we don’t accidentally award points multiple times)</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Automated awards run on a scheduled task overnight. They will not be awarded automatically and they can not be awarded manually.</p>
+</div>
+</div>
+<div class="section" id="rules-for-manual-points">
+<h2>Rules for Manual points<a class="headerlink" href="#rules-for-manual-points" title="Permalink to this headline">¶</a></h2>
+<p>Manual points may be awarded via a separate form and may optionally be tied to a legal content node. This may be most helpful for content editorial contributions that are outside of workflow management such as:</p>
+<ul class="simple">
+<li><p>Easy form reviews</p></li>
+<li><p>Toolboxes, tools, and tool steps</p></li>
+<li><p>Portal main pages</p></li>
+</ul>
+</div>
+<div class="section" id="points-awarded">
+<h2>Points Awarded<a class="headerlink" href="#points-awarded" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://www.illinoislegalaid.org/admin/content/gamefication/manual-credit">Manually Award Points</a></p>
+<img alt="_images/manually-award-points.png" src="_images/manually-award-points.png" />
+<p>“Points awarded” is the entity that stores points awarded to specific users, either automatically or manually.</p>
+<p>A <a class="reference external" href="https://www.illinoislegalaid.org/admin/content/gamification/point-awards">report of points awarded</a> shows all points awarded in the system.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="lcv_badges.html" class="btn btn-neutral float-right" title="Gamification: Badges and Milestones" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="lcv_roles.html" class="btn btn-neutral float-left" title="Permissions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2023, Illinois Legal Aid Online.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

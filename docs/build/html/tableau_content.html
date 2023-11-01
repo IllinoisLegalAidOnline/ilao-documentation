@@ -1,0 +1,710 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Content metrics in Tableau &mdash; ILAO Sprint 124a documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/themeoverrides.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Creating new docs in Github" href="creating_docs_in_github.html" />
+    <link rel="prev" title="Data analytics in Tableau" href="tableau.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> ILAO
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="design_guide.html">Design &amp; Style Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="block_management.html">Custom blocks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="people_management.html">User Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="legal_information.html">Browsing to legal information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="legal_content_cms.html">Legal Content CMS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cms_structured_legal_content.html">Next generation content/COPE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basic_pages_cms.html">Basic pages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="testimonials_cms.html">Testimonials Content Type</a></li>
+<li class="toctree-l1"><a class="reference internal" href="webforms_cms.html">Webforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="translation_cms.html">Translation Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="calendar_cms.html">Calendar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jobs_cms.html">Job Listings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="discussion_groups.html">Discussion groups</a></li>
+<li class="toctree-l1"><a class="reference internal" href="otis_cms.html">Get Legal Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="site_search.html">Site Search</a></li>
+<li class="toctree-l1"><a class="reference internal" href="site_faqs.html">Site FAQs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="other_cms_features.html">Other Website Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="taxonomies.html">Taxonomies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rss_feeds.html">RSS Feeds</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ilao_api.html">ILAO’s API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="next_steps.html">Next Steps Flows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sms_overview.html">SMS Overview</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="data_analytics.html">Data and Analytics</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="google_analytics_integration.html">Google Analytics/Google Tag Manager</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="tableau.html">Data analytics in Tableau</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Content metrics in Tableau</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#data-sources">Data Sources</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#connecting-datasources">Connecting Datasources</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dashboard-metrics">Dashboard Metrics</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">See also:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="creating_docs_in_github.html">Creating new docs in Github</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ILAO</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="data_analytics.html">Data and Analytics</a> &raquo;</li>
+        
+          <li><a href="tableau.html">Data analytics in Tableau</a> &raquo;</li>
+        
+      <li>Content metrics in Tableau</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/tableau_content.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="content-metrics-in-tableau">
+<h1>Content metrics in Tableau<a class="headerlink" href="#content-metrics-in-tableau" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="data-sources">
+<h2>Data Sources<a class="headerlink" href="#data-sources" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="google-analytics-4-data">
+<h3>Google Analytics 4 Data<a class="headerlink" href="#google-analytics-4-data" title="Permalink to this headline">¶</a></h3>
+<p>Data has to be pulled using Query Explorer and combined into CSV files for use in Tableau.</p>
+<p>Specifically, the Query Explorer should look like the image below:</p>
+<img alt="_images/ga4-extract.png" src="_images/ga4-extract.png" />
+<p>The explorer exports data in increments of 10,000 records. This query results in nearly 400,000 records so the process must be repeated for every 10K records.</p>
+<ul class="simple">
+<li><p>Make the request</p></li>
+<li><p>Copy the JSON to clipboard</p></li>
+<li><p>Open in the text editor and strip everything before rows and the totals segment at the bottom</p></li>
+<li><p>Copy the cleaned text into a JSON to CSV converter and export</p></li>
+</ul>
+<p>Once all of these are complete, combine the individual CSVs into one file. On a Mac, the easiest way to combine is to put all the CSV files into a single directory. Then, in Terminal, navigate to the directory and enter the command below which will result in a combined CSV named combined.csv:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cat</span> <span class="o">*.</span><span class="n">csv</span> <span class="o">&gt;</span> <span class="n">combined</span><span class="o">.</span><span class="n">csv</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We are hoping this will change as GA4 grows or that we can find a better way to automated.</p>
+</div>
+<div class="section" id="page-view-data">
+<h4>Page View data<a class="headerlink" href="#page-view-data" title="Permalink to this headline">¶</a></h4>
+<p>Page view data contains the following dimensions:
+* Date (formatted as mm/dd/yyyy)
+* deviceCategory (mobile, tablet, desktop)
+* pagePath
+* pageReferrer
+* region
+* sessionMedium
+* sessionSource</p>
+<p>And the following metrics:</p>
+<ul class="simple">
+<li><p>Bounce rate</p></li>
+<li><p>Engagement rate</p></li>
+<li><p>Page views</p></li>
+<li><p>Sessions</p></li>
+</ul>
+</div>
+<div class="section" id="outgoing-link-events">
+<h4>Outgoing Link Events<a class="headerlink" href="#outgoing-link-events" title="Permalink to this headline">¶</a></h4>
+<p>Outgoing link data contains these dimensions:</p>
+<ul class="simple">
+<li><p>Date</p></li>
+<li><p>deviceCategory</p></li>
+<li><p>linkDomain</p></li>
+<li><p>linkUrl</p></li>
+<li><p>pagePath</p></li>
+<li><p>pageReferrer</p></li>
+<li><p>region</p></li>
+<li><p>sessionMedium</p></li>
+<li><p>sessionSource</p></li>
+</ul>
+<p>And these metrics:</p>
+<ul class="simple">
+<li><p>Engagement rate</p></li>
+<li><p>Event count</p></li>
+<li><p>Sessions</p></li>
+</ul>
+<p>When cleaned up in Tableau</p>
+<ul class="simple">
+<li><p>Data is filtered on host name contains www.illinoislegal; this filters out dev and staging data.</p></li>
+<li><p>Region is cleaned up to Illinois, US (Not Illinois), International</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="cms-files">
+<h3>CMS Files<a class="headerlink" href="#cms-files" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="static-sources">
+<h3>Static sources<a class="headerlink" href="#static-sources" title="Permalink to this headline">¶</a></h3>
+<p>These sources rarely change but are used in data cleanup:</p>
+<ul class="simple">
+<li><p>Navigational_IA export file which contains the term IDs and names of the second level naviational categories</p></li>
+<li><p>Categories export file which contains the term IDs and names of the top level navigational categories</p></li>
+<li><p>Content type export file which contains the English language content format names and term ids</p></li>
+</ul>
+</div>
+<div class="section" id="legal-content-flow">
+<h3>Legal Content Flow<a class="headerlink" href="#legal-content-flow" title="Permalink to this headline">¶</a></h3>
+<p>The Legal content flow relies on:</p>
+<ul class="simple">
+<li><p>an exported CSV from “Find Legal Content”</p></li>
+<li><p>the navigational_ia export to replace primary and secondary legal term IDs with their English language names</p></li>
+<li><p>the categories export</p></li>
+<li><p>the content_format export to replace the content type in Legal Content with the name of the format, in English, instead of the term ID</p></li>
+</ul>
+<p>When processed through the Prep Builder, the resulting file is a data structure as follows:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 36%" />
+<col style="width: 40%" />
+<col style="width: 24%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Column</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ID</p></td>
+<td><p>Node ID</p></td>
+<td><p>Number</p></td>
+</tr>
+<tr class="row-odd"><td><p>Title</p></td>
+<td><p>English content title</p></td>
+<td><p>String</p></td>
+</tr>
+<tr class="row-even"><td><p>Content type</p></td>
+<td><p>Drupal content type</p></td>
+<td><p>String</p></td>
+</tr>
+<tr class="row-odd"><td><p>Created</p></td>
+<td><p>Date content was created</p></td>
+<td><p>Date</p></td>
+</tr>
+<tr class="row-even"><td><p>Last changed</p></td>
+<td><p>Last time the content was changed
+in any way</p></td>
+<td><p>Date</p></td>
+</tr>
+<tr class="row-odd"><td><p>Last substantive revision</p></td>
+<td><p>Date the content was revised in
+a substantive way, as determined
+by the content team</p></td>
+<td><p>Date</p></td>
+</tr>
+<tr class="row-even"><td><p>Last expert review</p></td>
+<td><p>Date the content was last
+reviewed by a SME</p></td>
+<td><p>Date</p></td>
+</tr>
+<tr class="row-odd"><td><p>Language</p></td>
+<td><p>The language of the content</p></td>
+<td><p>String</p></td>
+</tr>
+<tr class="row-even"><td><p>Full url</p></td>
+<td><p>Full website url to content</p></td>
+<td><p>String</p></td>
+</tr>
+<tr class="row-odd"><td><p>Page path</p></td>
+<td><p>page path of the content</p></td>
+<td><p>String</p></td>
+</tr>
+<tr class="row-even"><td><p>Subtopic</p></td>
+<td><p>Level 2 taxonomy term, in English</p></td>
+<td><p>String</p></td>
+</tr>
+<tr class="row-odd"><td><p>Category</p></td>
+<td><p>Primary category, in English</p></td>
+<td><p>String</p></td>
+</tr>
+<tr class="row-even"><td><p>Content format</p></td>
+<td><p>Name of content format</p></td>
+<td><p>String</p></td>
+</tr>
+</tbody>
+</table>
+<p>To pull data into Tableau cloud:</p>
+<ul class="simple">
+<li><p>Run the Find Legal Content report, unfiltered and export to CSV.</p></li>
+</ul>
+</div>
+<div class="section" id="google-analytics-page-views-flow">
+<h3>Google Analytics Page Views Flow<a class="headerlink" href="#google-analytics-page-views-flow" title="Permalink to this headline">¶</a></h3>
+<p>The Google Analytics flow merges a subset of Google Analytics data to be able to create reports that use page view data. This flow relies on:</p>
+<ul class="simple">
+<li><p>CSV files exported from universal analytics from January 1, 2017 - June 30, 2023</p></li>
+<li><p>An API call to Google Analytics 4 with data from July 1, 2023 - forward</p></li>
+</ul>
+<p>It produces a Tableau file that merges and cleans up the data into a single set of metrics that are available in both Universal Analytics and GA4.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 36%" />
+<col style="width: 40%" />
+<col style="width: 24%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Column</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>eventDate</p></td>
+<td><p>Date page was viewed</p></td>
+<td><p>Date</p></td>
+</tr>
+<tr class="row-odd"><td><p>engagementRate</p></td>
+<td><p>GA4 only</p></td>
+<td><p>Number</p></td>
+</tr>
+<tr class="row-even"><td><p>bounceRate</p></td>
+<td><p>GA4 only</p></td>
+<td><p>Number</p></td>
+</tr>
+<tr class="row-odd"><td><p>deviceCategory</p></td>
+<td><p>desktop, mobile, or tablet</p></td>
+<td><p>String</p></td>
+</tr>
+<tr class="row-even"><td><p>sessionMedium</p></td>
+<td><p>medium used (display, email, cpc
+organic)</p></td>
+<td><p>String</p></td>
+</tr>
+<tr class="row-odd"><td><p>sessionSource</p></td>
+<td><p>Direct, referral domain, etc</p></td>
+<td><p>String</p></td>
+</tr>
+<tr class="row-even"><td><p>pagePath</p></td>
+<td><p>Path of the page accessed,
+without hostname</p></td>
+<td><p>String</p></td>
+</tr>
+<tr class="row-odd"><td><p>pageReferrer</p></td>
+<td><p>URL of the previous page</p></td>
+<td><p>String</p></td>
+</tr>
+<tr class="row-even"><td><p>screenPageViews</p></td>
+<td><p>Number of page views</p></td>
+<td><p>Number</p></td>
+</tr>
+<tr class="row-odd"><td><p>sessions</p></td>
+<td><p>Number of sessions</p></td>
+<td><p>Number</p></td>
+</tr>
+<tr class="row-even"><td><p>Unique pageviews</p></td>
+<td><p>Number of unique pageviews</p></td>
+<td><p>Number</p></td>
+</tr>
+<tr class="row-odd"><td><p>Bounces</p></td>
+<td><p>Universal analytics only</p></td>
+<td><p>Number</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="content-revisions-flow">
+<h3>Content Revisions Flow<a class="headerlink" href="#content-revisions-flow" title="Permalink to this headline">¶</a></h3>
+<p>This flow takes data from our <a class="reference external" href="https://www.illinoislegalaid.org/admin/reporting/content/legal-revisions">Content Revisions</a> report exported to CSV.</p>
+<p>It produced a cleaned up data file that can be used to track revision activity, including number of SME reviews, substantive updates, and can be tied back to data in the legal content flow on tne node ID.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 36%" />
+<col style="width: 40%" />
+<col style="width: 24%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Column</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Node ID</p></td>
+<td><p>Node of the content revised</p></td>
+<td><p>Number</p></td>
+</tr>
+<tr class="row-odd"><td><p>Revision ID</p></td>
+<td><p>Unique identifier of the revision</p></td>
+<td><p>Number</p></td>
+</tr>
+<tr class="row-even"><td><p>SME date</p></td>
+<td><p>Date of the last SME review, at
+the time of the revision</p></td>
+<td><p>Date</p></td>
+</tr>
+<tr class="row-odd"><td><p>Staff revised date</p></td>
+<td><p>Date of the last staff revision,
+at the time of the revision</p></td>
+<td><p>Date</p></td>
+</tr>
+<tr class="row-even"><td><p>Revision saved</p></td>
+<td><p>Date the revision was created</p></td>
+<td><p>Date</p></td>
+</tr>
+<tr class="row-odd"><td><p>Revision log message</p></td>
+<td><p>Message entered when revision
+was created</p></td>
+<td><p>String</p></td>
+</tr>
+<tr class="row-even"><td><p>Language</p></td>
+<td><p>Language associated with the
+revision</p></td>
+<td><p>String</p></td>
+</tr>
+<tr class="row-odd"><td><p>Revision author</p></td>
+<td><p>Name of the person who created
+the revision</p></td>
+<td><p>String</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="legal-content-volunteer-flow">
+<h3>Legal Content Volunteer Flow<a class="headerlink" href="#legal-content-volunteer-flow" title="Permalink to this headline">¶</a></h3>
+<p>This flow takes data from the ILAO LCV Event and Engagement report pulled from Salesforce. It produces two output files:</p>
+<ul class="simple">
+<li><p>A file that lists each node reviewed with the LCV information</p></li>
+<li><p>The LCV engagement information</p></li>
+</ul>
+<div class="section" id="nodes-reviewed">
+<h4>Nodes Reviewed<a class="headerlink" href="#nodes-reviewed" title="Permalink to this headline">¶</a></h4>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 36%" />
+<col style="width: 40%" />
+<col style="width: 24%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Column</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>NodeID</p></td>
+<td><p>Node of the content reviewed</p></td>
+<td><p>Number</p></td>
+</tr>
+<tr class="row-odd"><td><p>EngagementID</p></td>
+<td><p>SF Engagement ID</p></td>
+<td><p>String</p></td>
+</tr>
+<tr class="row-even"><td><p>Contact</p></td>
+<td><p>Name of the LCV</p></td>
+<td><p>String</p></td>
+</tr>
+<tr class="row-odd"><td><p>Organization</p></td>
+<td><p>Primary affiliation of the LCV</p></td>
+<td><p>String</p></td>
+</tr>
+<tr class="row-even"><td><p>Date completed</p></td>
+<td><p>Date assignment was completed</p></td>
+<td><p>Date</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="lcv-assignments">
+<h4>LCV Assignments<a class="headerlink" href="#lcv-assignments" title="Permalink to this headline">¶</a></h4>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 36%" />
+<col style="width: 40%" />
+<col style="width: 24%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Column</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>NodeID</p></td>
+<td><p>Node of the content reviewed</p></td>
+<td><p>Number</p></td>
+</tr>
+<tr class="row-odd"><td><p>Event</p></td>
+<td><p>ILAO event name from SF</p></td>
+<td><p>String</p></td>
+</tr>
+<tr class="row-even"><td><p>EngagementID</p></td>
+<td><p>SF Engagement ID</p></td>
+<td><p>String</p></td>
+</tr>
+<tr class="row-odd"><td><p>Contact</p></td>
+<td><p>Name of the LCV</p></td>
+<td><p>String</p></td>
+</tr>
+<tr class="row-even"><td><p>Organization</p></td>
+<td><p>Primary affiliation of the LCV</p></td>
+<td><p>String</p></td>
+</tr>
+<tr class="row-odd"><td><p>Date completed</p></td>
+<td><p>Date assignment was completed</p></td>
+<td><p>Date</p></td>
+</tr>
+<tr class="row-even"><td><p>Total Pieces of Content</p></td>
+<td><p>Number of pieces, as entered in
+Salesforce</p></td>
+<td><p>Number</p></td>
+</tr>
+<tr class="row-odd"><td><p>Hours worked</p></td>
+<td><p>Number of Hours, as entered in
+Salesforce</p></td>
+<td><p>Number</p></td>
+</tr>
+<tr class="row-even"><td><p>Volunteer assignment
+subject</p></td>
+<td><p>Assignment subject as entered in
+Salesforce</p></td>
+<td><p>String</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="section" id="connecting-datasources">
+<h2>Connecting Datasources<a class="headerlink" href="#connecting-datasources" title="Permalink to this headline">¶</a></h2>
+<p>Each data source can be connected to other data sources to get specific metrics.</p>
+<p>Legal content flow can be connected to Google Analytics flow on the page path.
+Legal content flow can be connected to Content Revisions on the Node ID
+Legal content flow can be connected to Nodes Reviewed on the Node ID
+Nodes Reviewed can be connected to LCV Assignments on the Engagement ID</p>
+</div>
+<div class="section" id="dashboard-metrics">
+<h2>Dashboard Metrics<a class="headerlink" href="#dashboard-metrics" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="key-content-metrics">
+<h3>Key content metrics<a class="headerlink" href="#key-content-metrics" title="Permalink to this headline">¶</a></h3>
+<p>The key content metrics dashboard include:</p>
+<ul class="simple">
+<li><p>Total number of pieces of content</p></li>
+<li><p>Total page views</p></li>
+<li><p>Total sessions</p></li>
+<li><p>Average days since last SME review</p></li>
+<li><p>Average days since last staff revision</p></li>
+<li><p>Content trends (top 25 pieces of legal content each month, last 12 months)</p></li>
+<li><p>Total number of SME reviews</p></li>
+<li><p>Total number of staff revisions</p></li>
+</ul>
+<p>The above can be filtered by:</p>
+<ul class="simple">
+<li><p>Language</p></li>
+<li><p>Primary legal category (Family &amp; Safety, House &amp; Apartment)</p></li>
+<li><p>Primary secondary legal category (Divoce, Being Evicted)</p></li>
+<li><p>Date range, unless otherwise indicated above</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Law changes should be tracked as a metric but need to confirm how we are doing this.</p>
+</div>
+</div>
+<div class="section" id="legal-content-volunteer-metrics">
+<h3>Legal content volunteer metrics<a class="headerlink" href="#legal-content-volunteer-metrics" title="Permalink to this headline">¶</a></h3>
+<p>The key legal content volunteer (LCV) metrics include:</p>
+<ul class="simple">
+<li><p>Total number of LCVs who have a completed assignment during a specified time period</p></li>
+<li><p>Total number of pieces reviewed</p></li>
+<li><p>Total hours worked</p></li>
+<li><p>Total page views associated with pieces reviewed</p></li>
+</ul>
+<p>These metrics can be filtered by:</p>
+<ul class="simple">
+<li><p>Primary legal category</p></li>
+<li><p>Primary secondary legal category</p></li>
+<li><p>Organization</p></li>
+<li><p>Legal content volunteer</p></li>
+<li><p>Date range</p></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="creating_docs_in_github.html" class="btn btn-neutral float-right" title="Creating new docs in Github" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="tableau.html" class="btn btn-neutral float-left" title="Data analytics in Tableau" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2023, Illinois Legal Aid Online.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

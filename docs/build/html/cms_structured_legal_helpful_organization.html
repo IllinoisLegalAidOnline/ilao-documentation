@@ -1,0 +1,482 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Structured Helpful Organization &mdash; ILAO Sprint 124a documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/themeoverrides.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Managing structured content FAQs" href="cms_structured_faqs.html" />
+    <link rel="prev" title="Creating a Legal Question" href="cms_structured_legal_question.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> ILAO
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="design_guide.html">Design &amp; Style Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="block_management.html">Custom blocks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="people_management.html">User Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="legal_information.html">Browsing to legal information</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="legal_content_cms.html">Legal Content CMS</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="cms_law_tracker.html">Law tracker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_wysiwyg.html">WYSIWYG Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_custom_tokens.html">Custom Tokens</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_redirects.html">Creating redirects between pages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_content_management_tags.html">Content management tags</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_legal_content.html">Legal content type</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="cms_structured_legal_content.html">Next generation content/COPE</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="cms_structured_content_overview.html">Structured content (COPE content) Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cms_structured_content_navigation.html">DIY Solutions - Navigation and Layouts</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="structured_content_authoring.html">Structured content authoring guide</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_content_overview.html">Authoring best practices and guidelines</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="cms_structured_legal_content_admin.html">Creating and editing structured content</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_problem.html">Creating DIY Legal Solution</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_solution.html">Creating a Legal Option</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_question.html">Creating a Legal Question</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_step.html">Creating Legal Step</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_howto.html">Organizing legal steps into a How-to</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_forms.html">Restructuing Easy forms and blank forms for use in steps</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="cms_structured_content_reports.html">Structured content reports</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cms_structured_content_sms.html">Delivery over SMS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structured_content_tech.html">Structured content technical documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cms_portal_main_page.html">Portal main page content type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_toolboxes.html">Toolbox and related content types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_adrm.html">Lawyer Manuals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_content_reporting.html">Legal content reporting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_lcv_program.html">Legal Content Volunteers Program</a></li>
+<li class="toctree-l2"><a class="reference internal" href="legal_content_cms.html#known-workarounds">Known Workarounds</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="cms_structured_legal_content.html">Next generation content/COPE</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="cms_structured_content_overview.html">Structured content (COPE content) Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_structured_content_navigation.html">DIY Solutions - Navigation and Layouts</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="structured_content_authoring.html">Structured content authoring guide</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="cms_structured_legal_content_overview.html">Authoring best practices and guidelines</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="cms_structured_legal_content_admin.html">Creating and editing structured content</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_problem.html">Creating DIY Legal Solution</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_solution.html">Creating a Legal Option</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_howto.html">Organizing legal steps into a How-to</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_step.html">Creating Legal Step</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_forms.html">Restructuing Easy forms and blank forms for use in steps</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_question.html">Creating a Legal Question</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Structured Helpful Organization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_faqs.html">Managing structured content FAQs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_paired_markup.html">Paired Markup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_jurisdiction.html">Coverage area</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_structured_text.html">Structured Text &amp; Lists</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="cms_structured_legal_problem.html">Creating DIY Legal Solution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cms_structured_legal_solution.html">Creating a Legal Option</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cms_structured_legal_question.html">Creating a Legal Question</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cms_structured_legal_step.html">Creating Legal Step</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cms_structured_legal_howto.html">Organizing legal steps into a How-to</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cms_structured_legal_forms.html">Restructuing Easy forms and blank forms for use in steps</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cms_structured_content_reports.html">Structured content reports</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_structured_content_sms.html">Delivery over SMS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structured_content_tech.html">Structured content technical documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="basic_pages_cms.html">Basic pages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="testimonials_cms.html">Testimonials Content Type</a></li>
+<li class="toctree-l1"><a class="reference internal" href="webforms_cms.html">Webforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="translation_cms.html">Translation Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="calendar_cms.html">Calendar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jobs_cms.html">Job Listings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="discussion_groups.html">Discussion groups</a></li>
+<li class="toctree-l1"><a class="reference internal" href="otis_cms.html">Get Legal Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="site_search.html">Site Search</a></li>
+<li class="toctree-l1"><a class="reference internal" href="site_faqs.html">Site FAQs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="other_cms_features.html">Other Website Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="taxonomies.html">Taxonomies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rss_feeds.html">RSS Feeds</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ilao_api.html">ILAO’s API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="next_steps.html">Next Steps Flows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sms_overview.html">SMS Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_analytics.html">Data and Analytics</a></li>
+</ul>
+<p class="caption"><span class="caption-text">See also:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="creating_docs_in_github.html">Creating new docs in Github</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ILAO</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="legal_content_cms.html">Legal Content CMS</a> &raquo;</li>
+        
+          <li><a href="cms_structured_legal_content.html">Next generation content/COPE</a> &raquo;</li>
+        
+          <li><a href="structured_content_authoring.html">Structured content authoring guide</a> &raquo;</li>
+        
+          <li><a href="cms_structured_legal_content_admin.html">Creating and editing structured content</a> &raquo;</li>
+        
+      <li>Structured Helpful Organization</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/cms_structured_legal_helpful_organization.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="structured-helpful-organization">
+<span id="cms-legal-helpful-org"></span><h1>Structured Helpful Organization<a class="headerlink" href="#structured-helpful-organization" title="Permalink to this headline">¶</a></h1>
+<p>Helpful organizations can be added to structured legal content within a solution.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Do not add an existing <a class="reference external" href="https://www.illinoislegalaid.org/admin/group">legal organization</a>  as a helpful organization. Within a solution, you can reference existing legal organizations directly.</p>
+</div>
+<div class="section" id="what-is-a-helpful-organization">
+<h2>What is a helpful organization?<a class="headerlink" href="#what-is-a-helpful-organization" title="Permalink to this headline">¶</a></h2>
+<p>These are organizations that do not qualify for inclusion within our organization/locations/services system but that may still be helpful to users  This might include:</p>
+<ul class="simple">
+<li><p>DV shelters and/or hotlines</p></li>
+<li><p>Social services</p></li>
+<li><p>Government offices</p></li>
+</ul>
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">Todo</p>
+<p>When to include a helpful organization in structured content should be defined as part of overall content governance.</p>
+</div>
+</div>
+<div class="section" id="creating-a-helpful-organization">
+<h2>Creating a helpful organization<a class="headerlink" href="#creating-a-helpful-organization" title="Permalink to this headline">¶</a></h2>
+<p>To create a helpful organization:</p>
+<ul class="simple">
+<li><p>Enter the name of the organization as the title</p></li>
+<li><p>Add a short description and a meta description. The meta description will be used in the solution.</p></li>
+<li><p>Enter the main location of the organization</p></li>
+<li><p>Set the area served in the coverage area. You can add multiple administrative areas within one coverage area and/or add multiple coverage areas for different types of administrative areas</p></li>
+<li><p>Optionally, set an organization email</p></li>
+<li><p>Optionally, set an organization telephone</p></li>
+<li><p>Add at least one contact point</p></li>
+<li><p>Add any content management tags</p></li>
+<li><p>Indicate whether a translation should be created</p></li>
+<li><p>Indicate whether a translation is outdated</p></li>
+</ul>
+<div class="section" id="contact-point">
+<h3>Contact point<a class="headerlink" href="#contact-point" title="Permalink to this headline">¶</a></h3>
+<p>A contact point is a specific set of data associated with a helpful organization that tells the user how to reach the organization. For legal organizations, this information lives in the services node.</p>
+<p>To create a contact type:</p>
+<ul class="simple">
+<li><p>Add a contact type. Schema.org provides examples of Customer complaints department, sales department. For our purposes it may be: intake, help desk, navigator.</p></li>
+<li><p>Set the area served. This may be different than the organization service area. For example, A contact type of “Intake” may only serve 3 counties of the 14 county service area.</p></li>
+<li><p>Email for the contact point, if users can contact via email</p></li>
+<li><p>Telephone for the contact point, if users can contact via phone</p></li>
+<li><p>Hours of operation</p></li>
+<li><p>Products supported. Schema.org defines this as “The product or service this support contact point is related to (such as product support for a particular product line). This can be a specific product or product line (e.g. “iPhone”) or a general category of products or services (e.g. “smartphones”).”  For our purposes, this is likely to be things like legal referrals, social service referrals, food services, financial support, housing support, utility assistance.</p></li>
+</ul>
+<div class="admonition-todo admonition" id="id2">
+<p class="admonition-title">Todo</p>
+<p>Determine if we should actually require the location or indicate that it should not be displayed/shared.</p>
+</div>
+<div class="admonition-todo admonition" id="id3">
+<p class="admonition-title">Todo</p>
+<p>Determine if we should standardize a set of contact types and products supported for use in this content.</p>
+</div>
+</div>
+</div>
+<div class="section" id="full-add-edit-form">
+<h2>Full add/edit form<a class="headerlink" href="#full-add-edit-form" title="Permalink to this headline">¶</a></h2>
+<img alt="_images/cms-structured-helpful-org.png" src="_images/cms-structured-helpful-org.png" />
+</div>
+<div class="section" id="automatic-helpful-organization-creation">
+<h2>Automatic Helpful Organization Creation<a class="headerlink" href="#automatic-helpful-organization-creation" title="Permalink to this headline">¶</a></h2>
+<p>Some external APIs allow us to automatically create and update helpful organizations within our website.</p>
+<div class="section" id="housing-counselors">
+<h3>Housing counselors<a class="headerlink" href="#housing-counselors" title="Permalink to this headline">¶</a></h3>
+<p>We utilize housing counselor data from the Consumer financial protection bureau. This data is accessible via JSON files that are stored on that site and are available at:</p>
+<p><a class="reference external" href="https://files.consumerfinance.gov/a/assets/hud/jsons/">https://files.consumerfinance.gov/a/assets/hud/jsons/</a>” + zip + “.json”;
+where zip is the relevant zip code</p>
+<p><a class="reference external" href="https://files.consumerfinance.gov/a/assets/hud/jsons/60505.json">https://files.consumerfinance.gov/a/assets/hud/jsons/60505.json</a> for example.</p>
+<p>Each json file contains:</p>
+<ul class="simple">
+<li><p>2 objects: zip and counseling_agencies</p></li>
+<li><p>zip object contains:</p>
+<ul>
+<li><p>zipcode (the 5 digit zip code)</p></li>
+<li><p>lat (the latitude of the zip code)</p></li>
+<li><p>lng (the longetiude of the zip code)</p></li>
+</ul>
+</li>
+<li><p>counseling_agencies object contains an array of organizations. The mapping below shows how ILAO maps these agencies to our helpful organizations content types.</p></li>
+</ul>
+<p>Unless otherwise noted, the JSON element is at counseling_agencies[i]</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 45%" />
+<col style="width: 55%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Helpful organization field</p></th>
+<th class="head"><p>JSON element</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Title</p></td>
+<td><p>.nme</p></td>
+</tr>
+<tr class="row-odd"><td><p>Content description</p></td>
+<td><p>Hardcoded text</p></td>
+</tr>
+<tr class="row-even"><td><p>Meta description</p></td>
+<td><p>Hardcoded text</p></td>
+</tr>
+<tr class="row-odd"><td><p>Location - street address</p></td>
+<td><p>.mailingadr1</p></td>
+</tr>
+<tr class="row-even"><td><p>Location - city</p></td>
+<td><p>.mailingcity</p></td>
+</tr>
+<tr class="row-odd"><td><p>Location - state</p></td>
+<td><p>.mailingstatecd</p></td>
+</tr>
+<tr class="row-even"><td><p>Location - postal code</p></td>
+<td><p>.mailingadrzipcd</p></td>
+</tr>
+<tr class="row-odd"><td><p>Area served - admin area</p></td>
+<td><p>Zip Codes</p></td>
+</tr>
+<tr class="row-even"><td><p>Area served - zip code</p></td>
+<td><p>zip.zipcode</p></td>
+</tr>
+<tr class="row-odd"><td><p>Email</p></td>
+<td><p>.email</p></td>
+</tr>
+<tr class="row-even"><td><p>Telephone</p></td>
+<td><p>.phone1</p></td>
+</tr>
+<tr class="row-odd"><td><p>Contact - contact type</p></td>
+<td><p>“Housing counseling”</p></td>
+</tr>
+<tr class="row-even"><td><p>Contact - area served</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>–Admin area</p></td>
+<td><p>Zip Codes</p></td>
+</tr>
+<tr class="row-even"><td><p>–Zip codes</p></td>
+<td><p>zip.zipcode</p></td>
+</tr>
+<tr class="row-odd"><td><p>Contact - email</p></td>
+<td><p>.email</p></td>
+</tr>
+<tr class="row-even"><td><p>Contact - telephone</p></td>
+<td><p>.phone1</p></td>
+</tr>
+<tr class="row-odd"><td><p>Contact - hours</p></td>
+<td><p>null</p></td>
+</tr>
+<tr class="row-even"><td><p>Contact - products supported</p></td>
+<td><p>.services (this is an array; each item
+should be added separately)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Languages</p></td>
+<td><p>.languages (this is an array; each item
+should be added separately)</p></td>
+</tr>
+<tr class="row-even"><td><p>Source</p></td>
+<td><p>“ConsumerFinanceHousingCounselors”</p></td>
+</tr>
+<tr class="row-odd"><td><p>Navigational IA</p></td>
+<td><p>If proudcts supported includes “Rental
+housing counseling,” being evicted; if
+includes any term with mortgage delingquency
+then “foreclosure of a home I own”</p></td>
+</tr>
+<tr class="row-even"><td><p>Website</p></td>
+<td><p>.website</p></td>
+</tr>
+</tbody>
+</table>
+<p>Hard-coded content and meta description: Housing counselors approved by HUD offer free or low cost independent advice on renting, foreclosures, and other housing and credit issues.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="cms_structured_faqs.html" class="btn btn-neutral float-right" title="Managing structured content FAQs" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="cms_structured_legal_question.html" class="btn btn-neutral float-left" title="Creating a Legal Question" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2023, Illinois Legal Aid Online.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

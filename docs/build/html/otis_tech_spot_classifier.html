@@ -1,0 +1,367 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Spot Classsifer API Docs &mdash; ILAO Sprint 124a documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/themeoverrides.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Natural language processing of legal problem" href="otis_natural_language_processing.html" />
+    <link rel="prev" title="Houston AI Classifier API Docs" href="otis_tech_houston_ai.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> ILAO
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="design_guide.html">Design &amp; Style Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="block_management.html">Custom blocks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="people_management.html">User Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="legal_information.html">Browsing to legal information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="legal_content_cms.html">Legal Content CMS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cms_structured_legal_content.html">Next generation content/COPE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basic_pages_cms.html">Basic pages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="testimonials_cms.html">Testimonials Content Type</a></li>
+<li class="toctree-l1"><a class="reference internal" href="webforms_cms.html">Webforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="translation_cms.html">Translation Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="calendar_cms.html">Calendar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jobs_cms.html">Job Listings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="discussion_groups.html">Discussion groups</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="otis_cms.html">Get Legal Help</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="otis_endusers.html">Get Legal Help Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="otis_organization_management.html">Organization management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="otis_endpoints.html">Triage rule endpoints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="otis_reports.html">Get Legal Help Reporting</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="otis_ai_integration.html">OTIS AI Integration</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="otis_tech_guided_navigation.html">Guided Navigation Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="otis_tech_guided_navigation_api.html">Guided Navigation API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="otis_tech_guided_navigation_forms.html">Guided Navigation Forms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="otis_guided_nav_functions.html">Guided Navigation SMS functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="otis_tech_houston_ai.html">Houston AI Classifier API Docs</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Spot Classsifer API Docs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#configuration-in-drupal">Configuration in Drupal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#methods">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#example">Example</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="otis_natural_language_processing.html">Natural language processing of legal problem</a></li>
+<li class="toctree-l3"><a class="reference internal" href="conflict_check.html">Conflict API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="otis_ai_integration.html#prototype">Prototype</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="otis_third_party_support.html">Supported Integrations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="otis_sms_intake.html">Online Intake Over SMS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="otis_facebook.html">Facebook Integrations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="otis_features.html">Additional Features</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="site_search.html">Site Search</a></li>
+<li class="toctree-l1"><a class="reference internal" href="site_faqs.html">Site FAQs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="other_cms_features.html">Other Website Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="taxonomies.html">Taxonomies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rss_feeds.html">RSS Feeds</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ilao_api.html">ILAO’s API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="next_steps.html">Next Steps Flows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sms_overview.html">SMS Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_analytics.html">Data and Analytics</a></li>
+</ul>
+<p class="caption"><span class="caption-text">See also:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="creating_docs_in_github.html">Creating new docs in Github</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ILAO</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="otis_cms.html">Get Legal Help</a> &raquo;</li>
+        
+          <li><a href="otis_ai_integration.html">OTIS AI Integration</a> &raquo;</li>
+        
+      <li>Spot Classsifer API Docs</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/otis_tech_spot_classifier.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="spot-classsifer-api-docs">
+<h1>Spot Classsifer API Docs<a class="headerlink" href="#spot-classsifer-api-docs" title="Permalink to this headline">¶</a></h1>
+<p>The <a class="reference external" href="https://app.swaggerhub.com/apis-docs/suffolklitlab/spot/">LIT Spot classifier</a> is an API service that takes text and returns one or more legal problem codes based on the <a class="reference external" href="https://taxonomy.legal/">LIST taxonomy</a>.</p>
+<div class="section" id="configuration-in-drupal">
+<h2>Configuration in Drupal<a class="headerlink" href="#configuration-in-drupal" title="Permalink to this headline">¶</a></h2>
+<p>We have a configuration page that allows us to store:</p>
+<ul class="simple">
+<li><p>Our API key, required to interact with the classifier</p></li>
+<li><p>The URL for the classifier</p></li>
+<li><p>Whether to allow SPOT to save submitted text or not</p></li>
+<li><p>The cutoff values (lower, upper, and prediction)</p></li>
+</ul>
+</div>
+<div class="section" id="methods">
+<h2>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<p>We currently support:</p>
+<ul class="simple">
+<li><p>/taxonomy which returns the labels of the LIST taxonomy in use in the classifier</p></li>
+<li><p>/entities-terminal and /entities-nested which accepts:</p>
+<ul>
+<li><p>text (a string up to 5000 characters)</p></li>
+<li><p>save-text (0 or 1; whether the classifier is allowed to save our text)</p></li>
+<li><p>cutoff-lower (between 0-1; default 0); the lower prediction must exceed this to be returned</p></li>
+<li><p>cutoff-pred (between 0-1; default .5); the prediction must exceed this to be returned</p></li>
+<li><p>cutoff-upper (between 0-1; default .5); the upper bound of the prediction must exceed this to be returned.</p></li>
+</ul>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We will still need to build out the feedback loop to confirm correctness in a future iteration.</p>
+</div>
+<div class="section" id="entities-nested">
+<h3>Entities-nested<a class="headerlink" href="#entities-nested" title="Permalink to this headline">¶</a></h3>
+<p>Entities nested returns the entire LIST tree for a provided text. For example, it might return Housing-&gt;Evictions from a home</p>
+</div>
+<div class="section" id="entities-terminal">
+<h3>Entities-terminal<a class="headerlink" href="#entities-terminal" title="Permalink to this headline">¶</a></h3>
+<p>Entities terminal returns only the lowest LIST terms that match a text. For example, it might return Evictions from a Home but not the parent Housing term.</p>
+<p>..note :: Not all levels of the LIST taxonomy are currently supported in the classifier.</p>
+</div>
+</div>
+<div class="section" id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
+<p>When using entities-nested, the results return the entire hierarchical chain of problem codes where they exist.</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="nt">&quot;build&quot;</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span><span class="nt">&quot;query-id&quot;</span><span class="p">:</span><span class="s2">&quot;8d27212cb01a470781883942d8bfa020&quot;</span><span class="p">,</span><span class="nt">&quot;text&quot;</span><span class="p">:</span><span class="s2">&quot;My landlord is trying to evict me&quot;</span><span class="p">,</span><span class="nt">&quot;save-text&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="nt">&quot;cutoff-lower&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="nt">&quot;cutoff-pred&quot;</span><span class="p">:</span><span class="mf">0.51</span><span class="p">,</span><span class="nt">&quot;cutoff-upper&quot;</span><span class="p">:</span><span class="mf">0.5</span><span class="p">,</span><span class="nt">&quot;labels&quot;</span><span class="p">:</span>
+<span class="p">[</span>
+<span class="p">{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;HO-00-00-00-00&quot;</span><span class="p">,</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;Housing&quot;</span><span class="p">,</span><span class="nt">&quot;lower&quot;</span><span class="p">:</span><span class="mf">0.6702660283747915</span><span class="p">,</span><span class="nt">&quot;pred&quot;</span><span class="p">:</span><span class="mf">0.6968044802596818</span><span class="p">,</span><span class="nt">&quot;upper&quot;</span><span class="p">:</span><span class="mf">0.7231564346121119</span><span class="p">,</span><span class="nt">&quot;children&quot;</span><span class="p">:</span>
+<span class="p">[</span>
+<span class="p">{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;HO-02-00-00-00&quot;</span><span class="p">,</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;Eviction from a home&quot;</span><span class="p">,</span><span class="nt">&quot;lower&quot;</span><span class="p">:</span><span class="mf">0.4510838081510812</span><span class="p">,</span><span class="nt">&quot;pred&quot;</span><span class="p">:</span><span class="mf">0.8720953624254235</span><span class="p">,</span><span class="nt">&quot;upper&quot;</span><span class="p">:</span><span class="mf">0.9232572174552537</span><span class="p">,</span><span class="nt">&quot;children&quot;</span><span class="p">:</span>
+<span class="p">[</span>
+<span class="p">{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;HO-02-01-00-00&quot;</span><span class="p">,</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;Eviction from a homeless shelter or group home&quot;</span><span class="p">,</span><span class="nt">&quot;lower&quot;</span><span class="p">:</span><span class="mf">0.5927350486282457</span><span class="p">,</span><span class="nt">&quot;pred&quot;</span><span class="p">:</span><span class="mf">0.8893196920078001</span><span class="p">,</span><span class="nt">&quot;upper&quot;</span><span class="p">:</span><span class="mf">0.9262311423782457</span><span class="p">},</span>
+<span class="p">{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;HO-02-03-00-00&quot;</span><span class="p">,</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;Eviction from private rental housing (not public or subsidized)&quot;</span><span class="p">,</span><span class="nt">&quot;lower&quot;</span><span class="p">:</span><span class="mf">0.6703774769222283</span><span class="p">,</span><span class="nt">&quot;pred&quot;</span><span class="p">:</span><span class="mf">0.9220504182247975</span><span class="p">,</span><span class="nt">&quot;upper&quot;</span><span class="p">:</span><span class="mf">0.9376555591075285</span><span class="p">},</span>
+<span class="p">{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;HO-02-04-00-00&quot;</span><span class="p">,</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;Defenses to stop or delay an eviction&quot;</span><span class="p">,</span><span class="nt">&quot;lower&quot;</span><span class="p">:</span><span class="mf">0.6619295040045312</span><span class="p">,</span><span class="nt">&quot;pred&quot;</span><span class="p">:</span><span class="mf">0.9266108162688175</span><span class="p">,</span><span class="nt">&quot;upper&quot;</span><span class="p">:</span><span class="mf">0.9510858223666679</span><span class="p">,</span><span class="nt">&quot;children&quot;</span><span class="p">:</span>
+<span class="p">[</span>
+<span class="p">{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;HO-02-04-01-00&quot;</span><span class="p">,</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;Notice and Procedural defenses against an eviction&quot;</span><span class="p">,</span><span class="nt">&quot;lower&quot;</span><span class="p">:</span><span class="mf">0.7822015239462637</span><span class="p">,</span><span class="nt">&quot;pred&quot;</span><span class="p">:</span><span class="mf">0.89394459879573</span><span class="p">,</span><span class="nt">&quot;upper&quot;</span><span class="p">:</span><span class="mf">0.917512465730012</span><span class="p">},</span>
+<span class="p">{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;HO-02-04-03-00&quot;</span><span class="p">,</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;Living conditions (habitability) defenses against an eviction&quot;</span><span class="p">,</span><span class="nt">&quot;lower&quot;</span><span class="p">:</span><span class="mf">0.575730354436689</span><span class="p">,</span><span class="nt">&quot;pred&quot;</span><span class="p">:</span><span class="mf">0.8952891160868177</span><span class="p">,</span><span class="nt">&quot;upper&quot;</span><span class="p">:</span><span class="mf">0.932663948186689</span><span class="p">},</span>
+<span class="p">{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;HO-02-04-05-00&quot;</span><span class="p">,</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;Title and ownership defenses against an eviction&quot;</span><span class="p">,</span><span class="nt">&quot;lower&quot;</span><span class="p">:</span><span class="mf">0.5171006856180037</span><span class="p">,</span><span class="nt">&quot;pred&quot;</span><span class="p">:</span><span class="mf">0.9049261998315066</span><span class="p">,</span><span class="nt">&quot;upper&quot;</span><span class="p">:</span><span class="mf">0.9456721141894324</span><span class="p">},</span>
+<span class="p">{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;HO-02-04-06-00&quot;</span><span class="p">,</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;Retaliatory Eviction defenses against an eviction&quot;</span><span class="p">,</span><span class="nt">&quot;lower&quot;</span><span class="p">:</span><span class="mf">0.5405569899829392</span><span class="p">,</span><span class="nt">&quot;pred&quot;</span><span class="p">:</span><span class="mf">0.8496244938488562</span><span class="p">,</span><span class="nt">&quot;upper&quot;</span><span class="p">:</span><span class="mf">0.8947077754781543</span><span class="p">}]}]},</span>
+<span class="p">{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;HO-06-00-00-00&quot;</span><span class="p">,</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;Renting or leasing a home&quot;</span><span class="p">,</span><span class="nt">&quot;lower&quot;</span><span class="p">:</span><span class="mf">0.7056405686109303</span><span class="p">,</span><span class="nt">&quot;pred&quot;</span><span class="p">:</span><span class="mf">0.9204789073345129</span><span class="p">,</span><span class="nt">&quot;upper&quot;</span><span class="p">:</span><span class="mf">0.935466769526348</span><span class="p">,</span><span class="nt">&quot;children&quot;</span><span class="p">:</span>
+<span class="p">[</span>
+<span class="p">{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;HO-02-00-00-00&quot;</span><span class="p">,</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;Eviction from a home&quot;</span><span class="p">,</span><span class="nt">&quot;lower&quot;</span><span class="p">:</span><span class="mf">0.4510838081510812</span><span class="p">,</span><span class="nt">&quot;pred&quot;</span><span class="p">:</span><span class="mf">0.8720953624254235</span><span class="p">,</span><span class="nt">&quot;upper&quot;</span><span class="p">:</span><span class="mf">0.9232572174552537</span><span class="p">,</span><span class="nt">&quot;children&quot;</span><span class="p">:</span>
+<span class="p">[</span>
+<span class="p">{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;HO-02-01-00-00&quot;</span><span class="p">,</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;Eviction from a homeless shelter or group home&quot;</span><span class="p">,</span><span class="nt">&quot;lower&quot;</span><span class="p">:</span><span class="mf">0.5927350486282457</span><span class="p">,</span><span class="nt">&quot;pred&quot;</span><span class="p">:</span><span class="mf">0.8893196920078001</span><span class="p">,</span><span class="nt">&quot;upper&quot;</span><span class="p">:</span><span class="mf">0.9262311423782457</span><span class="p">},</span>
+<span class="p">{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;HO-02-03-00-00&quot;</span><span class="p">,</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;Eviction from private rental housing (not public or subsidized)&quot;</span><span class="p">,</span><span class="nt">&quot;lower&quot;</span><span class="p">:</span><span class="mf">0.6703774769222283</span><span class="p">,</span><span class="nt">&quot;pred&quot;</span><span class="p">:</span><span class="mf">0.9220504182247975</span><span class="p">,</span><span class="nt">&quot;upper&quot;</span><span class="p">:</span><span class="mf">0.9376555591075285</span><span class="p">},</span>
+<span class="p">{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;HO-02-04-00-00&quot;</span><span class="p">,</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;Defenses to stop or delay an eviction&quot;</span><span class="p">,</span><span class="nt">&quot;lower&quot;</span><span class="p">:</span><span class="mf">0.6619295040045312</span><span class="p">,</span><span class="nt">&quot;pred&quot;</span><span class="p">:</span><span class="mf">0.9266108162688175</span><span class="p">,</span><span class="nt">&quot;upper&quot;</span><span class="p">:</span><span class="mf">0.9510858223666679</span><span class="p">,</span><span class="nt">&quot;children&quot;</span><span class="p">:</span>
+<span class="p">[</span>
+<span class="p">{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;HO-02-04-01-00&quot;</span><span class="p">,</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;Notice and Procedural defenses against an eviction&quot;</span><span class="p">,</span><span class="nt">&quot;lower&quot;</span><span class="p">:</span><span class="mf">0.7822015239462637</span><span class="p">,</span><span class="nt">&quot;pred&quot;</span><span class="p">:</span><span class="mf">0.89394459879573</span><span class="p">,</span><span class="nt">&quot;upper&quot;</span><span class="p">:</span><span class="mf">0.917512465730012</span><span class="p">},</span>
+<span class="p">{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;HO-02-04-03-00&quot;</span><span class="p">,</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;Living conditions (habitability) defenses against an eviction&quot;</span><span class="p">,</span><span class="nt">&quot;lower&quot;</span><span class="p">:</span><span class="mf">0.575730354436689</span><span class="p">,</span><span class="nt">&quot;pred&quot;</span><span class="p">:</span><span class="mf">0.8952891160868177</span><span class="p">,</span><span class="nt">&quot;upper&quot;</span><span class="p">:</span><span class="mf">0.932663948186689</span><span class="p">},</span>
+<span class="p">{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;HO-02-04-05-00&quot;</span><span class="p">,</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;Title and ownership defenses against an eviction&quot;</span><span class="p">,</span><span class="nt">&quot;lower&quot;</span><span class="p">:</span><span class="mf">0.5171006856180037</span><span class="p">,</span><span class="nt">&quot;pred&quot;</span><span class="p">:</span><span class="mf">0.9049261998315066</span><span class="p">,</span><span class="nt">&quot;upper&quot;</span><span class="p">:</span><span class="mf">0.9456721141894324</span><span class="p">},</span>
+<span class="p">{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;HO-02-04-06-00&quot;</span><span class="p">,</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;Retaliatory Eviction defenses against an eviction&quot;</span><span class="p">,</span><span class="nt">&quot;lower&quot;</span><span class="p">:</span><span class="mf">0.5405569899829392</span><span class="p">,</span><span class="nt">&quot;pred&quot;</span><span class="p">:</span><span class="mf">0.8496244938488562</span><span class="p">,</span><span class="nt">&quot;upper&quot;</span><span class="p">:</span><span class="mf">0.8947077754781543</span><span class="p">}]}]}]}]}]}</span>
+</pre></div>
+</div>
+<p>When using entities-terminal, the results return only the lowest available terms.</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="nt">&quot;build&quot;</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span><span class="nt">&quot;query-id&quot;</span><span class="p">:</span><span class="s2">&quot;8d27212cb01a470781883942d8bfa020&quot;</span><span class="p">,</span><span class="nt">&quot;text&quot;</span><span class="p">:</span><span class="s2">&quot;My landlord is trying to evict me&quot;</span><span class="p">,</span><span class="nt">&quot;save-text&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="nt">&quot;cutoff-lower&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="nt">&quot;cutoff-pred&quot;</span><span class="p">:</span><span class="mf">0.51</span><span class="p">,</span><span class="nt">&quot;cutoff-upper&quot;</span><span class="p">:</span><span class="mf">0.5</span><span class="p">,</span><span class="nt">&quot;labels&quot;</span><span class="p">:[{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;HO-00-00-00-00&quot;</span><span class="p">,</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;Housing&quot;</span><span class="p">,</span><span class="nt">&quot;lower&quot;</span><span class="p">:</span><span class="mf">0.6702660283747915</span><span class="p">,</span><span class="nt">&quot;pred&quot;</span><span class="p">:</span><span class="mf">0.6968044802596818</span><span class="p">,</span><span class="nt">&quot;upper&quot;</span><span class="p">:</span><span class="mf">0.7231564346121119</span><span class="p">,</span><span class="nt">&quot;children&quot;</span><span class="p">:</span>
+<span class="p">[{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;HO-02-00-00-00&quot;</span><span class="p">,</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;Eviction from a home&quot;</span><span class="p">,</span><span class="nt">&quot;lower&quot;</span><span class="p">:</span><span class="mf">0.4510838081510812</span><span class="p">,</span><span class="nt">&quot;pred&quot;</span><span class="p">:</span><span class="mf">0.8720953624254235</span><span class="p">,</span><span class="nt">&quot;upper&quot;</span><span class="p">:</span><span class="mf">0.9232572174552537</span><span class="p">,</span><span class="nt">&quot;children&quot;</span><span class="p">:</span>
+<span class="p">[</span>
+<span class="p">{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;HO-02-01-00-00&quot;</span><span class="p">,</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;Eviction from a homeless shelter or group home&quot;</span><span class="p">,</span><span class="nt">&quot;lower&quot;</span><span class="p">:</span><span class="mf">0.5927350486282457</span><span class="p">,</span><span class="nt">&quot;pred&quot;</span><span class="p">:</span><span class="mf">0.8893196920078001</span><span class="p">,</span><span class="nt">&quot;upper&quot;</span><span class="p">:</span><span class="mf">0.9262311423782457</span><span class="p">},</span>
+<span class="p">{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;HO-02-03-00-00&quot;</span><span class="p">,</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;Eviction from private rental housing (not public or subsidized)&quot;</span><span class="p">,</span><span class="nt">&quot;lower&quot;</span><span class="p">:</span><span class="mf">0.6703774769222283</span><span class="p">,</span><span class="nt">&quot;pred&quot;</span><span class="p">:</span><span class="mf">0.9220504182247975</span><span class="p">,</span><span class="nt">&quot;upper&quot;</span><span class="p">:</span><span class="mf">0.9376555591075285</span><span class="p">},</span>
+<span class="p">{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;HO-02-04-00-00&quot;</span><span class="p">,</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;Defenses to stop or delay an eviction&quot;</span><span class="p">,</span><span class="nt">&quot;lower&quot;</span><span class="p">:</span><span class="mf">0.6619295040045312</span><span class="p">,</span><span class="nt">&quot;pred&quot;</span><span class="p">:</span><span class="mf">0.9266108162688175</span><span class="p">,</span><span class="nt">&quot;upper&quot;</span><span class="p">:</span><span class="mf">0.9510858223666679</span><span class="p">,</span><span class="nt">&quot;children&quot;</span><span class="p">:</span>
+<span class="p">[</span>
+<span class="p">{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;HO-02-04-01-00&quot;</span><span class="p">,</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;Notice and Procedural defenses against an eviction&quot;</span><span class="p">,</span><span class="nt">&quot;lower&quot;</span><span class="p">:</span><span class="mf">0.7822015239462637</span><span class="p">,</span><span class="nt">&quot;pred&quot;</span><span class="p">:</span><span class="mf">0.89394459879573</span><span class="p">,</span><span class="nt">&quot;upper&quot;</span><span class="p">:</span><span class="mf">0.917512465730012</span><span class="p">},</span>
+<span class="p">{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;HO-02-04-03-00&quot;</span><span class="p">,</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;Living conditions (habitability) defenses against an eviction&quot;</span><span class="p">,</span><span class="nt">&quot;lower&quot;</span><span class="p">:</span><span class="mf">0.575730354436689</span><span class="p">,</span><span class="nt">&quot;pred&quot;</span><span class="p">:</span><span class="mf">0.8952891160868177</span><span class="p">,</span><span class="nt">&quot;upper&quot;</span><span class="p">:</span><span class="mf">0.932663948186689</span><span class="p">},</span>
+<span class="p">{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;HO-02-04-05-00&quot;</span><span class="p">,</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;Title and ownership defenses against an eviction&quot;</span><span class="p">,</span><span class="nt">&quot;lower&quot;</span><span class="p">:</span><span class="mf">0.5171006856180037</span><span class="p">,</span><span class="nt">&quot;pred&quot;</span><span class="p">:</span><span class="mf">0.9049261998315066</span><span class="p">,</span><span class="nt">&quot;upper&quot;</span><span class="p">:</span><span class="mf">0.9456721141894324</span><span class="p">},</span>
+<span class="p">{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;HO-02-04-06-00&quot;</span><span class="p">,</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;Retaliatory Eviction defenses against an eviction&quot;</span><span class="p">,</span><span class="nt">&quot;lower&quot;</span><span class="p">:</span><span class="mf">0.5405569899829392</span><span class="p">,</span><span class="nt">&quot;pred&quot;</span><span class="p">:</span><span class="mf">0.8496244938488562</span><span class="p">,</span><span class="nt">&quot;upper&quot;</span><span class="p">:</span><span class="mf">0.8947077754781543</span><span class="p">}]}]},</span>
+<span class="p">{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;HO-06-00-00-00&quot;</span><span class="p">,</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;Renting or leasing a home&quot;</span><span class="p">,</span><span class="nt">&quot;lower&quot;</span><span class="p">:</span><span class="mf">0.7056405686109303</span><span class="p">,</span><span class="nt">&quot;pred&quot;</span><span class="p">:</span><span class="mf">0.9204789073345129</span><span class="p">,</span><span class="nt">&quot;upper&quot;</span><span class="p">:</span><span class="mf">0.935466769526348</span><span class="p">,</span><span class="nt">&quot;children&quot;</span><span class="p">:</span>
+<span class="p">[</span>
+<span class="p">{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;HO-02-00-00-00&quot;</span><span class="p">,</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;Eviction from a home&quot;</span><span class="p">,</span><span class="nt">&quot;lower&quot;</span><span class="p">:</span><span class="mf">0.4510838081510812</span><span class="p">,</span><span class="nt">&quot;pred&quot;</span><span class="p">:</span><span class="mf">0.8720953624254235</span><span class="p">,</span><span class="nt">&quot;upper&quot;</span><span class="p">:</span><span class="mf">0.9232572174552537</span><span class="p">,</span><span class="nt">&quot;children&quot;</span><span class="p">:</span>
+<span class="p">[</span>
+<span class="p">{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;HO-02-01-00-00&quot;</span><span class="p">,</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;Eviction from a homeless shelter or group home&quot;</span><span class="p">,</span><span class="nt">&quot;lower&quot;</span><span class="p">:</span><span class="mf">0.5927350486282457</span><span class="p">,</span><span class="nt">&quot;pred&quot;</span><span class="p">:</span><span class="mf">0.8893196920078001</span><span class="p">,</span><span class="nt">&quot;upper&quot;</span><span class="p">:</span><span class="mf">0.9262311423782457</span><span class="p">},</span>
+<span class="p">{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;HO-02-03-00-00&quot;</span><span class="p">,</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;Eviction from private rental housing (not public or subsidized)&quot;</span><span class="p">,</span><span class="nt">&quot;lower&quot;</span><span class="p">:</span><span class="mf">0.6703774769222283</span><span class="p">,</span><span class="nt">&quot;pred&quot;</span><span class="p">:</span><span class="mf">0.9220504182247975</span><span class="p">,</span><span class="nt">&quot;upper&quot;</span><span class="p">:</span><span class="mf">0.9376555591075285</span><span class="p">},</span>
+<span class="p">{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;HO-02-04-00-00&quot;</span><span class="p">,</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;Defenses to stop or delay an eviction&quot;</span><span class="p">,</span><span class="nt">&quot;lower&quot;</span><span class="p">:</span><span class="mf">0.6619295040045312</span><span class="p">,</span><span class="nt">&quot;pred&quot;</span><span class="p">:</span><span class="mf">0.9266108162688175</span><span class="p">,</span><span class="nt">&quot;upper&quot;</span><span class="p">:</span><span class="mf">0.9510858223666679</span><span class="p">,</span><span class="nt">&quot;children&quot;</span><span class="p">:[</span>
+<span class="p">{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;HO-02-04-01-00&quot;</span><span class="p">,</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;Notice and Procedural defenses against an eviction&quot;</span><span class="p">,</span><span class="nt">&quot;lower&quot;</span><span class="p">:</span><span class="mf">0.7822015239462637</span><span class="p">,</span><span class="nt">&quot;pred&quot;</span><span class="p">:</span><span class="mf">0.89394459879573</span><span class="p">,</span><span class="nt">&quot;upper&quot;</span><span class="p">:</span><span class="mf">0.917512465730012</span><span class="p">},</span>
+<span class="p">{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;HO-02-04-03-00&quot;</span><span class="p">,</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;Living conditions (habitability) defenses against an eviction&quot;</span><span class="p">,</span><span class="nt">&quot;lower&quot;</span><span class="p">:</span><span class="mf">0.575730354436689</span><span class="p">,</span><span class="nt">&quot;pred&quot;</span><span class="p">:</span><span class="mf">0.8952891160868177</span><span class="p">,</span><span class="nt">&quot;upper&quot;</span><span class="p">:</span><span class="mf">0.932663948186689</span><span class="p">},</span>
+<span class="p">{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;HO-02-04-05-00&quot;</span><span class="p">,</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;Title and ownership defenses against an eviction&quot;</span><span class="p">,</span><span class="nt">&quot;lower&quot;</span><span class="p">:</span><span class="mf">0.5171006856180037</span><span class="p">,</span><span class="nt">&quot;pred&quot;</span><span class="p">:</span><span class="mf">0.9049261998315066</span><span class="p">,</span><span class="nt">&quot;upper&quot;</span><span class="p">:</span><span class="mf">0.9456721141894324</span><span class="p">},</span>
+<span class="p">{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;HO-02-04-06-00&quot;</span><span class="p">,</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;Retaliatory Eviction defenses against an eviction&quot;</span><span class="p">,</span><span class="nt">&quot;lower&quot;</span><span class="p">:</span><span class="mf">0.5405569899829392</span><span class="p">,</span><span class="nt">&quot;pred&quot;</span><span class="p">:</span><span class="mf">0.8496244938488562</span><span class="p">,</span><span class="nt">&quot;upper&quot;</span><span class="p">:</span><span class="mf">0.8947077754781543</span><span class="p">}]}]}]}]}]}</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="otis_natural_language_processing.html" class="btn btn-neutral float-right" title="Natural language processing of legal problem" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="otis_tech_houston_ai.html" class="btn btn-neutral float-left" title="Houston AI Classifier API Docs" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2023, Illinois Legal Aid Online.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

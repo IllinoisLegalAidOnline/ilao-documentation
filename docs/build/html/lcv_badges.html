@@ -1,0 +1,481 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Gamification: Badges and Milestones &mdash; ILAO Sprint 124a documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/themeoverrides.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Editorial Dashboard" href="lcv_dashboard.html" />
+    <link rel="prev" title="Gamification: Points" href="lcv_points_system.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> ILAO
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="design_guide.html">Design &amp; Style Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="block_management.html">Custom blocks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="people_management.html">User Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="legal_information.html">Browsing to legal information</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="legal_content_cms.html">Legal Content CMS</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="cms_law_tracker.html">Law tracker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_wysiwyg.html">WYSIWYG Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_custom_tokens.html">Custom Tokens</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_redirects.html">Creating redirects between pages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_content_management_tags.html">Content management tags</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_legal_content.html">Legal content type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_structured_legal_content.html">Next generation content/COPE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_portal_main_page.html">Portal main page content type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_toolboxes.html">Toolbox and related content types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_adrm.html">Lawyer Manuals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_content_reporting.html">Legal content reporting</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="cms_lcv_program.html">Legal Content Volunteers Program</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="lcv_roles.html">Permissions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lcv_points_system.html">Gamification: Points</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Gamification: Badges and Milestones</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#badges-vs-milestones">Badges vs Milestones</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#champion-badges">Champion badges</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#defining-badges">Defining Badges</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#defining-milestones">Defining Milestones</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#listings">Listings</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lcv_dashboard.html">Editorial Dashboard</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lcv_leaderboards.html">Leaderboards</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lcv_reporting.html">Legal Content Volunteer Program Reports</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="legal_content_cms.html#known-workarounds">Known Workarounds</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="cms_structured_legal_content.html">Next generation content/COPE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basic_pages_cms.html">Basic pages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="testimonials_cms.html">Testimonials Content Type</a></li>
+<li class="toctree-l1"><a class="reference internal" href="webforms_cms.html">Webforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="translation_cms.html">Translation Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="calendar_cms.html">Calendar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jobs_cms.html">Job Listings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="discussion_groups.html">Discussion groups</a></li>
+<li class="toctree-l1"><a class="reference internal" href="otis_cms.html">Get Legal Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="site_search.html">Site Search</a></li>
+<li class="toctree-l1"><a class="reference internal" href="site_faqs.html">Site FAQs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="other_cms_features.html">Other Website Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="taxonomies.html">Taxonomies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rss_feeds.html">RSS Feeds</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ilao_api.html">ILAO’s API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="next_steps.html">Next Steps Flows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sms_overview.html">SMS Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_analytics.html">Data and Analytics</a></li>
+</ul>
+<p class="caption"><span class="caption-text">See also:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="creating_docs_in_github.html">Creating new docs in Github</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ILAO</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="legal_content_cms.html">Legal Content CMS</a> &raquo;</li>
+        
+          <li><a href="cms_lcv_program.html">Legal Content Volunteers Program</a> &raquo;</li>
+        
+      <li>Gamification: Badges and Milestones</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/lcv_badges.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="gamification-badges-and-milestones">
+<h1>Gamification: Badges and Milestones<a class="headerlink" href="#gamification-badges-and-milestones" title="Permalink to this headline">¶</a></h1>
+<p>ILAO awards badges to users based on activity.</p>
+<img alt="_images/lcv_badges.png" src="_images/lcv_badges.png" />
+<p>There are 6 badge icons for each legal category:</p>
+<ul class="simple">
+<li><p>Hero</p></li>
+<li><p>Leader</p></li>
+<li><p>Legend</p></li>
+<li><p>Workhorse</p></li>
+<li><p>Author</p></li>
+<li><p>Partner</p></li>
+</ul>
+<p>There are also 3 “Champion” badges per category (1st, 2nd, 3rd).
+There is also a star image for milestone awards.</p>
+<p><a class="reference external" href="https://drive.google.com/drive/folders/10Bsr_Q7OMw_4REJ1abGzWIZINNKJR4SM">Badge icons can be found on the Google drive</a>.</p>
+<div class="section" id="badges-vs-milestones">
+<h2>Badges vs Milestones<a class="headerlink" href="#badges-vs-milestones" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="badges">
+<h3>Badges<a class="headerlink" href="#badges" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://www.illinoislegalaid.org/admin/structure/gamification/badge/add">Add a badge</a></p>
+<ul class="simple">
+<li><p>Can only be awarded to individuals</p></li>
+<li><p>Are awarded based on points (but points can be awarded per word or at a flat rate)</p></li>
+<li><p>Have an associated badge image</p></li>
+<li><p>May be earned:</p>
+<ul>
+<li><p>one time</p></li>
+<li><p>once per month</p></li>
+<li><p>once a quarter</p></li>
+<li><p>once a year</p></li>
+</ul>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The badge can further be limited to a specific time period. For example, a badge that can be awarded once a quarter but limited to a time period of July 1, 2021 to August 15, 2021 can not be earned between August 16, 2021 and September 30, 2021 despite the badge being available once a quarter.</p>
+</div>
+<p>Examples:</p>
+<ul class="simple">
+<li><p>Family &amp; Safety Hero</p></li>
+<li><p>Crime &amp; Traffic Hero</p></li>
+<li><p>Workhorse</p></li>
+<li><p>Family &amp; Safety Workhorse</p></li>
+<li><p>Pro Bono Month Champion</p></li>
+</ul>
+<p>The author and partner badges are reserved for specialty awards rather than general editorial work. The author badge might be awarded:</p>
+<ul class="simple">
+<li><p>with a label of “Contributor” the first time a user drafts an article from scratch and can only be earned once.</p></li>
+<li><p>with a label of “Scribe” the first time a user drafts 5 articles from scratch and can only be earned once.</p></li>
+<li><p>with a label of “Wordsmith” for every 10 articles a user drafts and can be earned as often as necessary.</p></li>
+</ul>
+<p>The partner badge might be awarded:
+* with a category of “UX Tester” the first time a user completes an observeration test
+* with a category of “QA Partner” when a user tests an Easy Form</p>
+</div>
+<div class="section" id="milestones">
+<h3>Milestones<a class="headerlink" href="#milestones" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://www.illinoislegalaid.org/admin/structure/gamification/milestone/add">Add a milestone</a></p>
+<ul class="simple">
+<li><p>Can be awarded to individuals or to organizations</p></li>
+<li><p>Can be tied to words, articles, points, or editors (for organizations)</p></li>
+<li><p>Appear only in the milestones block</p></li>
+<li><p>Have a star icon (no badge)</p></li>
+<li><p>Are awarded:</p>
+<ul>
+<li><p>once, when first earned</p></li>
+<li><p>at the end of the quarter</p></li>
+<li><p>at the end of the year</p></li>
+</ul>
+</li>
+</ul>
+<p>Examples of milestones might be:</p>
+<ul class="simple">
+<li><p>1st article edited</p></li>
+<li><p>100 articles edited</p></li>
+<li><p>250 articles edited</p></li>
+<li><p>5,000 words edited</p></li>
+<li><p>10,000 words edited</p></li>
+<li><p>100% LCV contribution (awarded to an organization for the quarter/year)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="champion-badges">
+<h2>Champion badges<a class="headerlink" href="#champion-badges" title="Permalink to this headline">¶</a></h2>
+<p>At the end of each quarter, champion badges will be awarded to the user with the highest number of points in each category, 1st, 2nd, and 3rd place. These badges would be named for the period awarded: School &amp; Education, Q2 2021.</p>
+<p>There is also a global champion badge, awarded based on the total number of points during the quarter.</p>
+<p>At the end of the calendar year, annual champion badges are also awarded.</p>
+</div>
+<div class="section" id="defining-badges">
+<h2>Defining Badges<a class="headerlink" href="#defining-badges" title="Permalink to this headline">¶</a></h2>
+<p>The badges can be configured in the CMS.</p>
+<img alt="_images/cms-add-badge-form.png" src="_images/cms-add-badge-form.png" />
+<p>Badges should have:</p>
+<ul class="simple">
+<li><p>A name. This is the administrative name for the badge (for admin reports).</p></li>
+<li><p>A display label. This is what appears to users beneath the badge, minus the date range.</p></li>
+<li><p>A description. This will appear on the “Learn more about badges” page.</p></li>
+<li><p>Badge image. This is the image to use.</p></li>
+<li><p>The maximum number of times a badge can be earned:</p>
+<ul>
+<li><p>Once. A user can earn a badge one time.</p></li>
+<li><p>Once per quarter. The user can earn the badge once a quarter maximum. Quarter badges are postfixed with “Q2, 2021”.</p></li>
+<li><p>Once per year. The user can earn the badge once a year maximum. Annual badges are postfixed with the 4 digit year.
+* No limit. As soon as the user hits the number of points required, they earn the badge.</p></li>
+</ul>
+</li>
+</ul>
+<p>Example:  User has: 210 points on Jan 28, 305 points on Feb 28, 500 points on April 30</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 24%" />
+<col style="width: 76%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Badge Type</p></th>
+<th class="head"><p>User Awarded</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Once; 200 points</p></td>
+<td><p>User awarded the badge on Jan 28</p></td>
+</tr>
+<tr class="row-odd"><td><p>Once per qtr;
+100 points</p></td>
+<td><p>User awarded the badge on Jan 28 and April 30</p></td>
+</tr>
+<tr class="row-even"><td><p>Once per qtr;
+250 points</p></td>
+<td><p>User awarded the badge on February 28 (points reset Apr 1;
+user only has 195 countable points for the quarter</p></td>
+</tr>
+<tr class="row-odd"><td><p>Once per year
+300 points</p></td>
+<td><p>User awarded the badge on February 28</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>Which content categories count towards the badge. A badge could be limited points earned from tasks associated with family &amp; safety content or not limited for example. The category used is either:</p>
+<ul>
+<li><p>the primary legal category associated with a node</p></li>
+<li><p>the primary legal category indicated when awarding manual credit.</p></li>
+</ul>
+</li>
+<li><p>the point types that should be counted for a badge award. Leave blank for all point types.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If left empty, new point types will be included automatically. When populated, any new point types will need to be manually added.</p>
+</div>
+<ul class="simple">
+<li><p>a number of point required to earn a badge.</p></li>
+<li><p>the dates when points can be earned for a specific badge. If left empty, all dates can be used.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For example, if a badge is limited to October 1, 2021 through October 31, 2021, points earned outside of that range will not be counted regardless of the badge award frequency. However, if the frequency is no limit, the user can earn the badge multiple times in October.</p>
+</div>
+</div>
+<div class="section" id="defining-milestones">
+<h2>Defining Milestones<a class="headerlink" href="#defining-milestones" title="Permalink to this headline">¶</a></h2>
+<p>Milestones are added under Structure/Gamification/Milestone.</p>
+<img alt="_images/cms-lcv-add-milestone-form.png" src="_images/cms-lcv-add-milestone-form.png" />
+<p>Milestones should have:</p>
+<ul class="simple">
+<li><p>A name. This is what displays in the Milestones this quarter panel</p></li>
+<li><p>A description. This will be displayed on the Learn more about our badges/milestones page</p></li>
+<li><p>Maximum number of times a milestone can be earned. This has options of:</p>
+<ul>
+<li><p>Lifetime (once)</p></li>
+<li><p>Quarterly</p></li>
+<li><p>Annually</p></li>
+</ul>
+</li>
+<li><p>Who the milestone applies to.  Options are:</p>
+<ul>
+<li><p>Organizations</p></li>
+<li><p>Individuals</p></li>
+<li><p>Both</p></li>
+</ul>
+</li>
+<li><p>Base award on:</p>
+<ul>
+<li><p>Points</p></li>
+<li><p>Words. When words is selected, the milestone will be calculated using the number of words in the content associated with the point type(s).</p></li>
+<li><p>Revisions. When revisions is selected, the milestone will be calculated using the number of point types associated with the user/organization. For example, if a user has earned points under “Published content” 5 times, 5 revisions will be counted.</p></li>
+<li><p>Editors. When editors is selected, the milestone will be calculated by the number of unique users associated with point types. Editor totals can be tracked against:</p>
+<ul>
+<li><p>Percentage of legal content volunteers in an organization. For example, if Organization A has 5 editors and the milestone is for 75% contribution, 4 editors must make an edit for the organization to earn the milestone. A legal content volunteer is defined as a user who has the subject matter expert role.</p></li>
+<li><p>Percentage of staff in an organization. For example, if Organization A has 20 staff  and the milestone is for 75% contribution, 15 users must make an edit for the organization to earn the milestone.</p></li>
+<li><p>Number.  Number of editors with a revision.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Legal category for countable points. Leave as none to apply to all categories.</p></li>
+<li><p>Point types to include when counting points.</p></li>
+<li><p>Number of items required to earn milestone.  For example, a milestone for first edit that can only be won once would have a revision count of 1 to award. A milestone of 10,000 words edited awarded once a year would have a words basis with an item count of 10,000.</p></li>
+</ul>
+<p>A revision message may be added to document what was added or changed.</p>
+</div>
+<div class="section" id="listings">
+<h2>Listings<a class="headerlink" href="#listings" title="Permalink to this headline">¶</a></h2>
+<p>Badges and milestones are custom entities (not content types) so they do not appear in the Find content report.</p>
+<p>The <a class="reference external" href="https://www.illinoislegalaid.org/admin/content/gamification/badges-listing">list of badges</a> contains all badges defined in the system and can be exported to CSV.</p>
+<img alt="_images/cms-badges-report.png" src="_images/cms-badges-report.png" />
+<p>The <a class="reference external" href="https://www.illinoislegalaid.org/admin/content/gamification/milestone-listing">list of milestones</a> shows all of the milestones in the system.</p>
+<img alt="_images/cms-milestone-report.png" src="_images/cms-milestone-report.png" />
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="lcv_dashboard.html" class="btn btn-neutral float-right" title="Editorial Dashboard" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="lcv_points_system.html" class="btn btn-neutral float-left" title="Gamification: Points" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2023, Illinois Legal Aid Online.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

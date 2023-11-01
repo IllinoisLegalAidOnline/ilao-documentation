@@ -1,0 +1,336 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>2. Creating case acceptance webform &mdash; ILAO Sprint 124a documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/themeoverrides.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="3. Create a rest export for the case acceptance" href="otis_maintenance_case_acceptance_view.html" />
+    <link rel="prev" title="1. Creating triage in Guided Navigation" href="otis_maintenance_gn.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> ILAO
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="design_guide.html">Design &amp; Style Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="block_management.html">Custom blocks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="people_management.html">User Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="legal_information.html">Browsing to legal information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="legal_content_cms.html">Legal Content CMS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cms_structured_legal_content.html">Next generation content/COPE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basic_pages_cms.html">Basic pages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="testimonials_cms.html">Testimonials Content Type</a></li>
+<li class="toctree-l1"><a class="reference internal" href="webforms_cms.html">Webforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="translation_cms.html">Translation Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="calendar_cms.html">Calendar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jobs_cms.html">Job Listings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="discussion_groups.html">Discussion groups</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="otis_cms.html">Get Legal Help</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="otis_endusers.html">Get Legal Help Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="otis_organization_management.html">Organization management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="otis_endpoints.html">Triage rule endpoints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="otis_reports.html">Get Legal Help Reporting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="otis_ai_integration.html">OTIS AI Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="otis_third_party_support.html">Supported Integrations</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="otis_sms_intake.html">Online Intake Over SMS</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="otis_sms_as_a_user.html">Getting legal help over SMS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="otis_sms_intake_architecture.html">General architecture</a></li>
+<li class="toctree-l3"><a class="reference internal" href="otis_sms_functions.html">Twilio Functions</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="otis_maintenance.html">Maintaining and expanding OTIS SMS</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="otis_maintenance.html#expanding-for-new-legal-issues">Expanding for new legal issues</a></li>
+<li class="toctree-l4"><a class="reference internal" href="otis_maintenance.html#demographic-taxonomy-terms">Demographic taxonomy terms</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="otis_sms_translations.html">OTIS SMS Translations</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="otis_facebook.html">Facebook Integrations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="otis_features.html">Additional Features</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="site_search.html">Site Search</a></li>
+<li class="toctree-l1"><a class="reference internal" href="site_faqs.html">Site FAQs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="other_cms_features.html">Other Website Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="taxonomies.html">Taxonomies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rss_feeds.html">RSS Feeds</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ilao_api.html">ILAO’s API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="next_steps.html">Next Steps Flows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sms_overview.html">SMS Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_analytics.html">Data and Analytics</a></li>
+</ul>
+<p class="caption"><span class="caption-text">See also:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="creating_docs_in_github.html">Creating new docs in Github</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ILAO</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="otis_cms.html">Get Legal Help</a> &raquo;</li>
+        
+          <li><a href="otis_sms_intake.html">Online Intake Over SMS</a> &raquo;</li>
+        
+          <li><a href="otis_maintenance.html">Maintaining and expanding OTIS SMS</a> &raquo;</li>
+        
+      <li><span class="section-number">2. </span>Creating case acceptance webform</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/otis_maintain_case_acceptance_webform.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="creating-case-acceptance-webform">
+<span id="otis-case-webform"></span><h1><span class="section-number">2. </span>Creating case acceptance webform<a class="headerlink" href="#creating-case-acceptance-webform" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="create-a-webform">
+<h2><span class="section-number">2.1. </span>Create a webform<a class="headerlink" href="#create-a-webform" title="Permalink to this headline">¶</a></h2>
+<p>Go to <a class="reference external" href="https://www.illinoislegalaid.org/admin/structure/webform">Manage webforms</a> and add a webform.</p>
+<p>The webform should:</p>
+<ul class="simple">
+<li><p>Have a title of Case acceptance - [legal issue] where legal issue is the name of the specific legal problem covered by the form.</p></li>
+<li><p>Be tagged to the Guided Navigation category.</p></li>
+</ul>
+<div class="section" id="required-fields">
+<h3><span class="section-number">2.1.1. </span>Required fields<a class="headerlink" href="#required-fields" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>service. This field must:</p>
+<ul>
+<li><p>be of type entity_radios</p></li>
+<li><p>have an entity reference settings of:</p>
+<ul>
+<li><p>type of item to reference = Content</p></li>
+<li><p>reference method = Views: Filter by an entity reference view</p></li>
+<li><p>view used to select the entities: entity_reference_content - Location Services (accepted through IllinoisLegalAid)</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>legal_issue</p>
+<ul>
+<li><p>should be of type hidden</p></li>
+<li><p>should have a default value of the taxonomy term id for the parent legal issue for the form. For example, if the form covers all Unemployment benefits, it should have the legal issues term ID for the Health &amp; Benefits -&gt; Unemployment benefits term. When a user then accesses any term beneath that term, this will be the referenced case acceptance form.</p></li>
+</ul>
+</li>
+<li><p>outcome fields. These should come from the Guided Navigation and</p>
+<ul>
+<li><p>are checkboxes fields</p></li>
+<li><p>have a key that matches the Guided Navigation field name (for example, ilao_snap_apply_outcome_191, ilao_snap_apply_outcome_193)</p></li>
+<li><p>option value for each checkbox should match the option value for the field in Legal Server.</p></li>
+</ul>
+</li>
+</ul>
+<img alt="_images/case-acceptance-webform-options.png" src="_images/case-acceptance-webform-options.png" />
+</div>
+<div class="section" id="optional-fields">
+<h3><span class="section-number">2.1.2. </span>Optional fields<a class="headerlink" href="#optional-fields" title="Permalink to this headline">¶</a></h3>
+<p>Additional fields can be used to improve usability but will not be used in the Guided Navigation/SMS system.</p>
+</div>
+</div>
+<div class="section" id="populate-the-webform">
+<h2><span class="section-number">2.2. </span>Populate the webform<a class="headerlink" href="#populate-the-webform" title="Permalink to this headline">¶</a></h2>
+<p>Once created, the webform needs to be populated with case acceptance information for each service.</p>
+<p>This means:</p>
+<ul class="simple">
+<li><p>Selecting the service to apply it to. The service should have an intake settings that matches on the hidden legal issue.</p></li>
+<li><p>Check the boxes that align with the program’s case acceptance priorities.</p></li>
+</ul>
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">Todo</p>
+<p>At this time, we aren’t filtering on population in SMS. Therefore, any population settings in the service(s) will be ignored.</p>
+</div>
+</div>
+<div class="section" id="what-submissions-get-used">
+<h2><span class="section-number">2.3. </span>What submissions get used<a class="headerlink" href="#what-submissions-get-used" title="Permalink to this headline">¶</a></h2>
+<p>As changes are made, the system will ignore:</p>
+<ul class="simple">
+<li><p>any webform submission in a draft state</p></li>
+<li><p>any webform submission for a particular service that is older than another webform submission for the same service.  For example, if on Monday, I create a submission for Legal Aid Chicago’s client screening unit and create another one on Friday, only Friday’s will be used.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Only services with matching intake settings on the legal issue will be returned. For example, if on the unemployment benefits case acceptance form, Legal Aid Chicago’s client screening unit does not have any intake settings tied to unemployment benefits, they will not return as a result even if the case acceptance form indicates that they take cases for unemployment.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="otis_maintenance_case_acceptance_view.html" class="btn btn-neutral float-right" title="3. Create a rest export for the case acceptance" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="otis_maintenance_gn.html" class="btn btn-neutral float-left" title="1. Creating triage in Guided Navigation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2023, Illinois Legal Aid Online.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

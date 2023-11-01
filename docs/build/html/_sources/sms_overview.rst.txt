@@ -1,0 +1,41 @@
+==================
+SMS Overview
+==================
+
+We deliver many things over SMS.
+
+Online intake and triage
+==========================
+
+ILAO has a short code that processes inbound requests for users to apply for free legal help.
+
+
+See :ref:`otis-sms-label`
+
+REST-based messaging
+=====================
+
+We will also use SMS for a few other use cases that run over API. These are sent over REST from the website or Zapier-based transactions to specific flows. Currently, we use REST for reminders, the SMS feedback survey, and Know your rights (KYR) follow up surveys.
+
++-----------------------+--------------------------------+------------------------+
+| REST App              | Flow                           | Status                 |
++=======================+================================+========================+
+| sms                   | SMS follow up survey           | Built as flow          |
++-----------------------+--------------------------------+------------------------+
+| kyr follow up surveys | KYR surveys                    | Built as flow          |
++-----------------------+--------------------------------+------------------------+
+| Otis confirmations    | N/A                            | Built in Drupal        |
++-----------------------+--------------------------------+------------------------+
+| OTIS reminders        | N/A                            | Built in Drupal        |
++-----------------------+--------------------------------+------------------------+
+| Next steps from       | Not yet built                  | Starting to bu         |
+| content               |                                |                        |
++-----------------------+--------------------------------+------------------------+
+| Feedback surveys      | Depends                        | OTIS feedback, KYR     |
+|                       |                                | surveys, and eviction  |
+|                       |                                | live                   |
++-----------------------+--------------------------------+------------------------+
+
+
+
+

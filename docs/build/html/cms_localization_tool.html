@@ -1,0 +1,327 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Local content tool &mdash; ILAO Sprint 124a documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/themeoverrides.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Word counts" href="cms_word_counts.html" />
+    <link rel="prev" title="Link tool in WYSIWYG" href="cms_link_tool.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> ILAO
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="design_guide.html">Design &amp; Style Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="block_management.html">Custom blocks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="people_management.html">User Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="legal_information.html">Browsing to legal information</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="legal_content_cms.html">Legal Content CMS</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="cms_law_tracker.html">Law tracker</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="cms_wysiwyg.html">WYSIWYG Tools</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="cms_link_tool.html">Link tool in WYSIWYG</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Local content tool</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#to-use">To use</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#example-use-case">Example use case</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#what-users-see">What users see</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="cms_word_counts.html">Word counts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cms_track_changes.html">Track changes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cms_custom_tokens.html">Custom Tokens</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_redirects.html">Creating redirects between pages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_content_management_tags.html">Content management tags</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_legal_content.html">Legal content type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_structured_legal_content.html">Next generation content/COPE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_portal_main_page.html">Portal main page content type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_toolboxes.html">Toolbox and related content types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_adrm.html">Lawyer Manuals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_content_reporting.html">Legal content reporting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_lcv_program.html">Legal Content Volunteers Program</a></li>
+<li class="toctree-l2"><a class="reference internal" href="legal_content_cms.html#known-workarounds">Known Workarounds</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="cms_structured_legal_content.html">Next generation content/COPE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basic_pages_cms.html">Basic pages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="testimonials_cms.html">Testimonials Content Type</a></li>
+<li class="toctree-l1"><a class="reference internal" href="webforms_cms.html">Webforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="translation_cms.html">Translation Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="calendar_cms.html">Calendar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jobs_cms.html">Job Listings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="discussion_groups.html">Discussion groups</a></li>
+<li class="toctree-l1"><a class="reference internal" href="otis_cms.html">Get Legal Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="site_search.html">Site Search</a></li>
+<li class="toctree-l1"><a class="reference internal" href="site_faqs.html">Site FAQs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="other_cms_features.html">Other Website Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="taxonomies.html">Taxonomies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rss_feeds.html">RSS Feeds</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ilao_api.html">ILAO’s API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="next_steps.html">Next Steps Flows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sms_overview.html">SMS Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_analytics.html">Data and Analytics</a></li>
+</ul>
+<p class="caption"><span class="caption-text">See also:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="creating_docs_in_github.html">Creating new docs in Github</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ILAO</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="legal_content_cms.html">Legal Content CMS</a> &raquo;</li>
+        
+          <li><a href="cms_wysiwyg.html">WYSIWYG Tools</a> &raquo;</li>
+        
+      <li>Local content tool</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/cms_localization_tool.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="local-content-tool">
+<h1>Local content tool<a class="headerlink" href="#local-content-tool" title="Permalink to this headline">¶</a></h1>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The Local content tool will be deprecated in a future release. It should not be used in creating new content or added into existing content.</p>
+</div>
+<p>The local content tool appears as a wand on the WYSIWYG tool next to the spell check button. The tool is used to insert region specific content and supports limiting the markup to the county, city, or zip code level. Front-end code then causes the text to display only to users whose location matches the inserted code; it is hidden for all other users.</p>
+<img alt="_images/cms-local-content-button.png" src="_images/cms-local-content-button.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The tool does not support editing of existing markup. To edit, a content editor must edit within the inserted span tags.</p>
+</div>
+<img alt="_images/cms-local-content-wizard.png" src="_images/cms-local-content-wizard.png" />
+<div class="section" id="to-use">
+<h2>To use<a class="headerlink" href="#to-use" title="Permalink to this headline">¶</a></h2>
+<p>To use the tool to insert text:</p>
+<ul class="simple">
+<li><p>Select the region type</p></li>
+<li><p>Use the autocomplete to insert a county, city or zip code</p></li>
+<li><p>Type in the text you want to include.</p></li>
+</ul>
+<p>This will insert code like: {span|county|Madison|This is content specific to Madison county.} formatted as:</p>
+<ul class="simple">
+<li><p>span</p></li>
+<li><p>region type</p></li>
+<li><p>region name</p></li>
+<li><p>content</p></li>
+</ul>
+<img alt="_images/cms-local-inserted.png" src="_images/cms-local-inserted.png" />
+<p>The content can then be formatted or edited within the WYSIWYG window.</p>
+</div>
+<div class="section" id="example-use-case">
+<h2>Example use case<a class="headerlink" href="#example-use-case" title="Permalink to this headline">¶</a></h2>
+<p>Legal content contains the following:</p>
+<p>Generally, x is true. {span|county|Cook|In Cook County, the law is different and x is true only on Mondays.} {span|county|Kane|In Kane County, the law is different and x is true only on Tuesdays.} {span|city|Aurora|Even within Kane County, Aurora has its own rule and x is also true on Mondays as well.} {span|Zipcode|60505|And if you are on the near east side of Aurora, x is also true on Wednesdays.}</p>
+<p><strong>A user in Lake county, where there is no localized content, would see:</strong></p>
+<p>Generally, x is true.</p>
+<p><strong>A user in Cook county, where there is county-specific content, would see:</strong></p>
+<p>Generally, x is true. In Cook County, the law is different and x is true only on Mondays.</p>
+<p><strong>A user in Elgin (Kane County), would see the Kane county specific content:</strong></p>
+<p>Generally, x is true. In Kane County, the law is different and x is true only on Tuesdays.</p>
+<p><strong>A user on the west side of Aurora with a zip code of 60506 would see both the Kane and Aurora content:</strong></p>
+<p>Generally, x is true. In Kane County, the law is different and x is true only on Tuesdays. Even within Kane County, Aurora has its own rule and x is also true on Mondays as well.</p>
+<p><strong>And a user on the east side of Aurora with a zip code of 60505 would see the local county, city, and zip code content:</strong></p>
+<p>Generally, x is true. In Kane County, the law is different and x is true only on Tuesdays. Even within Kane County, Aurora has its own rule and x is also true on Mondays as well. And if you are on the near east side of Aurora, x is also true on Wednesdays.</p>
+</div>
+<div class="section" id="what-users-see">
+<h2>What users see<a class="headerlink" href="#what-users-see" title="Permalink to this headline">¶</a></h2>
+<p>On legal content pages, the zip code is automatically prepopulated:</p>
+<ul class="simple">
+<li><p>for “new” anonymous users, using ipInfo database to detect their zip code.</p></li>
+<li><p>for “returning” anonymous users, the detected zip code is stored locally for a week</p></li>
+<li><p>for logged in users, the zip code is pulled from their profile</p></li>
+</ul>
+<p>On legal content pages, users see text Displaying information for zipcode [change].</p>
+<a class="reference internal image-reference" href="_images/cms-legal-content-zipcode.png"><img alt="image of &quot;Displaying information for 60505 [change]&quot;" src="_images/cms-legal-content-zipcode.png" style="width: 366.0px; height: 466.0px;" /></a>
+<p>Users can click on the change link to go to a page to change their zip code:</p>
+<a class="reference internal image-reference" href="_images/cms-change-zip-code.png"><img alt="Zip code change page screenshot" src="_images/cms-change-zip-code.png" style="width: 396.0px; height: 607.0px;" /></a>
+<p>When the user changes their zip code, they are returned to the legal content they were viewing.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="cms_word_counts.html" class="btn btn-neutral float-right" title="Word counts" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="cms_link_tool.html" class="btn btn-neutral float-left" title="Link tool in WYSIWYG" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2023, Illinois Legal Aid Online.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

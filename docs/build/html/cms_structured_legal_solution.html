@@ -1,0 +1,452 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Creating a Legal Option &mdash; ILAO Sprint 124a documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/themeoverrides.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Organizing legal steps into a How-to" href="cms_structured_legal_howto.html" />
+    <link rel="prev" title="Creating DIY Legal Solution" href="cms_structured_legal_problem.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> ILAO
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="design_guide.html">Design &amp; Style Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="block_management.html">Custom blocks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="people_management.html">User Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="legal_information.html">Browsing to legal information</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="legal_content_cms.html">Legal Content CMS</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="cms_law_tracker.html">Law tracker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_wysiwyg.html">WYSIWYG Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_custom_tokens.html">Custom Tokens</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_redirects.html">Creating redirects between pages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_content_management_tags.html">Content management tags</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_legal_content.html">Legal content type</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="cms_structured_legal_content.html">Next generation content/COPE</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="cms_structured_content_overview.html">Structured content (COPE content) Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cms_structured_content_navigation.html">DIY Solutions - Navigation and Layouts</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="structured_content_authoring.html">Structured content authoring guide</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_content_overview.html">Authoring best practices and guidelines</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_content_admin.html">Creating and editing structured content</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_problem.html">Creating DIY Legal Solution</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Creating a Legal Option</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_question.html">Creating a Legal Question</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_step.html">Creating Legal Step</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_howto.html">Organizing legal steps into a How-to</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_forms.html">Restructuing Easy forms and blank forms for use in steps</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="cms_structured_content_reports.html">Structured content reports</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cms_structured_content_sms.html">Delivery over SMS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structured_content_tech.html">Structured content technical documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cms_portal_main_page.html">Portal main page content type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_toolboxes.html">Toolbox and related content types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_adrm.html">Lawyer Manuals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_content_reporting.html">Legal content reporting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_lcv_program.html">Legal Content Volunteers Program</a></li>
+<li class="toctree-l2"><a class="reference internal" href="legal_content_cms.html#known-workarounds">Known Workarounds</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="cms_structured_legal_content.html">Next generation content/COPE</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="cms_structured_content_overview.html">Structured content (COPE content) Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_structured_content_navigation.html">DIY Solutions - Navigation and Layouts</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="structured_content_authoring.html">Structured content authoring guide</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="cms_structured_legal_content_overview.html">Authoring best practices and guidelines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cms_structured_legal_content_admin.html">Creating and editing structured content</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cms_structured_legal_problem.html">Creating DIY Legal Solution</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Creating a Legal Option</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#create-the-core-solution-information">Create the core solution information</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#categorize-the-solution">Categorize the solution</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#add-legal-difficulty">Add legal difficulty</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#define-eligibility-rules">Define eligibility rules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#define-the-result">Define the result</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#build-out-additional-related-components">Build out additional related components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#complete-the-legal-option-legal-metadata">Complete the Legal Option legal metadata</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#add-additional-metadata">Add additional metadata</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="cms_structured_legal_question.html">Creating a Legal Question</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cms_structured_legal_step.html">Creating Legal Step</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cms_structured_legal_howto.html">Organizing legal steps into a How-to</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cms_structured_legal_forms.html">Restructuing Easy forms and blank forms for use in steps</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cms_structured_content_reports.html">Structured content reports</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_structured_content_sms.html">Delivery over SMS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structured_content_tech.html">Structured content technical documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="basic_pages_cms.html">Basic pages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="testimonials_cms.html">Testimonials Content Type</a></li>
+<li class="toctree-l1"><a class="reference internal" href="webforms_cms.html">Webforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="translation_cms.html">Translation Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="calendar_cms.html">Calendar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jobs_cms.html">Job Listings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="discussion_groups.html">Discussion groups</a></li>
+<li class="toctree-l1"><a class="reference internal" href="otis_cms.html">Get Legal Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="site_search.html">Site Search</a></li>
+<li class="toctree-l1"><a class="reference internal" href="site_faqs.html">Site FAQs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="other_cms_features.html">Other Website Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="taxonomies.html">Taxonomies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rss_feeds.html">RSS Feeds</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ilao_api.html">ILAO’s API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="next_steps.html">Next Steps Flows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sms_overview.html">SMS Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_analytics.html">Data and Analytics</a></li>
+</ul>
+<p class="caption"><span class="caption-text">See also:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="creating_docs_in_github.html">Creating new docs in Github</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ILAO</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="legal_content_cms.html">Legal Content CMS</a> &raquo;</li>
+        
+          <li><a href="cms_structured_legal_content.html">Next generation content/COPE</a> &raquo;</li>
+        
+          <li><a href="structured_content_authoring.html">Structured content authoring guide</a> &raquo;</li>
+        
+          <li><a href="cms_structured_legal_content_admin.html">Creating and editing structured content</a> &raquo;</li>
+        
+      <li>Creating a Legal Option</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/cms_structured_legal_solution.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="creating-a-legal-option">
+<span id="cms-legal-solution"></span><h1>Creating a Legal Option<a class="headerlink" href="#creating-a-legal-option" title="Permalink to this headline">¶</a></h1>
+<p>A legal option (solution) is tied to one or more legal problems (see <a class="reference internal" href="cms_structured_legal_problem.html#cms-legal-problem"><span class="std std-ref">Creating DIY Legal Solution</span></a>). It provides a framework for when and why a person may want to pursue a specific option. It also includes the step-by-step instructions for the process to complete the option; there may be more than one way to implement an option and multiple sets of instructions are supported.</p>
+<div class="section" id="create-the-core-solution-information">
+<h2>Create the core solution information<a class="headerlink" href="#create-the-core-solution-information" title="Permalink to this headline">¶</a></h2>
+<img alt="_images/legal_solution_title.png" src="_images/legal_solution_title.png" />
+<ul class="simple">
+<li><p>Add a title. The title should match our standard title style for process-oriented legal content.</p></li>
+<li><p>Add a disambiguation tag, if applicable, to identify this solution from other similarly titled solutions. For example, if the content title is “Participate in the court case” the disambiguation tag might be “Eviction” or “Foreclosure” to distinguish between the two.</p></li>
+<li><p>Add a meta description. This is the description that will be used in social media, search indexes, and in any API. This should be limited to 300 characters.</p></li>
+</ul>
+<p>See the style guide for standards.</p>
+</div>
+<div class="section" id="categorize-the-solution">
+<h2>Categorize the solution<a class="headerlink" href="#categorize-the-solution" title="Permalink to this headline">¶</a></h2>
+<img alt="_images/legal_solution_tagging.png" src="_images/legal_solution_tagging.png" />
+<ul class="simple">
+<li><p>Tag the legal problem to one or more navigational IA tags. This is used to manage the drill down.</p></li>
+<li><p>Tag the legal problem to one or more legal issues. This is used to associate with Get Legal Help tools.</p></li>
+<li><p>Select the primary legal category. This is used to keep the information organized when it is tagged to multiple primary categories (for example, we may tag a criminal records issue to Business &amp; Work and Crime &amp; Traffic).</p></li>
+<li><p>Select the primary level 2 navigation term. This is used to help with breadcrumbs, reporting, and Guided Navigation. This single term comes from the navigational IA taxonomy.</p></li>
+<li><p>Define the solution type. A solution type are defined by our <a class="reference external" href="https://www.illinoislegalaid.org/admin/structure/taxonomy_manager/voc/solution_types">solution types taxonomy</a>.</p></li>
+</ul>
+</div>
+<div class="section" id="add-legal-difficulty">
+<h2>Add legal difficulty<a class="headerlink" href="#add-legal-difficulty" title="Permalink to this headline">¶</a></h2>
+<p>The legal difficulty section can be used to help individuals understand when they really should have legal help. See examples in the  <a class="reference internal" href="content_style_guide.html#cms-style-guide"><span class="std std-ref">Content style guide</span></a>. The purpose of this field is to ensure consistency in how this information is provided to individuals; in many cases, while a lawyer would be the BEST option, it is not feasible for the individual.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Do not add additional “You might need a lawyer” language within structured content.</p>
+</div>
+<p>This is optional. For easy tasks (such as applying for a drivers license), this would likely not be completed.</p>
+<img alt="_images/legal_solution_legal_difficulty_text.png" src="_images/legal_solution_legal_difficulty_text.png" />
+<p>Different display options are provided to allow the content managers to control how this information will appear to individuals. The options are:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Warning - this will place the text at the top of the content with a clear Warning label and/or design</p></li>
+<li><p>Tip - this will place the text at the top of the content styled like tips in steps</p></li>
+<li><p>Normal - top will place the text in a paragraph at the top of the content with a header of Do I need a lawyer?</p></li>
+<li><p>Normal - bottom will place the text in a paragraph at the end of the content with a header of Do I need a lawyer?</p></li>
+</ul>
+</div></blockquote>
+<img alt="_images/legal_solution_display_difficulty.png" src="_images/legal_solution_display_difficulty.png" />
+</div>
+<div class="section" id="define-eligibility-rules">
+<h2>Define eligibility rules<a class="headerlink" href="#define-eligibility-rules" title="Permalink to this headline">¶</a></h2>
+<p>Most solutions only apply to specific types of cases. The eligibility section allows us to spell out when a person can/should consider this specific solution.</p>
+<img alt="_images/legal_option_eligibility.png" src="_images/legal_option_eligibility.png" />
+<p>Eligibility rules use the <a class="reference internal" href="cms_structured_structured_text.html#cms-structured-text"><span class="std std-ref">Structured Text &amp; Lists</span></a> block. Each eligibility rule should have its own structured text block.</p>
+<div class="section" id="examples">
+<h3>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h3>
+<p>The single eligibility rule below</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>To use this program, you or the person you are filing the order against must:<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">ol</span><span class="p">&gt;</span>
+   <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Live in the county you are filing the request in;<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+   <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>The abuse must have taken place in the county;<span class="ni">&amp;nbsp;</span><span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>OR<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+       <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>You must be living in the county temporarily to avoid abuse elsewhere<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">ol</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>might be created:</p>
+<ul class="simple">
+<li><p>with a heading of “One of the following must be true”</p></li>
+<li><p>with an unordered list of 3 list items:</p></li>
+<li><p>You or the person you are filing the order against must live in the county you are filing the request in</p></li>
+<li><p>The abuse must have taken place in the county</p></li>
+<li><p>You must be living in the county temporarily to avoid abuse elsewhere</p></li>
+</ul>
+<p>See the <a class="reference internal" href="content_style_guide.html#cms-style-guide"><span class="std std-ref">Content style guide</span></a> for more example rules.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For some types of cases, there may be a better resource to help them determine eligibility (for example, a benefits calculator for TANF/SNAP, a means test evaluation tool for bankruptcy, an Are you a victim quiz for domestic violence). It is okay to add an eligibility rule similar to “See if you meet income limits”, “Make sure you can pass the required means test” and link to those tools.</p>
+</div>
+</div>
+</div>
+<div class="section" id="define-the-result">
+<h2>Define the result<a class="headerlink" href="#define-the-result" title="Permalink to this headline">¶</a></h2>
+<p>Use the results section to explain what benefits the individual will get by completing the steps associated with this solution. It is also the place to explain to the individual what they won’t get using the option.</p>
+<p>Some examples:</p>
+<ul class="simple">
+<li><p>Using the “You can choose to do nothing” option in a divorce will not stop the divorce and will result in your spouse getting a default judgment against you.”</p></li>
+<li><p>Using the Chapter 7 bankruptcy option successfully will result in credit card and medical debts being discharged; it will not usually discharge student loans.</p></li>
+<li><p>Using the “Clear a cannabis conviction of over 35 grams” may make it easier to get a job or secure housing.</p></li>
+</ul>
+<p>Mocked up example:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>When a judge signs an Order of Protection, it makes it illegal for the abuser to do or not do certain things. For example, a judge can order the abuser to:<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+     <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Stop abusive acts;<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+     <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Stay away from the victim and other people protected by the order;<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+     <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Stop contacting the victim via telephone calls, mail, email, written notes, or third parties;<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+     <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Stay away from the victim&#39;s home, school, or work;<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+     <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Attend counseling;<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+     <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Pay child support;<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+     <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Return or stay away from the property; and<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+     <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Move out of a home they share with the victim.<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>A judge can prevent an abuser from viewing the phone records of the victim and any minor child in the victim&#39;s custody. The <span class="p">&lt;</span><span class="nt">em</span><span class="p">&gt;</span>Order of Protection <span class="p">&lt;/</span><span class="nt">em</span><span class="p">&gt;</span>can require phone service providers to transfer service so that the victim can keep the same phone number. The victim will have to pay the bill.<span class="ni">&amp;nbsp;</span><span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>A judge can also change a person&#39;s parental duties<span class="ni">&amp;nbsp;</span>(custody/visitation) in an<span class="p">&lt;</span><span class="nt">em</span><span class="p">&gt;</span> Order of Protection<span class="p">&lt;/</span><span class="nt">em</span><span class="p">&gt;</span>.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>This segment above may be structured as:</p>
+<ul class="simple">
+<li><p>Structured text block 1:</p>
+<ul>
+<li><p>Body markup: When a judge signs an Order of Protection, it makes it illegal for the abuser to do or not do certain things. For example, a judge can order the abuser to:</p></li>
+<li><p>List segments - unordered</p></li>
+<li><p>A paired markup segment for each list item.</p>
+<ul>
+<li><p>Pay child support</p></li>
+<li><p>Return or stay away from the property</p></li>
+<li><p>Move out of a home they share with the victim</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Structured text block 2 with body markup of “A judge can prevent an abuser from viewing the phone records of the victim and any minor child in the victim’s custody. The &lt;em&gt;Order of Protection &lt;/em&gt;can require phone service providers to transfer service so that the victim can keep the same phone number. The victim will have to pay the bill.”</p></li>
+<li><p>Structured text block 3 with body markup of “A judge can also change a person’s parental duties (custody/visitation) in an Order of Protection.”</p></li>
+</ul>
+</div>
+<div class="section" id="build-out-additional-related-components">
+<h2>Build out additional related components<a class="headerlink" href="#build-out-additional-related-components" title="Permalink to this headline">¶</a></h2>
+<p>There are 5 types of resources that can be added to a Legal Option:</p>
+<ul class="simple">
+<li><p>HowTos - these should always be added as they are the step-by-step instructions</p></li>
+<li><p>Helpful organizations A helpful organization would be a non-legal organization that can provide help. See the helpful organization page.</p></li>
+<li><p>Legal organization that we need to highlight. This typically will be empty or set to Illinois Legal Aid Online when we know OTIS takes cases in the area.</p></li>
+<li><p>Legal Questions related to the solution that should be included</p></li>
+<li><p>Related Resources related to the solution. This would generally be legal content that can not or is not converted to a Legal Question</p></li>
+</ul>
+<img alt="_images/legal_solution_entity_references.png" src="_images/legal_solution_entity_references.png" />
+</div>
+<div class="section" id="complete-the-legal-option-legal-metadata">
+<h2>Complete the Legal Option legal metadata<a class="headerlink" href="#complete-the-legal-option-legal-metadata" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Add any citations related to the solution.</p></li>
+<li><p>Indicate the legal position associated with the solution. This is almost never going to be neutral.</p></li>
+</ul>
+</div>
+<div class="section" id="add-additional-metadata">
+<h2>Add additional metadata<a class="headerlink" href="#add-additional-metadata" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Optionally, add any content management tags</p></li>
+<li><p>Indicate whether a translation should be requested.</p></li>
+<li><p>Indicate whether an existing translation should be marked as outdated.</p></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="cms_structured_legal_howto.html" class="btn btn-neutral float-right" title="Organizing legal steps into a How-to" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="cms_structured_legal_problem.html" class="btn btn-neutral float-left" title="Creating DIY Legal Solution" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2023, Illinois Legal Aid Online.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,350 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Maintaining and expanding OTIS SMS &mdash; ILAO Sprint 124a documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/themeoverrides.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="1. Creating triage in Guided Navigation" href="otis_maintenance_gn.html" />
+    <link rel="prev" title="OTIS Data Integration Functions" href="otis_website_data_integration_functions.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> ILAO
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="design_guide.html">Design &amp; Style Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="block_management.html">Custom blocks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="people_management.html">User Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="legal_information.html">Browsing to legal information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="legal_content_cms.html">Legal Content CMS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cms_structured_legal_content.html">Next generation content/COPE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basic_pages_cms.html">Basic pages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="testimonials_cms.html">Testimonials Content Type</a></li>
+<li class="toctree-l1"><a class="reference internal" href="webforms_cms.html">Webforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="translation_cms.html">Translation Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="calendar_cms.html">Calendar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jobs_cms.html">Job Listings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="discussion_groups.html">Discussion groups</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="otis_cms.html">Get Legal Help</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="otis_endusers.html">Get Legal Help Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="otis_organization_management.html">Organization management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="otis_endpoints.html">Triage rule endpoints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="otis_reports.html">Get Legal Help Reporting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="otis_ai_integration.html">OTIS AI Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="otis_third_party_support.html">Supported Integrations</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="otis_sms_intake.html">Online Intake Over SMS</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="otis_sms_as_a_user.html">Getting legal help over SMS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="otis_sms_intake_architecture.html">General architecture</a></li>
+<li class="toctree-l3"><a class="reference internal" href="otis_sms_functions.html">Twilio Functions</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Maintaining and expanding OTIS SMS</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#expanding-for-new-legal-issues">Expanding for new legal issues</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#demographic-taxonomy-terms">Demographic taxonomy terms</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="otis_sms_translations.html">OTIS SMS Translations</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="otis_facebook.html">Facebook Integrations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="otis_features.html">Additional Features</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="site_search.html">Site Search</a></li>
+<li class="toctree-l1"><a class="reference internal" href="site_faqs.html">Site FAQs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="other_cms_features.html">Other Website Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="taxonomies.html">Taxonomies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rss_feeds.html">RSS Feeds</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ilao_api.html">ILAO’s API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="next_steps.html">Next Steps Flows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sms_overview.html">SMS Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_analytics.html">Data and Analytics</a></li>
+</ul>
+<p class="caption"><span class="caption-text">See also:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="creating_docs_in_github.html">Creating new docs in Github</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ILAO</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="otis_cms.html">Get Legal Help</a> &raquo;</li>
+        
+          <li><a href="otis_sms_intake.html">Online Intake Over SMS</a> &raquo;</li>
+        
+      <li>Maintaining and expanding OTIS SMS</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/otis_maintenance.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="maintaining-and-expanding-otis-sms">
+<h1>Maintaining and expanding OTIS SMS<a class="headerlink" href="#maintaining-and-expanding-otis-sms" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="expanding-for-new-legal-issues">
+<h2>Expanding for new legal issues<a class="headerlink" href="#expanding-for-new-legal-issues" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="otis_maintenance_gn.html">1. Creating triage in Guided Navigation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="otis_maintenance_gn.html#steps-to-create-dialogues-segments">1.1. Steps to create Dialogues &amp; Segments</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="otis_maintenance_gn.html#step-1">1.1.1. Step 1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="otis_maintenance_gn.html#step-2">1.1.2. Step 2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="otis_maintenance_gn.html#step-3">1.1.3. Step 3</a></li>
+<li class="toctree-l3"><a class="reference internal" href="otis_maintenance_gn.html#step-4">1.1.4. Step 4</a></li>
+<li class="toctree-l3"><a class="reference internal" href="otis_maintenance_gn.html#step-5">1.1.5. Step 5</a></li>
+<li class="toctree-l3"><a class="reference internal" href="otis_maintenance_gn.html#step-6">1.1.6. Step 6</a></li>
+<li class="toctree-l3"><a class="reference internal" href="otis_maintenance_gn.html#step-7">1.1.7. Step 7</a></li>
+<li class="toctree-l3"><a class="reference internal" href="otis_maintenance_gn.html#step-8">1.1.8. Step 8</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="otis_maintain_case_acceptance_webform.html">2. Creating case acceptance webform</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="otis_maintain_case_acceptance_webform.html#create-a-webform">2.1. Create a webform</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="otis_maintain_case_acceptance_webform.html#required-fields">2.1.1. Required fields</a></li>
+<li class="toctree-l3"><a class="reference internal" href="otis_maintain_case_acceptance_webform.html#optional-fields">2.1.2. Optional fields</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="otis_maintain_case_acceptance_webform.html#populate-the-webform">2.2. Populate the webform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="otis_maintain_case_acceptance_webform.html#what-submissions-get-used">2.3. What submissions get used</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="otis_maintenance_case_acceptance_view.html">3. Create a rest export for the case acceptance</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="otis_maintenance_case_acceptance_view.html#creating-the-rest-export">3.1. Creating the REST Export</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="otis_maintenance_case_acceptance_view.html#path-settings">3.1.1. Path settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="otis_maintenance_case_acceptance_view.html#format">3.1.2. Format</a></li>
+<li class="toctree-l3"><a class="reference internal" href="otis_maintenance_case_acceptance_view.html#fields">3.1.3. Fields</a></li>
+<li class="toctree-l3"><a class="reference internal" href="otis_maintenance_case_acceptance_view.html#filter-criteria">3.1.4. Filter Criteria</a></li>
+<li class="toctree-l3"><a class="reference internal" href="otis_maintenance_case_acceptance_view.html#sort-criteria">3.1.5. Sort Criteria</a></li>
+<li class="toctree-l3"><a class="reference internal" href="otis_maintenance_case_acceptance_view.html#pager">3.1.6. Pager</a></li>
+<li class="toctree-l3"><a class="reference internal" href="otis_maintenance_case_acceptance_view.html#saving">3.1.7. Saving</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="otis_maintenance_case_acceptance_view.html#sample-rest-export">3.2. Sample REST Export</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="otis_maintenance_case_acceptance_view.html#admin-interface-for-view">3.2.1. Admin interface for view</a></li>
+<li class="toctree-l3"><a class="reference internal" href="otis_maintenance_case_acceptance_view.html#sample-data-export">3.2.2. Sample Data Export</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="otis_maintenance_case_acceptance_view.html#next-steps">3.3. Next Steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="otis_maintenance_case_acceptance_view.html#backing-up-and-restoring-a-view">3.4. Backing up and restoring a view</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="otis_maintenance_case_acceptance_view.html#to-backup-a-view">3.4.1. To backup a view</a></li>
+<li class="toctree-l3"><a class="reference internal" href="otis_maintenance_case_acceptance_view.html#to-restore-a-view">3.4.2. To restore a view</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="otis_maintenance_twilio.html">4. Updating Twilio for new legal issue</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="otis_maintenance_twilio.html#step-1-update-functions">4.1. Step 1: Update functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="otis_maintenance_twilio.html#update-the-get-process-function">4.1.1. Update the “get process” function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="otis_maintenance_twilio.html#update-the-validate-process-function">4.1.2. Update the “”validate process” function</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="otis_maintenance_twilio.html#step-2-update-the-studio-flow">4.2. Step 2: Update the Studio Flow</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="otis_maintenance_tokens.html">5. Twilio token updates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="otis_maintenance_failures.html">6. SMS etransfer failures</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="demographic-taxonomy-terms">
+<h2>Demographic taxonomy terms<a class="headerlink" href="#demographic-taxonomy-terms" title="Permalink to this headline">¶</a></h2>
+<p>Taxonomy terms for gender, race, ethnicity, etc, that are used in the SMS application, are stored in functions rather than pulled from the website.</p>
+<p>Any change needs to be made in both the relevant otis-load and otis-validate functions. Each demographic term has its own pair of functions (for example, otis-load-genders and otis-validate-genders).</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span> <span class="k">if</span> <span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">langcode</span> <span class="o">==</span> <span class="kc">null</span> <span class="o">||</span> <span class="nx">event</span><span class="p">.</span><span class="nx">langcode</span> <span class="o">==</span> <span class="s1">&#39;en&#39;</span><span class="p">)</span> <span class="p">{</span>
+   <span class="nx">marital</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="s1">&#39;Single&#39;</span><span class="p">,</span><span class="s1">&#39;Married&#39;</span><span class="p">,</span><span class="s1">&#39;Divorced&#39;</span><span class="p">,</span><span class="s1">&#39;Separated&#39;</span><span class="p">,</span><span class="s1">&#39;Widowed&#39;</span><span class="p">);</span>
+   <span class="nx">marital</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="s1">&#39;Other&#39;</span><span class="p">,</span> <span class="s1">&#39;Prefer not to respond&#39;</span><span class="p">);</span>
+ <span class="p">}</span>
+ <span class="k">else</span> <span class="p">{</span>
+  <span class="nx">marital</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="s1">&#39;Soltero&#39;</span><span class="p">,</span><span class="s1">&#39;Casado&#39;</span><span class="p">,</span><span class="s1">&#39;Divorciado&#39;</span><span class="p">,</span><span class="s1">&#39;Separado&#39;</span><span class="p">,</span><span class="s1">&#39;Viudo&#39;</span><span class="p">);</span>
+  <span class="nx">marital</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="s1">&#39;Otros&#39;</span><span class="p">,</span> <span class="s1">&#39;Prefiero no contestar&#39;</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">Todo</p>
+<p>Replace this with API calls to the website.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="otis_maintenance_gn.html" class="btn btn-neutral float-right" title="1. Creating triage in Guided Navigation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="otis_website_data_integration_functions.html" class="btn btn-neutral float-left" title="OTIS Data Integration Functions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2023, Illinois Legal Aid Online.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

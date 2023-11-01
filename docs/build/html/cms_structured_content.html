@@ -1,0 +1,1740 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Structured Content Schema &mdash; ILAO Sprint 124a documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/themeoverrides.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Structured Content Types - Technical Architecture" href="cms_structured_content_types.html" />
+    <link rel="prev" title="Structured content technical documentation" href="structured_content_tech.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> ILAO
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="design_guide.html">Design &amp; Style Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="block_management.html">Custom blocks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="people_management.html">User Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="legal_information.html">Browsing to legal information</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="legal_content_cms.html">Legal Content CMS</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="cms_law_tracker.html">Law tracker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_wysiwyg.html">WYSIWYG Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_custom_tokens.html">Custom Tokens</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_redirects.html">Creating redirects between pages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_content_management_tags.html">Content management tags</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_legal_content.html">Legal content type</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="cms_structured_legal_content.html">Next generation content/COPE</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="cms_structured_content_overview.html">Structured content (COPE content) Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cms_structured_content_navigation.html">DIY Solutions - Navigation and Layouts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structured_content_authoring.html">Structured content authoring guide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cms_structured_content_reports.html">Structured content reports</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cms_structured_content_sms.html">Delivery over SMS</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="structured_content_tech.html">Structured content technical documentation</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Structured Content Schema</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_content_types.html">Structured Content Types - Technical Architecture</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_content_api.html">Structured content API</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cms_portal_main_page.html">Portal main page content type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_toolboxes.html">Toolbox and related content types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_adrm.html">Lawyer Manuals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_content_reporting.html">Legal content reporting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_lcv_program.html">Legal Content Volunteers Program</a></li>
+<li class="toctree-l2"><a class="reference internal" href="legal_content_cms.html#known-workarounds">Known Workarounds</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="cms_structured_legal_content.html">Next generation content/COPE</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="cms_structured_content_overview.html">Structured content (COPE content) Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_structured_content_navigation.html">DIY Solutions - Navigation and Layouts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structured_content_authoring.html">Structured content authoring guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_structured_content_reports.html">Structured content reports</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_structured_content_sms.html">Delivery over SMS</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="structured_content_tech.html">Structured content technical documentation</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Structured Content Schema</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#legal-problem">Legal Problem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#references-from-schema-org">References from Schema.org</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#order-of-protection-bundle">Order of Protection “bundle”</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="cms_structured_content_types.html">Structured Content Types - Technical Architecture</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cms_structured_content_api.html">Structured content API</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="basic_pages_cms.html">Basic pages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="testimonials_cms.html">Testimonials Content Type</a></li>
+<li class="toctree-l1"><a class="reference internal" href="webforms_cms.html">Webforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="translation_cms.html">Translation Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="calendar_cms.html">Calendar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jobs_cms.html">Job Listings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="discussion_groups.html">Discussion groups</a></li>
+<li class="toctree-l1"><a class="reference internal" href="otis_cms.html">Get Legal Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="site_search.html">Site Search</a></li>
+<li class="toctree-l1"><a class="reference internal" href="site_faqs.html">Site FAQs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="other_cms_features.html">Other Website Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="taxonomies.html">Taxonomies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rss_feeds.html">RSS Feeds</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ilao_api.html">ILAO’s API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="next_steps.html">Next Steps Flows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sms_overview.html">SMS Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_analytics.html">Data and Analytics</a></li>
+</ul>
+<p class="caption"><span class="caption-text">See also:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="creating_docs_in_github.html">Creating new docs in Github</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ILAO</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="legal_content_cms.html">Legal Content CMS</a> &raquo;</li>
+        
+          <li><a href="cms_structured_legal_content.html">Next generation content/COPE</a> &raquo;</li>
+        
+          <li><a href="structured_content_tech.html">Structured content technical documentation</a> &raquo;</li>
+        
+      <li>Structured Content Schema</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/cms_structured_content.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="structured-content-schema">
+<h1>Structured Content Schema<a class="headerlink" href="#structured-content-schema" title="Permalink to this headline">¶</a></h1>
+<p>A legal problem is the primary entity and has within it faqs and solutions. A solution may have processes (how-to) included.</p>
+<div class="section" id="legal-problem">
+<h2>Legal Problem<a class="headerlink" href="#legal-problem" title="Permalink to this headline">¶</a></h2>
+<p>A legal problem has:</p>
+<ul class="simple">
+<li><p>one or more possible solutions</p></li>
+<li><p>possible preventions</p></li>
+<li><p>faqs associated with the problems, built on the faq schema</p></li>
+<li><p>related resources (optionally)</p></li>
+</ul>
+<p>Download <a class="reference download internal" download="" href="_downloads/201ebe3a1db8018479b4aa8d152581b7/structured-content.json"><code class="xref download docutils literal notranslate"><span class="pre">JSON</span> <span class="pre">schema:</span></code></a></p>
+<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;$schema&quot;</span><span class="p">:</span> <span class="s2">&quot;https://json-schema.org/draft/2019-09/schema&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;LegalProblem&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;A representation of a legal problem&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;object&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;required&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;description&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;identifier&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;legalCode&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;lifeAreaAffected&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;possibleSolution&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;url&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;language&quot;</span>
+  <span class="p">],</span>
+  <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;The name of the legal problem.&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;A description of the legal problem.&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;disambiguatingDescription&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation.&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;identifier&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Text, UUID, or url for the legal problem&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;language&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;ISO code for language&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;stage&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;The stage of the legal problem, if applicable. For example, pre-filing, post-filing/pre-trial, trial, post-trial, appeals.&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;subType&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;array&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;A more specific type of the legal problem, where applicable. For example, &#39;being evicted from public housing&#39; is a sub-type of the legal problem &#39;being evicted&#39;&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;items&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;legalCode&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;array&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;items&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;$ref&quot;</span><span class="p">:</span> <span class="s2">&quot;#/definitions/LegalCode&quot;</span>
+      <span class="p">}</span>
+
+    <span class="p">},</span>
+    <span class="nt">&quot;lifeAreaAffected&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;array&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;The area of a person&#39;s life that is affected by the legal problem.&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;items&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;enum&quot;</span><span class="p">:</span> <span class="p">[</span>
+          <span class="s2">&quot;Housing&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;Income&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;Family&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;Immigration status&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;Driving privileges&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;Ability to work&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;Last wishes&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;Freedom to move&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;Creditworthiness&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;Consumer rights&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;Health&quot;</span>
+        <span class="p">]</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;possibleSolution&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;array&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;items&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;$ref&quot;</span><span class="p">:</span> <span class="s2">&quot;#/definitions/LegalSolution&quot;</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;primaryPrevention&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;$ref&quot;</span><span class="p">:</span> <span class="s2">&quot;#/definitions/LegalSolution&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;secondaryPrevention&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;$ref&quot;</span><span class="p">:</span> <span class="s2">&quot;#/definitions/LegalSolution&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;faq&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;array&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;items&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;$ref&quot;</span><span class="p">:</span> <span class="s2">&quot;#/definitions/Question&quot;</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;relatedResources&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;array&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;items&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;$ref&quot;</span><span class="p">:</span> <span class="s2">&quot;#/definitions/RelatedResource&quot;</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;relatedProblems&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;array&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;items&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;$ref&quot;</span><span class="p">:</span> <span class="s2">&quot;#/definitions/RelatedProblem&quot;</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;citations&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;array&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;items&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;$refs&quot;</span><span class="p">:</span> <span class="s2">&quot;#/definitions/Citation&quot;</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;image&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;url of an image associated with the problem.&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;primary url of the legal problem&#39;s source representation.&quot;</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;definitions&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;LegalCode&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;object&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;required&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;codeValue&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;codingSystem&quot;</span>
+      <span class="p">],</span>
+      <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;codeValue&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;A short textual code that uniquely identifies the value.&quot;</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;codingSystem&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;The coding system, e.g. &#39;ICD-10&#39;.&quot;</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;LegalSolution&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;object&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;required&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;description&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;identifier&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;url&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;solutionType&quot;</span>
+      <span class="p">],</span>
+      <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Name or label for the solution&quot;</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;alternateName&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;An alternate name or label for the solution&quot;</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;A description of the solution&quot;</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;disambiguatingDescription&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation.&quot;</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;identifier&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Text, UUID, or url for the legal solution&quot;</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;URL of the solution.&quot;</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;solutionType&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;enum&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;Court solution&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Agency solution&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Execution solution&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Communication solution&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Inaction solution&quot;</span>
+          <span class="p">]</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;legalFormsNeeded&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;array&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;items&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;$ref&quot;</span><span class="p">:</span> <span class="s2">&quot;#/definitions/LegalSolution/definitions/LegalForm&quot;</span>
+          <span class="p">}</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;informationNeeded&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;array&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;items&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+          <span class="p">}</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;legalDifficulty&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;estimatedTimeToComplete&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Formatted as a duration&quot;</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;jurisdiction&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;array&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;items&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;$ref&quot;</span><span class="p">:</span> <span class="s2">&quot;#/definitions/CoverageArea&quot;</span>
+          <span class="p">}</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;eligibilityRules&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;array&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;items&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;$ref&quot;</span><span class="p">:</span> <span class="s2">&quot;#/definitions/TextBlock&quot;</span>
+          <span class="p">}</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;helpfulOrganizations&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;array&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;items&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;$ref&quot;</span><span class="p">:</span> <span class="s2">&quot;#/definitions/Organization&quot;</span>
+          <span class="p">}</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;howTos&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;array&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;items&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;$ref&quot;</span><span class="p">:</span> <span class="s2">&quot;#/definitions/LegalSolution/definitions/HowTo&quot;</span>
+          <span class="p">}</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;result&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;array&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;items&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;$ref&quot;</span><span class="p">:</span> <span class="s2">&quot;#/definitions/TextBlock&quot;</span>
+          <span class="p">}</span>
+        <span class="p">},</span>
+         <span class="nt">&quot;citations&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;array&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;items&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;$refs&quot;</span><span class="p">:</span> <span class="s2">&quot;#/definitions/Citation&quot;</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+      <span class="p">},</span>
+      <span class="nt">&quot;definitions&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;LegalForm&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;object&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;required&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;formName&quot;</span>
+          <span class="p">],</span>
+          <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;formName&quot;</span><span class="p">:</span> <span class="p">{</span>
+              <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;name of the form&quot;</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;filledOutWith&quot;</span><span class="p">:</span> <span class="p">{</span>
+              <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;array&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;items&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;$ref&quot;</span><span class="p">:</span> <span class="s2">&quot;#/definitions/LegalSolution/definitions/FormPrepProgram&quot;</span>
+              <span class="p">}</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;formUse&quot;</span><span class="p">:</span> <span class="p">{</span>
+              <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Explanation of how/when the form is used.&quot;</span>
+            <span class="p">}</span>
+          <span class="p">}</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;FormPrepProgram&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;object&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;required&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="s2">&quot;url&quot;</span>
+          <span class="p">],</span>
+          <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="p">{</span>
+              <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="p">{</span>
+              <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;URL to the form prep program&quot;</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;formPrepProgramType&quot;</span><span class="p">:</span> <span class="p">{</span>
+              <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;enum&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="s2">&quot;PDF&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;RTF&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;HotDocs&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;A2J Interview&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Docassemble&quot;</span>
+              <span class="p">]</span>
+            <span class="p">}</span>
+          <span class="p">}</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;HowTo&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;object&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;required&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;description&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;prepTime&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;performTime&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;totalTime&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;stepSections&quot;</span>
+          <span class="p">],</span>
+          <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="p">{</span>
+              <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Title for the how to&quot;</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="p">{</span>
+              <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;estimatedCost&quot;</span><span class="p">:</span> <span class="p">{</span>
+              <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;array&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;items&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;$ref&quot;</span><span class="p">:</span> <span class="s2">&quot;#/definitions/MonetaryAmount&quot;</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Estimated costs to complete the how-to process&quot;</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;prepTime&quot;</span><span class="p">:</span> <span class="p">{</span>
+              <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Estimate of preparation time.  Expressed as a duration&quot;</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;performTime&quot;</span><span class="p">:</span> <span class="p">{</span>
+              <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Estimate of time to perform all steps in the How To.  Expressed as a duration&quot;</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;totalTime&quot;</span><span class="p">:</span> <span class="p">{</span>
+              <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Total time to complete; Expressed as a duration.&quot;</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;stepSections&quot;</span><span class="p">:</span> <span class="p">{</span>
+              <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;array&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;items&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;$ref&quot;</span><span class="p">:</span> <span class="s2">&quot;#/definitions/LegalSolution/definitions/HowTo/definitions/HowToSection&quot;</span>
+              <span class="p">}</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;supply&quot;</span><span class="p">:</span> <span class="p">{</span>
+              <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;array&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;items&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Things needed to complete the how-to&quot;</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;tool&quot;</span><span class="p">:</span> <span class="p">{</span>
+              <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;array&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;items&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Tools needed to complete the how-to&quot;</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;yield&quot;</span><span class="p">:</span> <span class="p">{</span>
+              <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+            <span class="p">}</span>
+          <span class="p">},</span>
+          <span class="nt">&quot;definitions&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;HowToSection&quot;</span><span class="p">:</span> <span class="p">{</span>
+              <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;object&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;required&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="s2">&quot;position&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;steps&quot;</span>
+              <span class="p">],</span>
+              <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Title for the step section&quot;</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;position&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;number&quot;</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;steps&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;array&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;items&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;$ref&quot;</span><span class="p">:</span> <span class="s2">&quot;#/definitions/LegalSolution/definitions/HowTo/definitions/HowToStep&quot;</span>
+                  <span class="p">}</span>
+                <span class="p">}</span>
+              <span class="p">}</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;HowToStep&quot;</span><span class="p">:</span> <span class="p">{</span>
+              <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;object&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;required&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="s2">&quot;name&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;position&quot;</span>
+              <span class="p">],</span>
+              <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Heading/name for the step&quot;</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;position&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;integer&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;The placement order of the step&quot;</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;howToDirections&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;array&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;items&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;$ref&quot;</span><span class="p">:</span> <span class="s2">&quot;#/definitions/LegalSolution/definitions/HowTo/definitions/HowToDirection&quot;</span>
+                  <span class="p">}</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;howToTips&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;array&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;items&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;$ref&quot;</span><span class="p">:</span> <span class="s2">&quot;#/definitions/LegalSolution/definitions/HowTo/definitions/HowToTip&quot;</span>
+                  <span class="p">}</span>
+                <span class="p">}</span>
+              <span class="p">}</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;HowToDirection&quot;</span><span class="p">:</span> <span class="p">{</span>
+              <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;object&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;required&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="s2">&quot;position&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;direction&quot;</span>
+              <span class="p">],</span>
+              <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;position&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;integer&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;The placement order of the direction&quot;</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;direction&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;directionWithMarkup&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;referenceUrls&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;array&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;items&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;individual urls referenced from the direction&quot;</span>
+                  <span class="p">}</span>
+                <span class="p">}</span>
+              <span class="p">}</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;HowToTip&quot;</span><span class="p">:</span> <span class="p">{</span>
+              <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;object&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;required&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="s2">&quot;position&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;tip&quot;</span>
+              <span class="p">],</span>
+              <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;position&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;integer&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;The placement order of the direction&quot;</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;tip&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;tipWithMarkup&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;referenceUrls&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;array&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;items&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;individual urls referenced from the direction&quot;</span>
+                  <span class="p">}</span>
+                <span class="p">}</span>
+              <span class="p">}</span>
+            <span class="p">}</span>
+          <span class="p">}</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;object&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;required&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;body&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;acceptedAnswer&quot;</span>
+      <span class="p">],</span>
+      <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;body&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Text of the question&quot;</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;acceptedAnswer&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;$ref&quot;</span><span class="p">:</span> <span class="s2">&quot;#/definitions/Question/definitions/Answer&quot;</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;suggestedAnswer&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;array&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;items&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;$ref&quot;</span><span class="p">:</span> <span class="s2">&quot;#/definitions/Question/definitions/Answer&quot;</span>
+          <span class="p">}</span>
+        <span class="p">}</span>
+      <span class="p">},</span>
+      <span class="nt">&quot;definitions&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;object&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;answer&quot;</span><span class="p">:</span> <span class="p">{</span>
+              <span class="nt">&quot;$ref&quot;</span><span class="p">:</span> <span class="s2">&quot;#/definitions/TextBlock&quot;</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;answerExplanation&quot;</span><span class="p">:</span> <span class="p">{</span>
+              <span class="nt">&quot;$ref&quot;</span><span class="p">:</span> <span class="s2">&quot;#/definitions/TextBlock&quot;</span>
+            <span class="p">}</span>
+          <span class="p">}</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;RelatedResource&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;object&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;required&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;lastModified&quot;</span>
+      <span class="p">],</span>
+      <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;name of the resource&quot;</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;lastReviewed&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;ISO 8601 date; when resource was last reviewed&quot;</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;lastModified&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;ISO 8610 date; when resource was last modified&quot;</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;URL for the related resource&quot;</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;additionalType&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Type of resource&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;enum&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;userJourney&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;video&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;flow chart&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;blog post&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;article&quot;</span>
+          <span class="p">]</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+     <span class="nt">&quot;RelatedProblem&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;object&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;required&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;lastModified&quot;</span>
+      <span class="p">],</span>
+      <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;name of the problem&quot;</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;lastReviewed&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;ISO 8601 date; when problem was last reviewed&quot;</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;lastModified&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;ISO 8610 date; when problem was last modified&quot;</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;URL for the related problem&quot;</span>
+        <span class="p">},</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;Citation&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;object&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;required&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">],</span>
+      <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="p">{</span>
+           <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;name of the problem&quot;</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="p">{</span>
+         <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;URL for the citation&quot;</span>
+        <span class="p">},</span>
+      <span class="p">}</span>  
+        
+    <span class="p">},</span>
+    <span class="nt">&quot;CoverageArea&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;object&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;administrativeArea&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;enum&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;Country&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;State&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;County&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;City&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Postal code&quot;</span>
+          <span class="p">]</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;locality&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;array&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;items&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+              <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+            <span class="p">}</span>
+          <span class="p">]</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;PostalAddress&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;object&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;addressCountry&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;addressLocality&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;city&quot;</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;addressRegion&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;state&quot;</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;postalCode&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;streetAddress&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;TextBlock&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;object&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;required&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;body&quot;</span>
+      <span class="p">],</span>
+      <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;An object to structure blocks of text.  Each block should have one or more body elements and/or one or more lists optionally with a heading.&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;heading&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;A heading associated with the text block; in systems this should be delivered ahead of the body.&quot;</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;body&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;array&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;items&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+              <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+            <span class="p">}</span>
+          <span class="p">],</span>
+          <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;One or more chunks of text within the block in plain text.  Items may be rendered individually depending on platform.&quot;</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;bodyWithMarkup&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;array&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;items&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+              <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+            <span class="p">}</span>
+          <span class="p">],</span>
+          <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;One or more chunks of text within the block in HTML text.  Items may be rendered individually depending on platform.&quot;</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;list&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;array&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;items&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;$ref&quot;</span><span class="p">:</span> <span class="s2">&quot;#/definitions/ItemList&quot;</span>
+          <span class="p">}</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;ItemList&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;object&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;required&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;itemListOrder&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;itemListElements&quot;</span>
+      <span class="p">],</span>
+      <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Structured markup for lists.&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;itemListOrder&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;enum&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;Ascending&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Descending&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Unordered&quot;</span>
+          <span class="p">],</span>
+          <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Indicates whether the list should be rendered as an ascending or descending ordered list or as an unordered list.&quot;</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;itemListElements&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;array&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;items&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;$ref&quot;</span><span class="p">:</span> <span class="s2">&quot;#/definitions/ItemListElement&quot;</span>
+          <span class="p">}</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;ItemListElement&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;object&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;required&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;item&quot;</span>
+      <span class="p">],</span>
+      <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;item&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;List element, in plain text&quot;</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;itemWithMarkup&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;List element, with accompanying HTML markup other than list element markup.&quot;</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;position&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;number&quot;</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;MonetaryAmount&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;object&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;required&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;currency&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;amount&quot;</span>
+      <span class="p">],</span>
+      <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;currency&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;The currency the monetary amount is represented in.&quot;</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;amount&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;number&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;the amount&quot;</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;Organization&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;object&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;required&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;name&quot;</span>
+      <span class="p">],</span>
+      <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Name of the organization&quot;</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;address&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;$ref&quot;</span><span class="p">:</span> <span class="s2">&quot;#/definitions/PostalAddress&quot;</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;areaServed&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;array&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;items&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;$ref&quot;</span><span class="p">:</span> <span class="s2">&quot;#/definitions/CoverageArea&quot;</span>
+          <span class="p">}</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;email&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;telephone&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;contact&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;$ref&quot;</span><span class="p">:</span> <span class="s2">&quot;#/definitions/Organization/definitions/ContactPoint&quot;</span>
+        <span class="p">}</span>
+      <span class="p">},</span>
+      <span class="nt">&quot;definitions&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;ContactPoint&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;object&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;required&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;contactType&quot;</span>
+          <span class="p">],</span>
+          <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;areaServed&quot;</span><span class="p">:</span> <span class="p">{</span>
+              <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;array&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;items&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;$ref&quot;</span><span class="p">:</span> <span class="s2">&quot;#/definitions/CoverageArea&quot;</span>
+              <span class="p">}</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;contactType&quot;</span><span class="p">:</span> <span class="p">{</span>
+              <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;array&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;items&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                  <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+                <span class="p">}</span>
+              <span class="p">]</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;email&quot;</span><span class="p">:</span> <span class="p">{</span>
+              <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;telephone&quot;</span><span class="p">:</span> <span class="p">{</span>
+              <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;hoursAvailable&quot;</span><span class="p">:</span> <span class="p">{</span>
+              <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;array&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;items&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;$ref&quot;</span><span class="p">:</span> <span class="s2">&quot;#/definitions/Organization/definitions/HoursOfOperation&quot;</span>
+              <span class="p">}</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;productSupported&quot;</span><span class="p">:</span> <span class="p">{</span>
+              <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;array&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;items&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                  <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+                <span class="p">}</span>
+              <span class="p">],</span>
+              <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Type of service or product offered through the organization.&quot;</span>
+            <span class="p">}</span>
+          <span class="p">}</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;HoursOfOperation&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;object&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;required&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;dayOfWeek&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;opens&quot;</span>
+          <span class="p">],</span>
+          <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;closes&quot;</span><span class="p">:</span> <span class="p">{</span>
+              <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;The closing hour of the place or service on the given day(s) of the week &quot;</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;dayOfWeek&quot;</span><span class="p">:</span> <span class="p">{</span>
+              <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;enum&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="s2">&quot;Friday&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Monday&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;PublicHolidays&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Saturday&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Sunday&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Thursday&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Tuesday&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Wednesday&quot;</span>
+              <span class="p">]</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;opens&quot;</span><span class="p">:</span> <span class="p">{</span>
+              <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;The opening hour of the place or service on the given day(s) of the week &quot;</span>
+            <span class="p">}</span>
+          <span class="p">}</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="references-from-schema-org">
+<h2>References from Schema.org<a class="headerlink" href="#references-from-schema-org" title="Permalink to this headline">¶</a></h2>
+<p>Schema.org does not have XML schema; I have adapted the applicable schema types to match and indicate parameters as required.</p>
+<div class="section" id="question-and-answer">
+<h3>Question and Answer<a class="headerlink" href="#question-and-answer" title="Permalink to this headline">¶</a></h3>
+<p>See:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://schema.org/Answer">https://schema.org/Answer</a></p></li>
+<li><p><a class="reference external" href="https://schema.org/Question">https://schema.org/Question</a></p></li>
+</ul>
+</div>
+<div class="section" id="how-to">
+<h3>How To<a class="headerlink" href="#how-to" title="Permalink to this headline">¶</a></h3>
+<p>See</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://schema.org/HowTo">https://schema.org/HowTo</a></p></li>
+<li><p><a class="reference external" href="https://schema.org/HowToStep">https://schema.org/HowToStep</a></p></li>
+<li><p><a class="reference external" href="https://schema.org/HowToSection">https://schema.org/HowToSection</a></p></li>
+<li><p><a class="reference external" href="https://schema.org/HowToDirection">https://schema.org/HowToDirection</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/ISO_8601#Durations">https://en.wikipedia.org/wiki/ISO_8601#Durations</a></p></li>
+</ul>
+</div>
+<div class="section" id="organization">
+<h3>Organization<a class="headerlink" href="#organization" title="Permalink to this headline">¶</a></h3>
+<p>See:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://schema.org/Organization">https://schema.org/Organization</a></p></li>
+<li><p><a class="reference external" href="https://schema.org/ContactPoint">https://schema.org/ContactPoint</a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="order-of-protection-bundle">
+<h2>Order of Protection “bundle”<a class="headerlink" href="#order-of-protection-bundle" title="Permalink to this headline">¶</a></h2>
+<p>This bundle validates against the proposed schema.</p>
+<p>Download <a class="reference download internal" download="" href="_downloads/a74f3065a051bff4c2551157e630f9a0/order-protection.json"><code class="xref download docutils literal notranslate"><span class="pre">Order</span> <span class="pre">of</span> <span class="pre">protection:</span></code></a></p>
+<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Being a victim of domestic violence&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Legal problem of being a victim of domestic violence.&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;identifier&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/legal-problems/dv&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;legalCode&quot;</span><span class="p">:</span> <span class="p">[{</span>
+    <span class="nt">&quot;codeValue&quot;</span><span class="p">:</span> <span class="s2">&quot;FA-07-00-00-00&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;codingSystem&quot;</span><span class="p">:</span> <span class="s2">&quot;NSMI V2&quot;</span>
+  <span class="p">}],</span>
+  <span class="nt">&quot;lifeAreaAffected&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">&quot;Family&quot;</span>
+  <span class="p">],</span>
+  <span class="nt">&quot;possibleSolution&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Order of protection&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;alternateName&quot;</span><span class="p">:</span> <span class="s2">&quot;Restraining order&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;An Order of Protection is a court order that helps someone who is being abused. It stops the abuser from further abusing the victim.&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;identifier&quot;</span><span class="p">:</span> <span class="s2">&quot;URL&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;website url&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;solutionType&quot;</span><span class="p">:</span> <span class="s2">&quot;Court solution&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;legalFormsNeeded&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;formName&quot;</span><span class="p">:</span> <span class="s2">&quot;Petition for Order of Protection&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;filledOutWith&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+              <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Order of Protection&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/legal-information/order-protection&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;formPrepProgramType&quot;</span><span class="p">:</span> <span class="s2">&quot;HotDocs&quot;</span>
+            <span class="p">}</span>
+          <span class="p">]</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;formName&quot;</span><span class="p">:</span> <span class="s2">&quot;Emergency Order of Protection&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;filledOutWith&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+              <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Order of Protection&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/legal-information/order-protection&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;formPrepProgramType&quot;</span><span class="p">:</span> <span class="s2">&quot;HotDocs&quot;</span>
+            <span class="p">}</span>
+          <span class="p">]</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;formName&quot;</span><span class="p">:</span> <span class="s2">&quot;Order of Protection&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;filledOutWith&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+              <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Order of Protection&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/legal-information/order-protection&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;formPrepProgramType&quot;</span><span class="p">:</span> <span class="s2">&quot;HotDocs&quot;</span>
+            <span class="p">}</span>
+          <span class="p">]</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;formName&quot;</span><span class="p">:</span> <span class="s2">&quot;Summons (Protective Orders)&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;filledOutWith&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+              <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Order of Protection&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/legal-information/order-protection&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;formPrepProgramType&quot;</span><span class="p">:</span> <span class="s2">&quot;HotDocs&quot;</span>
+            <span class="p">}</span>
+          <span class="p">]</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;formName&quot;</span><span class="p">:</span> <span class="s2">&quot;Additional Incidents of Abuse&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;filledOutWith&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+              <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Order of Protection&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/legal-information/order-protection&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;formPrepProgramType&quot;</span><span class="p">:</span> <span class="s2">&quot;HotDocs&quot;</span>
+            <span class="p">}</span>
+          <span class="p">]</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;formName&quot;</span><span class="p">:</span> <span class="s2">&quot;Additional Case Information&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;filledOutWith&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+              <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Order of Protection&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/legal-information/order-protection&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;formPrepProgramType&quot;</span><span class="p">:</span> <span class="s2">&quot;HotDocs&quot;</span>
+            <span class="p">},</span>
+            <span class="p">{</span> <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Additional Case Information Report&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;AIOC link&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;formPrepProgramType&quot;</span><span class="p">:</span> <span class="s2">&quot;PDF&quot;</span>
+            <span class="p">}</span>
+          <span class="p">]</span>
+
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;formName&quot;</span><span class="p">:</span> <span class="s2">&quot;Confidential Name &amp; Location of the School or Daycare&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;filledOutWith&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+              <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Order of Protection&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/legal-information/order-protection&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;formPrepProgramType&quot;</span><span class="p">:</span> <span class="s2">&quot;HotDocs&quot;</span>
+            <span class="p">}</span>
+          <span class="p">]</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;formName&quot;</span><span class="p">:</span> <span class="s2">&quot;Affidavit of Parenting Time Supervisor&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;filledOutWith&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+              <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Order of Protection&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/legal-information/order-protection&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;formPrepProgramType&quot;</span><span class="p">:</span> <span class="s2">&quot;HotDocs&quot;</span>
+            <span class="p">}</span>
+          <span class="p">]</span>
+        <span class="p">}</span>
+      <span class="p">],</span>
+      <span class="nt">&quot;informationNeeded&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;Petitioner&#39;s address&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Petitioner&#39;s alternate address for safety (optional)&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Respondent&#39;s address&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Physical description of Respondent&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Respondent&#39;s employer&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Details about any other Orders of Protection or other court cases involving the Petitioner or the Respondent.&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Details about the abuse and when it took place.&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Details about personal property that Petitioner wants back.&quot;</span>
+      <span class="p">],</span>
+      <span class="nt">&quot;legalDifficulty&quot;</span><span class="p">:</span> <span class="s2">&quot;Easy&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;estimatedTimeToComplete&quot;</span><span class="p">:</span> <span class="s2">&quot;5W&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;jurisdiction&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;administrativeArea&quot;</span><span class="p">:</span> <span class="s2">&quot;State&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;locality&quot;</span><span class="p">:</span> <span class="p">[</span>
+              <span class="s2">&quot;Illinois&quot;</span>
+            <span class="p">]</span>
+        <span class="p">}</span>
+      <span class="p">],</span>
+      <span class="nt">&quot;eligibilityRules&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;body&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;One of the following must be true:&quot;</span>
+          <span class="p">],</span>
+          <span class="nt">&quot;list&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+              <span class="nt">&quot;itemListOrder&quot;</span><span class="p">:</span> <span class="s2">&quot;Ascending&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;itemListElements&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                  <span class="nt">&quot;item&quot;</span><span class="p">:</span> <span class="s2">&quot;Petitioner lives in Illinois&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;position&quot;</span><span class="p">:</span> <span class="mi">1</span>
+                <span class="p">},</span>
+                <span class="p">{</span>
+                  <span class="nt">&quot;item&quot;</span><span class="p">:</span> <span class="s2">&quot;Abuse happened in Illinois, or&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;position&quot;</span><span class="p">:</span> <span class="mi">2</span>
+                <span class="p">},</span>
+                <span class="p">{</span>
+                  <span class="nt">&quot;item&quot;</span><span class="p">:</span> <span class="s2">&quot;Petitioner is staying in Illinois to avoid abuse&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;position&quot;</span><span class="p">:</span> <span class="mi">3</span>
+                <span class="p">}</span>
+              <span class="p">]</span>
+            <span class="p">}</span>
+          <span class="p">]</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;body&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;There must have been abuse by the Respondent. Abuse includes physical abuse, harassment, intimidation of a dependent, interference with personal liberty, and willful deprivation.&quot;</span>
+          <span class="p">]</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;body&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;The abuse must have been against a family or household member. This includes spouses, former spouses, parents, children, stepchildren, people in a common dwelling, people with a child in common, people who share a blood relationship through a child, people with a dating or engagement relationship, people with disability and their assistants, and caregivers.&quot;</span>
+          <span class="p">]</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;body&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;The person filing the petition must be:&quot;</span>
+          <span class="p">],</span>
+          <span class="nt">&quot;list&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+              <span class="nt">&quot;itemListOrder&quot;</span><span class="p">:</span> <span class="s2">&quot;Ascending&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;itemListElements&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                  <span class="nt">&quot;item&quot;</span><span class="p">:</span> <span class="s2">&quot;the person being abused,&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;position&quot;</span><span class="p">:</span> <span class="mi">1</span>
+                <span class="p">},</span>
+                <span class="p">{</span>
+                  <span class="nt">&quot;item&quot;</span><span class="p">:</span> <span class="s2">&quot;filing on behalf of a minor or a person with a disability who can&#39;t file themselves, or&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;position&quot;</span><span class="p">:</span> <span class="mi">2</span>
+                <span class="p">},</span>
+                <span class="p">{</span>
+                  <span class="nt">&quot;item&quot;</span><span class="p">:</span> <span class="s2">&quot;filing on behalf of a person with a disability who has been exploited or neglected&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;position&quot;</span><span class="p">:</span> <span class="mi">3</span>
+                <span class="p">}</span>
+              <span class="p">]</span>
+            <span class="p">}</span>
+          <span class="p">]</span>
+        <span class="p">}</span>
+      <span class="p">],</span>
+      <span class="nt">&quot;helpfulOrganizations&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Illinois Domestic Violence Helpline&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;A hotline open 24/7 for people in Illinois who need help with domestic violence.&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;contact&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;contactType&quot;</span><span class="p">:</span> <span class="p">[</span>
+              <span class="s2">&quot;phone&quot;</span>
+            <span class="p">],</span>
+            <span class="nt">&quot;telephone&quot;</span><span class="p">:</span> <span class="s2">&quot;(877) 863-6338&quot;</span>
+          <span class="p">},</span>
+          <span class="nt">&quot;areaServed&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+              <span class="nt">&quot;administrativeArea&quot;</span><span class="p">:</span> <span class="s2">&quot;County&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;locality&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="s2">&quot;Kane&quot;</span><span class="p">,</span><span class="s2">&quot;Lake&quot;</span><span class="p">,</span><span class="s2">&quot;Will&quot;</span>
+              <span class="p">]</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+              <span class="nt">&quot;administrativeArea&quot;</span><span class="p">:</span> <span class="s2">&quot;Postal code&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;locality&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="s2">&quot;60505&quot;</span><span class="p">,</span><span class="s2">&quot;60506&quot;</span>
+              <span class="p">]</span>
+            <span class="p">}</span>
+
+          <span class="p">]</span>
+        <span class="p">}</span>
+
+      <span class="p">],</span>
+      <span class="nt">&quot;howTos&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Getting an order of protection&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;An Order of Protection can help protect you or a loved one from abuse. This article explains how to get one&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;estimatedCost&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+              <span class="nt">&quot;currency&quot;</span><span class="p">:</span> <span class="s2">&quot;USD&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;amount&quot;</span><span class="p">:</span> <span class="mi">0</span>
+            <span class="p">}</span>
+          <span class="p">],</span>
+          <span class="nt">&quot;prepTime&quot;</span><span class="p">:</span> <span class="s2">&quot;PT1H&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;performTime&quot;</span><span class="p">:</span> <span class="s2">&quot;P2W&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;totalTime&quot;</span><span class="p">:</span> <span class="s2">&quot;P2WT1H&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;stepSections&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+              <span class="nt">&quot;position&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+              <span class="nt">&quot;steps&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                  <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Make sure you are safe&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;position&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+                  <span class="nt">&quot;howToDirections&quot;</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="p">{</span>
+                      <span class="nt">&quot;position&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+                      <span class="nt">&quot;direction&quot;</span><span class="p">:</span> <span class="s2">&quot;Domestic violence victims are most likely to be attacked when they leave the abuser and/or when they seek legal help. A safety plan can increase your safety and prepare you in advance for violence that may happen in the future.&quot;</span><span class="p">,</span>
+                      <span class="nt">&quot;referenceUrls&quot;</span><span class="p">:</span> <span class="p">[</span>
+                        <span class="s2">&quot;https://www.illinoislegalaid.org/node/30281&quot;</span>
+                      <span class="p">]</span>
+                    <span class="p">}</span>
+                  <span class="p">],</span>
+                  <span class="nt">&quot;howToTips&quot;</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="p">{</span>
+                      <span class="nt">&quot;position&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+                      <span class="nt">&quot;tip&quot;</span><span class="p">:</span> <span class="s2">&quot;You don&#39;t have control over your partner&#39;s violence, but you do have a choice about how to respond, and how best to get you and your loved ones to safety.&quot;</span>
+                    <span class="p">}</span>
+                  <span class="p">]</span>
+                <span class="p">},</span>
+                <span class="p">{</span>
+                  <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Look for free legal help&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;position&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+                  <span class="nt">&quot;howToDirections&quot;</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="p">{</span>
+                      <span class="nt">&quot;position&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+                      <span class="nt">&quot;direction&quot;</span><span class="p">:</span> <span class="s2">&quot;You are not alone. There are several Domestic Violence Agencies throughout the state that can help you through this process.&quot;</span><span class="p">,</span>
+                      <span class="nt">&quot;directionWithMarkup&quot;</span><span class="p">:</span> <span class="s2">&quot;You are not alone. There are several &lt;a href=\&quot;http://www.dhs.state.il.us/page.aspx?item=31886\&quot;&gt;Domestic Violence Agencies&lt;/a&gt; throughout the state that can help you through this process.&quot;</span><span class="p">,</span>
+                      <span class="nt">&quot;referenceUrls&quot;</span><span class="p">:</span> <span class="p">[</span>
+                        <span class="s2">&quot;http://www.dhs.state.il.us/page.aspx?item=31886&quot;</span>
+                      <span class="p">]</span>
+                    <span class="p">}</span>
+                  <span class="p">]</span>
+                <span class="p">},</span>
+                <span class="p">{</span>
+                  <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Fill out forms&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;position&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+                  <span class="nt">&quot;howToDirections&quot;</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="p">{</span>
+                      <span class="nt">&quot;position&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+                      <span class="nt">&quot;direction&quot;</span><span class="p">:</span> <span class="s2">&quot;You will need to fill out forms to file with the court. This includes a Petition, an Emergency Order of Protection, and Plenary Order of Protection, and a Summons.&quot;</span>
+                    <span class="p">},</span>
+                    <span class="p">{</span>
+                      <span class="nt">&quot;position&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+                      <span class="nt">&quot;direction&quot;</span><span class="p">:</span> <span class="s2">&quot;Your petition tells the judge what you are asking for and why. You must write about the abuse you experienced. Include as many details that you can remember. The judge will use the information in your petition to decide whether to give you the order. Include in the description of the abuse: what the abuser did and said, the dates and time of day of the abuse, where the abuse happened, who saw or heard the abuse, if you were hurt by the abuse, if the police were called, how the abuse made you feel, and if there was anything that stopped you from coming to court sooner. Make sure to include details about what has happened most recently that made you feel like you need an order.&quot;</span>
+                    <span class="p">}</span>
+                  <span class="p">],</span>
+                  <span class="nt">&quot;howToTips&quot;</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="p">{</span>
+                      <span class="nt">&quot;position&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+                      <span class="nt">&quot;tip&quot;</span><span class="p">:</span> <span class="s2">&quot;You can use our Order of Protection program to help you fill out your forms.&quot;</span><span class="p">,</span>
+                      <span class="nt">&quot;tipWithMarkup&quot;</span><span class="p">:</span> <span class="s2">&quot;You can use our &lt;a href=\&quot;https://wwww.illinoislegalaid.org/node/30686/\&quot;&gt;Order of Protection&lt;/a&gt; program to help you fill out your forms.&quot;</span><span class="p">,</span>
+                      <span class="nt">&quot;referenceUrls&quot;</span><span class="p">:</span> <span class="p">[</span>
+                        <span class="s2">&quot;https://wwww.illinoislegalaid.org/node/30686&quot;</span>
+                      <span class="p">]</span>
+                    <span class="p">},</span>
+                    <span class="p">{</span>
+                      <span class="nt">&quot;position&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+                      <span class="nt">&quot;tip&quot;</span><span class="p">:</span> <span class="s2">&quot;Yf you believe giving your home address will put you or any people you live with at a risk of abuse, you do not have to put your address on your court papers. You do have to put an address where you can receive mail. You can use a P.O. Box, work address, or the address of a family member or friend that the abuser knows.&quot;</span>
+                    <span class="p">}</span>
+                  <span class="p">]</span>
+                <span class="p">},</span>
+                <span class="p">{</span>
+                  <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;File your forms with the circuit clerk&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;position&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+                  <span class="nt">&quot;howToDirections&quot;</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="p">{</span>
+                      <span class="nt">&quot;position&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+                      <span class="nt">&quot;direction&quot;</span><span class="p">:</span> <span class="s2">&quot;File the forms with the circuit clerk at the courthouse in the county where you live, where the abuser lives, or where the events happened.&quot;</span><span class="p">,</span>
+                      <span class="nt">&quot;referenceUrls&quot;</span><span class="p">:</span> <span class="p">[</span>
+                        <span class="s2">&quot;http://illinoiscourts.gov/CircuitCourt/CircuitCourtJudges/CCC_County.asp&quot;</span>
+                      <span class="p">]</span>
+                    <span class="p">},</span>
+                    <span class="p">{</span>
+                      <span class="nt">&quot;position&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+                      <span class="nt">&quot;direction&quot;</span><span class="p">:</span> <span class="s2">&quot;The circuit clerk will stamp and keep the original forms. Have them stamp the extra copies of your forms. Keep a copy for your records. The clerk will tell you which judge will hear your request for an Emergency Order of Protection. The hearing will happen the same day.&quot;</span>
+                    <span class="p">},</span>
+                    <span class="p">{</span>
+                      <span class="nt">&quot;position&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+                      <span class="nt">&quot;direction&quot;</span><span class="p">:</span> <span class="s2">&quot;The judge will hear your case for an Emergency Order without the abuser present. The judge will read your Petition for an Order of Protection. The judge may ask you questions about the abuser, about details of the abuse, and about your children. The judge will then decide if an Emergency Order is necessary. They will set a hearing date for a Plenary Order of Protection. A Plenary Order of Protection is a long-term order of protection.&quot;</span>
+                    <span class="p">}</span>
+                  <span class="p">],</span>
+                  <span class="nt">&quot;howToTips&quot;</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="p">{</span>
+                      <span class="nt">&quot;position&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+                      <span class="nt">&quot;tip&quot;</span><span class="p">:</span> <span class="s2">&quot;There is no fee to file your forms.&quot;</span>
+                    <span class="p">}</span>
+                  <span class="p">]</span>
+                <span class="p">},</span>
+                <span class="p">{</span>
+                  <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Get the sheriff to tell the other party about your case&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;position&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+                  <span class="nt">&quot;howToDirections&quot;</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="p">{</span>
+                      <span class="nt">&quot;position&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+                      <span class="nt">&quot;direction&quot;</span><span class="p">:</span> <span class="s2">&quot;The clerk will take the court documents to the sheriff&#39;s office, or ask you to do so.&quot;</span>
+                    <span class="p">},</span>
+                    <span class="p">{</span>
+                      <span class="nt">&quot;position&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+                      <span class="nt">&quot;direction&quot;</span><span class="p">:</span> <span class="s2">&quot;The sheriff will give a copy of the petition and summons to the abuser. They will also give them the Emergency Order of Protection, if one was granted. The abuser must obey the order once they receive it from the sheriff. The sheriff&#39;s office will keep a copy of the order on file.&quot;</span>
+                    <span class="p">}</span>
+                  <span class="p">],</span>
+                  <span class="nt">&quot;howToTips&quot;</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="p">{</span>
+                      <span class="nt">&quot;position&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+                      <span class="nt">&quot;tip&quot;</span><span class="p">:</span> <span class="s2">&quot;The sheriff won&#39;t charge you to deliver a copy of your court papers to the abuser.&quot;</span>
+                    <span class="p">}</span>
+                  <span class="p">]</span>
+                <span class="p">},</span>
+                <span class="p">{</span>
+                  <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Go to the hearing&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;position&quot;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span>
+                  <span class="nt">&quot;howToDirections&quot;</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="p">{</span>
+                      <span class="nt">&quot;position&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+                      <span class="nt">&quot;direction&quot;</span><span class="p">:</span> <span class="s2">&quot;After you file the Order of Protection forms, you must go to a hearing. If you do not show up to the hearing, the judge may cancel the petition and you will have to start over. The judge may not be as willing to grant you a plenary order if you miss your first court date.&quot;</span>
+                    <span class="p">},</span>
+                    <span class="p">{</span>
+                      <span class="nt">&quot;position&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+                      <span class="nt">&quot;direction&quot;</span><span class="p">:</span> <span class="s2">&quot;At your hearing, you and the abuser will be allowed to talk to the judge. You can bring witnesses or evidence to help you explain why you need a Plenary Order of Protection. Examples of evidence are medical records from an emergency room visit, or pictures showing abuse, like holes in a wall, or bruises.&quot;</span>
+                    <span class="p">},</span>
+                    <span class="p">{</span>
+                      <span class="nt">&quot;position&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+                      <span class="nt">&quot;direction&quot;</span><span class="p">:</span> <span class="s2">&quot;If you win the hearing, the judge will enter a Plenary Order of Protection. The end date will be listed on your Order of Protection. Read the order before you leave the courthouse. If something is wrong or missing, ask the clerk to correct the order before you leave.&quot;</span>
+                    <span class="p">},</span>
+                    <span class="p">{</span>
+                      <span class="nt">&quot;position&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+                      <span class="nt">&quot;direction&quot;</span><span class="p">:</span> <span class="s2">&quot;Make a few copies of the order, and always keep one with you. Give a copy of the order to anyone who is named in and protected by the order. You can also leave copies of the order at your workplace, home, car, neighbor, or children&#39;s school or daycare.&quot;</span>
+                    <span class="p">},</span>
+                    <span class="p">{</span>
+                      <span class="nt">&quot;position&quot;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span>
+                      <span class="nt">&quot;direction&quot;</span><span class="p">:</span> <span class="s2">&quot;The court will tell the sheriff about the order, which will be posted so law enforcement agencies in Illinois know that it must be given to your abuser. If your abuser violates the order, you should call the police and make a police report. The order can only be enforced after your abuser has been notified that there is an order.&quot;</span>
+                    <span class="p">}</span>
+                  <span class="p">],</span>
+                  <span class="nt">&quot;howToTips&quot;</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="p">{</span>
+                      <span class="nt">&quot;position&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+                      <span class="nt">&quot;tip&quot;</span><span class="p">:</span> <span class="s2">&quot;If the abuser does not come to the hearing, the judge can still issue a plenary order or reschedule the hearing. If the judge reschedules the hearing, the judge will usually extend your emergency order. If the judge holds the hearing, the judge will extend your Order of Protection until the next court date.&quot;</span>
+                    <span class="p">},</span>
+                    <span class="p">{</span>
+                      <span class="nt">&quot;position&quot;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span>
+                      <span class="nt">&quot;tip&quot;</span><span class="p">:</span> <span class="s2">&quot;If you do not have a copy of the order with you, an officer can check their computer system and see if there is an order. You should keep a copy of the order with you at all times. An abuser who disobeys an Order of Protection can be arrested and charged with a crime.&quot;</span>
+                    <span class="p">}</span>
+                  <span class="p">]</span>
+                <span class="p">}</span>
+              <span class="p">]</span>
+            <span class="p">}</span>
+          <span class="p">]</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Changing or renewing an order of protection&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;The person who asked for an Order of Protection can ask the judge to change, end, or renew it.&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;estimatedCost&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+              <span class="nt">&quot;currency&quot;</span><span class="p">:</span> <span class="s2">&quot;USD&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;amount&quot;</span><span class="p">:</span> <span class="mi">0</span>
+            <span class="p">}</span>
+          <span class="p">],</span>
+          <span class="nt">&quot;prepTime&quot;</span><span class="p">:</span> <span class="s2">&quot;PT30M&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;performTime&quot;</span><span class="p">:</span> <span class="s2">&quot;P1W&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;totalTime&quot;</span><span class="p">:</span> <span class="s2">&quot;P1WT30M&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;stepSections&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+              <span class="nt">&quot;position&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+              <span class="nt">&quot;steps&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                  <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Make sure you are safe&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;position&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+                  <span class="nt">&quot;howToDirections&quot;</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="p">{</span>
+                      <span class="nt">&quot;position&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+                      <span class="nt">&quot;direction&quot;</span><span class="p">:</span> <span class="s2">&quot;To change, renew, or end an Order of Protection, you will need to file some forms with the circuit clerk. This includes a Motion and a Notice of Motion. You can use our Motion program to help you fill out your forms.&quot;</span><span class="p">,</span>
+                      <span class="nt">&quot;referenceUrls&quot;</span><span class="p">:</span> <span class="p">[</span>
+                        <span class="s2">&quot;https://www.illinoislegalaid.org/node/30971&quot;</span>
+                      <span class="p">]</span>
+                    <span class="p">}</span>
+                  <span class="p">],</span>
+                  <span class="nt">&quot;howToTips&quot;</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="p">{</span>
+                      <span class="nt">&quot;position&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+                      <span class="nt">&quot;tip&quot;</span><span class="p">:</span> <span class="s2">&quot;A motion to end an order is called a Motion to Terminate. A motion to change an order is called a Motion to Modify. A motion to renew an order is called a Motion to Extend.&quot;</span>
+                    <span class="p">}</span>
+                  <span class="p">]</span>
+                <span class="p">},</span>
+                <span class="p">{</span>
+                  <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;File your forms&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;position&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+                  <span class="nt">&quot;howToDirections&quot;</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="p">{</span>
+                      <span class="nt">&quot;position&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+                      <span class="nt">&quot;direction&quot;</span><span class="p">:</span> <span class="s2">&quot;Now that you have filled out your forms, file them with the appropriate circuit clerk. They will give you a hearing date.&quot;</span><span class="p">,</span>
+                      <span class="nt">&quot;referenceUrls&quot;</span><span class="p">:</span> <span class="p">[</span>
+                        <span class="s2">&quot;http://www.illinoiscourts.gov/CircuitCourt/CircuitCourtJudges/CCC_County.asp&quot;</span>
+                      <span class="p">]</span>
+                    <span class="p">}</span>
+                  <span class="p">]</span>
+                <span class="p">},</span>
+                <span class="p">{</span>
+                  <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Send the other party notice of the hearing&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;position&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+                  <span class="nt">&quot;howToDirections&quot;</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="p">{</span>
+                      <span class="nt">&quot;position&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+                      <span class="nt">&quot;direction&quot;</span><span class="p">:</span> <span class="s2">&quot;To give the other party notice, you must deliver stamped copies of the motion and notice of motion either personally or by certified mail, return receipt requested. If the other party has an attorney, send one copy of each form to the attorney&#39;s office.&quot;</span>
+                    <span class="p">},</span>
+                    <span class="p">{</span>
+                      <span class="nt">&quot;position&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+                      <span class="nt">&quot;direction&quot;</span><span class="p">:</span> <span class="s2">&quot;Keep the remaining copies for your files and bring them with you when you return to court. You must also bring a Proof of Delivery form saying how you gave the other party a copy.&quot;</span>
+                    <span class="p">}</span>
+                  <span class="p">]</span>
+                <span class="p">},</span>
+                <span class="p">{</span>
+                  <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Go to your hearing date&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;position&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+                  <span class="nt">&quot;howToDirections&quot;</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="p">{</span>
+                      <span class="nt">&quot;position&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+                      <span class="nt">&quot;direction&quot;</span><span class="p">:</span> <span class="s2">&quot;Go to court on the date and time assigned to you by the clerk. Bring an extra copy of your motion and notice of motion in case the judge needs one. Check in with the clerk in your assigned courtroom and wait for your name to be called.&quot;</span>
+                    <span class="p">},</span>
+                    <span class="p">{</span>
+                      <span class="nt">&quot;position&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+                      <span class="nt">&quot;direction&quot;</span><span class="p">:</span> <span class="s2">&quot;Usually, the judge will first hear oral arguments in support of your motion. If you filed the motion, you will get the first chance to tell the judge why you are in court and what you want to see happen in your case. Then the other side will get a turn to tell the judge if they disagree or agree and why. You may be given the opportunity to say the last word.&quot;</span>
+                    <span class="p">},</span>
+                    <span class="p">{</span>
+                      <span class="nt">&quot;position&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+                      <span class="nt">&quot;direction&quot;</span><span class="p">:</span> <span class="s2">&quot;After hearing from both sides, the judge will issue an order granting or denying the motion. Make sure you get copies of this order from the courtroom clerk. Bring the order to the circuit clerk&#39;s office to be stamped and filed. If the other side did not appear at the hearing, send a copy of the order to them.&quot;</span>
+                    <span class="p">}</span>
+                  <span class="p">],</span>
+                  <span class="nt">&quot;howToTips&quot;</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="p">{</span>
+                      <span class="nt">&quot;position&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+                      <span class="nt">&quot;tip&quot;</span><span class="p">:</span> <span class="s2">&quot;Make sure to keep a copy of the order in a safe place, along with your original Order of Protection. Also give a copy to anyone you gave a copy of the original to.&quot;</span>
+                    <span class="p">}</span>
+                  <span class="p">]</span>
+                <span class="p">}</span>
+              <span class="p">]</span>
+            <span class="p">}</span>
+          <span class="p">]</span>
+        <span class="p">}</span>
+      <span class="p">],</span>
+      <span class="nt">&quot;result&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;body&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;When a judge signs an Order of Protection, it makes it illegal for the Respondent to do or not do certain things.  A judge may require the Respondent to:&quot;</span>
+          <span class="p">],</span>
+          <span class="nt">&quot;list&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+              <span class="nt">&quot;itemListOrder&quot;</span><span class="p">:</span> <span class="s2">&quot;Unordered&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;itemListElements&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                  <span class="nt">&quot;item&quot;</span><span class="p">:</span> <span class="s2">&quot;Stop abusive acts,&quot;</span>
+                <span class="p">},</span>
+                <span class="p">{</span>
+                  <span class="nt">&quot;item&quot;</span><span class="p">:</span> <span class="s2">&quot;Stay away from the victim and other people protected by the order,&quot;</span>
+                <span class="p">},</span>
+                <span class="p">{</span>
+                  <span class="nt">&quot;item&quot;</span><span class="p">:</span> <span class="s2">&quot;Not contact the victim via telephone calls, mail, email, written notes, or third parties,&quot;</span>
+                <span class="p">},</span>
+                <span class="p">{</span>
+                  <span class="nt">&quot;item&quot;</span><span class="p">:</span> <span class="s2">&quot;Stay away from the victim&#39;s home, school, or work,&quot;</span>
+                <span class="p">},</span>
+                <span class="p">{</span>
+                  <span class="nt">&quot;item&quot;</span><span class="p">:</span> <span class="s2">&quot;Attend counseling,&quot;</span>
+                <span class="p">},</span>
+                <span class="p">{</span>
+                  <span class="nt">&quot;item&quot;</span><span class="p">:</span> <span class="s2">&quot;Pay child support,&quot;</span>
+                <span class="p">},</span>
+                <span class="p">{</span>
+                  <span class="nt">&quot;item&quot;</span><span class="p">:</span> <span class="s2">&quot;Return or stay away from property and pets, or&quot;</span>
+                <span class="p">},</span>
+                <span class="p">{</span>
+                  <span class="nt">&quot;item&quot;</span><span class="p">:</span> <span class="s2">&quot;Move out of a home they share with the victim.&quot;</span>
+                <span class="p">}</span>
+              <span class="p">]</span>
+            <span class="p">}</span>
+          <span class="p">]</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;body&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;A judge can also change a person&#39;s parental responsibilities, also known as custody and visitation, in an Order of Protection.&quot;</span>
+          <span class="p">]</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;body&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;The Order of Protection protects the person who was abused. It also protects any children or dependent adults in their care. It also protects anyone living with or employed at a home or shelter where the abused family or household member lives.&quot;</span>
+          <span class="p">]</span>
+        <span class="p">}</span>
+      <span class="p">]</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="nt">&quot;faq&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;body&quot;</span><span class="p">:</span> <span class="s2">&quot;How long does an Order of Protection last?&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;acceptedAnswer&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;body&quot;</span><span class="p">:</span> <span class="p">[</span>
+          <span class="s2">&quot;An Emergency Order of Protection can last 14 to 21 days. This is what you can get on the same day you file your petition. A Plenary Order of Protection can last up to 2 years, but it can be renewed for longer. A judge will grant this only after the abuser has received notice.&quot;</span>
+        <span class="p">]</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;body&quot;</span><span class="p">:</span> <span class="s2">&quot;What if my abuser lives with me?&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;acceptedAnswer&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;body&quot;</span><span class="p">:</span> <span class="p">[</span>
+          <span class="s2">&quot;If you live with your abuser, you can ask for exclusive possession of the home. The abuser will have to leave and stay away from the home. If the abuser has a legal right to be in the home, the judge will need to decide whether it is more difficult for you or the abuser to leave. The judge may ask if you have another place to stay, your abuser has another place to stay, any children live with you, both of you work, or if your home is near your workplace or your children&#39;s school. If the judge orders exclusive possession, call the police and ask that they escort you home. Tell the police officer that you have an Order of Protection and need the respondent removed from your home. The police will meet you at your home and tell the abuser they have to leave. The court can order that you or the abuser be able to go into the house without the police to get clothing, medicine, or other items you need.&quot;</span>
+        <span class="p">]</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;body&quot;</span><span class="p">:</span> <span class="s2">&quot;What if I have pets?&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;acceptedAnswer&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;body&quot;</span><span class="p">:</span> <span class="p">[</span>
+          <span class="s2">&quot;You can ask a judge to grant you any animals owned by you, the abuser, or any minor child living in either household. The judge can order the abuser to stay away from the animal and to not hurt, sell, or hide the animal. You can also ask the judge to give you any property that you have a legal right to.&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;If you own the property together with the abuser, the judge will need to decide whether it is more difficult for you or the abuser to be without the property.  If you do not own the property, the judge will not give it to you. You can also ask the judge to order the abuser not to sell, hide, or damage any property that you own.&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;Remember that for any of this to happen, you must ask for it in your Petition for an Order of Protection.&quot;</span>
+        <span class="p">]</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;body&quot;</span><span class="p">:</span> <span class="s2">&quot;Can I talk to someone I have an Order of Protection against?&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;acceptedAnswer&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;body&quot;</span><span class="p">:</span> <span class="p">[</span>
+          <span class="s2">&quot;You can contact the abuser you have an Order of Protection against. The order only affects actions by the abuser. It does not affect your actions.&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;However, such contacts may result in unintended consequences. The judge may have concerns about your reasons for getting the order and whether you really need the court&#39;s protection.&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;This may affect their decision to give you a longer Order of Protection, or extend the time period of your current order.&quot;</span>
+        <span class="p">]</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="nt">&quot;relatedProblems&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Being stalked&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;lastReviewed&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;lastModified&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-05-24T20:42Z&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/node/123&quot;</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+  <span class="nt">&quot;relatedResources&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Domestic abuse survivor story&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;lastReviewed&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;lastModified&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-05-24T20:42Z&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/voc/domestic-abuse-sexual-assault&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;additionalType&quot;</span><span class="p">:</span> <span class="s2">&quot;userJourney&quot;</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;language&quot;</span><span class="p">:</span><span class="s2">&quot;en&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="cms_structured_content_types.html" class="btn btn-neutral float-right" title="Structured Content Types - Technical Architecture" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="structured_content_tech.html" class="btn btn-neutral float-left" title="Structured content technical documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2023, Illinois Legal Aid Online.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

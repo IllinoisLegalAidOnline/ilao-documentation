@@ -1,0 +1,408 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Creating and editing structured content &mdash; ILAO Sprint 124a documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/themeoverrides.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Creating DIY Legal Solution" href="cms_structured_legal_problem.html" />
+    <link rel="prev" title="Authoring best practices and guidelines" href="cms_structured_legal_content_overview.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> ILAO
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="design_guide.html">Design &amp; Style Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="block_management.html">Custom blocks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="people_management.html">User Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="legal_information.html">Browsing to legal information</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="legal_content_cms.html">Legal Content CMS</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="cms_law_tracker.html">Law tracker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_wysiwyg.html">WYSIWYG Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_custom_tokens.html">Custom Tokens</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_redirects.html">Creating redirects between pages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_content_management_tags.html">Content management tags</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_legal_content.html">Legal content type</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="cms_structured_legal_content.html">Next generation content/COPE</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="cms_structured_content_overview.html">Structured content (COPE content) Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cms_structured_content_navigation.html">DIY Solutions - Navigation and Layouts</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="structured_content_authoring.html">Structured content authoring guide</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_content_overview.html">Authoring best practices and guidelines</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Creating and editing structured content</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_problem.html">Creating DIY Legal Solution</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_solution.html">Creating a Legal Option</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_question.html">Creating a Legal Question</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_step.html">Creating Legal Step</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_howto.html">Organizing legal steps into a How-to</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_forms.html">Restructuing Easy forms and blank forms for use in steps</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="cms_structured_content_reports.html">Structured content reports</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cms_structured_content_sms.html">Delivery over SMS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structured_content_tech.html">Structured content technical documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cms_portal_main_page.html">Portal main page content type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_toolboxes.html">Toolbox and related content types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_adrm.html">Lawyer Manuals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_content_reporting.html">Legal content reporting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_lcv_program.html">Legal Content Volunteers Program</a></li>
+<li class="toctree-l2"><a class="reference internal" href="legal_content_cms.html#known-workarounds">Known Workarounds</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="cms_structured_legal_content.html">Next generation content/COPE</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="cms_structured_content_overview.html">Structured content (COPE content) Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_structured_content_navigation.html">DIY Solutions - Navigation and Layouts</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="structured_content_authoring.html">Structured content authoring guide</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="cms_structured_legal_content_overview.html">Authoring best practices and guidelines</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Creating and editing structured content</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_problem.html">Creating DIY Legal Solution</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_solution.html">Creating a Legal Option</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_howto.html">Organizing legal steps into a How-to</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_step.html">Creating Legal Step</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_forms.html">Restructuing Easy forms and blank forms for use in steps</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_question.html">Creating a Legal Question</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_helpful_organization.html">Structured Helpful Organization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_faqs.html">Managing structured content FAQs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_paired_markup.html">Paired Markup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_jurisdiction.html">Coverage area</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_structured_text.html">Structured Text &amp; Lists</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="cms_structured_legal_problem.html">Creating DIY Legal Solution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cms_structured_legal_solution.html">Creating a Legal Option</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cms_structured_legal_question.html">Creating a Legal Question</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cms_structured_legal_step.html">Creating Legal Step</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cms_structured_legal_howto.html">Organizing legal steps into a How-to</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cms_structured_legal_forms.html">Restructuing Easy forms and blank forms for use in steps</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cms_structured_content_reports.html">Structured content reports</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_structured_content_sms.html">Delivery over SMS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structured_content_tech.html">Structured content technical documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="basic_pages_cms.html">Basic pages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="testimonials_cms.html">Testimonials Content Type</a></li>
+<li class="toctree-l1"><a class="reference internal" href="webforms_cms.html">Webforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="translation_cms.html">Translation Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="calendar_cms.html">Calendar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jobs_cms.html">Job Listings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="discussion_groups.html">Discussion groups</a></li>
+<li class="toctree-l1"><a class="reference internal" href="otis_cms.html">Get Legal Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="site_search.html">Site Search</a></li>
+<li class="toctree-l1"><a class="reference internal" href="site_faqs.html">Site FAQs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="other_cms_features.html">Other Website Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="taxonomies.html">Taxonomies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rss_feeds.html">RSS Feeds</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ilao_api.html">ILAO’s API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="next_steps.html">Next Steps Flows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sms_overview.html">SMS Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_analytics.html">Data and Analytics</a></li>
+</ul>
+<p class="caption"><span class="caption-text">See also:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="creating_docs_in_github.html">Creating new docs in Github</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ILAO</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="legal_content_cms.html">Legal Content CMS</a> &raquo;</li>
+        
+          <li><a href="cms_structured_legal_content.html">Next generation content/COPE</a> &raquo;</li>
+        
+          <li><a href="structured_content_authoring.html">Structured content authoring guide</a> &raquo;</li>
+        
+      <li>Creating and editing structured content</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/cms_structured_legal_content_admin.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="creating-and-editing-structured-content">
+<h1>Creating and editing structured content<a class="headerlink" href="#creating-and-editing-structured-content" title="Permalink to this headline">¶</a></h1>
+<p>Structured legal content needs to be created in a specific way as certain content types depend on other content types.</p>
+<ul class="simple">
+<li><p>Legal problems:</p>
+<ul>
+<li><p>require a solution, which must be created first. A legal problem <strong>cannot be saved</strong> without a valid solution.</p></li>
+<li><p>allow for frequently asked questions, which must be created first and attached.</p></li>
+</ul>
+</li>
+<li><p>Solutions have optional components that must exist to be attached to a legal solution. These are:</p>
+<ul>
+<li><p>Legal form</p></li>
+<li><p>Legal how-to</p></li>
+<li><p>Helpful organization</p></li>
+</ul>
+</li>
+<li><p>Legal how-tos require Legal steps, which must be created first.</p></li>
+</ul>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">There are 7 structured content types:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="cms_structured_legal_problem.html">Creating DIY Legal Solution</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cms_structured_legal_problem.html#provide-a-title-and-subtype">Provide a title and subtype</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_structured_legal_problem.html#provide-descriptions">Provide descriptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_structured_legal_problem.html#draft-introduction">Draft introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_structured_legal_problem.html#tag-the-diy-legal-solution-to-specific-taxonomies">Tag the DIY Legal Solution to specific taxonomies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_structured_legal_problem.html#include-possible-solutions-and-prevention-options">Include possible solutions and prevention options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_structured_legal_problem.html#link-to-frequently-asked-questions">Link to frequently asked questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_structured_legal_problem.html#link-to-related-content">Link to related content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_structured_legal_problem.html#add-additional-metadata">Add additional metadata</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="cms_structured_legal_solution.html">Creating a Legal Option</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cms_structured_legal_solution.html#create-the-core-solution-information">Create the core solution information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_structured_legal_solution.html#categorize-the-solution">Categorize the solution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_structured_legal_solution.html#add-legal-difficulty">Add legal difficulty</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_structured_legal_solution.html#define-eligibility-rules">Define eligibility rules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_structured_legal_solution.html#define-the-result">Define the result</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_structured_legal_solution.html#build-out-additional-related-components">Build out additional related components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_structured_legal_solution.html#complete-the-legal-option-legal-metadata">Complete the Legal Option legal metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_structured_legal_solution.html#add-additional-metadata">Add additional metadata</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="cms_structured_legal_howto.html">Organizing legal steps into a How-to</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cms_structured_legal_howto.html#create-the-core-how-to-information">Create the core how-to information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_structured_legal_howto.html#categorize-the-how-to">Categorize the How-to</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_structured_legal_howto.html#define-how-long-the-process-takes">Define how long the process takes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_structured_legal_howto.html#define-the-steps-in-the-process">Define the steps in the process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_structured_legal_howto.html#add-additional-metadata-if-needed">Add additional metadata if needed</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_structured_legal_howto.html#style-notes">Style notes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="cms_structured_legal_step.html">Creating Legal Step</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cms_structured_legal_step.html#style-notes">Style notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_structured_legal_step.html#legal-forms-needed">Legal forms needed</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_structured_legal_step.html#jurisdiction">Jurisdiction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_structured_legal_step.html#creating-or-editing-a-step">Creating or editing a step</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_structured_legal_step.html#add-editorial-metadata">Add editorial metadata</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="cms_structured_legal_forms.html">Restructuing Easy forms and blank forms for use in steps</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cms_structured_legal_forms.html#relationship-to-easy-forms">Relationship to Easy Forms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_structured_legal_forms.html#relationship-to-statewide-fillable-pdfs">Relationship to Statewide fillable PDFs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_structured_legal_forms.html#creating-and-editing-a-legal-form">Creating and editing a legal form</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_structured_legal_forms.html#full-add-edit-form">Full add/edit form</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="cms_structured_legal_question.html">Creating a Legal Question</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cms_structured_legal_question.html#add-question-and-description">Add Question and Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_structured_legal_question.html#categorize-the-legal-problem">Categorize the legal problem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_structured_legal_question.html#draft-the-answer-or-answers">Draft the answer or answers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_structured_legal_question.html#tag-related-content">Tag related content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_structured_legal_question.html#add-content-management-metadata">Add Content Management Metadata</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="cms_structured_legal_helpful_organization.html">Structured Helpful Organization</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cms_structured_legal_helpful_organization.html#what-is-a-helpful-organization">What is a helpful organization?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_structured_legal_helpful_organization.html#creating-a-helpful-organization">Creating a helpful organization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_structured_legal_helpful_organization.html#full-add-edit-form">Full add/edit form</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_structured_legal_helpful_organization.html#automatic-helpful-organization-creation">Automatic Helpful Organization Creation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="cms_structured_faqs.html">Managing structured content FAQs</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">They often rely on:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="cms_structured_paired_markup.html">Paired Markup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cms_structured_jurisdiction.html">Coverage area</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cms_structured_jurisdiction.html#jurisdiction-and-negate-jurisdiction">Jurisdiction and Negate Jurisdiction</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="cms_structured_structured_text.html">Structured Text &amp; Lists</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cms_structured_structured_text.html#paired-markup-section">Paired markup section</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_structured_structured_text.html#list-segments-section">List segments section</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="cms_structured_legal_problem.html" class="btn btn-neutral float-right" title="Creating DIY Legal Solution" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="cms_structured_legal_content_overview.html" class="btn btn-neutral float-left" title="Authoring best practices and guidelines" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2023, Illinois Legal Aid Online.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

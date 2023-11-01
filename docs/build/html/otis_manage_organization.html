@@ -1,0 +1,321 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Adding/editing organizations &mdash; ILAO Sprint 124a documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/themeoverrides.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Organization “group” roles" href="otis_manage_membership.html" />
+    <link rel="prev" title="Organization management" href="otis_organization_management.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> ILAO
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="design_guide.html">Design &amp; Style Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="block_management.html">Custom blocks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="people_management.html">User Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="legal_information.html">Browsing to legal information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="legal_content_cms.html">Legal Content CMS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cms_structured_legal_content.html">Next generation content/COPE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basic_pages_cms.html">Basic pages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="testimonials_cms.html">Testimonials Content Type</a></li>
+<li class="toctree-l1"><a class="reference internal" href="webforms_cms.html">Webforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="translation_cms.html">Translation Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="calendar_cms.html">Calendar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jobs_cms.html">Job Listings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="discussion_groups.html">Discussion groups</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="otis_cms.html">Get Legal Help</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="otis_endusers.html">Get Legal Help Overview</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="otis_organization_management.html">Organization management</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Adding/editing organizations</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#adding-an-organization">Adding an organization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#editing-an-organization">Editing an organization</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="otis_manage_membership.html">Organization “group” roles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="otis_manage_nodes.html">Locations &amp; Services</a></li>
+<li class="toctree-l3"><a class="reference internal" href="otis_organization_triage_rules.html">Triage Rules Content</a></li>
+<li class="toctree-l3"><a class="reference internal" href="otis_manage_triage_webforms.html">Triage rule webforms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="otis_manage_intake_settings.html">Intake settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="otis_organization_reports.html">Organization Reports</a></li>
+<li class="toctree-l3"><a class="reference internal" href="otis_fast_entry.html">Fast Entry Form</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="otis_endpoints.html">Triage rule endpoints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="otis_reports.html">Get Legal Help Reporting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="otis_ai_integration.html">OTIS AI Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="otis_third_party_support.html">Supported Integrations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="otis_sms_intake.html">Online Intake Over SMS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="otis_facebook.html">Facebook Integrations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="otis_features.html">Additional Features</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="site_search.html">Site Search</a></li>
+<li class="toctree-l1"><a class="reference internal" href="site_faqs.html">Site FAQs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="other_cms_features.html">Other Website Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="taxonomies.html">Taxonomies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rss_feeds.html">RSS Feeds</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ilao_api.html">ILAO’s API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="next_steps.html">Next Steps Flows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sms_overview.html">SMS Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_analytics.html">Data and Analytics</a></li>
+</ul>
+<p class="caption"><span class="caption-text">See also:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="creating_docs_in_github.html">Creating new docs in Github</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ILAO</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="otis_cms.html">Get Legal Help</a> &raquo;</li>
+        
+          <li><a href="otis_organization_management.html">Organization management</a> &raquo;</li>
+        
+      <li>Adding/editing organizations</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/otis_manage_organization.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="adding-editing-organizations">
+<h1>Adding/editing organizations<a class="headerlink" href="#adding-editing-organizations" title="Permalink to this headline">¶</a></h1>
+<p>Organizations can only be added under <a class="reference external" href="https://www.illinoislegalaid.org/admin/group">Groups</a> (not under Content). This is because the website relies on group management to bind organizations, locations, services, triage rules, intake settings, and organization staff members together and to provide the correct organizational permissions to select organization staff.</p>
+<img alt="_images/orgs-group-list.png" src="_images/orgs-group-list.png" />
+<div class="section" id="adding-an-organization">
+<h2>Adding an organization<a class="headerlink" href="#adding-an-organization" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Only ILAO staff can add an organization. Please check <a class="reference external" href="https://docs.google.com/document/d/1VDLQhaYR-o_0Lwaq1dMM_Rpv27i6tRLfg3y1uHx0GGc/edit">our guidelines</a> before adding an organization to the system.</p>
+</div>
+<p>To add an organization:</p>
+<ul class="simple">
+<li><p>Click on Add Group</p></li>
+<li><p>Fill out the organization profile which requires:</p>
+<ul>
+<li><p>A name. This name must be unique in the system</p></li>
+<li><p>An alternate name, if one exists for the organization</p></li>
+<li><p>An optional description. This is highly encouraged as this may be automatically displayed on the website or in structured content.</p></li>
+<li><p>A physical address</p></li>
+<li><p>A mailing address. There is an option to copy from physical address</p></li>
+<li><p>A phone number</p></li>
+<li><p>A contact email address</p></li>
+<li><p>A website address</p></li>
+<li><p>Whether the organization provides services to the public. Organizations that do not provide services to the public may still be included in the site but will not be shown in referrals.</p></li>
+<li><p>Whether to show the physical address to public users. If this is set to no, the address will not show in referrals.</p></li>
+<li><p>ILAO staff only have an option to associate an email domain with the organization. This is used to auto-approve users with the legal aid member role. It is not retroactive.</p></li>
+</ul>
+</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Adding an email domain will add that domain to the list of domains to automatically approve future users. If an organization changes their email domain, existing users will still need to be manually updated.   <strong>Do not add an email domain for organizations whose members should not be given legal aid permissions.</strong></p>
+</div>
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">Todo</p>
+<p>Verify that the physical address does not show in referrals.</p>
+</div>
+</div>
+<div class="section" id="editing-an-organization">
+<h2>Editing an organization<a class="headerlink" href="#editing-an-organization" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Organizations can only be edited by ILAO staff or by members of the specific organization who have the Organization manager role in the group.</p>
+</div>
+<p>The edit form is the same as the add form.</p>
+<img alt="_images/org-edit-form.png" src="_images/org-edit-form.png" />
+<div class="section" id="staff-users">
+<h3>Staff users<a class="headerlink" href="#staff-users" title="Permalink to this headline">¶</a></h3>
+<p>Edit an organization by going to <a class="reference external" href="https://www.illinoislegalaid.org/admin/group">Groups</a> and editing from the list.</p>
+</div>
+<div class="section" id="organization-managers">
+<h3>Organization managers<a class="headerlink" href="#organization-managers" title="Permalink to this headline">¶</a></h3>
+<p>Edit an organization by going to their dashboard and selecting Edit organization profile in the “You can” block.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="otis_manage_membership.html" class="btn btn-neutral float-right" title="Organization “group” roles" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="otis_organization_management.html" class="btn btn-neutral float-left" title="Organization management" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2023, Illinois Legal Aid Online.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

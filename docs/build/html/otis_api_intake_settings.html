@@ -1,0 +1,1782 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>OTIS API Intake Settings &mdash; ILAO Sprint 124a documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/themeoverrides.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="OTIS API Related Entities" href="otis_api_relationships.html" />
+    <link rel="prev" title="OTIS API Triage User" href="otis_api_triage_user.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> ILAO
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="design_guide.html">Design &amp; Style Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="block_management.html">Custom blocks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="people_management.html">User Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="legal_information.html">Browsing to legal information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="legal_content_cms.html">Legal Content CMS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cms_structured_legal_content.html">Next generation content/COPE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basic_pages_cms.html">Basic pages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="testimonials_cms.html">Testimonials Content Type</a></li>
+<li class="toctree-l1"><a class="reference internal" href="webforms_cms.html">Webforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="translation_cms.html">Translation Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="calendar_cms.html">Calendar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jobs_cms.html">Job Listings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="discussion_groups.html">Discussion groups</a></li>
+<li class="toctree-l1"><a class="reference internal" href="otis_cms.html">Get Legal Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="site_search.html">Site Search</a></li>
+<li class="toctree-l1"><a class="reference internal" href="site_faqs.html">Site FAQs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="other_cms_features.html">Other Website Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="taxonomies.html">Taxonomies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rss_feeds.html">RSS Feeds</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="ilao_api.html">ILAO’s API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="api_authorization.html">API Authorization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_filtering.html">Customizing API results</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="otis_api.html">ILAO OTIS API</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="otis_api_triage_user.html">OTIS API Triage User</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">OTIS API Intake Settings</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#get-intake-setting">Get Intake Setting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#create-intake-setting">Create intake setting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#update-intake-setting">Update intake setting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#delete-intake-setting">Delete intake setting</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="otis_api_relationships.html">OTIS API Related Entities</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cms_structured_content_api.html">Structured content API</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="next_steps.html">Next Steps Flows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sms_overview.html">SMS Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_analytics.html">Data and Analytics</a></li>
+</ul>
+<p class="caption"><span class="caption-text">See also:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="creating_docs_in_github.html">Creating new docs in Github</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ILAO</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="ilao_api.html">ILAO’s API</a> &raquo;</li>
+        
+          <li><a href="otis_api.html">ILAO OTIS API</a> &raquo;</li>
+        
+      <li>OTIS API Intake Settings</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/otis_api_intake_settings.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="otis-api-intake-settings">
+<h1>OTIS API Intake Settings<a class="headerlink" href="#otis-api-intake-settings" title="Permalink to this headline">¶</a></h1>
+<p>This suite of API functions allow for standard CRUD (create-read-update-delete) operations on the Intake settings custom entity. The intake settings custom entity contains data that describes a specific organization’s service’s intake settings, such as income limits, special populations allowed, legal issues associated with the intake settings, callback settings, and messages.</p>
+<div class="section" id="get-intake-setting">
+<h2>Get Intake Setting<a class="headerlink" href="#get-intake-setting" title="Permalink to this headline">¶</a></h2>
+<p>The API supports GET commands to return one or more existing intake settings.  The JSON API allows for filtering on field parameters.  See the general documentation on <a class="reference external" href="https://www.drupal.org/docs/core-modules-and-themes/core-modules/jsonapi-module/filtering">Drupal.org</a> for general information on filtering and <a class="reference internal" href="api_filtering.html#ilao-api-filters"><span class="std std-ref">Customizing API results</span></a> for filter examples.</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="x">GET /jsonapi/oas_intake_settings/oas_intake_settings?page[limit]=</span>
+<span class="x">GET /jsonapi/oas_triage_user/oas_triage_user/{{uuid}} returns a specific triage user</span>
+<span class="x">GET /jsonapi/oas_triage_user/oas_triage_user?sort=-changed returns the newest</span>
+<span class="x">GET /jsonapi/oas_intake_settings/oas_intake_settings?filter[counties][value]=f81da2b5-dd82-42da-ba4a-75fecfef7760&amp;filter[counties][path]=field_counties.id&amp;filter[foo][condition][value][]=1821&amp;filter[foo][condition][value][]=1811&amp;filter[foo][condition][path]=drupal_internal__id&amp;filter[foo][condition][operator]=IN returns the eviction intake setting that matches the county ID and has either an intake settings id of 1821 or 1811.</span>
+</pre></div>
+</div>
+<div class="section" id="response">
+<h3>Response<a class="headerlink" href="#response" title="Permalink to this headline">¶</a></h3>
+<p>Returns data object containing:</p>
+<ul class="simple">
+<li><p>Type</p></li>
+<li><p>ID (the uuid of the triage user created)</p></li>
+<li><p>Links</p></li>
+<li><p>Attributes (the data of the intake setting)</p></li>
+<li><p>Relationships  (the related entities of the intake setting)</p></li>
+</ul>
+</div>
+<div class="section" id="sample-response">
+<h3>Sample Response<a class="headerlink" href="#sample-response" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span> <span class="p">{</span>
+  <span class="nt">&quot;jsonapi&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;1.0&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;meta&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+              <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;http://jsonapi.org/format/1.0/&quot;</span>
+              <span class="p">}</span>
+          <span class="p">}</span>
+      <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;oas_intake_settings--oas_intake_settings&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;13d32856-e611-4ef8-a501-f111795e6db7&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+              <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/oas_intake_settings/oas_intake_settings/13d32856-e611-4ef8-a501-f111795e6db7&quot;</span>
+              <span class="p">}</span>
+          <span class="p">},</span>
+          <span class="nt">&quot;attributes&quot;</span><span class="p">:</span> <span class="p">{</span>
+              <span class="nt">&quot;drupal_internal__id&quot;</span><span class="p">:</span> <span class="mi">1821</span><span class="p">,</span>
+              <span class="nt">&quot;langcode&quot;</span><span class="p">:</span> <span class="s2">&quot;en&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+              <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;LOLLA housing&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;created&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-04-28T21:51:03+00:00&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;changed&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-05-18T18:46:51+00:00&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;entity_type&quot;</span><span class="p">:</span> <span class="s2">&quot;node&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;current_count&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+              <span class="nt">&quot;enabled&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+              <span class="nt">&quot;collect_marital_status&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+              <span class="nt">&quot;collect_immigration&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+              <span class="nt">&quot;collect_citizenship&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+              <span class="nt">&quot;collect_country&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+              <span class="nt">&quot;collect_language&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+              <span class="nt">&quot;collect_gender&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+              <span class="nt">&quot;collect_race&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+              <span class="nt">&quot;collect_ethnicity&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+              <span class="nt">&quot;collect_income&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+              <span class="nt">&quot;collect_assets&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+              <span class="nt">&quot;collect_expenses&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+              <span class="nt">&quot;apply_income_limit&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+              <span class="nt">&quot;apply_asset_limit&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+              <span class="nt">&quot;collect_expenses_over_income&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+              <span class="nt">&quot;allow_prisoners&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+              <span class="nt">&quot;maximum_allowed_income&quot;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
+              <span class="nt">&quot;maximum_allowed_assets&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+              <span class="nt">&quot;personal_exemption_amount&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+              <span class="nt">&quot;intake_limit&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+              <span class="nt">&quot;reset_limit_frequency&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span>
+              <span class="nt">&quot;minimum_minor_age&quot;</span><span class="p">:</span> <span class="mi">18</span><span class="p">,</span>
+              <span class="nt">&quot;minimum_senior_age&quot;</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span>
+              <span class="nt">&quot;callback_number&quot;</span><span class="p">:</span> <span class="s2">&quot;855-601-9474&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;callback_type&quot;</span><span class="p">:</span> <span class="s2">&quot;we_call_client&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;cms_vendor&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+              <span class="nt">&quot;default_langcode&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+              <span class="nt">&quot;content_translation_source&quot;</span><span class="p">:</span> <span class="s2">&quot;und&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;content_translation_outdated&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+              <span class="nt">&quot;content_translation_created&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-04-28T21:51:03+00:00&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;content_translation_changed&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-04-30T18:38:08+00:00&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;field_bypass_intake_message&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;p&gt;Please call [OAS:name] at [OAS:phone] for immediate assistance. Tell them you were referred by Illinois Legal Aid Online.&lt;/p&gt;\r\n&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;format&quot;</span><span class="p">:</span> <span class="s2">&quot;basic_html&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;processed&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;p&gt;Please call [OAS:name] at [OAS:phone] for immediate assistance. Tell them you were referred by Illinois Legal Aid Online.&lt;/p&gt;&quot;</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;field_extended_service_area_yn&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+              <span class="nt">&quot;field_include_exclude_by_type&quot;</span><span class="p">:</span> <span class="s2">&quot;counties&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;field_maximum_callbacks_per_slot&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+              <span class="nt">&quot;field_same_legal_issues&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+              <span class="nt">&quot;field_same_service_area_as_locat&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+              <span class="nt">&quot;field_statewide&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+              <span class="nt">&quot;oas_help_citizenship_status&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;p&gt;Your citizenship status help figure out what service you qualify for. If you were born in the United States, got citizenship through a parent or are naturalized, then you are a U.S. citizen. If you have a green card that lets you live and work in the U.S., then you are a Legal Permanent Resident. If you are a victim of domestic abuse, then you may qualify for protection under the Violence Against Women Act (VAWA).&lt;/p&gt;\r\n&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;format&quot;</span><span class="p">:</span> <span class="s2">&quot;basic_html&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;processed&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;p&gt;Your citizenship status help figure out what service you qualify for. If you were born in the United States, got citizenship through a parent or are naturalized, then you are a U.S. citizen. If you have a green card that lets you live and work in the U.S., then you are a Legal Permanent Resident. If you are a victim of domestic abuse, then you may qualify for protection under the Violence Against Women Act (VAWA).&lt;/p&gt;&quot;</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;oas_help_country_of_origin&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;p&gt;Please enter the country where you were born. Knowing your home country will help legal aid to better serve you.&lt;/p&gt;\r\n&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;format&quot;</span><span class="p">:</span> <span class="s2">&quot;basic_html&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;processed&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;p&gt;Please enter the country where you were born. Knowing your home country will help legal aid to better serve you.&lt;/p&gt;&quot;</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;oas_help_ethnicity&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;p&gt;Please enter your ethnicity. Knowing your ethnicity will help legal aid to better serve you and your community.&lt;/p&gt;\r\n&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;format&quot;</span><span class="p">:</span> <span class="s2">&quot;basic_html&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;processed&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;p&gt;Please enter your ethnicity. Knowing your ethnicity will help legal aid to better serve you and your community.&lt;/p&gt;&quot;</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;oas_help_gender&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;p&gt;Please enter whether you are married, single or divorced. If you have never been married, then you are single. If you are living with your spouse, you are married. If you have lived apart from your spouse for more than 6 months or do not know where your spouse is, then you are separated.&lt;/p&gt;\r\n&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;format&quot;</span><span class="p">:</span> <span class="s2">&quot;basic_html&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;processed&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;p&gt;Please enter whether you are married, single or divorced. If you have never been married, then you are single. If you are living with your spouse, you are married. If you have lived apart from your spouse for more than 6 months or do not know where your spouse is, then you are separated.&lt;/p&gt;&quot;</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;oas_help_immigration_status&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;p&gt;Your immigration status help figure out what service you qualify for. If you were born in the United States, got citizenship through a parent or are naturalized, then you are a U.S. citizen. If you have a green card that lets you live and work in the U.S., then you are a Legal Permanent Resident. If you are a victim of domestic abuse, then you may qualify for protection under the Violence Against Women Act (VAWA).&lt;/p&gt;\r\n&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;format&quot;</span><span class="p">:</span> <span class="s2">&quot;basic_html&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;processed&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;p&gt;Your immigration status help figure out what service you qualify for. If you were born in the United States, got citizenship through a parent or are naturalized, then you are a U.S. citizen. If you have a green card that lets you live and work in the U.S., then you are a Legal Permanent Resident. If you are a victim of domestic abuse, then you may qualify for protection under the Violence Against Women Act (VAWA).&lt;/p&gt;&quot;</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;oas_help_language&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;p&gt;Please enter the language you speak at home. Knowing your language will help legal aid to better serve you.&lt;/p&gt;\r\n&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;format&quot;</span><span class="p">:</span> <span class="s2">&quot;basic_html&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;processed&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;p&gt;Please enter the language you speak at home. Knowing your language will help legal aid to better serve you.&lt;/p&gt;&quot;</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;oas_help_marital_status&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;p&gt;Please enter whether you are married, single or divorced. If you have never been married, then you are single. If you are living with your spouse, you are married. If you have lived apart from your spouse for more than 6 months or do not know where your spouse is, then you are separated.&lt;/p&gt;\r\n&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;format&quot;</span><span class="p">:</span> <span class="s2">&quot;basic_html&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;processed&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;p&gt;Please enter whether you are married, single or divorced. If you have never been married, then you are single. If you are living with your spouse, you are married. If you have lived apart from your spouse for more than 6 months or do not know where your spouse is, then you are separated.&lt;/p&gt;&quot;</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;oas_help_race&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;p&gt;Please enter your race. Knowing your race will help legal aid to better serve you and your community.&lt;/p&gt;\r\n&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;format&quot;</span><span class="p">:</span> <span class="s2">&quot;basic_html&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;processed&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;p&gt;Please enter your race. Knowing your race will help legal aid to better serve you and your community.&lt;/p&gt;&quot;</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;oas_household_definition&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;p&gt;Children and adults should be counted as follows:&lt;/p&gt;\r\n\r\n&lt;ul&gt;\r\n\t&lt;li&gt;Count yourself&lt;/li&gt;\r\n\t&lt;li&gt;Count each child living with you who is under 18 years;&lt;/li&gt;\r\n\t&lt;li&gt;Count your spouse if they live in your home. Do not count your spouse if you are asking for legal help against them.&lt;/li&gt;\r\n\t&lt;li&gt;Count each adult that you have one or more children with and who lives in the same home as you. Do not count this adult if you are asking for legal help against them. Do not count this adult if you have no access to their income.&lt;/li&gt;\r\n\t&lt;li&gt;Count each adult who lives in your home but does not pay for rent or food and does not share any children with you&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;format&quot;</span><span class="p">:</span> <span class="s2">&quot;basic_html&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;processed&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;p&gt;Children and adults should be counted as follows:&lt;/p&gt;\n\n&lt;ul&gt;&lt;li&gt;Count yourself&lt;/li&gt;\n\t&lt;li&gt;Count each child living with you who is under 18 years;&lt;/li&gt;\n\t&lt;li&gt;Count your spouse if they live in your home. Do not count your spouse if you are asking for legal help against them.&lt;/li&gt;\n\t&lt;li&gt;Count each adult that you have one or more children with and who lives in the same home as you. Do not count this adult if you are asking for legal help against them. Do not count this adult if you have no access to their income.&lt;/li&gt;\n\t&lt;li&gt;Count each adult who lives in your home but does not pay for rent or food and does not share any children with you&lt;/li&gt;\n&lt;/ul&gt;&quot;</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;oas_msg_already_applied&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;p&gt;You can not use this online form if you are already a client with [OAS:name] for this problem. Please call [OAS:call-back-number] for more information.&lt;/p&gt;\r\n&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;format&quot;</span><span class="p">:</span> <span class="s2">&quot;basic_html&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;processed&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;p&gt;You can not use this online form if you are already a client with [OAS:name] for this problem. Please call [OAS:call-back-number] for more information.&lt;/p&gt;&quot;</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;oas_msg_current_client&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;p&gt;You can not use this online form if you are already a client with [OAS:name] for this problem. Please call [OAS:call-back-number] for more information.&lt;/p&gt;\r\n&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;format&quot;</span><span class="p">:</span> <span class="s2">&quot;basic_html&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;processed&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;p&gt;You can not use this online form if you are already a client with [OAS:name] for this problem. Please call [OAS:call-back-number] for more information.&lt;/p&gt;&quot;</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;oas_msg_disclaimer&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+              <span class="nt">&quot;oas_msg_please_call&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;Please call [OAS:Name] at [OAS:Phone] between 9:00am&amp;nbsp;- 4:00pm&amp;nbsp;Monday, Wednesday, and Friday or Tuesday and&amp;nbsp;Thursday and between 9:00am - 6:00pm.&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;format&quot;</span><span class="p">:</span> <span class="s2">&quot;full_html&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;processed&quot;</span><span class="p">:</span> <span class="s2">&quot;Please call  at  between 9:00am - 4:00pm Monday, Wednesday, and Friday or Tuesday and Thursday and between 9:00am - 6:00pm.&quot;</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;oas_msg_we_call_you&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;To get help, you &lt;b&gt;must speak with the staff&lt;/b&gt; at [OAS:Name]. If they do not reach you in the next week, please call [[855-601-9474]] between the hours of 9:00 am and 3:30 pm Monday through Friday. Tell them you applied online.&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;format&quot;</span><span class="p">:</span> <span class="s2">&quot;full_html&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;processed&quot;</span><span class="p">:</span> <span class="s2">&quot;To get help, you &lt;b&gt;must speak with the staff&lt;/b&gt; at . If they do not reach you in the next week, please call [[855-601-9474]] between the hours of 9:00 am and 3:30 pm Monday through Friday. Tell them you applied online.&quot;</span>
+              <span class="p">}</span>
+          <span class="p">},</span>
+          <span class="nt">&quot;relationships&quot;</span><span class="p">:</span> <span class="p">{</span>
+              <span class="nt">&quot;oas_intake_settings_type&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;oas_intake_settings_type--oas_intake_settings_type&quot;</span><span class="p">,</span>
+                      <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;57eb487c-b45f-46df-88ed-eaa85c8c0465&quot;</span>
+                  <span class="p">},</span>
+                  <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/oas_intake_settings/oas_intake_settings/13d32856-e611-4ef8-a501-f111795e6db7/oas_intake_settings_type&quot;</span>
+                      <span class="p">},</span>
+                      <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/oas_intake_settings/oas_intake_settings/13d32856-e611-4ef8-a501-f111795e6db7/relationships/oas_intake_settings_type&quot;</span>
+                      <span class="p">}</span>
+                  <span class="p">}</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;user_id&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;user--user&quot;</span><span class="p">,</span>
+                      <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;5d8a1c93-17a0-4b0c-9ff4-3b057b6dc488&quot;</span>
+                  <span class="p">},</span>
+                  <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/oas_intake_settings/oas_intake_settings/13d32856-e611-4ef8-a501-f111795e6db7/user_id&quot;</span>
+                      <span class="p">},</span>
+                      <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/oas_intake_settings/oas_intake_settings/13d32856-e611-4ef8-a501-f111795e6db7/relationships/user_id&quot;</span>
+                      <span class="p">}</span>
+                  <span class="p">}</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;entity_id&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;node--location_services&quot;</span><span class="p">,</span>
+                      <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;81c1d425-1bf1-4611-9a92-ad8566fd3fea&quot;</span>
+                  <span class="p">},</span>
+                  <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/oas_intake_settings/oas_intake_settings/13d32856-e611-4ef8-a501-f111795e6db7/entity_id&quot;</span>
+                      <span class="p">},</span>
+                      <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/oas_intake_settings/oas_intake_settings/13d32856-e611-4ef8-a501-f111795e6db7/relationships/entity_id&quot;</span>
+                      <span class="p">}</span>
+                  <span class="p">}</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;content_translation_uid&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;user--user&quot;</span><span class="p">,</span>
+                      <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;5d8a1c93-17a0-4b0c-9ff4-3b057b6dc488&quot;</span>
+                  <span class="p">},</span>
+                  <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/oas_intake_settings/oas_intake_settings/13d32856-e611-4ef8-a501-f111795e6db7/content_translation_uid&quot;</span>
+                      <span class="p">},</span>
+                      <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/oas_intake_settings/oas_intake_settings/13d32856-e611-4ef8-a501-f111795e6db7/relationships/content_translation_uid&quot;</span>
+                      <span class="p">}</span>
+                  <span class="p">}</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;field_cities&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[],</span>
+                  <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/oas_intake_settings/oas_intake_settings/13d32856-e611-4ef8-a501-f111795e6db7/field_cities&quot;</span>
+                      <span class="p">},</span>
+                      <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/oas_intake_settings/oas_intake_settings/13d32856-e611-4ef8-a501-f111795e6db7/relationships/field_cities&quot;</span>
+                      <span class="p">}</span>
+                  <span class="p">}</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;field_counties&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--region&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;2bc153ae-29d8-4d0e-8abb-623f6fcefae0&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--region&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;5d51d669-3adc-4063-8384-2cb64666df1e&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--region&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;6c720514-f64d-4955-9b03-4949c4c7c4ab&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--region&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;6beb3364-097b-4514-8c3a-9911ba5ff634&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--region&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;ed1f9847-893a-48f4-945a-432b4a71890b&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--region&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;5737e434-3176-44a6-9996-e85b055a33ed&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--region&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;98f7817f-7d06-44df-acdc-d18b4a375288&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--region&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;3fcfba49-74bf-43a5-a649-c945befa7d71&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--region&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;f331b710-b461-4a81-980d-468452a19c7d&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--region&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;753be63b-b98d-4610-8157-ebaa1c27d48e&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--region&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;e902b073-793e-4b06-8c18-885ff2230160&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--region&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;ed01d348-3b9c-42cf-bb4f-c994d2894540&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--region&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;91f438c9-41f8-49c5-a8e9-b041e9417df2&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--region&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;e1d971eb-cc81-465e-bfb5-741a20f35822&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--region&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;ba34a85d-88d0-49f1-b922-5e45e955befb&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--region&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;21bbcfec-956f-4e0c-8b33-3cab233bc423&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--region&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;0654eaae-ced2-45ab-8cff-91bd8eea515b&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--region&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;ac3187c2-2630-4314-ad56-e6c1e2438f9e&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--region&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;d13033b4-5c28-4458-a7b8-5e51e4a8e8e1&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--region&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;7e5c799c-8b59-455c-9c20-80649621d72b&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--region&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;cfd89cba-277d-4ef2-b6ae-bd75f63c6560&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--region&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;69b6019f-290d-4bbc-8bb3-ac9de4ea393a&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--region&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;448e0672-f4ee-4490-8027-74e7122cde71&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--region&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;89b4a396-34d8-4e13-add5-a4f244285027&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--region&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;f81da2b5-dd82-42da-ba4a-75fecfef7760&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--region&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;e0d03264-33fe-451c-9aa4-7944b729d2f5&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--region&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;47c238a4-ad8f-4623-b645-3305b7488339&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--region&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;df96a293-fe57-4940-b175-0870c3240331&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--region&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;59e6ff2b-acf4-421a-a78d-138224f1eff3&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--region&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;9e47ccb6-c9fd-4436-987d-6dc10cd6c646&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--region&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;c4885642-df96-4f86-8788-e7e489f6de29&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--region&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;ece7ca28-aac0-487f-a098-74b163593342&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--region&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;efb45015-10c3-4639-975f-48cd6db203de&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--region&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;3ed4870e-b238-446f-a840-bbef4ad3c253&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--region&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;b698b866-9a12-42ff-862f-60baadfd618e&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--region&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;388bd23b-996b-4476-8fe4-bf3fdb75ca7f&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--region&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;f5812717-6795-4d4a-a108-b0b2b7d13d50&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--region&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;09c75e15-bdb3-4c64-9b79-1149870cdc08&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--region&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;4ec167bc-3cee-4dd3-96c4-44914fad8759&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--region&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;c0efc8a8-3591-4cad-b3d7-d15d42f9952b&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--region&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;bb2b8be3-b796-4c13-9576-48679b932a4c&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--region&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;fc455d3e-2332-4e9e-8013-f76cdb12eb83&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--region&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;4b3aa167-8291-4ec2-8974-55e5561258ec&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--region&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;fe7d117f-3564-4285-811e-27bb68dc5382&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--region&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;82044a8f-abe0-4522-801c-82be064d4594&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--region&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;f25276cc-890f-49d8-99c7-521f0246d884&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--region&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;71c00c8b-0bd0-4fc6-8f3f-9878dc4851fc&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--region&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;8a7c7ac4-fecd-4a1c-a011-f07005c10e2b&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--region&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;1616bab3-6014-4970-bbc5-7face3e84389&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--region&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;3d90181c-b8a5-49e3-b64e-d8f2dab78d45&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--region&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;2e4691e7-16a3-4442-8e47-2cf1522dfb72&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--region&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;565f1bac-905f-47d1-8072-c6786a8dc3ba&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--region&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;e78a959e-6bb9-4ea9-865d-397032769217&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--region&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;0355f1ee-d4cc-4001-8501-49a1ff98a6f5&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--region&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;ec2d4ef3-bcb4-4984-91f7-902a35a5de4c&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--region&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;ded3cea9-0024-47cc-8ffe-71db1d31b431&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--region&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;095a37d4-5e42-4d44-ac62-1fbf36a89ad9&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--region&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;28e4e22f-09fd-461e-8061-90dca86c6260&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--region&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;2a1ca9e9-934f-4e3d-8c1c-b3b2334e25d1&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--region&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;47266499-fbe6-4e3b-932f-cc2870f6229e&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--region&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;abc00203-fee7-43d9-95a2-51ce07761a29&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--region&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;4549199d-a8a8-4006-bced-4eb96047c913&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--region&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;71c4db57-aa26-4310-933c-b5882a4b8f81&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--region&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;ac273e74-ee3e-4f11-b71a-fcd335730961&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--region&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;819d510c-4cd9-4d86-bcc0-75856bc52360&quot;</span>
+                      <span class="p">}</span>
+                  <span class="p">],</span>
+                  <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/oas_intake_settings/oas_intake_settings/13d32856-e611-4ef8-a501-f111795e6db7/field_counties&quot;</span>
+                      <span class="p">},</span>
+                      <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/oas_intake_settings/oas_intake_settings/13d32856-e611-4ef8-a501-f111795e6db7/relationships/field_counties&quot;</span>
+                      <span class="p">}</span>
+                  <span class="p">}</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;field_extended_service_area&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[],</span>
+                  <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/oas_intake_settings/oas_intake_settings/13d32856-e611-4ef8-a501-f111795e6db7/field_extended_service_area&quot;</span>
+                      <span class="p">},</span>
+                      <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/oas_intake_settings/oas_intake_settings/13d32856-e611-4ef8-a501-f111795e6db7/relationships/field_extended_service_area&quot;</span>
+                      <span class="p">}</span>
+                  <span class="p">}</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;field_legal_issues&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;0f5dfdec-bf0f-490b-9b38-bab871db7cab&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;7ad714fb-d610-4a0d-87ec-9b5946bec20a&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;3d5c2b0d-bf95-4997-bb48-7d6ac6188fee&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;27fadc93-9b6f-4f46-a3cb-0446f079a7cb&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;meta&quot;</span><span class="p">:</span> <span class="p">{</span>
+                              <span class="nt">&quot;arity&quot;</span><span class="p">:</span> <span class="mi">0</span>
+                          <span class="p">}</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;fb78ab72-8572-449d-be5a-008b051c05e7&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;e46fe9e2-d89b-481c-a00a-8276092182db&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;27fadc93-9b6f-4f46-a3cb-0446f079a7cb&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;meta&quot;</span><span class="p">:</span> <span class="p">{</span>
+                              <span class="nt">&quot;arity&quot;</span><span class="p">:</span> <span class="mi">1</span>
+                          <span class="p">}</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;398ff1ca-abcf-48b7-86db-69819d319b9f&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;8ea719a9-136c-48e1-a2b4-6f2f20968491&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;f8040c1f-4d0a-480f-9a9e-4017c1000654&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;6471a292-6364-4078-bcc2-46b81a199789&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;110c787b-a802-48a1-9073-86c9d44b508e&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;d0f96f4e-bb9c-40b3-8163-3c588be16245&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;fa92bc5d-2036-4f4a-98d2-056b4fb02ddd&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;1cc27a2d-6e6d-4e6b-b610-2e53e328047c&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;15e034ba-c4a5-4d38-9b1c-7b250c69b261&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;meta&quot;</span><span class="p">:</span> <span class="p">{</span>
+                              <span class="nt">&quot;arity&quot;</span><span class="p">:</span> <span class="mi">0</span>
+                          <span class="p">}</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;e52c9971-7ff8-47da-b8c7-5c8c6bcd3be1&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;83d267ae-fb1f-4e9f-ae26-cceb98f5dfd3&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;abdc7dc2-9310-4fcb-a9e3-85ab59364490&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;0482a394-7f67-4aff-a8b5-12ddcaba4a68&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;527e2fd3-83b9-4369-86a5-9ce837f4450e&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;97122998-8104-4f51-b3a2-8ccee4042f22&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;459b7c77-9f0e-4ff8-948f-a13989acff63&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;30489cd9-183e-4322-8eec-91a6f0a90fa9&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;b59f58e8-68ae-4ba8-bda4-7a0099d90b2c&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;6067e120-aa11-430a-8045-50d17335d34b&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;3566a439-aba2-419a-8184-a65c69ad544e&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;0dc5c360-4de0-499b-a769-4899a2ddef5f&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;beb8416c-cb25-4dc4-9f0e-9a6f8e23a86a&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;efde7a22-f1bd-4826-ade4-734bc566014f&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;fd9053cc-4f67-43a2-b824-0a5412218e1b&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;1e762e80-0a9f-4bfb-813b-e01677028cd1&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;a94de4ba-0286-41c6-b040-e40e9a05a4a5&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;meta&quot;</span><span class="p">:</span> <span class="p">{</span>
+                              <span class="nt">&quot;arity&quot;</span><span class="p">:</span> <span class="mi">0</span>
+                          <span class="p">}</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;15e034ba-c4a5-4d38-9b1c-7b250c69b261&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;meta&quot;</span><span class="p">:</span> <span class="p">{</span>
+                              <span class="nt">&quot;arity&quot;</span><span class="p">:</span> <span class="mi">1</span>
+                          <span class="p">}</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;15e034ba-c4a5-4d38-9b1c-7b250c69b261&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;meta&quot;</span><span class="p">:</span> <span class="p">{</span>
+                              <span class="nt">&quot;arity&quot;</span><span class="p">:</span> <span class="mi">2</span>
+                          <span class="p">}</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;3d8b1df2-c8df-45e9-a19b-f53a4b927d94&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;5df15921-810a-4ee2-82a6-35293059df57&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;dc10af42-b03c-48da-9a0d-38dd61f3fb72&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;5f0db83b-b300-4b6f-bf84-dfe46e395257&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;ccce2915-de76-4c8b-b791-30df0d9863b0&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;meta&quot;</span><span class="p">:</span> <span class="p">{</span>
+                              <span class="nt">&quot;arity&quot;</span><span class="p">:</span> <span class="mi">0</span>
+                          <span class="p">}</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;5cd4918d-de2f-4f05-b96c-6a9028dc3c95&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;meta&quot;</span><span class="p">:</span> <span class="p">{</span>
+                              <span class="nt">&quot;arity&quot;</span><span class="p">:</span> <span class="mi">0</span>
+                          <span class="p">}</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;10b3483a-7045-4bf0-aa08-8c4301ed7d33&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;meta&quot;</span><span class="p">:</span> <span class="p">{</span>
+                              <span class="nt">&quot;arity&quot;</span><span class="p">:</span> <span class="mi">0</span>
+                          <span class="p">}</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;115adc77-9819-48b4-b225-40cbe0a24199&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;meta&quot;</span><span class="p">:</span> <span class="p">{</span>
+                              <span class="nt">&quot;arity&quot;</span><span class="p">:</span> <span class="mi">0</span>
+                          <span class="p">}</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;e0552405-c2ee-4d2e-88ff-c44c0331fabd&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;meta&quot;</span><span class="p">:</span> <span class="p">{</span>
+                              <span class="nt">&quot;arity&quot;</span><span class="p">:</span> <span class="mi">0</span>
+                          <span class="p">}</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;06a13100-d10b-447c-bad8-8bfe0bf0e2b2&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;meta&quot;</span><span class="p">:</span> <span class="p">{</span>
+                              <span class="nt">&quot;arity&quot;</span><span class="p">:</span> <span class="mi">0</span>
+                          <span class="p">}</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;1eeade01-8a10-41e8-b03e-f7f3d3d8c1cb&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;meta&quot;</span><span class="p">:</span> <span class="p">{</span>
+                              <span class="nt">&quot;arity&quot;</span><span class="p">:</span> <span class="mi">0</span>
+                          <span class="p">}</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;40d98af0-fdf1-4336-9738-426ef72b193c&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;e59fa961-8e56-42ba-8551-bdb149ea1fea&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;0c8debb3-f602-4d42-83b0-d4f05a7d4847&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;f5d1b6c5-ba5c-4a60-b4d3-2171d59124d7&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;785eb68a-49fc-452b-ac38-00f30dc1a6de&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;db07eb50-0ca6-4e95-80d0-60fc675b4789&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;e3cb3e6a-3bb3-440f-b9f9-7e149236ced6&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;80d8573a-a402-4ef8-86ec-f80c43332783&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;2a2bddba-2d78-4960-9a0a-4e7ba52e0030&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;27fadc93-9b6f-4f46-a3cb-0446f079a7cb&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;meta&quot;</span><span class="p">:</span> <span class="p">{</span>
+                              <span class="nt">&quot;arity&quot;</span><span class="p">:</span> <span class="mi">2</span>
+                          <span class="p">}</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;15e034ba-c4a5-4d38-9b1c-7b250c69b261&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;meta&quot;</span><span class="p">:</span> <span class="p">{</span>
+                              <span class="nt">&quot;arity&quot;</span><span class="p">:</span> <span class="mi">3</span>
+                          <span class="p">}</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;a1cf8331-8a9c-48f1-b945-81061ca4734e&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;21c5e64d-7b07-4b18-a911-d084c42b90ec&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;058c6f15-b3cd-4f7f-8c15-ee4be0b4e270&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;a94de4ba-0286-41c6-b040-e40e9a05a4a5&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;meta&quot;</span><span class="p">:</span> <span class="p">{</span>
+                              <span class="nt">&quot;arity&quot;</span><span class="p">:</span> <span class="mi">1</span>
+                          <span class="p">}</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;47ceec7b-2e6b-4f55-b4a1-74eb76def0d0&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;46a00e87-e1ec-41b5-acb9-452d6484b799&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;b2a63642-b3a2-4ea2-90c2-9084a2969983&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;e3bdc4a9-81cb-43f1-a31c-3c7e7e19083c&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;050b92e0-9271-4767-ba24-d060ebac0d6e&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;c88332c8-8f88-474e-b69a-1e592aa7d5a4&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;329d07f3-a228-4c86-aab3-4461f9177322&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;caefc5a9-1bdc-4e7a-bc46-65356eb43ad0&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;ccce2915-de76-4c8b-b791-30df0d9863b0&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;meta&quot;</span><span class="p">:</span> <span class="p">{</span>
+                              <span class="nt">&quot;arity&quot;</span><span class="p">:</span> <span class="mi">1</span>
+                          <span class="p">}</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;5cd4918d-de2f-4f05-b96c-6a9028dc3c95&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;meta&quot;</span><span class="p">:</span> <span class="p">{</span>
+                              <span class="nt">&quot;arity&quot;</span><span class="p">:</span> <span class="mi">1</span>
+                          <span class="p">}</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;10b3483a-7045-4bf0-aa08-8c4301ed7d33&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;meta&quot;</span><span class="p">:</span> <span class="p">{</span>
+                              <span class="nt">&quot;arity&quot;</span><span class="p">:</span> <span class="mi">1</span>
+                          <span class="p">}</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;115adc77-9819-48b4-b225-40cbe0a24199&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;meta&quot;</span><span class="p">:</span> <span class="p">{</span>
+                              <span class="nt">&quot;arity&quot;</span><span class="p">:</span> <span class="mi">1</span>
+                          <span class="p">}</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;e0552405-c2ee-4d2e-88ff-c44c0331fabd&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;meta&quot;</span><span class="p">:</span> <span class="p">{</span>
+                              <span class="nt">&quot;arity&quot;</span><span class="p">:</span> <span class="mi">1</span>
+                          <span class="p">}</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;06a13100-d10b-447c-bad8-8bfe0bf0e2b2&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;meta&quot;</span><span class="p">:</span> <span class="p">{</span>
+                              <span class="nt">&quot;arity&quot;</span><span class="p">:</span> <span class="mi">1</span>
+                          <span class="p">}</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--legal_issues&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;1eeade01-8a10-41e8-b03e-f7f3d3d8c1cb&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;meta&quot;</span><span class="p">:</span> <span class="p">{</span>
+                              <span class="nt">&quot;arity&quot;</span><span class="p">:</span> <span class="mi">1</span>
+                          <span class="p">}</span>
+                      <span class="p">}</span>
+                  <span class="p">],</span>
+                  <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/oas_intake_settings/oas_intake_settings/13d32856-e611-4ef8-a501-f111795e6db7/field_legal_issues&quot;</span>
+                      <span class="p">},</span>
+                      <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/oas_intake_settings/oas_intake_settings/13d32856-e611-4ef8-a501-f111795e6db7/relationships/field_legal_issues&quot;</span>
+                      <span class="p">}</span>
+                  <span class="p">}</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;field_oas_callback_hours_fri&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--oas_callback_hours&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;a18dc723-7c25-4df7-9792-61984df3d8e7&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--oas_callback_hours&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;313edc76-daff-4075-a88d-7356bdf41019&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--oas_callback_hours&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;27f444dd-bae0-4835-94ff-22f9521e9799&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--oas_callback_hours&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;a59db229-4f54-4724-a4aa-4e7e1a4b4255&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--oas_callback_hours&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;d3b1b4e2-b2d4-4be0-a12e-6bc423bcd3e5&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--oas_callback_hours&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;1c478e60-677c-4bd8-852c-1212070f5e24&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--oas_callback_hours&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;de231376-1587-49df-9633-e15fae83b47e&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--oas_callback_hours&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;d082e675-d5dc-48ea-8425-279a6f19d753&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--oas_callback_hours&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;e0efe8fa-4ae7-44be-aee4-ea9e64fc571d&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--oas_callback_hours&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;3133ab27-e6de-44f9-a40c-b70e1b6267ba&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--oas_callback_hours&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;0f2923ff-6b7a-42cb-a5d1-68ca53f5aec6&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--oas_callback_hours&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;593d4809-1106-43d5-8f1b-d2a4b812d84d&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--oas_callback_hours&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;5321fc4b-493a-4643-83e0-16ae77725de4&quot;</span>
+                      <span class="p">}</span>
+                  <span class="p">],</span>
+                  <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/oas_intake_settings/oas_intake_settings/13d32856-e611-4ef8-a501-f111795e6db7/field_oas_callback_hours_fri&quot;</span>
+                      <span class="p">},</span>
+                      <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/oas_intake_settings/oas_intake_settings/13d32856-e611-4ef8-a501-f111795e6db7/relationships/field_oas_callback_hours_fri&quot;</span>
+                      <span class="p">}</span>
+                  <span class="p">}</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;field_oas_callback_hours_mon&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--oas_callback_hours&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;a18dc723-7c25-4df7-9792-61984df3d8e7&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--oas_callback_hours&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;313edc76-daff-4075-a88d-7356bdf41019&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--oas_callback_hours&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;27f444dd-bae0-4835-94ff-22f9521e9799&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--oas_callback_hours&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;a59db229-4f54-4724-a4aa-4e7e1a4b4255&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--oas_callback_hours&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;d3b1b4e2-b2d4-4be0-a12e-6bc423bcd3e5&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--oas_callback_hours&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;1c478e60-677c-4bd8-852c-1212070f5e24&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--oas_callback_hours&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;de231376-1587-49df-9633-e15fae83b47e&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--oas_callback_hours&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;d082e675-d5dc-48ea-8425-279a6f19d753&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--oas_callback_hours&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;e0efe8fa-4ae7-44be-aee4-ea9e64fc571d&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--oas_callback_hours&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;3133ab27-e6de-44f9-a40c-b70e1b6267ba&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--oas_callback_hours&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;0f2923ff-6b7a-42cb-a5d1-68ca53f5aec6&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--oas_callback_hours&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;593d4809-1106-43d5-8f1b-d2a4b812d84d&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--oas_callback_hours&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;5321fc4b-493a-4643-83e0-16ae77725de4&quot;</span>
+                      <span class="p">}</span>
+                  <span class="p">],</span>
+                  <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/oas_intake_settings/oas_intake_settings/13d32856-e611-4ef8-a501-f111795e6db7/field_oas_callback_hours_mon&quot;</span>
+                      <span class="p">},</span>
+                      <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/oas_intake_settings/oas_intake_settings/13d32856-e611-4ef8-a501-f111795e6db7/relationships/field_oas_callback_hours_mon&quot;</span>
+                      <span class="p">}</span>
+                  <span class="p">}</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;field_oas_callback_hours_sat&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[],</span>
+                  <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/oas_intake_settings/oas_intake_settings/13d32856-e611-4ef8-a501-f111795e6db7/field_oas_callback_hours_sat&quot;</span>
+                      <span class="p">},</span>
+                      <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/oas_intake_settings/oas_intake_settings/13d32856-e611-4ef8-a501-f111795e6db7/relationships/field_oas_callback_hours_sat&quot;</span>
+                      <span class="p">}</span>
+                  <span class="p">}</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;field_oas_callback_hours_sun&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[],</span>
+                  <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/oas_intake_settings/oas_intake_settings/13d32856-e611-4ef8-a501-f111795e6db7/field_oas_callback_hours_sun&quot;</span>
+                      <span class="p">},</span>
+                      <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/oas_intake_settings/oas_intake_settings/13d32856-e611-4ef8-a501-f111795e6db7/relationships/field_oas_callback_hours_sun&quot;</span>
+                      <span class="p">}</span>
+                  <span class="p">}</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;field_oas_callback_hours_thu&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--oas_callback_hours&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;a18dc723-7c25-4df7-9792-61984df3d8e7&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--oas_callback_hours&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;313edc76-daff-4075-a88d-7356bdf41019&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--oas_callback_hours&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;27f444dd-bae0-4835-94ff-22f9521e9799&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--oas_callback_hours&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;a59db229-4f54-4724-a4aa-4e7e1a4b4255&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--oas_callback_hours&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;d3b1b4e2-b2d4-4be0-a12e-6bc423bcd3e5&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--oas_callback_hours&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;1c478e60-677c-4bd8-852c-1212070f5e24&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--oas_callback_hours&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;de231376-1587-49df-9633-e15fae83b47e&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--oas_callback_hours&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;d082e675-d5dc-48ea-8425-279a6f19d753&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--oas_callback_hours&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;e0efe8fa-4ae7-44be-aee4-ea9e64fc571d&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--oas_callback_hours&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;3133ab27-e6de-44f9-a40c-b70e1b6267ba&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--oas_callback_hours&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;0f2923ff-6b7a-42cb-a5d1-68ca53f5aec6&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--oas_callback_hours&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;593d4809-1106-43d5-8f1b-d2a4b812d84d&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--oas_callback_hours&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;5321fc4b-493a-4643-83e0-16ae77725de4&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--oas_callback_hours&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;24de729d-b53e-44e5-9736-af13a6ce1490&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--oas_callback_hours&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;bb4dad57-ec16-4a44-9ef3-3a9880d779ed&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--oas_callback_hours&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;39ed2ed4-d30d-4343-80ea-2473eb72c181&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--oas_callback_hours&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;85d604ab-c6ce-477b-a744-555fb9db1206&quot;</span>
+                      <span class="p">}</span>
+                  <span class="p">],</span>
+                  <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/oas_intake_settings/oas_intake_settings/13d32856-e611-4ef8-a501-f111795e6db7/field_oas_callback_hours_thu&quot;</span>
+                      <span class="p">},</span>
+                      <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/oas_intake_settings/oas_intake_settings/13d32856-e611-4ef8-a501-f111795e6db7/relationships/field_oas_callback_hours_thu&quot;</span>
+                      <span class="p">}</span>
+                  <span class="p">}</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;field_oas_callback_hours_tue&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--oas_callback_hours&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;a18dc723-7c25-4df7-9792-61984df3d8e7&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--oas_callback_hours&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;313edc76-daff-4075-a88d-7356bdf41019&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--oas_callback_hours&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;27f444dd-bae0-4835-94ff-22f9521e9799&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--oas_callback_hours&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;a59db229-4f54-4724-a4aa-4e7e1a4b4255&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--oas_callback_hours&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;d3b1b4e2-b2d4-4be0-a12e-6bc423bcd3e5&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--oas_callback_hours&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;1c478e60-677c-4bd8-852c-1212070f5e24&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--oas_callback_hours&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;de231376-1587-49df-9633-e15fae83b47e&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--oas_callback_hours&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;d082e675-d5dc-48ea-8425-279a6f19d753&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--oas_callback_hours&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;e0efe8fa-4ae7-44be-aee4-ea9e64fc571d&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--oas_callback_hours&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;3133ab27-e6de-44f9-a40c-b70e1b6267ba&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--oas_callback_hours&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;0f2923ff-6b7a-42cb-a5d1-68ca53f5aec6&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--oas_callback_hours&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;593d4809-1106-43d5-8f1b-d2a4b812d84d&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--oas_callback_hours&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;5321fc4b-493a-4643-83e0-16ae77725de4&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--oas_callback_hours&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;24de729d-b53e-44e5-9736-af13a6ce1490&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--oas_callback_hours&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;bb4dad57-ec16-4a44-9ef3-3a9880d779ed&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--oas_callback_hours&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;39ed2ed4-d30d-4343-80ea-2473eb72c181&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--oas_callback_hours&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;85d604ab-c6ce-477b-a744-555fb9db1206&quot;</span>
+                      <span class="p">}</span>
+                  <span class="p">],</span>
+                  <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/oas_intake_settings/oas_intake_settings/13d32856-e611-4ef8-a501-f111795e6db7/field_oas_callback_hours_tue&quot;</span>
+                      <span class="p">},</span>
+                      <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/oas_intake_settings/oas_intake_settings/13d32856-e611-4ef8-a501-f111795e6db7/relationships/field_oas_callback_hours_tue&quot;</span>
+                      <span class="p">}</span>
+                  <span class="p">}</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;field_oas_callback_hours_wed&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--oas_callback_hours&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;a18dc723-7c25-4df7-9792-61984df3d8e7&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--oas_callback_hours&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;313edc76-daff-4075-a88d-7356bdf41019&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--oas_callback_hours&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;27f444dd-bae0-4835-94ff-22f9521e9799&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--oas_callback_hours&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;a59db229-4f54-4724-a4aa-4e7e1a4b4255&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--oas_callback_hours&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;d3b1b4e2-b2d4-4be0-a12e-6bc423bcd3e5&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--oas_callback_hours&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;1c478e60-677c-4bd8-852c-1212070f5e24&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--oas_callback_hours&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;de231376-1587-49df-9633-e15fae83b47e&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--oas_callback_hours&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;d082e675-d5dc-48ea-8425-279a6f19d753&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--oas_callback_hours&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;e0efe8fa-4ae7-44be-aee4-ea9e64fc571d&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--oas_callback_hours&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;3133ab27-e6de-44f9-a40c-b70e1b6267ba&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--oas_callback_hours&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;0f2923ff-6b7a-42cb-a5d1-68ca53f5aec6&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--oas_callback_hours&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;593d4809-1106-43d5-8f1b-d2a4b812d84d&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--oas_callback_hours&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;5321fc4b-493a-4643-83e0-16ae77725de4&quot;</span>
+                      <span class="p">}</span>
+                  <span class="p">],</span>
+                  <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/oas_intake_settings/oas_intake_settings/13d32856-e611-4ef8-a501-f111795e6db7/field_oas_callback_hours_wed&quot;</span>
+                      <span class="p">},</span>
+                      <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/oas_intake_settings/oas_intake_settings/13d32856-e611-4ef8-a501-f111795e6db7/relationships/field_oas_callback_hours_wed&quot;</span>
+                      <span class="p">}</span>
+                  <span class="p">}</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;field_service_single&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;node--location_services&quot;</span><span class="p">,</span>
+                      <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;81c1d425-1bf1-4611-9a92-ad8566fd3fea&quot;</span>
+                  <span class="p">},</span>
+                  <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/oas_intake_settings/oas_intake_settings/13d32856-e611-4ef8-a501-f111795e6db7/field_service_single&quot;</span>
+                      <span class="p">},</span>
+                      <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/oas_intake_settings/oas_intake_settings/13d32856-e611-4ef8-a501-f111795e6db7/relationships/field_service_single&quot;</span>
+                      <span class="p">}</span>
+                  <span class="p">}</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;field_zipcodes&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[],</span>
+                  <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/oas_intake_settings/oas_intake_settings/13d32856-e611-4ef8-a501-f111795e6db7/field_zipcodes&quot;</span>
+                      <span class="p">},</span>
+                      <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/oas_intake_settings/oas_intake_settings/13d32856-e611-4ef8-a501-f111795e6db7/relationships/field_zipcodes&quot;</span>
+                      <span class="p">}</span>
+                  <span class="p">}</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;oas_asset_categories&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[],</span>
+                  <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/oas_intake_settings/oas_intake_settings/13d32856-e611-4ef8-a501-f111795e6db7/oas_asset_categories&quot;</span>
+                      <span class="p">},</span>
+                      <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/oas_intake_settings/oas_intake_settings/13d32856-e611-4ef8-a501-f111795e6db7/relationships/oas_asset_categories&quot;</span>
+                      <span class="p">}</span>
+                  <span class="p">}</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;oas_expense_categories&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[],</span>
+                  <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/oas_intake_settings/oas_intake_settings/13d32856-e611-4ef8-a501-f111795e6db7/oas_expense_categories&quot;</span>
+                      <span class="p">},</span>
+                      <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/oas_intake_settings/oas_intake_settings/13d32856-e611-4ef8-a501-f111795e6db7/relationships/oas_expense_categories&quot;</span>
+                      <span class="p">}</span>
+                  <span class="p">}</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;oas_income_categories&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;ilao_oas_financial_category--income_types&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;408755a7-1aa6-48e3-bc90-14120b5892aa&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;ilao_oas_financial_category--income_types&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;d3d833a8-b257-4795-bbba-3c97b1bd3f8d&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;ilao_oas_financial_category--income_types&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;9da91c83-605d-4d03-bde8-a8db02b78683&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;ilao_oas_financial_category--income_types&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;9005b1e7-4c73-42ae-ab10-e528b880975c&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;ilao_oas_financial_category--income_types&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;62e563bd-0780-47b5-b97d-8de9056febbb&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;ilao_oas_financial_category--income_types&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;fa1b2885-a0be-4934-be98-fc36e74e4e78&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;ilao_oas_financial_category--income_types&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;be2d1f09-0d45-4101-b0ca-fdb11870e6b8&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;ilao_oas_financial_category--income_types&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;11fb9826-2031-4231-91bf-95e8f33eb8bd&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;ilao_oas_financial_category--income_types&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;f42ae4b8-2789-4d03-8ea8-1de2385b6ef3&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;ilao_oas_financial_category--income_types&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;fca7cb0d-44a0-491a-be7f-9d8580e1e249&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;ilao_oas_financial_category--income_types&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;3e670824-43f3-4aa3-883d-ba05cbee1f75&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;ilao_oas_financial_category--income_types&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;f0cecdb9-dd03-4b97-962b-632f1a77b816&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;ilao_oas_financial_category--income_types&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;6c372502-330d-470e-8551-8f17d83f1479&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;ilao_oas_financial_category--income_types&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;7fb927f7-c174-40ec-8cd2-fccf17e0e010&quot;</span>
+                      <span class="p">}</span>
+                  <span class="p">],</span>
+                  <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/oas_intake_settings/oas_intake_settings/13d32856-e611-4ef8-a501-f111795e6db7/oas_income_categories&quot;</span>
+                      <span class="p">},</span>
+                      <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/oas_intake_settings/oas_intake_settings/13d32856-e611-4ef8-a501-f111795e6db7/relationships/oas_income_categories&quot;</span>
+                      <span class="p">}</span>
+                  <span class="p">}</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;oas_income_exempt&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;taxonomy_term--intake_populations&quot;</span><span class="p">,</span>
+                          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;1f55dbb3-22d2-46e3-8f18-c70014519f70&quot;</span>
+                      <span class="p">}</span>
+                  <span class="p">],</span>
+                  <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/oas_intake_settings/oas_intake_settings/13d32856-e611-4ef8-a501-f111795e6db7/oas_income_exempt&quot;</span>
+                      <span class="p">},</span>
+                      <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/oas_intake_settings/oas_intake_settings/13d32856-e611-4ef8-a501-f111795e6db7/relationships/oas_income_exempt&quot;</span>
+                      <span class="p">}</span>
+                  <span class="p">}</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;oas_income_standard&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;income_standard--income_standard&quot;</span><span class="p">,</span>
+                      <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;8c130e8d-26b7-47ec-b25b-03718d2656e2&quot;</span>
+                  <span class="p">},</span>
+                  <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/oas_intake_settings/oas_intake_settings/13d32856-e611-4ef8-a501-f111795e6db7/oas_income_standard&quot;</span>
+                      <span class="p">},</span>
+                      <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="p">{</span>
+                          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/oas_intake_settings/oas_intake_settings/13d32856-e611-4ef8-a501-f111795e6db7/relationships/oas_income_standard&quot;</span>
+                      <span class="p">}</span>
+                  <span class="p">}</span>
+              <span class="p">}</span>
+          <span class="p">}</span>
+      <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/jsonapi/oas_intake_settings/oas_intake_settings?filter%5Bcounties%5D%5Bpath%5D=field_counties.id&amp;filter%5Bcounties%5D%5Bvalue%5D=f81da2b5-dd82-42da-ba4a-75fecfef7760&amp;filter%5Bfoo%5D%5Bcondition%5D%5Boperator%5D=IN&amp;filter%5Bfoo%5D%5Bcondition%5D%5Bpath%5D=drupal_internal__id&amp;filter%5Bfoo%5D%5Bcondition%5D%5Bvalue%5D%5B0%5D=1811&amp;filter%5Bfoo%5D%5Bcondition%5D%5Bvalue%5D%5B1%5D=1821&quot;</span>
+      <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="create-intake-setting">
+<h2>Create intake setting<a class="headerlink" href="#create-intake-setting" title="Permalink to this headline">¶</a></h2>
+<p>Creating an intake setting requires minimally the following attributes:</p>
+<ul class="simple">
+<li><p>name</p></li>
+<li><p>reset_limit_frequency.  This should be 1, 7, or 30</p></li>
+<li><p>callback_number</p></li>
+<li><p>callback_type.  This should be we_call_client or client_calls</p></li>
+<li><p>field_bypsss_intake_message.  This can be set to “” but is a required element.</p></li>
+<li><p>oas_help_race. This can be set to “” but is a required element.</p></li>
+<li><p>oas_help_gender.  This can be set to “” but is a required element.</p></li>
+<li><p>oas_help_marital_status.  This can be set to “” but is a required element.</p></li>
+<li><p>oas_help_language.  This can be set to “” but is a required element.</p></li>
+<li><p>oas_help_immigration_status.  This can be set to “” but is a required element.</p></li>
+<li><p>oas_help_ethnicity.  This can be set to “” but is a required element.</p></li>
+<li><p>oas_help_country_of_origin.  This can be set to “” but is a required element.</p></li>
+<li><p>oas_help_citizenship_status.  This can be set to “” but is a required element.</p></li>
+<li><p>oas_msg_current_client</p></li>
+<li><p>oas_msg_already_applied</p></li>
+</ul>
+<p>And the following relationships:</p>
+<ul class="simple">
+<li><p>entity_id.  This should be the UUID of the service associated with the intake setting</p></li>
+<li><p>field_service_single. This should be the UUID of the service associated with the intake setting</p></li>
+</ul>
+<div class="section" id="sample-request">
+<h3>Sample request<a class="headerlink" href="#sample-request" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span> <span class="p">{</span>
+  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;oas_intake_settings--oas_intake_settings&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;attributes&quot;</span><span class="p">:</span> <span class="p">{</span>
+
+          <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Gwen test&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;reset_limit_frequency&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+          <span class="nt">&quot;callback_number&quot;</span><span class="p">:</span> <span class="s2">&quot;630-881-1337&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;callback_type&quot;</span><span class="p">:</span> <span class="s2">&quot;we_call_client&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;field_bypass_intake_message&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;oas_msg_current_client&quot;</span><span class="p">:</span> <span class="s2">&quot;Text&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;oas_msg_already_applied&quot;</span><span class="p">:</span> <span class="s2">&quot;Message&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;oas_household_definition&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;oas_help_race&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;oas_help_gender&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;oas_help_marital_status&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;oas_help_language&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;oas_help_immigration_status&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;oas_help_ethnicity&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;oas_help_country_of_origin&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;oas_help_citizenship_status&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>
+      <span class="p">},</span>
+      <span class="nt">&quot;relationships&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;entity_id&quot;</span><span class="p">:</span> <span class="p">{</span>
+              <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;node--location_services&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;3356a19b-396d-4e9c-8e9c-fa97822b1b1c&quot;</span>
+              <span class="p">}</span>
+          <span class="p">},</span>
+          <span class="nt">&quot;field_service_single&quot;</span><span class="p">:</span> <span class="p">{</span>
+              <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;node--location_services&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;3356a19b-396d-4e9c-8e9c-fa97822b1b1c&quot;</span>
+              <span class="p">}</span>
+          <span class="p">}</span>
+      <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="update-intake-setting">
+<h2>Update intake setting<a class="headerlink" href="#update-intake-setting" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>curl -X PATCH -H &quot;Content-Type:application/vnd.api+json&quot; -H &quot;Authorization: Bearer [token]&quot;-d &#39;{
+&quot;data&quot;: {&quot;type&quot;:&quot;oas_intake_settings--oas_intake_settings&quot;,
+   &quot;id&quot;: &quot;13d32856-e611-4ef8-a501-f111795e6db7&quot;,
+   &quot;attributes&quot;:
+   {&quot;status&quot;:false,
+    &quot;enabled&quot;:false
+   }
+  }
+ }&#39; [baseurl]/jsonapi/oas_triage_user/oas_triage_user/[uuid]
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The uuid is required in the url and in the data object.</p>
+</div>
+</div>
+<div class="section" id="delete-intake-setting">
+<h2>Delete intake setting<a class="headerlink" href="#delete-intake-setting" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>curl -X DELETE [baseurl]/jsonapi/oas_intake_settings/oas_intake_settings/[uuid]</p>
+</div></blockquote>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="otis_api_relationships.html" class="btn btn-neutral float-right" title="OTIS API Related Entities" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="otis_api_triage_user.html" class="btn btn-neutral float-left" title="OTIS API Triage User" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2023, Illinois Legal Aid Online.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

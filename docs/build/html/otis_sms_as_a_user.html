@@ -1,0 +1,347 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Getting legal help over SMS &mdash; ILAO Sprint 124a documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/themeoverrides.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="General architecture" href="otis_sms_intake_architecture.html" />
+    <link rel="prev" title="Online Intake Over SMS" href="otis_sms_intake.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> ILAO
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="design_guide.html">Design &amp; Style Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="block_management.html">Custom blocks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="people_management.html">User Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="legal_information.html">Browsing to legal information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="legal_content_cms.html">Legal Content CMS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cms_structured_legal_content.html">Next generation content/COPE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basic_pages_cms.html">Basic pages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="testimonials_cms.html">Testimonials Content Type</a></li>
+<li class="toctree-l1"><a class="reference internal" href="webforms_cms.html">Webforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="translation_cms.html">Translation Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="calendar_cms.html">Calendar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jobs_cms.html">Job Listings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="discussion_groups.html">Discussion groups</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="otis_cms.html">Get Legal Help</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="otis_endusers.html">Get Legal Help Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="otis_organization_management.html">Organization management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="otis_endpoints.html">Triage rule endpoints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="otis_reports.html">Get Legal Help Reporting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="otis_ai_integration.html">OTIS AI Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="otis_third_party_support.html">Supported Integrations</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="otis_sms_intake.html">Online Intake Over SMS</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Getting legal help over SMS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="otis_sms_intake_architecture.html">General architecture</a></li>
+<li class="toctree-l3"><a class="reference internal" href="otis_sms_functions.html">Twilio Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="otis_maintenance.html">Maintaining and expanding OTIS SMS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="otis_sms_translations.html">OTIS SMS Translations</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="otis_facebook.html">Facebook Integrations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="otis_features.html">Additional Features</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="site_search.html">Site Search</a></li>
+<li class="toctree-l1"><a class="reference internal" href="site_faqs.html">Site FAQs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="other_cms_features.html">Other Website Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="taxonomies.html">Taxonomies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rss_feeds.html">RSS Feeds</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ilao_api.html">ILAO’s API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="next_steps.html">Next Steps Flows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sms_overview.html">SMS Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_analytics.html">Data and Analytics</a></li>
+</ul>
+<p class="caption"><span class="caption-text">See also:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="creating_docs_in_github.html">Creating new docs in Github</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ILAO</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="otis_cms.html">Get Legal Help</a> &raquo;</li>
+        
+          <li><a href="otis_sms_intake.html">Online Intake Over SMS</a> &raquo;</li>
+        
+      <li>Getting legal help over SMS</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/otis_sms_as_a_user.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="getting-legal-help-over-sms">
+<h1>Getting legal help over SMS<a class="headerlink" href="#getting-legal-help-over-sms" title="Permalink to this headline">¶</a></h1>
+<p>Users can text ILAO’s short code to apply for legal help in Illinois.</p>
+<p>As of August 2022, users can apply for legal help in:</p>
+<ul class="simple">
+<li><p>Eviction</p></li>
+<li><p>Other rental housing issues</p></li>
+<li><p>TANF</p></li>
+<li><p>SNAP</p></li>
+<li><p>Unemployment benefits</p></li>
+<li><p>Clearing a criminal record</p></li>
+<li><p>Bankruptcy</p></li>
+<li><p>Asylum</p></li>
+</ul>
+<p>If a user texts a keyword that we can match to an existing Guided Navigation flow, we will direct the user directly into the online triage and intake system with the Guided Navigation flow already determined. If the texted keyword does not match a term, we will ask the user to pick from a menu.</p>
+<p>The initial prompt asks the user to opt-in. Once the user opt-ins, they are asked for which language they would like to proceed in (English, Spanish, or Polish) and then directs them through the correct SMS flow.</p>
+<ul class="simple">
+<li><p>Step 1: Ask the user for their language</p></li>
+<li><p>Step 2: Determine if the keyword is a match to existing terms</p></li>
+<li><p>Step 3:</p>
+<ul>
+<li><p>If there is a match, send that keyword to the relevant language subflow</p></li>
+<li><p>If there is no match, send -1 to the relevant language subflow</p></li>
+</ul>
+</li>
+<li><p>Step 4: We collect the user’s zip code and validate that it is in Illinois.</p>
+<ul>
+<li><p>If it is not an Illinois zip code, the user can text zip</p></li>
+<li><p>If it is not an Illinois zip code and the user does not retry, the application refers the user to LawHelp.org and exits</p></li>
+</ul>
+</li>
+<li><p>Step 5: We get the user’s legal issue, if it wasn’t already passed in under Step 3</p></li>
+<li><p>Step 6: We collect number of adults and children in the household</p>
+<ul>
+<li><p>The system then determines a maximum income threshold for the household size and asks the user to verify if they are above or below that level. If the user’s income exceeds this threshold, the application exits.</p></li>
+</ul>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Some programs have no income limits either generally or for special populations. These are not yet supported in the SMS application.</p>
+</div>
+<ul class="simple">
+<li><p>Step 7: Guided navigation launches to triage the user through their legal problem.</p></li>
+<li><p>Step 8: When the guided navigation ends, the system connects to IllinoisLegalAid.org and  checks to see if one or more organizations matches the user’s legal issue</p>
+<ul>
+<li><p>If no organization matches, the system exits with legal content</p></li>
+<li><p>If more than 1 organization matches, the user is given a choice</p></li>
+<li><p>If 1 organization matches, the user is offered the option to apply.</p></li>
+</ul>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This needs updated for qualifiers &amp; maybe adverse party</p>
+</div>
+<ul class="simple">
+<li><p>Step 9: We collect the user’s last name, any nicknames, and any aliases they have used</p></li>
+<li><p>Step 10: We collect the user’s date of birth. We ask the user to confirm their date of birth and if it is incorrect, they can re-enter</p></li>
+<li><p>Step 11: We collect demographic data (race, ethnicity, gender, marital status, language)</p></li>
+<li><p>Step 12: We collect income information</p>
+<ul>
+<li><p>If the user has wages or salary, we ask them how often they get paid and for an amount.</p></li>
+<li><p>We ask them if they have self-employment</p></li>
+<li><p>We ask if they receive any government cash benefits</p></li>
+<li><p>We ask if they receive any regular private payments such as disability, alimony, child support or investment income</p></li>
+<li><p>We ask if they have any other income sources</p></li>
+</ul>
+</li>
+<li><p>Step 13: Determine income eligibility. If the user is not eligible because of their income, they are diverted to legal content</p></li>
+<li><p>Step 14: For income eligible clients, we ask them to confirm that the phone number used to text from is the best number to reach them at.</p>
+<ul>
+<li><p>If this is not the best number, they are asked for the best number</p></li>
+</ul>
+</li>
+<li><p>Step 15: We collect their email and address. We ask them to confirm their contact information. If there are any mistakes, they are prompted to redo them.</p></li>
+<li><p>Step 16: If the referral organization schedules callbacks:</p>
+<ul>
+<li><p>The user is offered the first available appointment time</p></li>
+<li><p>If this time does not work for the user, they are offered a set of available dates</p></li>
+<li><p>When the user selects a date, they are offered a list of times to pick from</p></li>
+</ul>
+</li>
+<li><p>Step 17: The system e-transfers a completed case file to LegalServer</p></li>
+<li><p>Step 18: A confirmation message displays</p></li>
+<li><p>Step 19: If the program has a disclaimer, that is shared with the user</p></li>
+<li><p>Step 20: A final “your application is complete” message displays with links to relevant legal information.</p></li>
+</ul>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="otis_sms_intake_architecture.html" class="btn btn-neutral float-right" title="General architecture" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="otis_sms_intake.html" class="btn btn-neutral float-left" title="Online Intake Over SMS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2023, Illinois Legal Aid Online.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
