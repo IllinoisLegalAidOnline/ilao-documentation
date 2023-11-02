@@ -56,7 +56,8 @@ todo_include_todos = True
 # The theme to use for HTML and HTML Help pages. See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'sphinx_rtd_theme'
+# html_theme = 'sphinx_rtd_theme'
+html_theme = 'alabaster'
 
 
 # Theme options are theme-specific and customize the look and feel of a theme
@@ -64,6 +65,7 @@ html_theme = 'sphinx_rtd_theme'
 # documentation.
 #
 # html_theme_options = {}
+
 
 def setup(app):
   app.add_css_file( "css/themeoverrides.css" )
@@ -95,16 +97,16 @@ html_context = {
 #
 # This is required for the alabaster theme
 # refs: http://alabaster.readthedocs.io/en/latest/installation.html#sidebars
+
 html_sidebars = {
     '**': [
         'about.html',
         'navigation.html',
-        'relations.html',  # needs 'show_related': True theme option to display
+        'relations.html',
         'searchbox.html',
         'donate.html',
     ]
 }
-
 
 
 # -- Options for HTMLHelp output ------------------------------------------
