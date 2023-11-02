@@ -23,10 +23,10 @@ Creating a triage user requires minimally:
 
 
 
-.. code-block:: json
+.. code-block:: php
 
     curl -X POST -H "Content-Type:application/vnd.api+json" -H "authorization: Bearer [token]" -d '{
-  "data": {
+    "data": {
         "type": "oas_triage_user--oas_triage_user",
         "attributes": {
             "status": true,
@@ -220,7 +220,6 @@ Delete triage user
 =====================
 
    curl -X DELETE [baseurl]/jsonapi/oas_triage_user/oas_triage_user/[uuid]
-
 
 
 

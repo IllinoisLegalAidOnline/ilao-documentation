@@ -1,94 +1,49 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>3. Create a rest export for the case acceptance &mdash; ILAO Sprint 124a documentation</title>
-  
-
-  
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/css/themeoverrides.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
-
-  
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/themeoverrides.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/doctools.js"></script>
-    
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-
-    
+        <script src="_static/jquery.js?v=1413ff29"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=0a074f72"></script>
+        <script src="_static/doctools.js?v=6afcdcd2"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="4. Updating Twilio for new legal issue" href="otis_maintenance_twilio.html" />
     <link rel="prev" title="2. Creating case acceptance webform" href="otis_maintain_case_acceptance_webform.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
 
           
-            <a href="index.html" class="icon icon-home"> ILAO
           
-
-          
+          <a href="index.html" class="icon icon-home">
+            ILAO
           </a>
-
-          
-            
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
-              <p class="caption"><span class="caption-text">Contents:</span></p>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="design_guide.html">Design &amp; Style Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="block_management.html">Custom blocks</a></li>
@@ -136,87 +91,43 @@
 <li class="toctree-l1"><a class="reference internal" href="sms_overview.html">SMS Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="data_analytics.html">Data and Analytics</a></li>
 </ul>
-<p class="caption"><span class="caption-text">See also:</span></p>
+<p class="caption" role="heading"><span class="caption-text">See also:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="creating_docs_in_github.html">Creating new docs in Github</a></li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">ILAO</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-        
-          <li><a href="otis_cms.html">Get Legal Help</a> &raquo;</li>
-        
-          <li><a href="otis_sms_intake.html">Online Intake Over SMS</a> &raquo;</li>
-        
-          <li><a href="otis_maintenance.html">Maintaining and expanding OTIS SMS</a> &raquo;</li>
-        
-      <li><span class="section-number">3. </span>Create a rest export for the case acceptance</li>
-    
-    
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="otis_cms.html">Get Legal Help</a></li>
+          <li class="breadcrumb-item"><a href="otis_sms_intake.html">Online Intake Over SMS</a></li>
+          <li class="breadcrumb-item"><a href="otis_maintenance.html">Maintaining and expanding OTIS SMS</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">3. </span>Create a rest export for the case acceptance</li>
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="_sources/otis_maintenance_case_acceptance_view.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="create-a-rest-export-for-the-case-acceptance">
-<span id="otis-case-view"></span><h1><span class="section-number">3. </span>Create a rest export for the case acceptance<a class="headerlink" href="#create-a-rest-export-for-the-case-acceptance" title="Permalink to this headline">¶</a></h1>
+             
+  <section id="create-a-rest-export-for-the-case-acceptance">
+<span id="otis-case-view"></span><h1><span class="section-number">3. </span>Create a rest export for the case acceptance<a class="headerlink" href="#create-a-rest-export-for-the-case-acceptance" title="Link to this heading"></a></h1>
 <p>Once the case acceptance webform is created, the next step is to update the case acceptance view to create a REST-based export for the webform.</p>
-<div class="section" id="creating-the-rest-export">
-<h2><span class="section-number">3.1. </span>Creating the REST Export<a class="headerlink" href="#creating-the-rest-export" title="Permalink to this headline">¶</a></h2>
+<section id="creating-the-rest-export">
+<h2><span class="section-number">3.1. </span>Creating the REST Export<a class="headerlink" href="#creating-the-rest-export" title="Link to this heading"></a></h2>
 <p>To make the webform submission data available in other systems, we need a REST export for each individual webform.  This is accomplished by creating a REST export in the <a class="reference external" href="https://www.illinoislegalaid.org/admin/structure/views/view/case_acceptance">case acceptance</a> view.</p>
 <p>The REST export connects webform submission data with the service associated with the webform and with the intake settings entity associated with the service.</p>
 <div class="admonition warning">
@@ -227,12 +138,12 @@
 <p class="admonition-title">Warning</p>
 <p>New rest-exports should be created in DEV Environment and then exported/imported to production.</p>
 </div>
-<div class="section" id="path-settings">
-<h3><span class="section-number">3.1.1. </span>Path settings<a class="headerlink" href="#path-settings" title="Permalink to this headline">¶</a></h3>
+<section id="path-settings">
+<h3><span class="section-number">3.1.1. </span>Path settings<a class="headerlink" href="#path-settings" title="Link to this heading"></a></h3>
 <p>Each REST export must have a path. That path should be set to /rest/[category]-cases</p>
-</div>
-<div class="section" id="format">
-<h3><span class="section-number">3.1.2. </span>Format<a class="headerlink" href="#format" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="format">
+<h3><span class="section-number">3.1.2. </span>Format<a class="headerlink" href="#format" title="Link to this heading"></a></h3>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>It is absolutely CRITICAL that when creating the rest export, the “For” dropdown is always ALWAYS set to This rest_export override to avoid messing up other exports.</p>
@@ -244,9 +155,9 @@
 <li><p>in the Show field settings, each field in the results should have an alias that matches the actual key name</p></li>
 </ul>
 <img alt="_images/webform-gn-alias.png" src="_images/webform-gn-alias.png" />
-</div>
-<div class="section" id="fields">
-<h3><span class="section-number">3.1.3. </span>Fields<a class="headerlink" href="#fields" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="fields">
+<h3><span class="section-number">3.1.3. </span>Fields<a class="headerlink" href="#fields" title="Link to this heading"></a></h3>
 <p>The fields should include data associated with the specific webform:</p>
 <ul class="simple">
 <li><p>the legal issue field - labelled (<strong>legal_issue</strong>). This should be set to <strong>value</strong>.</p></li>
@@ -272,9 +183,9 @@
 </dl>
 </li>
 </ul>
-</div>
-<div class="section" id="filter-criteria">
-<h3><span class="section-number">3.1.4. </span>Filter Criteria<a class="headerlink" href="#filter-criteria" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="filter-criteria">
+<h3><span class="section-number">3.1.4. </span>Filter Criteria<a class="headerlink" href="#filter-criteria" title="Link to this heading"></a></h3>
 <p>The first filter criteria should limit the intake settings to the legal issue that matches the webform.  For example, the SNAP webform is limited to intake settings with a legal issue of “Food stamps” (which automatically includes child terms). The Views filter requires that you match on the term NAME rather than the ID.</p>
 <img alt="_images/gn-webforms-filter.png" src="_images/gn-webforms-filter.png" />
 <p>This should have a relationship of field_service_single. The Operator: is one of and the term should be the legal issue term (i.e. “Food stamps”,”Eviction”,”Renting a mobile home”,etc.</p>
@@ -282,118 +193,118 @@
 <p>The third filter criteria should limit the Case Acceptance Webforms to the one with the correct legal issue. Search “Legal issue” in the category Webform Case Acceptance - [legal issue] submission data. Operator Is equal to. The Legal issue should be the same legal issue id in the Case Acceptane Webform for the issue. (i.e. Expungement = 517681 (criminal records)).</p>
 <p>The fourth and fifth filter criteria should limit the results to only display the English versions of the Service and Intake settings. Search “Language” in the category of All. Select both Translation language in the category of Content with a description of The language of the content or translation and Translation language in the category of OAS Intake Settings with no description. For Content: Translation language: the Relationship should be set to Content; Operator Is one of; and Language is Site’s default language (English). For OAS Intake Settings: Translation language: the Relationship should be set to field_service_single; Operator Is one of; and Language is Site’s default language (English).</p>
 <p>The final filter criteria should limit the Case Acceptance Webforms to ones that have been completed (not drafts). Search “Is draft” in the category Webform submission. Operator Is equal to. Is draft set to False.</p>
-</div>
-<div class="section" id="sort-criteria">
-<h3><span class="section-number">3.1.5. </span>Sort Criteria<a class="headerlink" href="#sort-criteria" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="sort-criteria">
+<h3><span class="section-number">3.1.5. </span>Sort Criteria<a class="headerlink" href="#sort-criteria" title="Link to this heading"></a></h3>
 <p>To ensure we are only counting the most recent webform for a service, the sort criteria should be set to use Webform submission : Submission id ordered descending.  This can be found under category webform submission, title submission id.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Webform submission is a category independent of each of the specific webforms’ submission categories.</p>
 </div>
-</div>
-<div class="section" id="pager">
-<h3><span class="section-number">3.1.6. </span>Pager<a class="headerlink" href="#pager" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="pager">
+<h3><span class="section-number">3.1.6. </span>Pager<a class="headerlink" href="#pager" title="Link to this heading"></a></h3>
 <p>Pager should be set to Display all items</p>
-</div>
-<div class="section" id="saving">
-<h3><span class="section-number">3.1.7. </span>Saving<a class="headerlink" href="#saving" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="saving">
+<h3><span class="section-number">3.1.7. </span>Saving<a class="headerlink" href="#saving" title="Link to this heading"></a></h3>
 <p>Before saving, you must adjust the timeout in Acquia: Select Dev Environment - Configuration/Advanced - change Max execution time to 300. Once rest-export is saved, change the timeout back to 60 seconds.</p>
-</div>
-</div>
-<div class="section" id="sample-rest-export">
-<h2><span class="section-number">3.2. </span>Sample REST Export<a class="headerlink" href="#sample-rest-export" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="admin-interface-for-view">
-<h3><span class="section-number">3.2.1. </span>Admin interface for view<a class="headerlink" href="#admin-interface-for-view" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="sample-rest-export">
+<h2><span class="section-number">3.2. </span>Sample REST Export<a class="headerlink" href="#sample-rest-export" title="Link to this heading"></a></h2>
+<section id="admin-interface-for-view">
+<h3><span class="section-number">3.2.1. </span>Admin interface for view<a class="headerlink" href="#admin-interface-for-view" title="Link to this heading"></a></h3>
 <img alt="_images/gn-webforms-filter.png" src="_images/gn-webforms-filter.png" />
-</div>
-<div class="section" id="sample-data-export">
-<h3><span class="section-number">3.2.2. </span>Sample Data Export<a class="headerlink" href="#sample-data-export" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="sample-data-export">
+<h3><span class="section-number">3.2.2. </span>Sample Data Export<a class="headerlink" href="#sample-data-export" title="Link to this heading"></a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Data exports are only accessible with an access token from our API. If you are logged into the website, it should be visible via a web browser.</p>
 </div>
 <div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
- <span class="p">{</span>
-     <span class="nt">&quot;legal_issue&quot;</span><span class="p">:</span> <span class="s2">&quot;515831&quot;</span><span class="p">,</span>
-     <span class="nt">&quot;service&quot;</span><span class="p">:</span> <span class="s2">&quot;29531&quot;</span><span class="p">,</span>
-     <span class="nt">&quot;unemploy_apply_outcome_182&quot;</span><span class="p">:</span> <span class="s2">&quot;1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12&quot;</span><span class="p">,</span>
-     <span class="nt">&quot;ilao_unemploy_program_rules_outcome_186&quot;</span><span class="p">:</span> <span class="s2">&quot;1, 2, 3, 4, 5, 6, 7, 8&quot;</span><span class="p">,</span>
-     <span class="nt">&quot;ilao_unemploy_deny_outcome_183&quot;</span><span class="p">:</span> <span class="s2">&quot;1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16&quot;</span><span class="p">,</span>
-     <span class="nt">&quot;ilao_unemploy_overpayment_outcome_184&quot;</span><span class="p">:</span> <span class="s2">&quot;1, 2, 3, 4, 5, 6, 7, 8&quot;</span><span class="p">,</span>
-     <span class="nt">&quot;ilao_unemploy_cut_outcome_187&quot;</span><span class="p">:</span> <span class="s2">&quot;1, 2, 3, 4, 5, 6&quot;</span><span class="p">,</span>
-     <span class="nt">&quot;service_id&quot;</span><span class="p">:</span> <span class="s2">&quot;29531&quot;</span><span class="p">,</span>
-     <span class="nt">&quot;service_uuid&quot;</span><span class="p">:</span> <span class="s2">&quot;7764b08b-9d7a-4729-860b-03ae8736b4ee&quot;</span><span class="p">,</span>
-     <span class="nt">&quot;intake_id&quot;</span><span class="p">:</span> <span class="s2">&quot;1496&quot;</span><span class="p">,</span>
-     <span class="nt">&quot;intake_uuid&quot;</span><span class="p">:</span> <span class="s2">&quot;8146226a-a2dc-4ae7-ba57-4b6a5940f403&quot;</span>
- <span class="p">},</span>
- <span class="p">{</span>
-     <span class="nt">&quot;legal_issue&quot;</span><span class="p">:</span> <span class="s2">&quot;515831&quot;</span><span class="p">,</span>
-     <span class="nt">&quot;service&quot;</span><span class="p">:</span> <span class="s2">&quot;28806&quot;</span><span class="p">,</span>
-     <span class="nt">&quot;unemploy_apply_outcome_182&quot;</span><span class="p">:</span> <span class="s2">&quot;1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12&quot;</span><span class="p">,</span>
-     <span class="nt">&quot;ilao_unemploy_program_rules_outcome_186&quot;</span><span class="p">:</span> <span class="s2">&quot;1, 2, 3, 4, 5, 6, 7, 8&quot;</span><span class="p">,</span>
-     <span class="nt">&quot;ilao_unemploy_deny_outcome_183&quot;</span><span class="p">:</span> <span class="s2">&quot;1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16&quot;</span><span class="p">,</span>
-     <span class="nt">&quot;ilao_unemploy_overpayment_outcome_184&quot;</span><span class="p">:</span> <span class="s2">&quot;1, 2, 3, 4, 5, 6, 7, 8&quot;</span><span class="p">,</span>
-     <span class="nt">&quot;ilao_unemploy_cut_outcome_187&quot;</span><span class="p">:</span> <span class="s2">&quot;1, 2, 3, 4, 5, 6&quot;</span><span class="p">,</span>
-     <span class="nt">&quot;service_id&quot;</span><span class="p">:</span> <span class="s2">&quot;28806&quot;</span><span class="p">,</span>
-     <span class="nt">&quot;service_uuid&quot;</span><span class="p">:</span> <span class="s2">&quot;e268cf91-5994-4cca-a751-0cabd76bb3d8&quot;</span><span class="p">,</span>
-     <span class="nt">&quot;intake_id&quot;</span><span class="p">:</span> <span class="s2">&quot;1451&quot;</span><span class="p">,</span>
-     <span class="nt">&quot;intake_uuid&quot;</span><span class="p">:</span> <span class="s2">&quot;dad7f107-94c6-42b9-9033-30bbe37a6fb6&quot;</span>
- <span class="p">},</span>
- <span class="p">{</span>
-     <span class="nt">&quot;legal_issue&quot;</span><span class="p">:</span> <span class="s2">&quot;515831&quot;</span><span class="p">,</span>
-     <span class="nt">&quot;service&quot;</span><span class="p">:</span> <span class="s2">&quot;29561&quot;</span><span class="p">,</span>
-     <span class="nt">&quot;unemploy_apply_outcome_182&quot;</span><span class="p">:</span> <span class="s2">&quot;1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12&quot;</span><span class="p">,</span>
-     <span class="nt">&quot;ilao_unemploy_program_rules_outcome_186&quot;</span><span class="p">:</span> <span class="s2">&quot;1, 2, 3, 4, 5, 6, 7, 8&quot;</span><span class="p">,</span>
-     <span class="nt">&quot;ilao_unemploy_deny_outcome_183&quot;</span><span class="p">:</span> <span class="s2">&quot;1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16&quot;</span><span class="p">,</span>
-     <span class="nt">&quot;ilao_unemploy_overpayment_outcome_184&quot;</span><span class="p">:</span> <span class="s2">&quot;1, 2, 3, 4, 5, 6, 7, 8&quot;</span><span class="p">,</span>
-     <span class="nt">&quot;ilao_unemploy_cut_outcome_187&quot;</span><span class="p">:</span> <span class="s2">&quot;1, 2, 3, 4, 5, 6&quot;</span><span class="p">,</span>
-     <span class="nt">&quot;service_id&quot;</span><span class="p">:</span> <span class="s2">&quot;29561&quot;</span><span class="p">,</span>
-     <span class="nt">&quot;service_uuid&quot;</span><span class="p">:</span> <span class="s2">&quot;cbb2b332-42ff-49c1-82e0-106be43e27e2&quot;</span><span class="p">,</span>
-     <span class="nt">&quot;intake_id&quot;</span><span class="p">:</span> <span class="s2">&quot;1486&quot;</span><span class="p">,</span>
-     <span class="nt">&quot;intake_uuid&quot;</span><span class="p">:</span> <span class="s2">&quot;cdfa5e87-fcf7-4bb9-a483-e8dbe58897af&quot;</span>
- <span class="p">},</span>
- <span class="p">{</span>
-     <span class="nt">&quot;legal_issue&quot;</span><span class="p">:</span> <span class="s2">&quot;515831&quot;</span><span class="p">,</span>
-     <span class="nt">&quot;service&quot;</span><span class="p">:</span> <span class="s2">&quot;29556&quot;</span><span class="p">,</span>
-     <span class="nt">&quot;unemploy_apply_outcome_182&quot;</span><span class="p">:</span> <span class="s2">&quot;1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12&quot;</span><span class="p">,</span>
-     <span class="nt">&quot;ilao_unemploy_program_rules_outcome_186&quot;</span><span class="p">:</span> <span class="s2">&quot;1, 2, 3, 4, 5, 6, 7, 8&quot;</span><span class="p">,</span>
-     <span class="nt">&quot;ilao_unemploy_deny_outcome_183&quot;</span><span class="p">:</span> <span class="s2">&quot;1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16&quot;</span><span class="p">,</span>
-     <span class="nt">&quot;ilao_unemploy_overpayment_outcome_184&quot;</span><span class="p">:</span> <span class="s2">&quot;1, 2, 3, 4, 5, 6, 7, 8&quot;</span><span class="p">,</span>
-     <span class="nt">&quot;ilao_unemploy_cut_outcome_187&quot;</span><span class="p">:</span> <span class="s2">&quot;1, 2, 3, 4, 5, 6&quot;</span><span class="p">,</span>
-     <span class="nt">&quot;service_id&quot;</span><span class="p">:</span> <span class="s2">&quot;29556&quot;</span><span class="p">,</span>
-     <span class="nt">&quot;service_uuid&quot;</span><span class="p">:</span> <span class="s2">&quot;69c4390d-7640-4908-b857-62fa395d6ddb&quot;</span><span class="p">,</span>
-     <span class="nt">&quot;intake_id&quot;</span><span class="p">:</span> <span class="s2">&quot;1491&quot;</span><span class="p">,</span>
-     <span class="nt">&quot;intake_uuid&quot;</span><span class="p">:</span> <span class="s2">&quot;2a5ec609-e94a-4aaa-b41c-c2cb483d000c&quot;</span>
- <span class="p">},</span>
- <span class="p">{</span>
-     <span class="nt">&quot;legal_issue&quot;</span><span class="p">:</span> <span class="s2">&quot;515831&quot;</span><span class="p">,</span>
-     <span class="nt">&quot;service&quot;</span><span class="p">:</span> <span class="s2">&quot;29586&quot;</span><span class="p">,</span>
-     <span class="nt">&quot;unemploy_apply_outcome_182&quot;</span><span class="p">:</span> <span class="s2">&quot;1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12&quot;</span><span class="p">,</span>
-     <span class="nt">&quot;ilao_unemploy_program_rules_outcome_186&quot;</span><span class="p">:</span> <span class="s2">&quot;1, 2, 3, 4, 5, 6, 7, 8&quot;</span><span class="p">,</span>
-     <span class="nt">&quot;ilao_unemploy_deny_outcome_183&quot;</span><span class="p">:</span> <span class="s2">&quot;1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16&quot;</span><span class="p">,</span>
-     <span class="nt">&quot;ilao_unemploy_overpayment_outcome_184&quot;</span><span class="p">:</span> <span class="s2">&quot;1, 2, 3, 4, 5, 6, 7, 8&quot;</span><span class="p">,</span>
-     <span class="nt">&quot;ilao_unemploy_cut_outcome_187&quot;</span><span class="p">:</span> <span class="s2">&quot;1, 2, 3, 4, 5, 6&quot;</span><span class="p">,</span>
-     <span class="nt">&quot;service_id&quot;</span><span class="p">:</span> <span class="s2">&quot;29586&quot;</span><span class="p">,</span>
-     <span class="nt">&quot;service_uuid&quot;</span><span class="p">:</span> <span class="s2">&quot;08239044-9600-4b66-a8d6-d93202c3861a&quot;</span><span class="p">,</span>
-     <span class="nt">&quot;intake_id&quot;</span><span class="p">:</span> <span class="s2">&quot;1481&quot;</span><span class="p">,</span>
-     <span class="nt">&quot;intake_uuid&quot;</span><span class="p">:</span> <span class="s2">&quot;60d1a71c-79a6-4cb8-be7b-a27ebca9ea6e&quot;</span>
- <span class="p">}]</span>
+<span class="w"> </span><span class="p">{</span>
+<span class="w">     </span><span class="nt">&quot;legal_issue&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;515831&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">&quot;service&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;29531&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">&quot;unemploy_apply_outcome_182&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">&quot;ilao_unemploy_program_rules_outcome_186&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1, 2, 3, 4, 5, 6, 7, 8&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">&quot;ilao_unemploy_deny_outcome_183&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">&quot;ilao_unemploy_overpayment_outcome_184&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1, 2, 3, 4, 5, 6, 7, 8&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">&quot;ilao_unemploy_cut_outcome_187&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1, 2, 3, 4, 5, 6&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">&quot;service_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;29531&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">&quot;service_uuid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;7764b08b-9d7a-4729-860b-03ae8736b4ee&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">&quot;intake_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1496&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">&quot;intake_uuid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;8146226a-a2dc-4ae7-ba57-4b6a5940f403&quot;</span>
+<span class="w"> </span><span class="p">},</span>
+<span class="w"> </span><span class="p">{</span>
+<span class="w">     </span><span class="nt">&quot;legal_issue&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;515831&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">&quot;service&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;28806&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">&quot;unemploy_apply_outcome_182&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">&quot;ilao_unemploy_program_rules_outcome_186&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1, 2, 3, 4, 5, 6, 7, 8&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">&quot;ilao_unemploy_deny_outcome_183&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">&quot;ilao_unemploy_overpayment_outcome_184&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1, 2, 3, 4, 5, 6, 7, 8&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">&quot;ilao_unemploy_cut_outcome_187&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1, 2, 3, 4, 5, 6&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">&quot;service_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;28806&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">&quot;service_uuid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;e268cf91-5994-4cca-a751-0cabd76bb3d8&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">&quot;intake_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1451&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">&quot;intake_uuid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;dad7f107-94c6-42b9-9033-30bbe37a6fb6&quot;</span>
+<span class="w"> </span><span class="p">},</span>
+<span class="w"> </span><span class="p">{</span>
+<span class="w">     </span><span class="nt">&quot;legal_issue&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;515831&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">&quot;service&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;29561&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">&quot;unemploy_apply_outcome_182&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">&quot;ilao_unemploy_program_rules_outcome_186&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1, 2, 3, 4, 5, 6, 7, 8&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">&quot;ilao_unemploy_deny_outcome_183&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">&quot;ilao_unemploy_overpayment_outcome_184&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1, 2, 3, 4, 5, 6, 7, 8&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">&quot;ilao_unemploy_cut_outcome_187&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1, 2, 3, 4, 5, 6&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">&quot;service_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;29561&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">&quot;service_uuid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cbb2b332-42ff-49c1-82e0-106be43e27e2&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">&quot;intake_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1486&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">&quot;intake_uuid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdfa5e87-fcf7-4bb9-a483-e8dbe58897af&quot;</span>
+<span class="w"> </span><span class="p">},</span>
+<span class="w"> </span><span class="p">{</span>
+<span class="w">     </span><span class="nt">&quot;legal_issue&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;515831&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">&quot;service&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;29556&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">&quot;unemploy_apply_outcome_182&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">&quot;ilao_unemploy_program_rules_outcome_186&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1, 2, 3, 4, 5, 6, 7, 8&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">&quot;ilao_unemploy_deny_outcome_183&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">&quot;ilao_unemploy_overpayment_outcome_184&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1, 2, 3, 4, 5, 6, 7, 8&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">&quot;ilao_unemploy_cut_outcome_187&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1, 2, 3, 4, 5, 6&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">&quot;service_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;29556&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">&quot;service_uuid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;69c4390d-7640-4908-b857-62fa395d6ddb&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">&quot;intake_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1491&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">&quot;intake_uuid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2a5ec609-e94a-4aaa-b41c-c2cb483d000c&quot;</span>
+<span class="w"> </span><span class="p">},</span>
+<span class="w"> </span><span class="p">{</span>
+<span class="w">     </span><span class="nt">&quot;legal_issue&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;515831&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">&quot;service&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;29586&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">&quot;unemploy_apply_outcome_182&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">&quot;ilao_unemploy_program_rules_outcome_186&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1, 2, 3, 4, 5, 6, 7, 8&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">&quot;ilao_unemploy_deny_outcome_183&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">&quot;ilao_unemploy_overpayment_outcome_184&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1, 2, 3, 4, 5, 6, 7, 8&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">&quot;ilao_unemploy_cut_outcome_187&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1, 2, 3, 4, 5, 6&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">&quot;service_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;29586&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">&quot;service_uuid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;08239044-9600-4b66-a8d6-d93202c3861a&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">&quot;intake_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1481&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">&quot;intake_uuid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;60d1a71c-79a6-4cb8-be7b-a27ebca9ea6e&quot;</span>
+<span class="w"> </span><span class="p">}]</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="next-steps">
-<h2><span class="section-number">3.3. </span>Next Steps<a class="headerlink" href="#next-steps" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="next-steps">
+<h2><span class="section-number">3.3. </span>Next Steps<a class="headerlink" href="#next-steps" title="Link to this heading"></a></h2>
 <p>Once the view is created and accessible, it can be added to Twilio as the final step in the process.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Changes to the case acceptance webform will automatically be included in the REST-export each time the view updates.</p>
 </div>
-</div>
-<div class="section" id="backing-up-and-restoring-a-view">
-<h2><span class="section-number">3.4. </span>Backing up and restoring a view<a class="headerlink" href="#backing-up-and-restoring-a-view" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="to-backup-a-view">
-<h3><span class="section-number">3.4.1. </span>To backup a view<a class="headerlink" href="#to-backup-a-view" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="backing-up-and-restoring-a-view">
+<h2><span class="section-number">3.4. </span>Backing up and restoring a view<a class="headerlink" href="#backing-up-and-restoring-a-view" title="Link to this heading"></a></h2>
+<section id="to-backup-a-view">
+<h3><span class="section-number">3.4.1. </span>To backup a view<a class="headerlink" href="#to-backup-a-view" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p>Go to the <a class="reference external" href="https://www.illinoislegalaid.org/admin/config/development/configuration/single/export">single export page</a></p></li>
 <li><p>Under configuration type, select View</p></li>
@@ -401,9 +312,9 @@
 <li><p>Copy the configuration into a text editor</p></li>
 </ul>
 <img alt="_images/config-single-export.png" src="_images/config-single-export.png" />
-</div>
-<div class="section" id="to-restore-a-view">
-<h3><span class="section-number">3.4.2. </span>To restore a view<a class="headerlink" href="#to-restore-a-view" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="to-restore-a-view">
+<h3><span class="section-number">3.4.2. </span>To restore a view<a class="headerlink" href="#to-restore-a-view" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p>Go to the <a class="reference external" href="https://www.illinoislegalaid.org/admin/config/development/configuration/single/import">single import page</a></p></li>
 <li><p>Under configuration type, select View</p></li>
@@ -411,56 +322,39 @@
 <li><p>Press import</p></li>
 </ul>
 <img alt="_images/config-import-single.png" src="_images/config-import-single.png" />
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="otis_maintenance_twilio.html" class="btn btn-neutral float-right" title="4. Updating Twilio for new legal issue" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="otis_maintain_case_acceptance_webform.html" class="btn btn-neutral float-left" title="2. Creating case acceptance webform" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="otis_maintenance_twilio.html" class="btn btn-neutral float-right" title="4. Updating Twilio for new legal issue" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2023, Illinois Legal Aid Online.
-
-    </p>
+    <p>&#169; Copyright 2023, Illinois Legal Aid Online.</p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>
