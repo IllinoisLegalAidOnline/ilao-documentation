@@ -57,7 +57,6 @@ todo_include_todos = True
 # a list of builtin themes.
 #
 html_theme = 'sphinx_rtd_theme'
-html_theme_path = ["_themes", ]
 
 
 # Theme options are theme-specific and customize the look and feel of a theme
@@ -75,6 +74,20 @@ def setup(app):
 # will overwrite the builtin "default.css".
 html_static_path = ['_static']
 
+html_css_files = [
+    'css/custom.css',
+    'custom.css'
+    'theme_overrides.css'
+]
+html_context = {
+    'css_files': [
+        '_static/theme_overrides.css',  # override wide tables in RTD theme
+        '../html/_static/css/theme_overrides.css',
+        '../build/html/_static/css/theme_overrides.css',
+        '_static/css/theme_overrides.css',
+        ],
+     }
+
 
 
 # Custom sidebar templates, must be a dictionary that maps document names
@@ -82,7 +95,15 @@ html_static_path = ['_static']
 #
 # This is required for the alabaster theme
 # refs: http://alabaster.readthedocs.io/en/latest/installation.html#sidebars
-
+html_sidebars = {
+    '**': [
+        'about.html',
+        'navigation.html',
+        'relations.html',  # needs 'show_related': True theme option to display
+        'searchbox.html',
+        'donate.html',
+    ]
+}
 
 
 
