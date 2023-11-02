@@ -55,9 +55,53 @@ The referrals are then ordered by
 * If service delivery is in person and has irregular hours, has a date in the next 7 days
 
 
-Proposed Rewrite
+2024 Implementation
 ====================
 The updated algorithm does not pay attention to the method of how services are delivered as that is not particularly helpful to individuals. It is also designed to be less dependent on long SQL queries.
+
+Scoring Metrics
+------------------
+
+Referral Score
+^^^^^^^^^^^^^^^^^^
+
+The system will automatically generate a score for location services content based on data in our Get Legal Help referral settings form. This score replaces the previous scoring done within the query.
+
+.. image:: ../assets/referral-score-form.png
+
+Referral Best Bets
+^^^^^^^^^^^^^^^^^^^^
+
+Staff users can set a location service to be a best bet for a particular legal issue or intake population, or both.
+
+
+Results Algorithm
+===================
+
+The referrals page will return up to 4 sets of results:
+
+* Best Bets - the first results will be any location service that:
+
+  * Matches on location and legal issue
+  * Matches on population, or is not limited to any population
+  * Is open
+  * Provides direct representation
+  * Is a Best Bet on the legal issue OR Is a best bet on a population the user is a member of
+  * Is then ordered by referral score descending if there are multiple matching Best Bets
+
+* Top Results - up to 5 results of any location service that:
+
+  * Matches on location and legal issue
+  * Matches on population, or is not limited to any population
+  * Is open
+  * Provides direct representation
+  * Is not a Best Bet on the legal issue OR Is a best bet on a population the user is a member of
+  * Is then ordered by referral score descending with a limit of 5 results
+
+* Bar referrals
+* The LSHC serving the user's county.
+
+
 
 
 

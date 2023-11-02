@@ -182,9 +182,49 @@
 </ul>
 </section>
 </section>
-<section id="proposed-rewrite">
-<h2>Proposed Rewrite<a class="headerlink" href="#proposed-rewrite" title="Link to this heading"></a></h2>
+<section id="implementation">
+<h2>2024 Implementation<a class="headerlink" href="#implementation" title="Link to this heading"></a></h2>
 <p>The updated algorithm does not pay attention to the method of how services are delivered as that is not particularly helpful to individuals. It is also designed to be less dependent on long SQL queries.</p>
+<section id="scoring-metrics">
+<h3>Scoring Metrics<a class="headerlink" href="#scoring-metrics" title="Link to this heading"></a></h3>
+<section id="referral-score">
+<h4>Referral Score<a class="headerlink" href="#referral-score" title="Link to this heading"></a></h4>
+<p>The system will automatically generate a score for location services content based on data in our Get Legal Help referral settings form. This score replaces the previous scoring done within the query.</p>
+<img alt="_images/referral-score-form.png" src="_images/referral-score-form.png" />
+</section>
+<section id="referral-best-bets">
+<h4>Referral Best Bets<a class="headerlink" href="#referral-best-bets" title="Link to this heading"></a></h4>
+<p>Staff users can set a location service to be a best bet for a particular legal issue or intake population, or both.</p>
+</section>
+</section>
+</section>
+<section id="results-algorithm">
+<h2>Results Algorithm<a class="headerlink" href="#results-algorithm" title="Link to this heading"></a></h2>
+<p>The referrals page will return up to 4 sets of results:</p>
+<ul class="simple">
+<li><p>Best Bets - the first results will be any location service that:</p>
+<ul>
+<li><p>Matches on location and legal issue</p></li>
+<li><p>Matches on population, or is not limited to any population</p></li>
+<li><p>Is open</p></li>
+<li><p>Provides direct representation</p></li>
+<li><p>Is a Best Bet on the legal issue OR Is a best bet on a population the user is a member of</p></li>
+<li><p>Is then ordered by referral score descending if there are multiple matching Best Bets</p></li>
+</ul>
+</li>
+<li><p>Top Results - up to 5 results of any location service that:</p>
+<ul>
+<li><p>Matches on location and legal issue</p></li>
+<li><p>Matches on population, or is not limited to any population</p></li>
+<li><p>Is open</p></li>
+<li><p>Provides direct representation</p></li>
+<li><p>Is not a Best Bet on the legal issue OR Is a best bet on a population the user is a member of</p></li>
+<li><p>Is then ordered by referral score descending with a limit of 5 results</p></li>
+</ul>
+</li>
+<li><p>Bar referrals</p></li>
+<li><p>The LSHC serving the user’s county.</p></li>
+</ul>
 </section>
 </section>
 
