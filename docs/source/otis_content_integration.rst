@@ -1,25 +1,30 @@
-=========================================
-Integrating structured content into OTIS
-=========================================
+============================
+Integrating COPE into OTIS
+============================
 
-This is a work in progress. We will explain how we integrate ILAO's content chunks (structured content) into the OTIS guided navigation paths
+Utilizing content created using :ref:`cms_structured_content` we are able to bring up-to-date chunks of legal information into OTIS to help educate applicants as they continue their triage journey.
 
-basic concepts:
+Basic concepts:
+================
 
 * trigger:
 
-  * triggered by custom LegalServer field that includes: cope_option_603
+  * An API call is performed whenever the custom LegalServer field "ilao_cope_option" is included in the guided navigation path
+  * The API call uses the value (the node id for a particular piece of legal content) for the custom field to determine which content to display
 
 * adding the element:
 
-  * the field is added to a guided navigation path where the content needs to be displayed
-  * add the node id for the legal content being called
+  * a custom field (ilao_cope_options) was created in LegalServer that has the "text" option. 
+  * the custom field is added to a guided navigation path as an "Action: set a fields value" where the content needs to be displayed 
+  * the node id for the legal content is added as the text value for the field
   * instruction elements can be added to provide the user specific context to the legal content
 
 * OTIS applicant sees:
 
-  * Any instructions provided
-  * content from the node id appears in the same theme as other guided navigation questions (without any boxes or indication that it is different that the triage questions)
-  * any links provided in the content are shown to the user (i.e. link to apply for TANF benefits)
-  * An instruction informing the applicant they can still continue their OTIS application
-  * Continue button and Back link
+  * **Instructions:** Any instructional elements provided are displayed to provide context for the legal content.
+  * **Legal content:** The content from the specified node id appears seamlessly within the same theme as other guided navigation text.
+  * **Links:** Any links provided in the content (e.g., links to apply for TANF benefits) are shown to the applicant.
+  * **Instruction for continuing OTIS application:** Clear instructions informing the applicant they can still continue their OTIS application after reviewing the legal content can be provided.
+  * **Navigational controls:**
+   * **Continue button:** A "Continue" button allows the applicant to proceed with their application for legal help.
+   * **Back link:** A "Back" link allows the applicant to navigate back to the previous step, if needed.
