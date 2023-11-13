@@ -12,5 +12,5 @@ Toolbox, Toolbox tools & Toolbox steps
    cms_tools_offline_communications
    content_toolbox_use
 
-.. note:: All toolboxes have been unpublished and the related content types and technology will be deprecated and will be removed entirely from the platform in 2024.
+.. warning:: All toolboxes have been unpublished and the related content types and technology will be deprecated and will be removed entirely from the platform in 2024.
 

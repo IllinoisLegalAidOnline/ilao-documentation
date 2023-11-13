@@ -16,7 +16,6 @@ Legal content formats
    cms_legal_content_download
    cms_legal_content_decision_tree
    cms_legal_content_docassemble
-   cms_media_text
    cms_grid
 
 Common Elements
