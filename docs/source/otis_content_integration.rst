@@ -4,7 +4,7 @@ COPE integration
 
 Basic concepts:
 ================
-Utilizing content created using :ref:`cms_structured_content` we are able to bring up-to-date chunks of legal information into OTIS to help educate applicants as they continue their triage journey.
+The COPE (Create Once Publish Everywhere) content model utilizes content created using :ref:`cms_structured_content`. Content is maintained and updated by ILAO's content team in one central location. Using this model, we can bring up-to-date chunks of legal information into OTIS to help educate applicants as they continue their triage journey.
 
 Trigger:
 =========
