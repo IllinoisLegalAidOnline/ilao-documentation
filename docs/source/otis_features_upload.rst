@@ -17,7 +17,7 @@ To initiate a file upload from ILAO's site, Online Triage and Intake System (OTI
 
 * **Required permissions:** To give ILAO access, the OTIS partner will need to create an ILAO-API user within their LegalServer and grant that user "API Basic Case Information" permission
 
-.. image:: ../assets/glh-upload-api-permission.png
+.. image:: ../assets/GLH-upload-api-permission.png
 
 API requirements
 =================
@@ -26,10 +26,11 @@ To send a file via an API call to LegalServer, the API requires the correct URL,
 * **Correct URL:** [legalserver base URL]/api/v1/documents
 * **Authentication:** either basic authentication or a bearer token.
 * **Case identifier:** This can be either the Matter/Case ID or the Globally Unique ID. Since we are electronically transferring the case file from Illinois state-wide instance of LegalServer to the OTIS partner's instance, the Matter/Case ID changes with the LegalServer instance, we are using the Globally Unique ID. The Globally Unique ID is provided to ILAO from LegalServer during the initial transfer of information to LegalServer and is stored in ILAO's internal database.
-* **Filename:** The filename is captured when the applicant uploads the file.
-* **File:** Applicants can upload jpg, jpeg, png, tiff, doc, docx, and pdf file types.
 
 .. image:: ../assets/glh-upload-metadata.png
+
+* **Filename:** The filename is captured when the applicant uploads the file.
+* **File:** Applicants can upload jpg, jpeg, png, tiff, doc, docx, and pdf file types.
 
 When the file is properly sent to the OTIS partner's LegalServer, ILAO receives a confirmation with a unique identifier for the uploaded file.
 
