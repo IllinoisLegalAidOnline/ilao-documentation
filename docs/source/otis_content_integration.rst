@@ -27,3 +27,5 @@ OTIS applicant sees:
 * **Navigational controls:**
  * **Continue button:** A "Continue" button allows the applicant to proceed with their application for legal help.
  * **Back link:** A "Back" link allows the applicant to navigate back to the previous step, if needed.
+
+.. image:: ../assets/glh-cope integration.png
