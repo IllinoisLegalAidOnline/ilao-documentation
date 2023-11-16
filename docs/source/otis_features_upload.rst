@@ -3,7 +3,7 @@ Document (File) Upload
 =======================
 Overview
 =========
-LegalServer allows documents to be uploaded via an API call either through the online intake site or directly to the partner's case management site. See 'LegalServer documentation<https://apidocs.legalserver.org/docs/ls-apis/6a2979a35420d-upload-a-new-document-to-the-system>'. We are currently allowing online applicants to upload documents directly. To upload through the online intake site, an applicant must have their document available when completing the intake. Unfortunately, uploading directly to the partner's site also has some limitations. To upload a document directly to the OTIS partner's LegalService case file, the case file must be started in the partner's LegalServer (i.e., intake has to have begun). 
+LegalServer allows documents to be uploaded via an API call either through the online intake site or directly to the partner's case management site. See [LegalServer documentation](https://apidocs.legalserver.org/docs/ls-apis/6a2979a35420d-upload-a-new-document-to-the-system). We are currently allowing online applicants to upload documents directly. To upload through the online intake site, an applicant must have their document available when completing the intake. Unfortunately, uploading directly to the partner's site also has some limitations. To upload a document directly to the OTIS partner's LegalService case file, the case file must be started in the partner's LegalServer (i.e., intake has to have begun). 
 
 Partner setup
 =====================
@@ -17,7 +17,7 @@ To initiate a file upload from ILAO's site, Online Triage and Intake System (OTI
 
 * **Required permissions:** To give ILAO access, the OTIS partner will need to create an ILAO-API user within their LegalServer and grant that user "API Basic Case Information" permission
 
-.. image:: ../assets/glh-api permission.png
+.. image:: ../assets/glh-upload-api-permission.png
 
 API requirements
 =================
@@ -29,11 +29,11 @@ To send a file via an API call to LegalServer, the API requires the correct URL,
 * **Filename:** The filename is captured when the applicant uploads the file.
 * **File:** Applicants can upload jpg, jpeg, png, tiff, doc, docx, and pdf file types.
 
-.. image:: ../assets/glh_metadata_file upload.png
+.. image:: ../assets/glh-upload-metadata.png
 
 When the file is properly sent to the OTIS partner's LegalServer, ILAO receives a confirmation with a unique identifier for the uploaded file.
 
-.. image:: ../assets/glh_file upload successful.png
+.. image:: ../assets/glh-upload-successful.png
 
 Applicant (user) process
 =========================
@@ -41,14 +41,14 @@ To upload a file, an applicant must first complete an online application. Curren
 
 1. If a person either creates an ILAO account or logs in at the completion of their online application, they will be able to see their completed applications on their My account page (/users/[first]-[last]).
 
-.. image:: ../assets/glh-upload-my applications.png
+.. image:: ../assets/glh-upload-my-applications.png
 
 2. From their list of Online Applications, an applicant will have a link to upload files only if the OTIS partner allows file uploads. When they select the Upload Documents link, they are taken to a new page where they have the ability to upload one or more files and send those files to the OTIS partner.
 
-.. image:: ../assets/glh-file upload screen.png
+.. image:: ../assets/glh-upload-screen.png
 
 3. They also have the ability to preview any of the files they have upload prior to sending the files.
 
-.. image:: ../assets/glh-file upload preview.png
+.. image:: ../assets/glh-upload-preview.png
 
 4. Finally, when they send the files to the OTIS partner, they are redirected back to their My account page and will see a confirmation message to let them know the file(s) were properly uploaded.
