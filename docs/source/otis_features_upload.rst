@@ -31,6 +31,10 @@ To send a file via an API call to LegalServer, the API requires the correct URL,
 
 .. image:: ../assets/glh_metadata_file upload.png
 
+When the file is properly sent to the OTIS partner's LegalServer, ILAO receives a confirmation with a unique identifier for the uploaded file.
+
+.. image:: ../assets/glh_file upload successful.png
+
 Applicant (user) process
 =========================
 To upload a file, an applicant must first complete an online application. Currently, we have limited file uploads to applicants who have created an account on ILAO, but there are plans to expand the file upload capacities to applicants who choose not to create an ILAO account. Having an ILAO account allows us to save a person's application information so they can return to it later. We plan to look up an applicant's file in a process similar to printing your boarding pass at the airport (last name and a unique 6 digit code).
