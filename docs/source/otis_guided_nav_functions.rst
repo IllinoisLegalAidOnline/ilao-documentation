@@ -12,7 +12,8 @@ Validate keyword
 
 **Function name:** 
 
-* mr-validate-legal-issue-gn
+* mr-validate-legal-issue-gn (current)
+* validate-legal-issue-gn (deprecated)
 
 **Parameters:** 
 
@@ -23,15 +24,31 @@ Validate keyword
 
 * code - corresponds to the list of legal issues within the function. If the legal_issue parameter does not match a value in the function, the code will return as -1.
 
-**Widget(s):** 
+**Widget(s):** validate_keyword
 
-* validate_keyword
-* validate-legal-issue
+**Flows:** Superbot main flows: SuperbotV2 & SuperbotV3
 
-**Flows:**
 
-* Superbot main flows: SuperbotV2 & SuperbotV3
-* OTIS get legal issue
+Validate legal issue
+=====================
+
+**Function name:** 
+
+* mr-validate-legal-issue-flow (current)
+* validate-legal-issue-flow (deprecated)
+
+**Parameters:** 
+
+* event.legal_issue; this is a text value from widget: start-otis. This allows users to respond to a question about their legal issue if they did not get matched to a legal issue based on their trigger word (i.e. they didn't text "evict" to 85622).
+* event.language_number; this is a numerical value that identifies the language of the user to match the legal issue provided in the correct language.
+
+**Returns:** An object containing:
+
+* code - corresponds to the list of legal issues within the function. 
+
+**Widget(s):** validate-legal-issue
+
+**Flows:** OTIS get legal issue
 
 
 Get process list
@@ -54,12 +71,20 @@ Get process list
 
 .. note:: Processes are as follows so far 1 - unemployment benefits, 2 - Food stamps, 3 - TANF benefits, 4 - Renting or Renters, 5 - Expungement, 6 - DV, 7 - Bankruptcy (not live yet), 8 - Asylum/Immigration (not live yet).
 
-**Widget(s):**  get_gn_process
+**Widget(s):**  
 
-**Flow(s):** Superbot main flows:
+* get_gn_process (Superbot); and
+* get-gn-process-id (Get legal issue)
 
-* SuperbotV2_LIVE_9.11.23
-* SuperbotV3
+**Flow(s):** 
+* Superbot main flows:
+
+  * SuperbotV2_LIVE_9.11.23
+  * SuperbotV3
+
+* OTIS get legal issue
+
+
 
 Start a new session for given process
 =========================================
