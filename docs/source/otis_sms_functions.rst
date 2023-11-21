@@ -4,6 +4,7 @@
 Twilio Functions
 =====================
 
+
 This documents the functions stored in our Twilio function service "ilao."
 
 All of our Twilio functions are stored in the ilao service in Twilio's functions.
@@ -133,12 +134,75 @@ OTIS Zipcode Validate
 
 **Status:** Relies on a JSON object in our static assets (/illinois-regions) that contains the IL regional taxonomy data.
 
-**Widget:** validate-zipcode
+**Widget:** 
+
+* validate-zipcode
+* validate-zipcode-counselor
 
 **Flow:** OTIS get location
 
 
 
+Get housing counselors list
+=============================
+
+.. note:: This only appears when an applicant identifies as having an eviction-related issue. During this special triage section, we first ask if the applicant wants information on housing counselors.
+
+**Function:** hud-housing-counselors
+
+**Purpose:** Performs an API call to provide the applicant with a list of local housing counselors.
+
+**Parameters:** event.zip
+
+**Returns:** An object that contains:
+
+* counseling_agencies (limited to agencies that service the user's zip code)
+* name (the name of the agency)
+* address (the agency's street address)
+* city
+* phone
+* weburl
+* counslg_METHOD (the method the applicant can communicate with the agency -- i.e., face-to-face, phone counseling, group counseling, etc.)
+
+**Widget:** get-counseling
+
+**Flow:** OTIS get location
+
+
+Update triage user database
+============================
+
+**Function name:** otis-update-triage-user
+
+**Purpose:** Update the OTIS triage user database with information from the user's triage path.
+
+**Parameters:** event.token
+
+**Returns:** an object that contains a uuid
+
+**Widgets:** 
+
+* update-counseling (Get location)
+
+**Flows:**
+
+* OTIS get location
+
+
+Create triage user
+====================
+
+**Function name:** otis-create-triage-user
+
+**Purpose:** Create a new triage user in the database
+
+**Parameters:** event.token
+
+**Returns:** triage_id
+
+**Widgets:** create-triage-user
+
+**Flows:** Superbot flows: SuperbotV2 & SuperbotV3
 
 
 
