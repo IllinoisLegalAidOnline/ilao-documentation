@@ -52,7 +52,7 @@ The initial prompt asks the user to opt-in. Once the user opt-ins, they are aske
 
 .. note:: Some programs have no income limits either generally or for special populations. These are not yet supported in the SMS application.
 
-* Step 7: Once the system determines that the user is eligible (geography and income) The "OTIS Guided Navigation" subflow is launched to triage the user through their legal problem.
+* Step 7: Once the system determines that the user is eligible (geography and income), The "OTIS Guided Navigation" subflow is launched to triage the user through their legal problem.
 * Step 8: When the guided navigation ends, the system connects to IllinoisLegalAid.org and  checks to see if one or more organizations match the user's legal issue
 
   * If no organization matches, the system exits with legal content
@@ -75,20 +75,21 @@ The initial prompt asks the user to opt-in. Once the user opt-ins, they are aske
     * We ask if they have any other income sources
 
   * Determine income eligibility. If the user is not eligible because of their income, they are diverted to legal content
-* Step 10 For income-eligible applicants, we ask them to confirm that the phone number used to text from is the best number to reach them at.
+* Step 10: For income-eligible applicants, we gather the applicant's contact information (OTIS location subflow).
 
-  * If this is not the best number, they are asked for the best number
+    * We ask them to confirm that the phone number used to text from is the best number to reach them at.
 
-**CONTINUE DOCUMENTATION HERE**
+      * If this is not the best number, they are asked for the best number
 
-* Step 15: We collect their email and address. We ask them to confirm their contact information. If there are any mistakes, they are prompted to redo them.
-* Step 16: If the referral organization schedules callbacks:
+    * We collect their email and address. We ask them to confirm their contact information. If there are any mistakes, they are prompted to redo them.
+
+* Step 11: If the referral organization schedules callbacks: (begin OTIS appointment scheduler subflow)
 
   * The user is offered the first available appointment time
   * If this time does not work for the user, they are offered a set of available dates
   * When the user selects a date, they are offered a list of times to pick from
 
-* Step 17: The system e-transfers a completed case file to LegalServer
-* Step 18: A confirmation message displays
-* Step 19: If the program has a disclaimer, that is shared with the user
-* Step 20: A final "your application is complete" message displays with links to relevant legal information.
+* Step 12: The system e-transfers a completed case file to LegalServer
+* Step 13: A confirmation message displays
+* Step 14: If the program has a disclaimer, that is shared with the user
+* Step 15: A final "your application is complete" message displays with links to relevant legal information.
