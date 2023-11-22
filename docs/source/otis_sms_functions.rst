@@ -183,10 +183,12 @@ Update triage user database
 **Widgets:** 
 
 * update-counseling (Get location)
+* update-triage-user-matches (matches)
 
 **Flows:**
 
 * OTIS get location
+* OTIS matches
 
 
 Create triage user
@@ -317,7 +319,7 @@ Get intake settings data
 **Flow: OTIS matches
 
 
-**[START HERE]**
+[START HERE]
 
 Conflict check
 ================
