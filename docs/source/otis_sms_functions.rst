@@ -200,11 +200,9 @@ Create triage user
 
 **Returns:** triage_id
 
-**Widgets:** create-triage-user
+**Widget:** create-triage-user
 
 **Flows:** Superbot flows: SuperbotV2 & SuperbotV3
-
-
 
 
 Increase intake counter
@@ -222,20 +220,102 @@ Increase intake counter
 
 **Status:** In development.
 
+
 Get Matches
 ==========================
 
-**Function name:**  otis-get-matches
+**Function name:**  
 
-**Purpose**:
+* get-gn-match-test (current)
+* get-gn-match (deprecated)
+
+**Purpose**: Retrieves data from a specified REST API endpoint, filters and processes the data, and return a list of results based on user input.
 
 **Parameters:**
 
-**Requires:**
+* event.token
+* event.user_issue
+* event.outcome_field (identified specific legal issue based on the answers the user provided -- example: ilao-HSG-evict-guest-outcome: eviction for guests, summons, court w/in 5 days -> identifies applicants who are being evicted for have guests in their apartment, they have received a summons, and they have court w/in the next 5 days)
+* event.rest_export (this value tells the system which case acceptance rest export webform to look in for matches)
 
-**Returns:**
+**Returns:** intake_id values for all of the matched organizations
 
-**Status:** Not built
+**Widget:** otis-get-matches
+
+**Flow:** OTIS matches
+
+
+Matches (geography)
+=====================
+
+**Function names:** 
+
+* pilot-get-matches (current)
+* pilot-get-matches-new (not yet)
+
+**Purpose:** Count and respond with matched organizations based on the matched intake_id's from the previous function against the user's geographic area
+
+**Parameters:** 
+
+* event.zip_id
+* event.county_id
+* event.city_id
+
+**Returns:** List of matched organizations
+
+**Widget:** get-otis-matches
+
+**Flow:** OTIS matches
+
+
+Matches (names)
+================
+
+**Function name: get-names-test
+
+**Purpose:** Gets the names of the matched organizations to provide to the applicant
+
+**Parameters:** 
+
+* event.services.split (service_id)
+* event.intakes.split (intake_id)
+
+**Returns:** Names of the matched organizations
+
+**Widget:** matches-get-name
+
+**Flow:** OTIS matches
+
+
+Get intake settings data
+=========================
+
+**Function name:** 
+
+* get-intake-settigns-with-qualifiers (current)
+* pilot-get-intake-settings (deprecated)
+
+**Purpose:** Get the intake settings for the selected organization. Also, identify if the organization uses qualifiers.
+
+**Parameters:**
+
+* event.token
+* event.intake_id
+
+**Returns:** data object that contains:
+
+* callback_number
+* callback_type
+* current_count (intake count)
+* bypass_intake_message
+* oas_msg_disclaimer
+* oas_msg_please_Call_value
+* oas_msg_we_call_you
+
+**Widget:** get-intake-settings_data
+
+**Flow: OTIS matches
+
 
 Conflict check
 ================
