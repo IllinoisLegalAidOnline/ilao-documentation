@@ -211,3 +211,29 @@ This function returns any intake settings ids that are a match based on a match 
 
 
 
+
+Process qualifiers
+====================
+
+**Function name:** process-qualifiers
+
+**Purpose:** determine if the applicant is qualified for their chosen organization or if they need to apply for a different organization
+
+**Parameters:** event.intakeids.split
+
+**Returns:** an object that contains either:
+
+* qualified ("Great")
+* disqualified ("Unfortunately, you did not match to {{org}}. You can visit Get Legal Help for more help.") 
+* null - will redirect the applicant to their other matched organizations.
+
+**Widget:** reselect-qualifiers
+
+**Flows:** 
+
+* Superbot main flows:
+
+  * SuperbotV2_LIVE_9.11.23
+  * SuperbotV3
+
+**Status:** in development
