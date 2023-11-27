@@ -73,8 +73,9 @@ Get process list
 
 **Widget(s):**  
 
-* get_gn_process (Superbot); and
-* get-gn-process-id (Get legal issue)
+* get_gn_process (Superbot); 
+* get-gn-process-id (Get legal issue); and
+* rerun_process (Guided Navigation)
 
 **Flow(s):** 
 * Superbot main flows:
@@ -83,7 +84,7 @@ Get process list
   * SuperbotV3
 
 * OTIS get legal issue
-
+* OTIS Guided Navigation
 
 
 Start a new session for given process
@@ -97,8 +98,62 @@ Start a new session for given process
 
 * sessionid; the session ID returned by Legal Server. This is used throughout a user's Guided Navigation session.
 
+**Widget:** start-gn-process
+
+**Flow:** OTIS Guided Navigation
 
 **Requires:** username and password credentials to access the Legal Server API. These are currently stored in the function for the demo site only.
+
+
+Get the guided navigation form
+================================
+
+**Function names:** 
+
+* get-form-test-multiple (current)
+* get-form-test (deprecated)
+
+.. warning:: THIS IS CURRENTLY BEING USED IN get-final-gn-profile
+
+* get-form-multiple_v2 (in production) - adding support for 'combined_outcome' to show the user their "Best match" when there are multiple organization who will help with a legal problem, but 1 or more of the organizations will help with multiple aspects of the legal problem 
+
+.. note:: If an applicant is facing a house foreclosure and a car repossession, all Orgs will take the case, but Org C is the "Best match"
+
+  * Org A will take a bankruptcy case to stop a house foreclosure
+  * Org B will take a bankruptcy case to stop a car repossession
+  * Org C will take a bankruptcy case to stop a house foreclosure & a car repossession
+
+**Parameters:** 
+
+* event.processid - the unique identifier for a Guided Navigation process
+* event.sessionid - the unique identifier for the Guided Navigation session; this was returned by LegalServer when the session started
+* event.language
+
+**Returns:** an object that contains the next step in the guided navigation process. This function provides additional text to inform the applicant how to respond. Ex: 
+
+ .. code-block:: json
+
+    if (res.data.form.elements[j].is_multiple == true) {
+     response.display.suffix = 'Reply with the numbers that apply to you. For example, reply 1,2,3';
+     response.display.multiple = "Multiple";
+     }
+
+This code automatically adds the additional text about how to respond if the guided navigation element allows multiple responses (checkboxes).
+
+**Widget:** get-current-gn-form
+
+**Flows:** 
+
+* OTIS Guided Navigation
+* OTIS Guided Navigation_v2
+
+**Requires:** a sessionid and processid
+
+**Supports:** 
+
+* Instructions with the next element when the instruction is not the first element in the guided navigation process
+* radio button options (user must choose one answer)
+* checkbox options (user can choose multiple options, ex: 1,3,4)
 
 
 Save form data submitted for a session
@@ -120,6 +175,10 @@ Save form data submitted for a session
 **Returns:** An object containing:
 
 * is_complete; a Boolean (true or false) indicating whether the Guided Navigation session is complete.
+
+**Widget:** update-gn-data
+
+**Flow:** OTIS Guided Navigation
 
 **Requires:** username and password credentials to access the Legal Server API. These are currently stored in the function for the demo site only.
 
