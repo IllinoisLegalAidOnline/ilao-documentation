@@ -47,7 +47,6 @@ OAuth get token
    otis_website_data_integration_functions
 
 
-
 OTIS get confirmation
 ======================
 
@@ -59,6 +58,7 @@ OTIS get confirmation
 
 **Status:**  This is a placeholder function right now. It returns either the "we call" or "you call" message" as a JSON object.
 
+
 OTIS Get Callback Days
 ========================
 
@@ -69,6 +69,7 @@ OTIS Get Callback Days
 **Requires:**  ILAO API call to get the next [x] days of available intake appointments.
 
 **Status:**  This is a placeholder function right now. It returns a JSON object of days for the user to pick from. Currently, it is using an array of days and a string of days to output. This needs to be revised to return a key value pair that can be rendered while still having useful info for the system.
+
 
 OTIS Get First Callback Time
 ===============================
@@ -84,6 +85,7 @@ OTIS Get First Callback Time
 * intro ('Callback times are between x and y');
 * first ('The first available is [x]);
 * callback-date: Stores the actual date in mm/dd/yyyy format.
+
 
 OTIS Get Callback Times
 ===============================
@@ -110,6 +112,7 @@ OTIS Get Callback Type
 **Requires:**  ILAO API call to get the callback type for a specific intake settings
 
 **Status:**  This is a placeholder function right now. It returns a string of either "clientCalls" or "weCallClient"
+
 
 OTIS Zipcode Validate
 =======================
@@ -140,7 +143,6 @@ OTIS Zipcode Validate
 * validate-zipcode-counselor
 
 **Flow:** OTIS get location
-
 
 
 Get housing counselors list
@@ -316,7 +318,69 @@ Get intake settings data
 
 **Widget:** get-intake-settings_data
 
-**Flow: OTIS matches
+**Flow:** OTIS matches
+
+
+Validate date functions
+========================
+
+Validate month
+----------------
+**Function name:** otis-validate-month
+
+**Parameters:** event.month
+
+**Returns:** A variable between 0 and 13 that corresponds with the name of a month
+
+**Widgets:** 
+
+* gn-date-month-return
+* validate-month
+
+**Flows:** 
+
+* OTIS Guided Navigation
+* OTIS Intake
+
+Validate day of month
+----------------------
+**Function name:** otis-validate-day-of-month
+
+**Parameters:** event.day
+
+**Returns:** A numeric variable that has been checked against the number of possible days in the corresponding month
+
+**Widgets:**
+
+* validate-gn-date-day
+* validate-day
+
+**Flows:** 
+
+* OTIS Guided Navigation
+* OTIS Intake
+
+Validate year
+----------------
+**Function name:** otis-validate-year
+
+**Parameters:** event.year
+
+**Returns:** A 4 digit numeric variable. 
+
+.. note:: If the original parameter was 2 digits and those digits were greater than 10, '19' is added to the parameter; if less than 11, '20' is added to the beginning of the parameter to make either 1930 or 2010. 
+
+**Widgets:**
+
+* validate-gn-date-year
+* validate-dob-year
+
+**Flows:** 
+
+* OTIS Guided Navigation
+* OTIS Intake
+
+**Requires:** 
 
 
 [START HERE]
