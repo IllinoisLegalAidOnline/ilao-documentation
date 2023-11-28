@@ -59,9 +59,44 @@ OTIS get confirmation
 **Status:**  This is a placeholder function right now. It returns either the "we call" or "you call" message" as a JSON object.
 
 
-OTIS Get Callback Days
-========================
+Callbacks
+============
 
+OTIS Get Callback Slots
+-------------------------
+**Function name:** pilot-get-callback-slots
+
+**Parameters:** 
+
+* event.token
+* event.settings_id
+* event.language
+
+**Returns:** An object that contains the available callback slots for the matched organization.
+
+**Purpose:** Gathers the available callback slots for the organization the applicant applied
+
+**Widget:** get-callback-times
+
+**Flow:** OTIS appointment scheduler
+
+OTIS Get Callback Slots by Day
+---------------------------------
+**Function name:** pilot-get-next-days-slots
+
+**Parameters:** 
+
+* event.values
+* event.index
+
+**Returns:** An object that contains the available appointment times for the selected day.
+
+**Widget:** get-callback-slots-by-day
+
+**Flow:** OTIS appointment scheduler
+
+OTIS Get Callback Days (Deprecated?)
+--------------------------------------
 **Function name:**  otis-get-callback-days
 
 **Parameters:**  event.intakeSettingsId
@@ -70,10 +105,8 @@ OTIS Get Callback Days
 
 **Status:**  This is a placeholder function right now. It returns a JSON object of days for the user to pick from. Currently, it is using an array of days and a string of days to output. This needs to be revised to return a key value pair that can be rendered while still having useful info for the system.
 
-
-OTIS Get First Callback Time
-===============================
-
+OTIS Get First Callback Time (Deprecated?)
+-----------------------------------------------
 **Function name:**  otis-get-first-callback-time
 
 **Parameters:**  event.intakeSettingsId
@@ -86,10 +119,8 @@ OTIS Get First Callback Time
 * first ('The first available is [x]);
 * callback-date: Stores the actual date in mm/dd/yyyy format.
 
-
-OTIS Get Callback Times
-===============================
-
+OTIS Get Callback Times (Deprecated?)
+-----------------------------------------
 **Function name:**  otis-get-callback-times
 
 **Parameters:**  event.intakeSettingsId, event.callbackDate
@@ -101,10 +132,8 @@ OTIS Get Callback Times
 * timeArray of available times
 * times - string of times to display to user
 
-
-OTIS Get Callback Type
-===============================
-
+OTIS Get Callback Type (Deprecated)
+----------------------------------------
 **Function name:**  otis-get-callback-times
 
 **Parameters:**  event.intakeSettingsId
@@ -191,6 +220,9 @@ Update triage user database
 * update-triage-user-demo (intake)
 * update-triage-user-income (intake)
 * update-triage-user-contact (contact)
+* update-triage-you-call (superbot)
+* update-triage-we-call (superbot)
+* update-triage-on-etransfer (superbot)
 
 **Flows:**
 
@@ -199,6 +231,7 @@ Update triage user database
 * OTIS matches
 * OTIS Intake
 * OTIS contact information
+* Superbot flows: SuperbotV2 & SuperbotV3
 
 
 Create triage user
@@ -432,7 +465,7 @@ Conflict check
 Send to Legal Server
 ======================
 
-**Function name:**  otis-load-races
+**Function name:**  otis-send-to-legal-server
 
 **Purpose**: Builds the data package to etransfer to LegalServer
 
