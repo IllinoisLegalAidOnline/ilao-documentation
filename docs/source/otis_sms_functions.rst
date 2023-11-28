@@ -185,14 +185,20 @@ Update triage user database
 **Widgets:** 
 
 * update-counseling (Get location)
-* update-triage-user-matches (matches)
 * update-gn-triage-user (guided navigation)
+* update-triage-user-matches (matches)
+* update-triage-user-age (intake)
+* update-triage-user-demo (intake)
+* update-triage-user-income (intake)
+* update-triage-user-contact (contact)
 
 **Flows:**
 
 * OTIS get location
 * OTIS Guided Navigation
 * OTIS matches
+* OTIS Intake
+* OTIS contact information
 
 
 Create triage user
@@ -389,7 +395,26 @@ Validate year
 **Requires:** 
 
 
-[START HERE]
+Calculate age
+===============
+**Function name:** otis-calculate-age
+
+**Parameters:** 
+
+* event.year
+* event.month
+* event.day
+
+**Purpose:** Calculates the applicant's age based on the DOB they provided when compared to the current date.
+
+**Returns:** The applicant's age as a value. In the event of an error, it returns a null value
+
+**Widget:** calculate-age
+
+**Flow:** OTIS Intake 
+
+
+.. todo:: Add functions that gather race, ethnicity, gender, marital status, and income options. Each of these functions also have corresponding functions that validate them. 
 
 Conflict check
 ================
