@@ -12,7 +12,7 @@ Adding parameters to a subflow
 .. image:: ../assets/otis-subflow-parameters.png
 
 Setting variables for the subflow
-..image:: ../assets/otis-subflow-variables.png
+.. image:: ../assets/otis-subflow-variables.png
 
 Subflows
 =========
