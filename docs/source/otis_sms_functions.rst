@@ -186,10 +186,12 @@ Update triage user database
 
 * update-counseling (Get location)
 * update-triage-user-matches (matches)
+* update-gn-triage-user (guided navigation)
 
 **Flows:**
 
 * OTIS get location
+* OTIS Guided Navigation
 * OTIS matches
 
 
@@ -225,15 +227,19 @@ Increase intake counter
 **Status:** In development.
 
 
-Get Matches
-==========================
+Geting Guided Navigation Matches 
+==================================
 
-**Function name:**  
+.. note:: This function is currently written in the Guided Navigation services. 
+
+.. todo:: Determine which functions need to remain in which service and move them accordingly
+
+**Function names:**  
 
 * get-gn-match-test (current)
 * get-gn-match (deprecated)
 
-**Purpose**: Retrieves data from a specified REST API endpoint, filters and processes the data, and return a list of results based on user input.
+**Purpose**: Retrieves data from a specified REST API endpoint, filters and processes the data, and return a list of results (list of intake_ids) based on user input.
 
 **Parameters:**
 
@@ -244,7 +250,7 @@ Get Matches
 
 **Returns:** intake_id values for all of the matched organizations
 
-**Widget:** otis-get-matches
+**Widget:** get-gn-matches
 
 **Flow:** OTIS matches
 
