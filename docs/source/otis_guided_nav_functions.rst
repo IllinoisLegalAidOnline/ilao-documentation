@@ -255,12 +255,17 @@ Getting Guided Navigation matches
 
 This function returns any intake settings ids that are a match based on a match be
 
-**Function name:** get-gn-matches
+**Function names:** 
+
+* get-gn-match-test (current)
+* get-gn-match (deprecated)
 
 **Parameters:**
 
+* event.token
 * event.user_issue = the number of the final case acceptance outcome value
 * event.outcome_field = the outcome field name
+* event.rest_export = this value tells the system which case acceptance rest export webform to look in for matches
 
 **Returns:** An array of intake settings ids that match on the outcome field and value. This array does not filter on location or any other criteria. It simply returns webform case acceptance matches against Guided Navigation.
 
@@ -268,7 +273,9 @@ This function returns any intake settings ids that are a match based on a match 
 
 .. todo:: Replace gn-outcome-list with live data from our API.
 
+**Widget:** get-gn-matches
 
+**Flow:** OTIS matches
 
 
 Process qualifiers
