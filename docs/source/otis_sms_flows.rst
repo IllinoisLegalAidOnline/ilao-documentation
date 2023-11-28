@@ -9,9 +9,11 @@ Users applying over SMS enter a primary flow that controls a series of subflows.
 Each time Superbot starts a subflow, variables that are needed for that subflow are passed to the subflow as parameters from the run subflow function. The language variable is passed into every subflow to allow the system to respond to the user in the correct language.
 
 Adding parameters to a subflow
+
 .. image:: ../assets/otis-subflow-parameters.png
 
 Setting variables for the subflow
+
 .. image:: ../assets/otis-subflow-variables.png
 
 Subflows
