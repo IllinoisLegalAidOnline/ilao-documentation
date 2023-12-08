@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Legacy Google Analytics Data &mdash; ILAO Sprint 124a documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/themeoverrides.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=d5fad431"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Data analytics in Tableau" href="tableau.html" />
+    <link rel="prev" title="Google Analytics/Google Tag Manager" href="google_analytics_integration.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            ILAO
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="design_guide.html">Design &amp; Style Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="block_management.html">Custom blocks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="people_management.html">User Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="legal_information.html">Browsing to legal information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="legal_content_cms.html">Legal Content CMS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cms_structured_legal_content.html">Next generation content/COPE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basic_pages_cms.html">Basic pages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="testimonials_cms.html">Testimonials Content Type</a></li>
+<li class="toctree-l1"><a class="reference internal" href="webforms_cms.html">Webforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="translation_cms.html">Translation Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="calendar_cms.html">Calendar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jobs_cms.html">Job Listings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="discussion_groups.html">Discussion groups</a></li>
+<li class="toctree-l1"><a class="reference internal" href="otis_cms.html">Get Legal Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="site_search.html">Site Search</a></li>
+<li class="toctree-l1"><a class="reference internal" href="site_faqs.html">Site FAQs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="other_cms_features.html">Other Website Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="taxonomies.html">Taxonomies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rss_feeds.html">RSS Feeds</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ilao_api.html">ILAO’s API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="next_steps.html">Next Steps Flows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sms_overview.html">SMS Overview</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="data_analytics.html">Data and Analytics</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="google_analytics_integration.html">Google Analytics/Google Tag Manager</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Legacy Google Analytics Data</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#all-files">“All” files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#illinois-files">Illinois files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#data-structures">Data Structures</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pageviews">Pageviews</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#events">Events</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#acquisition">Acquisition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#search">Search</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tableau.html">Data analytics in Tableau</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">See also:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="creating_docs_in_github.html">Creating new docs in Github</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ILAO</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="data_analytics.html">Data and Analytics</a></li>
+      <li class="breadcrumb-item active">Legacy Google Analytics Data</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/google_analytics_legacy.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="legacy-google-analytics-data">
+<h1>Legacy Google Analytics Data<a class="headerlink" href="#legacy-google-analytics-data" title="Link to this heading"></a></h1>
+<p>Legacy Google Analytics data is that data from July 1, 2017 to June 30, 2023. Earlier data is not available. Data after June 30, 2023 is part of ILAO’s Google Analytics 4 profile.</p>
+<p>Legacy data is accessible in ILAO’s Tableau cloud in the <a class="reference external" href="https://prod-useast-b.online.tableau.com/#/site/ilaootis/projects/638937">Google Analytics Legacy project</a>. Raw CSV files are available in ILAO’s team drive:</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Most of these files contain more rows than are supported in Excel or Google Sheets. For best results, download the file and open in Excel, do whatever filtering and totaling you need to do and do not save your changes as saving will cause data loss.</p>
+</div>
+<section id="all-files">
+<h2>“All” files<a class="headerlink" href="#all-files" title="Link to this heading"></a></h2>
+<p>These files only contain data where the segment was set to “in Illinois”</p>
+<ul class="simple">
+<li><p>GA-pages-all-2017-2020 contains pageviews data for Illinois users between July 1, 2017 - June 30, 2020</p></li>
+<li><p>GA-pages-all-2020-2023 contains pageviews data for Illinois users between July 1, 2020 - June 30, 2023</p></li>
+<li><p>GA-acquisition-all-2017-2013 contains acquisition data for Illinois users between July 1, 2017 - June 30, 2023</p></li>
+<li><p>GA-events-all-2017-2013 contains event data for Illinois users between July 1, 2017 - June 30, 2023</p></li>
+<li><p>GA-search-all-2017-2013 contains search data for Illinois users between July 1, 2017 - June 30, 2023</p></li>
+</ul>
+</section>
+<section id="illinois-files">
+<h2>Illinois files<a class="headerlink" href="#illinois-files" title="Link to this heading"></a></h2>
+<p>These files only contain data where the segment was set to “in Illinois”</p>
+<ul class="simple">
+<li><p>GA-pages-IL-2017-2020 contains pageviews data for Illinois users between July 1, 2017 - June 30, 2020</p></li>
+<li><p>GA-pages-IL-2020-2023 contains pageviews data for Illinois users between July 1, 2020 - June 30, 2023</p></li>
+<li><p>GA-acquisition-illinois-2017-2013 contains acquisition data for Illinois users between July 1, 2017 - June 30, 2023</p></li>
+<li><p>GA-events-illinois-2017-2013 contains event data for Illinois users between July 1, 2017 - June 30, 2023</p></li>
+<li><p>GA-search-illinois-2017-2013 contains search data for Illinois users between July 1, 2017 - June 30, 2023</p></li>
+</ul>
+<p>To reduce file size, data is aggregated by month in all categories.</p>
+</section>
+<section id="data-structures">
+<h2>Data Structures<a class="headerlink" href="#data-structures" title="Link to this heading"></a></h2>
+<section id="pageviews">
+<h3>Pageviews<a class="headerlink" href="#pageviews" title="Link to this heading"></a></h3>
+<p>Pageviews data includes:</p>
+<ul class="simple">
+<li><p>Date - the month/year of the pageviews.</p></li>
+<li><p>Device category - mobile, desktop, or tablet</p></li>
+<li><p>Medium</p></li>
+<li><p>Page - the page path being viewed</p></li>
+<li><p>Previous page path - the page path the individual previously accessed.</p></li>
+<li><p>Source</p></li>
+<li><p>Bounces</p></li>
+<li><p>Entrances</p></li>
+<li><p>Exits</p></li>
+<li><p>Page Depth</p></li>
+<li><p>Pageviews</p></li>
+<li><p>Session duration</p></li>
+<li><p>Sessions</p></li>
+<li><p>Unique page views</p></li>
+</ul>
+<p>There are 4 different data sets due to the amount of traffic ILAO receives.</p>
+</section>
+<section id="events">
+<h3>Events<a class="headerlink" href="#events" title="Link to this heading"></a></h3>
+<p>Events data source includes:</p>
+<ul class="simple">
+<li><p>Date - the month/year of the event</p></li>
+<li><p>Device category</p></li>
+<li><p>Event Category - the broad category of the event (download, outbound link, telephone link, etc)</p></li>
+<li><p>Event action - print, click, etc</p></li>
+<li><p>Event label - label defined by ILAO to track. For outbound links, it is the URL.</p></li>
+<li><p>Page - the page where the event occurred</p></li>
+<li><p>Sessions with event - number of sessions with the specific event</p></li>
+<li><p>Total events - total number of events</p></li>
+<li><p>Unique events  - total number of unique event/user pairs.</p></li>
+</ul>
+<p>Total events vs unique events: User A clicks the same link 5 times in a session. That is 5 total events but 1 unique event.</p>
+</section>
+<section id="acquisition">
+<h3>Acquisition<a class="headerlink" href="#acquisition" title="Link to this heading"></a></h3>
+<p>The acquisition data source includes:</p>
+<ul class="simple">
+<li><p>Date - the month/year of the event</p></li>
+<li><p>Default channel grouping</p></li>
+<li><p>Device category</p></li>
+<li><p>Medium</p></li>
+<li><p>Source</p></li>
+<li><p>Bounces</p></li>
+<li><p>New Users</p></li>
+<li><p>Pageviews</p></li>
+<li><p>Sessions</p></li>
+<li><p>Users</p></li>
+</ul>
+</section>
+<section id="search">
+<h3>Search<a class="headerlink" href="#search" title="Link to this heading"></a></h3>
+<p>The search data source includes:</p>
+<ul class="simple">
+<li><p>Date - the month/year of the event</p></li>
+<li><p>Default channel grouping</p></li>
+<li><p>Device category</p></li>
+<li><p>Search destination</p></li>
+<li><p>Search term</p></li>
+<li><p>Source / medium</p></li>
+<li><p>Start page</p></li>
+<li><p>Search depth</p></li>
+<li><p>Search exits</p></li>
+<li><p>Search refinements</p></li>
+<li><p>Sessions with search</p></li>
+<li><p>Time after Search</p></li>
+<li><p>Total unique searches</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="google_analytics_integration.html" class="btn btn-neutral float-left" title="Google Analytics/Google Tag Manager" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="tableau.html" class="btn btn-neutral float-right" title="Data analytics in Tableau" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Illinois Legal Aid Online.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

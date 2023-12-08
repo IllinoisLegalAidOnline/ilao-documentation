@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flows and Subflows &mdash; ILAO Sprint 124a documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/themeoverrides.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=d5fad431"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Twilio Functions" href="otis_sms_functions.html" />
+    <link rel="prev" title="General architecture" href="otis_sms_intake_architecture.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            ILAO
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="design_guide.html">Design &amp; Style Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="block_management.html">Custom blocks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="people_management.html">User Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="legal_information.html">Browsing to legal information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="legal_content_cms.html">Legal Content CMS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cms_structured_legal_content.html">Next generation content/COPE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basic_pages_cms.html">Basic pages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="testimonials_cms.html">Testimonials Content Type</a></li>
+<li class="toctree-l1"><a class="reference internal" href="webforms_cms.html">Webforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="translation_cms.html">Translation Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="calendar_cms.html">Calendar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jobs_cms.html">Job Listings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="discussion_groups.html">Discussion groups</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="otis_cms.html">Get Legal Help</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="otis_endusers.html">Get Legal Help Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="otis_organization_management.html">Organization management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="otis_endpoints.html">Triage rule endpoints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="otis_reports.html">Get Legal Help Reporting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="otis_ai_integration.html">OTIS AI Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="otis_third_party_support.html">Supported Integrations</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="otis_sms_intake.html">Online Intake Over SMS</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="otis_sms_as_a_user.html">Getting legal help over SMS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="otis_sms_intake_architecture.html">General architecture</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Flows and Subflows</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#primary-flow">Primary flow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#subflows">Subflows</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="otis_sms_functions.html">Twilio Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="otis_maintenance.html">Maintaining and expanding OTIS SMS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="otis_sms_translations.html">OTIS SMS Translations</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="otis_facebook.html">Facebook Integrations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="otis_features.html">Additional Features</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="site_search.html">Site Search</a></li>
+<li class="toctree-l1"><a class="reference internal" href="site_faqs.html">Site FAQs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="other_cms_features.html">Other Website Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="taxonomies.html">Taxonomies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rss_feeds.html">RSS Feeds</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ilao_api.html">ILAO’s API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="next_steps.html">Next Steps Flows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sms_overview.html">SMS Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_analytics.html">Data and Analytics</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">See also:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="creating_docs_in_github.html">Creating new docs in Github</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ILAO</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="otis_cms.html">Get Legal Help</a></li>
+          <li class="breadcrumb-item"><a href="otis_sms_intake.html">Online Intake Over SMS</a></li>
+      <li class="breadcrumb-item active">Flows and Subflows</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/otis_sms_flows.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="flows-and-subflows">
+<h1>Flows and Subflows<a class="headerlink" href="#flows-and-subflows" title="Link to this heading"></a></h1>
+<section id="primary-flow">
+<h2>Primary flow<a class="headerlink" href="#primary-flow" title="Link to this heading"></a></h2>
+<p>Users applying over SMS enter a primary flow that controls a series of subflows. The primary flow is aptly named “Superbot” with the version number and the date it went live. The Superbot flow is greatly simplified with the use of subflows. The flow is visually structured in 3 columns starting at the top right and moving first down and then to the top of the column to the left of the current column.</p>
+<p>Each time Superbot starts a subflow, variables that are needed for that subflow are passed to the subflow as parameters from the run subflow function. The language variable is passed into every subflow to allow the system to respond to the user in the correct language.</p>
+<p>Adding parameters to a subflow</p>
+<img alt="_images/otis-subflow-parameters.png" src="_images/otis-subflow-parameters.png" />
+<p>Setting variables for the subflow</p>
+<img alt="_images/otis-subflow-variables.png" src="_images/otis-subflow-variables.png" />
+</section>
+<section id="subflows">
+<h2>Subflows<a class="headerlink" href="#subflows" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>OTIS get legal issue:</strong> If an applicant does not text a term that we have set for a particular path (i.e., eviction, divorce, bankruptcy, SNAP, etc.), the OTIS get legal issue path asks the applicant to identify their legal issue by starting at a top of the tree triage question. Ideally, the applicant was instructed to text a certain word to the short code (“text ‘eviction’ to 85622”) which will allow them to bypass this subflow.</p></li>
+<li><p><strong>OTIS get location:</strong> Gather’s the user’s first name &amp; location by zip code.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If an applicant has identified their legal issue as an eviction legal issue, they will be shown information on housing counselors during this subflow if they are interested.</p>
+</div>
+<ul>
+<li><p><strong>OTIS household:</strong> Before an applicant begins the triage and intake, an initial screening is done by asking about the applicant’s household size and if their income is more than 300% of the Federal Poverty Level. The 300% Federal Poverty Level is provided to the applicant based on a rough calculation of their household size.</p></li>
+<li><p><strong>OTIS Guided Navigation:</strong> Runs the guided navigation dialogue or dialogues based on the originally identified process_id. The process_id was assigned either in the Superbot flow by the self-identified legal issue or the OTIS get legal issue subflow. Once an applicant starts a guided navigation dialogue, the guided navigation logic will automatically move them to different dialogues to gather ancillary information or to switch their legal issue, if necessary (example: An applicant could start in the filing for bankruptcy dialogue and end in the foreclosure dialogue if they identified that they want to file for bankruptcy protection because of a pending foreclosure issue). At the end of guided navigation dialogue, the applicant will be assigned a _outcome value. This value is used to match them to an organization in their area to help.</p></li>
+<li><p><strong>OTIS matches:</strong> Using the _outcome value assigned during OTIS Guided Navigation and the zip code provided in OTIS get location, the get-[gn/otis]-matches functions determine if the applicant’s legal issue and geographic area are matched to one or more organizations to help. If matched, the applicant will be given the list of organizations and they will have the ability to choose where they want to apply.</p></li>
+<li><p><strong>OTIS Guided Navigation:</strong> If the matched/chosen organization has qualifiers to determine if the applicant is a good match, the OTIS Guided Navigation flow is run again to run the particular qualifier guided navigation path. Qualifiers allow an organization to ask specific qualifying questions like, “Do you or someone in your family attend Evanston Schools? (District 65 or 202).” If an applicant is not qualified for the matched organization and they were matched to other organizations, they have the opportunity to select a different organization to apply for help.</p></li>
+<li><p><strong>OTIS Intake:</strong> Similar to applying for legal help on www.illinoislegalaid.org/get-legal-help, an applicant will be asked intake information that saves the partnering organization time completing the intake. The applicant is asked:</p>
+<blockquote>
+<div><ul>
+<li><p>last name (and maiden or nicknames)</p></li>
+<li><p>date of birth</p></li>
+<li><p>race</p></li>
+<li><p>ethnicity</p></li>
+<li><p>gender</p></li>
+<li><p>veteran status</p></li>
+<li><p>disability status</p></li>
+<li><p>income from:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>employment or self-employment</p></li>
+<li><p>Social Security (SS), Social Security Disability (SSD), or Supplemental Security Income (SSI)</p></li>
+<li><p>Unemployment, SNAP, or TANF</p></li>
+<li><p>Child support or alimony</p></li>
+<li><p>Private disabilty benefits or Worker’s compensation</p></li>
+<li><p>Retirement benefits or Veteran’s benefits</p></li>
+<li><p>Investment income</p></li>
+<li><p>Income from any other source</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<p>Before the applicant returns to the next step, they are provided a calculation of their total income to verify.</p>
+<ul class="simple">
+<li><p><strong>OTIS contact information:</strong> Contact information such as a good phone number, mailing address, and email address are gathered during OTIS contact information. Although the applicant is completing their application on a mobile device, we still verify that the number they are messaging from is a good number to contact them. If not, they are given an opportunity to provide a different number. The applicant’s address is gathered in parts by asking the street address, any apartment/unit number, city, state, and zip code. The applicant has an opportunity to verify the information.</p></li>
+<li><p><strong>OTIS appointment scheduler:</strong> If the matched/chosen organization’s intake settings use the “we call you” callback type, the applicant will need to schedule an appointment for a callback. The applicant will be shown the first available day/times and if those do not work, they will be shown later available times. The appointment times are based on the organizations set intake appointment times (available hours/day and days/week). These appointment times also take into consideration scheduled closed days for the organization and holidays.</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="otis_sms_intake_architecture.html" class="btn btn-neutral float-left" title="General architecture" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="otis_sms_functions.html" class="btn btn-neutral float-right" title="Twilio Functions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Illinois Legal Aid Online.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

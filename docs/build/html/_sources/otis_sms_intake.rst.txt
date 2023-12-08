@@ -15,6 +15,7 @@ If the user texts a keyword that we can match to an existing Guided Navigation f
 
    otis_sms_as_a_user
    otis_sms_intake_architecture
+   otis_sms_flows
    otis_sms_functions
    otis_maintenance
    otis_sms_translations

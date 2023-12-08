@@ -12,7 +12,8 @@ Validate keyword
 
 **Function name:** 
 
-* mr-validate-legal-issue-gn
+* mr-validate-legal-issue-gn (current)
+* validate-legal-issue-gn (deprecated)
 
 **Parameters:** 
 
@@ -23,15 +24,31 @@ Validate keyword
 
 * code - corresponds to the list of legal issues within the function. If the legal_issue parameter does not match a value in the function, the code will return as -1.
 
-**Widget(s):** 
+**Widget(s):** validate_keyword
 
-* validate_keyword
-* validate-legal-issue
+**Flows:** Superbot main flows: SuperbotV2 & SuperbotV3
 
-**Flows:**
 
-* Superbot main flows: SuperbotV2 & SuperbotV3
-* OTIS get legal issue
+Validate legal issue
+=====================
+
+**Function name:** 
+
+* mr-validate-legal-issue-flow (current)
+* validate-legal-issue-flow (deprecated)
+
+**Parameters:** 
+
+* event.legal_issue; this is a text value from widget: start-otis. This allows users to respond to a question about their legal issue if they did not get matched to a legal issue based on their trigger word (i.e. they didn't text "evict" to 85622).
+* event.language_number; this is a numerical value that identifies the language of the user to match the legal issue provided in the correct language.
+
+**Returns:** An object containing:
+
+* code - corresponds to the list of legal issues within the function. 
+
+**Widget(s):** validate-legal-issue
+
+**Flows:** OTIS get legal issue
 
 
 Get process list
@@ -54,12 +71,21 @@ Get process list
 
 .. note:: Processes are as follows so far 1 - unemployment benefits, 2 - Food stamps, 3 - TANF benefits, 4 - Renting or Renters, 5 - Expungement, 6 - DV, 7 - Bankruptcy (not live yet), 8 - Asylum/Immigration (not live yet).
 
-**Widget(s):**  get_gn_process
+**Widget(s):**  
 
-**Flow(s):** Superbot main flows:
+* get_gn_process (Superbot); 
+* get-gn-process-id (Get legal issue); and
+* rerun_process (Guided Navigation)
 
-* SuperbotV2_LIVE_9.11.23
-* SuperbotV3
+**Flow(s):** 
+* Superbot main flows:
+
+  * SuperbotV2_LIVE_9.11.23
+  * SuperbotV3
+
+* OTIS get legal issue
+* OTIS Guided Navigation
+
 
 Start a new session for given process
 =========================================
@@ -72,8 +98,62 @@ Start a new session for given process
 
 * sessionid; the session ID returned by Legal Server. This is used throughout a user's Guided Navigation session.
 
+**Widget:** start-gn-process
+
+**Flow:** OTIS Guided Navigation
 
 **Requires:** username and password credentials to access the Legal Server API. These are currently stored in the function for the demo site only.
+
+
+Get the guided navigation form
+================================
+
+**Function names:** 
+
+* get-form-test-multiple (current)
+* get-form-test (deprecated)
+
+.. warning:: THIS IS CURRENTLY BEING USED IN get-final-gn-profile
+
+* get-form-multiple_v2 (in production) - adding support for 'combined_outcome' to show the user their "Best match" when there are multiple organization who will help with a legal problem, but 1 or more of the organizations will help with multiple aspects of the legal problem 
+
+.. note:: If an applicant is facing a house foreclosure and a car repossession, all Orgs will take the case, but Org C is the "Best match"
+
+  * Org A will take a bankruptcy case to stop a house foreclosure
+  * Org B will take a bankruptcy case to stop a car repossession
+  * Org C will take a bankruptcy case to stop a house foreclosure & a car repossession
+
+**Parameters:** 
+
+* event.processid - the unique identifier for a Guided Navigation process
+* event.sessionid - the unique identifier for the Guided Navigation session; this was returned by LegalServer when the session started
+* event.language
+
+**Returns:** an object that contains the next step in the guided navigation process. This function provides additional text to inform the applicant how to respond. Ex: 
+
+ .. code-block:: json
+
+    if (res.data.form.elements[j].is_multiple == true) {
+     response.display.suffix = 'Reply with the numbers that apply to you. For example, reply 1,2,3';
+     response.display.multiple = "Multiple";
+     }
+
+This code automatically adds the additional text about how to respond if the guided navigation element allows multiple responses (checkboxes).
+
+**Widget:** get-current-gn-form
+
+**Flows:** 
+
+* OTIS Guided Navigation
+* OTIS Guided Navigation_v2
+
+**Requires:** a sessionid and processid
+
+**Supports:** 
+
+* Instructions with the next element when the instruction is not the first element in the guided navigation process
+* radio button options (user must choose one answer)
+* checkbox options (user can choose multiple options, ex: 1,3,4)
 
 
 Save form data submitted for a session
@@ -95,6 +175,10 @@ Save form data submitted for a session
 **Returns:** An object containing:
 
 * is_complete; a Boolean (true or false) indicating whether the Guided Navigation session is complete.
+
+**Widget:** update-gn-data
+
+**Flow:** OTIS Guided Navigation
 
 **Requires:** username and password credentials to access the Legal Server API. These are currently stored in the function for the demo site only.
 
@@ -171,12 +255,17 @@ Getting Guided Navigation matches
 
 This function returns any intake settings ids that are a match based on a match be
 
-**Function name:** get-gn-matches
+**Function names:** 
+
+* get-gn-match-test (current)
+* get-gn-match (deprecated)
 
 **Parameters:**
 
+* event.token
 * event.user_issue = the number of the final case acceptance outcome value
 * event.outcome_field = the outcome field name
+* event.rest_export = this value tells the system which case acceptance rest export webform to look in for matches
 
 **Returns:** An array of intake settings ids that match on the outcome field and value. This array does not filter on location or any other criteria. It simply returns webform case acceptance matches against Guided Navigation.
 
@@ -184,5 +273,33 @@ This function returns any intake settings ids that are a match based on a match 
 
 .. todo:: Replace gn-outcome-list with live data from our API.
 
+**Widget:** get-gn-matches
+
+**Flow:** OTIS matches
 
 
+Process qualifiers
+====================
+
+**Function name:** process-qualifiers
+
+**Purpose:** determine if the applicant is qualified for their chosen organization or if they need to apply for a different organization
+
+**Parameters:** event.intakeids.split
+
+**Returns:** an object that contains either:
+
+* qualified ("Great")
+* disqualified ("Unfortunately, you did not match to {{org}}. You can visit Get Legal Help for more help.") 
+* null - will redirect the applicant to their other matched organizations.
+
+**Widget:** reselect-qualifiers
+
+**Flows:** 
+
+* Superbot main flows:
+
+  * SuperbotV2_LIVE_9.11.23
+  * SuperbotV3
+
+**Status:** in development

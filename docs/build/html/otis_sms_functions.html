@@ -21,7 +21,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Global SMS functions" href="otis_global_functions.html" />
-    <link rel="prev" title="General architecture" href="otis_sms_intake_architecture.html" /> 
+    <link rel="prev" title="Flows and Subflows" href="otis_sms_flows.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -68,17 +68,23 @@
 <li class="toctree-l2 current"><a class="reference internal" href="otis_sms_intake.html">Online Intake Over SMS</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="otis_sms_as_a_user.html">Getting legal help over SMS</a></li>
 <li class="toctree-l3"><a class="reference internal" href="otis_sms_intake_architecture.html">General architecture</a></li>
+<li class="toctree-l3"><a class="reference internal" href="otis_sms_flows.html">Flows and Subflows</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Twilio Functions</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#function-standards">Function standards</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#oauth-get-token">OAuth get token</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#otis-get-confirmation">OTIS get confirmation</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#otis-get-callback-days">OTIS Get Callback Days</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#otis-get-first-callback-time">OTIS Get First Callback Time</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#otis-get-callback-times">OTIS Get Callback Times</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#otis-get-callback-type">OTIS Get Callback Type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#callbacks">Callbacks</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#otis-zipcode-validate">OTIS Zipcode Validate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#get-housing-counselors-list">Get housing counselors list</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#update-triage-user-database">Update triage user database</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#create-triage-user">Create triage user</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#increase-intake-counter">Increase intake counter</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#get-matches">Get Matches</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#geting-guided-navigation-matches">Geting Guided Navigation Matches</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#matches-geography">Matches (geography)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#matches-names">Matches (names)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#get-intake-settings-data">Get intake settings data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#validate-date-functions">Validate date functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#calculate-age">Calculate age</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#conflict-check">Conflict check</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#send-to-legal-server">Send to Legal Server</a></li>
 </ul>
@@ -196,11 +202,14 @@
 <li class="toctree-l1"><a class="reference internal" href="otis_triage_intake_functions.html">OTIS SMS intake/triage functions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="otis_guided_nav_functions.html">Guided Navigation SMS functions</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="otis_guided_nav_functions.html#validate-keyword">Validate keyword</a></li>
+<li class="toctree-l2"><a class="reference internal" href="otis_guided_nav_functions.html#validate-legal-issue">Validate legal issue</a></li>
 <li class="toctree-l2"><a class="reference internal" href="otis_guided_nav_functions.html#get-process-list">Get process list</a></li>
 <li class="toctree-l2"><a class="reference internal" href="otis_guided_nav_functions.html#start-a-new-session-for-given-process">Start a new session for given process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="otis_guided_nav_functions.html#get-the-guided-navigation-form">Get the guided navigation form</a></li>
 <li class="toctree-l2"><a class="reference internal" href="otis_guided_nav_functions.html#save-form-data-submitted-for-a-session">Save form data submitted for a session</a></li>
 <li class="toctree-l2"><a class="reference internal" href="otis_guided_nav_functions.html#getting-the-current-form">Getting the current form</a></li>
 <li class="toctree-l2"><a class="reference internal" href="otis_guided_nav_functions.html#getting-guided-navigation-matches">Getting Guided Navigation matches</a></li>
+<li class="toctree-l2"><a class="reference internal" href="otis_guided_nav_functions.html#process-qualifiers">Process qualifiers</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="otis_website_data_integration_functions.html">OTIS Data Integration Functions</a><ul>
@@ -218,15 +227,43 @@
 <p><strong>Requires:</strong>  ILAO API call to get the return message based on the intake settings id and callback type.</p>
 <p><strong>Status:</strong>  This is a placeholder function right now. It returns either the “we call” or “you call” message” as a JSON object.</p>
 </section>
-<section id="otis-get-callback-days">
-<h2>OTIS Get Callback Days<a class="headerlink" href="#otis-get-callback-days" title="Link to this heading"></a></h2>
+<section id="callbacks">
+<h2>Callbacks<a class="headerlink" href="#callbacks" title="Link to this heading"></a></h2>
+<section id="otis-get-callback-slots">
+<h3>OTIS Get Callback Slots<a class="headerlink" href="#otis-get-callback-slots" title="Link to this heading"></a></h3>
+<p><strong>Function name:</strong> pilot-get-callback-slots</p>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>event.token</p></li>
+<li><p>event.settings_id</p></li>
+<li><p>event.language</p></li>
+</ul>
+<p><strong>Returns:</strong> An object that contains the available callback slots for the matched organization.</p>
+<p><strong>Purpose:</strong> Gathers the available callback slots for the organization the applicant applied</p>
+<p><strong>Widget:</strong> get-callback-times</p>
+<p><strong>Flow:</strong> OTIS appointment scheduler</p>
+</section>
+<section id="otis-get-callback-slots-by-day">
+<h3>OTIS Get Callback Slots by Day<a class="headerlink" href="#otis-get-callback-slots-by-day" title="Link to this heading"></a></h3>
+<p><strong>Function name:</strong> pilot-get-next-days-slots</p>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>event.values</p></li>
+<li><p>event.index</p></li>
+</ul>
+<p><strong>Returns:</strong> An object that contains the available appointment times for the selected day.</p>
+<p><strong>Widget:</strong> get-callback-slots-by-day</p>
+<p><strong>Flow:</strong> OTIS appointment scheduler</p>
+</section>
+<section id="otis-get-callback-days-deprecated">
+<h3>OTIS Get Callback Days (Deprecated?)<a class="headerlink" href="#otis-get-callback-days-deprecated" title="Link to this heading"></a></h3>
 <p><strong>Function name:</strong>  otis-get-callback-days</p>
 <p><strong>Parameters:</strong>  event.intakeSettingsId</p>
 <p><strong>Requires:</strong>  ILAO API call to get the next [x] days of available intake appointments.</p>
 <p><strong>Status:</strong>  This is a placeholder function right now. It returns a JSON object of days for the user to pick from. Currently, it is using an array of days and a string of days to output. This needs to be revised to return a key value pair that can be rendered while still having useful info for the system.</p>
 </section>
-<section id="otis-get-first-callback-time">
-<h2>OTIS Get First Callback Time<a class="headerlink" href="#otis-get-first-callback-time" title="Link to this heading"></a></h2>
+<section id="otis-get-first-callback-time-deprecated">
+<h3>OTIS Get First Callback Time (Deprecated?)<a class="headerlink" href="#otis-get-first-callback-time-deprecated" title="Link to this heading"></a></h3>
 <p><strong>Function name:</strong>  otis-get-first-callback-time</p>
 <p><strong>Parameters:</strong>  event.intakeSettingsId</p>
 <p><strong>Requires:</strong>  ILAO API call to get the range of available hours and the first available date.</p>
@@ -237,8 +274,8 @@
 <li><p>callback-date: Stores the actual date in mm/dd/yyyy format.</p></li>
 </ul>
 </section>
-<section id="otis-get-callback-times">
-<h2>OTIS Get Callback Times<a class="headerlink" href="#otis-get-callback-times" title="Link to this heading"></a></h2>
+<section id="otis-get-callback-times-deprecated">
+<h3>OTIS Get Callback Times (Deprecated?)<a class="headerlink" href="#otis-get-callback-times-deprecated" title="Link to this heading"></a></h3>
 <p><strong>Function name:</strong>  otis-get-callback-times</p>
 <p><strong>Parameters:</strong>  event.intakeSettingsId, event.callbackDate</p>
 <p><strong>Requires:</strong>  ILAO API call to get the range of callback slots for a specific date and intake settings pairing.</p>
@@ -248,12 +285,13 @@
 <li><p>times - string of times to display to user</p></li>
 </ul>
 </section>
-<section id="otis-get-callback-type">
-<h2>OTIS Get Callback Type<a class="headerlink" href="#otis-get-callback-type" title="Link to this heading"></a></h2>
+<section id="otis-get-callback-type-deprecated">
+<h3>OTIS Get Callback Type (Deprecated)<a class="headerlink" href="#otis-get-callback-type-deprecated" title="Link to this heading"></a></h3>
 <p><strong>Function name:</strong>  otis-get-callback-times</p>
 <p><strong>Parameters:</strong>  event.intakeSettingsId</p>
 <p><strong>Requires:</strong>  ILAO API call to get the callback type for a specific intake settings</p>
 <p><strong>Status:</strong>  This is a placeholder function right now. It returns a string of either “clientCalls” or “weCallClient”</p>
+</section>
 </section>
 <section id="otis-zipcode-validate">
 <h2>OTIS Zipcode Validate<a class="headerlink" href="#otis-zipcode-validate" title="Link to this heading"></a></h2>
@@ -273,8 +311,72 @@
 <li><p>fips id for the county (required by Legal Server)</p></li>
 </ul>
 <p><strong>Status:</strong> Relies on a JSON object in our static assets (/illinois-regions) that contains the IL regional taxonomy data.</p>
-<p><strong>Widget:</strong> validate-zipcode</p>
+<p><strong>Widget:</strong></p>
+<ul class="simple">
+<li><p>validate-zipcode</p></li>
+<li><p>validate-zipcode-counselor</p></li>
+</ul>
 <p><strong>Flow:</strong> OTIS get location</p>
+</section>
+<section id="get-housing-counselors-list">
+<h2>Get housing counselors list<a class="headerlink" href="#get-housing-counselors-list" title="Link to this heading"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This only appears when an applicant identifies as having an eviction-related issue. During this special triage section, we first ask if the applicant wants information on housing counselors.</p>
+</div>
+<p><strong>Function:</strong> hud-housing-counselors</p>
+<p><strong>Purpose:</strong> Performs an API call to provide the applicant with a list of local housing counselors.</p>
+<p><strong>Parameters:</strong> event.zip</p>
+<p><strong>Returns:</strong> An object that contains:</p>
+<ul class="simple">
+<li><p>counseling_agencies (limited to agencies that service the user’s zip code)</p></li>
+<li><p>name (the name of the agency)</p></li>
+<li><p>address (the agency’s street address)</p></li>
+<li><p>city</p></li>
+<li><p>phone</p></li>
+<li><p>weburl</p></li>
+<li><p>counslg_METHOD (the method the applicant can communicate with the agency – i.e., face-to-face, phone counseling, group counseling, etc.)</p></li>
+</ul>
+<p><strong>Widget:</strong> get-counseling</p>
+<p><strong>Flow:</strong> OTIS get location</p>
+</section>
+<section id="update-triage-user-database">
+<h2>Update triage user database<a class="headerlink" href="#update-triage-user-database" title="Link to this heading"></a></h2>
+<p><strong>Function name:</strong> otis-update-triage-user</p>
+<p><strong>Purpose:</strong> Update the OTIS triage user database with information from the user’s triage path.</p>
+<p><strong>Parameters:</strong> event.token</p>
+<p><strong>Returns:</strong> an object that contains a uuid</p>
+<p><strong>Widgets:</strong></p>
+<ul class="simple">
+<li><p>update-counseling (Get location)</p></li>
+<li><p>update-gn-triage-user (guided navigation)</p></li>
+<li><p>update-triage-user-matches (matches)</p></li>
+<li><p>update-triage-user-age (intake)</p></li>
+<li><p>update-triage-user-demo (intake)</p></li>
+<li><p>update-triage-user-income (intake)</p></li>
+<li><p>update-triage-user-contact (contact)</p></li>
+<li><p>update-triage-you-call (superbot)</p></li>
+<li><p>update-triage-we-call (superbot)</p></li>
+<li><p>update-triage-on-etransfer (superbot)</p></li>
+</ul>
+<p><strong>Flows:</strong></p>
+<ul class="simple">
+<li><p>OTIS get location</p></li>
+<li><p>OTIS Guided Navigation</p></li>
+<li><p>OTIS matches</p></li>
+<li><p>OTIS Intake</p></li>
+<li><p>OTIS contact information</p></li>
+<li><p>Superbot flows: SuperbotV2 &amp; SuperbotV3</p></li>
+</ul>
+</section>
+<section id="create-triage-user">
+<h2>Create triage user<a class="headerlink" href="#create-triage-user" title="Link to this heading"></a></h2>
+<p><strong>Function name:</strong> otis-create-triage-user</p>
+<p><strong>Purpose:</strong> Create a new triage user in the database</p>
+<p><strong>Parameters:</strong> event.token</p>
+<p><strong>Returns:</strong> triage_id</p>
+<p><strong>Widget:</strong> create-triage-user</p>
+<p><strong>Flows:</strong> Superbot flows: SuperbotV2 &amp; SuperbotV3</p>
 </section>
 <section id="increase-intake-counter">
 <h2>Increase intake counter<a class="headerlink" href="#increase-intake-counter" title="Link to this heading"></a></h2>
@@ -285,14 +387,163 @@
 <p><strong>Returns:</strong> Nothing</p>
 <p><strong>Status:</strong> In development.</p>
 </section>
-<section id="get-matches">
-<h2>Get Matches<a class="headerlink" href="#get-matches" title="Link to this heading"></a></h2>
-<p><strong>Function name:</strong>  otis-get-matches</p>
-<p><strong>Purpose</strong>:</p>
+<section id="geting-guided-navigation-matches">
+<h2>Geting Guided Navigation Matches<a class="headerlink" href="#geting-guided-navigation-matches" title="Link to this heading"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This function is currently written in the Guided Navigation services.</p>
+</div>
+<div class="admonition-todo admonition" id="id2">
+<p class="admonition-title">Todo</p>
+<p>Determine which functions need to remain in which service and move them accordingly</p>
+</div>
+<p><strong>Function names:</strong></p>
+<ul class="simple">
+<li><p>get-gn-match-test (current)</p></li>
+<li><p>get-gn-match (deprecated)</p></li>
+</ul>
+<p><strong>Purpose</strong>: Retrieves data from a specified REST API endpoint, filters and processes the data, and return a list of results (list of intake_ids) based on user input.</p>
 <p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>event.token</p></li>
+<li><p>event.user_issue</p></li>
+<li><p>event.outcome_field (identified specific legal issue based on the answers the user provided – example: ilao-HSG-evict-guest-outcome: eviction for guests, summons, court w/in 5 days -&gt; identifies applicants who are being evicted for have guests in their apartment, they have received a summons, and they have court w/in the next 5 days)</p></li>
+<li><p>event.rest_export (this value tells the system which case acceptance rest export webform to look in for matches)</p></li>
+</ul>
+<p><strong>Returns:</strong> intake_id values for all of the matched organizations</p>
+<p><strong>Widget:</strong> get-gn-matches</p>
+<p><strong>Flow:</strong> OTIS matches</p>
+</section>
+<section id="matches-geography">
+<h2>Matches (geography)<a class="headerlink" href="#matches-geography" title="Link to this heading"></a></h2>
+<p><strong>Function names:</strong></p>
+<ul class="simple">
+<li><p>pilot-get-matches (current)</p></li>
+<li><p>pilot-get-matches-new (not yet)</p></li>
+</ul>
+<p><strong>Purpose:</strong> Count and respond with matched organizations based on the matched intake_id’s from the previous function against the user’s geographic area</p>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>event.zip_id</p></li>
+<li><p>event.county_id</p></li>
+<li><p>event.city_id</p></li>
+</ul>
+<p><strong>Returns:</strong> List of matched organizations</p>
+<p><strong>Widget:</strong> get-otis-matches</p>
+<p><strong>Flow:</strong> OTIS matches</p>
+</section>
+<section id="matches-names">
+<h2>Matches (names)<a class="headerlink" href="#matches-names" title="Link to this heading"></a></h2>
+<p><a href="#id3"><span class="problematic" id="id4">**</span></a>Function name: get-names-test</p>
+<p><strong>Purpose:</strong> Gets the names of the matched organizations to provide to the applicant</p>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>event.services.split (service_id)</p></li>
+<li><p>event.intakes.split (intake_id)</p></li>
+</ul>
+<p><strong>Returns:</strong> Names of the matched organizations</p>
+<p><strong>Widget:</strong> matches-get-name</p>
+<p><strong>Flow:</strong> OTIS matches</p>
+</section>
+<section id="get-intake-settings-data">
+<h2>Get intake settings data<a class="headerlink" href="#get-intake-settings-data" title="Link to this heading"></a></h2>
+<p><strong>Function name:</strong></p>
+<ul class="simple">
+<li><p>get-intake-settigns-with-qualifiers (current)</p></li>
+<li><p>pilot-get-intake-settings (deprecated)</p></li>
+</ul>
+<p><strong>Purpose:</strong> Get the intake settings for the selected organization. Also, identify if the organization uses qualifiers.</p>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>event.token</p></li>
+<li><p>event.intake_id</p></li>
+</ul>
+<p><strong>Returns:</strong> data object that contains:</p>
+<ul class="simple">
+<li><p>callback_number</p></li>
+<li><p>callback_type</p></li>
+<li><p>current_count (intake count)</p></li>
+<li><p>bypass_intake_message</p></li>
+<li><p>oas_msg_disclaimer</p></li>
+<li><p>oas_msg_please_Call_value</p></li>
+<li><p>oas_msg_we_call_you</p></li>
+</ul>
+<p><strong>Widget:</strong> get-intake-settings_data</p>
+<p><strong>Flow:</strong> OTIS matches</p>
+</section>
+<section id="validate-date-functions">
+<h2>Validate date functions<a class="headerlink" href="#validate-date-functions" title="Link to this heading"></a></h2>
+<section id="validate-month">
+<h3>Validate month<a class="headerlink" href="#validate-month" title="Link to this heading"></a></h3>
+<p><strong>Function name:</strong> otis-validate-month</p>
+<p><strong>Parameters:</strong> event.month</p>
+<p><strong>Returns:</strong> A variable between 0 and 13 that corresponds with the name of a month</p>
+<p><strong>Widgets:</strong></p>
+<ul class="simple">
+<li><p>gn-date-month-return</p></li>
+<li><p>validate-month</p></li>
+</ul>
+<p><strong>Flows:</strong></p>
+<ul class="simple">
+<li><p>OTIS Guided Navigation</p></li>
+<li><p>OTIS Intake</p></li>
+</ul>
+</section>
+<section id="validate-day-of-month">
+<h3>Validate day of month<a class="headerlink" href="#validate-day-of-month" title="Link to this heading"></a></h3>
+<p><strong>Function name:</strong> otis-validate-day-of-month</p>
+<p><strong>Parameters:</strong> event.day</p>
+<p><strong>Returns:</strong> A numeric variable that has been checked against the number of possible days in the corresponding month</p>
+<p><strong>Widgets:</strong></p>
+<ul class="simple">
+<li><p>validate-gn-date-day</p></li>
+<li><p>validate-day</p></li>
+</ul>
+<p><strong>Flows:</strong></p>
+<ul class="simple">
+<li><p>OTIS Guided Navigation</p></li>
+<li><p>OTIS Intake</p></li>
+</ul>
+</section>
+<section id="validate-year">
+<h3>Validate year<a class="headerlink" href="#validate-year" title="Link to this heading"></a></h3>
+<p><strong>Function name:</strong> otis-validate-year</p>
+<p><strong>Parameters:</strong> event.year</p>
+<p><strong>Returns:</strong> A 4 digit numeric variable.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If the original parameter was 2 digits and those digits were greater than 10, ‘19’ is added to the parameter; if less than 11, ‘20’ is added to the beginning of the parameter to make either 1930 or 2010.</p>
+</div>
+<p><strong>Widgets:</strong></p>
+<ul class="simple">
+<li><p>validate-gn-date-year</p></li>
+<li><p>validate-dob-year</p></li>
+</ul>
+<p><strong>Flows:</strong></p>
+<ul class="simple">
+<li><p>OTIS Guided Navigation</p></li>
+<li><p>OTIS Intake</p></li>
+</ul>
 <p><strong>Requires:</strong></p>
-<p><strong>Returns:</strong></p>
-<p><strong>Status:</strong> Not built</p>
+</section>
+</section>
+<section id="calculate-age">
+<h2>Calculate age<a class="headerlink" href="#calculate-age" title="Link to this heading"></a></h2>
+<p><strong>Function name:</strong> otis-calculate-age</p>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>event.year</p></li>
+<li><p>event.month</p></li>
+<li><p>event.day</p></li>
+</ul>
+<p><strong>Purpose:</strong> Calculates the applicant’s age based on the DOB they provided when compared to the current date.</p>
+<p><strong>Returns:</strong> The applicant’s age as a value. In the event of an error, it returns a null value</p>
+<p><strong>Widget:</strong> calculate-age</p>
+<p><strong>Flow:</strong> OTIS Intake</p>
+<div class="admonition-todo admonition" id="id5">
+<p class="admonition-title">Todo</p>
+<p>Add functions that gather race, ethnicity, gender, marital status, and income options. Each of these functions also have corresponding functions that validate them.</p>
+</div>
 </section>
 <section id="conflict-check">
 <h2>Conflict check<a class="headerlink" href="#conflict-check" title="Link to this heading"></a></h2>
@@ -304,7 +555,7 @@
 </section>
 <section id="send-to-legal-server">
 <h2>Send to Legal Server<a class="headerlink" href="#send-to-legal-server" title="Link to this heading"></a></h2>
-<p><strong>Function name:</strong>  otis-load-races</p>
+<p><strong>Function name:</strong>  otis-send-to-legal-server</p>
 <p><strong>Purpose</strong>: Builds the data package to etransfer to LegalServer</p>
 <p><strong>Parameters:</strong> event object which contains the data for the eTransfer.</p>
 <table class="docutils align-default">
@@ -485,7 +736,7 @@ objects for each provided income.  Each</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="otis_sms_intake_architecture.html" class="btn btn-neutral float-left" title="General architecture" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="otis_sms_flows.html" class="btn btn-neutral float-left" title="Flows and Subflows" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="otis_global_functions.html" class="btn btn-neutral float-right" title="Global SMS functions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

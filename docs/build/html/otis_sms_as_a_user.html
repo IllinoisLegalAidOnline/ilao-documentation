@@ -68,6 +68,7 @@
 <li class="toctree-l2 current"><a class="reference internal" href="otis_sms_intake.html">Online Intake Over SMS</a><ul class="current">
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Getting legal help over SMS</a></li>
 <li class="toctree-l3"><a class="reference internal" href="otis_sms_intake_architecture.html">General architecture</a></li>
+<li class="toctree-l3"><a class="reference internal" href="otis_sms_flows.html">Flows and Subflows</a></li>
 <li class="toctree-l3"><a class="reference internal" href="otis_sms_functions.html">Twilio Functions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="otis_maintenance.html">Maintaining and expanding OTIS SMS</a></li>
 <li class="toctree-l3"><a class="reference internal" href="otis_sms_translations.html">OTIS SMS Translations</a></li>
@@ -121,21 +122,33 @@
   <section id="getting-legal-help-over-sms">
 <h1>Getting legal help over SMS<a class="headerlink" href="#getting-legal-help-over-sms" title="Link to this heading"></a></h1>
 <p>Users can text ILAO’s short code to apply for legal help in Illinois.</p>
-<p>As of August 2022, users can apply for legal help in:</p>
+<p>As of November 2023, users can apply for legal help in:</p>
 <ul class="simple">
-<li><p>Eviction</p></li>
+<li><p>Eviction (both landlord and tenant)</p></li>
 <li><p>Other rental housing issues</p></li>
 <li><p>TANF</p></li>
 <li><p>SNAP</p></li>
 <li><p>Unemployment benefits</p></li>
 <li><p>Clearing a criminal record</p></li>
+<li><p>Criminal defense (limited area)</p></li>
+<li><p>Orders of protection</p></li>
+<li><p>Civil no contact orders</p></li>
+<li><p>Stalking protective orders</p></li>
+</ul>
+<p>New issues that will be added soon include:</p>
+<ul class="simple">
 <li><p>Bankruptcy</p></li>
+<li><p>Foreclosure</p></li>
+<li><p>Other non-bankruptcy consumer debt issues</p></li>
 <li><p>Asylum</p></li>
+<li><p>U-Visa</p></li>
+<li><p>Divorce</p></li>
+<li><p>Property tax</p></li>
 </ul>
 <p>If a user texts a keyword that we can match to an existing Guided Navigation flow, we will direct the user directly into the online triage and intake system with the Guided Navigation flow already determined. If the texted keyword does not match a term, we will ask the user to pick from a menu.</p>
 <p>The initial prompt asks the user to opt-in. Once the user opt-ins, they are asked for which language they would like to proceed in (English, Spanish, or Polish) and then directs them through the correct SMS flow.</p>
 <ul class="simple">
-<li><p>Step 1: Ask the user for their language</p></li>
+<li><p>Step 1: Ask the user for their language (system supports English, Spanish, and Polish)</p></li>
 <li><p>Step 2: Determine if the keyword is a match to existing terms</p></li>
 <li><p>Step 3:</p>
 <ul>
@@ -143,14 +156,14 @@
 <li><p>If there is no match, send -1 to the relevant language subflow</p></li>
 </ul>
 </li>
-<li><p>Step 4: We collect the user’s zip code and validate that it is in Illinois.</p>
+<li><p>Step 4: If we do not get the user’s legal issue from their keyword, they will enter their first subflow. This subflow is named “OTIS get legal issue”</p></li>
+<li><p>Step 5: We collect the user’s first name and location in the “OTIS get location” subflow. During the subflow, the user provides their zip code and the system validates that it is in Illinois.</p>
 <ul>
-<li><p>If it is not an Illinois zip code, the user can text zip</p></li>
+<li><p>If the system determines that it is not an Illinois zip code, they will be informed, and they can text zip to enter a new zip code</p></li>
 <li><p>If it is not an Illinois zip code and the user does not retry, the application refers the user to LawHelp.org and exits</p></li>
 </ul>
 </li>
-<li><p>Step 5: We get the user’s legal issue, if it wasn’t already passed in under Step 3</p></li>
-<li><p>Step 6: We collect number of adults and children in the household</p>
+<li><p>Step 6: We collect the number of adults and children in the household in the “OTIS household” subflow</p>
 <ul>
 <li><p>The system then determines a maximum income threshold for the household size and asks the user to verify if they are above or below that level. If the user’s income exceeds this threshold, the application exits.</p></li>
 </ul>
@@ -161,11 +174,11 @@
 <p>Some programs have no income limits either generally or for special populations. These are not yet supported in the SMS application.</p>
 </div>
 <ul class="simple">
-<li><p>Step 7: Guided navigation launches to triage the user through their legal problem.</p></li>
-<li><p>Step 8: When the guided navigation ends, the system connects to IllinoisLegalAid.org and  checks to see if one or more organizations matches the user’s legal issue</p>
+<li><p>Step 7: Once the system determines that the user is eligible (geography and income), The “OTIS Guided Navigation” subflow is launched to triage the user through their legal problem.</p></li>
+<li><p>Step 8: When the guided navigation ends, the system connects to IllinoisLegalAid.org and  checks to see if one or more organizations match the user’s legal issue</p>
 <ul>
 <li><p>If no organization matches, the system exits with legal content</p></li>
-<li><p>If more than 1 organization matches, the user is given a choice</p></li>
+<li><p>If more than 1 organization matches, the user is given a choice of where to apply</p></li>
 <li><p>If 1 organization matches, the user is offered the option to apply.</p></li>
 </ul>
 </li>
@@ -174,11 +187,13 @@
 <p class="admonition-title">Note</p>
 <p>This needs updated for qualifiers &amp; maybe adverse party</p>
 </div>
+<ul>
+<li><p>Step 9: Once the user selects an organization to apply to, we begin the intake (OTIS Intake subflow).</p>
 <ul class="simple">
-<li><p>Step 9: We collect the user’s last name, any nicknames, and any aliases they have used</p></li>
-<li><p>Step 10: We collect the user’s date of birth. We ask the user to confirm their date of birth and if it is incorrect, they can re-enter</p></li>
-<li><p>Step 11: We collect demographic data (race, ethnicity, gender, marital status, language)</p></li>
-<li><p>Step 12: We collect income information</p>
+<li><p>We collect the user’s last name, any nicknames, and any aliases they have used</p></li>
+<li><p>We collect the user’s date of birth. We ask the user to confirm their date of birth and if it is incorrect, they can re-enter</p></li>
+<li><p>We collect demographic data (race, ethnicity, gender, marital status, language)</p></li>
+<li><p>We collect income information</p>
 <ul>
 <li><p>If the user has wages or salary, we ask them how often they get paid and for an amount.</p></li>
 <li><p>We ask them if they have self-employment</p></li>
@@ -187,24 +202,32 @@
 <li><p>We ask if they have any other income sources</p></li>
 </ul>
 </li>
-<li><p>Step 13: Determine income eligibility. If the user is not eligible because of their income, they are diverted to legal content</p></li>
-<li><p>Step 14: For income eligible clients, we ask them to confirm that the phone number used to text from is the best number to reach them at.</p>
+<li><p>Determine income eligibility. If the user is not eligible because of their income, they are diverted to legal content</p></li>
+</ul>
+</li>
+<li><p>Step 10: For income-eligible applicants, we gather the applicant’s contact information (OTIS location subflow).</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>We ask them to confirm that the phone number used to text from is the best number to reach them at.</p>
 <ul>
 <li><p>If this is not the best number, they are asked for the best number</p></li>
 </ul>
 </li>
-<li><p>Step 15: We collect their email and address. We ask them to confirm their contact information. If there are any mistakes, they are prompted to redo them.</p></li>
-<li><p>Step 16: If the referral organization schedules callbacks:</p>
-<ul>
+<li><p>We collect their email and address. We ask them to confirm their contact information. If there are any mistakes, they are prompted to redo them.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Step 11: If the referral organization schedules callbacks: (begin OTIS appointment scheduler subflow)</p>
+<ul class="simple">
 <li><p>The user is offered the first available appointment time</p></li>
 <li><p>If this time does not work for the user, they are offered a set of available dates</p></li>
 <li><p>When the user selects a date, they are offered a list of times to pick from</p></li>
 </ul>
 </li>
-<li><p>Step 17: The system e-transfers a completed case file to LegalServer</p></li>
-<li><p>Step 18: A confirmation message displays</p></li>
-<li><p>Step 19: If the program has a disclaimer, that is shared with the user</p></li>
-<li><p>Step 20: A final “your application is complete” message displays with links to relevant legal information.</p></li>
+<li><p>Step 12: The system e-transfers a completed case file to LegalServer</p></li>
+<li><p>Step 13: A confirmation message displays</p></li>
+<li><p>Step 14: If the program has a disclaimer, that is shared with the user</p></li>
+<li><p>Step 15: A final “your application is complete” message displays with links to relevant legal information.</p></li>
 </ul>
 </section>
 
