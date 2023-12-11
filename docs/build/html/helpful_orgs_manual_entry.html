@@ -63,7 +63,10 @@
 <li class="toctree-l2 current"><a class="reference internal" href="cms_structured_legal_helpful_organization.html#what-is-a-helpful-organization">What is a helpful organization?</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="helpful_org_data_structure.html">Helpful Organization Data Structure</a></li>
 <li class="toctree-l3"><a class="reference internal" href="helpful_orgs_automated_entry.html">Automated Helpful Organizations</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Creating a helpful organization</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Creating a helpful organization</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#contact-point">Contact point</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="helpful_orgs_in_legal_content.html">Helpful organizations in legal content</a></li>
 </ul>
 </li>
@@ -115,6 +118,49 @@
              
   <section id="creating-a-helpful-organization">
 <h1>Creating a helpful organization<a class="headerlink" href="#creating-a-helpful-organization" title="Link to this heading"></a></h1>
+<p>Helpful organizations can be added or edited manually.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Please talk to Gwen first; if we can automatically pull in a set of organizations, we would prefer to do that rather than maintain them manually.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Helpful organizations can not be managed by anyone other than staff. Unlike legal organization, which have group-level permissions, no such construct exists with helpful organizations.</p>
+</div>
+<p>To create a helpful organization:</p>
+<ul class="simple">
+<li><p>Enter the name of the organization as the title</p></li>
+<li><p>Add a short description and a meta description. The meta description will be used in the solution.</p></li>
+<li><p>Enter the main location of the organization</p></li>
+<li><p>Set the area served in the coverage area. You can add multiple administrative areas within one coverage area and/or add multiple coverage areas for different types of administrative areas</p></li>
+<li><p>Optionally, set an organization email</p></li>
+<li><p>Optionally, set an organization telephone</p></li>
+<li><p>Add at least one contact point</p></li>
+<li><p>Add any content management tags</p></li>
+<li><p>Indicate whether a translation should be created</p></li>
+<li><p>Indicate whether a translation is outdated</p></li>
+</ul>
+<section id="contact-point">
+<h2>Contact point<a class="headerlink" href="#contact-point" title="Link to this heading"></a></h2>
+<p>A contact point is a specific set of data associated with a helpful organization that tells the user how to reach the organization. For legal organizations, this information lives in the services node.</p>
+<p>To create a contact type:</p>
+<ul class="simple">
+<li><p>Add a contact type. Schema.org provides examples of Customer complaints department, sales department. For our purposes it may be: intake, help desk, navigator.</p></li>
+<li><p>Set the area served. This may be different than the organization service area. For example, A contact type of “Intake” may only serve 3 counties of the 14 county service area.</p></li>
+<li><p>Email for the contact point, if users can contact via email</p></li>
+<li><p>Telephone for the contact point, if users can contact via phone</p></li>
+<li><p>Hours of operation</p></li>
+<li><p>Products supported. Schema.org defines this as “The product or service this support contact point is related to (such as product support for a particular product line). This can be a specific product or product line (e.g. “iPhone”) or a general category of products or services (e.g. “smartphones”).”  For our purposes, this is likely to be things like legal referrals, social service referrals, food services, financial support, housing support, utility assistance.</p></li>
+</ul>
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">Todo</p>
+<p>Determine if we should actually require the location or indicate that it should not be displayed/shared.</p>
+</div>
+<div class="admonition-todo admonition" id="id2">
+<p class="admonition-title">Todo</p>
+<p>Determine if we should standardize a set of contact types and products supported for use in this content.</p>
+</div>
+</section>
 </section>
 
 

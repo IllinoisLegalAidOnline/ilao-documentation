@@ -34,7 +34,7 @@ Helpful Organization Data Structure
 
 Contact points
 ==================
-Contact points are used to summarize specfic services of an organization.
+Contact points are used to summarize specific services of an organization.
 
 +--------------------------------------+----------------------------------------------+
 | Helpful organization field           | Description                                  |
