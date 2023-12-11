@@ -21,6 +21,9 @@ These are organizations that do not qualify for inclusion within our organizatio
    :maxdepth: 2
    :caption: Helpful Organizations:
 
+   helpful_org_data_structure
    helpful_orgs_automated_entry
    helpful_orgs_manual_entry
    helpful_orgs_in_legal_content
+
+
