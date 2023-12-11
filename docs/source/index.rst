@@ -24,6 +24,7 @@ Welcome to Illinois Legal Aid Online Product Documentation
    jobs_cms
    discussion_groups
    otis_cms
+   cms_structured_legal_helpful_organization   
    site_search
    site_faqs
    other_cms_features

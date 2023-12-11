@@ -97,6 +97,7 @@
 <li class="toctree-l2"><a class="reference internal" href="otis_features.html">Additional Features</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="cms_structured_legal_helpful_organization.html">Helpful Organizations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="site_search.html">Site Search</a></li>
 <li class="toctree-l1"><a class="reference internal" href="site_faqs.html">Site FAQs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="other_cms_features.html">Other Website Features</a></li>
@@ -259,14 +260,12 @@
 <li><p>event.language</p></li>
 </ul>
 <p><strong>Returns:</strong> an object that contains the next step in the guided navigation process. This function provides additional text to inform the applicant how to respond. Ex:</p>
-<blockquote>
-<div><div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="err">i</span><span class="kc">f</span><span class="w"> </span><span class="err">(res.da</span><span class="kc">ta</span><span class="err">.</span><span class="kc">f</span><span class="err">orm.eleme</span><span class="kc">nts</span><span class="p">[</span><span class="err">j</span><span class="p">]</span><span class="err">.is_mul</span><span class="kc">t</span><span class="err">iple</span><span class="w"> </span><span class="err">==</span><span class="w"> </span><span class="kc">true</span><span class="err">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w"> </span><span class="err">respo</span><span class="kc">nse</span><span class="err">.display.su</span><span class="kc">ff</span><span class="err">ix</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">&#39;Reply</span><span class="w"> </span><span class="err">wi</span><span class="kc">t</span><span class="err">h</span><span class="w"> </span><span class="kc">t</span><span class="err">he</span><span class="w"> </span><span class="kc">nu</span><span class="err">mbers</span><span class="w"> </span><span class="kc">t</span><span class="err">ha</span><span class="kc">t</span><span class="w"> </span><span class="err">apply</span><span class="w"> </span><span class="kc">t</span><span class="err">o</span><span class="w"> </span><span class="err">you.</span><span class="w"> </span><span class="err">For</span><span class="w"> </span><span class="err">example</span><span class="p">,</span><span class="w"> </span><span class="err">reply</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="err">&#39;;</span>
-<span class="w"> </span><span class="err">respo</span><span class="kc">nse</span><span class="err">.display.mul</span><span class="kc">t</span><span class="err">iple</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="s2">&quot;Multiple&quot;</span><span class="err">;</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">form</span><span class="p">.</span><span class="nx">elements</span><span class="p">[</span><span class="nx">j</span><span class="p">].</span><span class="nx">is_multiple</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">true</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">response</span><span class="p">.</span><span class="nx">display</span><span class="p">.</span><span class="nx">suffix</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Reply with the numbers that apply to you. For example, reply 1,2,3&#39;</span><span class="p">;</span>
+<span class="w">  </span><span class="nx">response</span><span class="p">.</span><span class="nx">display</span><span class="p">.</span><span class="nx">multiple</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Multiple&quot;</span><span class="p">;</span>
 <span class="w"> </span><span class="p">}</span>
 </pre></div>
 </div>
-</div></blockquote>
 <p>This code automatically adds the additional text about how to respond if the guided navigation element allows multiple responses (checkboxes).</p>
 <p><strong>Widget:</strong> get-current-gn-form</p>
 <p><strong>Flows:</strong></p>
@@ -320,16 +319,17 @@
 <li><p>event.sessionid; this is the unique session id returned from the start-process function. This is consistent across an entire user’s session</p></li>
 </ul>
 <p><strong>Returns:</strong> An object which varies based on the type of form returned.</p>
-<ul>
+<ul class="simple">
 <li><p>In all instances, the sessionid</p></li>
-<li><p>In all instances, the current user session’s profile. This contains the field names and values collected.</p>
+<li><p>In all instances, the current user session’s profile. This contains the field names and values collected.</p></li>
+</ul>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;profile&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0263357e-0431-11ec-9b2f-0e8d40a13cd5&quot;</span><span class="p">,</span>
 <span class="nt">&quot;ilao_unemploy_search_149&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span>
 <span class="w"> </span><span class="p">},</span>
 </pre></div>
 </div>
-</li>
+<ul class="simple">
 <li><p>In all instances, the curent form_id</p></li>
 <li><p>In all instances, the is_complete value for the current form</p></li>
 <li><p>In all instances, a display object to control how the form is displayed</p></li>

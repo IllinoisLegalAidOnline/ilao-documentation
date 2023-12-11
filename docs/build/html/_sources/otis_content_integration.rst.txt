@@ -4,7 +4,7 @@ COPE integration
 
 Basic concepts:
 ================
-The COPE (Create Once Publish Everywhere) content model utilizes content created using :ref:`cms_structured_content`. Content is maintained and updated by ILAO's content team in one central location. Using this model, we can bring up-to-date chunks of legal information into OTIS to help educate applicants as they continue their triage journey.
+The COPE (Create Once Publish Everywhere) content model is designed to allow for content re-use across channels. Content is maintained and updated by ILAO's content team in one central location. Using this model, we can bring up-to-date chunks of legal information into OTIS to help educate applicants as they continue their triage journey.
 
 Trigger:
 =========
@@ -13,8 +13,8 @@ Trigger:
 
 Adding to OTIS:
 ====================
-* a custom field (ilao_cope_options) was created in LegalServer that has the "text" option. 
-* the custom field is added to a guided navigation path as an "Action: set a fields value" where the content needs to be displayed 
+* a custom field (ilao_cope_options) was created in LegalServer that has the "text" option.
+* the custom field is added to a guided navigation path as an "Action: set a fields value" where the content needs to be displayed
 * the node id for the legal content is added as the text value for the field
 * instruction elements can be added to provide the user specific context to the legal content
 

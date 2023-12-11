@@ -10,12 +10,12 @@ These functions allow us to interact with LegalServer's Guided Navigation API ov
 Validate keyword
 =================
 
-**Function name:** 
+**Function name:**
 
 * mr-validate-legal-issue-gn (current)
 * validate-legal-issue-gn (deprecated)
 
-**Parameters:** 
+**Parameters:**
 
 * event.legal_issue; this is a text value from either the initial trigger message body or in response to start-otis. This allows users to enter a word like "evict" or "snap" to bypass the OTIS get legal issue subflow to identify the user's legal issue.
 * event.language_number; this is a numerical value that identifies the language of the user to match the legal issue provided in the correct language.
@@ -32,19 +32,19 @@ Validate keyword
 Validate legal issue
 =====================
 
-**Function name:** 
+**Function name:**
 
 * mr-validate-legal-issue-flow (current)
 * validate-legal-issue-flow (deprecated)
 
-**Parameters:** 
+**Parameters:**
 
 * event.legal_issue; this is a text value from widget: start-otis. This allows users to respond to a question about their legal issue if they did not get matched to a legal issue based on their trigger word (i.e. they didn't text "evict" to 85622).
 * event.language_number; this is a numerical value that identifies the language of the user to match the legal issue provided in the correct language.
 
 **Returns:** An object containing:
 
-* code - corresponds to the list of legal issues within the function. 
+* code - corresponds to the list of legal issues within the function.
 
 **Widget(s):** validate-legal-issue
 
@@ -54,9 +54,9 @@ Validate legal issue
 Get process list
 ==================
 
-**Function name:**  
+**Function name:**
 
-* mr-get-process-list (current); 
+* mr-get-process-list (current);
 * get-process-list (depricated)
 
 **Parameters:**  event.issue; this is the numeric value from whatever Twilio flow that is calling the process list. This will return the process id and metadata for the specific legal issue's Guided Navigation.
@@ -71,13 +71,13 @@ Get process list
 
 .. note:: Processes are as follows so far 1 - unemployment benefits, 2 - Food stamps, 3 - TANF benefits, 4 - Renting or Renters, 5 - Expungement, 6 - DV, 7 - Bankruptcy (not live yet), 8 - Asylum/Immigration (not live yet).
 
-**Widget(s):**  
+**Widget(s):**
 
-* get_gn_process (Superbot); 
+* get_gn_process (Superbot);
 * get-gn-process-id (Get legal issue); and
 * rerun_process (Guided Navigation)
 
-**Flow(s):** 
+**Flow(s):**
 * Superbot main flows:
 
   * SuperbotV2_LIVE_9.11.23
@@ -108,14 +108,14 @@ Start a new session for given process
 Get the guided navigation form
 ================================
 
-**Function names:** 
+**Function names:**
 
 * get-form-test-multiple (current)
 * get-form-test (deprecated)
 
 .. warning:: THIS IS CURRENTLY BEING USED IN get-final-gn-profile
 
-* get-form-multiple_v2 (in production) - adding support for 'combined_outcome' to show the user their "Best match" when there are multiple organization who will help with a legal problem, but 1 or more of the organizations will help with multiple aspects of the legal problem 
+* get-form-multiple_v2 (in production) - adding support for 'combined_outcome' to show the user their "Best match" when there are multiple organization who will help with a legal problem, but 1 or more of the organizations will help with multiple aspects of the legal problem
 
 .. note:: If an applicant is facing a house foreclosure and a car repossession, all Orgs will take the case, but Org C is the "Best match"
 
@@ -123,33 +123,33 @@ Get the guided navigation form
   * Org B will take a bankruptcy case to stop a car repossession
   * Org C will take a bankruptcy case to stop a house foreclosure & a car repossession
 
-**Parameters:** 
+**Parameters:**
 
 * event.processid - the unique identifier for a Guided Navigation process
 * event.sessionid - the unique identifier for the Guided Navigation session; this was returned by LegalServer when the session started
 * event.language
 
-**Returns:** an object that contains the next step in the guided navigation process. This function provides additional text to inform the applicant how to respond. Ex: 
+**Returns:** an object that contains the next step in the guided navigation process. This function provides additional text to inform the applicant how to respond. Ex:
 
- .. code-block:: json
+.. code-block:: javascript
 
-    if (res.data.form.elements[j].is_multiple == true) {
-     response.display.suffix = 'Reply with the numbers that apply to you. For example, reply 1,2,3';
-     response.display.multiple = "Multiple";
-     }
+      if (res.data.form.elements[j].is_multiple == true) {
+        response.display.suffix = 'Reply with the numbers that apply to you. For example, reply 1,2,3';
+        response.display.multiple = "Multiple";
+       }
 
 This code automatically adds the additional text about how to respond if the guided navigation element allows multiple responses (checkboxes).
 
 **Widget:** get-current-gn-form
 
-**Flows:** 
+**Flows:**
 
 * OTIS Guided Navigation
 * OTIS Guided Navigation_v2
 
 **Requires:** a sessionid and processid
 
-**Supports:** 
+**Supports:**
 
 * Instructions with the next element when the instruction is not the first element in the guided navigation process
 * radio button options (user must choose one answer)
@@ -202,7 +202,7 @@ This function gets the current form for a specific session and then parses it in
 * In all instances, the sessionid
 * In all instances, the current user session's profile. This contains the field names and values collected.
 
-  .. code-block:: json
+.. code-block:: json
 
         "profile": {
         "id": "0263357e-0431-11ec-9b2f-0e8d40a13cd5",
@@ -255,7 +255,7 @@ Getting Guided Navigation matches
 
 This function returns any intake settings ids that are a match based on a match be
 
-**Function names:** 
+**Function names:**
 
 * get-gn-match-test (current)
 * get-gn-match (deprecated)
@@ -290,12 +290,12 @@ Process qualifiers
 **Returns:** an object that contains either:
 
 * qualified ("Great")
-* disqualified ("Unfortunately, you did not match to {{org}}. You can visit Get Legal Help for more help.") 
+* disqualified ("Unfortunately, you did not match to {{org}}. You can visit Get Legal Help for more help.")
 * null - will redirect the applicant to their other matched organizations.
 
 **Widget:** reselect-qualifiers
 
-**Flows:** 
+**Flows:**
 
 * Superbot main flows:
 
