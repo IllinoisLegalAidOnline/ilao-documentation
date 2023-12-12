@@ -10,7 +10,8 @@ Legacy data is accessible in ILAO's Tableau cloud in the `Google Analytics Legac
 
 "All" files
 =====================
-These files only contain data where the segment was set to "in Illinois"
+
+These files only contain data where the segment was set to "in Illinois":
 
 * GA-pages-all-2017-2020 contains pageviews data for Illinois users between July 1, 2017 - June 30, 2020
 * GA-pages-all-2020-2023 contains pageviews data for Illinois users between July 1, 2020 - June 30, 2023
