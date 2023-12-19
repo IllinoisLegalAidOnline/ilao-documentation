@@ -85,12 +85,3 @@ Pressing review next to an item will show a page with all of the translatable fi
 
 
 
-Legal content tools
-======================
-
-Legal content types have translation-related fields that can be used to flag content for translation/re-translation
-
-* Request translation be created is a yes/no (defaults to no) to indicate that content should be translated
-* Mark translation as outdated is a yes/no to indicate if the English version has been so substantially changed that we need to re-translate the Spanish and Polish versions.
-
-

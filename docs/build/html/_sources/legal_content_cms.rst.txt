@@ -7,6 +7,7 @@ Content types for legal content:
 .. toctree::
    :maxdepth: 1
 
+
    cms_law_tracker
    cms_wysiwyg
    cms_custom_tokens
@@ -17,6 +18,7 @@ Content types for legal content:
    cms_portal_main_page
    cms_toolboxes
    cms_adrm
+   cms_configuration
    cms_content_reporting
    cms_lcv_program
 
