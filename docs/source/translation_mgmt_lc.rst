@@ -6,4 +6,4 @@ Translation management in legal content
 
 When an English translation is updated
 ========================================
-When a piece of English legal content is updated:
+When a piece of English legal content is updated, if the changes impact the title, description, or the content itself and there is a
