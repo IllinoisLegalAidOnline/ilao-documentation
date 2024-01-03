@@ -20,7 +20,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Content Translation" href="translation_content.html" />
+    <link rel="next" title="Translation management in legal content" href="translation_mgmt_lc.html" />
     <link rel="prev" title="Webforms Translation" href="cms_webforms_translation.html" /> 
 </head>
 
@@ -55,12 +55,16 @@
 <li class="toctree-l1"><a class="reference internal" href="testimonials_cms.html">Testimonials Content Type</a></li>
 <li class="toctree-l1"><a class="reference internal" href="webforms_cms.html">Webforms</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Translation Management</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="translation_content.html">Content Translation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="translation_mgmt_lc.html">Translation management in legal content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="translation_content.html">Using the Translation Management System</a></li>
 <li class="toctree-l2"><a class="reference internal" href="translation_ui.html">Interface translation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="translation_config.html">Configuration translation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cms_webforms_translation.html">Webforms Translation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="otis_sms_translations.html">OTIS SMS Translations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#node-translation">Node translation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#shared-fields">Shared fields</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="calendar_cms.html">Calendar</a></li>
@@ -113,11 +117,6 @@
 <div class="toctree-wrapper compound">
 <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="translation_content.html">Content Translation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="translation_content.html#in-node-translation">In node translation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="translation_content.html#using-the-translation-management-system">Using the translation management system</a></li>
-</ul>
-</li>
 <li class="toctree-l1"><a class="reference internal" href="translation_mgmt_lc.html">Translation management in legal content</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="translation_mgmt_lc.html#language-availability">Language Availability</a></li>
 <li class="toctree-l2"><a class="reference internal" href="translation_mgmt_lc.html#when-an-english-translation-is-updated">When an English translation is updated</a></li>
@@ -126,12 +125,37 @@
 <li class="toctree-l2"><a class="reference internal" href="translation_mgmt_lc.html#notifications">Notifications</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="translation_content.html">Using the Translation Management System</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="translation_content.html#checking-out-a-cart">Checking out a cart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="translation_content.html#check-out-a-job">Check out a job</a></li>
+<li class="toctree-l2"><a class="reference internal" href="translation_content.html#importing-a-file">Importing a file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="translation_content.html#reviewing-content">Reviewing content</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="translation_ui.html">Interface translation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="translation_config.html">Configuration translation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cms_webforms_translation.html">Webforms Translation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="otis_sms_translations.html">OTIS SMS Translations</a></li>
 </ul>
 </div>
+<p>Content translation includes:</p>
+<ul class="simple">
+<li><p>Content types, like legal content, basic pages, organizations, locations, and services.</p></li>
+<li><p>Blocks, like the banner on the top of pages</p></li>
+</ul>
+<section id="node-translation">
+<h2>Node translation<a class="headerlink" href="#node-translation" title="Link to this heading"></a></h2>
+<p>Content can be translated by clicking the “Translate” link on the edit page or when viewing the content and clicking Add to create a new translation or Edit to edit an existing translation under Operations</p>
+<img alt="_images/node-translation.png" src="_images/node-translation.png" />
+<p>In the image above, there is a Spanish translation that can be edited. A Polish translation would need to be added.</p>
+<section id="shared-fields">
+<h3>Shared fields<a class="headerlink" href="#shared-fields" title="Link to this heading"></a></h3>
+<p>Shared fields are those that are shared across languages. For example, the legal issues taxonomy on legal content are the same regardless of language so the field to tag content to legal issue is shared across all languages - a change in one language affects all languages.</p>
+<p>For some content types, like legal content, fields that are shared are only visible on English content.</p>
+<p>For other types of content, where conditional fields or paragraphs cause issues with hiding shared fields, the fields are visible but have an (all languages) label.</p>
+<img alt="_images/translation-all-languages.png" src="_images/translation-all-languages.png" />
+</section>
+</section>
 </section>
 
 
@@ -139,7 +163,7 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="cms_webforms_translation.html" class="btn btn-neutral float-left" title="Webforms Translation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="translation_content.html" class="btn btn-neutral float-right" title="Content Translation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="translation_mgmt_lc.html" class="btn btn-neutral float-right" title="Translation management in legal content" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
