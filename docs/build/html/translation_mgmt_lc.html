@@ -57,7 +57,14 @@
 <li class="toctree-l1 current"><a class="reference internal" href="translation_cms.html">Translation Management</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="translation_content.html">Content Translation</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Translation management in legal content</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#when-an-english-translation-is-updated">When an English translation is updated</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#language-availability">Language Availability</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#when-an-english-translation-is-updated">When an English translation is updated</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#when-a-translation-is-marked-outdated-in-english">When a translation is marked outdated in English</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#when-a-spanish-or-polish-translation-is-being-worked-on">When a Spanish or Polish translation is being worked on</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#when-a-spanish-or-polish-translation-is-complete">When a Spanish or Polish translation is complete</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#notifications">Notifications</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="translation_ui.html">Interface translation</a></li>
@@ -117,9 +124,71 @@
 <p class="admonition-title">Note</p>
 <p>These are reflective of changes being made in winter 2023/2024.</p>
 </div>
+<section id="language-availability">
+<h2>Language Availability<a class="headerlink" href="#language-availability" title="Link to this heading"></a></h2>
+<p>On the edit form, the languages that a particular piece of legal content is available in appears at the top, along with the current published/unpublished status.</p>
+<img alt="_images/legal-content-languages.png" src="_images/legal-content-languages.png" />
+</section>
 <section id="when-an-english-translation-is-updated">
 <h2>When an English translation is updated<a class="headerlink" href="#when-an-english-translation-is-updated" title="Link to this heading"></a></h2>
-<p>When a piece of English legal content is updated, if the changes impact the title, description, or the content itself and there is a</p>
+<p>When a piece of English legal content is updated, if the changes impact the title, description, or the content itself, the translation(s) should be marked as outdated.</p>
+<img alt="_images/lc-translation-outdated.png" src="_images/lc-translation-outdated.png" />
+<p>If the translation has changed, indicate the type of change made. If multiple changes were made, indicate the most significant change made. This helps the content manager prioritize translation updates.</p>
+<p>If the English changes have now made another translation outdated, check “Yes” for that language. If not, select “No”</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Spanish and Polish outdated status are separated to allow us to manage the workflow for each language as the translation for one may occur before the other or be handled differently.</p>
+</div>
+<section id="when-a-translation-is-marked-outdated-in-english">
+<h3>When a translation is marked outdated in English<a class="headerlink" href="#when-a-translation-is-marked-outdated-in-english" title="Link to this heading"></a></h3>
+<p>When a translation is marked outdated, when viewing the outdated language:</p>
+<ul class="simple">
+<li><p>The translation status will be updated to “Outdated” automatically</p></li>
+<li><p>A warning will appear at the top of the Spanish/Polish edit form warning that the English version has been updated and this version is now out of date.</p></li>
+</ul>
+</section>
+</section>
+<section id="when-a-spanish-or-polish-translation-is-being-worked-on">
+<h2>When a Spanish or Polish translation is being worked on<a class="headerlink" href="#when-a-spanish-or-polish-translation-is-being-worked-on" title="Link to this heading"></a></h2>
+<p>When a Spanish or Polish translation is outdated andis being worked on (either internally or by sending it out to a vendor), the Translation status should be set to “In Progress”</p>
+<p>Once the translation is In Progress:</p>
+<ul class="simple">
+<li><p>A warning will appear on the English edit form. If further edits are made in English, the English editor should check the notify checkbox so that the content manager working on the translation will be aware of additional changes.</p></li>
+</ul>
+<img alt="_images/lc-translation-in-progress.png" src="_images/lc-translation-in-progress.png" />
+<ul class="simple">
+<li><p>If additional changes are made and notification sent, the “Uncheck to indicate that changes have been reviewed” checkbox will be checked on the Spanish/Polish translation. Uncheck this will reset the Notify on the English side so that notifications stop unless the English content manager re-checks the notification checkbox.</p></li>
+</ul>
+</section>
+<section id="when-a-spanish-or-polish-translation-is-complete">
+<h2>When a Spanish or Polish translation is complete<a class="headerlink" href="#when-a-spanish-or-polish-translation-is-complete" title="Link to this heading"></a></h2>
+<p>When a Spanish or Polish translation is completed, the content manager should set the translation status to “Completed” and save.</p>
+<p>When the translation status is set to Completed:</p>
+<ul class="simple">
+<li><p>The Mark [language] translation as outdated is emptied. Any future English edits will require reselecting Yes or No.</p></li>
+<li><p>The translation status for [language] is set to “None (Up-to-date)” automatically</p></li>
+<li><p>Warnings for that [language] will disappear</p></li>
+</ul>
+</section>
+<section id="notifications">
+<h2>Notifications<a class="headerlink" href="#notifications" title="Link to this heading"></a></h2>
+<p>On the English language edit form, there is a “Notify that additional changes have been made” checkbox for each language (Spanish and Polish).</p>
+<p>This checkbox will send an email notification to the content manager responsible for the corresponding language.</p>
+<p>This checkbox:</p>
+<ul class="simple">
+<li><p>Can be used on the initial marking of a translation as outdated</p></li>
+<li><p>Should always be used when there is an in-progress translation and additional edits to the content (title, description, or body) are made</p></li>
+<li><p>Should not be used when only shared fields are changed (taxonomy terms, annual updates, audience, etc).</p></li>
+</ul>
+<p>This checkbox, once checked:</p>
+<ul class="simple">
+<li><p>Will remain checked until the [language] content manager clears it after reviewing changes</p></li>
+<li><p>Will not send additional emails unless the checkbox has been cleared, saved, and then re-checked.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We are also working on integrating some of these workflow improvements into the XLIFF editing process.</p>
+</div>
 </section>
 </section>
 
