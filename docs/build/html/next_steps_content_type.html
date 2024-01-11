@@ -21,7 +21,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Next Steps User Entity" href="next_steps_entity_type.html" />
-    <link rel="prev" title="Next Steps Flows" href="next_steps.html" /> 
+    <link rel="prev" title="NextSteps Flows" href="next_steps.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -66,7 +66,7 @@
 <li class="toctree-l1"><a class="reference internal" href="taxonomies.html">Taxonomies</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rss_feeds.html">RSS Feeds</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ilao_api.html">ILAO’s API</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="next_steps.html">Next Steps Flows</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="next_steps.html">NextSteps Flows</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Next Steps Flow Content Type</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#creating-a-next-steps-flow">Creating a Next Steps Flow</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#create-the-first-message">Create the first message</a></li>
@@ -86,7 +86,7 @@
 <li class="toctree-l2"><a class="reference internal" href="next_steps_signup_form.html">Legal Server Signup</a></li>
 <li class="toctree-l2"><a class="reference internal" href="next_steps_sms_delivery.html">Next Steps SMS Subscriptions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="next_steps_tracking.html">Next Steps Tracking</a></li>
-<li class="toctree-l2"><a class="reference internal" href="next_steps.html#how-this-differs-from-the-toolbox-ticker-system">How this differs from the Toolbox ticker system</a></li>
+<li class="toctree-l2"><a class="reference internal" href="next_steps.html#interim-process">Interim Process</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="sms_overview.html">SMS Overview</a></li>
@@ -111,7 +111,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="next_steps.html">Next Steps Flows</a></li>
+          <li class="breadcrumb-item"><a href="next_steps.html">NextSteps Flows</a></li>
       <li class="breadcrumb-item active">Next Steps Flow Content Type</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/next_steps_content_type.rst.txt" rel="nofollow"> View page source</a>
@@ -172,7 +172,7 @@
 <p>For each reply:</p>
 <ul class="simple">
 <li><p>Creata a follow-up message. For example, if a user replies No, you might want to reassure them, remind them of the next step, and schedule another reminder.</p></li>
-<li><p>Attach the text of a legal step or legal question(s). For example, if someone has not yet appealed their TANF denial, you might want to remind them how to do so by including that step in the message. Or maybe you want to remind them of the TANF eligibility requirements by including that legal question</p></li>
+<li><p>Do not use the include field.</p></li>
 <li><p>Schedule when to send the message; 99% of the time, this should be set to immediately.</p></li>
 <li><p>Indicate if this is the last step in the flow.</p></li>
 <li><p>Schedule a next step follow up:</p>
@@ -184,9 +184,9 @@
 </li>
 <li><p>Repeat for each type of reply the system needs to handle.</p></li>
 </ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Because steps and questions can be included by reference, the Next Step Flow will automatically update to send the most current version.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Do not attach the text of a legal step or legal question(s) using the Include field since those are not currently being used. If you need to include specific legal information, it must go in the message.</p>
 </div>
 <img alt="_images/next-step-replies-add.png" src="_images/next-step-replies-add.png" />
 </section>
@@ -339,7 +339,7 @@ a specific initial message</p></td>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="next_steps.html" class="btn btn-neutral float-left" title="Next Steps Flows" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="next_steps.html" class="btn btn-neutral float-left" title="NextSteps Flows" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="next_steps_entity_type.html" class="btn btn-neutral float-right" title="Next Steps User Entity" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

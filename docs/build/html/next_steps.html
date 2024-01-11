@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Next Steps Flows &mdash; ILAO Sprint 124a documentation</title>
+  <title>NextSteps Flows &mdash; ILAO Sprint 124a documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/themeoverrides.css" type="text/css" />
@@ -66,13 +66,13 @@
 <li class="toctree-l1"><a class="reference internal" href="taxonomies.html">Taxonomies</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rss_feeds.html">RSS Feeds</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ilao_api.html">ILAO’s API</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Next Steps Flows</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">NextSteps Flows</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="next_steps_content_type.html">Next Steps Flow Content Type</a></li>
 <li class="toctree-l2"><a class="reference internal" href="next_steps_entity_type.html">Next Steps User Entity</a></li>
 <li class="toctree-l2"><a class="reference internal" href="next_steps_signup_form.html">Legal Server Signup</a></li>
 <li class="toctree-l2"><a class="reference internal" href="next_steps_sms_delivery.html">Next Steps SMS Subscriptions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="next_steps_tracking.html">Next Steps Tracking</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#how-this-differs-from-the-toolbox-ticker-system">How this differs from the Toolbox ticker system</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#interim-process">Interim Process</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="sms_overview.html">SMS Overview</a></li>
@@ -97,7 +97,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Next Steps Flows</li>
+      <li class="breadcrumb-item active">NextSteps Flows</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/next_steps.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -107,9 +107,9 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="next-steps-flows">
-<h1>Next Steps Flows<a class="headerlink" href="#next-steps-flows" title="Link to this heading"></a></h1>
-<p>“Next Steps” is designed to provide additional support to individuals along their legal journey. In phase 1, we are focusing on making the tool available to caseworkers at OTIS partner organizations to subscribe clients to these next steps. As they provide advice, they can use a component in LegalServer to assign a client to a completed step and subscribe them to follow up messages.</p>
+  <section id="nextsteps-flows">
+<h1>NextSteps Flows<a class="headerlink" href="#nextsteps-flows" title="Link to this heading"></a></h1>
+<p>“NextSteps” is designed to provide additional support to individuals along their legal journey. In phase 1, we are focusing on making the tool available to caseworkers at OTIS partner organizations to subscribe clients to these next steps. As they provide advice, they can use a component in LegalServer to assign a client to a completed step and subscribe them to follow up messages.</p>
 <p>Phase 2 envisions expanding it to website visitors and users of our ILAOHelps! SMS text line and an expansion to web notifications and email processing.</p>
 <p>Next Steps build on the work done with COPE content to define step-by-step legal processes (How-tos) associated with a specific DIY Legal Solution and its options. This adds a content type designed to deliver interactive follow-up messages initially over SMS.</p>
 <div class="toctree-wrapper compound">
@@ -139,13 +139,35 @@
 <li class="toctree-l1"><a class="reference internal" href="next_steps_tracking.html">Next Steps Tracking</a></li>
 </ul>
 </div>
-<section id="how-this-differs-from-the-toolbox-ticker-system">
-<h2>How this differs from the Toolbox ticker system<a class="headerlink" href="#how-this-differs-from-the-toolbox-ticker-system" title="Link to this heading"></a></h2>
-<p>Some staff may recall that we piloted a similar concept with toolbox content. We’ve learned from that failure and have made the following improvements in this iteration:</p>
+<section id="interim-process">
+<h2>Interim Process<a class="headerlink" href="#interim-process" title="Link to this heading"></a></h2>
+<p>Because the NextSteps Flows were designed to work with the Legal How-to that we are revising and have paused, these are the interim steps for creating a Next Step flow:</p>
 <ul class="simple">
-<li><p>Messages are kept separate from the content associated with it. This makes it easier to view the overall flow for a legal process.</p></li>
-<li><p>Users can reply to a message and those replies are then processed to determine the next step, rather than just a “Hey, it’s been a couple of weeks. If you have your criminal records together, the next step is to determine whether you are eligible for sealing.”</p></li>
+<li><p>Find the best Legal Content of type “How-to” to use as the primary source of legal information.</p></li>
+<li><p>Create a legal step for each process step in the How-to. For this you need to:</p>
+<ul>
+<li><p>Enter the step title; this should align with the process step title.</p></li>
+<li><p>Add a disambiguation tag for the specific legal issue to tell different steps apart.</p></li>
+<li><p>Remove the Step information</p></li>
+<li><p>Tag to Illinois</p></li>
+<li><p>Remove the Negate jurisdiction field</p></li>
+<li><p>Ignore all other fields</p></li>
+<li><p>Leave unpublished</p></li>
 </ul>
+</li>
+<li><p>Create a legal how-to to act as a dummy how-to. for this you need to:</p>
+<ul>
+<li><p>Create a title; this title should match or be similar to the Legal content how-to</p></li>
+<li><p>Add a content description and meta description</p></li>
+<li><p>Tag to a legal category, primary legal category, and navigation term</p></li>
+<li><p>Set legal position</p></li>
+<li><p>Add steps</p></li>
+<li><p>Set to “unpublished”</p></li>
+</ul>
+</li>
+<li><p>Create the next step flow. Because the legal steps contain no information, we can not include steps in the “Include” fields.</p></li>
+</ul>
+<p>Follow the information on creating a next step flows to create the actual flow.</p>
 </section>
 </section>
 
