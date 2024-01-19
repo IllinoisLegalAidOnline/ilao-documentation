@@ -5,6 +5,8 @@
 
 Welcome to Illinois Legal Aid Online Product Documentation
 ============================================================
+.. warning:: This documentation has been replaced with a new version at `docs.illinoislegalaid.org <https://docs.illinoislegalaid.org>`_ as of January 19, 2024. This version exists only for legacy purposes.
+
 
 .. toctree::
    :maxdepth: 2
