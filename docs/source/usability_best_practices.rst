@@ -29,19 +29,19 @@ Using Headings
 
 Headings are ranked <h1> through <h6> with the <h1> representing the most important idea on the page, and sub-sections organized with <h2> level headings. These sub-sections can themselves be divided with <h3> level headings, and so on.
 
-It is best to plan out a heading structure before composing a page. Doing so will help you both select appropriate heading levels and keep your thoughts organized overall.
+* It is best to plan out a heading structure before composing a page. Doing so will help you both select appropriate heading levels and keep your thoughts organized overall.
 
-All pages should at least have a <h1> level heading giving the title of the page.
+* All pages should at least have a <h1> level heading giving the title of the page.
 
-Do not skip heading levels to be more specific (for example, do not skip from <h2> to <h5>). It is permissible to skip headings in the other direction if the outline of the page calls for it (for example, from <h5> to <h2>).
+* Do not skip heading levels to be more specific (for example, do not skip from <h2> to <h5>). It is permissible to skip headings in the other direction if the outline of the page calls for it (for example, from <h5> to <h2>).
 
-Do not select heading levels based on their appearance. Select the appropriate heading rank in your hierarchy.
+* Do not select heading levels based on their appearance. Select the appropriate heading rank in your hierarchy.
 
-Do not use bold instead of a heading. One of the most common accessibility mistakes is making text bold when a heading is needed. Though the text may look like a heading, the underlying code is not set correctly, and screen reader users will not benefit. 
+* Do not use bold instead of a heading. One of the most common accessibility mistakes is making text bold when a heading is needed. Though the text may look like a heading, the underlying code is not set correctly, and screen reader users will not benefit. 
 
-If you bold text to create the appearance of a heading, a screen reader will still read it as paragraph text. Conversely, do not use a heading style to make text big and bold if the text is not an actual heading.
+* If you bold text to create the appearance of a heading, a screen reader will still read it as paragraph text. Conversely, do not use a heading style to make text big and bold if the text is not an actual heading.
 
-Do not overuse headings. In most cases, content editors will not need more than <h2> rank headings and the occasional <h3> rank. Only for exceptionally long or complex pages would <h5> and <h6> be necessary.
+* Do not overuse headings. In most cases, content editors will not need more than <h2> rank headings and the occasional <h3> rank. Only for exceptionally long or complex pages would <h5> and <h6> be necessary.
 
 Generally, the title of the page should be the largest heading. Other headings and subheadings should have less visual weight according to their importance.
 
@@ -59,15 +59,15 @@ Design Legible Text
 
 To make text as easy-to-read as possible on the web, consider the following suggestions:
 
-*Use generous font sizes for body text. Most browsers have a default font-size of 16px, and there is seldom reason to go below this size.
+* Use generous font sizes for body text. Most browsers have a default font-size of 16px, and there is seldom reason to go below this size.
 
-*Use generous line height / leading for paragraphs of text, to ensure that text is readable.
+* Use generous line height / leading for paragraphs of text, to ensure that text is readable.
 
-*Use left alignment for most text, and always for long blocks of text.
+* Use left alignment for most text, and always for long blocks of text.
 
-*Provide high color contrast between text and background. Consider using an accessibility color contrast checker to guarantee high contrast. Ensure that hover states also have high contrast.
+* Provide high color contrast between text and background. Consider using an accessibility color contrast checker to guarantee high contrast. Ensure that hover states also have high contrast.
 
-*Consider limiting line lengths to no more than approximately 80 characters.
+* Consider limiting line lengths to no more than approximately 80 characters.
 
 Images
 ======
@@ -102,13 +102,13 @@ Understanding what makes good alt text is subtle and important. It should be bri
 
 Some other best practices include:
 
-*Avoid “image of”, “photo of”, etc, unless the medium is particularly important.
-*Avoid using the title attribute instead of alt text. Keyboard-only users or mobile users may never see the title.
-*Image links should describe the purpose of the link, and must never describe the image.
-*Decorative images should have blank or empty alt text
-*Complex images, like charts or graphs, should have a description located near the image. The image’s alt text should describe where the nearby image is.
-*Posters, flyers, and the like must have the same information presented in nearby text/
-*Provide color contrast and other design elements to help color-blind users
+* Avoid “image of”, “photo of”, etc, unless the medium is particularly important.
+* Avoid using the title attribute instead of alt text. Keyboard-only users or mobile users may never see the title.
+* Image links should describe the purpose of the link, and must never describe the image.
+* Decorative images should have blank or empty alt text
+* Complex images, like charts or graphs, should have a description located near the image. The image’s alt text should describe where the nearby image is.
+* Posters, flyers, and the like must have the same information presented in nearby text/
+* Provide color contrast and other design elements to help color-blind users
 
 Charts, Graphs, and Other Complex Images
 ========================================
