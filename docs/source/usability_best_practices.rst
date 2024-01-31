@@ -5,7 +5,7 @@ Usability best practices
 Purpose
 =======
 
-The following are suggestions for best practices related to usability of website content. These suggestions are based on the Yale ITS Services usability and web accessibility guide.
+The following are suggestions for best practices related to usability of website content. These suggestions are based on the `Yale ITS Services <https://usability.yale.edu/>`_ usability and web accessibility guide.
 
 Labeling
 ========
